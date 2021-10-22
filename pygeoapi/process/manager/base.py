@@ -207,8 +207,7 @@ class BaseManager:
             current_status = JobStatus.successful
 
             job_update_metadata = {
-                'job_end_datetime': datetime.utcnow().strftime(
-                    DATETIME_FORMAT),
+                'job_end_datetime': datetime.utcnow().strftime(DATETIME_FORMAT),
                 'status': current_status.value,
                 'location': job_filename,
                 'mimetype': jfmt,
