@@ -34,6 +34,7 @@ import os
 
 import tinydb
 
+from pygeoapi.api import FORMAT_TYPES, F_JSON
 from pygeoapi.process.manager.base import BaseManager
 from pygeoapi.util import JobStatus
 
@@ -199,8 +200,13 @@ class TinyDBManager(BaseManager):
             # TODO log/raise exception?
             return (None,)
 
-        with io.open(location, 'r', encoding='utf-8') as filehandler:
-            result = json.load(filehandler)
+        # ToDo use encoding and json.load only if mimetype is requiring it, else load binary
+        if mimetype is FORMAT_TYPES[F_JSON]:
+            with io.open(location, 'r', encoding='utf-8') as filehandler:
+                result = json.load(filehandler)
+        else:
+            with io.open(location, 'rb') as filehandler:
+                result = filehandler.read()
 
         return mimetype, result
 

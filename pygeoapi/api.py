@@ -2600,7 +2600,7 @@ class API:
 
     @pre_process
     def execute_process(self, request: Union[APIRequest, Any],
-                        process_id) -> Tuple[dict, int, str]:
+                        process_id) -> Tuple[dict, int, Any]:
         """
         Execute process
 

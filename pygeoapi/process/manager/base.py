@@ -34,6 +34,7 @@ import logging
 from multiprocessing import dummy
 import os
 
+from pygeoapi.api import FORMAT_TYPES, F_JSON
 from pygeoapi.util import DATETIME_FORMAT, JobStatus
 
 LOGGER = logging.getLogger(__name__)
@@ -201,8 +202,15 @@ class BaseManager:
 
             if self.output_dir is not None:
                 LOGGER.debug('writing output to {}'.format(job_filename))
-                with io.open(job_filename, 'w', encoding='utf-8') as fh:
-                    fh.write(json.dumps(outputs, sort_keys=True, indent=4))
+                # ToDo decide if json.dumps or binary dump depending on jfmt!
+                LOGGER.debug('returned job format is "{}"'.format(jfmt))
+
+                if jfmt is FORMAT_TYPES[F_JSON]:
+                    with io.open(job_filename, 'w', encoding='utf-8') as fh:
+                        fh.write(json.dumps(outputs, sort_keys=True, indent=4))
+                else:
+                    with io.open(job_filename, 'wb') as fh:
+                        fh.write(outputs)
 
             current_status = JobStatus.successful
 
