@@ -629,6 +629,11 @@ class API:
             'type': FORMAT_TYPES[F_JSON],
             'title': 'Collections',
             'href': '{}/collections'.format(self.config['server']['url'])
+        }, {
+            'rel': 'http://www.opengis.net/def/rel/ogc/1.0/processes',
+            'type': FORMAT_TYPES[F_JSON],
+            'title': 'Processes',
+            'href': '{}/processes'.format(self.config['server']['url'])
         }]
 
         headers = request.get_response_headers()
