@@ -2671,6 +2671,9 @@ class API:
         headers['Location'] = url
 
         is_async = data.get('mode', 'auto') == 'async'
+        if request.headers.get('Prefer') == 'respond-async':
+            is_async = True
+
         if is_async:
             LOGGER.debug('Asynchronous request mode detected')
 
