@@ -122,16 +122,25 @@ class SQLiteManager(BaseManager):
         """
 
         self._connect()
-        query = "SELECT identifier, status, process_id FROM jobs"
+        query = 'SELECT identifier, status, process_id FROM jobs'
         if status:
-            jobs_list = self.db.execute(query + " WHERE status IN (':status')", {"status": status})
+            jobs_result = self.db.execute(query + " WHERE status IN (:status)", {'status': status}).fetchall()
         else:
-            jobs_list = self.db.execute(query)
+            jobs_result = self.db.execute(query).fetchall()
         self.db.close()
 
-        # TODO verify result
         # TODO maybe add error handling
-        return jobs_list
+        if len(jobs_result) == 0:
+            return []
+        else:
+            jobs_list = []
+            for row in jobs_result:
+                jobs_list.append({
+                    "identifier": row[0],
+                    "status": row[1],
+                    "process_id": row[2]
+                })
+            return jobs_list
 
     def get_job(self, job_id):
         """
@@ -143,14 +152,35 @@ class SQLiteManager(BaseManager):
         """
 
         self._connect()
-        job = self.db.execute('''
-            SELECT *
+        job_result = self.db.execute('''
+            SELECT
+                identifier,
+                process_id,
+                job_start_datetime,
+                job_end_datetime,
+                status,
+                location,
+                mimetype,
+                message,
+                progress
             FROM jobs
-            WHERE identifier IN (':job_id')''',
-            {"job_id": job_id})
+            WHERE identifier IN (:job_id)''',
+            {'job_id': job_id}).fetchone()
         self.db.close()
-        # TODO convert to dict!?
-        return job
+        if not job_result:
+            return None
+        else:
+            return {
+                'identifier': job_result[0],
+                'process_id': job_result[1],
+                'job_start_datetime': job_result[2],
+                'job_end_datetime': job_result[3],
+                'status': job_result[4],
+                'location': job_result[5],
+                'mimetype': job_result[6],
+                'message': job_result[7],
+                'progress': job_result[8]
+            }
 
     def add_job(self, job_metadata):
         """
@@ -176,11 +206,11 @@ class SQLiteManager(BaseManager):
                 message,
                 progress)
             VALUES (
-                ':identifier',
-                ':process_id',
-                ':job_start_datetime',
-                ':status',
-                ':message',
+                :identifier,
+                :process_id,
+                :job_start_datetime,
+                :status,
+                :message,
                 :progress
             )
             ''',
@@ -204,11 +234,8 @@ class SQLiteManager(BaseManager):
         column_list = ""
         for key, value in update_dict.items():
             if value:
-                if key == 'progress':
-                    column_list += "progress = :progress,"
-                else:
-                    column_list += key + "= ':" + key + "',"
-        query = "UPDATE jobs SET {} WHERE identifier IN (':job_id')".format(column_list[:-1])
+                column_list += key + "= :" + key + ","
+        query = "UPDATE jobs SET {} WHERE identifier IN (:job_id)".format(column_list[:-1])
         update_dict["job_id"] = job_id
 
         self._connect()
@@ -235,7 +262,7 @@ class SQLiteManager(BaseManager):
 
         self._connect()
         try:
-            self.db.execute("DELETE FROM jobs WHERE identifier IN (':job_id')", { "job_id": job_id})
+            self.db.execute("DELETE FROM jobs WHERE identifier IN (:job_id)", { "job_id": job_id})
             self.db.commit()
         except sqlite3.OperationalError as err:
             LOGGER.error("Could not delete job '{}' from table jobs in database '{}': {}".format(
