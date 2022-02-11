@@ -118,11 +118,11 @@ class SQLiteManager(BaseManager):
         :param status: job status (accepted, running, successful,
                        failed, results) (default is all)
 
-        :returns: 'list` of jobs (identifier, status, process identifier)
+        :returns: 'list` of job dicts
         """
 
         self._connect()
-        query = 'SELECT identifier, status, process_id FROM jobs'
+        query = 'SELECT * FROM jobs'
         if status:
             jobs_result = self.db.execute(query + " WHERE status IN (:status)", {'status': status}).fetchall()
         else:
@@ -137,8 +137,14 @@ class SQLiteManager(BaseManager):
             for row in jobs_result:
                 jobs_list.append({
                     "identifier": row[0],
-                    "status": row[1],
-                    "process_id": row[2]
+                    "process_id": row[1],
+                    'job_start_datetime': row[2],
+                    'job_end_datetime': row[3],
+                    'status': row[4],
+                    'location': row[5],
+                    'mimetype': row[6],
+                    'message': row[7],
+                    'progress': row[8]
                 })
             return jobs_list
 
