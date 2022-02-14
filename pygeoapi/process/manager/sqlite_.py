@@ -72,12 +72,12 @@ class SQLiteManager(BaseManager):
         :returns: `bool` of status of result
         """
         try:
-            self.db = sqlite3.connect(self.connection)
+            db = sqlite3.connect(self.connection)
         except sqlite3.OperationalError as err:
             LOGGER.error("Could not connect to database '{}': {}".format(self.connection, err))
-            return False
+            raise err
         try:
-            self.db.execute('''
+            db.execute('''
                 CREATE TABLE IF NOT EXISTS jobs (
                     identifier          TEXT    PRIMARY KEY,
                     process_id          TEXT    NOT NULL,
@@ -89,11 +89,11 @@ class SQLiteManager(BaseManager):
                     message             TEXT,
                     progress            INTEGER NOT NULL DEFAULT 0
                 )''')
-            self.db.commit()
+            db.commit()
         except sqlite3.OperationalError as err:
             LOGGER.error("Could not create schema in database '{}': {}".format(self.connection, err))
-            return False
-        return True
+            raise err
+        return db
 
     def destroy(self):
         """
@@ -103,12 +103,13 @@ class SQLiteManager(BaseManager):
         """
 
         try:
-            self.db.execute("DELETE FROM jobs")
-            self.db.commit()
+            db = self._connect()
+            db.execute("DELETE FROM jobs")
+            db.commit()
         except sqlite3.OperationalError as err:
             LOGGER.error("Could not clear table jobs in database '{}': {}".format(self.connection, err))
             return False
-        self.db.close()
+        db.close()
         return True
 
     def get_jobs(self, status=None):
@@ -121,13 +122,13 @@ class SQLiteManager(BaseManager):
         :returns: 'list` of job dicts
         """
 
-        self._connect()
+        db = self._connect()
         query = 'SELECT * FROM jobs'
         if status:
-            jobs_result = self.db.execute(query + " WHERE status IN (:status)", {'status': status}).fetchall()
+            jobs_result = db.execute(query + " WHERE status IN (:status)", {'status': status}).fetchall()
         else:
-            jobs_result = self.db.execute(query).fetchall()
-        self.db.close()
+            jobs_result = db.execute(query).fetchall()
+        db.close()
 
         # TODO maybe add error handling
         if len(jobs_result) == 0:
@@ -157,8 +158,8 @@ class SQLiteManager(BaseManager):
         :returns: `dict`  # `pygeoapi.process.manager.Job`
         """
 
-        self._connect()
-        job_result = self.db.execute('''
+        db = self._connect()
+        job_result = db.execute('''
             SELECT
                 identifier,
                 process_id,
@@ -171,8 +172,8 @@ class SQLiteManager(BaseManager):
                 progress
             FROM jobs
             WHERE identifier IN (:job_id)''',
-            {'job_id': job_id}).fetchone()
-        self.db.close()
+                                     {'job_id': job_id}).fetchone()
+        db.close()
         if not job_result:
             return None
         else:
@@ -202,8 +203,8 @@ class SQLiteManager(BaseManager):
         :returns: identifier of added job
         """
 
-        self._connect()
-        doc_id = self.db.execute('''
+        db = self._connect()
+        doc_id = db.execute('''
             INSERT INTO jobs (
                 identifier,
                 process_id,
@@ -220,10 +221,9 @@ class SQLiteManager(BaseManager):
                 :progress
             )
             ''',
-            job_metadata
-            )
-        self.db.commit()
-        self.db.close()
+                            job_metadata)
+        db.commit()
+        db.close()
 
         return job_metadata['identifier']
 
@@ -244,10 +244,10 @@ class SQLiteManager(BaseManager):
         query = "UPDATE jobs SET {} WHERE identifier IN (:job_id)".format(column_list[:-1])
         update_dict["job_id"] = job_id
 
-        self._connect()
-        self.db.execute(query, update_dict)
-        self.db.commit()
-        self.db.close()
+        db = self._connect()
+        db.execute(query, update_dict)
+        db.commit()
+        db.close()
 
         return True
 
@@ -266,15 +266,15 @@ class SQLiteManager(BaseManager):
             if location and self.output_dir is not None:
                 os.remove(location)
 
-        self._connect()
+        db = self._connect()
         try:
-            self.db.execute("DELETE FROM jobs WHERE identifier IN (:job_id)", { "job_id": job_id})
-            self.db.commit()
+            db.execute("DELETE FROM jobs WHERE identifier IN (:job_id)", { "job_id": job_id})
+            db.commit()
         except sqlite3.OperationalError as err:
             LOGGER.error("Could not delete job '{}' from table jobs in database '{}': {}".format(
                 job_id, self.connection, err))
             return False
-        self.db.close()
+        db.close()
 
         return True
 
@@ -298,13 +298,14 @@ class SQLiteManager(BaseManager):
 
         if not job_status == JobStatus.successful:
             # Job is incomplete
-            return (None,)
+            return None,
         if not location:
             # Job data was not written for some reason
             # TODO log/raise exception?
-            return (None,)
+            return None,
 
-         # TODO use encoding and json.load only if mimetype is requiring it, else load binary
+        # Use encoding and json.load only if mimetype is requiring it,
+        # else load binary
         if mimetype is FORMAT_TYPES[F_JSON]:
             with io.open(location, 'r', encoding='utf-8') as filehandler:
                 result = json.load(filehandler)
