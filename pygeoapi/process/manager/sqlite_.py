@@ -282,7 +282,7 @@ class SQLiteManager(BaseManager):
         """
         Get a job's status, and actual output of executing the process
 
-        :param jobid: job identifier
+        :param job_id: job identifier
 
         :returns: `tuple` of mimetype and raw output
         """
