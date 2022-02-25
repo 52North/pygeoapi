@@ -77,6 +77,7 @@ def test_async_hello_world_process_parallel(api_, config):
     query = Query()
     for process_out in processes_out.values():
         try:
+            assert process_out['http_status'] == 201
             job_id = process_out['headers']['Location'].split('/')[-1]
             job_dict = db.search(query.identifier == job_id)[0]
             assert job_dict["identifier"] == job_id
