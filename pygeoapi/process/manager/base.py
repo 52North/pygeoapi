@@ -2,7 +2,7 @@
 #
 # Authors: Tom Kralidis <tomkralidis@gmail.com>
 #
-# Copyright (c) 2020 Tom Kralidis
+# Copyright (c) 2022 Tom Kralidis
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation
@@ -34,7 +34,6 @@ import logging
 from multiprocessing import dummy
 import os
 
-from pygeoapi.api import FORMAT_TYPES, F_JSON
 from pygeoapi.util import DATETIME_FORMAT, JobStatus
 
 LOGGER = logging.getLogger(__name__)
@@ -57,11 +56,10 @@ class BaseManager:
         self.connection = manager_def.get('connection', None)
         self.output_dir = manager_def.get('output_dir', None)
 
-    def get_jobs(self, process_id=None, status=None):
+    def get_jobs(self, status=None):
         """
         Get process jobs, optionally filtered by status
 
-        :param process_id: process identifier
         :param status: job status (accepted, running, successful,
                        failed, results) (default is all)
 
@@ -81,11 +79,10 @@ class BaseManager:
 
         raise NotImplementedError()
 
-    def update_job(self, process_id, job_id, update_dict):
+    def update_job(self, job_id, update_dict):
         """
         Updates a job
 
-        :param process_id: process identifier
         :param job_id: job identifier
         :param update_dict: `dict` of property updates
 
@@ -94,11 +91,10 @@ class BaseManager:
 
         raise NotImplementedError()
 
-    def get_job(self, process_id, job_id):
+    def get_job(self, job_id):
         """
         Get a job (!)
 
-        :param process_id: process identifier
         :param job_id: job identifier
 
         :returns: `dict` of job result
@@ -106,11 +102,10 @@ class BaseManager:
 
         raise NotImplementedError()
 
-    def get_job_result(self, process_id, job_id):
+    def get_job_result(self, job_id):
         """
         Returns the actual output from a completed process
 
-        :param process_id: process identifier
         :param job_id: job identifier
 
         :returns: `tuple` of mimetype and raw output
@@ -118,11 +113,10 @@ class BaseManager:
 
         raise NotImplementedError()
 
-    def delete_job(self, process_id, job_id):
+    def delete_job(self, job_id):
         """
         Deletes a job and associated results/outputs
 
-        :param process_id: process identifier
         :param job_id: job identifier
 
         :returns: `bool` of status result
@@ -194,7 +188,7 @@ class BaseManager:
             current_status = JobStatus.running
             jfmt, outputs = p.execute(data_dict)
 
-            self.update_job(process_id, job_id, {
+            self.update_job(job_id, {
                 'status': current_status.value,
                 'message': 'Writing job output',
                 'progress': 95
@@ -202,20 +196,22 @@ class BaseManager:
 
             if self.output_dir is not None:
                 LOGGER.debug('writing output to {}'.format(job_filename))
-                # ToDo decide if json.dumps or binary dump depending on jfmt!
-                LOGGER.debug('returned job format is "{}"'.format(jfmt))
-
-                if jfmt is FORMAT_TYPES[F_JSON]:
-                    with io.open(job_filename, 'w', encoding='utf-8') as fh:
-                        fh.write(json.dumps(outputs, sort_keys=True, indent=4))
-                else:
-                    with io.open(job_filename, 'wb') as fh:
-                        fh.write(outputs)
+                if isinstance(outputs, dict):
+                    mode = 'w'
+                    data = json.dumps(outputs, sort_keys=True, indent=4)
+                    encoding = 'utf-8'
+                elif isinstance(outputs, bytes):
+                    mode = 'wb'
+                    data = outputs
+                    encoding = None
+                with io.open(job_filename, mode, encoding=encoding) as fh:
+                    fh.write(data)
 
             current_status = JobStatus.successful
 
             job_update_metadata = {
-                'job_end_datetime': datetime.utcnow().strftime(DATETIME_FORMAT),
+                'job_end_datetime': datetime.utcnow().strftime(
+                    DATETIME_FORMAT),
                 'status': current_status.value,
                 'location': job_filename,
                 'mimetype': jfmt,
@@ -223,7 +219,7 @@ class BaseManager:
                 'progress': 100
             }
 
-            self.update_job(process_id, job_id, job_update_metadata)
+            self.update_job(job_id, job_update_metadata)
 
         except Exception as err:
             # TODO assess correct exception type and description to help users
@@ -252,7 +248,7 @@ class BaseManager:
 
             jfmt = 'application/json'
 
-            self.update_job(process_id, job_id, job_metadata)
+            self.update_job(job_id, job_metadata)
 
         return jfmt, outputs, current_status
 
