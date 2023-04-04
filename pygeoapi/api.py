@@ -1752,9 +1752,8 @@ class API:
         LOGGER.debug('Processing body')
 
         if not request.data:
-            msg = 'missing request data'
             return self.get_exception(
-                400, headers, request.format, 'MissingParameterValue', msg)
+                400, headers, request.format, 'Missing Parameter Value Error',  'Missing request data', '400', 'Bad Request')
 
         try:
             # Parse bytes data, if applicable
@@ -1820,9 +1819,8 @@ class API:
                     collections[dataset]['providers'], 'record')
                 p = load_plugin('provider', provider_def)
             except ProviderTypeError:
-                msg = 'Invalid provider type'
                 return self.get_exception(
-                    400, headers, request.format, 'InvalidParameterValue', msg)
+                    400, headers, request.format, 'Invalid Header Value Error',  'Invalid provider type', '400', 'Bad Request')
 
         # Get provider language (if any)
         prv_locale = l10n.get_plugin_locale(provider_def, request.raw_locale)
@@ -1832,9 +1830,8 @@ class API:
             content = p.get(identifier, language=prv_locale)
         except ProviderConnectionError as err:
             LOGGER.error(err)
-            msg = 'connection error (check logs)'
             return self.get_exception(
-                500, headers, request.format, 'NoApplicableCode', msg)
+                500, headers, request.format, 'Connection Error', 'Check logs for further information', '500', 'Internal Server Error')
         except ProviderItemNotFoundError:
             msg = 'identifier not found'
             return self.get_exception(404, headers, request.format,
@@ -1960,9 +1957,8 @@ class API:
             return self.get_exception(
                 400, headers, format_, 'NoApplicableCode', msg)
         except ProviderConnectionError:
-            msg = 'connection error (check logs)'
             return self.get_exception(
-                500, headers, format_, 'NoApplicableCode', msg)
+                500, headers, request.format, 'Connection Error', 'Check logs for further information', '500', 'Internal Server Error')
 
         LOGGER.debug('Processing bbox parameter')
 
@@ -1974,9 +1970,8 @@ class API:
             try:
                 bbox = validate_bbox(bbox)
             except ValueError as err:
-                msg = str(err)
                 return self.get_exception(
-                    500, headers, format_, 'InvalidParameterValue', msg)
+                    500, headers, request.format, 'Invalid Parameter Value Error', str(err), '500', 'Internal Server Error')
 
         query_args['bbox'] = bbox
 
@@ -1988,9 +1983,8 @@ class API:
             datetime_ = validate_datetime(
                 self.config['resources'][dataset]['extents'], datetime_)
         except ValueError as err:
-            msg = str(err)
             return self.get_exception(
-                400, headers, format_, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Invalid Parameter Value Error', str(err), '400', 'Bad Request')
 
         query_args['datetime_'] = datetime_
 
@@ -2007,19 +2001,17 @@ class API:
 
             for a in query_args['range_subset']:
                 if a not in p.fields:
-                    msg = 'Invalid field specified'
                     return self.get_exception(
-                        400, headers, format_, 'InvalidParameterValue', msg)
+                        400, headers, request.format, 'Invalid Parameter Value Error', 'Invalid field specified', '400', 'Bad Request')
 
         if 'subset' in request.params:
             LOGGER.debug('Processing subset parameter')
             try:
                 subsets = validate_subset(request.params['subset'] or '')
             except (AttributeError, ValueError) as err:
-                msg = 'Invalid subset: {}'.format(err)
                 LOGGER.error(msg)
                 return self.get_exception(
-                        400, headers, format_, 'InvalidParameterValue', msg)
+                        400, headers, request.format, 'Invalid Parameter Value Error', 'Invalid subset: {}'.format(err), '400', 'Bad Request')
 
             if not set(subsets.keys()).issubset(p.axes):
                 msg = 'Invalid axis name'
@@ -2034,9 +2026,8 @@ class API:
         try:
             data = p.query(**query_args)
         except ProviderInvalidQueryError as err:
-            msg = 'query error: {}'.format(err)
             return self.get_exception(
-                400, headers, format_, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Invalid Parameter Value Error', 'Query error: {}'.format(err), '400', 'Bad Request')
         except ProviderNoDataError:
             msg = 'No data found'
             return self.get_exception(
