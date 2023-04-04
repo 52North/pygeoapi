@@ -1251,16 +1251,14 @@ class API:
         try:
             startindex = int(request.params.get('startindex'))
             if startindex < 0:
-                msg = 'startindex value should be positive or zero'
                 return self.get_exception(
-                    400, headers, request.format, 'InvalidParameterValue', msg)
+                    400, headers, request.format, 'Invalid Parameter Value Error', 'Startindex value should be positive or zero', '400', 'Bad Request')
         except TypeError as err:
             LOGGER.warning(err)
             startindex = 0
         except ValueError:
-            msg = 'startindex value should be an integer'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Invalid Parameter Value Error', 'Startindex value should be an integer', '400', 'Bad Request')
 
         LOGGER.debug('Processing limit parameter')
         try:
@@ -1268,16 +1266,14 @@ class API:
             # TODO: We should do more validation, against the min and max
             #       allowed by the server configuration
             if limit <= 0:
-                msg = 'limit value should be strictly positive'
                 return self.get_exception(
-                    400, headers, request.format, 'InvalidParameterValue', msg)
+                    400, headers, request.format, 'Invalid Parameter Value Error', 'Limit value should be strictly positive', '400', 'Bad Request')
         except TypeError as err:
             LOGGER.warning(err)
             limit = int(self.config['server']['limit'])
         except ValueError:
-            msg = 'limit value should be an integer'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Invalid Parameter Value Error', 'Limit value should be an integer', '400', 'Bad Request')
 
         resulttype = request.params.get('resulttype') or 'results'
 
@@ -1291,9 +1287,8 @@ class API:
             try:
                 bbox = validate_bbox(bbox)
             except ValueError as err:
-                msg = str(err)
                 return self.get_exception(
-                    400, headers, request.format, 'InvalidParameterValue', msg)
+                    400, headers, request.format, 'Invalid Parameter Value Error',  str(err), '400', 'Bad Request')
 
         LOGGER.debug('Processing datetime parameter')
         datetime_ = request.params.get('datetime')
@@ -1301,9 +1296,8 @@ class API:
             datetime_ = validate_datetime(collections[dataset]['extents'],
                                           datetime_)
         except ValueError as err:
-            msg = str(err)
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Invalid Parameter Value Error',  str(err), '400', 'Bad Request')
 
         LOGGER.debug('processing q parameter')
         q = request.params.get('q') or None
@@ -1372,9 +1366,8 @@ class API:
 
             if (len(list(set(select_properties) -
                          set(properties_to_check))) > 0):
-                msg = 'unknown properties specified'
                 return self.get_exception(
-                    400, headers, request.format, 'InvalidParameterValue', msg)
+                    400, headers, request.format, 'Invalid Parameter Value Error',  'Unknown properties specified', '400', 'Bad Request')
         else:
             select_properties = []
 
@@ -1592,9 +1585,8 @@ class API:
                                                'type', 'collection')
 
         if dataset not in collections.keys():
-            msg = 'Invalid collection'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Invalid Parameter Value Error',  'Invalid collection', '400', 'Bad Request')
 
         LOGGER.debug('Processing query parameters')
 
@@ -1602,16 +1594,14 @@ class API:
         try:
             startindex = int(request.params.get('startindex'))
             if startindex < 0:
-                msg = 'startindex value should be positive or zero'
                 return self.get_exception(
-                    400, headers, request.format, 'InvalidParameterValue', msg)
+                    400, headers, request.format, 'Invalid Parameter Value Error',  'Startindex value should be positive or zero', '400', 'Bad Request')
         except TypeError as err:
             LOGGER.warning(err)
             startindex = 0
         except ValueError:
-            msg = 'startindex value should be an integer'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Invalid Parameter Value Error',  'Startindex value should be an integer', '400', 'Bad Request')
 
         LOGGER.debug('Processing limit parameter')
         try:
@@ -1619,16 +1609,14 @@ class API:
             # TODO: We should do more validation, against the min and max
             # allowed by the server configuration
             if limit <= 0:
-                msg = 'limit value should be strictly positive'
                 return self.get_exception(
-                    400, headers, request.format, 'InvalidParameterValue', msg)
+                    400, headers, request.format, 'Invalid Parameter Value Error',  'Limit value should be strictly positive', '400', 'Bad Request')
         except TypeError as err:
             LOGGER.warning(err)
             limit = int(self.config['server']['limit'])
         except ValueError:
-            msg = 'limit value should be an integer'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Invalid Parameter Value Error',  'Limit value should be an integer', '400', 'Bad Request')
 
         resulttype = request.params.get('resulttype') or 'results'
 
@@ -1642,9 +1630,8 @@ class API:
             try:
                 bbox = validate_bbox(bbox)
             except ValueError as err:
-                msg = str(err)
                 return self.get_exception(
-                    400, headers, request.format, 'InvalidParameterValue', msg)
+                    400, headers, request.format, 'Invalid Parameter Value Error',  str(err), '400', 'Bad Request')
 
         LOGGER.debug('Processing datetime parameter')
         datetime_ = request.params.get('datetime')
@@ -1652,9 +1639,8 @@ class API:
             datetime_ = validate_datetime(collections[dataset]['extents'],
                                           datetime_)
         except ValueError as err:
-            msg = str(err)
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Invalid Parameter Value Error',  str(err), '400', 'Bad Request')
 
         LOGGER.debug('processing q parameter')
         val = request.params.get('q')
@@ -1673,9 +1659,8 @@ class API:
                 p = load_plugin('provider', get_provider_by_type(
                     collections[dataset]['providers'], 'record'))
             except ProviderTypeError:
-                msg = 'Invalid provider type'
                 return self.get_exception(
-                    400, headers, request.format, 'NoApplicableCode', msg)
+                    400, headers, request.format, 'No Applicable Code Error',  'Invalid provider type', '400', 'Bad Request')
         except ProviderConnectionError:
             return self.get_exception(
                 500, headers, request.format, 'Connection Error', 'Check logs for further information', '500', 'Internal Server Error')
@@ -1686,9 +1671,8 @@ class API:
         LOGGER.debug('processing property parameters')
         for k, v in request.params.items():
             if k not in reserved_fieldnames and k not in p.fields.keys():
-                msg = 'unknown query parameter: {}'.format(k)
                 return self.get_exception(
-                    400, headers, request.format, 'InvalidParameterValue', msg)
+                    400, headers, request.format, 'Invalid Parameter Value Error',  'unknown query parameter: {}'.format(k), '400', 'Bad Request')
             elif k not in reserved_fieldnames and k in p.fields.keys():
                 LOGGER.debug('Add property filter {}={}'.format(k, v))
                 properties.append((k, v))
@@ -1707,10 +1691,8 @@ class API:
                     prop = s[1:]
 
                 if prop not in p.fields.keys():
-                    msg = 'bad sort property'
                     return self.get_exception(
-                        400, headers, request.format,
-                        'InvalidParameterValue', msg)
+                        400, headers, request.format, 'Invalid Parameter Value Error',  'Bad sort property', '400', 'Bad Request')
 
                 sortby.append({'property': prop, 'order': order})
         else:
@@ -1725,9 +1707,8 @@ class API:
 
             if (len(list(set(select_properties) -
                          set(properties_to_check))) > 0):
-                msg = 'unknown properties specified'
                 return self.get_exception(
-                    400, headers, request.format, 'InvalidParameterValue', msg)
+                    400, headers, request.format, 'Invalid Parameter Value Error',  'Unknown properties specified', '400', 'Bad Request')
         else:
             select_properties = []
 
@@ -1743,9 +1724,8 @@ class API:
         if filter_lang == 'cql-json':  # @TODO add check from the configuration
             val = filter_lang
         else:
-            msg = 'Invalid filter language'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Invalid Parameter Value Error',  'Invalid filter language', '400', 'Bad Request')
 
         LOGGER.debug('Querying provider')
         LOGGER.debug('startindex: {}'.format(startindex))
@@ -1765,9 +1745,9 @@ class API:
         if (request_headers.get(
             'Content-Type') or request_headers.get(
                 'content-type')) != 'application/query-cql-json':
-            msg = ('Invalid body content-type')
             return self.get_exception(
-                400, headers, request.format, 'InvalidHeaderValue', msg)
+                400, headers, request.format, 'Invalid Header Value Error',  'Invalid body content-type', '400', 'Bad Request')
+                
 
         LOGGER.debug('Processing body')
 
