@@ -1316,7 +1316,7 @@ class API:
             except ProviderTypeError:
                 msg = 'Invalid provider type'
                 return self.get_exception(
-                    400, headers, request.format, 'NoApplicableCode', msg)
+                    400, headers, request.format, 'No Applicable Code Error', 'Invalid provider type', '400', 'Bad Request')
         except ProviderConnectionError:
             return self.get_exception(
                 500, headers, request.format, 'Connection Error', 'Check logs for further information', '500', 'Internal Server Error')
@@ -1327,9 +1327,8 @@ class API:
         LOGGER.debug('processing property parameters')
         for k, v in request.params.items():
             if k not in reserved_fieldnames and k not in p.fields.keys():
-                msg = 'unknown query parameter: {}'.format(k)
                 return self.get_exception(
-                    400, headers, request.format, 'InvalidParameterValue', msg)
+                    400, headers, request.format, 'Invalid Parameter Value Error',  'unknown query parameter: {}'.format(k), '400', 'Bad Request')
             elif k not in reserved_fieldnames and k in list(p.fields.keys()):
                 LOGGER.debug('Add property filter {}={}'.format(k, v))
                 properties.append((k, v))
@@ -1348,10 +1347,8 @@ class API:
                     prop = s[1:]
 
                 if prop not in p.fields.keys():
-                    msg = 'bad sort property'
                     return self.get_exception(
-                        400, headers, request.format,
-                        'InvalidParameterValue', msg)
+                        400, headers, request.format, 'Invalid Parameter Value Error',  'Bad sort property', '400', 'Bad Request')
 
                 sortby.append({'property': prop, 'order': order})
         else:
@@ -1408,12 +1405,10 @@ class API:
                 500, headers, request.format, 'Connection error', 'Check logs for further information', '500', 'Internal Server Error')
         except ProviderQueryError as err:
             LOGGER.error(err)
-            msg = 'query error (check logs)'
             return self.get_exception(
                 500, headers, request.format, 'Query error', 'Check logs for further information', '500', 'Internal Server Error')
         except ProviderGenericError as err:
             LOGGER.error(err)
-            msg = 'generic error (check logs)'
             return self.get_exception(
                 500, headers, request.format, 'Generic error', 'Check logs for further information', '500', 'Internal Server Error')
 
@@ -1951,7 +1946,7 @@ class API:
         except KeyError:
             msg = 'collection does not exist'
             return self.get_exception(
-                404, headers, format_, 'InvalidParameterValue', msg)
+                404, headers, request.format, 'Invalid Parameter Value Error',  'Collection does not exist', '404', 'Not Found')
         except ProviderTypeError:
             msg = 'invalid provider type'
             return self.get_exception(
@@ -2029,9 +2024,8 @@ class API:
             return self.get_exception(
                 400, headers, request.format, 'Invalid Parameter Value Error', 'Query error: {}'.format(err), '400', 'Bad Request')
         except ProviderNoDataError:
-            msg = 'No data found'
             return self.get_exception(
-                204, headers, format_, 'InvalidParameterValue', msg)
+                404, headers, request.format, 'Invalid Parameter Value Error',  'No data found', '404', 'Not Found')
         except ProviderQueryError:
             return self.get_exception(
                 500, headers, request.format, 'Query error', 'Check logs for further information', '500', 'Internal Server Error')
@@ -2077,9 +2071,8 @@ class API:
 
             data = p.get_coverage_domainset()
         except KeyError:
-            msg = 'collection does not exist'
             return self.get_exception(
-                404, headers, format_, 'InvalidParameterValue', msg)
+                404, headers, request.format, 'Invalid Parameter Value Error',  'Collection does not exist', '404', 'Not Found')
         except ProviderTypeError:
             msg = 'invalid provider type'
             return self.get_exception(
@@ -2129,9 +2122,8 @@ class API:
 
             data = p.get_coverage_rangetype()
         except KeyError:
-            msg = 'collection does not exist'
             return self.get_exception(
-                404, headers, format_, 'InvalidParameterValue', msg)
+                404, headers, request.format, 'Invalid Parameter Value Error',  'Collection does not exist', '404', 'Not Found')
         except ProviderTypeError:
             msg = 'invalid provider type'
             return self.get_exception(
@@ -2187,9 +2179,8 @@ class API:
                     self.config['resources'][dataset]['providers'], 'tile')
             p = load_plugin('provider', t)
         except (KeyError, ProviderTypeError):
-            msg = 'Invalid collection tiles'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Invalid Parameter Value Error', 'Invalid collection tiles', '400', 'Bad Request')
         except ProviderConnectionError:
             return self.get_exception(
                 500, headers, request.format, 'Connection Error', 'Check logs for further information', '500', 'Internal Server Error')
