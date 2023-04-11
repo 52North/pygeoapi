@@ -2280,9 +2280,8 @@ class API:
                                                'type', 'collection')
 
         if dataset not in collections.keys():
-            msg = 'Collection not found'
             return self.get_exception(
-                404, headers, request.format, 'NotFound', msg)
+                404, headers, request.format, 'Collection Error', 'Collection not found - Check logs for further information', '404', 'Not Found')
 
         LOGGER.debug('Loading tile provider')
         try:
@@ -2298,9 +2297,8 @@ class API:
             content = p.get_tiles(layer=p.get_layer(), tileset=matrix_id,
                                   z=z_idx, y=y_idx, x=x_idx, format_=format_)
             if content is None:
-                msg = 'identifier not found'
                 return self.get_exception(
-                    404, headers, format_, 'NotFound', msg)
+                    404, headers, request.format, 'Indentifier Error', 'Identifier not found', '404', 'Not Found')
             else:
                 return headers, 202, content
 
@@ -2314,24 +2312,20 @@ class API:
             return self.get_exception(
                 500, headers, request.format, 'Connection Error', 'Check logs for further information', '500', 'Internal Server Error')
         except ProviderTilesetIdNotFoundError:
-            msg = 'Tileset id not found'
             return self.get_exception(
-                404, headers, format_, 'NotFound', msg)
+                404, headers, request.format, 'Tileset id Error', 'Tileset id not found', '404', 'Not Found')
         except ProviderTileQueryError as err:
             LOGGER.error(err)
-            msg = 'Tile not found'
             return self.get_exception(
-                500, headers, format_, 'NoApplicableCode', msg)
+                500, headers, request.format, 'No applicable code', 'Tile not found', '500', 'Internal Server Error')
         except ProviderTileNotFoundError as err:
             LOGGER.error(err)
-            msg = 'Tile not found (check logs)'
             return self.get_exception(
-                404, headers, format_, 'NoMatch', msg)
+                404, headers, request.format, 'Tile Error', 'Tile not found - Check logs for further information', '404', 'Not Found')
         except ProviderGenericError as err:
             LOGGER.error(err)
-            msg = 'Generic error (check logs)'
             return self.get_exception(
-                500, headers, format_, 'NoApplicableCode', msg)
+                500, headers, request.format, 'No applicable code', 'Generic error (check logs)', '500', 'Internal Server Error')
 
     @gzip
     @pre_process
@@ -2356,9 +2350,8 @@ class API:
         if any([dataset is None,
                 dataset not in self.config['resources'].keys()]):
 
-            msg = 'Collection not found'
             return self.get_exception(
-                404, headers, request.format, 'NotFound', msg)
+                404, headers, request.format, 'Collection Error', 'Collection not found - Check logs for further information', '404', 'Not Found')
 
         LOGGER.debug('Creating collection tiles')
         LOGGER.debug('Loading provider')
@@ -2381,9 +2374,8 @@ class API:
         prv_locale = l10n.get_plugin_locale(t, request.raw_locale)
 
         if matrix_id not in p.options['schemes']:
-            msg = 'tileset not found'
-            return self.get_exception(404, headers, request.format,
-                                      'NotFound', msg)
+            return self.get_exception(
+                404, headers, request.format, 'Tileset Error', 'Tileset not found - Check logs for further information', '404', 'Not Found')
 
         metadata_format = p.options['metadata_format']
         tilejson = True if (metadata_format == 'tilejson') else False
@@ -2440,9 +2432,8 @@ class API:
 
         if process is not None:
             if process not in processes_config.keys() or not processes_config:
-                msg = 'Identifier not found'
                 return self.get_exception(
-                    404, headers, request.format, 'NoSuchProcess', msg)
+                    404, headers, request.format, 'Process Error', 'Identifier not found - Check logs for further information', '404', 'Not Found')
 
         if processes_config:
             if process is not None:
@@ -2568,9 +2559,8 @@ class API:
                 #CONFORMANCE-DEBUG ADDITION
                 jobs = [self.manager.get_job(job_id)]
                 if not jobs[0]:
-                    return self.get_exception(404, headers, request.format,
-                                            'No such job', 'No job with ID ' + job_id + ' found',
-                                              'Not Found', '404')
+                    return self.get_exception(
+                        404, headers, request.format, 'Process Error', 'Identifier not found - Check logs for further information', '404', 'Not Found')
         else:
             LOGGER.debug('Process management not configured')
             jobs = []
@@ -2672,14 +2662,12 @@ class API:
             self.config['resources'], 'type', 'process'
         )
         if process_id not in processes_config:
-            msg = 'identifier not found'
             return self.get_exception(
-                404, headers, request.format, 'NoSuchProcess', msg)
+                404, headers, request.format, 'Process Error', 'Identifier not found - Check logs for further information', '404', 'Not Found')
 
         if not self.manager:
-            msg = 'Process manager is undefined'
             return self.get_exception(
-                500, headers, request.format, 'NoApplicableCode', msg)
+                500, headers, request.format, 'No applicable code', 'Process manager is undefined', '500', 'Internal Server Error')
 
         process = load_plugin('process',
                               processes_config[process_id]['processor'])
@@ -2779,26 +2767,22 @@ class API:
         job = self.manager.get_job(job_id)
 
         if not job:
-            return self.get_exception(404, headers, request.format,
-                                        'No such job', 'No job with ID ' + job_id + ' found',
-                                            'Not Found', '404')
+            return self.get_exception(
+                404, headers, request.format, 'No such job', 'No job with ID ' + job_id + ' found', 'Not Found', '404')
 
         status = JobStatus[job['status']]
 
         if status == JobStatus.running:
-           return self.get_exception(404, headers, request.format,
-                                        'Results not ready', 'Job with the ID ' + job_id + ' is still running',
-                                            'Not Found', '404')
+           return self.get_exception(
+               404, headers, request.format, 'Results not ready', 'Job with the ID ' + job_id + ' is still running', 'Not Found', '404')
 
         elif status == JobStatus.accepted:
-            return self.get_exception(404, headers, request.format,
-                                        'Results not ready', 'Job with the ID ' + job_id + ' is not yet started',
-                                            'Not Found', '404')
+            return self.get_exception(
+                404, headers, request.format, 'Results not ready', 'Job with the ID ' + job_id + ' is not yet started', 'Not Found', '404')
 
         elif status == JobStatus.failed:
-            return self.get_exception(404, headers, request.format,
-                                        'Results not ready', 'Job with the ID ' + job_id + ' has failed',
-                                            'Not Found', '404')
+            return self.get_exception(
+                404, headers, request.format, 'Results not ready', 'Job with the ID ' + job_id + ' has failed', 'Not Found', '404')
 
         mimetype, job_output = self.manager.get_job_result(job_id)
 
@@ -2883,9 +2867,8 @@ class API:
                                                'type', 'collection')
 
         if dataset not in collections.keys():
-            msg = 'Collection not found'
             return self.get_exception(
-                404, headers, request.format, 'NotFound', msg)
+                404, headers, request.format, 'Collection not found', 'Collection with the ID ' + dataset + ' could not be found', 'Not Found', '404')
 
         LOGGER.debug('Processing query parameters')
 
