@@ -1828,9 +1828,8 @@ class API:
             return self.get_exception(
                 500, headers, request.format, 'Connection Error', 'Check logs for further information', '500', 'Internal Server Error')
         except ProviderItemNotFoundError:
-            msg = 'identifier not found'
-            return self.get_exception(404, headers, request.format,
-                                      'NotFound', msg)
+            return self.get_exception(
+                404, headers, request.format, 'Invalid Parameter Value Error',  'Identifier not found', '404', 'Not Found')
         except ProviderQueryError as err:
             LOGGER.error(err)
             return self.get_exception(
@@ -1842,9 +1841,8 @@ class API:
                 500, headers, request.format, 'NoApplicableCode', msg)
 
         if content is None:
-            msg = 'identifier not found'
-            return self.get_exception(400, headers, request.format,
-                                      'NotFound', msg)
+            return self.get_exception(
+                400, headers, request.format, 'Request Error', 'Identifier not found', '400', 'Bad Request')
 
         uri = content['properties'].get(p.uri_field) if p.uri_field else \
             '{}/collections/{}/items/{}'.format(
@@ -1948,9 +1946,8 @@ class API:
             return self.get_exception(
                 404, headers, request.format, 'Invalid Parameter Value Error',  'Collection does not exist', '404', 'Not Found')
         except ProviderTypeError:
-            msg = 'invalid provider type'
             return self.get_exception(
-                400, headers, format_, 'NoApplicableCode', msg)
+                400, headers, request.format, 'Request Error', 'Invalid provider type', '400', 'Bad Request')
         except ProviderConnectionError:
             return self.get_exception(
                 500, headers, request.format, 'Connection Error', 'Check logs for further information', '500', 'Internal Server Error')
@@ -2012,7 +2009,7 @@ class API:
                 msg = 'Invalid axis name'
                 LOGGER.error(msg)
                 return self.get_exception(
-                    400, headers, format_, 'InvalidParameterValue', msg)
+                    400, headers, request.format, 'Request Error', 'Invalid axis name', '400', 'Bad Request')
 
             query_args['subsets'] = subsets
             LOGGER.debug('Subsets: {}'.format(query_args['subsets']))
@@ -2304,9 +2301,8 @@ class API:
 
         # @TODO: figure out if the spec requires to return json errors
         except KeyError:
-            msg = 'Invalid collection tiles'
             return self.get_exception(
-                400, headers, format_, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Request Error', 'Invalid collection tiles', '400', 'Bad Request')
         except ProviderConnectionError as err:
             LOGGER.error(err)
             return self.get_exception(
@@ -2360,9 +2356,8 @@ class API:
                 self.config['resources'][dataset]['providers'], 'tile')
             p = load_plugin('provider', t)
         except KeyError:
-            msg = 'Invalid collection tiles'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Request Error', 'Invalid collection tiles', '400', 'Bad Request')
         except ProviderConnectionError:
             return self.get_exception(
                 500, headers, request.format, 'Connection Error', 'Check logs for further information', '500', 'Internal Server Error')
@@ -2678,7 +2673,7 @@ class API:
             #      random value generators
             msg = 'missing request data'
             return self.get_exception(
-                400, headers, request.format, 'MissingParameterValue', msg)
+                400, headers, request.format, 'Request Error', 'Missing request data', '400', 'Bad Request')
 
         try:
             # Parse bytes data, if applicable
@@ -2692,9 +2687,8 @@ class API:
         except (json.decoder.JSONDecodeError, TypeError) as err:
             # Input does not appear to be valid JSON
             LOGGER.error(err)
-            msg = 'invalid request data'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Request Error', 'Invalid request data', '400', 'Bad Request')
 
         data_dict = data.get('inputs', {})
         LOGGER.debug(data_dict)
@@ -2878,9 +2872,8 @@ class API:
             datetime_ = validate_datetime(collections[dataset]['extents'],
                                           datetime_)
         except ValueError as err:
-            msg = str(err)
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Request Error', str(err), '400', 'Bad Request')
 
         LOGGER.debug('Processing parameter-name parameter')
         parameternames = request.params.get('parameter-name') or []
@@ -2891,16 +2884,14 @@ class API:
         wkt = request.params.get('coords', None)
 
         if not wkt:
-            msg = 'missing coords parameter'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Request Error', 'Missing coords parameter', '400', 'Bad Request')
 
         try:
             wkt = shapely_loads(wkt)
         except WKTReadingError:
-            msg = 'invalid coords parameter'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Request Error', 'Invalid coords parameter', '400', 'Bad Request')
 
         LOGGER.debug('Processing z parameter')
         z = request.params.get('z')
@@ -2910,33 +2901,27 @@ class API:
             p = load_plugin('provider', get_provider_by_type(
                 collections[dataset]['providers'], 'edr'))
         except ProviderTypeError:
-            msg = 'invalid provider type'
             return self.get_exception(
-                500, headers, request.format, 'NoApplicableCode', msg)
+                500, headers, request.format, 'No applicable code', 'Invalid provider type', '500', 'Internal Server Error')
         except ProviderConnectionError:
-            msg = 'connection error (check logs)'
             return self.get_exception(
-                500, headers, request.format, 'NoApplicableCode', msg)
+                500, headers, request.format, 'No applicable code', 'Connection error - Check logs for further information', '500', 'Internal Server Error')
         except ProviderQueryError:
-            msg = 'query error (check logs)'
             return self.get_exception(
-                500, headers, request.format, 'NoApplicableCode', msg)
+                500, headers, request.format, 'No applicable code', 'Query error - Check logs for further information', '500', 'Internal Server Error')
 
         if instance is not None and not p.get_instance(instance):
-            msg = 'Invalid instance identifier'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Request Error', 'Invalid instance identifier', '400', 'Bad Request')
 
         if query_type not in p.get_query_types():
-            msg = 'Unsupported query type'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Request Error', 'Unsupported query type', '400', 'Bad Request')
 
         if parameternames and not any((fld['id'] in parameternames)
                                       for fld in p.get_fields()['field']):
-            msg = 'Invalid parameter-name'
             return self.get_exception(
-                400, headers, request.format, 'InvalidParameterValue', msg)
+                400, headers, request.format, 'Request Error', 'Invalid parameter-name', '400', 'Bad Request')
 
         query_args = dict(
             query_type=query_type,
@@ -2951,13 +2936,11 @@ class API:
         try:
             data = p.query(**query_args)
         except ProviderNoDataError:
-            msg = 'No data found'
             return self.get_exception(
-                204, headers, request.format, 'NoMatch', msg)
+                404, headers, request.format, 'Data Error', 'No data found', '404', 'Not Found')
         except ProviderQueryError:
-            msg = 'query error (check logs)'
             return self.get_exception(
-                500, headers, request.format, 'NoApplicableCode', msg)
+                500, headers, request.format, 'No applicable code', 'Query error - Check logs for further information', '500', 'Internal Server Error')
 
         if request.format == F_HTML:  # render
             content = render_j2_template(self.config,
@@ -3051,8 +3034,8 @@ class API:
                                                     'type', 'stac-collection')
 
         if dataset not in stac_collections:
-            return self.get_exception(404, headers, request.format,
-                                      'Collection not found', 'The requested stac-collection with the ID ', dataset, + ' could not be found', 'Not Found', '404')
+            return self.get_exception(
+                404, headers, request.format, 'Collection not found', 'The requested stac-collection with the ID ', dataset, + ' could not be found', 'Not Found', '404')
 
         LOGGER.debug('Loading provider')
         try:
@@ -3060,9 +3043,8 @@ class API:
                 stac_collections[dataset]['providers'], 'stac'))
         except ProviderConnectionError as err:
             LOGGER.error(err)
-            msg = 'connection error (check logs)'
             return self.get_exception(
-                500, headers, request.format, 'NoApplicableCode', msg)
+                500, headers, request.format, 'No applicable code', 'Connection error - Check logs for further information', '500', 'Internal Server Error')
 
         id_ = '{}-stac'.format(dataset)
         stac_version = '1.0.0-rc.2'
@@ -3083,13 +3065,12 @@ class API:
             )
         except ProviderNotFoundError as err:
             LOGGER.error(err)
-            return self.get_exception(404, headers, request.format,
-                                      'Resource not found', 'The requested resource could not be found', 'Not Found', '404')
+            return self.get_exception(
+                404, headers, request.format, 'Resource not found', 'The requested resource could not be found', 'Not Found', '404')
         except Exception as err:
             LOGGER.error(err)
-            msg = 'data query error'
             return self.get_exception(
-                500, headers, request.format, 'NoApplicableCode', msg)
+                500, headers, request.format, 'No applicable code', 'Data query error', '500', 'Internal Server Error')
 
         if isinstance(stac_data, dict):
             content.update(stac_data)
@@ -3155,9 +3136,8 @@ class API:
 
         # Content-Language is in the system locale (ignore language settings)
         headers = request.get_response_headers(SYSTEM_LOCALE)
-        msg = f'Invalid format: {request.format}'
         return self.get_exception(
-            400, headers, request.format, 'InvalidParameterValue', msg)
+            400, headers, request.format, 'Request Error', f'Invalid format: {request.format}', '400', 'Bad Request')
 
 
 def validate_bbox(value=None) -> list:
