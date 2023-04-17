@@ -3112,8 +3112,8 @@ class API:
         exception = {
             'title': title,
             'description': description,
-            'type': type,
-            'code': code
+            'status': code,
+            'type': type
         }
 
         if format_ == F_HTML:
