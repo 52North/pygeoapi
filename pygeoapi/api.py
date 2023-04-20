@@ -1001,9 +1001,8 @@ class API:
                             'coverage')
                         p = load_plugin('provider', provider_def)
                     except ProviderConnectionError:
-                        msg = 'connection error (check logs)'
-                        return self.get_exception(500, headers, request.format,
-                                                  'NoApplicableCode', msg)
+                        return self.get_exception(
+                            500, headers, request.format, 'Connection Error', 'Check logs for further information', '500', 'Internal Server Error')
                     except ProviderTypeError:
                         pass
                     else:
@@ -1148,10 +1147,8 @@ class API:
 
         if any([dataset is None,
                 dataset not in self.config['resources'].keys()]):
-
-            msg = 'Collection not found'
             return self.get_exception(
-                404, headers, request.format, 'NotFound', msg)
+                404, headers, request.format, 'Invalid Parameter Value Error',  'Collection not found', '404', 'Not Found')
 
         LOGGER.debug('Creating collection queryables')
         try:
@@ -1241,9 +1238,8 @@ class API:
                                                'type', 'collection')
 
         if dataset not in collections.keys():
-            msg = 'Collection not found'
             return self.get_exception(
-                404, headers, request.format, 'NotFound', msg)
+                404, headers, request.format, 'Invalid Parameter Value Error',  'Collection not found', '404', 'Not Found')
 
         LOGGER.debug('Processing query parameters')
 
@@ -1798,9 +1794,8 @@ class API:
                                                'type', 'collection')
 
         if dataset not in collections.keys():
-            msg = 'Collection not found'
             return self.get_exception(
-                404, headers, request.format, 'NotFound', msg)
+                404, headers, request.format, 'Invalid Parameter Value Error',  'Collection not found', '404', 'Not Found')
 
         LOGGER.debug('Loading provider')
 
@@ -1836,9 +1831,8 @@ class API:
                 500, headers, request.format, 'Query error', 'Check logs for further information', '500', 'Internal Server Error')
         except ProviderGenericError as err:
             LOGGER.error(err)
-            msg = 'generic error (check logs)'
             return self.get_exception(
-                500, headers, request.format, 'NoApplicableCode', msg)
+                500, headers, request.format, 'Genereic error', 'Check logs for further information', '500', 'Internal Server Error')
 
         if content is None:
             return self.get_exception(
@@ -2164,10 +2158,8 @@ class API:
 
         if any([dataset is None,
                 dataset not in self.config['resources'].keys()]):
-
-            msg = 'Collection not found'
             return self.get_exception(
-                404, headers, request.format, 'NotFound', msg)
+                404, headers, request.format, 'Collection Error', 'Collection not found - Check logs for further information', '404', 'Not Found')
 
         LOGGER.debug('Creating collection tiles')
         LOGGER.debug('Loading provider')
@@ -2671,7 +2663,6 @@ class API:
         if not data:
             # TODO not all processes require input, e.g. time-dependent or
             #      random value generators
-            msg = 'missing request data'
             return self.get_exception(
                 400, headers, request.format, 'Request Error', 'Missing request data', '400', 'Bad Request')
 
