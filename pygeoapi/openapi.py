@@ -538,7 +538,7 @@ def get_oas_30(cfg):
                     'requestBody': {
                         'description': 'Adds item to collection',
                         'content': {
-                            'application/geo+json': {
+                            'application/json': {
                                 'schema': {}
                             }
                         },
@@ -672,7 +672,7 @@ def get_oas_30(cfg):
                     'requestBody': {
                         'description': 'Updates item in collection',
                         'content': {
-                            'application/geo+json': {
+                            'application/json': {
                                 'schema': {}
                             }
                         },

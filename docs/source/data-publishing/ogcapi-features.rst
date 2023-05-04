@@ -18,16 +18,16 @@ parameters.
    :header: Provider, property filters/display, resulttype, bbox, datetime, sortby, skipGeometry, CQL, transactions
    :align: left
 
-   `CSV`_,✅/✅,results/hits,❌,❌,❌,✅,❌,❌
-   `Elasticsearch`_,✅/✅,results/hits,✅,✅,✅,✅,✅,✅
-   `ESRI Feature Service`_,✅/✅,results/hits,✅,✅,✅,✅,❌,❌
-   `GeoJSON`_,✅/✅,results/hits,❌,❌,❌,✅,❌,❌
-   `MongoDB`_,✅/❌,results,✅,✅,✅,✅,❌,❌
-   `OGR`_,✅/❌,results/hits,✅,❌,❌,✅,❌,❌
-   `PostgreSQL`_,✅/✅,results/hits,✅,✅,✅,✅,✅,❌
-   `SQLiteGPKG`_,✅/❌,results/hits,✅,❌,❌,✅,❌,❌
-   `SensorThings API`_,✅/✅,results/hits,✅,✅,✅,✅,❌,❌
-   `Socrata`_,✅/✅,results/hits,✅,✅,✅,✅,❌,❌
+   CSV,✅/✅,results/hits,❌,❌,❌,✅,❌,❌
+   Elasticsearch,✅/✅,results/hits,✅,✅,✅,✅,✅,✅
+   ESRIFeatureService,✅/✅,results/hits,✅,✅,✅,✅,❌,❌
+   GeoJSON,✅/✅,results/hits,❌,❌,❌,✅,❌,❌
+   MongoDB,✅/❌,results,✅,✅,✅,✅,❌,❌
+   OGR,✅/❌,results/hits,✅,❌,❌,✅,❌,❌
+   PostgreSQL,✅/✅,results/hits,✅,✅,✅,✅,✅,❌
+   SQLiteGPKG,✅/❌,results/hits,✅,❌,❌,✅,❌,❌
+   SensorThingsAPI,✅/✅,results/hits,✅,✅,✅,✅,❌,❌
+   Socrata,✅/✅,results/hits,✅,✅,✅,✅,❌,❌
 
 
 Below are specific connection examples based on supported providers.
@@ -76,7 +76,8 @@ Elasticsearch
    Requires Python packages elasticsearch and elasticsearch-dsl
 
 .. note::
-   Elasticsearch 8 or greater is supported.
+   Elasticsearch 7 or greater is supported.
+
 
 To publish an Elasticsearch index, the following are required in your index:
 
@@ -195,20 +196,6 @@ The OGR provider requires a recent (3+) version of GDAL to be installed.
            id_field: BGS_ID
            layer: ESRIJSON
 
-.. code-block:: yaml
-
-    providers:
-         - type: feature
-           name: OGR
-           data:
-             source_type: PostgreSQL
-             source: "PG: host=127.0.0.1 dbname=test user=postgres password=postgres"
-             source_srs: EPSG:4326
-             target_srs: EPSG:4326 # Can be used to transform/reproject the data
-           id_field: osm_id
-           layer: osm.hotosm_bdi_waterways # Value follows a 'my_schema.my_table' structure
-           geom_field: foo_geom
-
 
 
 MongoDB
@@ -301,7 +288,7 @@ SensorThings API
 The STA provider is capable of creating feature collections from OGC SensorThings 
 API endpoints. Three of the STA entities are configurable: Things, Datastreams, and 
 Observations. For a full description of the SensorThings entity model, see 
-`here <https://docs.ogc.org/is/15-078r6/15-078r6.html#figure_2>`_. 
+`here <http://docs.opengeospatial.org/is/15-078r6/15-078r6.html#figure_2>`_. 
 For each entity of ``Things``, pygeoapi will expand all entities directly related to
 the ``Thing``, including its associated ``Location``, from which the 
 geometry for the feature collection is derived. Similarly, ``Datastreams`` are expanded to 
@@ -358,19 +345,6 @@ relies on `sodapy <https://github.com/xmunoz/sodapy>`.
         geom_field: location
         time_field: datetime # Optional time_field for datetime queries
         token: my_token # Optional app token
-
-Controlling the order of properties
------------------------------------
-
-It is possible to control the order and which properties are exposed/unexposed for any supported feature provider using ``properties`` key within a provider definition, see the example below:
-
-.. code-block:: yaml
-
-   properties:
-       - waterway
-       - depth
-       - name
-
 
 Data access examples
 --------------------

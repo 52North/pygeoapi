@@ -41,20 +41,19 @@ The ``server`` section provides directives on binding and high level tuning.
     mimetype: application/json; charset=UTF-8  # default MIME type
     encoding: utf-8  # default server encoding
     language: en-US  # default server language
-    locale_dir: /path/to/translations
     gzip: false # default server config to gzip/compress responses to requests with gzip in the Accept-Encoding header
     cors: true  # boolean on whether server should support CORS
     pretty_print: true  # whether JSON responses should be pretty-printed
     limit: 10  # server limit on number of items to return
 
     templates: # optional configuration to specify a different set of templates for HTML pages. Recommend using absolute paths. Omit this to use the default provided templates
-      path: /path/to/jinja2/templates/folder # path to templates folder containing the Jinja2 template HTML files
+      path: /path/to/jinja2/templates/folder # path to templates folder containing the jinja2 template HTML files
       static: /path/to/static/folder # path to static folder containing css, js, images and other static files referenced by the template
 
     map:  # leaflet map setup for HTML pages
         url: https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png
         attribution: '<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia maps</a> | Map data &copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-    ogc_schemas_location: /opt/schemas.opengis.net  # local copy of https://schemas.opengis.net
+    ogc_schemas_location: /opt/schemas.opengis.net  # local copy of http://schemas.opengis.net
 
     manager:  # optional OGC API - Processes asynchronous job management
         name: TinyDB  # plugin name (see pygeoapi.plugin for supported process_manager's)
@@ -129,7 +128,7 @@ The ``resource.type`` property is required.  Allowed types are:
 - ``process``
 - ``stac-collection``
 
-The ``providers`` block is a list of 1..n providers with which to operate the data on.  Each
+The ``providers`` block is a list of 1..n providers with which to operate the data on.  Each 
 provider requires a ``type`` property.  Allowed types are:
 
 - ``feature``
@@ -151,13 +150,11 @@ default.
           keywords:  # list of related keywords
               - observations
               - monitoring
-          linked-data: # linked data configuration (see Linked Data section)
-              item_template: tests/data/base.jsonld 
-              context:  
-                  - datetime: https://schema.org/DateTime
-                  - vocab: https://example.com/vocab#
-                    stn_id: "vocab:stn_id"
-                    value: "vocab:value"
+          context:  # linked data configuration (see Linked Data section)
+              - datetime: https://schema.org/DateTime
+              - vocab: https://example.com/vocab#
+                stn_id: "vocab:stn_id"
+                value: "vocab:value"
           links:  # list of 1..n related links
               - type: text/csv  # MIME type
                 rel: canonical  # link relations per https://www.iana.org/assignments/link-relations/link-relations.xhtml
@@ -179,7 +176,7 @@ default.
               - type: feature # underlying data geospatial type: (allowed values are: feature, coverage, record, tile, edr)
                 default: true  # optional: if not specified, the first provider definition is considered the default
                 name: CSV
-                # transactions: DO NOT ACTIVATE unless you have setup access control beyond pygeoapi
+                # transactions: DO NOT ACTIVATE unless you have setup access contol beyond pygeoapi
                 editable: true  # optional: if backend is writable, default is false
                 data: tests/data/obs.csv  # required: the data filesystem path or URL, depending on plugin setup
                 id_field: id  # required for vector data, the field corresponding to the ID
@@ -198,7 +195,7 @@ default.
       hello-world:  # name of process
           type: collection  # REQUIRED (collection, process, or stac-collection)
           processor:
-              name: HelloWorld  # Python path of process definition
+              name: HelloWorld  # Python path of process defition
 
 
 .. seealso::
@@ -206,60 +203,6 @@ default.
 
 .. seealso::
    :ref:`plugins` for more information on plugins
-
-Adding links to collections
----------------------------
-
-You can add any type of link to a resource of type `collection`.
-pygeoapi does not enforce anything here, as long as the link has a `type`, `rel`, and `href` parameter.
-The `type` parameter defines the MIME type (`Content-Type`) of the linked resource.
-The `rel` parameter tell something about what kind of link it is. You could set this to `license` to
-add a data license link, or to `describedBy` if you wish to add a schema definition for example.
-
-It's also possible to add (bulk) download links to a collection.
-These links should have their `rel` parameter set to `enclosure` and must have a `length` parameter
-that defines the content length (byte size) of the file.
-If you know the content length and it never changes, you can set this and pygeoapi will return the enclosure link(s) as-is.
-
-However, the downloadable resource may be subject to change (e.g. it may grow in size over time).
-In that case, you can omit the `length` and pygeoapi will figure out the actual `Content-Length` header
-by issuing a `HEAD` request on the given URL (`href` parameter).
-Furthermore, if it notices that the defined `type` (MIME type) of the link does not match the actual
-`Content-Type` in the response headers, it will automatically update the `type` accordingly.
-Note that `type` is a mandatory link parameter though, so you must always set it.
-
-So for example, you could define a download link like so:
-
-.. code-block:: yaml
-
-  links
-    - type: application/octet-stream  # must have some MIME type
-      rel: enclosure
-      title: download link
-      href: https://myserver.com/data/file.zip  # URL
-
-And pygeoapi will turn that into:
-
-.. code-block:: json
-
-  {
-    "links": {
-      "type": "application/zip",
-      "rel": "enclosure",
-      "title": "download link",
-      "href": "https://myserver.com/data/file.zip",
-      "length": 46435
-    }
-  }
-
-Note how the MIME type was updated to match the actual `Content-Type` and that the `length` was set
-according to the `Content-Length` header.
-
-.. note::
-
-  If the `length` parameter is omitted and pygeoapi was not able to verify the `Content-Length` within 1 second
-  and/or within 1 URL redirect, the enclosure link will **not** be included in the response.
-  This means that if you want to be sure that the link is always included, you will have to set a `length`.
 
 
 Publishing hidden resources
@@ -408,7 +351,7 @@ For collections, at the level of item, the default JSON-LD representation adds:
 
 - An ``@id`` for the item, which is the URL for that item. If uri_field is specified,
   it is used, otherwise the URL is to its HTML representation in pygeoapi.
-- Separate GeoSPARQL/WKT and `schema.org/geo` versions of the geometry. `schema.org/geo`
+- Separate GeoSPARQL/WKT and `schema.org/geo` versions of the geometry. `schema.org/geo` 
   only supports point, line, and polygon geometries. Multipart lines are merged into a single line.
   The rest of the multipart geometries are transformed reduced and into a polygon via unary union
   or convex hull transform.
@@ -434,8 +377,7 @@ The default pygeoapi configuration includes an example for the ``obs`` sample da
 
 .. code-block:: yaml
 
-  linked-data:
-    context:
+  context:
       - datetime: https://schema.org/DateTime
       - vocab: https://example.com/vocab#
         stn_id: "vocab:stn_id"
@@ -447,10 +389,9 @@ one with terms defined by schema.org:
 
 .. code-block:: yaml
 
-  linked-data:
-    context:
+  context:
       - schema: https://schema.org/
-        stn_id: schema:identifier
+        stn_id: schema:identifer
         datetime:
             "@id": schema:observationDate
             "@type": schema:DateTime
@@ -470,52 +411,32 @@ by the dataset provider, not pygeoapi.
 
 An example of a data provider that includes relationships between items is the SensorThings API provider.
 SensorThings API, by default, has relationships between entities within its data model.
-Setting the ``intralink`` field of the SensorThings provider to ``true`` sets pygeoapi
-to represent the relationship between configured entities as intra-pygeoapi links or URIs.
-This relationship can further be maintained in the JSON-LD structured data using the appropriate
+Setting the ``intralink`` field of the SensorThings provider to ``true`` sets pygeoapi 
+to represent the relationship between configured entities as intra-pygeoapi links or URIs. 
+This relationship can further be maintained in the JSON-LD structured data using the appropiate 
 ``@context`` with the sosa/ssn ontology. For example:
 
 .. code-block:: yaml
 
     Things:
-      linked-data:
-        context:
+      context:
           - sosa: "http://www.w3.org/ns/sosa/"
             ssn: "http://www.w3.org/ns/ssn/"
             Datastreams: sosa:ObservationCollection
 
     Datastreams:
-      linked-data:
-        context:
+      context:
           - sosa: "http://www.w3.org/ns/sosa/"
             ssn: "http://www.w3.org/ns/ssn/"
             Observations: sosa:hasMember
             Thing: sosa:hasFeatureOfInterest
 
     Observations:
-      linked-data:
-        context:
+      context:
           - sosa: "http://www.w3.org/ns/sosa/"
             ssn: "http://www.w3.org/ns/ssn/"
             Datastream: sosa:isMemberOf
 
-Sometimes, the JSON-LD desired for an individual feature in a collection is more complicated than can be achieved by
-aliasing properties using a context. In this case, it is possible to specify a Jinja2 template. When ``item_template``
-is defined for a feature collection, the json-ld prepared by pygeoapi will be used to render the Jinja2 template
-specified by the path. The path specified can be absolute or relative to pygeoapi's template folder. For even more
-deployment flexibility, the path can be specified with string interpolation of environment variables.
-
-
-.. code-block:: yaml
-
-    linked-data:
-      item_template: tests/data/base.jsonld 
-      context:
-        - datetime: https://schema.org/DateTime
-
-.. note::
-   The template ``tests/data/base.jsonld`` renders the unmodified JSON-LD. For more information on the capacities 
-   of Jinja2 templates, see :ref:`html-templating`.
 
 Summary
 -------
@@ -526,4 +447,4 @@ At this point, you have the configuration ready to administer the server.
 .. _`YAML`: https://en.wikipedia.org/wiki/YAML
 .. _`JSON-LD`: https://json-ld.org
 .. _`Google Structured Data Testing Tool`: https://search.google.com/structured-data/testing-tool#url=https%3A%2F%2Fdemo.pygeoapi.io%2Fmaster
-.. _`Google Dataset Search`: https://developers.google.com/search/docs/appearance/structured-data/dataset
+.. _`Google Dataset Search`: https://developers.google.com/search/docs/data-types/dataset

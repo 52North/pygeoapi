@@ -93,11 +93,7 @@ class SensorThingsProvider(BaseProvider):
             self.entity = provider_def['entity']
             self._url = url_join(self.data, self.entity)
         except KeyError:
-            if self.data.split('/').pop() in ENTITY:
-                self.entity = self.data.split('/').pop()
-                self._url = self.data
-            else:
-                raise RuntimeError('Entity type required')
+            raise RuntimeError('name/type/data are required')
 
         # Default id
         if self.id_field is None or not self.id_field:

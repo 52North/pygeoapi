@@ -107,7 +107,7 @@ today_fmt = '%Y-%m-%d'
 # built documents.
 #
 # The short X.Y version.
-version = '0.15.dev0'
+version = '0.14.0'
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -152,7 +152,7 @@ html_static_path = ['_static']
 # to template names.
 #
 # This is required for the alabaster theme
-# refs: https://alabaster.readthedocs.io/en/latest/installation.html#sidebars
+# refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
 html_sidebars = {
     '**': [
         'relations.html',  # needs 'show_related': True theme option to display

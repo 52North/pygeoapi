@@ -56,13 +56,6 @@ def config():
 
 
 @pytest.fixture()
-def config_enclosure() -> dict:
-    """ Returns a pygeoapi configuration with enclosure links. """
-    with open(get_test_file_path('pygeoapi-test-config-enclosure.yml')) as fh:
-        return yaml_load(fh)
-
-
-@pytest.fixture()
 def config_hidden_resources():
     filename = 'pygeoapi-test-config-hidden-resources.yml'
     with open(get_test_file_path(filename)) as fh:
@@ -81,14 +74,16 @@ def api_(config):
 
 
 @pytest.fixture()
-def enclosure_api(config_enclosure):
-    """ Returns an API instance with a collection with enclosure links. """
-    return API(config_enclosure)
-
-
-@pytest.fixture()
 def api_hidden_resources(config_hidden_resources):
     return API(config_hidden_resources)
+
+
+# API using PostgreSQL provider
+@pytest.fixture()
+def pg_api_():
+    with open(get_test_file_path('pygeoapi-test-config-postgresql.yml')) as fh:
+        config = yaml_load(fh)
+        return API(config)
 
 
 def test_apirequest(api_):
@@ -373,29 +368,6 @@ def test_gzip(config, api_):
 
     assert rsp_html_ == rsp_html == \
         gzip.decompress(rsp_gzip_html).decode(enc_16)
-
-
-def test_gzip_csv(config, api_):
-    req_csv = mock_request({'f': 'csv'})
-    rsp_csv_headers, _, rsp_csv = api_.get_collection_items(req_csv, 'obs')
-    assert rsp_csv_headers['Content-Type'] == 'text/csv; charset=utf-8'
-    rsp_csv = rsp_csv.decode('utf-8')
-
-    req_csv = mock_request({'f': 'csv'}, HTTP_ACCEPT_ENCODING=F_GZIP)
-    rsp_csv_headers, _, rsp_csv_gzip = api_.get_collection_items(req_csv, 'obs') # noqa
-    assert rsp_csv_headers['Content-Type'] == 'text/csv; charset=utf-8'
-    rsp_csv_ = gzip.decompress(rsp_csv_gzip).decode('utf-8')
-    assert rsp_csv == rsp_csv_
-
-    # Use utf-16 encoding
-    config['server']['encoding'] = 'utf-16'
-    api_ = API(config)
-
-    req_csv = mock_request({'f': 'csv'}, HTTP_ACCEPT_ENCODING=F_GZIP)
-    rsp_csv_headers, _, rsp_csv_gzip = api_.get_collection_items(req_csv, 'obs') # noqa
-    assert rsp_csv_headers['Content-Type'] == 'text/csv; charset=utf-8'
-    rsp_csv_ = gzip.decompress(rsp_csv_gzip).decode('utf-8')
-    assert rsp_csv == rsp_csv_
 
 
 def test_root(config, api_):
@@ -873,35 +845,178 @@ def test_get_collection_items(config, api_):
     assert code == HTTPStatus.BAD_REQUEST
 
 
-def test_describe_collections_enclosures(config_enclosure, enclosure_api):
-    original_enclosures = {
-        lnk['title']: lnk
-        for lnk in config_enclosure['resources']['objects']['links']
-        if lnk['rel'] == 'enclosure'
-    }
+def test_get_collection_items_postgresql_cql(pg_api_):
+    """
+    Test for PostgreSQL CQL - requires local PostgreSQL with appropriate
+    data.  See pygeoapi/provider/postgresql.py for details.
+    """
+    # Arrange
+    cql_query = 'osm_id BETWEEN 80800000 AND 80900000 AND name IS NULL'
+    expected_ids = [80835474, 80835483]
 
-    req = mock_request()
-    _, _, response = enclosure_api.describe_collections(req, 'objects')
+    # Act
+    req = mock_request({
+        'filter-lang': 'cql-text',
+        'filter': cql_query
+    })
+    rsp_headers, code, response = pg_api_.get_collection_items(
+        req, 'hot_osm_waterways')
+
+    # Assert
+    assert code == HTTPStatus.OK
     features = json.loads(response)
-    modified_enclosures = {
-        lnk['title']: lnk for lnk in features['links']
-        if lnk['rel'] == 'enclosure'
-    }
+    ids = [item['id'] for item in features['features']]
+    assert ids == expected_ids
 
-    # If type and length is set, do not verify/update link
-    assert original_enclosures['download link 1'] == \
-           modified_enclosures['download link 1']
-    # If length is missing, modify link type and length
-    assert original_enclosures['download link 2']['type'] == \
-           modified_enclosures['download link 2']['type']
-    assert modified_enclosures['download link 2']['type'] == \
-           modified_enclosures['download link 3']['type']
-    assert 'length' not in original_enclosures['download link 2']
-    assert modified_enclosures['download link 2']['length'] > 0
-    assert modified_enclosures['download link 2']['length'] == \
-           modified_enclosures['download link 3']['length']
-    assert original_enclosures['download link 3']['type'] != \
-           modified_enclosures['download link 3']['type']
+    # Act, no filter-lang
+    req = mock_request({
+        'filter': cql_query
+    })
+    rsp_headers, code, response = pg_api_.get_collection_items(
+        req, 'hot_osm_waterways')
+
+    # Assert
+    assert code == HTTPStatus.OK
+    features = json.loads(response)
+    ids = [item['id'] for item in features['features']]
+    assert ids == expected_ids
+
+
+def test_get_collection_items_postgresql_cql_invalid_filter_language(pg_api_):
+    """
+    Test for PostgreSQL CQL - requires local PostgreSQL with appropriate
+    data.  See pygeoapi/provider/postgresql.py for details.
+
+    Test for invalid filter language
+    """
+    # Arrange
+    cql_query = 'osm_id BETWEEN 80800000 AND 80900000 AND name IS NULL'
+
+    # Act
+    req = mock_request({
+        'filter-lang': 'cql-json',  # Only cql-text is valid for GET
+        'filter': cql_query
+    })
+    rsp_headers, code, response = pg_api_.get_collection_items(
+        req, 'hot_osm_waterways')
+
+    # Assert
+    assert code == HTTPStatus.BAD_REQUEST
+    error_response = json.loads(response)
+    assert error_response['code'] == 'InvalidParameterValue'
+    assert error_response['description'] == 'Invalid filter language'
+
+
+@pytest.mark.parametrize("bad_cql", [
+    'id IN (1, ~)',
+    'id EATS (1, 2)',  # Valid CQL relations only
+    'id IN (1, 2'  # At some point this may return UnexpectedEOF
+])
+def test_get_collection_items_postgresql_cql_bad_cql(pg_api_, bad_cql):
+    """
+    Test for PostgreSQL CQL - requires local PostgreSQL with appropriate
+    data.  See pygeoapi/provider/postgresql.py for details.
+
+    Test for bad cql
+    """
+    # Act
+    req = mock_request({
+        'filter': bad_cql
+    })
+    rsp_headers, code, response = pg_api_.get_collection_items(
+        req, 'hot_osm_waterways')
+
+    # Assert
+    assert code == HTTPStatus.BAD_REQUEST
+    error_response = json.loads(response)
+    assert error_response['code'] == 'InvalidParameterValue'
+    assert error_response['description'] == f'Bad CQL string : {bad_cql}'
+
+
+def test_post_collection_items_postgresql_cql(pg_api_):
+    """
+    Test for PostgreSQL CQL - requires local PostgreSQL with appropriate
+    data.  See pygeoapi/provider/postgresql.py for details.
+    """
+    # Arrange
+    cql = {"and": [{"between": {"value": {"property": "osm_id"},
+                                "lower": 80800000,
+                                "upper": 80900000}},
+                   {"isNull": {"property": "name"}}]}
+    # werkzeug requests use a value of CONTENT_TYPE 'application/json'
+    # to create Content-Type in the Request object. So here we need to
+    # overwrite the default CONTENT_TYPE with the required one.
+    headers = {'CONTENT_TYPE': 'application/query-cql-json'}
+    expected_ids = [80835474, 80835483]
+
+    # Act
+    req = mock_request({
+        'filter-lang': 'cql-json'
+    }, data=cql, **headers)
+    rsp_headers, code, response = pg_api_.post_collection_items(
+        req, 'hot_osm_waterways')
+
+    # Assert
+    assert code == HTTPStatus.OK
+    features = json.loads(response)
+    ids = [item['id'] for item in features['features']]
+    assert ids == expected_ids
+
+
+def test_post_collection_items_postgresql_cql_invalid_filter_language(pg_api_):
+    """
+    Test for PostgreSQL CQL - requires local PostgreSQL with appropriate
+    data.  See pygeoapi/provider/postgresql.py for details.
+
+    Test for invalid filter language
+    """
+    # Arrange
+    # CQL should never be parsed
+    cql = {"in": {"value": {"property": "id"}, "list": [1, 2]}}
+    headers = {'CONTENT_TYPE': 'application/query-cql-json'}
+
+    # Act
+    req = mock_request({
+        'filter-lang': 'cql-text'  # Only cql-json is valid for POST
+    }, data=cql, **headers)
+    rsp_headers, code, response = pg_api_.post_collection_items(
+        req, 'hot_osm_waterways')
+
+    # Assert
+    assert code == HTTPStatus.BAD_REQUEST
+    error_response = json.loads(response)
+    assert error_response['code'] == 'InvalidParameterValue'
+    assert error_response['description'] == 'Invalid filter language'
+
+
+@pytest.mark.parametrize("bad_cql", [
+    # Valid CQL relations only
+    {"eats": {"value": {"property": "id"}, "list": [1, 2]}},
+    # At some point this may return UnexpectedEOF
+    '{"in": {"value": {"property": "id"}, "list": [1, 2}}'
+])
+def test_post_collection_items_postgresql_cql_bad_cql(pg_api_, bad_cql):
+    """
+    Test for PostgreSQL CQL - requires local PostgreSQL with appropriate
+    data.  See pygeoapi/provider/postgresql.py for details.
+
+    Test for bad cql
+    """
+    # Arrange
+    headers = {'CONTENT_TYPE': 'application/query-cql-json'}
+
+    # Act
+    req = mock_request({
+        'filter-lang': 'cql-json'
+    }, data=bad_cql, **headers)
+    rsp_headers, code, response = pg_api_.post_collection_items(
+        req, 'hot_osm_waterways')
+
+    # Assert
+    assert code == HTTPStatus.BAD_REQUEST
+    error_response = json.loads(response)
+    assert error_response['code'] == 'InvalidParameterValue'
+    assert error_response['description'].startswith('Bad CQL string')
 
 
 def test_get_collection_items_json_ld(config, api_):
@@ -971,7 +1086,7 @@ def test_get_collection_item_json_ld(config, api_):
     feature = json.loads(response)
     assert '@context' in feature
     assert all((f in feature['@context'][0] for
-                f in ('schema', 'type', 'gsp')))
+                f in ('schema', 'type', 'geosparql')))
     assert len(feature['@context']) == 1
     assert 'schema' in feature['@context'][0]
     assert feature['@context'][0]['schema'] == 'https://schema.org/'
@@ -1215,14 +1330,6 @@ def test_get_collection_tiles(config, api_):
 
 
 def test_describe_processes(config, api_):
-    req = mock_request({'limit': 1})
-    # Test for description of single processes
-    rsp_headers, code, response = api_.describe_processes(req)
-    data = json.loads(response)
-    assert code == HTTPStatus.OK
-    assert len(data['processes']) == 1
-    assert len(data['links']) == 3
-
     req = mock_request()
 
     # Test for undefined process
@@ -1235,7 +1342,7 @@ def test_describe_processes(config, api_):
     rsp_headers, code, response = api_.describe_processes(req)
     data = json.loads(response)
     assert code == HTTPStatus.OK
-    assert len(data['processes']) == 2
+    assert len(data['processes']) == 1
     assert len(data['links']) == 3
 
     # Test for particular, defined process
@@ -1622,45 +1729,12 @@ def test_get_collection_edr_query(config, api_):
         req, 'icoads-sst', None, 'position')
     assert code == HTTPStatus.NO_CONTENT
 
-    # position no coords
-    req = mock_request({
-        'datetime': '2000-01-17'
-    })
-    rsp_headers, code, response = api_.get_collection_edr_query(
-        req, 'icoads-sst', None, 'position')
-    assert code == HTTPStatus.BAD_REQUEST
-
-    # cube bbox parameter 4 dimensional
-    req = mock_request({
-        'bbox': '0,0,10,10'
-    })
-    rsp_headers, code, response = api_.get_collection_edr_query(
-        req, 'icoads-sst', None, 'cube')
-    assert code == HTTPStatus.OK
-
-    # cube bad bbox parameter
-    req = mock_request({
-        'bbox': '0,0,10'
-    })
-    rsp_headers, code, response = api_.get_collection_edr_query(
-        req, 'icoads-sst', None, 'cube')
-    assert code == HTTPStatus.BAD_REQUEST
-
-    # cube no bbox parameter
-    req = mock_request({})
-    rsp_headers, code, response = api_.get_collection_edr_query(
-        req, 'icoads-sst', None, 'cube')
-    assert code == HTTPStatus.BAD_REQUEST
-
 
 def test_validate_bbox():
     assert validate_bbox('1,2,3,4') == [1, 2, 3, 4]
-    assert validate_bbox('1,2,3,4,5,6') == [1, 2, 3, 4, 5, 6]
     assert validate_bbox('-142,42,-52,84') == [-142, 42, -52, 84]
     assert (validate_bbox('-142.1,42.12,-52.22,84.4') ==
             [-142.1, 42.12, -52.22, 84.4])
-    assert (validate_bbox('-142.1,42.12,-5.28,-52.22,84.4,7.39') ==
-            [-142.1, 42.12, -5.28, -52.22, 84.4, 7.39])
 
     assert (validate_bbox('177.0,65.0,-177.0,70.0') ==
             [177.0, 65.0, -177.0, 70.0])
@@ -1669,13 +1743,7 @@ def test_validate_bbox():
         validate_bbox('1,2,4')
 
     with pytest.raises(ValueError):
-        validate_bbox('1,2,4,5,6')
-
-    with pytest.raises(ValueError):
         validate_bbox('3,4,1,2')
-
-    with pytest.raises(ValueError):
-        validate_bbox('1,2,6,4,5,3')
 
 
 def test_validate_datetime():

@@ -18,8 +18,8 @@ parameters.
    :header: Provider, properties, subset, bbox, datetime
    :align: left
 
-   :ref:`Rasterio<rasterio-provider>`,✅,✅,✅,
-   :ref:`Xarray<xarray-provider>`,✅,✅,✅,✅
+   rasterio,✅,✅,✅,
+   xarray,✅,✅,✅,✅
 
 
 Below are specific connection examples based on supported providers.
@@ -27,15 +27,13 @@ Below are specific connection examples based on supported providers.
 Connection examples
 -------------------
 
-.. _rasterio-provider:
-
-Rasterio
+rasterio
 ^^^^^^^^
 
 .. note::
-   Requires Python package Rasterio
+   Requires Python package rasterio
 
-The `Rasterio`_ provider plugin reads and extracts any data that Rasterio is
+The `rasterio`_ provider plugin reads and extracts any data that rasterio is
 capable of handling.
 
 .. code-block:: yaml
@@ -51,18 +49,16 @@ capable of handling.
              mimetype: application/x-grib2
 
 .. note::
-   The Rasterio provider ``format.name`` directive **requires** a valid
+   The rasterio provider ``format.name`` directive **requires** a valid
    `GDAL raster driver short name`_.
-
-.. _xarray-provider:
 
 xarray
 ^^^^^^
 
 .. note::
-   Requires Python package Xarray
+   Requires Python package xarray
 
-The `Xarray`_ provider plugin reads and extracts `NetCDF`_ and `Zarr`_ data.
+The `xarray`_ provider plugin reads and extracts `NetCDF`_ and `Zarr`_ data.
 
 .. code-block:: yaml
 
@@ -109,7 +105,7 @@ Data access examples
 * coverage access with comma-separated properties
   * http://localhost:5000/collections/foo/coverage?properties=1,3
 * coverage access with subsetting
-  * http://localhost:5000/collections/foo/coverage?subset=lat(10:20)&subset=long(10:20)
+  * http://localhost:5000/collections/foo/coverage?subset=lat(10,20)&subset=long(10,20)
 * coverage with bbox
   * http://localhost:5000/collections/foo/coverage?bbox=10,10,20,20
 * coverage with bbox and bbox CRS
@@ -120,8 +116,8 @@ Data access examples
    will have the response filename matching the collection name and appropriate file extension (e.g. ``my-dataset.nc``)
 
 .. _`OGC API - Coverages`: https://github.com/opengeospatial/ogcapi-coverages
-.. _`Rasterio`: https://rasterio.readthedocs.io
-.. _`Xarray`: https://docs.xarray.dev/en/stable
+.. _`rasterio`: https://rasterio.readthedocs.io
+.. _`xarray`: https://xarray.pydata.org
 .. _`NetCDF`: https://en.wikipedia.org/wiki/NetCDF
 .. _`Zarr`: https://zarr.readthedocs.io/en/stable
 .. _`GDAL raster driver short name`: https://gdal.org/drivers/raster/index.html

@@ -32,7 +32,6 @@
 
 import functools
 import importlib
-import json
 import logging
 import os
 from typing import Any
@@ -171,15 +170,6 @@ class OGRProvider(BaseProvider):
                 osgeo_osr.CoordinateTransformation(source, target)
 
         self._load_source_helper(self.data_def['source_type'])
-
-        self.geom_field = provider_def.get('geom_field')
-
-        # ID field is required
-        self.id_field = provider_def.get('id_field')
-        if not self.id_field:
-            msg = 'Need explicit \'id_field\' attr in provider config'
-            LOGGER.error(msg)
-            raise Exception(msg)
 
         # Layer name is required
         self.layer_name = provider_def.get('layer')
@@ -464,10 +454,7 @@ class OGRProvider(BaseProvider):
             raise gdalerr
 
     def _ogr_feature_to_json(self, ogr_feature, skip_geometry=False):
-        if self.geom_field is not None:
-            geom = ogr_feature.GetGeomFieldRef(self.geom_field)
-        else:
-            geom = ogr_feature.GetGeometryRef()
+        geom = ogr_feature.GetGeometryRef()
         if self.transform_out:
             # Optionally reproject the geometry
             geom.Transform(self.transform_out)
@@ -475,8 +462,6 @@ class OGRProvider(BaseProvider):
         json_feature = ogr_feature.ExportToJson(as_object=True)
         if skip_geometry:
             json_feature['geometry'] = None
-        else:
-            json_feature['geometry'] = json.loads(geom.ExportToJson())
         try:
             json_feature['id'] = json_feature['properties'].pop(
                 self.id_field, json_feature['id']

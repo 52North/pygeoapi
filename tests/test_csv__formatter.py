@@ -67,7 +67,7 @@ def test_csv__formatter(fixture):
 
     header = list(reader.fieldnames)
 
-    assert f.mimetype == 'text/csv; charset=utf-8'
+    assert f.mimetype == 'text/csv'
 
     assert len(header) == 5
 

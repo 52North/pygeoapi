@@ -43,7 +43,7 @@ def get_test_file_path(filename: str) -> str:
     if os.path.isfile(filename):
         return filename
     else:
-        return f'tests/{filename}'
+        return 'tests/{}'.format(filename)
 
 
 def mock_request(params: dict = None, data=None, **headers) -> Request:

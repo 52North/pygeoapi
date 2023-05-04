@@ -31,11 +31,10 @@
 Returns content as linked data representations
 """
 
-import json
 import logging
 from typing import Callable
 
-from pygeoapi.util import is_url, render_j2_template
+from pygeoapi.util import is_url
 from pygeoapi import l10n
 from shapely.geometry import shape
 from shapely.ops import unary_union
@@ -189,21 +188,17 @@ def geojson2jsonld(config: dict, data: dict, dataset: str,
     :returns: string of rendered JSON (GeoJSON-LD)
     """
 
-    LOGGER.debug('Fetching context and template from resource configuration')
-    jsonld = config['resources'][dataset].get('linked-data', {})
-
-    context = jsonld.get('context', []).copy()
-    template = jsonld.get('item_template', None)
-
+    context = config['resources'][dataset].get('context', []).copy()
     defaultVocabulary = {
         'schema': 'https://schema.org/',
+        id_field: '@id',
         'type': '@type'
     }
 
     if identifier:
         # Single jsonld
         defaultVocabulary.update({
-            'gsp': 'http://www.opengis.net/ont/geosparql#'
+            'geosparql': 'http://www.opengis.net/ont/geosparql#'
         })
 
         # Expand properties block
@@ -212,7 +207,7 @@ def geojson2jsonld(config: dict, data: dict, dataset: str,
         # Include multiple geometry encodings
         data['type'] = 'schema:Place'
         jsonldify_geometry(data)
-        data['@id'] = identifier
+        data[id_field] = identifier
 
     else:
         # Collection of jsonld
@@ -225,13 +220,13 @@ def geojson2jsonld(config: dict, data: dict, dataset: str,
 
         for i, feature in enumerate(data['features']):
             # Get URI for each feature
-            identifier_ = feature.get(id_field,
-                                      feature['properties'].get(id_field, ''))
-            if not is_url(str(identifier_)):
-                identifier_ = f"{config['server']['url']}/collections/{dataset}/items/{feature['id']}"  # noqa
+            identifier = feature.get(id_field,
+                                     feature['properties'].get(id_field, ''))
+            if not is_url(str(identifier)):
+                identifier = f"config['server']['url']/collections/{dataset}/items/{feature['id']}"  # noqa
 
             data['features'][i] = {
-                '@id': identifier_,
+                id_field: identifier,
                 'type': 'schema:Place'
             }
 
@@ -245,15 +240,7 @@ def geojson2jsonld(config: dict, data: dict, dataset: str,
         **data
     }
 
-    if None in (template, identifier):
-        return ldjsonData
-    else:
-        # Render jsonld template for single item with template configured
-        LOGGER.debug(f'Rendering JSON-LD template: {template}')
-        content = render_j2_template(
-            config, template, ldjsonData)
-        ldjsonData = json.loads(content)
-        return ldjsonData
+    return ldjsonData
 
 
 def jsonldify_geometry(feature: dict) -> None:
@@ -273,9 +260,9 @@ def jsonldify_geometry(feature: dict) -> None:
     feature['geometry'] = feature.pop('geometry')
 
     # Geosparql geometry
-    feature['gsp:hasGeometry'] = {
+    feature['geosparql:hasGeometry'] = {
         '@type': f'http://www.opengis.net/ont/sf#{geom.geom_type}',
-        'gsp:asWKT': {
+        'geosparql:asWKT': {
             '@type': 'http://www.opengis.net/ont/geosparql#wktLiteral',
             '@value': f'{geom.wkt}'
         }
@@ -302,23 +289,23 @@ def geom2schemageo(geom: shape) -> dict:
         }
 
     elif geom.geom_type == 'LineString':
-        points = [f'{x},{y}' for (x, y, *_) in geom.coords[:]]
-        f['schema:line'] = ' '.join(points)
+        _ = [f'{x},{y}' for (x, y) in geom.coords[:]]
+        f['schema:line'] = ' '.join(_)
         return f
 
     elif geom.geom_type == 'MultiLineString':
         points = list()
-        for line in geom.geoms:
-            points.extend([f'{x},{y}' for (x, y, *_) in line.coords[:]])
-        f['schema:line'] = ' '.join(points)
+        [points.extend(p.coords[:]) for p in geom.geoms]
+        _ = [f'{x},{y}' for (x, y) in points]
+        f['schema:line'] = ' '.join(_)
         return f
 
     elif geom.geom_type == 'MultiPoint':
-        points = [(x, y) for pt in geom.geoms for (x, y, *_) in pt.coords]
-        points.append(points[0])
+        poly_geom = [(p.x, p.y) for p in geom.geoms]
+        poly_geom.append(poly_geom[0])
 
     elif geom.geom_type == 'Polygon':
-        points = geom.exterior.coords[:]
+        poly_geom = geom.exterior.coords[:]
 
     elif geom.geom_type == 'MultiPolygon':
         # MultiPolygon to Polygon (buffer of 0 helps ensure manifold polygon)
@@ -327,17 +314,20 @@ def geom2schemageo(geom: shape) -> dict:
             LOGGER.debug(f'Invalid MultiPolygon: {poly.geom_type}')
             poly = poly.convex_hull
             LOGGER.debug(f'New MultiPolygon: {poly.geom_type}')
-        points = poly.exterior.coords[:]
+        poly_geom = poly.exterior.coords[:]
 
     else:
-        points = list()
+        poly_geom = list()
         for p in geom.geoms:
             try:
-                points.extend(p.coords[:])
+                poly_geom.extend(p.coords[:])
             except NotImplementedError:
-                points.extend(p.exterior.coords[:])
+                poly_geom.extend(p.exterior.coords[:])
 
-    schema_polygon = [f'{x},{y}' for (x, y, *_) in points]
+    try:
+        schema_polygon = [f'{x},{y}' for (x, y) in poly_geom]
+    except ValueError:
+        schema_polygon = [f'{x},{y},{z}' for (x, y, z) in poly_geom]
 
     f['schema:polygon'] = ' '.join(schema_polygon)
 

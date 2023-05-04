@@ -5,12 +5,10 @@
 #          Mary Bucknell <mbucknell@usgs.gov>
 #          John A Stevenson <jostev@bgs.ac.uk>
 #          Colin Blackburn <colb@bgs.ac.uk>
-#          Francesco Bartoli <xbartolone@gmail.com>
 #
 # Copyright (c) 2018 Jorge Samuel Mendes de Jesus
-# Copyright (c) 2023 Tom Kralidis
+# Copyright (c) 2022 Tom Kralidis
 # Copyright (c) 2022 John A Stevenson and Colin Blackburn
-# Copyright (c) 2023 Francesco Bartoli
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation
@@ -49,22 +47,20 @@
 #  psql -U postgres -h 127.0.0.1 -p 5432 test
 
 import logging
+from pygeoapi.provider.base import BaseProvider, \
+    ProviderConnectionError, ProviderQueryError, ProviderItemNotFoundError
 
-from copy import deepcopy
-from geoalchemy2 import Geometry  # noqa - this isn't used explicitly but is needed to process Geometry columns
-from geoalchemy2.functions import ST_MakeEnvelope
-from geoalchemy2.shape import to_shape
-from pygeofilter.backends.sqlalchemy.evaluate import to_filter
-import shapely
 from sqlalchemy import create_engine, MetaData, PrimaryKeyConstraint, asc, desc
 from sqlalchemy.exc import InvalidRequestError, OperationalError
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session, load_only
 from sqlalchemy.sql.expression import and_
+from geoalchemy2 import Geometry  # noqa - this isn't used explicitly but is needed to process Geometry columns
+from geoalchemy2.functions import ST_MakeEnvelope
+from pygeofilter.backends.sqlalchemy.evaluate import to_filter
 
-from pygeoapi.provider.base import BaseProvider, \
-    ProviderConnectionError, ProviderQueryError, ProviderItemNotFoundError
-
+import shapely
+from geoalchemy2.shape import to_shape
 
 _ENGINE_STORE = {}
 _TABLE_MODEL_STORE = {}
@@ -126,10 +122,11 @@ class PostgreSQLProvider(BaseProvider):
         :param q: full-text search term(s)
         :param filterq: CQL query as text string
 
-        :returns: GeoJSON FeatureCollection
+        :returns: GeoJSON FeaturesCollection
         """
+        LOGGER.debug('Querying PostGIS')
 
-        LOGGER.debug('Preparing filters')
+        # Prepare filters
         property_filters = self._get_property_filters(properties)
         cql_filters = self._get_cql_filters(filterq)
         bbox_filter = self._get_bbox_filter(bbox)
@@ -137,7 +134,6 @@ class PostgreSQLProvider(BaseProvider):
         selected_properties = self._select_properties_clause(select_properties,
                                                              skip_geometry)
 
-        LOGGER.debug('Querying PostGIS')
         # Execute query within self-closing database Session context
         with Session(self._engine) as session:
             results = (session.query(self.table_model)
@@ -148,28 +144,25 @@ class PostgreSQLProvider(BaseProvider):
                        .options(selected_properties)
                        .offset(offset))
 
-            matched = results.count()
-            if limit < matched:
-                returned = limit
-            else:
-                returned = matched
-
-            LOGGER.debug(f'Found {matched} result(s)')
-
-            LOGGER.debug('Preparing response')
+            # Prepare and return feature collection response
             response = {
                 'type': 'FeatureCollection',
-                'features': [],
-                'numberMatched': matched,
-                'numberReturned': returned
+                'features': []
             }
 
-            if resulttype == "hits" or not results:
-                response['numberReturned'] = 0
+            if resulttype == "hits":
+                # User requested hit count
+                response['numberMatched'] = results.count()
+                return response
+
+            if not results:
+                # Empty response
                 return response
 
             for item in results.limit(limit):
-                response['features'].append(self._sqlalchemy_to_feature(item))
+                response['features'].append(
+                    self._sqlalchemy_to_feature(item)
+                )
 
         return response
 
@@ -196,7 +189,7 @@ class PostgreSQLProvider(BaseProvider):
 
         :param identifier: feature id
 
-        :returns: GeoJSON FeatureCollection
+        :returns: GeoJSON FeaturesCollection
         """
         LOGGER.debug(f'Get item by ID: {identifier}')
 
@@ -209,14 +202,6 @@ class PostgreSQLProvider(BaseProvider):
                 msg = f"No such item: {self.id_field}={identifier}."
                 raise ProviderItemNotFoundError(msg)
             feature = self._sqlalchemy_to_feature(item)
-
-            # Drop non-defined properties
-            if self.properties:
-                props = feature['properties']
-                dropping_keys = deepcopy(props).keys()
-                for item in dropping_keys:
-                    if item not in self.properties:
-                        props.pop(item)
 
             # Add fields for previous and next items
             id_field = getattr(self.table_model, self.id_field)

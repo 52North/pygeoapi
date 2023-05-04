@@ -49,9 +49,8 @@ from shapely.geometry import Polygon
 import dateutil.parser
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from babel.support import Translations
+from jinja2.exceptions import TemplateNotFound
 import yaml
-from requests import Session
-from requests.structures import CaseInsensitiveDict
 
 from pygeoapi import __version__
 from pygeoapi import l10n
@@ -329,22 +328,21 @@ def render_j2_template(config: dict, template: Path,
     :returns: string of rendered template
     """
 
-    template_paths = [TEMPLATES, '.']
-
-    locale_dir = config['server'].get('locale_dir', 'locale')
-    LOGGER.debug(f'Locale directory: {locale_dir}')
-
+    custom_templates = False
     try:
-        templates = config['server']['templates']['path']
-        template_paths.insert(0, templates)
-        LOGGER.debug(f'using custom templates: {templates}')
+        templates_path = config['server']['templates']['path']
+        env = Environment(loader=FileSystemLoader(templates_path),
+                          extensions=['jinja2.ext.i18n',
+                                      'jinja2.ext.autoescape'],
+                          autoescape=select_autoescape(['html', 'xml']))
+        custom_templates = True
+        LOGGER.debug(f'using custom templates: {templates_path}')
     except (KeyError, TypeError):
+        env = Environment(loader=FileSystemLoader(TEMPLATES),
+                          extensions=['jinja2.ext.i18n',
+                                      'jinja2.ext.autoescape'],
+                          autoescape=select_autoescape(['html', 'xml']))
         LOGGER.debug(f'using default templates: {TEMPLATES}')
-
-    env = Environment(loader=FileSystemLoader(template_paths),
-                      extensions=['jinja2.ext.i18n',
-                                  'jinja2.ext.autoescape'],
-                      autoescape=select_autoescape(['html', 'xml']))
 
     env.filters['to_json'] = to_json
     env.filters['format_datetime'] = format_datetime
@@ -361,10 +359,21 @@ def render_j2_template(config: dict, template: Path,
     env.filters['filter_dict_by_key_value'] = filter_dict_by_key_value
     env.globals.update(filter_dict_by_key_value=filter_dict_by_key_value)
 
-    translations = Translations.load(locale_dir, [locale_])
+    translations = Translations.load('locale', [locale_])
     env.install_gettext_translations(translations)
 
-    template = env.get_template(template)
+    try:
+        template = env.get_template(template)
+    except TemplateNotFound as err:
+        if custom_templates:
+            LOGGER.debug(err)
+            LOGGER.debug('Custom template not found; using default')
+            env = Environment(loader=FileSystemLoader(TEMPLATES),
+                              extensions=['jinja2.ext.i18n'])
+            env.install_gettext_translations(translations)
+            template = env.get_template(template)
+        else:
+            raise
 
     return template.render(config=l10n.translate_struct(config, locale_, True),
                            data=data, locale=locale_, version=__version__)
@@ -539,28 +548,3 @@ def get_envelope(coords_list: List[List[float]]) -> list:
     bounds = polygon.bounds
     return [[bounds[0], bounds[3]],
             [bounds[2], bounds[1]]]
-
-
-class UrlPrefetcher:
-    """ Prefetcher to get HTTP headers for specific URLs.
-    Allows a maximum of 1 redirect by default.
-    """
-    def __init__(self):
-        self._session = Session()
-        self._session.max_redirects = 1
-
-    def get_headers(self, url: str, **kwargs) -> CaseInsensitiveDict:
-        """ Issues an HTTP HEAD request to the given URL.
-        Returns a case-insensitive dictionary of all headers.
-        If the request times out (defaults to 1 second unless `timeout`
-        keyword argument is set), or the response has a bad status code,
-        an empty dictionary is returned.
-        """
-        kwargs.setdefault('timeout', 1)
-        kwargs.setdefault('allow_redirects', True)
-        try:
-            response = self._session.head(url, **kwargs)
-            response.raise_for_status()
-        except Exception:  # noqa
-            return CaseInsensitiveDict()
-        return response.headers

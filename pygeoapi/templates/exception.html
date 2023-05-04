@@ -3,9 +3,6 @@
 {% block body %}
     <section id="exception">
       <h2>{% trans %}Exception{% endtrans %}</h2>
-      <p>Title: {{ data['title'] }}</p>
-      <p>Description: {{ data['description']}}</p>
-      <p>Status: {{data['status']}}</p>
-      <p>Type: {{ data['type'] }}</p>
+      <p>{{ data['description'] }}</p>
     </section>
 {% endblock %}
