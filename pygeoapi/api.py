@@ -301,7 +301,7 @@ class APIRequest:
                                                           supported_locales)
 
         # Determine format
-        self._format = self._get_format(request.headers)
+        self._format = self._get_format(request.headers) 
 
         # Get received headers
         self._headers = self.get_request_headers(request.headers)
@@ -3083,12 +3083,11 @@ class API:
         processes_config = filter_dict_by_key_value(self.config['resources'],
                                                     'type', 'process')
 
-        if process is not None:
+        if process is not None: #ALEX
             if process not in processes_config.keys() or not processes_config:
-                msg = 'Identifier not found'
                 return self.get_exception(
-                    HTTPStatus.NOT_FOUND, headers,
-                    request.format, 'NoSuchProcess', msg)
+                'http://www.opengis.net/def/exceptions/ogcapi-processes-1/1.0/no-such-process', 'no-such-process', HTTPStatus.NOT_FOUND,
+                'the process with the processID: ' + process + ' could not be found', headers, request.format)
 
         if processes_config:
             if process is not None:
@@ -3327,11 +3326,10 @@ class API:
         processes_config = filter_dict_by_key_value(
             self.config['resources'], 'type', 'process'
         )
-        if process_id not in processes_config:
-            msg = 'identifier not found'
+        if process_id not in processes_config: #ALEX
             return self.get_exception(
-                HTTPStatus.NOT_FOUND, headers,
-                request.format, 'NoSuchProcess', msg)
+                'http://www.opengis.net/def/exceptions/ogcapi-processes-1/1.0/no-such-process', 'no-such-process', HTTPStatus.NOT_FOUND,
+                'the process with the processID' + process_id + ' could not be found', headers, request.format)
 
         if not self.manager:
             msg = 'Process manager is undefined'
@@ -3812,24 +3810,28 @@ class API:
             headers.pop('Content-Type', None)
             return headers, HTTPStatus.OK, stac_data
 
-    def get_exception(self, status, headers, format_, code,
-                      description) -> Tuple[dict, int, str]:
+    def get_exception(self, type, title, status, detail, headers, #ALEX
+                      format_,) -> Tuple[dict, int, str]:
         """
         Exception handler
 
-        :param status: HTTP status code
+        :param type: URI reference to identify the problem type
+        :param title: a short human-readable problem summary
+        :param status: the HTTP status code generated on the problem occurrence
+        :param detail: a human-readable explanation for what exactly happened
         :param headers: dict of HTTP response headers
         :param format_: format string
-        :param code: OGC API exception code
-        :param description: OGC API exception code
 
         :returns: tuple of headers, status, and message
         """
 
-        LOGGER.error(description)
+        #ALEX: Changes made according to RFC 7807
+        LOGGER.error(detail)
         exception = {
-            'code': code,
-            'description': description
+            'type': type,
+            'title': title,
+            'status': status,
+            'detail': detail
         }
 
         if format_ == F_HTML:
