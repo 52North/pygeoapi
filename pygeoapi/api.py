@@ -3443,22 +3443,19 @@ class API:
         if not job:
             return self.get_exception( #ALEX
                 'http://www.opengis.net/def/exceptions/ogcapi-processes-1/1.0/no-such-job', 'no-such-job', HTTPStatus.NOT_FOUND,
-                'the job with the jobID' + job_id + ' could not be found', headers, request.format)
+                'the job with the jobID: ' + job_id + ' could not be found', headers, request.format)
 
         status = JobStatus[job['status']]
 
         if status == JobStatus.running:
-            msg = 'job still running'
-            return self.get_exception(
-                HTTPStatus.NOT_FOUND, headers,
-                request.format, 'ResultNotReady', msg)
+            return self.get_exception( #ALEX
+                'http://www.opengis.net/def/exceptions/ogcapi-processes-1/1.0/result-not-ready', 'result-not-ready', HTTPStatus.NOT_FOUND,
+                'the jobID: ' + job_id + ' is still running', headers, request.format)
 
         elif status == JobStatus.accepted:
-            # NOTE: this case is not mentioned in the specification
-            msg = 'job accepted but not yet running'
-            return self.get_exception(
-                HTTPStatus.NOT_FOUND, headers,
-                request.format, 'ResultNotReady', msg)
+            return self.get_exception( #ALEX
+                'http://www.opengis.net/def/exceptions/ogcapi-processes-1/1.0/result-not-ready', 'result-not-ready', HTTPStatus.NOT_FOUND,
+                'the job with the jobID: ' + job_id + ' is not running yet', headers, request.format)
 
         elif status == JobStatus.failed:
             msg = 'job failed'
