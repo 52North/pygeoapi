@@ -1335,18 +1335,16 @@ class API:
         try:
             offset = int(request.params.get('offset'))
             if offset < 0:
-                msg = 'offset value should be positive or zero'
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                'InvalidParameterValue', 'invalid-offset-value', HTTPStatus.BAD_REQUEST,
+                'offset value should be positive or zero', headers, request.format)
         except TypeError as err:
             LOGGER.warning(err)
             offset = 0
         except ValueError:
-            msg = 'offset value should be an integer'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                'InvalidParameterValue', 'invalid-offset-value', HTTPStatus.BAD_REQUEST,
+                'offset value should be an integer', headers, request.format)
 
         LOGGER.debug('Processing limit parameter')
         try:
@@ -1354,18 +1352,16 @@ class API:
             # TODO: We should do more validation, against the min and max
             #       allowed by the server configuration
             if limit <= 0:
-                msg = 'limit value should be strictly positive'
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                'InvalidParameterValue', 'invalid-limit-value', HTTPStatus.BAD_REQUEST,
+                'limit value should be strictly positive', headers, request.format)
         except TypeError as err:
             LOGGER.warning(err)
             limit = int(self.config['server']['limit'])
         except ValueError:
-            msg = 'limit value should be an integer'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                'InvalidParameterValue', 'invalid-limit-value', HTTPStatus.BAD_REQUEST,
+                'limit value should be an integer', headers, request.format)
 
         resulttype = request.params.get('resulttype') or 'results'
 
@@ -1445,10 +1441,9 @@ class API:
                     prop = s[1:]
 
                 if prop not in p.fields.keys():
-                    msg = 'bad sort property'
-                    return self.get_exception(
-                        HTTPStatus.BAD_REQUEST, headers, request.format,
-                        'InvalidParameterValue', msg)
+                    return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-sort-property', HTTPStatus.BAD_REQUEST,
+                        'bad sort property', headers, request.format)
 
                 sortby.append({'property': prop, 'order': order})
         else:
@@ -1463,10 +1458,9 @@ class API:
 
             if (len(list(set(select_properties) -
                          set(properties_to_check))) > 0):
-                msg = 'unknown properties specified'
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-properties-specified', HTTPStatus.BAD_REQUEST,
+                        'unknown properties specified', headers, request.format)
         else:
             select_properties = []
 
@@ -1484,10 +1478,9 @@ class API:
                 filter_ = parse_ecql_text(cql_text)
             except Exception as err:
                 LOGGER.error(err)
-                msg = f'Bad CQL string : {cql_text}'
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-cql-string', HTTPStatus.BAD_REQUEST,
+                        f'Bad CQL string : {cql_text}', headers, request.format)
         else:
             filter_ = None
 
@@ -1495,10 +1488,9 @@ class API:
         filter_lang = request.params.get('filter-lang')
         # Currently only cql-text is handled, but it is optional
         if filter_lang not in [None, 'cql-text']:
-            msg = 'Invalid filter language'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-filter-language', HTTPStatus.BAD_REQUEST,
+                        'invalid filter language', headers, request.format)
 
         # Get provider locale (if any)
         prv_locale = l10n.get_plugin_locale(provider_def, request.raw_locale)
@@ -1702,10 +1694,9 @@ class API:
                                                'type', 'collection')
 
         if dataset not in collections.keys():
-            msg = 'Invalid collection'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-filter-language', HTTPStatus.BAD_REQUEST,
+                        'invalid filter language', headers, request.format)
 
         LOGGER.debug('Processing query parameters')
 
@@ -1713,18 +1704,16 @@ class API:
         try:
             offset = int(request.params.get('offset'))
             if offset < 0:
-                msg = 'offset value should be positive or zero'
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-offset-value', HTTPStatus.BAD_REQUEST,
+                        'offset value should be positive or zero', headers, request.format)
         except TypeError as err:
             LOGGER.warning(err)
             offset = 0
         except ValueError:
-            msg = 'offset value should be an integer'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-offset-value', HTTPStatus.BAD_REQUEST,
+                        'offset value should be an integer', headers, request.format)
 
         LOGGER.debug('Processing limit parameter')
         try:
@@ -1732,18 +1721,16 @@ class API:
             # TODO: We should do more validation, against the min and max
             # allowed by the server configuration
             if limit <= 0:
-                msg = 'limit value should be strictly positive'
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-limit-value', HTTPStatus.BAD_REQUEST,
+                        'limit value should be strictly positive', headers, request.format)
         except TypeError as err:
             LOGGER.warning(err)
             limit = int(self.config['server']['limit'])
         except ValueError:
-            msg = 'limit value should be an integer'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-limit-value', HTTPStatus.BAD_REQUEST,
+                        'limit value should be an integer', headers, request.format)
 
         resulttype = request.params.get('resulttype') or 'results'
 
@@ -1757,10 +1744,9 @@ class API:
             try:
                 bbox = validate_bbox(bbox)
             except ValueError as err:
-                msg = str(err)
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-bbox', HTTPStatus.BAD_REQUEST,
+                        str(err), headers, request.format)
 
         LOGGER.debug('Processing datetime parameter')
         datetime_ = request.params.get('datetime')
@@ -1768,10 +1754,9 @@ class API:
             datetime_ = validate_datetime(collections[dataset]['extents'],
                                           datetime_)
         except ValueError as err:
-            msg = str(err)
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-datetime', HTTPStatus.BAD_REQUEST,
+                        str(err), headers, request.format)
 
         LOGGER.debug('processing q parameter')
         val = request.params.get('q')
@@ -1808,10 +1793,9 @@ class API:
         LOGGER.debug('processing property parameters')
         for k, v in request.params.items():
             if k not in reserved_fieldnames and k not in p.fields.keys():
-                msg = f'unknown query parameter: {k}'
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-query-parameter', HTTPStatus.BAD_REQUEST,
+                        f'unknown query parameter: {k}', headers, request.format)
             elif k not in reserved_fieldnames and k in p.fields.keys():
                 LOGGER.debug(f'Add property filter {k}={v}')
                 properties.append((k, v))
@@ -1830,10 +1814,9 @@ class API:
                     prop = s[1:]
 
                 if prop not in p.fields.keys():
-                    msg = 'bad sort property'
-                    return self.get_exception(
-                        HTTPStatus.BAD_REQUEST, headers, request.format,
-                        'InvalidParameterValue', msg)
+                    return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-sort-property', HTTPStatus.BAD_REQUEST,
+                        'bad sort property', headers, request.format)
 
                 sortby.append({'property': prop, 'order': order})
         else:
@@ -1848,10 +1831,9 @@ class API:
 
             if (len(list(set(select_properties) -
                          set(properties_to_check))) > 0):
-                msg = 'unknown properties specified'
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-properties-specified', HTTPStatus.BAD_REQUEST,
+                        'unknown properties specified', headers, request.format)
         else:
             select_properties = []
 
@@ -1865,10 +1847,9 @@ class API:
         LOGGER.debug('Processing filter-lang parameter')
         filter_lang = request.params.get('filter-lang')
         if filter_lang != 'cql-json':  # @TODO add check from the configuration
-            msg = 'Invalid filter language'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-filter-language', HTTPStatus.BAD_REQUEST,
+                        'invalid filter language', headers, request.format)
 
         LOGGER.debug('Querying provider')
         LOGGER.debug(f'offset: {offset}')
@@ -1908,10 +1889,9 @@ class API:
             LOGGER.debug(data)
         except UnicodeDecodeError as err:
             LOGGER.error(err)
-            msg = 'Unicode error in data'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        'unicode error in data', headers, request.format)
 
         # FIXME: remove testing backend in use once CQL support is normalized
         if p.name == 'PostgreSQL':
@@ -1920,20 +1900,18 @@ class API:
                 filter_ = parse_cql_json(data)
             except Exception as err:
                 LOGGER.error(err)
-                msg = f'Bad CQL string : {data}'
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'bad-cql-string', HTTPStatus.BAD_REQUEST,
+                        f'Bad CQL string : {data}', headers, request.format)
         else:
             LOGGER.debug('processing Elasticsearch CQL_JSON data')
             try:
                 filter_ = CQLModel.parse_raw(data)
             except Exception as err:
                 LOGGER.error(err)
-                msg = f'Bad CQL string : {data}'
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'bad-cql-string', HTTPStatus.BAD_REQUEST,
+                        f'Bad CQL string : {data}', headers, request.format)
 
         try:
             content = p.query(offset=offset, limit=limit,
@@ -2006,18 +1984,16 @@ class API:
                     collections[dataset]['providers'], 'record')
                 p = load_plugin('provider', provider_def)
             except ProviderTypeError:
-                msg = 'Invalid provider type'
                 LOGGER.error(msg)
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-provider-type', HTTPStatus.BAD_REQUEST,
+                        'invalid provider type', headers, request.format)
 
         if not p.editable:
-            msg = 'Collection is not editable'
             LOGGER.error(msg)
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'collection-not-editable', HTTPStatus.BAD_REQUEST,
+                        'collection is not editable', headers, request.format)
 
         if action in ['create', 'update'] and not request.data:
             msg = 'No data found'
@@ -2107,10 +2083,9 @@ class API:
                     collections[dataset]['providers'], 'record')
                 p = load_plugin('provider', provider_def)
             except ProviderTypeError:
-                msg = 'Invalid provider type'
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-provider-type', HTTPStatus.BAD_REQUEST,
+                        'invalid provider type', headers, request.format)
 
         # Get provider language (if any)
         prv_locale = l10n.get_plugin_locale(provider_def, request.raw_locale)
@@ -2258,10 +2233,9 @@ class API:
                 HTTPStatus.NOT_FOUND, headers, format_,
                 'InvalidParameterValue', msg)
         except ProviderTypeError:
-            msg = 'invalid provider type'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, format_,
-                'NoApplicableCode', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-provider-type', HTTPStatus.BAD_REQUEST,
+                        'invalid provider type', headers, request.format)
         except ProviderConnectionError:
             msg = 'connection error (check logs)'
             return self.get_exception(
@@ -2319,28 +2293,25 @@ class API:
 
             for a in query_args['properties']:
                 if a not in p.fields:
-                    msg = 'Invalid field specified'
-                    return self.get_exception(
-                        HTTPStatus.BAD_REQUEST, headers, format_,
-                        'InvalidParameterValue', msg)
+                    return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-field-specified', HTTPStatus.BAD_REQUEST,
+                        'invalid field specified', headers, request.format)
 
         if 'subset' in request.params:
             LOGGER.debug('Processing subset parameter')
             try:
                 subsets = validate_subset(request.params['subset'] or '')
             except (AttributeError, ValueError) as err:
-                msg = f'Invalid subset: {err}'
                 LOGGER.error(msg)
-                return self.get_exception(
-                        HTTPStatus.BAD_REQUEST, headers, format_,
-                        'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-subset', HTTPStatus.BAD_REQUEST,
+                        f'invalid subset: {err}', headers, request.format)
 
             if not set(subsets.keys()).issubset(p.axes):
-                msg = 'Invalid axis name'
                 LOGGER.error(msg)
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, format_,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-axis-name', HTTPStatus.BAD_REQUEST,
+                        'invalid axis name', headers, request.format)
 
             query_args['subsets'] = subsets
             LOGGER.debug(f"Subsets: {query_args['subsets']}")
@@ -2525,10 +2496,9 @@ class API:
                     self.config['resources'][dataset]['providers'], 'tile')
             p = load_plugin('provider', t)
         except (KeyError, ProviderTypeError):
-            msg = 'Invalid collection tiles'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-collection-tiles', HTTPStatus.BAD_REQUEST,
+                        'invalid collection tiles', headers, request.format)
         except ProviderConnectionError:
             msg = 'connection error (check logs)'
             return self.get_exception(
@@ -3575,18 +3545,16 @@ class API:
         wkt = request.params.get('coords')
 
         if not wkt:
-            msg = 'missing coords parameter'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                'InvalidParameterValue', 'missing-coords-parameter', HTTPStatus.BAD_REQUEST,
+                'the coords parameter is missing', headers, request.format)
 
         try:
             wkt = shapely_loads(wkt)
         except WKTReadingError:
-            msg = 'invalid coords parameter'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                'InvalidParameterValue', 'invalid-coords-parameter', HTTPStatus.BAD_REQUEST,
+                'the coords parameter is invalid', headers, request.format)
 
         LOGGER.debug('Processing z parameter')
         z = request.params.get('z')
@@ -3612,23 +3580,20 @@ class API:
                 request.format, 'NoApplicableCode', msg)
 
         if instance is not None and not p.get_instance(instance):
-            msg = 'Invalid instance identifier'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers,
-                request.format, 'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                'InvalidParameterValue', 'invalid-instance-identifier', HTTPStatus.BAD_REQUEST,
+                'the instance identifier is invalid', headers, request.format)
 
         if query_type not in p.get_query_types():
-            msg = 'Unsupported query type'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                'InvalidParameterValue', 'unsupported-query-type', HTTPStatus.BAD_REQUEST,
+                'the query type is unsupported', headers, request.format)
 
         if parameternames and not any((fld['id'] in parameternames)
                                       for fld in p.get_fields()['field']):
-            msg = 'Invalid parameter-name'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                'InvalidParameterValue', 'invalid-parameter-name', HTTPStatus.BAD_REQUEST,
+                'a parameter-name is invalid', headers, request.format)
 
         query_args = dict(
             query_type=query_type,
