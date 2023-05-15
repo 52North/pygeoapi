@@ -3458,10 +3458,10 @@ class API:
                 'the job with the jobID: ' + job_id + ' is not running yet', headers, request.format)
 
         elif status == JobStatus.failed:
-            msg = 'job failed'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                'InvalidParameterValue', 'job-results-failed', HTTPStatus.BAD_REQUEST,
+                'the job with the jobID: ' + job_id + ' has failed', headers, request.format)
+
 
         mimetype, job_output = self.manager.get_job_result(job_id)
 
@@ -3495,12 +3495,15 @@ class API:
 
         success = self.manager.delete_job(job_id)
 
-        if not success:
+        if not success: #ALEX
             http_status = HTTPStatus.NOT_FOUND
             response = {
-                'code': 'NoSuchJob',
-                'description': 'Job identifier not found'
-            }
+            'type': 'http://www.opengis.net/def/exceptions/ogcapi-processes-1/1.0/no-such-job',
+            'title': 'no-such-job',
+            'status': HTTPStatus.NOT_FOUND,
+            'detail': 'the job with the jobID: ' + job_id + ' could not be found'
+        }
+            
         else:
             http_status = HTTPStatus.OK
             jobs_url = f"{self.config['server']['url']}/jobs"
