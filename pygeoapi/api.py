@@ -3227,6 +3227,11 @@ class API:
                               reverse=True)
             else:
                 jobs = [self.manager.get_job(job_id)]
+                if jobs[0] is False: #ALEX
+                    return self.get_exception(
+                        'http://www.opengis.net/def/exceptions/ogcapi-processes-1/1.0/no-such-job', 'no-such-job', HTTPStatus.NOT_FOUND,
+                        'the job with the jobID' + job_id + ' could not be found', headers, request.format)
+        
         else:
             LOGGER.debug('Process management not configured')
             jobs = []
@@ -3436,9 +3441,9 @@ class API:
         job = self.manager.get_job(job_id)
 
         if not job:
-            msg = 'job not found'
-            return self.get_exception(HTTPStatus.NOT_FOUND, headers,
-                                      request.format, 'NoSuchJob', msg)
+            return self.get_exception( #ALEX
+                'http://www.opengis.net/def/exceptions/ogcapi-processes-1/1.0/no-such-job', 'no-such-job', HTTPStatus.NOT_FOUND,
+                'the job with the jobID' + job_id + ' could not be found', headers, request.format)
 
         status = JobStatus[job['status']]
 
