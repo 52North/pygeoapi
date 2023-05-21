@@ -1375,10 +1375,9 @@ class API:
             try:
                 bbox = validate_bbox(bbox)
             except ValueError as err:
-                msg = str(err)
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        str(err), headers, request.format)
 
         LOGGER.debug('Processing datetime parameter')
         datetime_ = request.params.get('datetime')
@@ -1386,10 +1385,9 @@ class API:
             datetime_ = validate_datetime(collections[dataset]['extents'],
                                           datetime_)
         except ValueError as err:
-            msg = str(err)
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        str(err), headers, request.format)
 
         LOGGER.debug('processing q parameter')
         q = request.params.get('q') or None
@@ -1996,21 +1994,19 @@ class API:
                         'collection is not editable', headers, request.format)
 
         if action in ['create', 'update'] and not request.data:
-            msg = 'No data found'
             LOGGER.error(msg)
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'no-data-found', HTTPStatus.BAD_REQUEST,
+                        'no data found', headers, request.format)
 
         if action == 'create':
             LOGGER.debug('Creating item')
             try:
                 identifier = p.create(request.data)
             except (ProviderInvalidDataError, TypeError) as err:
-                msg = str(err)
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        str(err), headers, request.format)
 
             headers['Location'] = f'{self.get_collections_url()}/{dataset}/items/{identifier}'  # noqa
 
@@ -2021,10 +2017,9 @@ class API:
             try:
                 _ = p.update(identifier, request.data)
             except (ProviderInvalidDataError, TypeError) as err:
-                msg = str(err)
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        str(err), headers, request.format)
 
             return headers, HTTPStatus.NO_CONTENT, ''
 
@@ -2033,10 +2028,9 @@ class API:
             try:
                 _ = p.delete(identifier)
             except ProviderGenericError as err:
-                msg = str(err)
-                return self.get_exception(
-                    HTTPStatus.BAD_REQUEST, headers, request.format,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        str(err), headers, request.format)
 
             return headers, HTTPStatus.OK, ''
 
@@ -2228,10 +2222,9 @@ class API:
 
             p = load_plugin('provider', collection_def)
         except KeyError:
-            msg = 'collection does not exist'
-            return self.get_exception(
-                HTTPStatus.NOT_FOUND, headers, format_,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'not-found', HTTPStatus.NOT_FOUND,
+                        'collection does not exist', headers, request.format)
         except ProviderTypeError:
             return self.get_exception( #ALEX
                         'InvalidParameterValue', 'invalid-provider-type', HTTPStatus.BAD_REQUEST,
@@ -2252,10 +2245,9 @@ class API:
             try:
                 bbox = validate_bbox(bbox)
             except ValueError as err:
-                msg = str(err)
-                return self.get_exception(
-                    HTTPStatus.INTERNAL_SERVER_ERROR, headers, format_,
-                    'InvalidParameterValue', msg)
+                return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.INTERNAL_SERVER_ERROR,
+                        str(err), headers, request.format)
 
         query_args['bbox'] = bbox
 
@@ -2273,10 +2265,9 @@ class API:
             datetime_ = validate_datetime(
                 self.config['resources'][dataset]['extents'], datetime_)
         except ValueError as err:
-            msg = str(err)
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, format_,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        str(err), headers, request.format)
 
         query_args['datetime_'] = datetime_
 
@@ -2320,15 +2311,13 @@ class API:
         try:
             data = p.query(**query_args)
         except ProviderInvalidQueryError as err:
-            msg = f'query error: {err}'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, format_,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        f'query error: {err}', headers, request.format)
         except ProviderNoDataError:
-            msg = 'No data found'
-            return self.get_exception(
-                HTTPStatus.NO_CONTENT, headers, format_,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'no-content', HTTPStatus.NO_CONTENT,
+                        'no data found', headers, request.format)
         except ProviderQueryError:
             msg = 'query error (check logs)'
             return self.get_exception(
@@ -2376,10 +2365,9 @@ class API:
 
             data = p.get_coverage_domainset()
         except KeyError:
-            msg = 'collection does not exist'
-            return self.get_exception(
-                HTTPStatus.NOT_FOUND, headers, format_,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'not-found', HTTPStatus.NOT_FOUND,
+                        'collection does not exist', headers, request.format)
         except ProviderTypeError:
             msg = 'invalid provider type'
             return self.get_exception(
@@ -2433,10 +2421,9 @@ class API:
 
             data = p.get_coverage_rangetype()
         except KeyError:
-            msg = 'collection does not exist'
-            return self.get_exception(
-                HTTPStatus.NOT_FOUND, headers, format_,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'not-found', HTTPStatus.NOT_FOUND,
+                        'collection does not exist', headers, request.format)
         except ProviderTypeError:
             msg = 'invalid provider type'
             return self.get_exception(
@@ -2643,10 +2630,9 @@ class API:
 
         # @TODO: figure out if the spec requires to return json errors
         except KeyError:
-            msg = 'Invalid collection tiles'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, format_,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        'invalid collection tiles', headers, request.format)
         except ProviderConnectionError as err:
             LOGGER.error(err)
             msg = 'connection error (check logs)'
@@ -2709,20 +2695,17 @@ class API:
                 self.config['resources'][dataset]['providers'], 'tile')
             p = load_plugin('provider', t)
         except KeyError:
-            msg = 'Invalid collection tiles'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        'invalid collection tiles', headers, request.format)
         except ProviderConnectionError:
-            msg = 'connection error (check logs)'
-            return self.get_exception(
-                HTTPStatus.INTERNAL_SERVER_ERROR, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.INTERNAL_SERVER_ERROR,
+                        'connection error (check logs)', headers, request.format)
         except ProviderQueryError:
-            msg = 'query error (check logs)'
-            return self.get_exception(
-                HTTPStatus.INTERNAL_SERVER_ERROR, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.INTERNAL_SERVER_ERROR,
+                        'query error (check logs)', headers, request.format)
 
         # Get provider language (if any)
         prv_locale = l10n.get_plugin_locale(t, request.raw_locale)
@@ -2884,10 +2867,9 @@ class API:
             query_args['datetime_'] = validate_datetime(
                 self.config['resources'][dataset]['extents'], datetime_)
         except ValueError as err:
-            msg = str(err)
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        str(err), headers, request.format)
 
         LOGGER.debug('Generating map')
         try:
@@ -3336,10 +3318,9 @@ class API:
         except (json.decoder.JSONDecodeError, TypeError) as err:
             # Input does not appear to be valid JSON
             LOGGER.error(err)
-            msg = 'invalid request data'
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', 'invalid-request-data', HTTPStatus.BAD_REQUEST,
+                        'invalid request data', headers, request.format)
 
         data_dict = data.get('inputs', {})
         LOGGER.debug(data_dict)
@@ -3531,10 +3512,9 @@ class API:
             datetime_ = validate_datetime(collections[dataset]['extents'],
                                           datetime_)
         except ValueError as err:
-            msg = str(err)
-            return self.get_exception(
-                HTTPStatus.BAD_REQUEST, headers, request.format,
-                'InvalidParameterValue', msg)
+            return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        str(err), headers, request.format)
 
         LOGGER.debug('Processing parameter-name parameter')
         parameternames = request.params.get('parameter-name') or []
@@ -3824,10 +3804,9 @@ class API:
 
         # Content-Language is in the system locale (ignore language settings)
         headers = request.get_response_headers(SYSTEM_LOCALE)
-        msg = f'Invalid format: {request.format}'
-        return self.get_exception(
-            HTTPStatus.BAD_REQUEST, headers,
-            request.format, 'InvalidParameterValue', msg)
+        return self.get_exception( #ALEX
+                        'InvalidParameterValue', '', HTTPStatus.BAD_REQUEST,
+                        f'Invalid format: {request.format}', headers, request.format)
 
     def get_collections_url(self):
         return f"{self.config['server']['url']}/collections"
