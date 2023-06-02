@@ -144,7 +144,11 @@ provider requires a ``type`` property.  Allowed types are:
 
 - ``feature``
 - ``coverage``
+- ``record``
+- ``map``
 - ``tile``
+- ``edr``
+- ``stac``
 
 A collection's default provider can be qualified with ``default: true`` in the provider
 configuration.  If ``default`` is not included, the *first* provider is assumed to be the
