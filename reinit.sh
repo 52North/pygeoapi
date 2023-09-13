@@ -1,2 +1,2 @@
-cp /workspaces/pygeoapi/pygeoapi-config.yml /workspaces/pygeoapi/example-config.yml
-python3 /workspaces/pygeoapi/setup.py install
+cp /workspaces/${VS_WS}/pygeoapi-config.yml /workspaces/${VS_WS}/example-config.yml
+python3 /workspaces/${VS_WS}/setup.py install

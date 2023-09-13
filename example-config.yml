@@ -302,3 +302,7 @@ resources:
         type: process
         processor:
             name: HelloWorld
+    crop_model:
+        type: process
+        processor:
+            name: CropModel
