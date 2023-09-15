@@ -3,7 +3,8 @@ import logging
 from pygeoapi.process.base import BaseProcessor, ProcessorExecuteError
 # import xarray as xr
 # import tempfile
-# import landsuitmodel
+import LandSuitModel
+import Plant
 
 LOGGER = logging.getLogger(__name__)
 
@@ -128,20 +129,32 @@ class CropModelProcessor(BaseProcessor):
           lat = points[0]
           lon = points[1]
 
-        
+        # read environmental data and plant requirements
+        full_data = xr.open_dataset('./nc/full_data20230907.nc')
+        plant = Plant.from_file(crop)
 
+        # run crop model
+        landsuitmodel = LandSuitMod()
+        landsuitmodel.vars_available = {'temperature': 't2m', 'precipitation': 'pwat'}
+        landsuitmodel.lat_lng['lat'] = 'latitude'
+        landsuitmodel.lat_lng['lng'] = 'longitude'
+        landsuitmodel.read_data(full_data)
+        landsuitmodel.process(plant, vars_requested)
 
-        # PSEUDO CODE
-        # data = xr.read(LATEST_DATA)
-        # plant = wenn plant.json da ist laden ansonsten abbrechen
-        # landsuitmodel(data, plant)
-        # wenn bbox && point
-        #   "nur eines erlaubt"  --> abbrechen
-        # wenn bbox 
-        #   croppen
-        # wenn point
-        #   croppen
+        # slice the data
+        if bbox and point:
+            raise ValueError('Only one of the arguments "bbox" and "point" should be set.')
+        if bbox:
+            landsuitmodel_cropped = landsuitmodel.crop_data(bbox)
+        if point:
+            raise NotImplementedError("Return type still needs to be defined for point request. Does netCDF still make sense?")
 
+        # get return type
+        nc = None
+        if format=='nc':
+            nc = landsuitmodel_cropped.return_netCDF()
+        else:
+            raise NotImplementedError("contour output not yet implemented")
 
         # wenn format=nc
         #   return
@@ -150,15 +163,10 @@ class CropModelProcessor(BaseProcessor):
         #   --> gdal_contour (oder entsprechendes paket)
         #   return
 
-        
-        
-
-       
-        
-        cropped = data.sel(latitude=slice(lat_max,lat_min), longitude=slice(lon_min, lon_max))
+        # cropped = data.sel(latitude=slice(lat_max,lat_min), longitude=slice(lon_min, lon_max))
 
 
-        print(cropped)
+        print(landsuitmodel_cropped)
         with tempfile.TemporaryFile() as fp:
                 LOGGER.debug('Returning data in native NetCDF format')
                 fp.write(cropped.to_netcdf())
