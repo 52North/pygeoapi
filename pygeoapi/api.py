@@ -683,16 +683,18 @@ class API:
         LOGGER.info('Process manager plugin loaded')
         
         # load the resource registry implementation
-        if (self.config['components'] and 'resource_registry' in self.config['components']):
+        if (self.config['components'] and
+            'resource_registry' in self.config['components']):
             rr_def = {
                 'name': self.config['components']['resource_registry'],
                 'resources': self.config['resources']
             }
-            self.resource_registry = load_plugin('resource_registry', rr_def)
-            LOGGER.info(f'Resource registry class loaded: {self.config["components"]["resource_registry"]}')
+            self.registry = load_plugin('resource_registry', rr_def)
+            LOGGER.info(f'''Resource registry class loaded: 
+                        {self.config["components"]["resource_registry"]}''')
         else:
             # default registry
-            self.resource_registry = ConfigResourceRegistry(self.config['resources'])
+            self.registry = ConfigResourceRegistry(self.config['resources'])
 
     @gzip
     @pre_process
@@ -779,16 +781,13 @@ class API:
             fcm['stac'] = False
             fcm['collection'] = False
 
-            if filter_dict_by_key_value(self.get_api_resources(),
-                                        'type', 'process'):
+            if self.registry.get_resources_of_type('process'):
                 fcm['processes'] = True
 
-            if filter_dict_by_key_value(self.get_api_resources(),
-                                        'type', 'stac-collection'):
+            if self.registry.get_resources_of_type('stac-collection'):
                 fcm['stac'] = True
 
-            if filter_dict_by_key_value(self.get_api_resources(),
-                                        'type', 'collection'):
+            if self.registry.get_resources_of_type('collection'):
                 fcm['collection'] = True
 
             content = render_j2_template(self.tpl_config, 'landing_page.html',
@@ -856,7 +855,7 @@ class API:
 
         conformance_list = CONFORMANCE['common']
 
-        for key, value in self.get_api_resources().items():
+        for key, value in self.registry.get_all_resources().items():
             if value['type'] == 'process':
                 conformance_list.extend(CONFORMANCE[value['type']])
             else:
@@ -899,8 +898,7 @@ class API:
             'links': []
         }
 
-        collections = filter_dict_by_key_value(self.get_api_resources(),
-                                               'type', 'collection')
+        collections = self.registry.get_resources_of_type('collection')
 
         if all([dataset is not None, dataset not in collections.keys()]):
             msg = 'Collection not found'
@@ -1124,9 +1122,8 @@ class API:
                 if dataset is not None:
                     LOGGER.debug('Creating extended coverage metadata')
                     try:
-                        provider_def = get_provider_by_type(
-                            self.get_api_resources()[k]['providers'],
-                            'coverage')
+                        provider_def = self.registry.get_resource_provider_of_type(
+                            k, 'coverage')
                         p = load_plugin('provider', provider_def)
                     except ProviderConnectionError:
                         msg = 'connection error (check logs)'
@@ -1197,8 +1194,10 @@ class API:
                 # TODO: translate
                 LOGGER.debug('Adding EDR links')
                 try:
-                    p = load_plugin('provider', get_provider_by_type(
-                        self.get_api_resources()[dataset]['providers'], 'edr'))
+                    
+                    p = load_plugin('provider', self.registry.
+                                    get_resource_provider_of_type(
+                                        dataset, 'edr'))
                     parameters = p.get_fields()
                     if parameters:
                         collection['parameter-names'] = {}
@@ -1299,7 +1298,7 @@ class API:
         headers = request.get_response_headers(**self.api_headers)
 
         if any([dataset is None,
-                dataset not in self.get_api_resources().keys()]):
+                self.registry.get_resource_config(dataset) is None]):
 
             msg = 'Collection not found'
             return self.get_exception(
@@ -1308,12 +1307,14 @@ class API:
         LOGGER.debug('Creating collection queryables')
         try:
             LOGGER.debug('Loading feature provider')
-            p = load_plugin('provider', get_provider_by_type(
-                self.get_api_resources()[dataset]['providers'], 'feature'))
+            p = load_plugin('provider', self.registry.
+                                    get_resource_provider_of_type(dataset,
+                                                                   'feature'))
         except ProviderTypeError:
             LOGGER.debug('Loading record provider')
-            p = load_plugin('provider', get_provider_by_type(
-                self.get_api_resources()[dataset]['providers'], 'record'))
+            p = load_plugin('provider', self.registry.
+                                    get_resource_provider_of_type(dataset,
+                                                                   'record'))
         except ProviderConnectionError:
             msg = 'connection error (check logs)'
             return self.get_exception(
@@ -1328,7 +1329,8 @@ class API:
         queryables = {
             'type': 'object',
             'title': l10n.translate(
-                self.get_api_resources()[dataset]['title'], request.locale),
+                self.registry.get_resource_config(dataset)['title'],
+                request.locale),
             'properties': {},
             '$schema': 'http://json-schema.org/draft/2019-09/schema',
             '$id': f'{self.get_collections_url()}/{dataset}/queryables'
@@ -1357,7 +1359,8 @@ class API:
 
         if request.format == F_HTML:  # render
             queryables['title'] = l10n.translate(
-                self.get_api_resources()[dataset]['title'], request.locale)
+                self.registry.get_resource_config(dataset)['title'],
+                request.locale)
 
             queryables['collections_path'] = self.get_collections_url()
 
@@ -1399,8 +1402,7 @@ class API:
                                'properties', 'skipGeometry', 'q',
                                'filter', 'filter-lang']
 
-        collections = filter_dict_by_key_value(self.get_api_resources(),
-                                               'type', 'collection')
+        collections = self.registry.get_resources_of_type('collection')
 
         if dataset not in collections.keys():
             msg = 'Collection not found'
@@ -1841,8 +1843,7 @@ class API:
                                'properties', 'skipGeometry', 'q',
                                'filter-lang']
 
-        collections = filter_dict_by_key_value(self.get_api_resources(),
-                                               'type', 'collection')
+        collections = self.registry.get_resources_of_type('collection')
 
         if dataset not in collections.keys():
             msg = 'Invalid collection'
@@ -2131,8 +2132,7 @@ class API:
         headers = request.get_response_headers(SYSTEM_LOCALE,
                                                **self.api_headers)
 
-        collections = filter_dict_by_key_value(self.get_api_resources(),
-                                               'type', 'collection')
+        collections = self.registry.get_resources_of_type('collection')
 
         if dataset not in collections.keys():
             msg = 'Collection not found'
@@ -2242,8 +2242,7 @@ class API:
 
         LOGGER.debug('Processing query parameters')
 
-        collections = filter_dict_by_key_value(self.get_api_resources(),
-                                               'type', 'collection')
+        collections = self.registry.get_resources_of_type('collection')
 
         if dataset not in collections.keys():
             msg = 'Collection not found'
@@ -2440,8 +2439,8 @@ class API:
 
         LOGGER.debug('Loading provider')
         try:
-            collection_def = get_provider_by_type(
-                self.get_api_resources()[dataset]['providers'], 'coverage')
+            collection_def = self.registry.get_resource_provider_of_type(
+                            dataset, 'coverage')
 
             p = load_plugin('provider', collection_def)
         except KeyError:
@@ -2489,7 +2488,8 @@ class API:
 
         try:
             datetime_ = validate_datetime(
-                self.get_api_resources()[dataset]['extents'], datetime_)
+                self.registry.get_resource_config(dataset)['extents'],
+                datetime_)
         except ValueError as err:
             msg = str(err)
             return self.get_exception(
@@ -2590,8 +2590,8 @@ class API:
 
         LOGGER.debug('Loading provider')
         try:
-            collection_def = get_provider_by_type(
-                self.get_api_resources()[dataset]['providers'], 'coverage')
+            collection_def = self.registry.get_resource_provider_of_type(
+                dataset, 'coverage')
 
             p = load_plugin('provider', collection_def)
 
@@ -2618,7 +2618,7 @@ class API:
         elif format_ == F_HTML:
             data['id'] = dataset
             data['title'] = l10n.translate(
-                self.get_api_resources()[dataset]['title'],
+                self.registry.get_resource_config(dataset)['title'],
                 self.default_locale)
             data['collections_path'] = self.get_collections_url()
             content = render_j2_template(self.tpl_config,
@@ -2647,8 +2647,8 @@ class API:
                                                **self.api_headers)
         LOGGER.debug('Loading provider')
         try:
-            collection_def = get_provider_by_type(
-                self.get_api_resources()[dataset]['providers'], 'coverage')
+            collection_def = self.registry.get_resource_provider_of_type(
+                            dataset, 'coverage')
 
             p = load_plugin('provider', collection_def)
 
@@ -2675,7 +2675,7 @@ class API:
         elif format_ == F_HTML:
             data['id'] = dataset
             data['title'] = l10n.translate(
-                self.get_api_resources()[dataset]['title'],
+                self.registry.get_resource_config(dataset)['title'],
                 self.default_locale)
             data['collections_path'] = self.get_collections_url()
             content = render_j2_template(self.tpl_config,
@@ -2704,7 +2704,7 @@ class API:
         headers = request.get_response_headers(SYSTEM_LOCALE,
                                                **self.api_headers)
         if any([dataset is None,
-                dataset not in self.get_api_resources().keys()]):
+                self.registry.get_resource_config(dataset) is None]):
 
             msg = 'Collection not found'
             return self.get_exception(
@@ -2713,8 +2713,7 @@ class API:
         LOGGER.debug('Creating collection tiles')
         LOGGER.debug('Loading provider')
         try:
-            t = get_provider_by_type(
-                    self.get_api_resources()[dataset]['providers'], 'tile')
+            t = self.registry.get_resource_provider_of_type(dataset, 'tile')
             p = load_plugin('provider', t)
         except (KeyError, ProviderTypeError):
             msg = 'Invalid collection tiles'
@@ -2795,12 +2794,14 @@ class API:
         if request.format == F_HTML:  # render
             tiles['id'] = dataset
             tiles['title'] = l10n.translate(
-                self.get_api_resources()[dataset]['title'], SYSTEM_LOCALE)
+                self.registry.get_resource_config(dataset)['title'],
+                SYSTEM_LOCALE)
             tiles['tilesets'] = [
                 scheme.tileMatrixSet for scheme in p.get_tiling_schemes()]
             tiles['format'] = metadata_format
             tiles['bounds'] = \
-                self.get_api_resources()[dataset]['extents']['spatial']['bbox']
+                self.registry.get_resource_config(dataset)['extents'][
+                    'spatial']['bbox']
             tiles['minzoom'] = p.options['zoom']['min']
             tiles['maxzoom'] = p.options['zoom']['max']
             tiles['collections_path'] = self.get_collections_url()
@@ -2838,8 +2839,7 @@ class API:
                                                **self.api_headers)
         LOGGER.debug('Processing tiles')
 
-        collections = filter_dict_by_key_value(self.get_api_resources(),
-                                               'type', 'collection')
+        collections = self.registry.get_resources_of_type('collection')
 
         if dataset not in collections.keys():
             msg = 'Collection not found'
@@ -2848,8 +2848,7 @@ class API:
 
         LOGGER.debug('Loading tile provider')
         try:
-            t = get_provider_by_type(
-                self.get_api_resources()[dataset]['providers'], 'tile')
+            t = self.registry.get_resource_provider_of_type(dataset, 'tile')
             p = load_plugin('provider', t)
 
             format_ = p.format_type
@@ -2920,7 +2919,7 @@ class API:
         headers = request.get_response_headers(**self.api_headers)
 
         if any([dataset is None,
-                dataset not in self.get_api_resources().keys()]):
+                self.registry.get_resource_config(dataset) is None]):
 
             msg = 'Collection not found'
             return self.get_exception(
@@ -2929,8 +2928,7 @@ class API:
         LOGGER.debug('Creating collection tiles')
         LOGGER.debug('Loading provider')
         try:
-            t = get_provider_by_type(
-                self.get_api_resources()[dataset]['providers'], 'tile')
+            self.registry.get_resource_provider_of_type(dataset, 'tile')
             p = load_plugin('provider', t)
         except KeyError:
             msg = 'Invalid collection tiles'
@@ -2974,7 +2972,8 @@ class API:
             metadata['metadata'] = tiles_metadata
             metadata['id'] = dataset
             metadata['title'] = l10n.translate(
-                self.get_api_resources()[dataset]['title'], request.locale)
+                self.registry.get_resource_config(dataset)['title'],
+                request.locale)
             metadata['tileset'] = matrix_id
             metadata['format'] = metadata_format.value
             metadata['collections_path'] = self.get_collections_url()
@@ -2989,10 +2988,10 @@ class API:
                 dataset=dataset, server_url=self.base_url,
                 layer=p.get_layer(), tileset=matrix_id,
                 metadata_format=metadata_format, title=l10n.translate(
-                    self.get_api_resources()[dataset]['title'],
+                    self.registry.get_resource_config(dataset)['title'],
                     request.locale),
                 description=l10n.translate(
-                    self.get_api_resources()[dataset]['description'],
+                    self.registry.get_resource_config(dataset)['description'],
                     request.locale),
                 language=prv_locale)
 
@@ -3025,8 +3024,8 @@ class API:
 
         LOGGER.debug('Loading provider')
         try:
-            collection_def = get_provider_by_type(
-                self.get_api_resources()[dataset]['providers'], 'map')
+            collection_def = self.registry.get_resource_provider_of_type(
+                dataset, 'map')
 
             p = load_plugin('provider', collection_def)
         except KeyError:
@@ -3088,7 +3087,8 @@ class API:
                 return headers, HTTPStatus.BAD_REQUEST, to_json(
                     exception, self.pretty_print)
         except AttributeError:
-            bbox = self.get_api_resources()[dataset]['extents']['spatial']['bbox']  # noqa
+            bbox = self.registry.get_resource_config(
+                dataset)['extents']['spatial']['bbox']  # noqa
         try:
             query_args['bbox'] = [float(c) for c in bbox]
         except ValueError:
@@ -3105,7 +3105,8 @@ class API:
         datetime_ = request.params.get('datetime')
         try:
             query_args['datetime_'] = validate_datetime(
-                self.get_api_resources()[dataset]['extents'], datetime_)
+                self.registry.get_resource_config(dataset)['extents'],
+                datetime_)
         except ValueError as err:
             msg = str(err)
             return self.get_exception(
@@ -3180,8 +3181,8 @@ class API:
 
         LOGGER.debug('Loading provider')
         try:
-            collection_def = get_provider_by_type(
-                self.get_api_resources()[dataset]['providers'], 'map')
+            collection_def = self.registry.get_resource_provider_of_type(
+                dataset, 'map')
 
             p = load_plugin('provider', collection_def)
         except KeyError:
@@ -3747,8 +3748,7 @@ class API:
             return self.get_format_exception(request)
         headers = request.get_response_headers(self.default_locale,
                                                **self.api_headers)
-        collections = filter_dict_by_key_value(self.get_api_resources(),
-                                               'type', 'collection')
+        collections = self.registry.get_resources_of_type('collection')
 
         if dataset not in collections.keys():
             msg = 'Collection not found'
@@ -3923,8 +3923,8 @@ class API:
             'links': []
         }
 
-        stac_collections = filter_dict_by_key_value(self.get_api_resources(),
-                                                    'type', 'stac-collection')
+        stac_collections = self.registry.get_resources_of_type(
+            'stac-collection')
 
         for key, value in stac_collections.items():
             content['links'].append({
@@ -3969,8 +3969,8 @@ class API:
         if dir_tokens:
             dataset = dir_tokens[0]
 
-        stac_collections = filter_dict_by_key_value(self.get_api_resources(),
-                                                    'type', 'stac-collection')
+        stac_collections = self.registry.get_resources_of_type(
+            'stac-collection')
 
         if dataset not in stac_collections:
             msg = 'Collection not found'
@@ -4182,9 +4182,6 @@ class API:
 
         headers['Content-Crs'] = f'<{content_crs_uri}>'
         
-    def get_api_resources(self):
-        return self.resource_registry.get_all_resources()
-
 
 def validate_bbox(value=None) -> list:
     """
