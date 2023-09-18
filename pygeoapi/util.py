@@ -41,7 +41,6 @@ from dataclasses import dataclass
 from datetime import date, datetime, time
 from decimal import Decimal
 from enum import Enum
-import importlib
 from pathlib import Path
 from typing import Any, IO, Union, List, Callable
 from urllib.parse import urlparse
@@ -816,6 +815,7 @@ def transform_bbox(bbox: list, from_crs: str, to_crs: str) -> list:
     n_dims = len(bbox) // 2
     return list(transform_func(*bbox[:n_dims]) + transform_func(
         *bbox[n_dims:]))
+
 
 class UrlPrefetcher:
     """ Prefetcher to get HTTP headers for specific URLs.
