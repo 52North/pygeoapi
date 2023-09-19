@@ -1,10 +1,12 @@
-from pygeoapi.resource_registry import ResourceRegistry
+from pygeoapi.registry.resource_registry import ResourceRegistry
 from pygeoapi.util import (filter_dict_by_key_value, get_provider_by_type)
 
 class ConfigResourceRegistry(ResourceRegistry):
 
     def __init__(self, plugin_def: dict):
+        super(ConfigResourceRegistry, self).__init__(plugin_def)
         self.resources = plugin_def['resources']
+        self.resources_change_listeners = plugin_def['resources_change_listeners']
     
     def get_all_resources(self) -> dict:
         return self.resources
@@ -19,13 +21,14 @@ class ConfigResourceRegistry(ResourceRegistry):
 
     def set_resource_config(self, resource_name: str,
                             configuration: dict) -> None:
-        pass
+        self.call_change_listeners(self.resources)
     
     def delete_resource_config(self, resource_name: str) -> None:
-        pass
+        self.call_change_listeners(self.resources)
     
     def get_resource_config(self, resource_name: str) -> dict:
         if resource_name in self.resources:
             return self.resources[resource_name]
         else:
             return None
+

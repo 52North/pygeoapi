@@ -73,7 +73,7 @@ PLUGINS = {
         'TinyDB': 'pygeoapi.process.manager.tinydb_.TinyDBManager'
     },
     'resource_registry': {
-        'ConfigResourceRegistry': 'pygeoapi.config_resource_registry.ConfigResourceRegistry'
+        'ConfigResourceRegistry': 'pygeoapi.registry.config_resource_registry.ConfigResourceRegistry'
     }
 }
 

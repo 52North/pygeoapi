@@ -91,7 +91,8 @@ from pygeoapi.util import (dategetter, RequestedProcessExecutionMode,
                            CrsTransformSpec, transform_bbox)
 
 from pygeoapi.models.provider.base import TilesMetadataFormat
-from pygeoapi.config_resource_registry import ConfigResourceRegistry
+from pygeoapi.registry.config_resource_registry import ConfigResourceRegistry
+from pygeoapi.registry.resource_registry import ResourcesChangeListener
 
 LOGGER = logging.getLogger(__name__)
 
@@ -639,7 +640,7 @@ class APIRequest:
         return headers_
 
 
-class API:
+class API(ResourcesChangeListener):
     """API object"""
 
     def __init__(self, config):
@@ -687,14 +688,18 @@ class API:
             'resource_registry' in self.config['components']):
             rr_def = {
                 'name': self.config['components']['resource_registry'],
-                'resources': self.config['resources']
+                'resources': self.config['resources'],
+                'resources_change_listeners': [self]
             }
             self.registry = load_plugin('resource_registry', rr_def)
             LOGGER.info(f'''Resource registry class loaded: 
                         {self.config["components"]["resource_registry"]}''')
         else:
             # default registry
-            self.registry = ConfigResourceRegistry(self.config['resources'])
+            self.registry = ConfigResourceRegistry({
+                'resources': self.config['resources'],
+                'resources_change_listeners': [self]
+            })
 
     @gzip
     @pre_process

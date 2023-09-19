@@ -1,7 +1,7 @@
 class ResourceRegistry:
 
-    def __init__(self, initial_resources: dict):
-        pass
+    def __init__(self, plugin_def: dict):
+        self.resources_change_listeners = plugin_def['resources_change_listeners']
     
     def get_all_resources(self) -> dict:
         pass
@@ -21,4 +21,17 @@ class ResourceRegistry:
         pass
     
     def get_resource_config(self, resource_name: str) -> dict:
+        pass
+    
+    def call_change_listeners(self, new_resources):
+        for cl in self.resources_change_listeners:
+            cl.on_resources_changed(new_resources)
+
+        
+class ResourcesChangeListener:
+    
+    def __init__(self):
+        pass
+    
+    def on_resources_changed(self, new_resources: dict):
         pass
