@@ -91,6 +91,7 @@ from pygeoapi.util import (dategetter, RequestedProcessExecutionMode,
                            CrsTransformSpec, transform_bbox)
 
 from pygeoapi.models.provider.base import TilesMetadataFormat
+from pygeoapi.openapi import update_openapi_document
 from pygeoapi.registry.config_resource_registry import ConfigResourceRegistry
 from pygeoapi.registry.resource_registry import ResourcesChangeListener
 
@@ -4186,6 +4187,9 @@ class API(ResourcesChangeListener):
                 content_crs_uri = DEFAULT_CRS
 
         headers['Content-Crs'] = f'<{content_crs_uri}>'
+        
+    def on_resources_changed(self, new_resources: dict):
+        update_openapi_document(new_resources)
         
 
 def validate_bbox(value=None) -> list:
