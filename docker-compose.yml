@@ -1,15 +1,27 @@
-version: "3"
 services:
   pygeoapi:
-    build: ./
-    ports: 
+    build:
+      context: ./
+      secrets:
+        - token
+    ports:
       - "5000:80"
     volumes:
       - data_volume:/pygeoapi/data
   downloader:
-    build: ./docker/downloader/
+    build:
+      context: ./docker/downloader/
+      secrets:
+        - token
     volumes:
       - data_volume:/data
+    depends_on:
+      - pygeoapi
+
 volumes:
   data_volume:
     name: pygeoapi-datavolume
+
+secrets:
+  token:
+    file: ./GH_TOKEN

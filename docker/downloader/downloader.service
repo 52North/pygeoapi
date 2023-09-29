@@ -1,0 +1,13 @@
+[Unit]
+Description=Download Service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /path/to/downloader.py
+Restart=on-failure
+RestartSec=30
+User=your_username
+Group=your_groupname
+
+[Install]
+WantedBy=multi-user.target

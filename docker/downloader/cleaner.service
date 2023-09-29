@@ -1,0 +1,14 @@
+[Unit]
+Description=Cleanup Service
+After=downloader.service
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /path/to/cleaner.sh
+Restart=on-failure
+RestartSec=30
+User=your_username
+Group=your_groupname
+
+[Install]
+WantedBy=multi-user.target

@@ -129,11 +129,16 @@ RUN \
     && cp /pygeoapi/docker/default.config.yml /pygeoapi/local.config.yml \
     && cp /pygeoapi/docker/entrypoint.sh /entrypoint.sh  \
 
+    #install gitt
+    && apt-get install git -y \
     # Cleanup TODO: remove unused Locales and TZs
     && apt-get remove --purge -y gcc ${DEB_BUILD_DEPS} \
     && apt-get clean \
     && apt autoremove -y  \
     && rm -rf /var/lib/apt/lists/*
+
+RUN --mount=type=secret,id=token token="$(cat /run/secrets/token)" \
+    && pip install git+https://${token}@github.com/52North/OGC_DP23#subdirectory=crop_mapping_tool 
 
 ENTRYPOINT ["/entrypoint.sh"]
 
