@@ -3,8 +3,8 @@ import logging
 from pygeoapi.process.base import BaseProcessor, ProcessorExecuteError
 # import xarray as xr
 # import tempfile
-import LandSuitModel
-import Plant
+from crop_mapping_tool.landsuitmodel import LandSuitMod
+from crop_mapping_tool.plant import Plant
 
 LOGGER = logging.getLogger(__name__)
 
