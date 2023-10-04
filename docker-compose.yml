@@ -3,7 +3,7 @@ services:
     build:
       context: ./
       secrets:
-        - token
+        - GH_TOKEN
     ports:
       - "5000:80"
     volumes:
@@ -12,7 +12,7 @@ services:
     build:
       context: ./docker/downloader/
       secrets:
-        - token
+        - GH_TOKEN
     volumes:
       - data_volume:/data
     depends_on:
@@ -23,5 +23,5 @@ volumes:
     name: pygeoapi-datavolume
 
 secrets:
-  token:
+  GH_TOKEN:
     file: ./GH_TOKEN

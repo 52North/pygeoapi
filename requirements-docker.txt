@@ -6,3 +6,4 @@ pygeometa
 sodapy
 Flask>=2.2.0
 Flask-Cors
+xarray>=0.18

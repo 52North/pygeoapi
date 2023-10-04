@@ -120,6 +120,7 @@ RUN \
     && rm -f ./SCHEMAS_OPENGIS_NET.zip \
 
     # Install remaining pygeoapi deps
+    && apt-get install libeccodes-dev -y \
     && pip3 install -r requirements-docker.txt \
 
     # Install pygeoapi
@@ -137,8 +138,8 @@ RUN \
     && apt autoremove -y  \
     && rm -rf /var/lib/apt/lists/*
 
-RUN --mount=type=secret,id=token token="$(cat /run/secrets/token)" \
-    && pip install git+https://${token}@github.com/52North/OGC_DP23#subdirectory=crop_mapping_tool 
+RUN --mount=type=secret,id=GH_TOKEN,required GH_TOKEN="$(cat /run/secrets/GH_TOKEN)" \
+    && pip install git+https://${GH_TOKEN}@github.com/52North/OGC_DP23#subdirectory=crop_mapping_tool 
 
 ENTRYPOINT ["/entrypoint.sh"]
 

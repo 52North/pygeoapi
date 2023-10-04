@@ -1,8 +1,10 @@
 import logging
+import os
 
+import tempfile
+import xarray as xr
 from pygeoapi.process.base import BaseProcessor, ProcessorExecuteError
-# import xarray as xr
-# import tempfile
+
 from crop_mapping_tool.landsuitmodel import LandSuitMod
 from crop_mapping_tool.plant import Plant
 
@@ -117,21 +119,22 @@ class CropModelProcessor(BaseProcessor):
         crop=data.get('crop')
         format=data.get('format')
 
-        if bbox != NULL:
+        if bbox is not None:
           coords = [float(i) for i in bbox.split(',')]
           lat_max=coords[0]
           lat_min=coords[1]
           lon_max=coords[2]
           lon_min=coords[3]
 
-        if point != NULL:
+        if point is not None:
           points = [float(i) for i in point.split(',')]
           lat = points[0]
           lon = points[1]
 
         # read environmental data and plant requirements
-        full_data = xr.open_dataset('./nc/full_data20230907.nc')
-        plant = Plant.from_file(crop)
+        full_data = xr.open_dataset('/pygeoapi/data/full_data20230907.nc')
+        plant = Plant.from_file(crop, '/pygeoapi/data/plant_json')
+
 
         # run crop model
         landsuitmodel = LandSuitMod()
@@ -139,6 +142,7 @@ class CropModelProcessor(BaseProcessor):
         landsuitmodel.lat_lng['lat'] = 'latitude'
         landsuitmodel.lat_lng['lng'] = 'longitude'
         landsuitmodel.read_data(full_data)
+        vars_requested = ['temperature']
         landsuitmodel.process(plant, vars_requested)
 
         # slice the data
@@ -152,7 +156,7 @@ class CropModelProcessor(BaseProcessor):
         # get return type
         nc = None
         if format=='nc':
-            nc = landsuitmodel_cropped.return_netCDF()
+            nc = landsuitmodel_cropped
         else:
             raise NotImplementedError("contour output not yet implemented")
 
@@ -166,10 +170,9 @@ class CropModelProcessor(BaseProcessor):
         # cropped = data.sel(latitude=slice(lat_max,lat_min), longitude=slice(lon_min, lon_max))
 
 
-        print(landsuitmodel_cropped)
         with tempfile.TemporaryFile() as fp:
                 LOGGER.debug('Returning data in native NetCDF format')
-                fp.write(cropped.to_netcdf())
+                fp.write(landsuitmodel_cropped.to_netcdf())
                 fp.seek(0)
                 nc=fp.read()
                 
