@@ -53,13 +53,13 @@ LOGGER = logging.getLogger(__name__)
 
 OPENAPI_YAML = {
     'oapif-1': 'https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml',  # noqa
-    'oapif-2': 'https://schemas.opengis.net/ogcapi/features/part2/1.0/openapi/ogcapi-features-2.yaml', # noqa
+    'oapif-2': 'https://schemas.opengis.net/ogcapi/features/part2/1.0/openapi/ogcapi-features-2.yaml',  # noqa
     'oapip': 'https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi',
     'oacov': 'https://raw.githubusercontent.com/tomkralidis/ogcapi-coverages-1/fix-cis/yaml-unresolved',  # noqa
-    'oapit': 'https://raw.githubusercontent.com/opengeospatial/ogcapi-tiles/master/openapi/swaggerhub/tiles.yaml',  # noqa
-    'oapimt': 'https://raw.githubusercontent.com/opengeospatial/ogcapi-tiles/master/openapi/swaggerhub/map-tiles.yaml',  # noqa
+    'oapit': 'https://raw.githubusercontent.com/opengeospatial/ogcapi-tiles/master/openapi/swaggerhub/tiles.yaml', # noqa
+    'oapimt': 'https://raw.githubusercontent.com/opengeospatial/ogcapi-tiles/master/openapi/swaggerhub/map-tiles.yaml', # noqa
     'oapir': 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi',  # noqa
-    'oaedr': 'https://schemas.opengis.net/ogcapi/edr/1.0/openapi', # noqa
+    'oaedr': 'https://schemas.opengis.net/ogcapi/edr/1.0/openapi',  # noqa
     'oat': 'https://raw.githubusercontent.com/opengeospatial/ogcapi-tiles/master/openapi/swaggerHubUnresolved/ogc-api-tiles.yaml', # noqa
 }
 
@@ -67,7 +67,6 @@ THISDIR = os.path.dirname(os.path.realpath(__file__))
 
 
 def get_ogc_schemas_location(server_config):
-
     osl = server_config.get('ogc_schemas_location')
 
     value = 'https://schemas.opengis.net'
@@ -146,11 +145,11 @@ def get_oas_30(cfg):
 
     osl = get_ogc_schemas_location(cfg['server'])
     OPENAPI_YAML['oapif-1'] = os.path.join(osl, 'ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml')  # noqa
-    OPENAPI_YAML['oapif-2'] = os.path.join(osl, 'ogcapi/features/part2/1.0/openapi/ogcapi-features-2.yaml') # noqa
+    OPENAPI_YAML['oapif-2'] = os.path.join(osl, 'ogcapi/features/part2/1.0/openapi/ogcapi-features-2.yaml')  # noqa
 
     LOGGER.debug('setting up server info')
     oas = {
-        'openapi': '3.0.2',
+        'openapi': '3.1.0',
         'tags': []
     }
     info = {
@@ -263,18 +262,30 @@ def get_oas_30(cfg):
     }
 
     oas['tags'].append({
-            'name': 'server',
-            'description': l10n.translate(cfg['metadata']['identification']['description'], locale_),  # noqa
-            'externalDocs': {
-                'description': 'information',
-                'url': cfg['metadata']['identification']['url']}
-        }
+        'name': 'server',
+        'description': l10n.translate(cfg['metadata']['identification']['description'], locale_),  # noqa
+        'externalDocs': {
+            'description': 'information',
+            'url': cfg['metadata']['identification']['url']}
+    }
     )
-    oas['tags'].append({
+    stac_collections = filter_dict_by_key_value(cfg['resources'],
+                                                'type', 'stac-collection')
+    if stac_collections:
+        oas['tags'].append({
             'name': 'stac',
             'description': 'SpatioTemporal Asset Catalog'
         }
-    )
+        )
+
+    csa_collections = filter_dict_by_key_value(cfg['resources'],
+                                               'type', 'connected-systems')
+    if csa_collections:
+        oas['tags'].append({
+            'name': 'connected-systems-api',
+            'description': 'ConnectedSystems API'
+        }
+        )
 
     oas['components'] = {
         'responses': {
@@ -298,7 +309,8 @@ def get_oas_30(cfg):
             'f': {
                 'name': 'f',
                 'in': 'query',
-                'description': 'The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.',  # noqa
+                'description': 'The optional f parameter indicates the output format which the server shall provide as part of the response document.  The default format is GeoJSON.',
+                # noqa
                 'required': False,
                 'schema': {
                     'type': 'string',
@@ -311,7 +323,8 @@ def get_oas_30(cfg):
             'lang': {
                 'name': 'lang',
                 'in': 'query',
-                'description': 'The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. "fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7"), simple (e.g. "de") or locale-like (e.g. "de-CH" or "fr_BE") fashion.',  # noqa
+                'description': 'The optional lang parameter instructs the server return a response in a certain language, if supported.  If the language is not among the available values, the Accept-Language header language will be used if it is supported. If the header is missing, the default server language is used. Note that providers may only support a single language (or often no language at all), that can be different from the server language.  Language strings can be written in a complex (e.g. "fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7"), simple (e.g. "de") or locale-like (e.g. "de-CH" or "fr_BE") fashion.',
+                # noqa
                 'required': False,
                 'schema': {
                     'type': 'string',
@@ -322,7 +335,8 @@ def get_oas_30(cfg):
             'properties': {
                 'name': 'properties',
                 'in': 'query',
-                'description': 'The properties that should be included for each feature. The parameter value is a comma-separated list of property names.',  # noqa
+                'description': 'The properties that should be included for each feature. The parameter value is a comma-separated list of property names.',
+                # noqa
                 'required': False,
                 'style': 'form',
                 'explode': False,
@@ -407,7 +421,8 @@ def get_oas_30(cfg):
             'offset': {
                 'name': 'offset',
                 'in': 'query',
-                'description': 'The optional offset parameter indicates the index within the result set from which the server shall begin presenting results in the response document.  The first element has an index of 0 (default).',  # noqa
+                'description': 'The optional offset parameter indicates the index within the result set from which the server shall begin presenting results in the response document.  The first element has an index of 0 (default).',
+                # noqa
                 'required': False,
                 'schema': {
                     'type': 'integer',
@@ -438,30 +453,30 @@ def get_oas_30(cfg):
                 ],
                 'properties': {
                     'queryable': {
-                        'description': 'the token that may be used in a CQL predicate', # noqa
+                        'description': 'the token that may be used in a CQL predicate',  # noqa
                         'type': 'string'
                     },
                     'title': {
-                        'description': 'a human readable title for the queryable', # noqa
+                        'description': 'a human readable title for the queryable',  # noqa
                         'type': 'string'
                     },
                     'description': {
-                        'description': 'a human-readable narrative describing the queryable', # noqa
+                        'description': 'a human-readable narrative describing the queryable',  # noqa
                         'type': 'string'
                     },
                     'language': {
-                        'description': 'the language used for the title and description', # noqa
+                        'description': 'the language used for the title and description',  # noqa
                         'type': 'string',
                         'default': [
                             'en'
                         ]
                     },
                     'type': {
-                        'description': 'the data type of the queryable', # noqa
+                        'description': 'the data type of the queryable',  # noqa
                         'type': 'string'
                     },
                     'type-ref': {
-                        'description': 'a reference to the formal definition of the type', # noqa
+                        'description': 'a reference to the formal definition of the type',  # noqa
                         'type': 'string',
                         'format': 'url'
                     }
@@ -479,7 +494,8 @@ def get_oas_30(cfg):
                     }
                 }
             }
-        }
+        },
+        'requestBodies': {}
     }
 
     items_f = deepcopy(oas['components']['parameters']['f'])
@@ -545,7 +561,7 @@ def get_oas_30(cfg):
                 ptype = 'record'
 
             p = load_plugin('provider', get_provider_by_type(
-                            collections[k]['providers'], ptype))
+                collections[k]['providers'], ptype))
 
             items_path = f'{collection_name_path}/items'
 
@@ -631,7 +647,8 @@ def get_oas_30(cfg):
                         ],
                         'responses': {
                             '200': {'$ref': '#/components/responses/Queryables'},  # noqa
-                            '400': {'$ref': f"{OPENAPI_YAML['oapif-1']}#/components/responses/InvalidParameter"},  # noqa
+                            '400': {'$ref': f"{OPENAPI_YAML['oapif-1']}#/components/responses/InvalidParameter"},
+                            # noqa
                             '404': {'$ref': f"{OPENAPI_YAML['oapif-1']}#/components/responses/NotFound"},  # noqa
                             '500': {'$ref': f"{OPENAPI_YAML['oapif-1']}#/components/responses/ServerError"},  # noqa
                         }
@@ -769,7 +786,7 @@ def get_oas_30(cfg):
         LOGGER.debug('setting up coverage endpoints')
         try:
             load_plugin('provider', get_provider_by_type(
-                        collections[k]['providers'], 'coverage'))
+                collections[k]['providers'], 'coverage'))
 
             coverage_path = f'{collection_name_path}/coverage'
 
@@ -845,52 +862,52 @@ def get_oas_30(cfg):
         if tile_extension:
             tp = load_plugin('provider', tile_extension)
             oas['components']['responses'].update({
-                    'Tiles': {
-                        'description': 'Retrieves the tiles description for this collection', # noqa
-                        'content': {
-                            'application/json': {
-                                'schema': {
-                                    '$ref': '#/components/schemas/tiles'
-                                }
+                'Tiles': {
+                    'description': 'Retrieves the tiles description for this collection',  # noqa
+                    'content': {
+                        'application/json': {
+                            'schema': {
+                                '$ref': '#/components/schemas/tiles'
                             }
                         }
                     }
                 }
+            }
             )
 
             oas['components']['schemas'].update({
-                    'tilematrixsetlink': {
-                        'type': 'object',
-                        'required': ['tileMatrixSet'],
-                        'properties': {
-                            'tileMatrixSet': {
-                                'type': 'string'
-                            },
-                            'tileMatrixSetURI': {
-                                'type': 'string'
-                            }
+                'tilematrixsetlink': {
+                    'type': 'object',
+                    'required': ['tileMatrixSet'],
+                    'properties': {
+                        'tileMatrixSet': {
+                            'type': 'string'
+                        },
+                        'tileMatrixSetURI': {
+                            'type': 'string'
                         }
-                    },
-                    'tiles': {
-                        'type': 'object',
-                        'required': [
-                            'tileMatrixSetLinks',
-                            'links'
-                        ],
-                        'properties': {
-                            'tileMatrixSetLinks': {
-                                'type': 'array',
-                                'items': {
-                                    '$ref': '#/components/schemas/tilematrixsetlink' # noqa
-                                }
-                            },
-                            'links': {
-                                'type': 'array',
-                                'items': {'$ref': f"{OPENAPI_YAML['oapit']}#/components/schemas/link"}  # noqa
+                    }
+                },
+                'tiles': {
+                    'type': 'object',
+                    'required': [
+                        'tileMatrixSetLinks',
+                        'links'
+                    ],
+                    'properties': {
+                        'tileMatrixSetLinks': {
+                            'type': 'array',
+                            'items': {
+                                '$ref': '#/components/schemas/tilematrixsetlink'  # noqa
                             }
+                        },
+                        'links': {
+                            'type': 'array',
+                            'items': {'$ref': f"{OPENAPI_YAML['oapit']}#/components/schemas/link"}  # noqa
                         }
                     }
                 }
+            }
             )
 
             tiles_path = f'{collection_name_path}/tiles'
@@ -923,14 +940,15 @@ def get_oas_30(cfg):
                     'tags': [name],
                     'operationId': f'get{name.capitalize()}Tiles',
                     'parameters': [
-                        {'$ref': f"{OPENAPI_YAML['oat']}#/components/parameters/tileMatrixSetId"}, # noqa
+                        {'$ref': f"{OPENAPI_YAML['oat']}#/components/parameters/tileMatrixSetId"},  # noqa
                         {'$ref': f"{OPENAPI_YAML['oat']}#/components/parameters/tileMatrix"},  # noqa
                         {'$ref': f"{OPENAPI_YAML['oat']}#/components/parameters/tileRow"},  # noqa
                         {'$ref': f"{OPENAPI_YAML['oat']}#/components/parameters/tileCol"},  # noqa
                         {
                             'name': 'f',
                             'in': 'query',
-                            'description': 'The optional f parameter indicates the output format which the server shall provide as part of the response document.',  # noqa
+                            'description': 'The optional f parameter indicates the output format which the server shall provide as part of the response document.',
+                            # noqa
                             'required': False,
                             'schema': {
                                 'type': 'string',
@@ -1087,8 +1105,6 @@ def get_oas_30(cfg):
                     {'$ref': f"{OPENAPI_YAML['oapif-1']}#/components/parameters/datetime"})  # noqa
 
     LOGGER.debug('setting up STAC')
-    stac_collections = filter_dict_by_key_value(cfg['resources'],
-                                                'type', 'stac-collection')
     if stac_collections:
         paths['/stac'] = {
             'get': {
@@ -1103,6 +1119,59 @@ def get_oas_30(cfg):
                 }
             }
         }
+
+    if csa_collections:
+        """ Reads the JSON schema YAML file. """
+        schema_file = Path(__file__).parent.resolve() / 'static' \
+                      / 'openapi' / 'openapi-connected-systems-1.bundle.yaml'
+
+        with schema_file.open() as csa_openapi_file:
+            csa_openapi = yaml_load(csa_openapi_file)
+
+            for path, val in csa_openapi['paths'].items():
+                # TODO: check if this is enough to prevent overwriting of paths
+                if not path in paths:
+                    if not "system" in path:
+                        continue
+                    # Overwrite tags + parameters
+                    for method in val.values():
+                        method['tags'] = ['connected-systems-api']
+                    #                        if 'parameters' in method:
+                    #                            new_params = []
+                    #                            for param in method['parameters']:
+                    #                                new_params.append({'$ref': f"#{param['$ref']}"})
+                    #                            method['parameters'] = new_params
+                    paths[path] = val
+
+            # Add parameter definitions
+            parameter_definitions_csa = csa_openapi['components']['parameters']
+            for key, val in parameter_definitions_csa.items():
+                definitions_pygeo = oas['components']['parameters']
+                if key in definitions_pygeo:
+                    print(f"skipping overwrite of {key}")
+
+                definitions_pygeo[key] = val
+
+            schema_definitions_csa = csa_openapi['components']['schemas']
+            for key, val in schema_definitions_csa.items():
+                definitions_pygeo = oas['components']['schemas']
+                if key in definitions_pygeo:
+                    print(f"skipping overwrite of {key}")
+                definitions_pygeo[key] = val
+
+            response_definitions_csa = csa_openapi['components']['responses']
+            for key, val in response_definitions_csa.items():
+                definitions_pygeo = oas['components']['responses']
+                if key in definitions_pygeo:
+                    print(f"skipping overwrite of {key}")
+                definitions_pygeo[key] = val
+
+            requestBodies_definitions_csa = csa_openapi['components']['requestBodies']
+            for key, val in requestBodies_definitions_csa.items():
+                definitions_pygeo = oas['components']['requestBodies']
+                if key in definitions_pygeo:
+                    print(f"skipping overwrite of {key}")
+                definitions_pygeo[key] = val
 
     processes = filter_dict_by_key_value(cfg['resources'], 'type', 'process')
 
@@ -1191,7 +1260,8 @@ def get_oas_30(cfg):
                 }
             }
             if 'example' in p.metadata:
-                paths[f'{process_name_path}/execution']['post']['requestBody']['content']['application/json']['example'] = p.metadata['example']  # noqa
+                paths[f'{process_name_path}/execution']['post']['requestBody']['content']['application/json'][
+                    'example'] = p.metadata['example']  # noqa
 
             name_in_path = {
                 'name': 'jobId',
@@ -1252,7 +1322,7 @@ def get_oas_30(cfg):
         paths['/jobs/{jobId}/results'] = {
             'get': {
                 'summary': 'Retrieve job results',
-                'description': 'Retrive job resiults',
+                'description': 'Retrieve job results',
                 'tags': ['jobs'],
                 'parameters': [
                     name_in_path,
@@ -1381,6 +1451,9 @@ def validate(ctx, openapi_file):
     validate_openapi_document(instance)
     click.echo('Valid OpenAPI document')
 
+
+# generate(['../pygeoapi-config.yml', '-of', '../openapi-config.yaml', '-f', 'yaml'])
+# generate(['../pygeoapi-config.yml', '-of', '../openapi-config.json', '-f', 'json'])
 
 openapi.add_command(generate)
 openapi.add_command(validate)

@@ -59,6 +59,14 @@
     </p>
   </section>
  {% endif %}
+{% if data['connected-systems'] %}
+  <section id="connected-systems">
+    <h2>{% trans %}Connected Systems API Assets{% endtrans %}</h2>
+    <p>
+      <a href="{{ config['server']['url'] }}/connected-systems?f=html">{% trans %}View the Connected Systems API Assets in this service{% endtrans %}</a>
+    </p>
+  </section>
+ {% endif %}
  {% if data['processes'] %}
   <section id="processes">
       <h2>{% trans %}Processes{% endtrans %}</h2>

@@ -1,0 +1,38 @@
+{% extends "_base.html" %}
+{% block title %}{{ super() }} {% trans %}Connected Systems API{% endtrans %} {% endblock %}
+{% block crumbs %}{{ super() }}
+/ <a href="./csa">{% trans %}Connected Systems API{% endtrans %}</a>
+{% endblock %}
+{% block body %}
+
+    <section id="identification">
+      <h4>{% trans %}Connected Systems API{% endtrans %}: {{ data['csa_version'] }}</h4>
+    </section>
+
+    <section id="collections">
+      <h2>Collections</h2>
+            <table class="table table-striped table-bordered">
+              <thead>
+              <tr>
+                <th>{% trans %}Name{% endtrans %}</th>
+                <th>{% trans %}Description{% endtrans %}</th>
+              </tr>
+              </thead>
+              <tbody>
+                {% for k, v in filter_dict_by_key_value(config['resources'], 'type', 'connected-systems').items() %}
+                <tr>
+                  <td data-label="name">
+                    <a  title="{{ v['title'] | striptags | truncate }}"
+                      href="{{ config['server']['url'] }}/connected-systems/{{ k }}">
+                      <span>{{ v['title'] | striptags | truncate }}</span></a>
+                  </td>
+                  <td data-label="description">
+                    {{ v['description'] | striptags | truncate }}
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+    </section>
+
+{% endblock %}

@@ -5,7 +5,9 @@
 #          Sander Schaminee <sander.schaminee@geocat.net>
 #          John A Stevenson <jostev@bgs.ac.uk>
 #          Colin Blackburn <colb@bgs.ac.uk>
+#          Jan Speckamp <j.speckamp@52north.org>
 #
+# Copyright (c) 2023 Jan Speckamp
 # Copyright (c) 2023 Tom Kralidis
 # Copyright (c) 2022 Francesco Bartoli
 # Copyright (c) 2022 John A Stevenson and Colin Blackburn
@@ -46,7 +48,7 @@ from http import HTTPStatus
 import json
 import logging
 import re
-from typing import Any, Tuple, Union, Optional
+from typing import Any, Tuple, Union, Optional, List, Callable
 import urllib.parse
 
 from dateutil.parser import parse as dateparse
@@ -69,6 +71,7 @@ from pygeoapi.provider.base import (
     ProviderInvalidDataError, ProviderInvalidQueryError, ProviderNoDataError,
     ProviderQueryError, ProviderItemNotFoundError, ProviderTypeError,
     ProviderRequestEntityTooLargeError)
+from pygeoapi.provider.connectedsystems import *
 
 from pygeoapi.provider.tile import (ProviderTileNotFoundError,
                                     ProviderTileQueryError,
@@ -95,6 +98,8 @@ HEADERS = {
 
 CHARSET = ['utf-8']
 F_JSON = 'json'
+F_GEOJSON = 'geojson'
+F_SENSORML_JSON = 'smljson'
 F_HTML = 'html'
 F_JSONLD = 'jsonld'
 F_GZIP = 'gzip'
@@ -106,6 +111,8 @@ FORMAT_TYPES = OrderedDict((
     (F_HTML, 'text/html'),
     (F_JSONLD, 'application/ld+json'),
     (F_JSON, 'application/json'),
+    (F_GEOJSON, 'application/geo+json'),
+    (F_SENSORML_JSON, 'application/sml+json'),
     (F_PNG, 'image/png'),
     (F_MVT, 'application/vnd.mapbox-vector-tile')
 ))
@@ -152,7 +159,7 @@ CONFORMANCE = {
         'http://www.opengis.net/spec/ogcapi-records-1/1.0/conf/html'
     ],
     'process': [
-        'http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/ogc-process-description', # noqa
+        'http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/ogc-process-description',  # noqa
         'http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/core',
         'http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/json',
         'http://www.opengis.net/spec/ogcapi-processes-1/1.0/conf/oas30'
@@ -298,6 +305,7 @@ class APIRequest:
     :param request:             The web platform specific Request instance.
     :param supported_locales:   List or set of supported Locale instances.
     """
+
     def __init__(self, request, supported_locales):
         # Set default request data
         self._data = b''
@@ -440,7 +448,7 @@ class APIRequest:
 
         # Format not specified: get from Accept headers (MIME types)
         # e.g. format_ = 'text/html'
-        h = headers.get('accept', headers.get('Accept', '')).strip() # noqa
+        h = headers.get('accept', headers.get('Accept', '')).strip()  # noqa
         (fmts, mimes) = zip(*FORMAT_TYPES.items())
         # basic support for complex types (i.e. with "q=0.x")
         for type_ in (t.split(';')[0].strip() for t in h.split(',') if t):
@@ -681,6 +689,22 @@ class API:
         self.manager = load_plugin('process_manager', manager_def)
         LOGGER.info('Process manager plugin loaded')
 
+        LOGGER.debug(f"Loading dynamic-resources")
+        self.connected_system_provider: ConnectedSystemsBaseProvider = None
+
+        if config['dynamic-resources'] is not None:
+            api = config['dynamic-resources']['connected-systems-api']
+            if api is not None:
+                provider_definition = api['provider']
+                provider_definition["base_url"] = self.base_url
+                self.connected_system_provider = load_plugin('provider', provider_definition)
+
+                # TODO: refresh this upon modification of the datastore (e.g. adding new collections)
+                for name, collection in self.connected_system_provider.get_collections().items():
+                    self.config['resources'][name] = collection
+
+        LOGGER.info('Dynamic resources loaded')
+
     @gzip
     @pre_process
     @jsonldify
@@ -801,7 +825,7 @@ class API:
         :returns: tuple of headers, status code, content
         """
 
-        if not request.is_valid():
+        if not request.is_valid(["yml", "yaml"]):
             return self.get_format_exception(request)
 
         headers = request.get_response_headers(**self.api_headers)
@@ -821,10 +845,17 @@ class API:
 
         headers['Content-Type'] = 'application/vnd.oai.openapi+json;version=3.0'  # noqa
 
-        if isinstance(openapi, dict):
-            return headers, HTTPStatus.OK, to_json(openapi, self.pretty_print)
+        if request.format == "yml" or request.format == "yaml":
+            if isinstance(openapi, dict):
+                return headers, HTTPStatus.OK, openapi
+            else:
+                return self.get_format_exception(request)
+
         else:
-            return headers, HTTPStatus.OK, openapi
+            if isinstance(openapi, dict):
+                return headers, HTTPStatus.OK, to_json(openapi, self.pretty_print)
+            else:
+                return headers, HTTPStatus.OK, openapi
 
     @gzip
     @pre_process
@@ -1012,6 +1043,9 @@ class API:
                 'href': f'{self.get_collections_url()}/{k}?f={F_HTML}'
             })
 
+            if collection_data_type in ['connected-systems']:
+                collection['itemType'] = collection_data_type
+
             if collection_data_type in ['feature', 'record', 'tile']:
                 # TODO: translate
                 collection['itemType'] = collection_data_type
@@ -1049,10 +1083,11 @@ class API:
 
                 # OAPIF Part 2 - list supported CRSs and StorageCRS
                 if collection_data_type == 'feature':
-                    collection['crs'] = get_supported_crs_list(collection_data, DEFAULT_CRS_LIST) # noqa
-                    collection['storageCRS'] = collection_data.get('storage_crs', DEFAULT_STORAGE_CRS) # noqa
+                    collection['crs'] = get_supported_crs_list(collection_data, DEFAULT_CRS_LIST)  # noqa
+                    collection['storageCRS'] = collection_data.get('storage_crs', DEFAULT_STORAGE_CRS)  # noqa
                     if 'storage_crs_coordinate_epoch' in collection_data:
-                        collection['storageCrsCoordinateEpoch'] = collection_data.get('storage_crs_coordinate_epoch') # noqa
+                        collection['storageCrsCoordinateEpoch'] = collection_data.get(
+                            'storage_crs_coordinate_epoch')  # noqa
 
             elif collection_data_type == 'coverage':
                 # TODO: translate
@@ -1279,7 +1314,6 @@ class API:
 
         if any([dataset is None,
                 dataset not in self.config['resources'].keys()]):
-
             msg = 'Collection not found'
             return self.get_exception(
                 HTTPStatus.NOT_FOUND, headers, request.format, 'NotFound', msg)
@@ -1518,7 +1552,7 @@ class API:
                     HTTPStatus.BAD_REQUEST, headers, request.format,
                     'NoApplicableCode', msg)
 
-            supported_crs_list = get_supported_crs_list(provider_def, DEFAULT_CRS_LIST) # noqa
+            supported_crs_list = get_supported_crs_list(provider_def, DEFAULT_CRS_LIST)  # noqa
             if bbox_crs not in supported_crs_list:
                 msg = f'bbox-crs {bbox_crs} not supported for this collection'
                 return self.get_exception(
@@ -1533,7 +1567,7 @@ class API:
         if len(bbox) > 0:
             try:
                 # Get a pyproj CRS instance for the Collection's Storage CRS
-                storage_crs = provider_def.get('storage_crs', DEFAULT_STORAGE_CRS) # noqa
+                storage_crs = provider_def.get('storage_crs', DEFAULT_STORAGE_CRS)  # noqa
 
                 # Do the (optional) Transform to the Storage CRS
                 bbox = transform_bbox(bbox, bbox_crs, storage_crs)
@@ -1758,8 +1792,8 @@ class API:
                     data=content,
                     options={
                         'provider_def': get_provider_by_type(
-                                            collections[dataset]['providers'],
-                                            'feature')
+                            collections[dataset]['providers'],
+                            'feature')
                     }
                 )
             except FormatterSerializationError as err:
@@ -2006,8 +2040,8 @@ class API:
 
         LOGGER.debug('Processing request content-type header')
         if (request_headers.get(
-            'Content-Type') or request_headers.get(
-                'content-type')) != 'application/query-cql-json':
+                'Content-Type') or request_headers.get(
+            'content-type')) != 'application/query-cql-json':
             msg = ('Invalid body content-type')
             return self.get_exception(
                 HTTPStatus.BAD_REQUEST, headers, request.format,
@@ -2322,27 +2356,27 @@ class API:
             'rel': 'root',
             'title': 'The landing page of this server as JSON',
             'href': f"{self.base_url}?f={F_JSON}"
-            }, {
+        }, {
             'type': FORMAT_TYPES[F_HTML],
             'rel': 'root',
             'title': 'The landing page of this server as HTML',
             'href': f"{self.base_url}?f={F_HTML}"
-            }, {
+        }, {
             'rel': request.get_linkrel(F_JSON),
             'type': 'application/geo+json',
             'title': 'This document as GeoJSON',
             'href': f'{uri}?f={F_JSON}'
-            }, {
+        }, {
             'rel': request.get_linkrel(F_JSONLD),
             'type': FORMAT_TYPES[F_JSONLD],
             'title': 'This document as RDF (JSON-LD)',
             'href': f'{uri}?f={F_JSONLD}'
-            }, {
+        }, {
             'rel': request.get_linkrel(F_HTML),
             'type': FORMAT_TYPES[F_HTML],
             'title': 'This document as HTML',
             'href': f'{uri}?f={F_HTML}'
-            }, {
+        }, {
             'rel': 'collection',
             'type': FORMAT_TYPES[F_JSON],
             'title': l10n.translate(collections[dataset]['title'],
@@ -2498,8 +2532,8 @@ class API:
                 msg = f'Invalid subset: {err}'
                 LOGGER.error(msg)
                 return self.get_exception(
-                        HTTPStatus.BAD_REQUEST, headers, format_,
-                        'InvalidParameterValue', msg)
+                    HTTPStatus.BAD_REQUEST, headers, format_,
+                    'InvalidParameterValue', msg)
 
             if not set(subsets.keys()).issubset(p.axes):
                 msg = 'Invalid axis name'
@@ -2679,7 +2713,6 @@ class API:
                                                **self.api_headers)
         if any([dataset is None,
                 dataset not in self.config['resources'].keys()]):
-
             msg = 'Collection not found'
             return self.get_exception(
                 HTTPStatus.NOT_FOUND, headers, request.format, 'NotFound', msg)
@@ -2688,7 +2721,7 @@ class API:
         LOGGER.debug('Loading provider')
         try:
             t = get_provider_by_type(
-                    self.config['resources'][dataset]['providers'], 'tile')
+                self.config['resources'][dataset]['providers'], 'tile')
             p = load_plugin('provider', t)
         except (KeyError, ProviderTypeError):
             msg = 'Invalid collection tiles'
@@ -2732,7 +2765,8 @@ class API:
 
         tile_services = p.get_tiles_service(
             baseurl=self.base_url,
-            servicepath=f'{self.get_collections_url()}/{dataset}/tiles/{{tileMatrixSetId}}/{{tileMatrix}}/{{tileRow}}/{{tileCol}}?f=mvt'  # noqa
+            servicepath=f'{self.get_collections_url()}/{dataset}/tiles/{{tileMatrixSetId}}/{{tileMatrix}}/{{tileRow}}/{{tileCol}}?f=mvt'
+            # noqa
         )
 
         for service in tile_services['links']:
@@ -2893,7 +2927,6 @@ class API:
 
         if any([dataset is None,
                 dataset not in self.config['resources'].keys()]):
-
             msg = 'Collection not found'
             return self.get_exception(
                 HTTPStatus.NOT_FOUND, headers, request.format, 'NotFound', msg)
@@ -3441,7 +3474,7 @@ class API:
 
             # TODO: translate
             if JobStatus[job_['status']] in (
-               JobStatus.successful, JobStatus.running, JobStatus.accepted):
+                    JobStatus.successful, JobStatus.running, JobStatus.accepted):
 
                 job_result_url = f"{self.base_url}/jobs/{job_['identifier']}/results"  # noqa
 
@@ -4005,6 +4038,196 @@ class API:
             headers.pop('Content-Type', None)
             return headers, HTTPStatus.OK, stac_data
 
+    @gzip
+    @pre_process
+    def get_connected_systems_root(
+            self, request: Union[APIRequest, Any]) -> Tuple[dict, int, str]:
+        """
+        Provide Connected Systems API root page
+
+        :param request: APIRequest instance with query params
+
+        :returns: tuple of headers, status code, content
+        """
+
+        if not request.is_valid():
+            return self.get_format_exception(request)
+        headers = request.get_response_headers(**self.api_headers)
+
+        id_ = 'pygeoapi-csa'
+        version = '0.0.1'
+        url = f'{self.base_url}/connected-systems'
+
+        content = {
+            'id': id_,
+            'type': 'Catalog',
+            'version': version,
+            'title': l10n.translate(
+                self.config['metadata']['identification']['title'],
+                request.locale),
+            'description': l10n.translate(
+                self.config['metadata']['identification']['description'],
+                request.locale),
+            'links': []
+        }
+
+        stac_collections = filter_dict_by_key_value(self.config['resources'],
+                                                    'type', 'connected-systems')
+
+        for key, value in stac_collections.items():
+            content['links'].append({
+                'rel': 'child',
+                'href': f'{url}/{key}?f={F_JSON}',
+                'type': FORMAT_TYPES[F_JSON]
+            })
+            content['links'].append({
+                'rel': 'child',
+                'href': f'{url}/{key}',
+                'type': FORMAT_TYPES[F_HTML]
+            })
+
+        if request.format == F_HTML:  # render
+            content = render_j2_template(self.tpl_config,
+                                         'connected-systems/collection.html',
+                                         content, request.locale)
+            return headers, HTTPStatus.OK, content
+
+        return headers, HTTPStatus.OK, to_json(content, self.pretty_print)
+
+    @gzip
+    @pre_process
+    def get_systems(
+            self,
+            request: Union[APIRequest, Any],
+            path: Union[Tuple[str, str], None] = None) -> Tuple[dict, int, str]:
+        return self._handle_csa_get(request,
+                                    path,
+                                    ConnectedSystemsBaseProvider.query_systems.__name__,
+                                    SystemsParams())
+
+    @gzip
+    @pre_process
+    def get_procedures(
+            self,
+            request: Union[APIRequest, Any],
+            path: Union[Tuple[str, str], None] = None) -> Tuple[dict, int, str]:
+        return self._handle_csa_get(request,
+                                    path,
+                                    ConnectedSystemsBaseProvider.query_procedures.__name__,
+                                    ProceduresParams())
+
+    @gzip
+    @pre_process
+    def get_deployments(
+            self,
+            request: Union[APIRequest, Any],
+            path: Union[Tuple[str, str], None] = None) -> Tuple[dict, int, str]:
+        return self._handle_csa_get(request,
+                                    path,
+                                    ConnectedSystemsBaseProvider.query_deployments.__name__,
+                                    DeploymentsParams())
+
+    @gzip
+    @pre_process
+    def get_sampling_features(
+            self,
+            request: Union[APIRequest, Any],
+            path: Union[Tuple[str, str], None] = None) -> Tuple[dict, int, str]:
+        return self._handle_csa_get(request,
+                                    path,
+                                    ConnectedSystemsBaseProvider.query_sampling_features.__name__,
+                                    SamplingFeaturesParams())
+
+    @gzip
+    @pre_process
+    def get_properties(
+            self,
+            request: Union[APIRequest, Any],
+            path: Union[Tuple[str, str], None] = None) -> Tuple[dict, int, str]:
+        return self._handle_csa_get(request,
+                                    path,
+                                    ConnectedSystemsBaseProvider.query_properties.__name__,
+                                    CSAParams())
+
+    def _handle_csa_get(self,
+                        request: Union[APIRequest, Any],
+                        path: Union[Tuple[str, str], None],
+                        handler: str,
+                        params: CSAParams
+                        ) -> Tuple[dict, int, str]:
+        """
+        Provide Connected Systems API Collections
+
+        :param request: APIRequest instance with query params
+        :param path: Additional information extracted from path
+        :param handler: Handler method of provider
+        :param params: Parameter struct
+
+        :returns: tuple of headers, status code, content
+        """
+        if self.connected_system_provider is None:
+            # TODO: what to return here?
+            raise NotImplementedError()
+
+        if not request.is_valid():
+            return self.get_format_exception(request)
+        headers = request.get_response_headers(**self.api_headers)
+
+        # Expand parameters with additional information based on path
+        if path is not None:
+            # Check that id is not malformed.
+            if not re.match("^[\w]+$", path[1]):
+                return self.get_exception(
+                    HTTPStatus.BAD_REQUEST,
+                    headers,
+                    request.format,
+                    'InvalidParameterValue',
+                    "entity identifer is malformed!")
+
+            # TODO: does the case exist where a property is specified both
+            #  in url and query params and we overwrite stuff here?
+            setattr(params, path[0], path[1])
+
+        # parse parameters
+        try:
+            parameters = parse_query_parameters(params, request.params)
+            parameters.format = request.format
+            data = getattr(self.connected_system_provider, handler)(parameters)
+
+            return self._format_csa_response(request, headers, data)
+        except ProviderItemNotFoundError:
+            return self.get_exception(
+                HTTPStatus.NOT_FOUND,
+                headers,
+                request.format,
+                'NotFound',
+                "entity not found")
+
+    def _format_csa_response(self, request, headers, data) -> Tuple[dict, int, str]:
+
+        headers['Content-Type'] = FORMAT_TYPES.get(request.format)
+        if request.format == F_JSON:
+            response = {
+                "items": [item for item in data[0]],
+                "links": [link for link in data[1]],
+            }
+            return headers, HTTPStatus.OK, to_json(response, self.pretty_print)
+        elif request.format == F_GEOJSON:
+            response = {
+                "type": "FeatureCollection",
+                "features": [item for item in data[0]],
+                "links": [link for link in data[1]],
+            }
+            return headers, HTTPStatus.OK, to_json(response, self.pretty_print)
+        elif request.format == F_SENSORML_JSON:
+            response = {
+                "items": [item for item in data[0]],
+                "links": [link for link in data[1]],
+            }
+            return headers, HTTPStatus.OK, to_json(response, self.pretty_print)
+        else:
+            return self.get_format_exception(request)
+
     def get_exception(self, status, headers, format_, code,
                       description) -> Tuple[dict, int, str]:
         """
@@ -4056,8 +4279,8 @@ class API:
 
     @staticmethod
     def _create_crs_transform_spec(
-        config: dict,
-        query_crs_uri: Optional[str] = None,
+            config: dict,
+            query_crs_uri: Optional[str] = None,
     ) -> Union[None, CrsTransformSpec]:
         """Create a `CrsTransformSpec` instance based on provider config and
         *crs* query parameter.
@@ -4118,9 +4341,9 @@ class API:
 
     @staticmethod
     def _set_content_crs_header(
-        headers: dict,
-        config: dict,
-        query_crs_uri: Optional[str] = None,
+            headers: dict,
+            config: dict,
+            query_crs_uri: Optional[str] = None,
     ):
         """Set the *Content-Crs* header in responses from providers of Feature
         type.
@@ -4256,9 +4479,9 @@ def validate_datetime(resource_def, datetime_=None) -> str:
 
             datetime_invalid = any([
                 (te['end'] is not None and datetime_begin != '..' and
-                    datetime_begin > te['end']),
+                 datetime_begin > te['end']),
                 (te['begin'] is not None and datetime_end != '..' and
-                    datetime_end < te['begin'])
+                 datetime_end < te['begin'])
             ])
 
         else:  # time instant
@@ -4269,9 +4492,9 @@ def validate_datetime(resource_def, datetime_=None) -> str:
                     datetime__ = datetime__.replace(tzinfo=pytz.UTC)
             datetime_invalid = any([
                 (te['begin'] is not None and datetime__ != '..' and
-                    datetime__ < te['begin']),
+                 datetime__ < te['begin']),
                 (te['end'] is not None and datetime__ != '..' and
-                    datetime__ > te['end'])
+                 datetime__ > te['end'])
             ])
 
     if datetime_invalid:

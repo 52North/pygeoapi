@@ -57,6 +57,7 @@ PLUGINS = {
         'SQLiteGPKG': 'pygeoapi.provider.sqlite.SQLiteGPKGProvider',
         'Socrata': 'pygeoapi.provider.socrata.SODAServiceProvider',
         'TinyDBCatalogue': 'pygeoapi.provider.tinydb_.TinyDBCatalogueProvider',
+        'toardb': 'pygeoapi.provider.toardb.ToarDBProvider',
         'WMSFacade': 'pygeoapi.provider.wms_facade.WMSFacadeProvider',
         'xarray': 'pygeoapi.provider.xarray_.XarrayProvider',
         'xarray-edr': 'pygeoapi.provider.xarray_edr.XarrayEDRProvider'

@@ -31,6 +31,7 @@
 """Flask module providing the route paths to the api"""
 
 import os
+from http import HTTPStatus
 
 import click
 
@@ -38,7 +39,6 @@ from flask import Flask, Blueprint, make_response, request, send_from_directory
 
 from pygeoapi.api import API
 from pygeoapi.util import get_mimetype, yaml_load, get_api_rules
-
 
 if 'PYGEOAPI_CONFIG' not in os.environ:
     raise RuntimeError('PYGEOAPI_CONFIG environment variable not set')
@@ -66,6 +66,7 @@ BLUEPRINT = Blueprint(
 if CONFIG['server'].get('cors', False):
     try:
         from flask_cors import CORS
+
         CORS(APP)
     except ModuleNotFoundError:
         print('Python package flask-cors required for CORS support')
@@ -83,6 +84,7 @@ if (OGC_SCHEMAS_LOCATION is not None and
 
     if not os.path.exists(OGC_SCHEMAS_LOCATION):
         raise RuntimeError('OGC schemas misconfigured')
+
 
     @BLUEPRINT.route('/schemas/<path:path>', methods=['GET'])
     def schemas(path):
@@ -462,6 +464,117 @@ def stac_catalog_path(path):
     :returns: HTTP response
     """
     return get_response(api_.get_stac_path(request, path))
+
+
+@BLUEPRINT.route('/connected-systems/')
+def csa_catalog_root():
+    """
+    Connected Systems API root endpoint
+
+    :returns: HTTP response
+    """
+    return get_response(api_.get_connected_systems_root(request))
+
+
+@BLUEPRINT.route('/systems', methods=['GET', 'POST'])
+@BLUEPRINT.route('/systems/<path:path>', methods=['GET', 'PUT', 'DELETE'])
+def systems_path(path=None):
+    """
+    Connect Systems API path endpoint
+
+    :param path: path
+
+    :returns: HTTP response
+    """
+    if request.method == 'GET':
+        if path is not None:
+            return get_response(api_.get_systems(request, ("id", path)))
+        else:
+            return get_response(api_.get_systems(request, None))
+    elif request.method == 'PUT':
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+    else:
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+
+
+@BLUEPRINT.route('/systems/<path:path>/members', methods=['GET', 'POST'])
+@BLUEPRINT.route('/systems/<path:path>/deployments', methods=['GET'])
+@BLUEPRINT.route('/systems/<path:path>/samplingFeatures', methods=['GET'])
+def systems_subpath(path=None):
+    property = request.path.split('/')[-1]
+    if request.method == 'GET':
+        if property == "members":
+            return get_response(api_.get_systems(request, ("parent", path)))
+        elif property == "deployments":
+            return get_response(api_.get_deployments(request, ("system", path)))
+        elif property == "deployments":
+            return get_response(api_.get_sampling_features(request, ("system", path)))
+    elif request.method == 'POST':
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+
+
+@BLUEPRINT.route('/procedures', methods=['GET', 'POST'])
+@BLUEPRINT.route('/procedures/<path:path>', methods=['GET', 'PUT', 'DELETE'])
+def procedures_path(path=None):
+    if request.method == 'GET':
+        if path is not None:
+            return get_response(api_.get_procedures(request, ("id", path)))
+        else:
+            return get_response(api_.get_procedures(request, None))
+    elif request.method == 'POST':
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+    else:
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+
+
+@BLUEPRINT.route('/deployments', methods=['GET', 'POST'])
+@BLUEPRINT.route('/deployments/<path:path>', methods=['GET', 'PUT', 'DELETE'])
+def deployments_path(path=None):
+    if request.method == 'GET':
+        if path is not None:
+            return get_response(api_.get_deployments(request, ("id", path)))
+        else:
+            return get_response(api_.get_deployments(request, None))
+    elif request.method == 'POST':
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+    else:
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+
+
+@BLUEPRINT.route('/deployments/<path:path>/systems', methods=['GET', 'POST'])
+def deployments_subpath(path):
+    if request.method == 'GET':
+        return get_response(api_.get_deployments(request, ("system", path)))
+    elif request.method == 'POST':
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+
+
+@BLUEPRINT.route('/samplingFeatures', methods=['GET', 'POST'])
+@BLUEPRINT.route('/samplingFeatures/<path:path>', methods=['GET', 'PUT', 'DELETE'])
+def properties_path(path=None):
+    if request.method == 'GET':
+        if path is not None:
+            return get_response(api_.get_sampling_features(request, ("id", path)))
+        else:
+            return get_response(api_.get_sampling_features(request, None))
+    elif request.method == 'POST':
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+    else:
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+
+
+@BLUEPRINT.route('/properties', methods=['GET', 'POST'])
+@BLUEPRINT.route('/properties/<path:path>', methods=['GET', 'PUT', 'DELETE'])
+def properties_subpath(path=None):
+    if request.method == 'GET':
+        if path is not None:
+            return get_response(api_.get_sampling_features(request, ("id", path)))
+        else:
+            return get_response(api_.get_sampling_features(request, None))
+    elif request.method == 'POST':
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+    else:
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
 
 
 APP.register_blueprint(BLUEPRINT)
