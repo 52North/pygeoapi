@@ -1,0 +1,12 @@
+{
+    "name": "Sehima nervosum",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

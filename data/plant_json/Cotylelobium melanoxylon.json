@@ -1,0 +1,12 @@
+{
+    "name": "Cotylelobium melanoxylon",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "2100",
+        "max": "2700"
+    }
+}

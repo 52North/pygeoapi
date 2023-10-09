@@ -1,0 +1,14 @@
+{
+    "name": "Ocotea usambarensis",
+    "trivial": {
+        "English": "East African camphor wood"
+    },
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

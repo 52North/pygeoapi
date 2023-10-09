@@ -1,0 +1,12 @@
+{
+    "name": "Axonopus affinis",
+    "trivial": {},
+    "temp": {
+        "min": "27",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1800"
+    }
+}

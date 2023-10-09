@@ -1,0 +1,28 @@
+{
+    "name": "Papaver somniferum",
+    "trivial": {
+        "Spanish": "adormidera",
+        "Portuguese": "dormideira",
+        "Japanese": "keshi",
+        "Arabic": "khashkhash",
+        "Russian": "mak",
+        "Egyptian": "mehes",
+        "German": "Schlafmohn",
+        "Latin": "Papaveris semen",
+        "English": "white poppy",
+        "Danish": "valmue",
+        "Italian": "papavero",
+        "French": "pavot",
+        "Dutch": "slaapbol",
+        "Swedish": "vallmo",
+        "Chinese": "ying-shu"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "Chlorophora excelsa",
+    "trivial": {
+        "English": "rock elm",
+        "Portuguese": "pau bicho-amarelo",
+        "Italian": "iroko",
+        "Yoruba": "iroko",
+        "Hausa": "loko",
+        "Unknown": "mvule",
+        "Ganda": "muvule",
+        "Swahili": "mvule",
+        "Igbo": "oji"
+    },
+    "temp": {
+        "min": "18",
+        "max": "33"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1800"
+    }
+}

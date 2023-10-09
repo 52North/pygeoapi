@@ -1,0 +1,12 @@
+{
+    "name": "Aristida raddiana",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "250",
+        "max": "400"
+    }
+}

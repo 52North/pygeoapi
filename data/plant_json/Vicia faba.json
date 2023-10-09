@@ -1,0 +1,17 @@
+{
+    "name": "Vicia faba",
+    "trivial": {
+        "German": "pferde bohne",
+        "English": "Windsor bean",
+        "Portuguese": "faveira",
+        "French": "f\u00e8ve de Marais"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "650",
+        "max": "1000"
+    }
+}

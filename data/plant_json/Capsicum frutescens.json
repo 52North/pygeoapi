@@ -1,0 +1,26 @@
+{
+    "name": "Capsicum frutescens",
+    "trivial": {
+        "Unknown": "te beneka",
+        "Afrikaans": "brandrissie",
+        "English": "perennial pepper",
+        "Dutch": "cayennepepper",
+        "German": "cayennepfeffer",
+        "Arabic": "filfil ahmar",
+        "Swedish": "kajennepeppar",
+        "Russian": "kayenski pyerets",
+        "Chinese": "la-chiao",
+        "Portuguese": "pimento lambari",
+        "Italian": "pepe di caienna",
+        "Spanish": "pimenton",
+        "French": "poivre rouge"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Aeschynomene histrix",
+    "trivial": {
+        "English": "porcupine jointvetch"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

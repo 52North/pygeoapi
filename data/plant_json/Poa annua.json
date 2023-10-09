@@ -1,0 +1,17 @@
+{
+    "name": "Poa annua",
+    "trivial": {
+        "English": "winter grass",
+        "Portuguese": "cabelo de cao",
+        "German": "einjahriges rispengras",
+        "French": "paturin annuel"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

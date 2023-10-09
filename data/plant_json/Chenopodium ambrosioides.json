@@ -1,0 +1,14 @@
+{
+    "name": "Chenopodium ambrosioides",
+    "trivial": {
+        "English": "wormseed"
+    },
+    "temp": {
+        "min": "15",
+        "max": "22"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Pinus halepensis",
+    "trivial": {
+        "English": "turkish pine",
+        "Afrikaans": "aleppoden",
+        "Turkish": "kizil\u00e7am (red pine)",
+        "Spanish": "pino carrasque\u00f1o",
+        "Catalan": "pi garriguenc",
+        "French": "pin de Jerusalem",
+        "Portuguese": "pinheiro Frances",
+        "Italian": "pino d'Aleppo"
+    },
+    "temp": {
+        "min": "18",
+        "max": "34"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

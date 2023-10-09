@@ -1,0 +1,15 @@
+{
+    "name": "Podocarpus elatus",
+    "trivial": {
+        "English": "weeping podocarpus",
+        "Portuguese": "podocarpo de ramos pendentes"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

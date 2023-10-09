@@ -1,0 +1,12 @@
+{
+    "name": "Astragalus adsurgens",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "400",
+        "max": "500"
+    }
+}

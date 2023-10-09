@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus longifolia",
+    "trivial": {
+        "English": "woolly butt"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1200"
+    }
+}

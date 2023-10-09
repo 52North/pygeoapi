@@ -1,0 +1,23 @@
+{
+    "name": "Thespesia populnea",
+    "trivial": {
+        "Unknown": "",
+        "Spanish": "palo de jaqueca",
+        "Khmer": "chr\u00e9i s\u00e2mut",
+        "Malay": "baru baru",
+        "Indonesian": "waru laut",
+        "English": "umbrella tree",
+        "French": "motel debou",
+        "Creoles and Pidgins (Other)": "mahot",
+        "Hindi": "porush",
+        "Thai": "pho-thale"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3000"
+    }
+}

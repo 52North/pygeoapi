@@ -1,0 +1,12 @@
+{
+    "name": "Adesmia bicolor",
+    "trivial": {},
+    "temp": {
+        "min": "10",
+        "max": "20"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

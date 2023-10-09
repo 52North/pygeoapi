@@ -1,0 +1,17 @@
+{
+    "name": "Acanthosicyos horridus",
+    "trivial": {
+        "Unknown": "!nara(Namibia)",
+        "Afrikaans": "botterpitte",
+        "English": "naras",
+        "German": "Wilde W\u00fcstenmelone"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "125",
+        "max": "250"
+    }
+}

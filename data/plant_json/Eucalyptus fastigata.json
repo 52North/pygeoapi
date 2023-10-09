@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus fastigata",
+    "trivial": {
+        "English": "cut-tail gum"
+    },
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1800"
+    }
+}

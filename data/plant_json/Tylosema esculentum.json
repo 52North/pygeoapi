@@ -1,0 +1,19 @@
+{
+    "name": "Tylosema esculentum",
+    "trivial": {
+        "Afrikaans": "sanveldneut",
+        "Unknown": "tsin bean",
+        "English": "morama nut",
+        "Tswana": "thamani berry",
+        "Khoisan (Other)": "N!Gham",
+        "Herero": "ombanui"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "150",
+        "max": "800"
+    }
+}

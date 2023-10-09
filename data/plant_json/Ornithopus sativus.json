@@ -1,0 +1,19 @@
+{
+    "name": "Ornithopus sativus",
+    "trivial": {
+        "English": "serradella",
+        "French": "serradelle",
+        "Portuguese": "trevo pe' de passaro",
+        "Spanish": "serradela",
+        "German": "serradella",
+        "Italian": "ucellina"
+    },
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Cnidoscolus chayamansa",
+    "trivial": {
+        "English": "tree spinach",
+        "Unknown": "kikilchay"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

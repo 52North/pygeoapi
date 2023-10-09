@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus polycarpa",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "29"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1500"
+    }
+}

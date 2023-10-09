@@ -1,0 +1,12 @@
+{
+    "name": "Elymus canadensis",
+    "trivial": {},
+    "temp": {
+        "min": "10",
+        "max": "22"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

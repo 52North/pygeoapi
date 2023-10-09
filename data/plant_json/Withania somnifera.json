@@ -1,0 +1,24 @@
+{
+    "name": "Withania somnifera",
+    "trivial": {
+        "Hindi": "aswagandha",
+        "Kannada": "amangura",
+        "Tamil": "amukkirag",
+        "Sanskrit": "ashvagandha",
+        "Gujarati": "asundha",
+        "Bengali": "asvagandha",
+        "Afrikaans": "vernietsiektebossie",
+        "English": "winter cherry",
+        "Himachali": "kanaje",
+        "Arabic": "samm al ferakh",
+        "Zulu": "umaqhunsula"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "650",
+        "max": "750"
+    }
+}

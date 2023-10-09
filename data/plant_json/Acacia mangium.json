@@ -1,0 +1,16 @@
+{
+    "name": "Acacia mangium",
+    "trivial": {
+        "English": "mangium wattle",
+        "French": "mange",
+        "Unknown": "tuhkehn pwelmwahu"
+    },
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

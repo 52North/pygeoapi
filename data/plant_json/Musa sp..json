@@ -1,0 +1,23 @@
+{
+    "name": "Musa sp.",
+    "trivial": {
+        "English": "banana",
+        "French": "bananier",
+        "Khmer": "cheek ham' vaa",
+        "Vietnamese": "chuoi",
+        "Thai": "kluai",
+        "Lao": "kwhyz",
+        "Amharic": "muz",
+        "Burmese": "nget pyo thee",
+        "Indonesian": "pisang",
+        "Tagalog": "saging"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2400",
+        "max": "2700"
+    }
+}

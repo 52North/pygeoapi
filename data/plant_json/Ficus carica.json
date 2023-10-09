@@ -1,0 +1,26 @@
+{
+    "name": "Ficus carica",
+    "trivial": {
+        "English": "Turkey fig",
+        "French": "figuier blanc",
+        "Amharic": "etse-beles",
+        "Hebrew": "feg",
+        "German": "feige",
+        "Italian": "fico",
+        "Latin": "ficus",
+        "Portuguese": "figueira mansa",
+        "Spanish": "la higuera",
+        "Berber languages": "Imourran",
+        "Arabic": "teen",
+        "Greek, Modern (since 1453)": "syk\u00ea",
+        "Unknown": "warka (oromya, Ethiopia)"
+    },
+    "temp": {
+        "min": "16",
+        "max": "26"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "Solanum melongena",
+    "trivial": {
+        "Danish": "aubergine",
+        "English": "mad apple",
+        "French": "aubergine",
+        "German": "Melanzani (Austria)",
+        "Hindi": "baijani",
+        "Unknown": "paegani (Tuvalu)",
+        "Spanish": "berenjena",
+        "Portuguese": "jiloeiro",
+        "Afrikaans": "eiervrug",
+        "Tamil": "kathiri (tamil)",
+        "Italian": "melanzana",
+        "Tonga (Tonga Islands)": "paigani",
+        "Malayalam": "vazhudhanaikkai (malayalam)"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Crocus sativus",
+    "trivial": {
+        "Portuguese": "acafrao",
+        "Spanish": "azafran",
+        "Chinese": "fan-hung-hua",
+        "Unknown": "sapran",
+        "Dutch": "saffraan",
+        "Swedish": "saffran",
+        "English": "saffron",
+        "French": "safran",
+        "German": "safran",
+        "Japanese": "safuran",
+        "Russian": "shafran",
+        "Latin": "Stigma Croci",
+        "Arabic": "za'faran",
+        "Italian": "zafferano"
+    },
+    "temp": {
+        "min": "7",
+        "max": "19"
+    },
+    "precip": {
+        "min": "800",
+        "max": "900"
+    }
+}

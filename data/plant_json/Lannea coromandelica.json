@@ -1,0 +1,12 @@
+{
+    "name": "Lannea coromandelica",
+    "trivial": {},
+    "temp": {
+        "min": "32",
+        "max": "40"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

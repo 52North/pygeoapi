@@ -1,0 +1,12 @@
+{
+    "name": "Hopea wightiana",
+    "trivial": {},
+    "temp": {
+        "min": "27",
+        "max": "35"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3500"
+    }
+}

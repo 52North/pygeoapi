@@ -1,0 +1,19 @@
+{
+    "name": "Glyceria fluitans",
+    "trivial": {
+        "Icelandic": "fl\u00f3\u00f0apuntur",
+        "English": "water mannagrass",
+        "German": "flutender schwaden",
+        "Danish": "manna-s\u00f8dgr\u00e6s",
+        "Norwegian": "mannas\u00f8tgras",
+        "Finnish": "ojasorsimo"
+    },
+    "temp": {
+        "min": "14",
+        "max": "26"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "Nephelium lappaceum",
+    "trivial": {
+        "Khmer": "ser mon",
+        "Vietnamese": "chom chom",
+        "French": "ramboutan",
+        "Thai": "phruan",
+        "Dutch": "ramboetan",
+        "English": "rambutan",
+        "Unknown": "rambustan",
+        "Malayalam": "rambut",
+        "German": "Rambutan",
+        "Spanish": "rambutao",
+        "Portuguese": "rambuteira",
+        "Chinese": "shao tzu",
+        "Tagalog": "usau"
+    },
+    "temp": {
+        "min": "21",
+        "max": "35"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

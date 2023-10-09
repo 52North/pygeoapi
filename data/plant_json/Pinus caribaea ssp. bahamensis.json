@@ -1,0 +1,12 @@
+{
+    "name": "Pinus caribaea ssp. bahamensis",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1500"
+    }
+}

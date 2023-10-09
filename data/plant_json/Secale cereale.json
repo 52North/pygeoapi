@@ -1,0 +1,25 @@
+{
+    "name": "Secale cereale",
+    "trivial": {
+        "Danish": "rug",
+        "Spanish": "centeno",
+        "English": "rye",
+        "Swedish": "r\u00e5g",
+        "Icelandic": "r\u00fagur",
+        "Dutch": "rogge",
+        "German": "saat-roggen",
+        "Norwegian": "rug",
+        "Finnish": "ruis",
+        "Italian": "segale comune",
+        "French": "seigle",
+        "Russian": "zyto"
+    },
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

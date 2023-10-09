@@ -1,0 +1,22 @@
+{
+    "name": "Phoenix dactylifera",
+    "trivial": {
+        "Arabic": "Nakl-el-Balah (Kharif)",
+        "English": "palm date",
+        "French": "palmier dattier",
+        "German": "Dattelpalme",
+        "Italian": "dattero",
+        "Unknown": "kajoor",
+        "Malay": "pokok korma",
+        "Spanish": "palma datilera",
+        "Hebrew": "tamar"
+    },
+    "temp": {
+        "min": "26",
+        "max": "45"
+    },
+    "precip": {
+        "min": "200",
+        "max": "300"
+    }
+}

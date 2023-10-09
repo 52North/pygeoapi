@@ -1,0 +1,14 @@
+{
+    "name": "Cariniaria pyriformis",
+    "trivial": {
+        "Unknown": "Jequitiba"
+    },
+    "temp": {
+        "min": "25",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3500"
+    }
+}

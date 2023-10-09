@@ -1,0 +1,15 @@
+{
+    "name": "Carludovica palmata",
+    "trivial": {
+        "Portuguese": "palmeira jipijapa",
+        "English": "toquilla palm"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Atriplex lentiformis",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "24"
+    },
+    "precip": {
+        "min": "200",
+        "max": "250"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Hierochloe odorata",
+    "trivial": {
+        "English": "vanilla grass"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "250",
+        "max": "700"
+    }
+}

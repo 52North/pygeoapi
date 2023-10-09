@@ -1,0 +1,14 @@
+{
+    "name": "Ventilago viminalis",
+    "trivial": {
+        "Unknown": "vine tree/eng"
+    },
+    "temp": {
+        "min": "22",
+        "max": "36"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

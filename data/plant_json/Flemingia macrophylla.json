@@ -1,0 +1,12 @@
+{
+    "name": "Flemingia macrophylla",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "2200"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus globulus ssp. maidenii",
+    "trivial": {
+        "English": "Tasmanian bluegum"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1500"
+    }
+}

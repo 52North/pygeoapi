@@ -1,0 +1,23 @@
+{
+    "name": "Saccharum officinarum",
+    "trivial": {
+        "Esperanto": "ca\u00f1a de az\u00facar",
+        "Portuguese": "cana de acucar",
+        "Italian": "canna da zucchero",
+        "Unknown": "tolo (Samoa, Tuvalu)",
+        "Hindi": "ganna",
+        "Amharic": "shenkora",
+        "English": "sugarcane",
+        "Afrikaans": "suikerriet",
+        "Tonga (Tonga Islands)": "to",
+        "German": "Zuckerrohr"
+    },
+    "temp": {
+        "min": "24",
+        "max": "37"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

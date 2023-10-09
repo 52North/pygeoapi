@@ -1,0 +1,16 @@
+{
+    "name": "Sorbus domestica",
+    "trivial": {
+        "English": "serviceberry",
+        "Portuguese": "sorveira brava",
+        "German": "speierling"
+    },
+    "temp": {
+        "min": "12",
+        "max": "25"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

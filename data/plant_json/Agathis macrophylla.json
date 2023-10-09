@@ -1,0 +1,14 @@
+{
+    "name": "Agathis macrophylla",
+    "trivial": {
+        "English": "kauri pine"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "4000",
+        "max": "5000"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Poa fendleriana",
+    "trivial": {
+        "English": "mutton grass"
+    },
+    "temp": {
+        "min": "13",
+        "max": "17"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

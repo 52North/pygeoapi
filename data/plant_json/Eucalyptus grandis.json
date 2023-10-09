@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus grandis",
+    "trivial": {
+        "Unknown": "rose gum"
+    },
+    "temp": {
+        "min": "24",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2500"
+    }
+}

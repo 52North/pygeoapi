@@ -1,0 +1,43 @@
+{
+    "name": "Thymus maroccanus",
+    "trivial": {
+        "Estonian": "t\u00fc\u00fcian",
+        "Chinese": "ai hao",
+        "Faroese": "awishan shirazi",
+        "Unknown": "timijan",
+        "Hungarian": "timi\u00e1n",
+        "Russian": "timjan",
+        "Romany": "cimbru",
+        "English": "rubbed thyme",
+        "Turkish": "dag kekigi",
+        "French": "thym",
+        "Icelandic": "timjan",
+        "Norwegian": "timian",
+        "Greek, Modern (since 1453)": "\u0398\u03bd\u03bc\u03ac\u03c1\u03b9",
+        "Dutch": "wintertijm",
+        "Hebrew": "timin",
+        "Slovak": "timijan",
+        "Czech": "tymian",
+        "German": "thymian",
+        "Arabic": "zeetra",
+        "Finnish": "timjami",
+        "Indonesian": "timi",
+        "Danish": "timi\u00e1n",
+        "Esperanto": "timi\u00e1no",
+        "Latin": "timi\u0101ns",
+        "Swedish": "tr\u00e4dg\u00e5rdstimjan",
+        "Portuguese": "tomilho",
+        "Albanian": "timus",
+        "Spanish": "tomillo",
+        "Polish": "tymianek wla\u015bciwy",
+        "Lithuanian": "\u010diobrelis"
+    },
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Cassia fistula",
+    "trivial": {
+        "Hindi": "dhanbohar",
+        "English": "Indian laburnum"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

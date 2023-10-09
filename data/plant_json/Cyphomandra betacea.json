@@ -1,0 +1,19 @@
+{
+    "name": "Cyphomandra betacea",
+    "trivial": {
+        "German": "Baumtomate",
+        "Spanish": "yuncatomate",
+        "French": "tomate d'arbre",
+        "English": "yellow tree tomato",
+        "Portuguese": "tomate franc\u00e9s",
+        "Creoles and Pidgins, English-based (Other)": "tomato frut"
+    },
+    "temp": {
+        "min": "16",
+        "max": "22"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "2600"
+    }
+}

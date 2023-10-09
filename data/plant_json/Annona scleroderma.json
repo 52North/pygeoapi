@@ -1,0 +1,16 @@
+{
+    "name": "Annona scleroderma",
+    "trivial": {
+        "Spanish": "anona del monte",
+        "Unknown": "chirimoya",
+        "English": "poshte"
+    },
+    "temp": {
+        "min": "23",
+        "max": "26"
+    },
+    "precip": {
+        "min": "3500",
+        "max": "4500"
+    }
+}

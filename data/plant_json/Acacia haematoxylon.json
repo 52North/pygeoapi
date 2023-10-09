@@ -1,0 +1,17 @@
+{
+    "name": "Acacia haematoxylon",
+    "trivial": {
+        "Afrikaans": "volstruiskameel",
+        "English": "grey camel thorn",
+        "Khoisan (Other)": "n!Haboom",
+        "Tswana": "mokholo"
+    },
+    "temp": {
+        "min": "18",
+        "max": "35"
+    },
+    "precip": {
+        "min": "150",
+        "max": "200"
+    }
+}

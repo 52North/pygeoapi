@@ -1,0 +1,14 @@
+{
+    "name": "Jessenia bataua",
+    "trivial": {
+        "Portuguese": "bataua"
+    },
+    "temp": {
+        "min": "21",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

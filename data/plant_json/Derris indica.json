@@ -1,0 +1,14 @@
+{
+    "name": "Derris indica",
+    "trivial": {
+        "English": "Pongame oil tree"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

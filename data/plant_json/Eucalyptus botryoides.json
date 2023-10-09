@@ -1,0 +1,15 @@
+{
+    "name": "Eucalyptus botryoides",
+    "trivial": {
+        "English": "swamp-mahogany",
+        "Portuguese": "eucalipto falso-mogno"
+    },
+    "temp": {
+        "min": "22",
+        "max": "29"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1300"
+    }
+}

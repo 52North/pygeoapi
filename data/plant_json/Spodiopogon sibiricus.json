@@ -1,0 +1,12 @@
+{
+    "name": "Spodiopogon sibiricus",
+    "trivial": {},
+    "temp": {
+        "min": "8",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

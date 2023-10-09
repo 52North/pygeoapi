@@ -1,0 +1,15 @@
+{
+    "name": "Sambucus canadensis",
+    "trivial": {
+        "English": "sweet elder",
+        "Portuguese": "sabugueiro do Canada'"
+    },
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

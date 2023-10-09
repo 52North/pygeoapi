@@ -1,0 +1,30 @@
+{
+    "name": "Persea americana",
+    "trivial": {
+        "Indonesian": "avokad",
+        "Spanish": "aguacate",
+        "Maori": "apoka (Cook I)",
+        "Malay": "buah mentega",
+        "Samoan": "aviota",
+        "English": "avocado",
+        "Tagalog": "avocado",
+        "French": "avocatier",
+        "Niuean": "avoka",
+        "Tonga (Tonga Islands)": "avoka",
+        "Khmer": "avokaa",
+        "German": "Avokado",
+        "Thai": "luk noei",
+        "Papuan-Australian (Other)": "bata",
+        "Vietnamese": "ie dau",
+        "Swahili": "parachichi",
+        "Fijian": "pea"
+    },
+    "temp": {
+        "min": "14",
+        "max": "40"
+    },
+    "precip": {
+        "min": "500",
+        "max": "2000"
+    }
+}

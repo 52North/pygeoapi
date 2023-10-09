@@ -1,0 +1,12 @@
+{
+    "name": "Coffea excelsa",
+    "trivial": {},
+    "temp": {
+        "min": "13",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2400"
+    }
+}

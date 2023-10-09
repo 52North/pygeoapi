@@ -1,0 +1,20 @@
+{
+    "name": "Tecoma stans",
+    "trivial": {
+        "Portuguese": "tronadora",
+        "French": "herbe de St. Nicholas",
+        "Cree": "zeb sennikola",
+        "Afrikaans": "geelklokkies",
+        "English": "yellow trumpet tree",
+        "Spanish": "sa\u00faco amarillo",
+        "Arabic": "tacoma"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

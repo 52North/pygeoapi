@@ -1,0 +1,17 @@
+{
+    "name": "Desmodium uncinatum",
+    "trivial": {
+        "Portuguese": "amor de velho comum",
+        "Spanish": "tr\u00e9bol espa\u00f1ol",
+        "French": "feuilles argent\u00e9es",
+        "English": "thick clover"
+    },
+    "temp": {
+        "min": "25",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1600"
+    }
+}

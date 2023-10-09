@@ -1,0 +1,12 @@
+{
+    "name": "Eugenia gustavioides",
+    "trivial": {},
+    "temp": {
+        "min": "28",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "3800"
+    }
+}

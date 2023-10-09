@@ -1,0 +1,12 @@
+{
+    "name": "Dipterocarpus gracilis",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

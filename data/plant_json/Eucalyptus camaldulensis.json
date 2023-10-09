@@ -1,0 +1,16 @@
+{
+    "name": "Eucalyptus camaldulensis",
+    "trivial": {
+        "English": "rostrato",
+        "Portuguese": "eucalipto rostrato",
+        "Unknown": "red river gum (Southern Provenances)"
+    },
+    "temp": {
+        "min": "12",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

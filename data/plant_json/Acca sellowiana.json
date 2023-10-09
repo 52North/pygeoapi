@@ -1,0 +1,18 @@
+{
+    "name": "Acca sellowiana",
+    "trivial": {
+        "Portuguese": "goiabeira serrana",
+        "German": "Brasilianische guave",
+        "English": "pineapple guava",
+        "French": "f\u00e9ijoa",
+        "Spanish": "guayabo del pa\u00eds"
+    },
+    "temp": {
+        "min": "18",
+        "max": "21"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1500"
+    }
+}

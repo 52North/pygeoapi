@@ -1,0 +1,14 @@
+{
+    "name": "Chrysopogon aciculatus",
+    "trivial": {
+        "Unknown": "seed grass"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1200"
+    }
+}

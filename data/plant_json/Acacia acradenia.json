@@ -1,0 +1,12 @@
+{
+    "name": "Acacia acradenia",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "34"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

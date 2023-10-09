@@ -1,0 +1,16 @@
+{
+    "name": "Vitex agnus-castus",
+    "trivial": {
+        "Latin": "Agni-casti fructus",
+        "Portuguese": "arvore da castidade",
+        "English": "sage tree"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "400",
+        "max": "900"
+    }
+}

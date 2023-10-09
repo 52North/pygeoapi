@@ -1,0 +1,22 @@
+{
+    "name": "Vitex doniana",
+    "trivial": {
+        "Akan": "Afetewa",
+        "English": "black plum",
+        "Hausa": "dinya",
+        "Fula": "galbihi",
+        "Swahili": "mfuu",
+        "Portuguese": "muxiloxilo",
+        "Yoruba": "oori-nla",
+        "Unknown": "Silanri (Ari)",
+        "Igbo": "ucha koro"
+    },
+    "temp": {
+        "min": "14",
+        "max": "28"
+    },
+    "precip": {
+        "min": "750",
+        "max": "2000"
+    }
+}

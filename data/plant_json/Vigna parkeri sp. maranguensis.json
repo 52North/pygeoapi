@@ -1,0 +1,12 @@
+{
+    "name": "Vigna parkeri sp. maranguensis",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "21"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

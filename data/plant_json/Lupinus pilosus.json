@@ -1,0 +1,12 @@
+{
+    "name": "Lupinus pilosus",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "450",
+        "max": "1000"
+    }
+}

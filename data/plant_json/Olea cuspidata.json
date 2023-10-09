@@ -1,0 +1,15 @@
+{
+    "name": "Olea cuspidata",
+    "trivial": {
+        "English": "indian olive",
+        "Portuguese": "zambujeiro da India"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "500",
+        "max": "650"
+    }
+}

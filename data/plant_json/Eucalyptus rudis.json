@@ -1,0 +1,15 @@
+{
+    "name": "Eucalyptus rudis",
+    "trivial": {
+        "English": "moitch",
+        "Portuguese": "eucalipto do deserto"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

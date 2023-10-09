@@ -1,0 +1,15 @@
+{
+    "name": "Ficus macrophylla",
+    "trivial": {
+        "English": "Moreton Bay fig",
+        "Portuguese": "figueira de Moreton"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1500"
+    }
+}

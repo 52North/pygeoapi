@@ -1,0 +1,14 @@
+{
+    "name": "Acacia difficilis",
+    "trivial": {
+        "Unknown": "River wattle"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "650",
+        "max": "1100"
+    }
+}

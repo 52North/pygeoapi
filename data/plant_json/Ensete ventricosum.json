@@ -1,0 +1,17 @@
+{
+    "name": "Ensete ventricosum",
+    "trivial": {
+        "English": "wild banana",
+        "French": "ens\u00e8te",
+        "Amharic": "enset",
+        "Afrikaans": "wildepiesang"
+    },
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1500"
+    }
+}

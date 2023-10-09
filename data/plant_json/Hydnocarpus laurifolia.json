@@ -1,0 +1,12 @@
+{
+    "name": "Hydnocarpus laurifolia",
+    "trivial": {},
+    "temp": {
+        "min": "30",
+        "max": "37"
+    },
+    "precip": {
+        "min": "3500",
+        "max": "6000"
+    }
+}

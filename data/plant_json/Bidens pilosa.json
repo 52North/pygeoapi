@@ -1,0 +1,27 @@
+{
+    "name": "Bidens pilosa",
+    "trivial": {
+        "Zulu": "uqadolo",
+        "Spanish": "amor seco",
+        "Fijian": "mbatimandramandra",
+        "English": "Spanish needles",
+        "French": "Sornet",
+        "Unknown": "tae puaka (Futuna)",
+        "Amharic": "chegogit",
+        "Portuguese": "pic\u00e3o preto",
+        "Tonga (Tonga Islands)": "fisi'uli",
+        "Afrikaans": "knapsakkerwel",
+        "Hawaiian": "nehe",
+        "Niuean": "kofetoga",
+        "Xhosa": "umhlabangubo",
+        "Chinese": "xian feng cao"
+    },
+    "temp": {
+        "min": "17",
+        "max": "32"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2500"
+    }
+}

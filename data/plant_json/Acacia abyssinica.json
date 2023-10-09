@@ -1,0 +1,12 @@
+{
+    "name": "Acacia abyssinica",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "450",
+        "max": "1200"
+    }
+}

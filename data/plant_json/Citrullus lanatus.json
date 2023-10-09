@@ -1,0 +1,27 @@
+{
+    "name": "Citrullus lanatus",
+    "trivial": {
+        "Italian": "cocomero",
+        "Afrikaans": "tsamma",
+        "Chinese": "xigua",
+        "Xhosa": "legapu",
+        "Portuguese": "melancia",
+        "Tonga (Tonga Islands)": "melani",
+        "Khoisan (Other)": "N!Ham",
+        "French": "past\u00e8que",
+        "Spanish": "sandia",
+        "Russian": "stolovyj arbuz",
+        "Hindi": "tarbuz",
+        "English": "wild watermelon",
+        "Danish": "vandmelon",
+        "German": "wassermelone"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

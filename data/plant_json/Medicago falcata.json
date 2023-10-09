@@ -1,0 +1,15 @@
+{
+    "name": "Medicago falcata",
+    "trivial": {
+        "Portuguese": "luzerna de sequeiro",
+        "English": "yellow alfalfa"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

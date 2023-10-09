@@ -1,0 +1,12 @@
+{
+    "name": "Lupinus cosentinii",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "400",
+        "max": "850"
+    }
+}

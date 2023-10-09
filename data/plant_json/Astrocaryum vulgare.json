@@ -1,0 +1,17 @@
+{
+    "name": "Astrocaryum vulgare",
+    "trivial": {
+        "Spanish": "tucuma",
+        "English": "tucum",
+        "French": "palmier tucuman",
+        "Portuguese": "tucum\u00e3 do Par\u00e1"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1800"
+    }
+}

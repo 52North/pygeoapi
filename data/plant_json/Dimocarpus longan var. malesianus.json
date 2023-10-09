@@ -1,0 +1,14 @@
+{
+    "name": "Dimocarpus longan var. malesianus",
+    "trivial": {
+        "English": "green longan"
+    },
+    "temp": {
+        "min": "25",
+        "max": "30"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "4000"
+    }
+}

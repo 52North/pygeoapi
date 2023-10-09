@@ -1,0 +1,32 @@
+{
+    "name": "Citrus sinensis",
+    "trivial": {
+        "German": "Apfelsine",
+        "Italian": "arancio",
+        "Unknown": "Swit muli",
+        "Amharic": "birtukan",
+        "Vietnamese": "cam",
+        "Malay": "limau manis",
+        "Indonesian": "jeruk manis",
+        "Tagalog": "kahel",
+        "Lao": "kiengz",
+        "Khmer": "krooch poosat",
+        "Portuguese": "laranja-pera",
+        "Thai": "somtra",
+        "Samoan": "moli 'aina",
+        "Tonga (Tonga Islands)": "moli kai",
+        "Spanish": "naranja",
+        "English": "Valencia orange",
+        "French": "oranger doux",
+        "Creoles and Pidgins (Other)": "sava orens",
+        "Burmese": "tung-chin-thi"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

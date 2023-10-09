@@ -1,0 +1,17 @@
+{
+    "name": "Commiphora africana",
+    "trivial": {
+        "English": "hairy corkwood",
+        "Arabic": "gafal",
+        "Portuguese": "bdelio",
+        "Swahili": "mturituri"
+    },
+    "temp": {
+        "min": "23",
+        "max": "33"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

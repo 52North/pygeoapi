@@ -1,0 +1,12 @@
+{
+    "name": "Pinus greggii",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "700",
+        "max": "750"
+    }
+}

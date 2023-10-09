@@ -1,0 +1,24 @@
+{
+    "name": "Malva moschata",
+    "trivial": {
+        "German": "moschus-malve",
+        "English": "white mallow",
+        "Portuguese": "malva moscada",
+        "Italian": "malva moscata",
+        "French": "mauve musqu\u00e9e",
+        "Danish": "moskus katost",
+        "Norwegian": "moskuskattost",
+        "Dutch": "muskuskaasjeskruid",
+        "Finnish": "myskimalva",
+        "Swedish": "myskmalva",
+        "Russian": "slaz pizmowy"
+    },
+    "temp": {
+        "min": "14",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Acacia caffra",
+    "trivial": {
+        "English": "water thorn",
+        "Afrikaans": "katdoring",
+        "Tswana": "morutlhware",
+        "Northern Sotho": "motholo",
+        "Sotho": "mositsana",
+        "Venda": "muvunda-mbado",
+        "Xhosa": "umtholo",
+        "Zulu": "umtholo"
+    },
+    "temp": {
+        "min": "15",
+        "max": "35"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

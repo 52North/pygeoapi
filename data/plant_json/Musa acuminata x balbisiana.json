@@ -1,0 +1,16 @@
+{
+    "name": "Musa acuminata x balbisiana",
+    "trivial": {
+        "German": "Mehlbanane",
+        "Unknown": "French Plantain Group",
+        "English": "plantain"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2400"
+    }
+}

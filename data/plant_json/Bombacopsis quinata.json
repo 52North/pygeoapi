@@ -1,0 +1,12 @@
+{
+    "name": "Bombacopsis quinata",
+    "trivial": {},
+    "temp": {
+        "min": "21",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1600"
+    }
+}

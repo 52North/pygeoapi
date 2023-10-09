@@ -1,0 +1,21 @@
+{
+    "name": "Syzygium cordatum",
+    "trivial": {
+        "Northern Sotho": "montlho",
+        "Tsonga": "muthwa",
+        "Venda": "mutu",
+        "Swazi": "umcozi",
+        "English": "waterwood",
+        "Zulu": "umdoni",
+        "Xhosa": "umswi",
+        "Afrikaans": "waterhout"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1200"
+    }
+}

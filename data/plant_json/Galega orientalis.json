@@ -1,0 +1,14 @@
+{
+    "name": "Galega orientalis",
+    "trivial": {
+        "English": "goat\u2019s rue"
+    },
+    "temp": {
+        "min": "10",
+        "max": "16"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

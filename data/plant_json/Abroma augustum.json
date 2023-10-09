@@ -1,0 +1,12 @@
+{
+    "name": "Abroma augustum",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "31"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

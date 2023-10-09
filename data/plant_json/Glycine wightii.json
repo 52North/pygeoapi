@@ -1,0 +1,14 @@
+{
+    "name": "Glycine wightii",
+    "trivial": {
+        "English": "perennial soybean"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1800"
+    }
+}

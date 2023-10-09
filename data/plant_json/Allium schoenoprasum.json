@@ -1,0 +1,26 @@
+{
+    "name": "Allium schoenoprasum",
+    "trivial": {
+        "Portuguese": "cebolinho",
+        "Arabic": "basal",
+        "Dutch": "bieslook",
+        "Spanish": "cebolleta",
+        "English": "chives",
+        "French": "ciboulette",
+        "Italian": "cipollina",
+        "Unknown": "ezo-negi",
+        "Swedish": "gr\u00e4sl\u00f6k",
+        "Chinese": "hsia-ye-ts'ung",
+        "Russian": "luk-rezanyets",
+        "Danish": "purl\u00f8g",
+        "German": "schnittlauch"
+    },
+    "temp": {
+        "min": "10",
+        "max": "20"
+    },
+    "precip": {
+        "min": "450",
+        "max": "1600"
+    }
+}

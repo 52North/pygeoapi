@@ -1,0 +1,20 @@
+{
+    "name": "Hordeum vulgare",
+    "trivial": {
+        "English": "barley",
+        "Spanish": "cebada",
+        "Portuguese": "cevada",
+        "Chinese": "damai",
+        "Amharic": "gebs",
+        "German": "Gerste",
+        "French": "orge"
+    },
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

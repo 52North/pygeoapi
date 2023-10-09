@@ -1,0 +1,20 @@
+{
+    "name": "Daucus carota",
+    "trivial": {
+        "English": "wild carrot",
+        "Portuguese": "cenoura brava",
+        "German": "Mohrruebe",
+        "Danish": "gulerod",
+        "Norwegian": "gulrot",
+        "Swedish": "morot",
+        "Finnish": "porkkana"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Eucalyptus tereticornis",
+    "trivial": {
+        "Portuguese": "eucalipto prateado",
+        "English": "stinking gum",
+        "Unknown": "forest red gum"
+    },
+    "temp": {
+        "min": "18",
+        "max": "38"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

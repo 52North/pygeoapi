@@ -1,0 +1,12 @@
+{
+    "name": "Pinus ayachuite var. Br.",
+    "trivial": {},
+    "temp": {
+        "min": "10",
+        "max": "20"
+    },
+    "precip": {
+        "min": "850",
+        "max": "950"
+    }
+}

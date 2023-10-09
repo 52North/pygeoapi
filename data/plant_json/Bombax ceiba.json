@@ -1,0 +1,12 @@
+{
+    "name": "Bombax ceiba",
+    "trivial": {},
+    "temp": {
+        "min": "28",
+        "max": "42"
+    },
+    "precip": {
+        "min": "750",
+        "max": "4000"
+    }
+}

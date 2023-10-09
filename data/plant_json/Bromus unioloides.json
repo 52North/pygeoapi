@@ -1,0 +1,12 @@
+{
+    "name": "Bromus unioloides",
+    "trivial": {},
+    "temp": {
+        "min": "14",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

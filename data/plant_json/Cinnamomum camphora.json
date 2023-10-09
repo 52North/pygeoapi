@@ -1,0 +1,30 @@
+{
+    "name": "Cinnamomum camphora",
+    "trivial": {
+        "Italian": "lauro canforo",
+        "Spanish": "arbol del alcanfor",
+        "Portuguese": "\u00e1rvore-da-camphora",
+        "German": "kampferbaum",
+        "Unknown": "camphor",
+        "English": "Japanese camphor",
+        "French": "camphrier",
+        "Urdu": "patckafur",
+        "Russian": "korihnik kamfornii",
+        "Nepali": "kapuur",
+        "Hindi": "pacchakarpuram",
+        "Kannada": "karpura",
+        "Malayalam": "karpuram",
+        "Tamil": "karpuram",
+        "Telugu": "karpuramu",
+        "Japanese": "kuso no ki",
+        "Chinese": "zhang shu"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1500"
+    }
+}

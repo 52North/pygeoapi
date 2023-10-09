@@ -1,0 +1,23 @@
+{
+    "name": "Manihot esculenta",
+    "trivial": {
+        "Portuguese": "mandioca",
+        "English": "tapioca plant",
+        "Dutch": "cassave",
+        "Spanish": "yuca",
+        "French": "manioc",
+        "German": "maniok",
+        "Chinese": "mushu",
+        "Lingala": "pondu",
+        "Kongo": "saka-saka",
+        "Unknown": "tapioka"
+    },
+    "temp": {
+        "min": "20",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

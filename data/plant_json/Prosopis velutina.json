@@ -1,0 +1,14 @@
+{
+    "name": "Prosopis velutina",
+    "trivial": {
+        "English": "velvet mesquite"
+    },
+    "temp": {
+        "min": "23",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

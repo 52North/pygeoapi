@@ -1,0 +1,27 @@
+{
+    "name": "Ocimum basilicum",
+    "trivial": {
+        "Latin": "Basilici herba",
+        "Spanish": "albahaca",
+        "English": "sweet basil",
+        "French": "basilic",
+        "Italian": "basilico",
+        "Dutch": "basilicum",
+        "German": "K\u00f6nigskraut",
+        "Danish": "basilikum",
+        "Swedish": "basilkort",
+        "Russian": "bazilik",
+        "Chinese": "lo-le",
+        "Japanese": "maboki",
+        "Portuguese": "manjericao",
+        "Arabic": "raihan"
+    },
+    "temp": {
+        "min": "18",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1600"
+    }
+}

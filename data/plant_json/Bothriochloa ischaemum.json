@@ -1,0 +1,12 @@
+{
+    "name": "Bothriochloa ischaemum",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1000"
+    }
+}

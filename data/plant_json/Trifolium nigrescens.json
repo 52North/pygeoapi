@@ -1,0 +1,17 @@
+{
+    "name": "Trifolium nigrescens",
+    "trivial": {
+        "English": "ball clover",
+        "German": "schwarzwerdender klee",
+        "French": "trefle noircissant",
+        "Italian": "trifoglio annerente"
+    },
+    "temp": {
+        "min": "16",
+        "max": "22"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1200"
+    }
+}

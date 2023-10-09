@@ -1,0 +1,15 @@
+{
+    "name": "Asystasia gangetica",
+    "trivial": {
+        "English": "creeping foxglove",
+        "Zulu": "isihobo"
+    },
+    "temp": {
+        "min": "23",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

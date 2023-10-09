@@ -1,0 +1,14 @@
+{
+    "name": "Trifolium steudneri",
+    "trivial": {
+        "English": "Steudner's clover"
+    },
+    "temp": {
+        "min": "14",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1800"
+    }
+}

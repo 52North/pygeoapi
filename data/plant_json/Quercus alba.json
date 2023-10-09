@@ -1,0 +1,16 @@
+{
+    "name": "Quercus alba",
+    "trivial": {
+        "Portuguese": "carvalho branco",
+        "French": "chene du Quebec",
+        "English": "white oak"
+    },
+    "temp": {
+        "min": "12",
+        "max": "28"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

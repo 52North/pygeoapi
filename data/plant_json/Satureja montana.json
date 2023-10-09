@@ -1,0 +1,12 @@
+{
+    "name": "Satureja montana",
+    "trivial": {},
+    "temp": {
+        "min": "13",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1400"
+    }
+}

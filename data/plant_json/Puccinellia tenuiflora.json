@@ -1,0 +1,12 @@
+{
+    "name": "Puccinellia tenuiflora",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "26"
+    },
+    "precip": {
+        "min": "300",
+        "max": "500"
+    }
+}

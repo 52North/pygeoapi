@@ -1,0 +1,12 @@
+{
+    "name": "Calophyllum elatum",
+    "trivial": {},
+    "temp": {
+        "min": "28",
+        "max": "33"
+    },
+    "precip": {
+        "min": "4000",
+        "max": "6000"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Aronia alnifolia",
+    "trivial": {
+        "Unknown": "sgan gam (Gitxsan)",
+        "English": "saskatoon serviceberry",
+        "Cree": "saskatoon"
+    },
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "650",
+        "max": "1100"
+    }
+}

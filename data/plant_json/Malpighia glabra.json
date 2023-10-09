@@ -1,0 +1,17 @@
+{
+    "name": "Malpighia glabra",
+    "trivial": {
+        "Portuguese": "semeruco",
+        "English": "West Indian cherry",
+        "Spanish": "Escobillo",
+        "French": "cerisie"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "2000"
+    }
+}

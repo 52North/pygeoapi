@@ -1,0 +1,25 @@
+{
+    "name": "Cichorium intybus",
+    "trivial": {
+        "Spanish": "achicoria",
+        "English": "wild succory",
+        "French": "Herbstchicor\u00e9e",
+        "German": "Zichorie",
+        "Portuguese": "chicoria",
+        "Latin": "Cichorii radix",
+        "Swedish": "v\u00e4gv\u00e5rda",
+        "Danish": "cikorie",
+        "Italian": "Pan di Zucchero",
+        "Afrikaans": "sigorei",
+        "Norwegian": "sikori",
+        "Finnish": "sikuri"
+    },
+    "temp": {
+        "min": "10",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

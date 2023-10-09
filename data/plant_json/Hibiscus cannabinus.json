@@ -1,0 +1,23 @@
+{
+    "name": "Hibiscus cannabinus",
+    "trivial": {
+        "Chinese": "ambari",
+        "Portuguese": "umbaru",
+        "English": "mesta hemp",
+        "Unknown": "rama (West Africa)",
+        "Hindi": "deccan hemp",
+        "Indonesian": "Java jute",
+        "Bengali": "mesta",
+        "Tamil": "palungi",
+        "Afrikaans": "stokroos",
+        "Egyptian": "til"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "2000"
+    }
+}

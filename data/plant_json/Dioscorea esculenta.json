@@ -1,0 +1,17 @@
+{
+    "name": "Dioscorea esculenta",
+    "trivial": {
+        "Unknown": "ufilei",
+        "English": "potato yam",
+        "French": "igname",
+        "Portuguese": "inhame taioba"
+    },
+    "temp": {
+        "min": "28",
+        "max": "32"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2000"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Hippophae salicifolia",
+    "trivial": {},
+    "temp": {
+        "min": "8",
+        "max": "18"
+    },
+    "precip": {
+        "min": "300",
+        "max": "600"
+    }
+}

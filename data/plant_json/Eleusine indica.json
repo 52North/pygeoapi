@@ -1,0 +1,16 @@
+{
+    "name": "Eleusine indica",
+    "trivial": {
+        "Bengali": "chapra",
+        "English": "goose foot",
+        "French": "te uteute"
+    },
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1200"
+    }
+}

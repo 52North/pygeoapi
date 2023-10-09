@@ -1,0 +1,15 @@
+{
+    "name": "Acer caesium",
+    "trivial": {
+        "Portuguese": "bordo da India",
+        "English": "Indian maple"
+    },
+    "temp": {
+        "min": "15",
+        "max": "21"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1800"
+    }
+}

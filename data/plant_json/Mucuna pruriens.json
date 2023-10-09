@@ -1,0 +1,26 @@
+{
+    "name": "Mucuna pruriens",
+    "trivial": {
+        "Urdu": "alkushi",
+        "Sanskrit": "atmagupta",
+        "English": "velvetbean",
+        "Telugu": "dulagondi",
+        "Unknown": "nipay",
+        "German": "Juckbohne",
+        "Dutch": "jukboontje",
+        "Hindi": "kavach",
+        "Spanish": "picapica",
+        "Kannada": "nasugunni",
+        "Portuguese": "pica pica",
+        "French": "pois-gratter",
+        "Tamil": "punaikkali"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

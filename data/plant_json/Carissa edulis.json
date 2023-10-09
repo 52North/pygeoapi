@@ -1,0 +1,16 @@
+{
+    "name": "Carissa edulis",
+    "trivial": {
+        "Somali": "adishawel",
+        "Unknown": "akamba (Bena)",
+        "Masai": "olamuriaki"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "9000",
+        "max": "1300"
+    }
+}

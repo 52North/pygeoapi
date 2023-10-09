@@ -1,0 +1,12 @@
+{
+    "name": "Acacia laeta",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "300",
+        "max": "650"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Acacia aulacocarpa",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1200"
+    }
+}

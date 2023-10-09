@@ -1,0 +1,14 @@
+{
+    "name": "Dichanthium caricosum",
+    "trivial": {
+        "Unknown": "Nadi blue grass"
+    },
+    "temp": {
+        "min": "32",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

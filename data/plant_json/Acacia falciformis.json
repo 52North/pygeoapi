@@ -1,0 +1,12 @@
+{
+    "name": "Acacia falciformis",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

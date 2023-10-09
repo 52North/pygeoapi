@@ -1,0 +1,14 @@
+{
+    "name": "Aster cordifolius var. cordifolius",
+    "trivial": {
+        "English": "common blue wood aster"
+    },
+    "temp": {
+        "min": "12",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

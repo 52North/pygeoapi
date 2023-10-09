@@ -1,0 +1,12 @@
+{
+    "name": "Acacia oraria",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

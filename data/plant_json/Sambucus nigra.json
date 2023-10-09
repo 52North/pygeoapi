@@ -1,0 +1,20 @@
+{
+    "name": "Sambucus nigra",
+    "trivial": {
+        "English": "European elder",
+        "German": "schwarzer Holunder",
+        "Danish": "hyldeb\u00e6r",
+        "Portuguese": "sabugueiro da Europa",
+        "Latin": "Sambuci herba",
+        "Italian": "sambuco",
+        "French": "sureau"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "500",
+        "max": "12000"
+    }
+}

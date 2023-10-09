@@ -1,0 +1,16 @@
+{
+    "name": "Eurycoma longifolia",
+    "trivial": {
+        "Indonesian": "tungke ali",
+        "Malayalam": "tongkat baginda",
+        "Thai": "yik mai thueng"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

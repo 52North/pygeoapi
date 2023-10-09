@@ -1,0 +1,15 @@
+{
+    "name": "Eucalyptus deglupta",
+    "trivial": {
+        "English": "Rainbow Gum",
+        "Indonesian": "kamarere"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

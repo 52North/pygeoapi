@@ -1,0 +1,14 @@
+{
+    "name": "Terminalia calamansanai",
+    "trivial": {
+        "Unknown": "sualisualo"
+    },
+    "temp": {
+        "min": "28",
+        "max": "34"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "4000"
+    }
+}

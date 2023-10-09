@@ -1,0 +1,16 @@
+{
+    "name": "Alloteropsis semialata",
+    "trivial": {
+        "English": "cockatoo grass",
+        "Afrikaans": "tweevingergras",
+        "Zulu": "isi quinti"
+    },
+    "temp": {
+        "min": "14",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1600"
+    }
+}

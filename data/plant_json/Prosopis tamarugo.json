@@ -1,0 +1,12 @@
+{
+    "name": "Prosopis tamarugo",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "150",
+        "max": "250"
+    }
+}

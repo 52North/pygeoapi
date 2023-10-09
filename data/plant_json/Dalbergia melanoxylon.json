@@ -1,0 +1,15 @@
+{
+    "name": "Dalbergia melanoxylon",
+    "trivial": {
+        "English": "Senegal ebony",
+        "Portuguese": "pau-preto de Africa"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1200"
+    }
+}

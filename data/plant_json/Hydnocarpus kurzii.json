@@ -1,0 +1,12 @@
+{
+    "name": "Hydnocarpus kurzii",
+    "trivial": {},
+    "temp": {
+        "min": "28",
+        "max": "34"
+    },
+    "precip": {
+        "min": "3500",
+        "max": "6500"
+    }
+}

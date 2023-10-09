@@ -1,0 +1,24 @@
+{
+    "name": "Punica granatum",
+    "trivial": {
+        "English": "seeded apple",
+        "Unknown": "melograno",
+        "Dutch": "granaatappel",
+        "Spanish": "granado",
+        "German": "Granatapfel",
+        "French": "grenadier",
+        "Greek, Modern (since 1453)": "\u03c1\u03cc\u03b4\u03b9",
+        "Portuguese": "rom\u00e3",
+        "Hebrew": "rimm\u00f4n",
+        "Kabyle": "rrumman",
+        "Arabic": "rumm\u00e2n"
+    },
+    "temp": {
+        "min": "23",
+        "max": "32"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1200"
+    }
+}

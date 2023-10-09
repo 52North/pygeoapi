@@ -1,0 +1,12 @@
+{
+    "name": "Cassia senna",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1300"
+    }
+}

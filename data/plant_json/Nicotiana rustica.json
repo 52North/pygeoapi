@@ -1,0 +1,15 @@
+{
+    "name": "Nicotiana rustica",
+    "trivial": {
+        "English": "Syrian tobacco",
+        "Portuguese": "tabaco Azteca"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "700"
+    }
+}

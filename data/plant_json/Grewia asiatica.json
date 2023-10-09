@@ -1,0 +1,19 @@
+{
+    "name": "Grewia asiatica",
+    "trivial": {
+        "Tagalog": "bariuan",
+        "Vietnamese": "c\u00f2-ke-\u00e0",
+        "Thai": "ya-khithut",
+        "Lao": "nhaab",
+        "English": "phalsa",
+        "Khmer": "pophli\u00eb"
+    },
+    "temp": {
+        "min": "23",
+        "max": "34"
+    },
+    "precip": {
+        "min": "2300",
+        "max": "2900"
+    }
+}

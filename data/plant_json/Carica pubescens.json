@@ -1,0 +1,17 @@
+{
+    "name": "Carica pubescens",
+    "trivial": {
+        "Spanish": "papayuela",
+        "Indonesian": "gedang memedi",
+        "Unknown": "papata de monte",
+        "English": "mountain papaya"
+    },
+    "temp": {
+        "min": "17",
+        "max": "22"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1700"
+    }
+}

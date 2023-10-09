@@ -1,0 +1,15 @@
+{
+    "name": "Eucalyptus paniculata",
+    "trivial": {
+        "Portuguese": "eucalipto vermelho",
+        "English": "gray ironbark"
+    },
+    "temp": {
+        "min": "23",
+        "max": "31"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1500"
+    }
+}

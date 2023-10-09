@@ -1,0 +1,12 @@
+{
+    "name": "Pterocarpus lucens",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "32"
+    },
+    "precip": {
+        "min": "400",
+        "max": "700"
+    }
+}

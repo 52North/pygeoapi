@@ -1,0 +1,14 @@
+{
+    "name": "Brassica rapa Pak Choi",
+    "trivial": {
+        "English": "turnip"
+    },
+    "temp": {
+        "min": "20",
+        "max": "25"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1400"
+    }
+}

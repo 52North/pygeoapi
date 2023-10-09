@@ -1,0 +1,24 @@
+{
+    "name": "Canna edulis",
+    "trivial": {
+        "Spanish": "tolum\u00e1n",
+        "English": "Queensland arrowroot",
+        "Quechua": "achira",
+        "Burmese": "ubi gereda",
+        "Portuguese": "mer\u00f9",
+        "French": "tous-les-mois",
+        "Vietnamese": "dong rieng",
+        "Indonesian": "seneetra",
+        "Malay": "kenyong",
+        "Thai": "sakhu chin",
+        "Tagalog": "zembu"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1700"
+    }
+}

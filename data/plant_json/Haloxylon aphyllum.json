@@ -1,0 +1,12 @@
+{
+    "name": "Haloxylon aphyllum",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "40"
+    },
+    "precip": {
+        "min": "200",
+        "max": "300"
+    }
+}

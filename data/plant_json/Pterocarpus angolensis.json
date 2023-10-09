@@ -1,0 +1,24 @@
+{
+    "name": "Pterocarpus angolensis",
+    "trivial": {
+        "English": "wild teak",
+        "Afrikaans": "wilde-kiaat",
+        "Sotho": "mmilo",
+        "Unknown": "mutete",
+        "Swahili": "mninga",
+        "Tswana": "mvhangazi",
+        "Northern Sotho": "mor\u00f4t\u00f4",
+        "Tsonga": "mvhangazi",
+        "Venda": "mutondo",
+        "Zulu": "umVangazi",
+        "Swazi": "umWangati"
+    },
+    "temp": {
+        "min": "15",
+        "max": "32"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

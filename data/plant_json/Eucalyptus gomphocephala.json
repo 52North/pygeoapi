@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus gomphocephala",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

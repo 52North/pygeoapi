@@ -1,0 +1,22 @@
+{
+    "name": "Allium ampeloprasum",
+    "trivial": {
+        "German": "Winterlauch",
+        "Spanish": "puerro",
+        "Portuguese": "alho porro bravo",
+        "English": "wild leek",
+        "Unknown": "liiki",
+        "French": "poireau",
+        "Danish": "porre",
+        "Dutch": "prei",
+        "Turkish": "p\u0131rasa"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1000"
+    }
+}

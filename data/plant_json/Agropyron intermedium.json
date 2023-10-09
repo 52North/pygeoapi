@@ -1,0 +1,14 @@
+{
+    "name": "Agropyron intermedium",
+    "trivial": {
+        "English": "reed wheatgrass"
+    },
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Amaranthus sp.",
+    "trivial": {
+        "English": "amaranth",
+        "Urdu": "chulai",
+        "German": "Fuchsschw\u00e4nze",
+        "Bengali": "kata natay"
+    },
+    "temp": {
+        "min": "19",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1400"
+    }
+}

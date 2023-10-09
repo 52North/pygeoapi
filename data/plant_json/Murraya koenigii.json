@@ -1,0 +1,42 @@
+{
+    "name": "Murraya koenigii",
+    "trivial": {
+        "Thai": "bai karee",
+        "Bengali": "barsunga",
+        "Oriya": "basango",
+        "Tagalog": "bignay",
+        "Swahili": "mchuzi",
+        "Panjabi": "bowala",
+        "Hindi": "meetha neem",
+        "French": "feuilles de curry",
+        "Unknown": "chalcas koenigii",
+        "English": "nim leaves",
+        "Hungarian": "curry levelek",
+        "German": "Currybl\u00e4tter",
+        "Indonesian": "daun kari",
+        "Malay": "karupillam",
+        "Italian": "fogli di Cari",
+        "Sanskrit": "suravi",
+        "Spanish": "hoja",
+        "Sinhalese": "karapincha",
+        "Malayalam": "kareapela",
+        "Telugu": "karivepaku",
+        "Marathi": "karipat",
+        "Kannada": "karibevu",
+        "Icelandic": "karr\u00edlauf",
+        "Danish": "karry blad",
+        "Tamil": "karuveppilai",
+        "Dutch": "kerriebladeren",
+        "Lao": "khi be",
+        "Gujarati": "mitho limdo",
+        "Burmese": "pyim daw thein"
+    },
+    "temp": {
+        "min": "27",
+        "max": "41"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "1800"
+    }
+}

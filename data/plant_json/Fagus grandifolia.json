@@ -1,0 +1,15 @@
+{
+    "name": "Fagus grandifolia",
+    "trivial": {
+        "English": "ridge beech",
+        "Portuguese": "faia americana"
+    },
+    "temp": {
+        "min": "13",
+        "max": "22"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1100"
+    }
+}

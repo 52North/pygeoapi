@@ -1,0 +1,16 @@
+{
+    "name": "Populus euphratica",
+    "trivial": {
+        "English": "Hodung tree",
+        "Portuguese": "choupo da India",
+        "French": "peuplier des Indes"
+    },
+    "temp": {
+        "min": "20",
+        "max": "40"
+    },
+    "precip": {
+        "min": "200",
+        "max": "300"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Dacrydium franklinii",
+    "trivial": {
+        "Portuguese": "dacridio",
+        "English": "Macquarie pine"
+    },
+    "temp": {
+        "min": "14",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "1800"
+    }
+}

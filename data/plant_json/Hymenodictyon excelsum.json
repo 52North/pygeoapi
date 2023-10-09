@@ -1,0 +1,14 @@
+{
+    "name": "Hymenodictyon excelsum",
+    "trivial": {
+        "Hindi": "Bhorsal"
+    },
+    "temp": {
+        "min": "22",
+        "max": "33"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

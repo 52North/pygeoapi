@@ -1,0 +1,32 @@
+{
+    "name": "Adenanthera pavonina",
+    "trivial": {
+        "English": "zumbic tree",
+        "Portuguese": "tento carolina",
+        "Unknown": "Vaivai Ni Vavalagired",
+        "French": "R\u2019glisse",
+        "Spanish": "peron\u00edas",
+        "Khmer": "chan\u2019tr\u00e8i",
+        "Chamorro": "kulalis (Guam)",
+        "Indonesian": "segawe sabrang",
+        "Samoan": "lopa",
+        "Lao": "lam",
+        "Creoles and Pidgins (Other)": "reglisse",
+        "Fijian": "vaivainivavalangi (Fiji)",
+        "Tonga (Tonga Islands)": "lopa",
+        "Thai": "ma hok daeng",
+        "Burmese": "mai-chek",
+        "Tagalog": "malatinglin",
+        "Hindi": "raktakambal",
+        "Malay": "saga tumpul",
+        "Palauan": "telentundalel (Palau)"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "5000"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus ochrophloia",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "37"
+    },
+    "precip": {
+        "min": "250",
+        "max": "600"
+    }
+}

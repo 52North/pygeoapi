@@ -1,0 +1,15 @@
+{
+    "name": "Phragmites karka",
+    "trivial": {
+        "English": "South Asian Khagra reed",
+        "Hindi": "Nulanara"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3000"
+    }
+}

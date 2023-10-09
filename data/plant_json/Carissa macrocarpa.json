@@ -1,0 +1,17 @@
+{
+    "name": "Carissa macrocarpa",
+    "trivial": {
+        "English": "Natal plum",
+        "Afrikaans": "grootnoemnoem",
+        "Xhosa": "umThungulu",
+        "Zulu": "umThungulu"
+    },
+    "temp": {
+        "min": "23",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

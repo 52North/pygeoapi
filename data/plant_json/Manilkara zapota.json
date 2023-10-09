@@ -1,0 +1,25 @@
+{
+    "name": "Manilkara zapota",
+    "trivial": {
+        "English": "sapodilla plum",
+        "Tagalog": "chico",
+        "Malay": "ciku",
+        "Sundanese": "ciku",
+        "Vietnamese": "xab\u00f4ch\u00ea",
+        "Lao": "lamud",
+        "Thai": "lamut-farang",
+        "Khmer": "lomut",
+        "Portuguese": "sapotizeiro",
+        "French": "sapotillier",
+        "Javanese": "sawo londo",
+        "Indonesian": "sawo manila"
+    },
+    "temp": {
+        "min": "20",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

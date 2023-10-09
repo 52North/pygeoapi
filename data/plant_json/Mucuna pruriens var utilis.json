@@ -1,0 +1,27 @@
+{
+    "name": "Mucuna pruriens var utilis",
+    "trivial": {
+        "Urdu": "alkushi",
+        "Hindi": "makhmali sem",
+        "Sanskrit": "atmagupta",
+        "English": "velvet bean",
+        "Thai": "cigu",
+        "French": "pois mascate",
+        "Telugu": "dulagondi",
+        "Afrikaans": "fluweelboontjie",
+        "Spanish": "poroto aterciopelado (Arg.)",
+        "Nepali": "kaocho",
+        "Kannada": "nasugunni",
+        "Tamil": "punaikkali",
+        "Italian": "stizolobia",
+        "Malagasy": "taingilotra"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1500"
+    }
+}

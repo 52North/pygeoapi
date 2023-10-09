@@ -1,0 +1,14 @@
+{
+    "name": "Sansevieria guineensis",
+    "trivial": {
+        "English": "African bowstring hemp"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1400"
+    }
+}

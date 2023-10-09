@@ -1,0 +1,12 @@
+{
+    "name": "Callitris columellaris",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

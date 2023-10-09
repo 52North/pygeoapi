@@ -1,0 +1,16 @@
+{
+    "name": "Khaya senegalensis",
+    "trivial": {
+        "English": "Senegal mahogany",
+        "Mandingo": "Jalo (Gambia)",
+        "Portuguese": "mogno africano"
+    },
+    "temp": {
+        "min": "29",
+        "max": "38"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1300"
+    }
+}

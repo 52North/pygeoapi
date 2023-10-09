@@ -1,0 +1,12 @@
+{
+    "name": "Carallia lucida",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

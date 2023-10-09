@@ -1,0 +1,16 @@
+{
+    "name": "Ribes nigrum",
+    "trivial": {
+        "English": "black currant",
+        "Latin": "Ribis nigri fructus",
+        "German": "schwarze Johannisbeere"
+    },
+    "temp": {
+        "min": "17",
+        "max": "25"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Cytisus proliferus",
+    "trivial": {
+        "English": "tree lucerne"
+    },
+    "temp": {
+        "min": "18",
+        "max": "23"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

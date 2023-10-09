@@ -1,0 +1,12 @@
+{
+    "name": "Atherosperma moschatum",
+    "trivial": {},
+    "temp": {
+        "min": "14",
+        "max": "20"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1700"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Dipterocarpus costatus",
+    "trivial": {
+        "English": "dau"
+    },
+    "temp": {
+        "min": "21",
+        "max": "31"
+    },
+    "precip": {
+        "min": "2800",
+        "max": "3500"
+    }
+}

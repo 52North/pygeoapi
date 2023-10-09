@@ -1,0 +1,12 @@
+{
+    "name": "Quercus lanuginosa",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "2500"
+    }
+}

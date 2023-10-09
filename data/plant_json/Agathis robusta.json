@@ -1,0 +1,14 @@
+{
+    "name": "Agathis robusta",
+    "trivial": {
+        "Unknown": "South Queensland kauri"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

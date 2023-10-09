@@ -1,0 +1,12 @@
+{
+    "name": "Pinus hartwegii",
+    "trivial": {},
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1400"
+    }
+}

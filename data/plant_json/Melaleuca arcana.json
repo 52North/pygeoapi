@@ -1,0 +1,12 @@
+{
+    "name": "Melaleuca arcana",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1600",
+        "max": "1900"
+    }
+}

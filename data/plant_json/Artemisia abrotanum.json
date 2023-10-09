@@ -1,0 +1,15 @@
+{
+    "name": "Artemisia abrotanum",
+    "trivial": {
+        "Portuguese": "flor de Diana",
+        "English": "southernwood"
+    },
+    "temp": {
+        "min": "11",
+        "max": "22"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

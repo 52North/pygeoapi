@@ -1,0 +1,12 @@
+{
+    "name": "Acacia jensenii",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "30"
+    },
+    "precip": {
+        "min": "300",
+        "max": "400"
+    }
+}

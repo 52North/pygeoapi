@@ -1,0 +1,26 @@
+{
+    "name": "Capsicum annuum",
+    "trivial": {
+        "German": "Pfefferoni",
+        "English": "sweet pepper",
+        "Arabic": "filfil ahmar",
+        "Chinese": "lajiao",
+        "Danish": "paprika",
+        "Italian": "peperone",
+        "Portuguese": "pimentao",
+        "Spanish": "pimenton",
+        "French": "poivre de Guinee",
+        "Unknown": "polo ula",
+        "Dutch": "spaanse peper",
+        "Swedish": "spansk peppar",
+        "Japanese": "togarashi"
+    },
+    "temp": {
+        "min": "17",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1250"
+    }
+}

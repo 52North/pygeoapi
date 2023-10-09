@@ -1,0 +1,19 @@
+{
+    "name": "Heteropogon contortus",
+    "trivial": {
+        "Afrikaans": "swartangel",
+        "Zulu": "isitupe",
+        "Hindi": "kumeria",
+        "Tswana": "makurwane",
+        "Sotho": "selokana",
+        "English": "tanglehead"
+    },
+    "temp": {
+        "min": "28",
+        "max": "34"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1500"
+    }
+}

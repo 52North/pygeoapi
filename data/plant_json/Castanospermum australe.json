@@ -1,0 +1,14 @@
+{
+    "name": "Castanospermum australe",
+    "trivial": {
+        "Unknown": "Moreton Bay Chestnut"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1600",
+        "max": "3200"
+    }
+}

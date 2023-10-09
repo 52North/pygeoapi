@@ -1,0 +1,20 @@
+{
+    "name": "Acokanthera schimperi",
+    "trivial": {
+        "English": "arrow-poison plant",
+        "Unknown": "olmorijoi (Maa)",
+        "Nilo-Saharan (Other)": "keliot",
+        "Kamba": "kivai",
+        "Somali": "marid",
+        "Amharic": "merez",
+        "Kikuyu": "muricu"
+    },
+    "temp": {
+        "min": "17",
+        "max": "23"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

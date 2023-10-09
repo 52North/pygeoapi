@@ -1,0 +1,29 @@
+{
+    "name": "Acacia nilotica",
+    "trivial": {
+        "French": "gommier rouge",
+        "Italian": "acacia d'Egitto",
+        "Spanish": "goma ar\u00e1bica",
+        "Unknown": "Yugmakantaka (Sanskrit)",
+        "German": "gummi- Akazie",
+        "English": "thorn",
+        "Arabic": "sant",
+        "Bengali": "babla (Bangladesh)",
+        "Hindi": "kikar (India)",
+        "Portuguese": "espinho preto (Cape Verde)",
+        "Amharic": "fulissa (Ethiopia)",
+        "Somali": "tuwer",
+        "Tamil": "karu-velam",
+        "Afrikaans": "stinkpeul",
+        "Swahili": "mgunga",
+        "Masai": "ol'erbat"
+    },
+    "temp": {
+        "min": "19",
+        "max": "34"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Annona diversifolia",
+    "trivial": {
+        "Spanish": "anona blanca",
+        "English": "ilama",
+        "Unknown": "papausa"
+    },
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1400"
+    }
+}

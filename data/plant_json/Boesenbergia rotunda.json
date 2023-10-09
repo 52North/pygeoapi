@@ -1,0 +1,16 @@
+{
+    "name": "Boesenbergia rotunda",
+    "trivial": {
+        "Thai": "wan phra athit",
+        "Karen": "poh so roh",
+        "Indonesian": "temu kunci"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "3000"
+    }
+}

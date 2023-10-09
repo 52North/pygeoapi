@@ -1,0 +1,14 @@
+{
+    "name": "Vigna unguiculata ssp. unguiculata",
+    "trivial": {
+        "English": "southern pea"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1500"
+    }
+}

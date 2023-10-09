@@ -1,0 +1,19 @@
+{
+    "name": "Solanum muricatum",
+    "trivial": {
+        "Quechua": "xachum",
+        "Unknown": "cahum",
+        "Aymara": "kachuma",
+        "Spanish": "peramelon",
+        "English": "sweet cucumber",
+        "French": "poire-melo"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1400"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Panicum coloratum",
+    "trivial": {
+        "Portuguese": "capim macaricam",
+        "English": "white buffalo grass",
+        "Afrikaans": "witbuffelsgras"
+    },
+    "temp": {
+        "min": "17",
+        "max": "26"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1700"
+    }
+}

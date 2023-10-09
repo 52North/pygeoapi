@@ -1,0 +1,17 @@
+{
+    "name": "Lavandula intermedia",
+    "trivial": {
+        "English": "lavender",
+        "Italian": "lavanda",
+        "French": "lavande",
+        "German": "lavendel"
+    },
+    "temp": {
+        "min": "17",
+        "max": "26"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

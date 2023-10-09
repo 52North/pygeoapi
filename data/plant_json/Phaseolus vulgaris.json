@@ -1,0 +1,21 @@
+{
+    "name": "Phaseolus vulgaris",
+    "trivial": {
+        "Amharic": "adenguare",
+        "English": "wax bean",
+        "German": "Stangenbohne",
+        "Spanish": "frijol",
+        "Unknown": "pini",
+        "French": "pois",
+        "Latin": "Phaseoli legumina",
+        "Chinese": "wandou"
+    },
+    "temp": {
+        "min": "16",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "2000"
+    }
+}

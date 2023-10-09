@@ -1,0 +1,12 @@
+{
+    "name": "Archontophoenix cunningham",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1400"
+    }
+}

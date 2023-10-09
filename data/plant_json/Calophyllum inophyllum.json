@@ -1,0 +1,17 @@
+{
+    "name": "Calophyllum inophyllum",
+    "trivial": {
+        "English": "yellow tacamahac",
+        "Unknown": "te itai",
+        "Portuguese": "undeira",
+        "Hindi": "surpan"
+    },
+    "temp": {
+        "min": "28",
+        "max": "35"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

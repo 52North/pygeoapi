@@ -1,0 +1,12 @@
+{
+    "name": "Guaiacum sanctum",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Acanthus ilicifolius",
+    "trivial": {
+        "English": "mangrove"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

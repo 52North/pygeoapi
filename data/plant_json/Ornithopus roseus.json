@@ -1,0 +1,12 @@
+{
+    "name": "Ornithopus roseus",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "26"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

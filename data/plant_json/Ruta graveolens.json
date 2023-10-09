@@ -1,0 +1,22 @@
+{
+    "name": "Ruta graveolens",
+    "trivial": {
+        "Amharic": "adme",
+        "Greek, Modern (since 1453)": "rhyte",
+        "Afrikaans": "wynruit",
+        "English": "rue",
+        "Hindi": "Satri",
+        "German": "Raute",
+        "Dutch": "ruit",
+        "Latin": "Rutae herba",
+        "Unknown": "tena adjem (Oromia; Ethiopia)"
+    },
+    "temp": {
+        "min": "17",
+        "max": "26"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1500"
+    }
+}

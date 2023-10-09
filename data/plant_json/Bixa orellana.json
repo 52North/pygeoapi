@@ -1,0 +1,19 @@
+{
+    "name": "Bixa orellana",
+    "trivial": {
+        "Spanish": "achiote",
+        "Unknown": "zingifuri",
+        "Swahili": "anatodei",
+        "English": "lipstick tree",
+        "Portuguese": "urucum",
+        "German": "Annattostrauch"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

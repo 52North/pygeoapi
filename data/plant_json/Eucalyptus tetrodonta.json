@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus tetrodonta",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

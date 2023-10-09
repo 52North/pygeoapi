@@ -1,0 +1,17 @@
+{
+    "name": "Piper methysticum",
+    "trivial": {
+        "Samoan": "ava",
+        "Unknown": "yagona",
+        "English": "yaqona",
+        "Ponape": "sakau"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "2200",
+        "max": "4000"
+    }
+}

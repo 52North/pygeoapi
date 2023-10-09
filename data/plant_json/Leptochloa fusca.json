@@ -1,0 +1,12 @@
+{
+    "name": "Leptochloa fusca",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "250",
+        "max": "1000"
+    }
+}

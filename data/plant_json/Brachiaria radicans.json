@@ -1,0 +1,16 @@
+{
+    "name": "Brachiaria radicans",
+    "trivial": {
+        "Portuguese": "capim tanner",
+        "English": "tanner-grass",
+        "Spanish": "tanner"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

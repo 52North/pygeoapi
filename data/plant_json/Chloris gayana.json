@@ -1,0 +1,17 @@
+{
+    "name": "Chloris gayana",
+    "trivial": {
+        "Portuguese": "capim de Rhodes",
+        "Spanish": "pasto Rhodes",
+        "English": "rhodes grass",
+        "Afrikaans": "rhodesgras"
+    },
+    "temp": {
+        "min": "20",
+        "max": "37"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1500"
+    }
+}

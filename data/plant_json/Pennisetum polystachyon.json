@@ -1,0 +1,15 @@
+{
+    "name": "Pennisetum polystachyon",
+    "trivial": {
+        "Portuguese": "taquari de cavalo",
+        "English": "mission grass"
+    },
+    "temp": {
+        "min": "32",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

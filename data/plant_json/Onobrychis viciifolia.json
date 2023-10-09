@@ -1,0 +1,15 @@
+{
+    "name": "Onobrychis viciifolia",
+    "trivial": {
+        "English": "holy grass",
+        "French": "St Foin"
+    },
+    "temp": {
+        "min": "18",
+        "max": "27"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

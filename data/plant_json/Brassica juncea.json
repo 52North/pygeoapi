@@ -1,0 +1,14 @@
+{
+    "name": "Brassica juncea",
+    "trivial": {
+        "English": "mustard greens"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "2400"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Eleocharis dulcis",
+    "trivial": {
+        "Unknown": "Edible spike rush"
+    },
+    "temp": {
+        "min": "23",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1600",
+        "max": "2000"
+    }
+}

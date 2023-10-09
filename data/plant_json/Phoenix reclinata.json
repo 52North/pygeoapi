@@ -1,0 +1,30 @@
+{
+    "name": "Phoenix reclinata",
+    "trivial": {
+        "Tsonga": "akindu",
+        "Somali": "maydho",
+        "English": "wild date palm",
+        "Afrikaans": "wilde dadelboom",
+        "Amharic": "Zmbaba",
+        "Zulu": "iSundu",
+        "Xhosa": "iSundu",
+        "Swazi": "lilala",
+        "Swahili": "mkindu",
+        "Northern Sotho": "mopalamo",
+        "Kamba": "mukindu",
+        "Kikuyu": "muthuthi",
+        "Venda": "mutshevho",
+        "Masai": "Ol-tukai",
+        "Herero": "omuvare",
+        "Luo (Kenya and Tanzania)": "othith",
+        "Tswana": "tsaro"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "3000"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Aegiceras corniculatum",
+    "trivial": {
+        "English": "mangrove"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

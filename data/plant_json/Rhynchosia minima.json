@@ -1,0 +1,14 @@
+{
+    "name": "Rhynchosia minima",
+    "trivial": {
+        "English": "Rhynchosia (Australia)"
+    },
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "550",
+        "max": "1000"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Rumex crispus",
+    "trivial": {
+        "English": "yellow sorrel",
+        "Portuguese": "labaca crespa",
+        "French": "patience crepue"
+    },
+    "temp": {
+        "min": "14",
+        "max": "18"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

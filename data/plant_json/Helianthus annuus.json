@@ -1,0 +1,26 @@
+{
+    "name": "Helianthus annuus",
+    "trivial": {
+        "Finnish": "auringonkukka",
+        "English": "sunflower",
+        "Spanish": "girasol",
+        "Italian": "girasole",
+        "Portuguese": "girassol",
+        "Latin": "Helianthi flos",
+        "Afrikaans": "sonneblom",
+        "German": "Sonnenblume",
+        "Hindi": "surajmukhi",
+        "Nepali": "surya mukhi",
+        "French": "tournesol",
+        "Chinese": "xiangrikui",
+        "Dutch": "zonnebloem"
+    },
+    "temp": {
+        "min": "17",
+        "max": "34"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

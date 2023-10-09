@@ -1,0 +1,19 @@
+{
+    "name": "Capparis tomentosa",
+    "trivial": {
+        "Tigrinya": "andal",
+        "Amharic": "gemaro",
+        "Somali": "gomor",
+        "Shona": "khawa",
+        "Afrikaans": "wollerige kapperbos",
+        "English": "woolly caper-bush"
+    },
+    "temp": {
+        "min": "24",
+        "max": "34"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

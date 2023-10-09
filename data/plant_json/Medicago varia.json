@@ -1,0 +1,12 @@
+{
+    "name": "Medicago varia",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "23"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

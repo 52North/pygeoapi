@@ -1,0 +1,14 @@
+{
+    "name": "Biserrula pelecinus",
+    "trivial": {
+        "English": "biserrula"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

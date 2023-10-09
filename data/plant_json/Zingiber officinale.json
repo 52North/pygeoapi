@@ -1,0 +1,30 @@
+{
+    "name": "Zingiber officinale",
+    "trivial": {
+        "Samoan": "'ava pui",
+        "Portuguese": "mangarataia",
+        "Fijian": "cagolaya ni vavalagi",
+        "English": "true ginger",
+        "Chinese": "chiang",
+        "Tigrinya": "dendabil",
+        "Dutch": "gember",
+        "French": "gingembre",
+        "Russian": "imbir'",
+        "Swedish": "ingefaera",
+        "Danish": "ingef\u00e6r",
+        "German": "ingwer",
+        "Spanish": "jengibre",
+        "Unknown": "shoga",
+        "Arabic": "zanjabil",
+        "Italian": "zenzero",
+        "Amharic": "zingibil"
+    },
+    "temp": {
+        "min": "19",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "3000"
+    }
+}

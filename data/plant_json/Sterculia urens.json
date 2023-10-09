@@ -1,0 +1,15 @@
+{
+    "name": "Sterculia urens",
+    "trivial": {
+        "English": "Sterculia",
+        "Hindi": "Kulu"
+    },
+    "temp": {
+        "min": "30",
+        "max": "42"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1250"
+    }
+}

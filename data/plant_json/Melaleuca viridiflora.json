@@ -1,0 +1,12 @@
+{
+    "name": "Melaleuca viridiflora",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "38"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1600"
+    }
+}

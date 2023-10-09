@@ -1,0 +1,20 @@
+{
+    "name": "Arracacia xanthorrhiza",
+    "trivial": {
+        "Unknown": "virraca",
+        "Portuguese": "batata salsa",
+        "Aymara": "lekachu",
+        "English": "white carrot",
+        "French": "pomme de terre-celeri",
+        "Quechua": "rikacha",
+        "Spanish": "zanhoria blanca"
+    },
+    "temp": {
+        "min": "14",
+        "max": "21"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

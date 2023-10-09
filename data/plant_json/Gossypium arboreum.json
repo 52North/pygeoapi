@@ -1,0 +1,14 @@
+{
+    "name": "Gossypium arboreum",
+    "trivial": {
+        "English": "cotton tree"
+    },
+    "temp": {
+        "min": "26",
+        "max": "36"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1250"
+    }
+}

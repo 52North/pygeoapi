@@ -1,0 +1,12 @@
+{
+    "name": "Secale montanum",
+    "trivial": {},
+    "temp": {
+        "min": "13",
+        "max": "19"
+    },
+    "precip": {
+        "min": "350",
+        "max": "450"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Chlorogalum pomeridianum",
+    "trivial": {
+        "English": "soap plant",
+        "Portuguese": "amole"
+    },
+    "temp": {
+        "min": "14",
+        "max": "28"
+    },
+    "precip": {
+        "min": "300",
+        "max": "700"
+    }
+}

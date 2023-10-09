@@ -1,0 +1,20 @@
+{
+    "name": "Vigna aconitifolia",
+    "trivial": {
+        "Hindi": "tulkayrai",
+        "French": "haricot papillon",
+        "Tamil": "pani payeru",
+        "Bengali": "kheri",
+        "English": "Turkish gram",
+        "Thai": "matpe",
+        "Malay": "mittikelu"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

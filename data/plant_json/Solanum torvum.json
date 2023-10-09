@@ -1,0 +1,16 @@
+{
+    "name": "Solanum torvum",
+    "trivial": {
+        "Spanish": "berenjena cimarrona",
+        "Unknown": "soni",
+        "English": "turkeyberry"
+    },
+    "temp": {
+        "min": "17",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

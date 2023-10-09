@@ -1,0 +1,12 @@
+{
+    "name": "Brachychiton acerifolius",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "1900"
+    }
+}

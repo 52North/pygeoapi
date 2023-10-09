@@ -1,0 +1,18 @@
+{
+    "name": "Butomus umbellatus",
+    "trivial": {
+        "Danish": "brudelys",
+        "Portuguese": "junco florido",
+        "English": "water gladiolus",
+        "Finnish": "sarjarimpi",
+        "German": "schwanenblume"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1000"
+    }
+}

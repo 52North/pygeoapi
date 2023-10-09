@@ -1,0 +1,25 @@
+{
+    "name": "Satureja hortensis",
+    "trivial": {
+        "Latin": "Saturejae herba",
+        "Spanish": "ajedrea",
+        "German": "Bohnenkraut",
+        "Dutch": "bonenkruid",
+        "Russian": "chabyor",
+        "Chinese": "hsiang po ho",
+        "Swedish": "kyndel",
+        "Arabic": "nadgh",
+        "Italian": "santoreggia",
+        "French": "sarriette",
+        "English": "summer savory",
+        "Portuguese": "segurelha"
+    },
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

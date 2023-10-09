@@ -1,0 +1,17 @@
+{
+    "name": "Aloe arborescens",
+    "trivial": {
+        "English": "torch plant",
+        "Northern Sotho": "dokgopha",
+        "Zulu": "inkalane",
+        "Afrikaans": "vlambos"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1500"
+    }
+}

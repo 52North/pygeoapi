@@ -1,0 +1,17 @@
+{
+    "name": "Vigna radiata",
+    "trivial": {
+        "French": "amb\u00e9rique",
+        "English": "mung bean",
+        "Spanish": "poroto mungo (Paraguay)",
+        "German": "Mungbohne"
+    },
+    "temp": {
+        "min": "21",
+        "max": "36"
+    },
+    "precip": {
+        "min": "650",
+        "max": "900"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Dipterocarpus alatus",
+    "trivial": {
+        "English": "gurjum tree"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "3500",
+        "max": "4500"
+    }
+}

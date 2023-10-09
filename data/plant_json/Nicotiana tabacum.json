@@ -1,0 +1,22 @@
+{
+    "name": "Nicotiana tabacum",
+    "trivial": {
+        "English": "tobacco",
+        "Serbo-Croatian (Roman)": "duhan",
+        "Portuguese": "tabaco de cultura",
+        "French": "tabac",
+        "Italian": "tabacco",
+        "Spanish": "tabaco",
+        "Afrikaans": "tabak",
+        "German": "Tabak",
+        "Unknown": "tavako"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "500",
+        "max": "750"
+    }
+}

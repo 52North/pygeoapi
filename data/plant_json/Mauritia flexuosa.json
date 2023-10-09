@@ -1,0 +1,17 @@
+{
+    "name": "Mauritia flexuosa",
+    "trivial": {
+        "Spanish": "palmeira dos brejos",
+        "English": "Moriche palm",
+        "Portuguese": "palmeira dos brejos",
+        "French": "palmier b\u00e2che"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4500"
+    }
+}

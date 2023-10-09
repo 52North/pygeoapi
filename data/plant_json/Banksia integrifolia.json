@@ -1,0 +1,14 @@
+{
+    "name": "Banksia integrifolia",
+    "trivial": {
+        "English": "Coast Banksia"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "850",
+        "max": "1600"
+    }
+}

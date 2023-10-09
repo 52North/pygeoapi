@@ -1,0 +1,27 @@
+{
+    "name": "Imperata cylindrica",
+    "trivial": {
+        "English": "silver spike",
+        "Malayalam": "lalang",
+        "Vietnamese": "nha ca",
+        "Portuguese": "imperata",
+        "Fijian": "ngi",
+        "Bikol": "gogon",
+        "French": "paillotte",
+        "Tagalog": "kogon",
+        "Creoles and Pidgins, English-based (Other)": "lalang",
+        "Unknown": "kyet-mei",
+        "Khmer": "sbow",
+        "Zulu": "umthente",
+        "Lao": "ya kha",
+        "Thai": "ya kha"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "3500"
+    }
+}

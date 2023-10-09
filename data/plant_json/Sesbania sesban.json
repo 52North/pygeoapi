@@ -1,0 +1,16 @@
+{
+    "name": "Sesbania sesban",
+    "trivial": {
+        "Ganda": "Muzimbandeya",
+        "Kikuyu": "Mwethia",
+        "English": "river bean"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2000"
+    }
+}

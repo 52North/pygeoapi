@@ -1,0 +1,21 @@
+{
+    "name": "Castanea sativa",
+    "trivial": {
+        "Creoles and Pidgins, English-based (Other)": "aila",
+        "Danish": "\u00e6gte kastanie",
+        "English": "sweet chestnut",
+        "Italian": "castagno",
+        "Latin": "Castaneae folium",
+        "Portuguese": "castanheiro vulgar",
+        "French": "chataignier",
+        "German": "Kastanienbaum"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

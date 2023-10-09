@@ -1,0 +1,14 @@
+{
+    "name": "Raphanus caudatus",
+    "trivial": {
+        "Unknown": "rat-tailed radish"
+    },
+    "temp": {
+        "min": "12",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

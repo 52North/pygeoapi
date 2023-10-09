@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus pulchella",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "22"
+    },
+    "precip": {
+        "min": "600",
+        "max": "700"
+    }
+}

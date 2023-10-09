@@ -1,0 +1,12 @@
+{
+    "name": "Dichanthium aristatum",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "875",
+        "max": "1200"
+    }
+}

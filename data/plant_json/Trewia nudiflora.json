@@ -1,0 +1,14 @@
+{
+    "name": "Trewia nudiflora",
+    "trivial": {
+        "Hindi": "Pindara"
+    },
+    "temp": {
+        "min": "25",
+        "max": "37"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

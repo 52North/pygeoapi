@@ -1,0 +1,22 @@
+{
+    "name": "Spondias cytherea",
+    "trivial": {
+        "English": "otaheite apple",
+        "Vietnamese": "c\u00f3c",
+        "Unknown": "koris",
+        "Tagalog": "hevi",
+        "Malay": "kedondong",
+        "Indonesian": "kedondong manis",
+        "Lao": "kook hvaan",
+        "Thai": "makok-farang",
+        "Khmer": "mokak"
+    },
+    "temp": {
+        "min": "22",
+        "max": "27"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1800"
+    }
+}

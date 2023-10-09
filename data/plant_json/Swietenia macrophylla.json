@@ -1,0 +1,15 @@
+{
+    "name": "Swietenia macrophylla",
+    "trivial": {
+        "English": "true mahogany",
+        "German": "Mahagoni"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

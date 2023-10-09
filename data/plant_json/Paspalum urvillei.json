@@ -1,0 +1,12 @@
+{
+    "name": "Paspalum urvillei",
+    "trivial": {},
+    "temp": {
+        "min": "6",
+        "max": "23"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

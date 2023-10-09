@@ -1,0 +1,24 @@
+{
+    "name": "Schima wallichii",
+    "trivial": {
+        "Nepali": "sule-chilauni",
+        "Lao": "khai sou",
+        "Thai": "thalo",
+        "Bengali": "mukria sal",
+        "Hindi": "makusal",
+        "Malay": "samak",
+        "Burmese": "laukya",
+        "Indonesian": "seru",
+        "Unknown": "simartolu",
+        "English": "schima",
+        "Vietnamese": "v[oos]i thu[oos]c"
+    },
+    "temp": {
+        "min": "12",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "3000"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Macrotyloma daltonii",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "700"
+    }
+}

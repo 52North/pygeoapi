@@ -1,0 +1,14 @@
+{
+    "name": "Octomeles sumatrana",
+    "trivial": {
+        "English": "erima"
+    },
+    "temp": {
+        "min": "29",
+        "max": "34"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "4000"
+    }
+}

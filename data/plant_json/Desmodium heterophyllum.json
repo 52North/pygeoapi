@@ -1,0 +1,14 @@
+{
+    "name": "Desmodium heterophyllum",
+    "trivial": {
+        "Unknown": "senivakacegu"
+    },
+    "temp": {
+        "min": "23",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

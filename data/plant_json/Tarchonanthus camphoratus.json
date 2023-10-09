@@ -1,0 +1,24 @@
+{
+    "name": "Tarchonanthus camphoratus",
+    "trivial": {
+        "English": "wild sage",
+        "Zulu": "iGqeba-elimhlophe",
+        "Afrikaans": "wilde kamferbos",
+        "Masai": "Leleshwa",
+        "Xhosa": "Mathola",
+        "Swahili": "Mkalambati",
+        "Sotho": "Mofahlana",
+        "Tswana": "Mohata",
+        "Portuguese": "pau quicongo",
+        "Northern Sotho": "Sefahla",
+        "Shona": "Umgebe"
+    },
+    "temp": {
+        "min": "17",
+        "max": "33"
+    },
+    "precip": {
+        "min": "300",
+        "max": "600"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Apium graveolens",
+    "trivial": {
+        "Portuguese": "sals\u00e3o",
+        "Latin": "Apii folium",
+        "Spanish": "apio",
+        "French": "c\u00e9leri-rave",
+        "English": "wild celery",
+        "Chinese": "ch'in",
+        "German": "Sellerie",
+        "Arabic": "karafs",
+        "Italian": "sedano",
+        "Dutch": "selderij",
+        "Afrikaans": "seldery",
+        "Swedish": "selleri",
+        "Japanese": "serorii",
+        "Russian": "syel'derey"
+    },
+    "temp": {
+        "min": "15",
+        "max": "21"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1300"
+    }
+}

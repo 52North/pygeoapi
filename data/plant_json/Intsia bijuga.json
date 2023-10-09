@@ -1,0 +1,21 @@
+{
+    "name": "Intsia bijuga",
+    "trivial": {
+        "Tagalog": "ipil",
+        "Creoles and Pidgins, English-based (Other)": "vuvula (Solomon islands)",
+        "Vietnamese": "go-nux",
+        "Malagasy": "hintzy",
+        "Thai": "makamong",
+        "Malay": "merbau",
+        "English": "scrub mahogany",
+        "Fijian": "vesi"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

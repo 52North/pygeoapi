@@ -1,0 +1,17 @@
+{
+    "name": "Urena lobata",
+    "trivial": {
+        "English": "urena weed",
+        "Hindi": "vilaiti San",
+        "Unknown": "qatima (Fiji)",
+        "French": "jute africain"
+    },
+    "temp": {
+        "min": "21",
+        "max": "27"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1200"
+    }
+}

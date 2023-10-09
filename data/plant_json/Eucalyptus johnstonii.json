@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus johnstonii",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1400"
+    }
+}

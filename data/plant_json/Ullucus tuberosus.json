@@ -1,0 +1,16 @@
+{
+    "name": "Ullucus tuberosus",
+    "trivial": {
+        "Spanish": "camarones de tierra",
+        "Unknown": "ulluma (Argentina)",
+        "English": "oca quina"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1400"
+    }
+}

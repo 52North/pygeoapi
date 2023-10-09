@@ -1,0 +1,15 @@
+{
+    "name": "Salicornia bigelovii",
+    "trivial": {
+        "English": "sea asparagus",
+        "French": "saint-pierre"
+    },
+    "temp": {
+        "min": "10",
+        "max": "25"
+    },
+    "precip": {
+        "min": "-",
+        "max": "-"
+    }
+}

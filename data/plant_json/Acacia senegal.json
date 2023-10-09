@@ -1,0 +1,22 @@
+{
+    "name": "Acacia senegal",
+    "trivial": {
+        "French": "gommier",
+        "Arabic": "hashab",
+        "German": "Gummibaum",
+        "English": "Turkey gum",
+        "Hausa": "dakwara",
+        "Fula": "debehi",
+        "Spanish": "goma ar\u00e1bica",
+        "Swahili": "kikwata",
+        "Zulu": "umKhala"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "300",
+        "max": "800"
+    }
+}

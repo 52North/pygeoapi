@@ -1,0 +1,25 @@
+{
+    "name": "Gossypium hirsutum",
+    "trivial": {
+        "Portuguese": "algodao",
+        "Spanish": "algod\u00f3n",
+        "German": "baumwolle",
+        "Danish": "bomuld",
+        "French": "coton",
+        "English": "upland cotton",
+        "Swedish": "fr\u00e5n amerika",
+        "Hindi": "kapas",
+        "Afrikaans": "katoen",
+        "Chinese": "mianhua",
+        "Tamil": "paruthi",
+        "Arabic": "qutun"
+    },
+    "temp": {
+        "min": "22",
+        "max": "36"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1200"
+    }
+}

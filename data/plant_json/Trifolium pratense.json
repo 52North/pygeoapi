@@ -1,0 +1,24 @@
+{
+    "name": "Trifolium pratense",
+    "trivial": {
+        "English": "red clover",
+        "Swedish": "r\u00f6dv\u00e4pling",
+        "Finnish": "rau\u00f0sm\u00e1ri",
+        "Norwegian": "raudkl\u00f8ver",
+        "Danish": "r\u00f8d-kl\u00f8ver",
+        "German": "Rotklee",
+        "Spanish": "trebol rojo",
+        "French": "trefle rouge",
+        "Portuguese": "trevo dos prados",
+        "Italian": "trifoglio pratense",
+        "Latin": "Trifolii albi et rubri flos"
+    },
+    "temp": {
+        "min": "18",
+        "max": "25"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1200"
+    }
+}

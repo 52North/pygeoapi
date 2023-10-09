@@ -1,0 +1,14 @@
+{
+    "name": "Flindersia brayleyana",
+    "trivial": {
+        "English": "Queensland maple"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3500"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Macrotyloma axillare",
+    "trivial": {
+        "English": "lime-yellow pea",
+        "Zulu": "umhlanzo wenhliziyo"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1700"
+    }
+}

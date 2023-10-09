@@ -1,0 +1,12 @@
+{
+    "name": "Lotus edulis",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus scias",
+    "trivial": {
+        "English": "large-fruited red mahogany"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1300"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Persea americana ssp. mexican",
+    "trivial": {
+        "Unknown": "Mexican avocado"
+    },
+    "temp": {
+        "min": "14",
+        "max": "22"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1400"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Sesbania grandiflora",
+    "trivial": {
+        "Unknown": "scarlet wisteria tree"
+    },
+    "temp": {
+        "min": "24",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3000"
+    }
+}

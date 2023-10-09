@@ -1,0 +1,16 @@
+{
+    "name": "Theobroma grandiflorum",
+    "trivial": {
+        "Spanish": "cupuas\u00fa",
+        "Portuguese": "pupua\u00e7u",
+        "English": "cupuassu"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "2400"
+    }
+}

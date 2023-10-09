@@ -1,0 +1,16 @@
+{
+    "name": "Castanea crenata",
+    "trivial": {
+        "Portuguese": "castanheiro do Japao",
+        "French": "chataignier du Japon",
+        "English": "Japanese chestnut"
+    },
+    "temp": {
+        "min": "17",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1500"
+    }
+}

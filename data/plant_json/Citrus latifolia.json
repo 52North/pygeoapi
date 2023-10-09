@@ -1,0 +1,16 @@
+{
+    "name": "Citrus latifolia",
+    "trivial": {
+        "English": "Tahiti lime",
+        "Portuguese": "lima da Persia",
+        "German": "Tahitilimette"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Albizia toona",
+    "trivial": {
+        "Portuguese": "acacia siras vermelha",
+        "English": "red siris tree"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1750"
+    }
+}

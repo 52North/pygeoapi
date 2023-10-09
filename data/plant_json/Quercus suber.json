@@ -1,0 +1,18 @@
+{
+    "name": "Quercus suber",
+    "trivial": {
+        "Spanish": "alcornoque",
+        "French": "chene liege",
+        "English": "mast tree",
+        "German": "Korkeiche",
+        "Portuguese": "sobreiro"
+    },
+    "temp": {
+        "min": "14",
+        "max": "32"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

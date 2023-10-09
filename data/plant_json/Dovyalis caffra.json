@@ -1,0 +1,27 @@
+{
+    "name": "Dovyalis caffra",
+    "trivial": {
+        "Kamba": "aaiyava",
+        "Afrikaans": "wildeappelkoos",
+        "Unknown": "rweso (Embu)",
+        "Swazi": "iNtapane",
+        "Kikuyu": "Kaiyaba",
+        "German": "Kei apfel",
+        "English": "wild apricot",
+        "Amharic": "koshm",
+        "Spanish": "manzana cafre",
+        "Northern Sotho": "Motlhono",
+        "Venda": "muvhamba-nguvho",
+        "Tsonga": "N\u2019wambula",
+        "Zulu": "uQokolo",
+        "Xhosa": "umQokolo"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1100"
+    }
+}

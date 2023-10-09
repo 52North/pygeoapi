@@ -1,0 +1,21 @@
+{
+    "name": "Prunus africana",
+    "trivial": {
+        "English": "red stinkwood",
+        "Unknown": "Wotangue (Bakweri)",
+        "Spanish": "Ciruelo africano",
+        "Swahili": "kiburraburra",
+        "Kikuyu": "Muiri",
+        "Ganda": "Ntasesa",
+        "Afrikaans": "rooistinkhout",
+        "Xhosa": "umkakase"
+    },
+    "temp": {
+        "min": "14",
+        "max": "18"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1400"
+    }
+}

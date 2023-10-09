@@ -1,0 +1,17 @@
+{
+    "name": "Oxalis tuberosa",
+    "trivial": {
+        "Unknown": "yam (NZ)",
+        "German": "knollen sauerklee",
+        "English": "sorrel",
+        "French": "truffette acide"
+    },
+    "temp": {
+        "min": "12",
+        "max": "24"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1300"
+    }
+}

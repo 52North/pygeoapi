@@ -1,0 +1,14 @@
+{
+    "name": "Sorghum X almum",
+    "trivial": {
+        "Unknown": "Columbus grass"
+    },
+    "temp": {
+        "min": "19",
+        "max": "26"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

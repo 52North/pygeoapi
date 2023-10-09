@@ -1,0 +1,17 @@
+{
+    "name": "Terminalia catappa",
+    "trivial": {
+        "Unknown": "telie",
+        "French": "badamier",
+        "English": "Tropical almond (Pacific)",
+        "Creoles and Pidgins, English-based (Other)": "talis"
+    },
+    "temp": {
+        "min": "21",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3400"
+    }
+}

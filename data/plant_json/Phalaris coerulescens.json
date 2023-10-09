@@ -1,0 +1,12 @@
+{
+    "name": "Phalaris coerulescens",
+    "trivial": {},
+    "temp": {
+        "min": "14",
+        "max": "19"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

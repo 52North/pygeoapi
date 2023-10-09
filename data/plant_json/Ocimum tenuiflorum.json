@@ -1,0 +1,25 @@
+{
+    "name": "Ocimum tenuiflorum",
+    "trivial": {
+        "Tagalog": "sulasi",
+        "Unknown": "malinau",
+        "Fijian": "tulsi",
+        "Vietnamese": "huong nhu t\u00eda",
+        "Karen": "ho tu plu",
+        "English": "sacred basil",
+        "Bikol": "kamangkau",
+        "Pampanga": "kolon-kogon",
+        "Thai": "kraphrao",
+        "Magahi": "magau",
+        "Latin": "Ocimi Tenuiflori Folium",
+        "Nepali": "tulsipatra"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3000"
+    }
+}

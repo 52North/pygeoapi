@@ -1,0 +1,17 @@
+{
+    "name": "Setaria sphacelata var. splendida",
+    "trivial": {
+        "Malayalam": "splendida setaria",
+        "Tagalog": "bunga-bunga",
+        "Vietnamese": "co ro'om",
+        "Thai": "ya taiwan"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Dendrocalamus hamiltonii",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "3600"
+    }
+}

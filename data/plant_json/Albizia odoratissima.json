@@ -1,0 +1,15 @@
+{
+    "name": "Albizia odoratissima",
+    "trivial": {
+        "English": "fragrant albizia",
+        "Portuguese": "favas de Lazaro"
+    },
+    "temp": {
+        "min": "24",
+        "max": "37"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

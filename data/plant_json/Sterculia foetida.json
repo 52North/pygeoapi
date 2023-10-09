@@ -1,0 +1,12 @@
+{
+    "name": "Sterculia foetida",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1800"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Pinus caribaea ssp. caribaea",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

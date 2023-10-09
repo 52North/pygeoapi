@@ -1,0 +1,15 @@
+{
+    "name": "Medicago arabica",
+    "trivial": {
+        "English": "spotted medick",
+        "Portuguese": "trevo carrapico malhado"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

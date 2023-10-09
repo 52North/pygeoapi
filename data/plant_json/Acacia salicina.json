@@ -1,0 +1,14 @@
+{
+    "name": "Acacia salicina",
+    "trivial": {
+        "Unknown": "Willow Wattle"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Panicum coloratum var. makarikariense",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "32"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

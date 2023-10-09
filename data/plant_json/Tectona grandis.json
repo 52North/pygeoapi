@@ -1,0 +1,16 @@
+{
+    "name": "Tectona grandis",
+    "trivial": {
+        "Hindi": "sagwan",
+        "English": "teak",
+        "Unknown": "tiki"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "3000"
+    }
+}

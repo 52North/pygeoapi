@@ -1,0 +1,21 @@
+{
+    "name": "Butea monosperma",
+    "trivial": {
+        "English": "tisso",
+        "Khmer": "chaa",
+        "Lao": "chaan",
+        "Hindi": "Tesu",
+        "Portuguese": "palasse",
+        "Indonesian": "palasa",
+        "Burmese": "pouk-pen",
+        "Thai": "tong thammachaat"
+    },
+    "temp": {
+        "min": "20",
+        "max": "38"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3000"
+    }
+}

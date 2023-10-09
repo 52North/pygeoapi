@@ -1,0 +1,21 @@
+{
+    "name": "Dioscorea alata",
+    "trivial": {
+        "Samoan": "ufi",
+        "Spanish": "\u00f1ame de agua",
+        "Portuguese": "marquesota",
+        "English": "winged yam",
+        "Unknown": "yam tru (except in Madang Province)",
+        "French": "igname",
+        "Tonga (Tonga Islands)": "ufi",
+        "Fijian": "vutua"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "4000"
+    }
+}

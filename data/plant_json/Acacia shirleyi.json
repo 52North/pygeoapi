@@ -1,0 +1,12 @@
+{
+    "name": "Acacia shirleyi",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "36"
+    },
+    "precip": {
+        "min": "500",
+        "max": "650"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Ruta graveolens var. bracteosa",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "26"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1500"
+    }
+}

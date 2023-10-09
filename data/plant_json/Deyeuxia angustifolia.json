@@ -1,0 +1,12 @@
+{
+    "name": "Deyeuxia angustifolia",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "26"
+    },
+    "precip": {
+        "min": "450",
+        "max": "800"
+    }
+}

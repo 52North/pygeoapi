@@ -1,0 +1,15 @@
+{
+    "name": "Campanula rapunculus",
+    "trivial": {
+        "English": "rampion",
+        "Portuguese": "rapuncio"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

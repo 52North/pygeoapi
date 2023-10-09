@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus propinqua",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "33"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1700"
+    }
+}

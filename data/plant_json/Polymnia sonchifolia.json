@@ -1,0 +1,17 @@
+{
+    "name": "Polymnia sonchifolia",
+    "trivial": {
+        "Spanish": "yacon",
+        "Unknown": "yacuma",
+        "English": "yacon strawberry",
+        "French": "poir de terre Cochet"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

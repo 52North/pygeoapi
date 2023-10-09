@@ -1,0 +1,16 @@
+{
+    "name": "Calodendrum capense",
+    "trivial": {
+        "English": "wild chestnut",
+        "Portuguese": "castinceira",
+        "Afrikaans": "wildekastaiing"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

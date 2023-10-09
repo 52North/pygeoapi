@@ -1,0 +1,12 @@
+{
+    "name": "Calamus caesius",
+    "trivial": {},
+    "temp": {
+        "min": "23",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3200"
+    }
+}

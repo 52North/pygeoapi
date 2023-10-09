@@ -1,0 +1,32 @@
+{
+    "name": "Lotus corniculatus",
+    "trivial": {
+        "English": "yellow treefoil",
+        "Azerbaijani": "gafgaz gurdotu",
+        "French": "pied-de-poule",
+        "Unknown": "tryzaouka (Belarus)",
+        "Portuguese": "serradela",
+        "Spanish": "loto corniculado",
+        "Mongolian": "ebert khoshoontzor",
+        "Armenian": "ekhdzherarvuit",
+        "Afrikaans": "hoenderspoor klawer",
+        "German": "Hornklee",
+        "Russian": "lyadvenetz zhigulevski",
+        "Italian": "ginestrina",
+        "Estonian": "harilik noiahammas",
+        "Finnish": "keltamaite",
+        "Polish": "komonica zwycrajna",
+        "Georgian": "kurdlis prukhila",
+        "Belarusian": "zayachchy bratki",
+        "Lithuanian": "paprastasis garzdenis",
+        "Latvian": "ragaine vanagnadzini"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

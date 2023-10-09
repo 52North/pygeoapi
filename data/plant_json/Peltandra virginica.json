@@ -1,0 +1,14 @@
+{
+    "name": "Peltandra virginica",
+    "trivial": {
+        "English": "green arrow arum"
+    },
+    "temp": {
+        "min": "12",
+        "max": "24"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

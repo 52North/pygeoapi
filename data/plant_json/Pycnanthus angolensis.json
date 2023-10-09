@@ -1,0 +1,19 @@
+{
+    "name": "Pycnanthus angolensis",
+    "trivial": {
+        "English": "pycnanthus",
+        "Yoruba": "akomu",
+        "Igbo": "oje",
+        "Spanish": "calabo",
+        "Unknown": "lunaba",
+        "Ganda": "munaba"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1800"
+    }
+}

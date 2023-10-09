@@ -1,0 +1,12 @@
+{
+    "name": "Aristida obtusa",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "200",
+        "max": "300"
+    }
+}

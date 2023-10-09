@@ -1,0 +1,16 @@
+{
+    "name": "Chenopodium pallidicaule",
+    "trivial": {
+        "Spanish": "canahua",
+        "English": "canihua",
+        "Unknown": "qaniwa"
+    },
+    "temp": {
+        "min": "10",
+        "max": "16"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

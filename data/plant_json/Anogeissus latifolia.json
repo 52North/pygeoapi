@@ -1,0 +1,12 @@
+{
+    "name": "Anogeissus latifolia",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "33"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1400"
+    }
+}

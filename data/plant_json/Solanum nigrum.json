@@ -1,0 +1,24 @@
+{
+    "name": "Solanum nigrum",
+    "trivial": {
+        "Unknown": "Qaqata (Konsogna)",
+        "English": "poison berry",
+        "Portuguese": "guaraquinha",
+        "Spanish": "hierba mora",
+        "Ethiopic": "key-awuti",
+        "French": "morelle noir",
+        "Finnish": "mustakoiso",
+        "Swedish": "nattskatta",
+        "German": "Schwarzer Nachtschatten",
+        "Danish": "sort natskygge",
+        "Norwegian": "svarts\u00f8tvier"
+    },
+    "temp": {
+        "min": "21",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1600"
+    }
+}

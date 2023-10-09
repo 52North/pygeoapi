@@ -1,0 +1,27 @@
+{
+    "name": "Rhodiola rosea",
+    "trivial": {
+        "English": "roseroot stonecrop",
+        "Icelandic": "burnir\u00f3t",
+        "Chinese": "hong jing tian",
+        "Japanese": "iwa-benkei",
+        "French": "orpin rose",
+        "Polish": "r\u00f3eniec g\u00f3rski",
+        "Estonian": "roosil\u00f5hnaline kuldjuur",
+        "Danish": "rosenrod",
+        "Norwegian": "rosenrot",
+        "Swedish": "rosenrot",
+        "German": "rosenwurz",
+        "Czech": "rozchodnice r\u017eov\u00e1",
+        "Slovak": "ro\u017enis koren",
+        "Finnish": "ruusujuuri"
+    },
+    "temp": {
+        "min": "10",
+        "max": "25"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

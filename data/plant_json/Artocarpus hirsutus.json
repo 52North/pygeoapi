@@ -1,0 +1,12 @@
+{
+    "name": "Artocarpus hirsutus",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3500"
+    }
+}

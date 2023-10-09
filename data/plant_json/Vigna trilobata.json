@@ -1,0 +1,16 @@
+{
+    "name": "Vigna trilobata",
+    "trivial": {
+        "English": "three-lobe-leaf cowpea",
+        "Unknown": "mukni",
+        "Hindi": "pillipesara"
+    },
+    "temp": {
+        "min": "22",
+        "max": "31"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

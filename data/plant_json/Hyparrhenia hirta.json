@@ -1,0 +1,16 @@
+{
+    "name": "Hyparrhenia hirta",
+    "trivial": {
+        "English": "Common thatch grass",
+        "Afrikaans": "Dekgras",
+        "Sotho": "Legokwana"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1000"
+    }
+}

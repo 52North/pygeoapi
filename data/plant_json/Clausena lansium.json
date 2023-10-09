@@ -1,0 +1,20 @@
+{
+    "name": "Clausena lansium",
+    "trivial": {
+        "Vietnamese": "ho\u00e0ng b\u00ec",
+        "Tagalog": "wampi",
+        "Khmer": "s\u00f4mz maf'ai",
+        "Thai": "sommafai",
+        "French": "vampi",
+        "English": "wampee",
+        "Malay": "wang-pei"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

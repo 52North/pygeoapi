@@ -1,0 +1,12 @@
+{
+    "name": "Hardwickia binata",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "38"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

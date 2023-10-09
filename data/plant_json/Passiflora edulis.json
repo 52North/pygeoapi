@@ -1,0 +1,27 @@
+{
+    "name": "Passiflora edulis",
+    "trivial": {
+        "Thai": "linmangkon",
+        "Javanese": "buah negeri",
+        "Malay": "markisa",
+        "Spanish": "parchita maracuy\u00e1",
+        "Vietnamese": "ch\u00f9m bap",
+        "French": "pomme-liane violette",
+        "Hawaiian": "lilikoi",
+        "Lao": "not",
+        "Portuguese": "maracuj\u00e1 redondo",
+        "German": "Passionsfrucht",
+        "Iloko": "maraflora",
+        "Tagalog": "pasionaria",
+        "Dutch": "passionfrukt",
+        "English": "yellow passion fruit"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "2000"
+    }
+}

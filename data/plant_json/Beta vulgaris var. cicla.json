@@ -1,0 +1,14 @@
+{
+    "name": "Beta vulgaris var. cicla",
+    "trivial": {
+        "Unknown": "Silver beet"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "800",
+        "max": "800"
+    }
+}

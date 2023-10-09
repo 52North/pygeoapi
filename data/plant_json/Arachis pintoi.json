@@ -1,0 +1,17 @@
+{
+    "name": "Arachis pintoi",
+    "trivial": {
+        "English": "pinto peanut",
+        "Portuguese": "amendoim forrageiro perene",
+        "Spanish": "man\u00ed forrajero",
+        "Thai": "thua lisong tao"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

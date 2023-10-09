@@ -1,0 +1,12 @@
+{
+    "name": "Acacia flavescens",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2200"
+    }
+}

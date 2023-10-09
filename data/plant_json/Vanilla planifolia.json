@@ -1,0 +1,29 @@
+{
+    "name": "Vanilla planifolia",
+    "trivial": {
+        "Tagalog": "panili",
+        "Japanese": "banira",
+        "Portuguese": "baunilha",
+        "Chinese": "hsiang-Ts'ao",
+        "Aztec": "tlilxochitl",
+        "Italian": "vaniglia",
+        "Russian": "vanil'",
+        "Danish": "vanilie",
+        "Swedish": "vanilj",
+        "English": "vanilla",
+        "Spanish": "vanilla",
+        "Dutch": "vanille",
+        "French": "vanille",
+        "German": "vanille",
+        "Thai": "waanilaa",
+        "Arabic": "wanila"
+    },
+    "temp": {
+        "min": "21",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "2500"
+    }
+}

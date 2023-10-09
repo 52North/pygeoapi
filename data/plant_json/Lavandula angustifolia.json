@@ -1,0 +1,18 @@
+{
+    "name": "Lavandula angustifolia",
+    "trivial": {
+        "Latin": "Lavandulae flos",
+        "Italian": "lavanda",
+        "French": "lavande",
+        "German": "Lavendel",
+        "English": "true lavender"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

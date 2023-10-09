@@ -1,0 +1,26 @@
+{
+    "name": "Laurus nobilis",
+    "trivial": {
+        "Italian": "foglie d'alloro",
+        "English": "true laurel",
+        "German": "Lorbeerbaum",
+        "French": "laurier",
+        "Japanese": "gekkeiju",
+        "Arabic": "ghar",
+        "Swedish": "lager",
+        "Danish": "laurbaar",
+        "Spanish": "laurel",
+        "Dutch": "laurier",
+        "Russian": "lavr",
+        "Portuguese": "loureiro",
+        "Chinese": "yueh-kuei"
+    },
+    "temp": {
+        "min": "17",
+        "max": "25"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

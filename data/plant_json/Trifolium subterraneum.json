@@ -1,0 +1,19 @@
+{
+    "name": "Trifolium subterraneum",
+    "trivial": {
+        "German": "bodenfr\u00fcchtiger klee",
+        "English": "subterranean clover",
+        "French": "tr\u00e8fle souterrain",
+        "Spanish": "tr\u00e9bol subterr\u00e1neo",
+        "Portuguese": "trevo subterraneo",
+        "Italian": "trifoglio sotterraneo"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

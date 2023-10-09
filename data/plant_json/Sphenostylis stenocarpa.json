@@ -1,0 +1,16 @@
+{
+    "name": "Sphenostylis stenocarpa",
+    "trivial": {
+        "English": "tuber bean",
+        "German": "Afrikanische yambohne",
+        "Unknown": "girigiri"
+    },
+    "temp": {
+        "min": "23",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1200"
+    }
+}

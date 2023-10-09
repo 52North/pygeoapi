@@ -1,0 +1,14 @@
+{
+    "name": "Acacia victoriae",
+    "trivial": {
+        "Unknown": "Gundabluey"
+    },
+    "temp": {
+        "min": "12",
+        "max": "32"
+    },
+    "precip": {
+        "min": "300",
+        "max": "800"
+    }
+}

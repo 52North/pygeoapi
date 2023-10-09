@@ -1,0 +1,15 @@
+{
+    "name": "Nauclea orientalis",
+    "trivial": {
+        "English": "Leichhardt pine",
+        "Portuguese": "bancal"
+    },
+    "temp": {
+        "min": "30",
+        "max": "40"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3500"
+    }
+}

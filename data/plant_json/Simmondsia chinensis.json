@@ -1,0 +1,16 @@
+{
+    "name": "Simmondsia chinensis",
+    "trivial": {
+        "English": "pig nut",
+        "Portuguese": "jojoba",
+        "Unknown": "jojowi"
+    },
+    "temp": {
+        "min": "21",
+        "max": "36"
+    },
+    "precip": {
+        "min": "250",
+        "max": "800"
+    }
+}

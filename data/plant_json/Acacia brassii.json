@@ -1,0 +1,12 @@
+{
+    "name": "Acacia brassii",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

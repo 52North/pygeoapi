@@ -1,0 +1,16 @@
+{
+    "name": "Panicum trichocladum",
+    "trivial": {
+        "Portuguese": "capim aruana",
+        "English": "donkey grass",
+        "Swahili": "ukoka"
+    },
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

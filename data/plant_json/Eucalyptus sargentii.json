@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus sargentii",
+    "trivial": {},
+    "temp": {
+        "min": "29",
+        "max": "36"
+    },
+    "precip": {
+        "min": "400",
+        "max": "480"
+    }
+}

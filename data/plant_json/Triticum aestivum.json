@@ -1,0 +1,28 @@
+{
+    "name": "Triticum aestivum",
+    "trivial": {
+        "Unknown": "aat-weize",
+        "Arabic": "alkamh",
+        "Danish": "almindelig hvede",
+        "French": "froment",
+        "Swedish": "vanligt vete",
+        "English": "wheat",
+        "Italian": "grano",
+        "Icelandic": "hveiti",
+        "Norwegian": "kveite",
+        "Finnish": "vehn\u00e4",
+        "Vietnamese": "lua mi",
+        "Amharic": "sinde",
+        "Portuguese": "trigo",
+        "German": "weizen",
+        "Chinese": "xiao mai"
+    },
+    "temp": {
+        "min": "15",
+        "max": "23"
+    },
+    "precip": {
+        "min": "750",
+        "max": "900"
+    }
+}

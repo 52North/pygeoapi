@@ -1,0 +1,12 @@
+{
+    "name": "Acacia xiphohylla",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "36"
+    },
+    "precip": {
+        "min": "200",
+        "max": "250"
+    }
+}

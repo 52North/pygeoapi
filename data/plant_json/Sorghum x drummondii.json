@@ -1,0 +1,12 @@
+{
+    "name": "Sorghum x drummondii",
+    "trivial": {},
+    "temp": {
+        "min": "21",
+        "max": "33"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

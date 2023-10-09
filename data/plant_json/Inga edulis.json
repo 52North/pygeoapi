@@ -1,0 +1,17 @@
+{
+    "name": "Inga edulis",
+    "trivial": {
+        "Spanish": "rabo de mico",
+        "English": "ice cream bean",
+        "Portuguese": "rabo de mico",
+        "French": "pois sucre"
+    },
+    "temp": {
+        "min": "23",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2500"
+    }
+}

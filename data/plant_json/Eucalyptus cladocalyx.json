@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus cladocalyx",
+    "trivial": {
+        "English": "sugar gum"
+    },
+    "temp": {
+        "min": "23",
+        "max": "32"
+    },
+    "precip": {
+        "min": "450",
+        "max": "650"
+    }
+}

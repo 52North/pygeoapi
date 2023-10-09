@@ -1,0 +1,22 @@
+{
+    "name": "Pennisetum purpureum",
+    "trivial": {
+        "French": "z'herbe \u00e9l\u00e9phant",
+        "Portuguese": "marianga",
+        "German": "Uganda-Gras",
+        "English": "Uganda grass",
+        "Italian": "erba ugandese",
+        "Spanish": "pasto de Uganda",
+        "Swahili": "mabingobingo",
+        "Unknown": "mfufu",
+        "Indonesian": "rumput gajah"
+    },
+    "temp": {
+        "min": "21",
+        "max": "40"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

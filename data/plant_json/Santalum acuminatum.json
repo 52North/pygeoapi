@@ -1,0 +1,14 @@
+{
+    "name": "Santalum acuminatum",
+    "trivial": {
+        "English": "quandong"
+    },
+    "temp": {
+        "min": "18",
+        "max": "25"
+    },
+    "precip": {
+        "min": "250",
+        "max": "400"
+    }
+}

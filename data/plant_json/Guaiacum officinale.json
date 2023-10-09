@@ -1,0 +1,24 @@
+{
+    "name": "Guaiacum officinale",
+    "trivial": {
+        "French": "ga\u00efac officnale",
+        "Spanish": "pano santo de las Indias",
+        "Unknown": "common lignum-vitae (Trade name)",
+        "Swedish": "fransosenholts",
+        "German": "Guajakholz",
+        "Danish": "frazostrae",
+        "Creoles and Pidgins (Other)": "gayak fran",
+        "English": "lignum-vitae tree",
+        "Italian": "legno santo",
+        "Portuguese": "guyaiaco",
+        "Dutch": "pokhout"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

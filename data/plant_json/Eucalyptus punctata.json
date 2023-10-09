@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus punctata",
+    "trivial": {
+        "English": "grey gum"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1100"
+    }
+}

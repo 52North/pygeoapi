@@ -1,0 +1,22 @@
+{
+    "name": "Parinari curatellifolia",
+    "trivial": {
+        "Zulu": "amabulwa",
+        "Afrikaans": "grysappel",
+        "English": "mobola-plum",
+        "Unknown": "mupundu",
+        "Tsonga": "mbulwa",
+        "Northern Sotho": "mmola",
+        "Tswana": "mobola",
+        "Venda": "muvhula",
+        "Bambara": "tutu (Mali)"
+    },
+    "temp": {
+        "min": "14",
+        "max": "30"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1000"
+    }
+}

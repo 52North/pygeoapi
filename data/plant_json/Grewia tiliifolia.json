@@ -1,0 +1,12 @@
+{
+    "name": "Grewia tiliifolia",
+    "trivial": {},
+    "temp": {
+        "min": "30",
+        "max": "42"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2500"
+    }
+}

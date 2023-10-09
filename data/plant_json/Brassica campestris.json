@@ -1,0 +1,14 @@
+{
+    "name": "Brassica campestris",
+    "trivial": {
+        "English": "wild turnip"
+    },
+    "temp": {
+        "min": "17",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

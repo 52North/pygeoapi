@@ -1,0 +1,22 @@
+{
+    "name": "Sorghum bicolor",
+    "trivial": {
+        "Ethiopic": "bachanta",
+        "English": "sorghum",
+        "Unknown": "mtama",
+        "German": "Hirse",
+        "Shona": "ipwa",
+        "Urdu": "jawa",
+        "Amharic": "mashila",
+        "French": "sorgho",
+        "Italian": "sorgo"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

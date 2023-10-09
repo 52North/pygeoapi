@@ -1,0 +1,16 @@
+{
+    "name": "Cola acuminata",
+    "trivial": {
+        "Unknown": "oji-awusa",
+        "English": "nut of Life",
+        "German": "kola"
+    },
+    "temp": {
+        "min": "23",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

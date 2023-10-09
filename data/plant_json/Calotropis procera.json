@@ -1,0 +1,22 @@
+{
+    "name": "Calotropis procera",
+    "trivial": {
+        "Hindi": "desi aak",
+        "Tigrinya": "tomfi",
+        "English": "yercum fibre",
+        "French": "arbre \u00e0 soie",
+        "Arabic": "u'sher (Sudan)",
+        "Somali": "gala",
+        "Portuguese": "madar",
+        "Amharic": "yahara-zaf",
+        "Latin": "Mudar Yercum"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "300",
+        "max": "400"
+    }
+}

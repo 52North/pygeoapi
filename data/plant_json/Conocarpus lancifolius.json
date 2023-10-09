@@ -1,0 +1,12 @@
+{
+    "name": "Conocarpus lancifolius",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "38"
+    },
+    "precip": {
+        "min": "350",
+        "max": "500"
+    }
+}

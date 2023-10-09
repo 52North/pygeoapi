@@ -1,0 +1,12 @@
+{
+    "name": "Telfairia pedata",
+    "trivial": {},
+    "temp": {
+        "min": "23",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

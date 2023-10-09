@@ -1,0 +1,17 @@
+{
+    "name": "Bambusa balcooa",
+    "trivial": {
+        "Hindi": "wamnah",
+        "Assamese": "baluka((Assam)",
+        "Portuguese": "bamb\u00fa das pradarias",
+        "English": "plains bamboo"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2300",
+        "max": "3000"
+    }
+}

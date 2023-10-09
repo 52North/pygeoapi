@@ -1,0 +1,14 @@
+{
+    "name": "Pinus taeda",
+    "trivial": {
+        "English": "Rosemary pine"
+    },
+    "temp": {
+        "min": "20",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1900"
+    }
+}

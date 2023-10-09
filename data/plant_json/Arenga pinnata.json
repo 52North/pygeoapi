@@ -1,0 +1,16 @@
+{
+    "name": "Arenga pinnata",
+    "trivial": {
+        "English": "sugar palm",
+        "German": "gemuti palm",
+        "French": "palm de sucre"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "3500"
+    }
+}

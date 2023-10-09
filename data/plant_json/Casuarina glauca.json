@@ -1,0 +1,12 @@
+{
+    "name": "Casuarina glauca",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1300"
+    }
+}

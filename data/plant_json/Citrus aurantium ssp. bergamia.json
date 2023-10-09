@@ -1,0 +1,14 @@
+{
+    "name": "Citrus aurantium ssp. bergamia",
+    "trivial": {
+        "English": "bergamot orange"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1500"
+    }
+}

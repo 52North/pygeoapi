@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus rubida",
+    "trivial": {
+        "English": "white gum"
+    },
+    "temp": {
+        "min": "12",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1600"
+    }
+}

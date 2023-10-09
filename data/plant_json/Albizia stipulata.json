@@ -1,0 +1,14 @@
+{
+    "name": "Albizia stipulata",
+    "trivial": {
+        "Unknown": "tamalini"
+    },
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "2400"
+    }
+}

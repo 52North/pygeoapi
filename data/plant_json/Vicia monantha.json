@@ -1,0 +1,15 @@
+{
+    "name": "Vicia monantha",
+    "trivial": {
+        "English": "bard vetch",
+        "Portuguese": "parda"
+    },
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

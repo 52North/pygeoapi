@@ -1,0 +1,12 @@
+{
+    "name": "Psidium friedrichsthalianum",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

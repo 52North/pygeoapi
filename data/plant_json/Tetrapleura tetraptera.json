@@ -1,0 +1,14 @@
+{
+    "name": "Tetrapleura tetraptera",
+    "trivial": {
+        "English": "aidan tree"
+    },
+    "temp": {
+        "min": "25",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1700",
+        "max": "3000"
+    }
+}

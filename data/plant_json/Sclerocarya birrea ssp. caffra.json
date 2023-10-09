@@ -1,0 +1,29 @@
+{
+    "name": "Sclerocarya birrea ssp. caffra",
+    "trivial": {
+        "English": "morula",
+        "Zulu": "umganu",
+        "Portuguese": "ncanhi",
+        "Hausa": "dania",
+        "Unknown": "ufuongo",
+        "Ndebele (Zimbabwe)": "umkano",
+        "Shona": "pfura",
+        "Afrikaans": "mopani",
+        "Swahili": "morula",
+        "Northern Sotho": "morula",
+        "Tswana": "morula",
+        "Kamba": "muua",
+        "Tsonga": "nkanyi",
+        "Masai": "ol-mangwai",
+        "Tonga (Tonga Islands)": "umganu",
+        "Swazi": "umganu"
+    },
+    "temp": {
+        "min": "20",
+        "max": "40"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1200"
+    }
+}

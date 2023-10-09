@@ -1,0 +1,14 @@
+{
+    "name": "Vicia benghalensis",
+    "trivial": {
+        "English": "Purple vetch"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

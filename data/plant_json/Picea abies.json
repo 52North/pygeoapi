@@ -1,0 +1,19 @@
+{
+    "name": "Picea abies",
+    "trivial": {
+        "Italian": "abete rosso",
+        "Spanish": "picea",
+        "English": "white deal",
+        "German": "Rottanne",
+        "French": "epinette de Norvege",
+        "Portuguese": "espruce da Noruega"
+    },
+    "temp": {
+        "min": "5",
+        "max": "15"
+    },
+    "precip": {
+        "min": "400",
+        "max": "700"
+    }
+}

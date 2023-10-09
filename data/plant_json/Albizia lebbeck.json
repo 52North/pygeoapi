@@ -1,0 +1,19 @@
+{
+    "name": "Albizia lebbeck",
+    "trivial": {
+        "Portuguese": "pau-negro",
+        "Indonesian": "tarisi",
+        "Afrikaans": "\u200elebbekboom",
+        "English": "woman's-tongue tree",
+        "Fijian": "vaivai ni vavalangi",
+        "French": "langue de vieille femme"
+    },
+    "temp": {
+        "min": "26",
+        "max": "36"
+    },
+    "precip": {
+        "min": "600",
+        "max": "2000"
+    }
+}

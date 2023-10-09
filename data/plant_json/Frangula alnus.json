@@ -1,0 +1,20 @@
+{
+    "name": "Frangula alnus",
+    "trivial": {
+        "English": "buckthorn",
+        "Swedish": "toste",
+        "German": "Faulbaum",
+        "Latin": "Frangulae cortex",
+        "Finnish": "korpipaatsama",
+        "Danish": "t\u00f8rst",
+        "Norwegian": "trollhegg"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

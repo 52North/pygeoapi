@@ -1,0 +1,19 @@
+{
+    "name": "Bertholletia excelsa",
+    "trivial": {
+        "English": "para nut",
+        "Portuguese": "castanheiro do para",
+        "Spanish": "el coquito del Brasil",
+        "Italian": "la noce del Brasile",
+        "French": "noyer du Br\u00e9sil",
+        "German": "Paran\u00fcsse"
+    },
+    "temp": {
+        "min": "20",
+        "max": "36"
+    },
+    "precip": {
+        "min": "2400",
+        "max": "2800"
+    }
+}

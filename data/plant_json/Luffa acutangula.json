@@ -1,0 +1,14 @@
+{
+    "name": "Luffa acutangula",
+    "trivial": {
+        "Unknown": "luffa"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Psidium guajava",
+    "trivial": {
+        "Hindi": "amrut",
+        "Tagalog": "bayabas",
+        "English": "guava",
+        "Thai": "ma-man",
+        "Dutch": "goeajaaba",
+        "Portuguese": "goiaba",
+        "French": "goyavier",
+        "German": "Guave",
+        "Spanish": "guayaba",
+        "Iloko": "guyabas",
+        "Malay": "jambu batu",
+        "Niuean": "kautoga",
+        "Samoan": "kua'va",
+        "Fijian": "kuava",
+        "Tonga (Tonga Islands)": "kuava",
+        "Vietnamese": "oi",
+        "Lao": "si da",
+        "Khmer": "trapaek sruk",
+        "Amharic": "zeitun"
+    },
+    "temp": {
+        "min": "20",
+        "max": "33"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3000"
+    }
+}

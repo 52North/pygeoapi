@@ -1,0 +1,19 @@
+{
+    "name": "Brassica oleracea var. italica",
+    "trivial": {
+        "English": "sprouting broccoli",
+        "French": "chou fleur",
+        "Italian": "cavolfiore",
+        "Spanish": "coliflor",
+        "German": "Spargelkohl",
+        "Unknown": "winter broccoli|eng"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1500"
+    }
+}

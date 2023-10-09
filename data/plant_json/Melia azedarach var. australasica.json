@@ -1,0 +1,14 @@
+{
+    "name": "Melia azedarach var. australasica",
+    "trivial": {
+        "English": "Persian lilac"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

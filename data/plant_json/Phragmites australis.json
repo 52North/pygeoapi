@@ -1,0 +1,17 @@
+{
+    "name": "Phragmites australis",
+    "trivial": {
+        "English": "common reed",
+        "Afrikaans": "Fluitjiesriet",
+        "Sotho": "Lehlaka",
+        "German": "Schilfrohr"
+    },
+    "temp": {
+        "min": "30",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

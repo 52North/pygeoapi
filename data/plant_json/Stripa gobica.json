@@ -1,0 +1,12 @@
+{
+    "name": "Stripa gobica",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "150",
+        "max": "300"
+    }
+}

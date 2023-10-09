@@ -1,0 +1,15 @@
+{
+    "name": "Brachiaria miliiformis",
+    "trivial": {
+        "English": "two-spiked panic",
+        "Portuguese": "milha preta"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1700",
+        "max": "2000"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Pimenta racemosa",
+    "trivial": {
+        "English": "West Indian bay tree"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2000"
+    }
+}

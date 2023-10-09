@@ -1,0 +1,14 @@
+{
+    "name": "Vicia sativa ssp. sativa",
+    "trivial": {
+        "English": "garden vetch"
+    },
+    "temp": {
+        "min": "14",
+        "max": "23"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

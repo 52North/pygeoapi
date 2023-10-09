@@ -1,0 +1,14 @@
+{
+    "name": "Acacia pruinocarpa",
+    "trivial": {
+        "Unknown": "Black gidgee"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "200",
+        "max": "250"
+    }
+}

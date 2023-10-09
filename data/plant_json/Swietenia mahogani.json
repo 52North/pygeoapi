@@ -1,0 +1,19 @@
+{
+    "name": "Swietenia mahogani",
+    "trivial": {
+        "French": "acajou",
+        "Spanish": "domingo",
+        "Malay": "cheriamahogany",
+        "English": "West Indies mahogany",
+        "Bengali": "mahagni",
+        "Dutch": "mahok"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

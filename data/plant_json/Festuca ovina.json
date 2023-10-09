@@ -1,0 +1,15 @@
+{
+    "name": "Festuca ovina",
+    "trivial": {
+        "Portuguese": "lingua de ovelha",
+        "English": "sheep's fescue"
+    },
+    "temp": {
+        "min": "10",
+        "max": "22"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

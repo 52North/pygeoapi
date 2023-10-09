@@ -1,0 +1,14 @@
+{
+    "name": "Vigna hosei",
+    "trivial": {
+        "Unknown": "sarawak bean"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "3500"
+    }
+}

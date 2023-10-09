@@ -1,0 +1,19 @@
+{
+    "name": "Pennisetum glaucum",
+    "trivial": {
+        "Unknown": "Unyawoti",
+        "Hindi": "bajri",
+        "English": "spiked millet",
+        "Tamil": "cumbu",
+        "French": "petit millet",
+        "Spanish": "pijo perla"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "400",
+        "max": "900"
+    }
+}

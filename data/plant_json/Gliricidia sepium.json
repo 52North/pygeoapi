@@ -1,0 +1,15 @@
+{
+    "name": "Gliricidia sepium",
+    "trivial": {
+        "English": "quickstick",
+        "Spanish": "madre de cacao"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2300"
+    }
+}

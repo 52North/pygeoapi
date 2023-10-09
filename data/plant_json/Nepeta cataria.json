@@ -1,0 +1,17 @@
+{
+    "name": "Nepeta cataria",
+    "trivial": {
+        "Portuguese": "neveda dos gatos",
+        "English": "catnip",
+        "Spanish": "nebeda",
+        "German": "Katzenminze"
+    },
+    "temp": {
+        "min": "7",
+        "max": "19"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Alocasia macrorrhizos",
+    "trivial": {
+        "Portuguese": "alocasia gigante",
+        "Creoles and Pidgins, French-based (Other)": "ape (Cook I, French Polynesia)",
+        "Creoles and Pidgins (Other)": "pulaka (Tuvalu)",
+        "English": "paragum",
+        "Tonga (Nyasa)": "kape (Niue,Tonga)",
+        "Samoan": "taamu",
+        "Creoles and Pidgins, English-based (Other)": "viagaga"
+    },
+    "temp": {
+        "min": "20",
+        "max": "25"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3500"
+    }
+}

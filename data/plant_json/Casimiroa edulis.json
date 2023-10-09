@@ -1,0 +1,17 @@
+{
+    "name": "Casimiroa edulis",
+    "trivial": {
+        "Unknown": "matasano",
+        "English": "white sapote",
+        "French": "sapote blanc",
+        "Spanish": "zapote blanco"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

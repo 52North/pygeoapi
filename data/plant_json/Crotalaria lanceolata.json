@@ -1,0 +1,14 @@
+{
+    "name": "Crotalaria lanceolata",
+    "trivial": {
+        "Zulu": "izaza"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1600"
+    }
+}

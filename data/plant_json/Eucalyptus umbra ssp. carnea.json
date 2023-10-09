@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus umbra ssp. carnea",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1500"
+    }
+}

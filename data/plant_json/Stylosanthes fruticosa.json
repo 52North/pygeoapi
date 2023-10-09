@@ -1,0 +1,15 @@
+{
+    "name": "Stylosanthes fruticosa",
+    "trivial": {
+        "English": "wild lucerne",
+        "Portuguese": "estilosantes arbustivo"
+    },
+    "temp": {
+        "min": "25",
+        "max": "30"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

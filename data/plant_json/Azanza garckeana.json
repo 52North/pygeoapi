@@ -1,0 +1,16 @@
+{
+    "name": "Azanza garckeana",
+    "trivial": {
+        "English": "snot apple",
+        "Unknown": "morojwa (Botswana)",
+        "Afrikaans": "snotappel"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "250",
+        "max": "750"
+    }
+}

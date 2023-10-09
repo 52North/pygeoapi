@@ -1,0 +1,29 @@
+{
+    "name": "Vitis vinifera",
+    "trivial": {
+        "Lao": "angunx",
+        "Thai": "artgun",
+        "Malay": "auggut",
+        "Indonesian": "buah anggur",
+        "Arabic": "enab",
+        "English": "wine",
+        "French": "raisin",
+        "Vietnamese": "nho",
+        "Burmese": "sa-pyit",
+        "Khmer": "tra p\u00e8ang baay chum",
+        "German": "Weintraube",
+        "Tagalog": "ubas",
+        "Portuguese": "vinha",
+        "Danish": "vindrue",
+        "Italian": "vite",
+        "Latin": "Vitis viniferae folium"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "850"
+    }
+}

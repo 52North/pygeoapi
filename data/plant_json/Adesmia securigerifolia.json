@@ -1,0 +1,14 @@
+{
+    "name": "Adesmia securigerifolia",
+    "trivial": {
+        "English": "Adesmia"
+    },
+    "temp": {
+        "min": "10",
+        "max": "25"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1300"
+    }
+}

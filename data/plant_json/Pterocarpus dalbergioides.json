@@ -1,0 +1,12 @@
+{
+    "name": "Pterocarpus dalbergioides",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "3500"
+    }
+}

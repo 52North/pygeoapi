@@ -1,0 +1,16 @@
+{
+    "name": "Psidium cattleianum",
+    "trivial": {
+        "English": "strawberry guava",
+        "German": "Erdbeerguave",
+        "French": "goyave de Chine"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1600",
+        "max": "2000"
+    }
+}

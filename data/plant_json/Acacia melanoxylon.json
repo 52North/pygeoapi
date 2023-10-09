@@ -1,0 +1,17 @@
+{
+    "name": "Acacia melanoxylon",
+    "trivial": {
+        "Spanish": "aroma salvaje",
+        "Portuguese": "ac\u00e1cia-preta (Brazil)",
+        "English": "Tasmanian blackwood",
+        "Afrikaans": "swarthout"
+    },
+    "temp": {
+        "min": "18",
+        "max": "22"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2200"
+    }
+}

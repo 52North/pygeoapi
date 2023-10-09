@@ -1,0 +1,12 @@
+{
+    "name": "Citrus deliciosa",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1500"
+    }
+}

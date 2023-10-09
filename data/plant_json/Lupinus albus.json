@@ -1,0 +1,15 @@
+{
+    "name": "Lupinus albus",
+    "trivial": {
+        "Spanish": "lupino blanco",
+        "English": "white lupine"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1000"
+    }
+}

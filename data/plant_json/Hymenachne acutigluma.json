@@ -1,0 +1,16 @@
+{
+    "name": "Hymenachne acutigluma",
+    "trivial": {
+        "English": "west indian marsh grass",
+        "Spanish": "trompetilla",
+        "Hindi": "dhal grass"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

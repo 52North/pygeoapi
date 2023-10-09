@@ -1,0 +1,12 @@
+{
+    "name": "Cinchona ledgeriana",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "24"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3000"
+    }
+}

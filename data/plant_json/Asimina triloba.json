@@ -1,0 +1,14 @@
+{
+    "name": "Asimina triloba",
+    "trivial": {
+        "Unknown": "papaw"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1200"
+    }
+}

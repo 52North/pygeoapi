@@ -1,0 +1,15 @@
+{
+    "name": "Momordica charantia",
+    "trivial": {
+        "English": "bitter gourd",
+        "Spanish": "Cundeamor (Cuba)"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "2500"
+    }
+}

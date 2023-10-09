@@ -1,0 +1,19 @@
+{
+    "name": "Vigna angularis",
+    "trivial": {
+        "English": "azuki bean",
+        "German": "adzukibohne",
+        "Italian": "fagiolo adzuki",
+        "Spanish": "poroto arroz",
+        "French": "nirikia",
+        "Korean": "red  bean"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Abelmoschus manihot",
+    "trivial": {
+        "Creoles and Pidgins, English-based (Other)": "slipery kabis",
+        "Unknown": "peli",
+        "Fijian": "bele (Fiji)",
+        "English": "slippery cabbage (Solomon Is.)",
+        "Tonga (Tonga Islands)": "pele (Tonga, Tuvalu)"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

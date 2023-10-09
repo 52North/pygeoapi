@@ -1,0 +1,20 @@
+{
+    "name": "Urochloa mosambicensis, pullulans type",
+    "trivial": {
+        "Afrikaans": "witbuffelsgras",
+        "Swahili": "tunga",
+        "Portuguese": "capim-corrente",
+        "Spanish": "daly",
+        "Tagalog": "rumput sabi",
+        "English": "sabi grass",
+        "Thai": "ya sabee"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

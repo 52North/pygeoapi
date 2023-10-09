@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus resinifera",
+    "trivial": {
+        "English": "red mahogany gum"
+    },
+    "temp": {
+        "min": "16",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2500"
+    }
+}

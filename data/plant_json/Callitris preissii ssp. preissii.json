@@ -1,0 +1,15 @@
+{
+    "name": "Callitris preissii ssp. preissii",
+    "trivial": {
+        "English": "sturdy cypress pine",
+        "Portuguese": "frenela"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "650",
+        "max": "850"
+    }
+}

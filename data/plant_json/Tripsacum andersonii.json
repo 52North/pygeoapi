@@ -1,0 +1,17 @@
+{
+    "name": "Tripsacum andersonii",
+    "trivial": {
+        "English": "Guatemala grass",
+        "Spanish": "zacate prodigio",
+        "Malayalam": "rumput jelai",
+        "Thai": "ya-kuatemala"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

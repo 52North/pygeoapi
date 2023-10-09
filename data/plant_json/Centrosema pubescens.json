@@ -1,0 +1,14 @@
+{
+    "name": "Centrosema pubescens",
+    "trivial": {
+        "Unknown": "centro"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2500"
+    }
+}

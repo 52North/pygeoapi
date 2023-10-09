@@ -1,0 +1,16 @@
+{
+    "name": "Vigna mungo",
+    "trivial": {
+        "Unknown": "bean - mung",
+        "English": "mung bean",
+        "Hindi": "urid"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "650",
+        "max": "900"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Ricinus communis",
+    "trivial": {
+        "Unknown": "lama papalagi",
+        "English": "castor oil plant",
+        "Amharic": "gullo",
+        "Afrikaans": "kasterolieboom",
+        "Hebrew": "kikayon",
+        "Sotho": "mohlafotha",
+        "Northern Sotho": "mokhura",
+        "Shona": "mufuta",
+        "Ndebele (Zimbabwe)": "umfude",
+        "Xhosa": "umhlakuva",
+        "Zulu": "umhlakuva"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

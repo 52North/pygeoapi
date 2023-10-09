@@ -1,0 +1,12 @@
+{
+    "name": "Stripa grandis",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "28"
+    },
+    "precip": {
+        "min": "200",
+        "max": "600"
+    }
+}

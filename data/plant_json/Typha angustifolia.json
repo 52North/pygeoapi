@@ -1,0 +1,20 @@
+{
+    "name": "Typha angustifolia",
+    "trivial": {
+        "Spanish": "totora",
+        "Finnish": "kapeaosmank\u00e4\u00e4mi",
+        "German": "schmalbl\u00e4ttriger rohrkolben",
+        "English": "small reed mace",
+        "Danish": "smalbladet dunhammer",
+        "Swedish": "smalkaveldun",
+        "Norwegian": "smalt dunkjevle"
+    },
+    "temp": {
+        "min": "10",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1500"
+    }
+}

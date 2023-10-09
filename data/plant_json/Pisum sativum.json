@@ -1,0 +1,20 @@
+{
+    "name": "Pisum sativum",
+    "trivial": {
+        "Portuguese": "ervilha",
+        "Spanish": "guisante",
+        "Arabic": "bisillah",
+        "English": "pea",
+        "German": "erbse",
+        "Unknown": "mattar",
+        "French": "petits pois"
+    },
+    "temp": {
+        "min": "10",
+        "max": "24"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

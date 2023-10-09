@@ -1,0 +1,21 @@
+{
+    "name": "Fortunella japonica",
+    "trivial": {
+        "Unknown": "kuit xu",
+        "Chinese": "cumquat",
+        "Portuguese": "laranja de ouro",
+        "Malay": "limau",
+        "Thai": "kham khwat",
+        "Vietnamese": "tac",
+        "Japanese": "too kin kan",
+        "English": "round kumquat"
+    },
+    "temp": {
+        "min": "26",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1500"
+    }
+}

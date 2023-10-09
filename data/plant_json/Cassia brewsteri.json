@@ -1,0 +1,12 @@
+{
+    "name": "Cassia brewsteri",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1200"
+    }
+}

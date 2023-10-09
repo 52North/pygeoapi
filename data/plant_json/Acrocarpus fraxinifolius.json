@@ -1,0 +1,12 @@
+{
+    "name": "Acrocarpus fraxinifolius",
+    "trivial": {},
+    "temp": {
+        "min": "28",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1500"
+    }
+}

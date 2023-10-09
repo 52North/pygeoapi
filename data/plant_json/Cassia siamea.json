@@ -1,0 +1,25 @@
+{
+    "name": "Cassia siamea",
+    "trivial": {
+        "Khmer": "angkanh",
+        "English": "yellow cassia",
+        "Indonesian": "johar",
+        "Vietnamese": "muoofng xieem",
+        "French": "casse de Siam",
+        "German": "Cassod Baum",
+        "Malay": "sebusok",
+        "Thai": "khilek yai",
+        "Lao": "khiz hlek",
+        "Tagalog": "robles",
+        "Karen": "pha doh",
+        "Malayalam": "yaha"
+    },
+    "temp": {
+        "min": "23",
+        "max": "33"
+    },
+    "precip": {
+        "min": "650",
+        "max": "1500"
+    }
+}

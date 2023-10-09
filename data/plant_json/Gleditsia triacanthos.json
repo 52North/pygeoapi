@@ -1,0 +1,15 @@
+{
+    "name": "Gleditsia triacanthos",
+    "trivial": {
+        "Portuguese": "espinheiro da Virginia",
+        "English": "three-thorned acacia"
+    },
+    "temp": {
+        "min": "26",
+        "max": "38"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

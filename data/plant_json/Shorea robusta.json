@@ -1,0 +1,15 @@
+{
+    "name": "Shorea robusta",
+    "trivial": {
+        "English": "Sal Tree",
+        "Hindi": "Salwa"
+    },
+    "temp": {
+        "min": "28",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3500"
+    }
+}

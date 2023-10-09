@@ -1,0 +1,15 @@
+{
+    "name": "Fragaria chiloensis",
+    "trivial": {
+        "English": "frutilla",
+        "Portuguese": "morangueiro do Chile"
+    },
+    "temp": {
+        "min": "11",
+        "max": "18"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Casuarina decaisneana",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "200",
+        "max": "250"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Afzelia africana",
+    "trivial": {
+        "English": "doussie",
+        "Portuguese": "mogno africano"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Acacia leucophloea",
+    "trivial": {
+        "Hindi": "Reonja",
+        "Burmese": "Htanaung tree",
+        "Unknown": "Kuteera-Gum",
+        "English": "reonja"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1700"
+    }
+}

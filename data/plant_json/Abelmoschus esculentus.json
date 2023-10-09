@@ -1,0 +1,37 @@
+{
+    "name": "Abelmoschus esculentus",
+    "trivial": {
+        "Unknown": "vendakai",
+        "Danish": "okra",
+        "Japanese": "okura",
+        "Thai": "krachiapkhieo",
+        "Russian": "bamija",
+        "Arabic": "bamya",
+        "English": "lady's finger",
+        "Portuguese": "quingombo",
+        "Hindi": "tori",
+        "Fijian": "gombo",
+        "Indonesian": "okay",
+        "Spanish": "quimgomb\u00f3",
+        "Vietnamese": "d\u00e2u bap",
+        "German": "Okra",
+        "Italian": "ocra",
+        "Dutch": "okra",
+        "French": "okra",
+        "Tagalog": "saluyota bunga",
+        "Chinese": "yong kok dau",
+        "Malay": "sayur bendi",
+        "Tsonga": "mandhandha",
+        "Northern Sotho": "thelele",
+        "Nyanja": "thelele",
+        "Lao": "tuah lek"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

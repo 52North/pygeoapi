@@ -1,0 +1,14 @@
+{
+    "name": "Bambusa blumeana",
+    "trivial": {
+        "English": "thorny bamboo"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "4000"
+    }
+}

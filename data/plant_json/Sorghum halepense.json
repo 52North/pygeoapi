@@ -1,0 +1,15 @@
+{
+    "name": "Sorghum halepense",
+    "trivial": {
+        "English": "racehorse grass",
+        "Portuguese": "peripomonga"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "500",
+        "max": "750"
+    }
+}

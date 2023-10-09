@@ -1,0 +1,15 @@
+{
+    "name": "Echinochloa polystachya",
+    "trivial": {
+        "English": "creeping rivergrass",
+        "Portuguese": "capim de Pernambuco"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1900",
+        "max": "4000"
+    }
+}

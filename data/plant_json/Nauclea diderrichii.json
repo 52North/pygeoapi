@@ -1,0 +1,15 @@
+{
+    "name": "Nauclea diderrichii",
+    "trivial": {
+        "English": "West African boxwood",
+        "Portuguese": "sarcocefalo"
+    },
+    "temp": {
+        "min": "28",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1600",
+        "max": "3500"
+    }
+}

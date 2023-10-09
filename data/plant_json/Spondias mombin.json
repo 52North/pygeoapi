@@ -1,0 +1,18 @@
+{
+    "name": "Spondias mombin",
+    "trivial": {
+        "Portuguese": "cajazeiro",
+        "English": "yellow mombin",
+        "Spanish": "uvo",
+        "Unknown": "tapiriba",
+        "French": "prunier mombin"
+    },
+    "temp": {
+        "min": "21",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

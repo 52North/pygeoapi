@@ -1,0 +1,14 @@
+{
+    "name": "Vigna luteola",
+    "trivial": {
+        "Unknown": "toshimbo shimbo (Co)"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2500"
+    }
+}

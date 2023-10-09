@@ -1,0 +1,17 @@
+{
+    "name": "Pinus pinea",
+    "trivial": {
+        "English": "umbrella pine",
+        "French": "pin pignon",
+        "Portuguese": "pinheiro manso",
+        "Italian": "pino marittimo"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

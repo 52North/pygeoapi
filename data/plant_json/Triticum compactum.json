@@ -1,0 +1,14 @@
+{
+    "name": "Triticum compactum",
+    "trivial": {
+        "English": "club wheat"
+    },
+    "temp": {
+        "min": "10",
+        "max": "16"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus robusta",
+    "trivial": {
+        "English": "swamp mahogany"
+    },
+    "temp": {
+        "min": "16",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Sesamum indicum",
+    "trivial": {
+        "Spanish": "sesamo",
+        "Portuguese": "gergelim",
+        "Japanese": "goma",
+        "Chinese": "zhima",
+        "Russian": "kunzhut",
+        "Amharic": "selit",
+        "Dutch": "sesam",
+        "German": "sesam",
+        "Swedish": "sesam",
+        "English": "sesame",
+        "French": "sesame",
+        "Italian": "sesamo",
+        "Arabic": "simsim",
+        "Hindi": "til"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

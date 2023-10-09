@@ -1,0 +1,21 @@
+{
+    "name": "Cucumis sativus",
+    "trivial": {
+        "Italian": "cetriolo",
+        "French": "concombre",
+        "English": "gherkin",
+        "German": "Gurke",
+        "Chinese": "huanggua",
+        "Unknown": "Kukamba",
+        "Fijian": "kiukaba",
+        "Tonga (Tonga Islands)": "kiukamupa"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1200"
+    }
+}

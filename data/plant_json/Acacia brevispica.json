@@ -1,0 +1,15 @@
+{
+    "name": "Acacia brevispica",
+    "trivial": {
+        "Afrikaans": "Doringkiedoring",
+        "English": "Prickly Thorn"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "450",
+        "max": "700"
+    }
+}

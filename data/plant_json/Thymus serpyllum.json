@@ -1,0 +1,18 @@
+{
+    "name": "Thymus serpyllum",
+    "trivial": {
+        "Latin": "Serpylli herba",
+        "English": "wild thyme",
+        "French": "thym sauvage",
+        "German": "wilder Thymian",
+        "Danish": "timian"
+    },
+    "temp": {
+        "min": "11",
+        "max": "22"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

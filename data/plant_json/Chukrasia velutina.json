@@ -1,0 +1,12 @@
+{
+    "name": "Chukrasia velutina",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "3000"
+    }
+}

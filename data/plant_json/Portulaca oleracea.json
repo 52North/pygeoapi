@@ -1,0 +1,26 @@
+{
+    "name": "Portulaca oleracea",
+    "trivial": {
+        "Arabic": "rijla",
+        "Berber languages": "tafrita",
+        "Bengali": "chhota lunia",
+        "Italian": "portulaca",
+        "Hindi": "kursa",
+        "English": "wild purslane",
+        "German": "Portulak",
+        "Gujarati": "loni",
+        "Chinese": "ma Chia Xian",
+        "Vietnamese": "slom ca",
+        "French": "pourpier",
+        "Hebrew": "tzalaf",
+        "Spanish": "verdolaja"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

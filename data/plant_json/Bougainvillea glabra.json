@@ -1,0 +1,16 @@
+{
+    "name": "Bougainvillea glabra",
+    "trivial": {
+        "German": "drillingsblume",
+        "English": "paper flower",
+        "Spanish": "trinitaria"
+    },
+    "temp": {
+        "min": "18",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

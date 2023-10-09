@@ -1,0 +1,12 @@
+{
+    "name": "Melaleuca dealbata",
+    "trivial": {},
+    "temp": {
+        "min": "31",
+        "max": "37"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1500"
+    }
+}

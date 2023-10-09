@@ -1,0 +1,12 @@
+{
+    "name": "Sesbania formosa",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "38"
+    },
+    "precip": {
+        "min": "250",
+        "max": "1100"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Robinia pseudoacacia",
+    "trivial": {
+        "Portuguese": "robinia falsa acacia",
+        "German": "Silberregen",
+        "English": "false acacia",
+        "Danish": "robinie",
+        "French": "faux acacia",
+        "Italian": "robinia",
+        "Latin": "Robiniae pseudoacaciae flos"
+    },
+    "temp": {
+        "min": "15",
+        "max": "32"
+    },
+    "precip": {
+        "min": "450",
+        "max": "700"
+    }
+}

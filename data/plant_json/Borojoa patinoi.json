@@ -1,0 +1,14 @@
+{
+    "name": "Borojoa patinoi",
+    "trivial": {
+        "Spanish": "Boroj\u00f3"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "6000"
+    }
+}

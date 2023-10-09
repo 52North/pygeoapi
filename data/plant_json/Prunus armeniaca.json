@@ -1,0 +1,19 @@
+{
+    "name": "Prunus armeniaca",
+    "trivial": {
+        "French": "abricot",
+        "Spanish": "albaricoque",
+        "Italian": "albicocca",
+        "Portuguese": "damasqueiro",
+        "English": "Tibetan apricot",
+        "German": "Aprikose"
+    },
+    "temp": {
+        "min": "14",
+        "max": "35"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Allium cepa var. cepa",
+    "trivial": {
+        "Unknown": "Onions (bulb)"
+    },
+    "temp": {
+        "min": "12",
+        "max": "25"
+    },
+    "precip": {
+        "min": "350",
+        "max": "600"
+    }
+}

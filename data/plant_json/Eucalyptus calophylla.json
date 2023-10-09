@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus calophylla",
+    "trivial": {
+        "English": "marri-kino tree"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Chromolaena odorata",
+    "trivial": {
+        "Tagalog": "huluhagonoi",
+        "English": "triffid weed",
+        "French": "herbe du Laos",
+        "Chamorro": "masigsig (Chamorro)",
+        "Unknown": "wisolmatenrehwei (Pohnpei)",
+        "Palauan": "ngesngesil (Palau)",
+        "Truk": "otuot (Chuuk)",
+        "Afrikaans": "paraffienbos",
+        "Indonesian": "rumput putih (Indonesia)",
+        "German": "Siam-Kraut",
+        "Zulu": "usandanezwe"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

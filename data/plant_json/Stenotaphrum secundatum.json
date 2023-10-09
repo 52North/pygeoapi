@@ -1,0 +1,15 @@
+{
+    "name": "Stenotaphrum secundatum",
+    "trivial": {
+        "English": "buffalo turf grass",
+        "Afrikaans": "strand-buffelsgras"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2000"
+    }
+}

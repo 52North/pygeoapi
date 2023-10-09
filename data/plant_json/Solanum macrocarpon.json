@@ -1,0 +1,25 @@
+{
+    "name": "Solanum macrocarpon",
+    "trivial": {
+        "English": "tomato-fruited eggplant",
+        "Dutch": "antroewa",
+        "German": "Afrikanische eierpflanze",
+        "Swedish": "Afrikansk \u00e4ggplanta",
+        "Danish": "Afrikansk \u00e6gplante",
+        "French": "grosse anghive",
+        "Spanish": "berenjena",
+        "Portuguese": "beringela africana",
+        "Italian": "melanzana petonciano",
+        "Japanese": "sennari nasu",
+        "Malay": "terong santan",
+        "Sundanese": "terong gayung"
+    },
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

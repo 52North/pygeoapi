@@ -1,0 +1,12 @@
+{
+    "name": "Melaleuca leucadendron",
+    "trivial": {},
+    "temp": {
+        "min": "28",
+        "max": "37"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1400"
+    }
+}

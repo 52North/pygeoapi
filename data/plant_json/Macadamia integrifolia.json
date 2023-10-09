@@ -1,0 +1,15 @@
+{
+    "name": "Macadamia integrifolia",
+    "trivial": {
+        "English": "macadamia nut",
+        "Portuguese": "noz de macadamia"
+    },
+    "temp": {
+        "min": "10",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3000"
+    }
+}

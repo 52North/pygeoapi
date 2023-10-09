@@ -1,0 +1,16 @@
+{
+    "name": "Allium tuberosum",
+    "trivial": {
+        "Portuguese": "cebolinho da China",
+        "English": "Oriental garlic",
+        "Unknown": "ku ts'ai"
+    },
+    "temp": {
+        "min": "10",
+        "max": "20"
+    },
+    "precip": {
+        "min": "850",
+        "max": "2200"
+    }
+}

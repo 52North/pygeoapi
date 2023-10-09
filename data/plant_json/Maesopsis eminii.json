@@ -1,0 +1,14 @@
+{
+    "name": "Maesopsis eminii",
+    "trivial": {
+        "English": "musizi"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

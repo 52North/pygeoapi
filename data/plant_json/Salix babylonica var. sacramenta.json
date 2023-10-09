@@ -1,0 +1,12 @@
+{
+    "name": "Salix babylonica var. sacramenta",
+    "trivial": {},
+    "temp": {
+        "min": "21",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1300"
+    }
+}

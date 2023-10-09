@@ -1,0 +1,16 @@
+{
+    "name": "Poa compressa",
+    "trivial": {
+        "English": "Canadian meadowgrass",
+        "Portuguese": "erva da febra do Canada'",
+        "French": "paturin du Canada"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1300"
+    }
+}

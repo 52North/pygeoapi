@@ -1,0 +1,20 @@
+{
+    "name": "Borago officinalis",
+    "trivial": {
+        "Norwegian": "agurkurt",
+        "Swedish": "stoff\u00e9rblomma",
+        "English": "borage",
+        "Latin": "Oleum Boraginis",
+        "German": "borretsch",
+        "Danish": "hjulkrone",
+        "Finnish": "purasruoho"
+    },
+    "temp": {
+        "min": "15",
+        "max": "22"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

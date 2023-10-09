@@ -1,0 +1,14 @@
+{
+    "name": "Pentaclethra macrophylla",
+    "trivial": {
+        "English": "oil bean tree"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "2200"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Desmanthus leptophyllus",
+    "trivial": {
+        "English": "slenderleaf bundleflower",
+        "Portuguese": "frijolillo",
+        "Spanish": "malicia de bode"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1800"
+    }
+}

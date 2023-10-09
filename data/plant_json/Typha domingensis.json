@@ -1,0 +1,12 @@
+{
+    "name": "Typha domingensis",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1400"
+    }
+}

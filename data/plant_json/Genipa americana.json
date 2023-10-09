@@ -1,0 +1,15 @@
+{
+    "name": "Genipa americana",
+    "trivial": {
+        "English": "marmalade-box",
+        "Portuguese": "jenipapeiro das Guianas"
+    },
+    "temp": {
+        "min": "24",
+        "max": "31"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1700"
+    }
+}

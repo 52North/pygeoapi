@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus phoenicea",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

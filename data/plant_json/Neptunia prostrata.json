@@ -1,0 +1,12 @@
+{
+    "name": "Neptunia prostrata",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

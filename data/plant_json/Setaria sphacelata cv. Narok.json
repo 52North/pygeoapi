@@ -1,0 +1,12 @@
+{
+    "name": "Setaria sphacelata cv. Narok",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

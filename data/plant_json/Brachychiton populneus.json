@@ -1,0 +1,14 @@
+{
+    "name": "Brachychiton populneus",
+    "trivial": {
+        "English": "kurrajong"
+    },
+    "temp": {
+        "min": "25",
+        "max": "32"
+    },
+    "precip": {
+        "min": "450",
+        "max": "750"
+    }
+}

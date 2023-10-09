@@ -1,0 +1,14 @@
+{
+    "name": "Syzygium javanicum",
+    "trivial": {
+        "Unknown": "Java apple"
+    },
+    "temp": {
+        "min": "23",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2300"
+    }
+}

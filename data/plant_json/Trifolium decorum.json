@@ -1,0 +1,12 @@
+{
+    "name": "Trifolium decorum",
+    "trivial": {},
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Desmodium gyroides",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1700",
+        "max": "2700"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Trifolium mattirolianum",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1900"
+    }
+}

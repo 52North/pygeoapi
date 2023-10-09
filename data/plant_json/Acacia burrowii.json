@@ -1,0 +1,12 @@
+{
+    "name": "Acacia burrowii",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "500",
+        "max": "600"
+    }
+}

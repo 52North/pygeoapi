@@ -1,0 +1,16 @@
+{
+    "name": "Passiflora mollissima",
+    "trivial": {
+        "English": "banana passionfruit",
+        "Hawaiian": "poka",
+        "Spanish": "tumbo del norte"
+    },
+    "temp": {
+        "min": "15",
+        "max": "18"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1700"
+    }
+}

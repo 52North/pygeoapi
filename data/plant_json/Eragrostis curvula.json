@@ -1,0 +1,24 @@
+{
+    "name": "Eragrostis curvula",
+    "trivial": {
+        "English": "weeping lovegrass",
+        "Swedish": "Afrikanskt k\u00e4rleksgr\u00e4s",
+        "Portuguese": "capim-chor\u00e3o",
+        "French": "eragrostide courb\u00e9e",
+        "Italian": "eragrostide curvula",
+        "German": "gekr\u00fcmmtes liebesgras",
+        "Serbo-Croatian (Roman)": "kosmatka Africka",
+        "Afrikaans": "oulandsgras",
+        "Spanish": "pasto llor\u00f3n",
+        "Turkish": "salkim yalaf",
+        "Japanese": "wiipin gurabu gurasu"
+    },
+    "temp": {
+        "min": "17",
+        "max": "32"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

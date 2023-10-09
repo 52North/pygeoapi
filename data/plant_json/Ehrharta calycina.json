@@ -1,0 +1,12 @@
+{
+    "name": "Ehrharta calycina",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "16"
+    },
+    "precip": {
+        "min": "350",
+        "max": "450"
+    }
+}

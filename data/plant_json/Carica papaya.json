@@ -1,0 +1,28 @@
+{
+    "name": "Carica papaya",
+    "trivial": {
+        "French": "papayier",
+        "Malayalam": "ketalah",
+        "Khmer": "lhong",
+        "Vietnamese": "du du",
+        "Samoan": "esi",
+        "Indonesian": "kates",
+        "Lao": "houng",
+        "Unknown": "te papaya (Kiribati)",
+        "Spanish": "lechoza (Col.)",
+        "Tonga (Tonga Islands)": "lesi",
+        "Thai": "malakor",
+        "English": "pawpaw",
+        "German": "Papaja",
+        "Burmese": "thimbaw",
+        "Fijian": "weleti"
+    },
+    "temp": {
+        "min": "21",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

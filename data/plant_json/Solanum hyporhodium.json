@@ -1,0 +1,14 @@
+{
+    "name": "Solanum hyporhodium",
+    "trivial": {
+        "English": "cocona shrub"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1100"
+    }
+}

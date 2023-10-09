@@ -1,0 +1,30 @@
+{
+    "name": "Phalaris aquatica",
+    "trivial": {
+        "Persian": "quambu",
+        "French": "phalaris noueux",
+        "Serbo-Croatian (Roman)": "bljestac ostri",
+        "English": "toowoomba canary grass",
+        "Portuguese": "capim-doce",
+        "Hebrew": "chafurit hapekaim",
+        "Italian": "falaride tuberosa",
+        "Spanish": "zacate de alpiste",
+        "German": "zwiebellieschgras",
+        "Japanese": "haadingu gurasu",
+        "Russian": "kanareecnik klubnevoj",
+        "Turkish": "k\u00f6ksapli yumrulu kanyas",
+        "Swedish": "kn\u00f6lflen",
+        "Afrikaans": "knolkanariegras",
+        "Dutch": "knolrietgras",
+        "Arabic": "koram",
+        "Polish": "waskooskrzydlona"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

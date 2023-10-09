@@ -1,0 +1,15 @@
+{
+    "name": "Callitris endlicheri",
+    "trivial": {
+        "English": "red cypress pine",
+        "Portuguese": "sandaraca da Australia"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "550",
+        "max": "800"
+    }
+}

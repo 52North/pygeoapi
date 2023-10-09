@@ -1,0 +1,12 @@
+{
+    "name": "Lonchocarpus nicou",
+    "trivial": {},
+    "temp": {
+        "min": "23",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2300",
+        "max": "2700"
+    }
+}

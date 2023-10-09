@@ -1,0 +1,12 @@
+{
+    "name": "Lotononis bainesii",
+    "trivial": {},
+    "temp": {
+        "min": "14",
+        "max": "32"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1600"
+    }
+}

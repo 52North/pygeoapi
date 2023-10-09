@@ -1,0 +1,15 @@
+{
+    "name": "Prunus mume",
+    "trivial": {
+        "Portuguese": "alperceiro do Japao",
+        "English": "mume"
+    },
+    "temp": {
+        "min": "18",
+        "max": "34"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

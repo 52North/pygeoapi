@@ -1,0 +1,17 @@
+{
+    "name": "Raphanus sativus",
+    "trivial": {
+        "English": "leafy daikon",
+        "Unknown": "radish",
+        "Hindi": "mooli",
+        "German": "Radieschen"
+    },
+    "temp": {
+        "min": "12",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

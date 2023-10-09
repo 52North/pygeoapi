@@ -1,0 +1,25 @@
+{
+    "name": "Citrus aurantium",
+    "trivial": {
+        "Italian": "Arancia forte",
+        "Dutch": "Oranjeboom",
+        "English": "sour orange",
+        "German": "Pomeranzenbaum",
+        "Chinese": "Suan cheng",
+        "Unknown": "Kahil (Visayan)",
+        "Finnish": "Pomeranssi",
+        "Malay": "Jeruk manis",
+        "Spanish": "Naranjo de fruta agria",
+        "French": "Oranger \u00e0 fruits amers",
+        "Danish": "Pomerans",
+        "Thai": "Som kliang"
+    },
+    "temp": {
+        "min": "25",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1400"
+    }
+}

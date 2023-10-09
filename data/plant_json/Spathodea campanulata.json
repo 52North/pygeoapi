@@ -1,0 +1,15 @@
+{
+    "name": "Spathodea campanulata",
+    "trivial": {
+        "English": "tulip tree",
+        "German": "Tulpenbaum"
+    },
+    "temp": {
+        "min": "27",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "2000"
+    }
+}

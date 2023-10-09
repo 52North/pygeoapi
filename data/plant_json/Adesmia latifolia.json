@@ -1,0 +1,12 @@
+{
+    "name": "Adesmia latifolia",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

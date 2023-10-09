@@ -1,0 +1,12 @@
+{
+    "name": "Strychnos innocua",
+    "trivial": {},
+    "temp": {
+        "min": "19",
+        "max": "31"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

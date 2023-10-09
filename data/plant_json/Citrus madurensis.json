@@ -1,0 +1,15 @@
+{
+    "name": "Citrus madurensis",
+    "trivial": {
+        "English": "Panama orange",
+        "Portuguese": "limoeiro do Japao"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

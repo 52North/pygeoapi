@@ -1,0 +1,12 @@
+{
+    "name": "Caryocar nuciferum",
+    "trivial": {},
+    "temp": {
+        "min": "21",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1600",
+        "max": "2000"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Chrysophyllum albidum",
+    "trivial": {
+        "Ganda": "nkalate",
+        "English": "star apple"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "2000"
+    }
+}

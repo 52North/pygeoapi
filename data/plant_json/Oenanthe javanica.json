@@ -1,0 +1,16 @@
+{
+    "name": "Oenanthe javanica",
+    "trivial": {
+        "English": "piopo",
+        "Portuguese": "funcho da China",
+        "Unknown": "Water dropwort"
+    },
+    "temp": {
+        "min": "10",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

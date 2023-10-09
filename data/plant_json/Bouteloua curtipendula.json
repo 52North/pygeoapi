@@ -1,0 +1,12 @@
+{
+    "name": "Bouteloua curtipendula",
+    "trivial": {},
+    "temp": {
+        "min": "13",
+        "max": "22"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

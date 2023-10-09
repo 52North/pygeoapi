@@ -1,0 +1,16 @@
+{
+    "name": "Pinus canariensis",
+    "trivial": {
+        "English": "Canary Islands pine",
+        "German": "Kanarenkiefer",
+        "Portuguese": "pinheiro das Canarias"
+    },
+    "temp": {
+        "min": "19",
+        "max": "29"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

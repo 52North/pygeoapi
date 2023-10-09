@@ -1,0 +1,15 @@
+{
+    "name": "Eucalyptus salmonophloia",
+    "trivial": {
+        "Portuguese": "eucalipto salmao",
+        "English": "salmon gum tree"
+    },
+    "temp": {
+        "min": "28",
+        "max": "36"
+    },
+    "precip": {
+        "min": "300",
+        "max": "500"
+    }
+}

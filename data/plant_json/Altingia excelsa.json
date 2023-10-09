@@ -1,0 +1,12 @@
+{
+    "name": "Altingia excelsa",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

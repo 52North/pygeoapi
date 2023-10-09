@@ -1,0 +1,17 @@
+{
+    "name": "Apium graveolens var. rapaceum",
+    "trivial": {
+        "Unknown": "knolselderij",
+        "French": "c\u00e9leri-rave",
+        "English": "turnip rooted celery",
+        "German": "Wurzelsellerie"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1200"
+    }
+}

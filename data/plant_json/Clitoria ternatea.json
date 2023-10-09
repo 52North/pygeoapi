@@ -1,0 +1,20 @@
+{
+    "name": "Clitoria ternatea",
+    "trivial": {
+        "Hindi": "Gokarni",
+        "Spanish": "zapatillo de la reina",
+        "German": "Blaue Schmetterlingswicke",
+        "English": "cordofan-pea",
+        "French": "clitore de ternate",
+        "Italian": "fagiolo indiano",
+        "Sinhalese": "katarolu"
+    },
+    "temp": {
+        "min": "19",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

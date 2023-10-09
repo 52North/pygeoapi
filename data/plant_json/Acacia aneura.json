@@ -1,0 +1,14 @@
+{
+    "name": "Acacia aneura",
+    "trivial": {
+        "English": "Yarran"
+    },
+    "temp": {
+        "min": "20",
+        "max": "34"
+    },
+    "precip": {
+        "min": "250",
+        "max": "450"
+    }
+}

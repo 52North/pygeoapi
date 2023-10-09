@@ -1,0 +1,16 @@
+{
+    "name": "Schinus molle",
+    "trivial": {
+        "Afrikaans": "peperboom",
+        "English": "pepper tree",
+        "Unknown": "qundo berbere (Amargna)"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "400",
+        "max": "500"
+    }
+}

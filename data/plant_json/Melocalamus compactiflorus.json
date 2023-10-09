@@ -1,0 +1,12 @@
+{
+    "name": "Melocalamus compactiflorus",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

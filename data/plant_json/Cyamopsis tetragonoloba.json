@@ -1,0 +1,31 @@
+{
+    "name": "Cyamopsis tetragonoloba",
+    "trivial": {
+        "Hindi": "babachi",
+        "Marathi": "bavachi",
+        "Kannada": "goreekaye",
+        "English": "guar bean",
+        "Tamil": "kothaverai",
+        "French": "cyamopse a quatre ailes",
+        "Sanskrit": "gunwar",
+        "Telugu": "gorechikudi",
+        "Chinese": "guaerdou",
+        "Oriya": "guanra chhuim",
+        "German": "guar",
+        "Gujarati": "guvarphalli",
+        "Bengali": "jhar sim",
+        "Unknown": "kotaranga",
+        "Malayalam": "kothavara",
+        "Malay": "kottavarai",
+        "Swahili": "mgwaru",
+        "Burmese": "walee-pe"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Chrysophyllum cainito",
+    "trivial": {
+        "Unknown": "caimito",
+        "English": "starapple",
+        "French": "pomme surette",
+        "Spanish": "estrella",
+        "Vietnamese": "vu Sua",
+        "Malayalam": "swarnapathry",
+        "Thai": "sataa appoen",
+        "Indonesian": "sawo kadu"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1400"
+    }
+}

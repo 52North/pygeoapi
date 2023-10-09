@@ -1,0 +1,16 @@
+{
+    "name": "Pinus ponderosa",
+    "trivial": {
+        "English": "Western yellow pine",
+        "French": "pin jaune",
+        "Portuguese": "pinheiro Ponderosa"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

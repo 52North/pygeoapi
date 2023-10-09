@@ -1,0 +1,12 @@
+{
+    "name": "Aleurites fordii",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "22"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1200"
+    }
+}

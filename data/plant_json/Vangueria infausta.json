@@ -1,0 +1,23 @@
+{
+    "name": "Vangueria infausta",
+    "trivial": {
+        "English": "wild medlar",
+        "Afrikaans": "wildemispel",
+        "Swazi": "umNtulwa",
+        "Northern Sotho": "mmilo",
+        "Tswana": "mothwany\u00ea",
+        "Tsonga": "mpfilwa",
+        "Swahili": "viru",
+        "Venda": "muzwilu",
+        "Zulu": "umViyo",
+        "Xhosa": "umVilo"
+    },
+    "temp": {
+        "min": "17",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

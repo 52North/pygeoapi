@@ -1,0 +1,17 @@
+{
+    "name": "Phaseolus coccineus",
+    "trivial": {
+        "English": "scarlet runner bean",
+        "Unknown": "cubaces",
+        "Spanish": "frijol chamborote",
+        "French": "haricot d'Espagne"
+    },
+    "temp": {
+        "min": "12",
+        "max": "26"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

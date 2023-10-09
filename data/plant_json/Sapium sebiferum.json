@@ -1,0 +1,16 @@
+{
+    "name": "Sapium sebiferum",
+    "trivial": {
+        "English": "vegetable tallow",
+        "Portuguese": "uro",
+        "Hindi": "vilayati shisham"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Triticum dicoccon",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

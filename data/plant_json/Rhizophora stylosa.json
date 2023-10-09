@@ -1,0 +1,14 @@
+{
+    "name": "Rhizophora stylosa",
+    "trivial": {
+        "English": "stilt mangrove"
+    },
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

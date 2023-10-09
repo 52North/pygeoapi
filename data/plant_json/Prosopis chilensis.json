@@ -1,0 +1,12 @@
+{
+    "name": "Prosopis chilensis",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "300",
+        "max": "500"
+    }
+}

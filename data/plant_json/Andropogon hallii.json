@@ -1,0 +1,15 @@
+{
+    "name": "Andropogon hallii",
+    "trivial": {
+        "Portuguese": "anadelfia da areia",
+        "English": "sand bluestem"
+    },
+    "temp": {
+        "min": "10",
+        "max": "20"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Agathis dammara",
+    "trivial": {},
+    "temp": {
+        "min": "28",
+        "max": "34"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3500"
+    }
+}

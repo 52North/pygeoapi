@@ -1,0 +1,19 @@
+{
+    "name": "Trapa natans",
+    "trivial": {
+        "English": "water nut",
+        "Portuguese": "castanha de agua",
+        "Danish": "hornn\u00f8d",
+        "Swedish": "sj\u00f6n\u00f6t",
+        "Norwegian": "vassn\u00f8tt",
+        "German": "wassernu\u00df"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1200"
+    }
+}

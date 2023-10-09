@@ -1,0 +1,12 @@
+{
+    "name": "Combretum micranthum",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1300"
+    }
+}

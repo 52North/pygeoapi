@@ -1,0 +1,12 @@
+{
+    "name": "Orbignya oleifera",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1700"
+    }
+}

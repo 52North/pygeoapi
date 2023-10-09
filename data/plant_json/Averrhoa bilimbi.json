@@ -1,0 +1,18 @@
+{
+    "name": "Averrhoa bilimbi",
+    "trivial": {
+        "German": "Gurkenbaum",
+        "Hindi": "belimbing buloh",
+        "Unknown": "kamrakh",
+        "English": "tree sorrel",
+        "Swahili": "mbirimbi"
+    },
+    "temp": {
+        "min": "23",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2300"
+    }
+}

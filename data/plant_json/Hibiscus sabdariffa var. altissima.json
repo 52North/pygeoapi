@@ -1,0 +1,19 @@
+{
+    "name": "Hibiscus sabdariffa var. altissima",
+    "trivial": {
+        "Spanish": "vi\u00f1uela",
+        "Portuguese": "vinagreira",
+        "Arabic": "karkad\u00e9",
+        "English": "sour-sour",
+        "French": "oseille de Guin\u00e9e",
+        "Dutch": "zuring"
+    },
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

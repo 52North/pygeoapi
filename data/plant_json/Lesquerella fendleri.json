@@ -1,0 +1,14 @@
+{
+    "name": "Lesquerella fendleri",
+    "trivial": {
+        "English": "yellow-top"
+    },
+    "temp": {
+        "min": "11",
+        "max": "18"
+    },
+    "precip": {
+        "min": "300",
+        "max": "1100"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Leucaena pallida",
+    "trivial": {
+        "Spanish": "timbre"
+    },
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1800"
+    }
+}

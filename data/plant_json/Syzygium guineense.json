@@ -1,0 +1,12 @@
+{
+    "name": "Syzygium guineense",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2300"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "Acacia karroo",
+    "trivial": {
+        "English": "white thorn",
+        "Afrikaans": "witdoring",
+        "Zulu": "umunga",
+        "Ndebele (Zimbabwe)": "isinga",
+        "Swazi": "isinga",
+        "Sotho": "leoka",
+        "Northern Sotho": "mooka",
+        "Tswana": "mookana",
+        "Shona": "munenge",
+        "Tsonga": "munga",
+        "Venda": "muunga-ludzi",
+        "Herero": "orusu",
+        "Xhosa": "umNga"
+    },
+    "temp": {
+        "min": "19",
+        "max": "33"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1300"
+    }
+}

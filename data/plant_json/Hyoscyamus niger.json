@@ -1,0 +1,16 @@
+{
+    "name": "Hyoscyamus niger",
+    "trivial": {
+        "German": "Bilsenkraut",
+        "English": "henblain",
+        "French": "mort aux poules"
+    },
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "-",
+        "max": "-"
+    }
+}

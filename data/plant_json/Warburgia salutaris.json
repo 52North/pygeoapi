@@ -1,0 +1,17 @@
+{
+    "name": "Warburgia salutaris",
+    "trivial": {
+        "Zulu": "isibhaha",
+        "Venda": "manaka",
+        "English": "pepperbark tree",
+        "Tsonga": "shibaha"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1500"
+    }
+}

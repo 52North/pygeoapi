@@ -1,0 +1,12 @@
+{
+    "name": "Acacia latzii",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "150",
+        "max": "200"
+    }
+}

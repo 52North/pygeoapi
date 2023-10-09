@@ -1,0 +1,12 @@
+{
+    "name": "Ixophorus unisetus",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Acacia calcicola",
+    "trivial": {
+        "Unknown": "Myall-gidgee"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "150",
+        "max": "100"
+    }
+}

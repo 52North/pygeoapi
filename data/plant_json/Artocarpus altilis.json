@@ -1,0 +1,32 @@
+{
+    "name": "Artocarpus altilis",
+    "trivial": {
+        "Spanish": "tupan",
+        "French": "fruit a pain",
+        "English": "breadfruit",
+        "Dutch": "broodvrucht",
+        "German": "Brotfrucht",
+        "Portuguese": "pao de massa",
+        "Tagalog": "rimas",
+        "Creoles and Pidgins (Other)": "kapiak",
+        "Malay": "sukun",
+        "Indonesian": "timbul",
+        "Thai": "sa-ke",
+        "Khmer": "sak\u00e9\u00e9",
+        "Fijian": "uto-sore",
+        "Maori": "Kuru",
+        "Gilbertese": "mai",
+        "Tonga (Tonga Islands)": "mei",
+        "Vietnamese": "sak\u00ea",
+        "Hawaiian": "ulu",
+        "Samoan": "ulu"
+    },
+    "temp": {
+        "min": "21",
+        "max": "33"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

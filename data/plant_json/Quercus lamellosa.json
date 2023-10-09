@@ -1,0 +1,12 @@
+{
+    "name": "Quercus lamellosa",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "4000"
+    }
+}

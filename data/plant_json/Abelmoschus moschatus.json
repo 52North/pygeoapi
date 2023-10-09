@@ -1,0 +1,27 @@
+{
+    "name": "Abelmoschus moschatus",
+    "trivial": {
+        "Portuguese": "rosa almiscarada",
+        "English": "tropical jewel-hibiscus",
+        "French": "ambrette",
+        "Unknown": "varttilai kasturi",
+        "Fijian": "wakiwaki",
+        "Samaritan Aramaic": "fua samasama",
+        "Walamo": "fau ingo",
+        "Tonga (Tonga Islands)": "loa",
+        "Niuean": "fou ingo",
+        "Pahlavi": "gongul",
+        "Guarani": "kamang",
+        "Yap": "sotumo",
+        "Church Slavic": "likonokon",
+        "Nepali": "kasturi"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1400"
+    }
+}

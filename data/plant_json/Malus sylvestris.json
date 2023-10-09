@@ -1,0 +1,16 @@
+{
+    "name": "Malus sylvestris",
+    "trivial": {
+        "English": "wild crab",
+        "German": "Apfel",
+        "Portuguese": "maguilho"
+    },
+    "temp": {
+        "min": "10",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1200"
+    }
+}

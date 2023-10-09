@@ -1,0 +1,14 @@
+{
+    "name": "Ischaemum rugosum",
+    "trivial": {
+        "Unknown": "Muraina grass"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Lagerstroemia tomentosa",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "36"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

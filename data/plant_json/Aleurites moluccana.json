@@ -1,0 +1,18 @@
+{
+    "name": "Aleurites moluccana",
+    "trivial": {
+        "English": "candlenut",
+        "German": "Lichtnussbaum",
+        "Hawaiian": "kukui",
+        "Unknown": "lama",
+        "Tonga (Tonga Islands)": "tuitui (Tonga)"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1800"
+    }
+}

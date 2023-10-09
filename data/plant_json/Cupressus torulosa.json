@@ -1,0 +1,15 @@
+{
+    "name": "Cupressus torulosa",
+    "trivial": {
+        "English": "Himalayan cypress",
+        "Portuguese": "cipreste do Himalaia"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1600"
+    }
+}

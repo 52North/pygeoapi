@@ -1,0 +1,15 @@
+{
+    "name": "Melaleuca quinquenervia",
+    "trivial": {
+        "English": "white bottlebrush (USA)",
+        "Unknown": "niaouli (New Caledonia)"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3400"
+    }
+}

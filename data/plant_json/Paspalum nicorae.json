@@ -1,0 +1,14 @@
+{
+    "name": "Paspalum nicorae",
+    "trivial": {
+        "English": "brunswick grass"
+    },
+    "temp": {
+        "min": "16",
+        "max": "23"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1400"
+    }
+}

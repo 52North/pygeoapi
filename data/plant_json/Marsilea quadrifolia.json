@@ -1,0 +1,15 @@
+{
+    "name": "Marsilea quadrifolia",
+    "trivial": {
+        "English": "water shamrock",
+        "Portuguese": "marsilia"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "2000"
+    }
+}

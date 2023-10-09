@@ -1,0 +1,12 @@
+{
+    "name": "Casuarina dielsiana",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "400",
+        "max": "500"
+    }
+}

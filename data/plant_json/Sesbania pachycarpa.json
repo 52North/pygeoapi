@@ -1,0 +1,12 @@
+{
+    "name": "Sesbania pachycarpa",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

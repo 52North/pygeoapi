@@ -1,0 +1,12 @@
+{
+    "name": "Anthocephalus chinensis",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "2600"
+    }
+}

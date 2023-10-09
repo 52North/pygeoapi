@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus muelleriana",
+    "trivial": {
+        "English": "yellow stringbark"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1100"
+    }
+}

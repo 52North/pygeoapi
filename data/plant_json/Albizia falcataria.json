@@ -1,0 +1,12 @@
+{
+    "name": "Albizia falcataria",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "31"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

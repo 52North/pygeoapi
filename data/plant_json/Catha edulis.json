@@ -1,0 +1,24 @@
+{
+    "name": "Catha edulis",
+    "trivial": {
+        "English": "bushman's tea",
+        "Afrikaans": "boesmans tee",
+        "Amharic": "chat",
+        "Arabic": "qat",
+        "Somali": "dat",
+        "Unknown": "qaad (Somalia)",
+        "Xhosa": "iGqwaka",
+        "Ndebele (Zimbabwe)": "inandinandi",
+        "Venda": "iwani",
+        "Shona": "mutsvahari",
+        "Zulu": "umHlawazi"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1100"
+    }
+}

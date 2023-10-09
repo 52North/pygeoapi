@@ -1,0 +1,12 @@
+{
+    "name": "Casuarina junghuhniana",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1600"
+    }
+}

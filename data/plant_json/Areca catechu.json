@@ -1,0 +1,23 @@
+{
+    "name": "Areca catechu",
+    "trivial": {
+        "Unknown": "vua (PNG: New Ireland: Lamekot)",
+        "English": "betel palm",
+        "Latin": "Semen arecae",
+        "French": "noix d`arec",
+        "German": "Betelnusspalme",
+        "Creoles and Pidgins, English-based (Other)": "buai",
+        "Hindi": "Yopo",
+        "Portuguese": "rap\u00e9 dos Indios (Brazil)",
+        "Spanish": "palma catechou",
+        "Chinese": "Ping lang"
+    },
+    "temp": {
+        "min": "16",
+        "max": "33"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

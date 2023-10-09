@@ -1,0 +1,17 @@
+{
+    "name": "Panicum maximum",
+    "trivial": {
+        "Afrikaans": "gewone buffelsgras",
+        "Portuguese": "painco grande",
+        "Spanish": "pasto Guinea",
+        "English": "Hamilgrass"
+    },
+    "temp": {
+        "min": "19",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1800"
+    }
+}

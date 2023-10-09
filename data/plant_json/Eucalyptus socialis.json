@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus socialis",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "36"
+    },
+    "precip": {
+        "min": "150",
+        "max": "450"
+    }
+}

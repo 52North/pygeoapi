@@ -1,0 +1,12 @@
+{
+    "name": "Araucaria angustifolia",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "23"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

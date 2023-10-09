@@ -1,0 +1,15 @@
+{
+    "name": "Emilia sonchifolia",
+    "trivial": {
+        "English": "red tasselflower",
+        "Hindi": "sadimodi"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

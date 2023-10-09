@@ -1,0 +1,25 @@
+{
+    "name": "Cuminum cyminum",
+    "trivial": {
+        "Portuguese": "cominho",
+        "Italian": "comino",
+        "Spanish": "comino",
+        "English": "ground cumin",
+        "French": "cumin",
+        "Unknown": "Djintan",
+        "Arabic": "kammun",
+        "German": "R\u00f6mischer K\u00fcmmel",
+        "Russian": "kmin",
+        "Dutch": "komijn",
+        "Chinese": "ma-ch'in",
+        "Swedish": "spiskummin"
+    },
+    "temp": {
+        "min": "17",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

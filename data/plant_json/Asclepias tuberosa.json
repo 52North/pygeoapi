@@ -1,0 +1,14 @@
+{
+    "name": "Asclepias tuberosa",
+    "trivial": {
+        "English": "pleurisy root"
+    },
+    "temp": {
+        "min": "14",
+        "max": "24"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

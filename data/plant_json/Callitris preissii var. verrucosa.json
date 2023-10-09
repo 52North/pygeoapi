@@ -1,0 +1,12 @@
+{
+    "name": "Callitris preissii var. verrucosa",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "300",
+        "max": "350"
+    }
+}

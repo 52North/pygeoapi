@@ -1,0 +1,14 @@
+{
+    "name": "Panicum repens",
+    "trivial": {
+        "English": "torpedo grass"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1800"
+    }
+}

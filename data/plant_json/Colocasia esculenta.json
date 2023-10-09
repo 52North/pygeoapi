@@ -1,0 +1,25 @@
+{
+    "name": "Colocasia esculenta",
+    "trivial": {
+        "Spanish": "tayoba",
+        "Hindi": "arum",
+        "Unknown": "votuki",
+        "Portuguese": "taro",
+        "English": "taro",
+        "French": "dachine",
+        "Malay": "daun keladi",
+        "German": "elefantenohr",
+        "Vietnamese": "khoai mon",
+        "Zulu": "madumbe",
+        "Swahili": "myugwa",
+        "Samoan": "taamu"
+    },
+    "temp": {
+        "min": "21",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "2700"
+    }
+}

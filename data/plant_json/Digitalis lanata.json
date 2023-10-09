@@ -1,0 +1,18 @@
+{
+    "name": "Digitalis lanata",
+    "trivial": {
+        "Portuguese": "dedaleira felpuda",
+        "French": "digitale laineuse",
+        "Latin": "Digitalis lanatae folium",
+        "English": "woolly foxglove",
+        "German": "wolliger Fingerhut"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "450",
+        "max": "650"
+    }
+}

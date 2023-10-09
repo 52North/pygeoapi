@@ -1,0 +1,12 @@
+{
+    "name": "Panicum virgatum",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "32"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1100"
+    }
+}

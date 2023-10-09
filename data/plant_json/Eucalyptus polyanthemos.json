@@ -1,0 +1,15 @@
+{
+    "name": "Eucalyptus polyanthemos",
+    "trivial": {
+        "English": "red box gum",
+        "Portuguese": "eucalipto faia"
+    },
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "700"
+    }
+}

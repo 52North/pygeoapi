@@ -1,0 +1,16 @@
+{
+    "name": "Triticum spelta",
+    "trivial": {
+        "German": "dinkel",
+        "Italian": "farro",
+        "English": "wheat - spelt"
+    },
+    "temp": {
+        "min": "10",
+        "max": "17"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

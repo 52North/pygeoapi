@@ -1,0 +1,14 @@
+{
+    "name": "Erythroxylum coca",
+    "trivial": {
+        "Unknown": "Peru coca"
+    },
+    "temp": {
+        "min": "17",
+        "max": "23"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2100"
+    }
+}

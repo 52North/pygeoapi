@@ -1,0 +1,20 @@
+{
+    "name": "Eragrostis tef",
+    "trivial": {
+        "Unknown": "ndzungulu(Malawi)",
+        "German": "Zwerghirse",
+        "Tigrinya": "taf",
+        "Oromo": "tafi (Orom.)",
+        "Ethiopic": "tef",
+        "French": "teff",
+        "English": "Williams lovegrass"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

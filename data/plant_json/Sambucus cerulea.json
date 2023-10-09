@@ -1,0 +1,12 @@
+{
+    "name": "Sambucus cerulea",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1500"
+    }
+}

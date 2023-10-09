@@ -1,0 +1,21 @@
+{
+    "name": "Annona cherimola",
+    "trivial": {
+        "French": "ch\u00e9rimolier",
+        "Spanish": "churimoya",
+        "Unknown": "cherimolier",
+        "English": "soursop",
+        "Italian": "cirimoia",
+        "Portuguese": "graveola",
+        "Thai": "noina ostrelia",
+        "German": "sauerapfel"
+    },
+    "temp": {
+        "min": "17",
+        "max": "25"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

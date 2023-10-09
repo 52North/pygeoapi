@@ -1,0 +1,23 @@
+{
+    "name": "Cannabis sativa ssp. indica",
+    "trivial": {
+        "Japanese": "asa",
+        "Unknown": "kender",
+        "Afrikaans": "dagga",
+        "Swedish": "hampa",
+        "German": "hanf",
+        "English": "hemp",
+        "Arabic": "kannab",
+        "Polish": "kenop",
+        "Russian": "konoplya",
+        "Northern Sotho": "lebake"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

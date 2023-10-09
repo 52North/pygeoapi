@@ -1,0 +1,27 @@
+{
+    "name": "Thymus vulgaris",
+    "trivial": {
+        "Latin": "Thymi vulgaris herba",
+        "English": "thyme",
+        "Japanese": "jakoso",
+        "Chinese": "pai-li-hsiang",
+        "Arabic": "sa'tar",
+        "French": "thym",
+        "German": "Thymian",
+        "Dutch": "tijm",
+        "Russian": "tim'yan",
+        "Danish": "timian",
+        "Swedish": "timjan",
+        "Italian": "timo",
+        "Portuguese": "tomilho",
+        "Spanish": "tomillo"
+    },
+    "temp": {
+        "min": "16",
+        "max": "25"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

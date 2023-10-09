@@ -1,0 +1,14 @@
+{
+    "name": "Pinus gerardiana",
+    "trivial": {
+        "English": "Neoza pine"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "650"
+    }
+}

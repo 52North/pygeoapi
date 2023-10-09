@@ -1,0 +1,12 @@
+{
+    "name": "Annona atemoya",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

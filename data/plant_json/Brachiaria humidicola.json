@@ -1,0 +1,14 @@
+{
+    "name": "Brachiaria humidicola",
+    "trivial": {
+        "Unknown": "ya humidicola (Tha)"
+    },
+    "temp": {
+        "min": "32",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

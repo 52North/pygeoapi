@@ -1,0 +1,12 @@
+{
+    "name": "Clinelymus dahuricus",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "400",
+        "max": "500"
+    }
+}

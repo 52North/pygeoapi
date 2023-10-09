@@ -1,0 +1,12 @@
+{
+    "name": "Leucaena diversifolia",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

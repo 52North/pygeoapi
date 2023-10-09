@@ -1,0 +1,17 @@
+{
+    "name": "Annona reticulata",
+    "trivial": {
+        "Unknown": "tzimuy",
+        "Spanish": "corazon",
+        "English": "wild-sweetsop",
+        "Portuguese": "coracao de boi"
+    },
+    "temp": {
+        "min": "23",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1400"
+    }
+}

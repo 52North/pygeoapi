@@ -1,0 +1,14 @@
+{
+    "name": "Avena nuda",
+    "trivial": {
+        "German": "Nackthafer"
+    },
+    "temp": {
+        "min": "16",
+        "max": "22"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1100"
+    }
+}

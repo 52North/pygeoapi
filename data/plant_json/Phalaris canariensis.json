@@ -1,0 +1,15 @@
+{
+    "name": "Phalaris canariensis",
+    "trivial": {
+        "English": "Common canary grass",
+        "German": "Kanariengras"
+    },
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

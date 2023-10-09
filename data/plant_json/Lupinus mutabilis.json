@@ -1,0 +1,18 @@
+{
+    "name": "Lupinus mutabilis",
+    "trivial": {
+        "Spanish": "lupino",
+        "English": "sweet Bolivian lupine",
+        "South American Indian (Other)": "tauri (Bolivia)",
+        "Quechua": "tarwi",
+        "Aymara": "tauri"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

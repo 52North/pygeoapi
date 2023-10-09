@@ -1,0 +1,14 @@
+{
+    "name": "Acacia monticola",
+    "trivial": {
+        "Unknown": "Red Wattle"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "250",
+        "max": "450"
+    }
+}

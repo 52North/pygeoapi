@@ -1,0 +1,15 @@
+{
+    "name": "Adina cordifolia",
+    "trivial": {
+        "Portuguese": "aldevane",
+        "English": "karam"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

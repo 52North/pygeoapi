@@ -1,0 +1,12 @@
+{
+    "name": "Tetragonia tetragonioides",
+    "trivial": {},
+    "temp": {
+        "min": "19",
+        "max": "28"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Monochoria hastata",
+    "trivial": {
+        "English": "false pickerelweed"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

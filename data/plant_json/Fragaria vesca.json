@@ -1,0 +1,21 @@
+{
+    "name": "Fragaria vesca",
+    "trivial": {
+        "Finnish": "mansikka",
+        "Italian": "fragolina di bosco",
+        "German": "Walderdbeere",
+        "Norwegian": "markjordb\u00e6r",
+        "Swedish": "smultron",
+        "Danish": "skov-jordb\u00e6r",
+        "Icelandic": "villijar\u00f0arber",
+        "English": "wild strawberry"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

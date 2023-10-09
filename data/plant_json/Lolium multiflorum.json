@@ -1,0 +1,21 @@
+{
+    "name": "Lolium multiflorum",
+    "trivial": {
+        "Spanish": "rye grass italiano",
+        "English": "ryegrass",
+        "Swedish": "Italienskt rajgr\u00e4s",
+        "Finnish": "Italianraihein\u00e4",
+        "German": "vielbl\u00fctiges Weidelgras",
+        "Norwegian": "Italiensk raigras",
+        "Danish": "Italiensk rajgr\u00e6s",
+        "French": "ray-grass d'Italie"
+    },
+    "temp": {
+        "min": "14",
+        "max": "30"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

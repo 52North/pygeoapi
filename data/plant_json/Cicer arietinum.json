@@ -1,0 +1,17 @@
+{
+    "name": "Cicer arietinum",
+    "trivial": {
+        "English": "chickpea",
+        "French": "pois chiche",
+        "Arabic": "hanaz",
+        "Spanish": "sigro"
+    },
+    "temp": {
+        "min": "15",
+        "max": "29"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Stripa capillata",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "200",
+        "max": "400"
+    }
+}

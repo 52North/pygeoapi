@@ -1,0 +1,18 @@
+{
+    "name": "Echinochloa colona",
+    "trivial": {
+        "English": "shama millet",
+        "French": "ble' de dekkan",
+        "Portuguese": "milhan da colonia",
+        "Urdu": "swanki ghass",
+        "Afrikaans": "watergras"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1200"
+    }
+}

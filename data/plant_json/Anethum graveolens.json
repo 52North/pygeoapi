@@ -1,0 +1,28 @@
+{
+    "name": "Anethum graveolens",
+    "trivial": {
+        "Spanish": "eneldo",
+        "Latin": "Anethi fructus",
+        "French": "L'aneth",
+        "Italian": "L'aneto",
+        "Portuguese": "funcho bastardo",
+        "Turkish": "dere otu",
+        "Danish": "dild",
+        "English": "garden dill",
+        "German": "Gurkenkraut",
+        "Swedish": "dill",
+        "Dutch": "dille",
+        "Serbo-Croatian (Roman)": "kopar",
+        "Arabic": "shibith",
+        "Chinese": "shih-lo",
+        "Russian": "ukrop"
+    },
+    "temp": {
+        "min": "15",
+        "max": "18"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

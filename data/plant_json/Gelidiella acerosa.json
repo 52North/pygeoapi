@@ -1,0 +1,14 @@
+{
+    "name": "Gelidiella acerosa",
+    "trivial": {
+        "Unknown": "intip-intip"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Indigofera arrecta",
+    "trivial": {
+        "Portuguese": "anileira de Java",
+        "English": "Java indigo"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1700",
+        "max": "2200"
+    }
+}

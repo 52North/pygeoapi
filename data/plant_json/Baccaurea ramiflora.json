@@ -1,0 +1,14 @@
+{
+    "name": "Baccaurea ramiflora",
+    "trivial": {
+        "English": "lutqua"
+    },
+    "temp": {
+        "min": "24",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3500"
+    }
+}

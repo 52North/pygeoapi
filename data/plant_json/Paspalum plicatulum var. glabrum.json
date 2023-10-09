@@ -1,0 +1,12 @@
+{
+    "name": "Paspalum plicatulum var. glabrum",
+    "trivial": {},
+    "temp": {
+        "min": "19",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "2000"
+    }
+}

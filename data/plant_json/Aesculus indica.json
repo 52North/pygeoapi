@@ -1,0 +1,15 @@
+{
+    "name": "Aesculus indica",
+    "trivial": {
+        "Portuguese": "castanheiro da India",
+        "English": "Indian chestnut"
+    },
+    "temp": {
+        "min": "23",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

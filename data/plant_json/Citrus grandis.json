@@ -1,0 +1,23 @@
+{
+    "name": "Citrus grandis",
+    "trivial": {
+        "Malay": "jambua",
+        "Indonesian": "jeruk besar",
+        "Tagalog": "lukban",
+        "Tonga (Tonga Islands)": "moli tonga",
+        "Fijian": "molikana",
+        "French": "pamplemoussier",
+        "English": "shaddock",
+        "Burmese": "shouk-ton-oh",
+        "Thai": "som-o",
+        "Iloko": "suha"
+    },
+    "temp": {
+        "min": "23",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Typha latifolia",
+    "trivial": {
+        "Danish": "bredbladet dunhammer",
+        "Swedish": "kaveldun",
+        "German": "Breitbl\u00e4ttriger Rohrkolben",
+        "Norwegian": "breitt dunkjevle",
+        "English": "reed mace",
+        "Spanish": "gama",
+        "Dutch": "grote lisdodde",
+        "Finnish": "leve\u00e4osmank\u00e4\u00e4mi"
+    },
+    "temp": {
+        "min": "10",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1500"
+    }
+}

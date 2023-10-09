@@ -1,0 +1,15 @@
+{
+    "name": "Cupressus lusitanica",
+    "trivial": {
+        "Portuguese": "cedro do Bucaco",
+        "English": "Portuguese cypress"
+    },
+    "temp": {
+        "min": "16",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

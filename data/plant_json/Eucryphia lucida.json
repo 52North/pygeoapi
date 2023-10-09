@@ -1,0 +1,12 @@
+{
+    "name": "Eucryphia lucida",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1700"
+    }
+}

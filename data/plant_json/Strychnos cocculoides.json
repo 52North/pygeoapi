@@ -1,0 +1,16 @@
+{
+    "name": "Strychnos cocculoides",
+    "trivial": {
+        "English": "wild orange",
+        "Afrikaans": "kurkbasklapper",
+        "Swahili": "mtonga"
+    },
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1200"
+    }
+}

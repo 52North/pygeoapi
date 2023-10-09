@@ -1,0 +1,12 @@
+{
+    "name": "Dichanthium sericeum",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

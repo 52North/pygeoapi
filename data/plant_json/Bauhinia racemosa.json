@@ -1,0 +1,12 @@
+{
+    "name": "Bauhinia racemosa",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "36"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1800"
+    }
+}

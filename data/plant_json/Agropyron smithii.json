@@ -1,0 +1,15 @@
+{
+    "name": "Agropyron smithii",
+    "trivial": {
+        "Portuguese": "agropiro da California",
+        "English": "Western wheatgrass"
+    },
+    "temp": {
+        "min": "7",
+        "max": "20"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

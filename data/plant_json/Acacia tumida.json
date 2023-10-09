@@ -1,0 +1,14 @@
+{
+    "name": "Acacia tumida",
+    "trivial": {
+        "Unknown": "Wongai"
+    },
+    "temp": {
+        "min": "22",
+        "max": "36"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1000"
+    }
+}

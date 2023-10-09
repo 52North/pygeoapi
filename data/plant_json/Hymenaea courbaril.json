@@ -1,0 +1,14 @@
+{
+    "name": "Hymenaea courbaril",
+    "trivial": {
+        "Unknown": "jatob\u00e1"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

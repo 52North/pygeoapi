@@ -1,0 +1,14 @@
+{
+    "name": "Indigofera schimperi",
+    "trivial": {
+        "Swahili": "kapiyebiye"
+    },
+    "temp": {
+        "min": "17",
+        "max": "26"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1000"
+    }
+}

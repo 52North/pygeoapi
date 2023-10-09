@@ -1,0 +1,22 @@
+{
+    "name": "Santalum album",
+    "trivial": {
+        "Unknown": "san-ta-ku",
+        "Japanese": "byakudan",
+        "Hindi": "sandal",
+        "Oriya": "chandana",
+        "Sanskrit": "chandana",
+        "English": "sanders wood",
+        "German": "Sandelholz",
+        "Burmese": "santagu",
+        "Tamil": "srigandam"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1400"
+    }
+}

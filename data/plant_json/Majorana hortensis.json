@@ -1,0 +1,12 @@
+{
+    "name": "Majorana hortensis",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

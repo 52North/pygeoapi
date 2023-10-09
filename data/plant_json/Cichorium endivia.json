@@ -1,0 +1,14 @@
+{
+    "name": "Cichorium endivia",
+    "trivial": {
+        "Unknown": "endive"
+    },
+    "temp": {
+        "min": "15",
+        "max": "23"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1400"
+    }
+}

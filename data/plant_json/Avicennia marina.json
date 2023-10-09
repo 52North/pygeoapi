@@ -1,0 +1,14 @@
+{
+    "name": "Avicennia marina",
+    "trivial": {
+        "English": "white mangrove"
+    },
+    "temp": {
+        "min": "20",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

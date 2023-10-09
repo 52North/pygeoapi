@@ -1,0 +1,14 @@
+{
+    "name": "Girardinia diversifolia",
+    "trivial": {
+        "English": "nilgiri nettle"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3500"
+    }
+}

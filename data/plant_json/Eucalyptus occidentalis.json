@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus occidentalis",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "36"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Caryodendron orinocense",
+    "trivial": {
+        "English": "barinas nut",
+        "Spanish": "inchi"
+    },
+    "temp": {
+        "min": "20",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "3000"
+    }
+}

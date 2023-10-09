@@ -1,0 +1,12 @@
+{
+    "name": "Acacia anticeps",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "250",
+        "max": "450"
+    }
+}

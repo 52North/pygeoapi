@@ -1,0 +1,14 @@
+{
+    "name": "Agropyron trachycaulum",
+    "trivial": {
+        "English": "slender wheatgrass"
+    },
+    "temp": {
+        "min": "13",
+        "max": "22"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Trifolium agrarium",
+    "trivial": {},
+    "temp": {
+        "min": "14",
+        "max": "18"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

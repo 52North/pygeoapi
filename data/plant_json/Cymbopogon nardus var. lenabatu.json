@@ -1,0 +1,12 @@
+{
+    "name": "Cymbopogon nardus var. lenabatu",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "2000"
+    }
+}

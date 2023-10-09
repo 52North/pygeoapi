@@ -1,0 +1,12 @@
+{
+    "name": "Acacia maidenii",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "32"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Eriobotrya japonica",
+    "trivial": {
+        "Japanese": "biwa",
+        "English": "loquat",
+        "Thai": "pee-pae",
+        "Malay": "lokwat",
+        "German": "Mispel",
+        "French": "neflier du Japon",
+        "Italian": "nespolo",
+        "Vietnamese": "ti ba diep",
+        "Spanish": "nispereros",
+        "Sundanese": "papalaan",
+        "Khmer": "ton leap"
+    },
+    "temp": {
+        "min": "21",
+        "max": "27"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1600"
+    }
+}

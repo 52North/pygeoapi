@@ -1,0 +1,12 @@
+{
+    "name": "Agrostis trinii",
+    "trivial": {},
+    "temp": {
+        "min": "8",
+        "max": "15"
+    },
+    "precip": {
+        "min": "200",
+        "max": "500"
+    }
+}

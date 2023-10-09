@@ -1,0 +1,19 @@
+{
+    "name": "Monstera deliciosa",
+    "trivial": {
+        "English": "Swiss cheese plant",
+        "Spanish": "costilla de Ad\u00e1n",
+        "Portuguese": "costela de Ad\u00e3o",
+        "French": "faux philodendron",
+        "Dutch": "gatenplant",
+        "German": "k\u00f6stliches Fensterblatt"
+    },
+    "temp": {
+        "min": "28",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "2000"
+    }
+}

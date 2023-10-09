@@ -1,0 +1,17 @@
+{
+    "name": "Boswellia serrata",
+    "trivial": {
+        "Tamil": "morada",
+        "English": "Indian olibanum tree",
+        "Bengali": "salai",
+        "Hindi": "sali"
+    },
+    "temp": {
+        "min": "33",
+        "max": "42"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

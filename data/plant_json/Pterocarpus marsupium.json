@@ -1,0 +1,15 @@
+{
+    "name": "Pterocarpus marsupium",
+    "trivial": {
+        "Hindi": "pitasava",
+        "English": "Malabar Kino"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "Cajanus cajan",
+    "trivial": {
+        "Hindi": "arhar",
+        "English": "pigeon pea bush",
+        "Afrikaans": "duiweboon",
+        "Spanish": "frijol de arbol",
+        "Unknown": "quinchoncho",
+        "Guarani": "kumanda yvyra'\u00ed (Paraguay)",
+        "German": "Pigeonerbse",
+        "French": "pois d'angolie",
+        "Tamil": "thuvarai"
+    },
+    "temp": {
+        "min": "18",
+        "max": "38"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1500"
+    }
+}

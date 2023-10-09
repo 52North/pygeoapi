@@ -1,0 +1,14 @@
+{
+    "name": "Trifolium variegatum",
+    "trivial": {
+        "English": "white-tip clover"
+    },
+    "temp": {
+        "min": "14",
+        "max": "19"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

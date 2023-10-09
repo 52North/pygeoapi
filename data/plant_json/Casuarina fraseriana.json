@@ -1,0 +1,12 @@
+{
+    "name": "Casuarina fraseriana",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1000"
+    }
+}

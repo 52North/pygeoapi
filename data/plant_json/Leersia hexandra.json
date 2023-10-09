@@ -1,0 +1,12 @@
+{
+    "name": "Leersia hexandra",
+    "trivial": {},
+    "temp": {
+        "min": "27",
+        "max": "33"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3000"
+    }
+}

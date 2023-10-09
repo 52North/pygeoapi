@@ -1,0 +1,18 @@
+{
+    "name": "Carpinus betulus",
+    "trivial": {
+        "Portuguese": "carpino",
+        "Italian": "carpino bianco",
+        "French": "charme commun",
+        "English": "yoke elm",
+        "German": "Steinbuche"
+    },
+    "temp": {
+        "min": "10",
+        "max": "20"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

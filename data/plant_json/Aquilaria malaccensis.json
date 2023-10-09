@@ -1,0 +1,28 @@
+{
+    "name": "Aquilaria malaccensis",
+    "trivial": {
+        "Bengali": "ugar",
+        "English": "lignaloes",
+        "Portuguese": "pau de aguia",
+        "Gujarati": "agar",
+        "Hindi": "agar",
+        "Sanskrit": "tagara",
+        "Tamil": "aggalichandanam",
+        "Telugu": "agru",
+        "Burmese": "akyaw",
+        "Chinese": "Huang Shu Hsiang",
+        "Creoles and Pidgins, English-based (Other)": "gaharu (PNG)",
+        "Assamese": "sasi",
+        "Japanese": "kyara",
+        "Malay": "Kaya gahara lemppong",
+        "Unknown": "Ude"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "-",
+        "max": "-"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Cucurbita ficifolia",
+    "trivial": {
+        "English": "fig-leaved gourd"
+    },
+    "temp": {
+        "min": "15",
+        "max": "21"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

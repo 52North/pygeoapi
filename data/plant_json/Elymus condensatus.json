@@ -1,0 +1,12 @@
+{
+    "name": "Elymus condensatus",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "22"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

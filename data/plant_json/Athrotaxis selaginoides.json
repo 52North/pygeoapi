@@ -1,0 +1,12 @@
+{
+    "name": "Athrotaxis selaginoides",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "22"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

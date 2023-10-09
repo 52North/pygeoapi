@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus gummifera",
+    "trivial": {
+        "English": "bloodwood"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

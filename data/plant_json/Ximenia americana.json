@@ -1,0 +1,22 @@
+{
+    "name": "Ximenia americana",
+    "trivial": {
+        "Spanish": "Yana",
+        "Portuguese": "Espinha de maicha",
+        "Somali": "morod",
+        "Unknown": "oda (Galinya, Kaffa)",
+        "French": "Prunier de mer",
+        "Amharic": "inkoy",
+        "English": "Yellow sanders",
+        "Tigrinya": "mellau",
+        "Swahili": "mtundakula"
+    },
+    "temp": {
+        "min": "14",
+        "max": "30"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1250"
+    }
+}

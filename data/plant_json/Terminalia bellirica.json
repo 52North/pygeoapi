@@ -1,0 +1,15 @@
+{
+    "name": "Terminalia bellirica",
+    "trivial": {
+        "Sinhalese": "bulu",
+        "English": "myrobalan"
+    },
+    "temp": {
+        "min": "20",
+        "max": "33"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

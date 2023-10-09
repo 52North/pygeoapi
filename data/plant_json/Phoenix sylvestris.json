@@ -1,0 +1,23 @@
+{
+    "name": "Phoenix sylvestris",
+    "trivial": {
+        "Unknown": "sunindu (Karnataka)",
+        "English": "wild date-palm",
+        "Sanskrit": "khajuri",
+        "Tamil": "icham",
+        "German": "silber- dattelpalme",
+        "Bengali": "kejur",
+        "Himachali": "khujjoor",
+        "Hindi": "khajuri",
+        "Panjabi": "khajur",
+        "Gujarati": "kharak"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "400",
+        "max": "700"
+    }
+}

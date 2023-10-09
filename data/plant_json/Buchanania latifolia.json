@@ -1,0 +1,12 @@
+{
+    "name": "Buchanania latifolia",
+    "trivial": {},
+    "temp": {
+        "min": "32",
+        "max": "42"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

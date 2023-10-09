@@ -1,0 +1,28 @@
+{
+    "name": "Garcinia mangostana",
+    "trivial": {
+        "Vietnamese": "mang cut",
+        "English": "mangosteen",
+        "Thai": "mang khut",
+        "Khmer": "mongkhut",
+        "Indonesian": "manggis",
+        "Malay": "settorr",
+        "Tagalog": "manggustan",
+        "Unknown": "xango",
+        "Lao": "mangkhud",
+        "Dutch": "mangoestan",
+        "Spanish": "mangostan",
+        "German": "mangostane",
+        "Portuguese": "mangusto",
+        "French": "mangoustanier",
+        "Tamil": "mangustai"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1600",
+        "max": "2000"
+    }
+}

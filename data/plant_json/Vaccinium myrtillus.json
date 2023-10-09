@@ -1,0 +1,19 @@
+{
+    "name": "Vaccinium myrtillus",
+    "trivial": {
+        "Portuguese": "mirtilo",
+        "English": "whortleberry",
+        "German": "Heidelbeere",
+        "Danish": "bl\u00e5b\u00e6r",
+        "Italian": "mirtillo",
+        "French": "myrtille"
+    },
+    "temp": {
+        "min": "8",
+        "max": "17"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

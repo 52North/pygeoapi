@@ -1,0 +1,15 @@
+{
+    "name": "Bambusa arundinacea",
+    "trivial": {
+        "Portuguese": "bambu' estreito",
+        "English": "thorny bamboo"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2500"
+    }
+}

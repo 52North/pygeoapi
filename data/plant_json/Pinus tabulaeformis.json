@@ -1,0 +1,15 @@
+{
+    "name": "Pinus tabulaeformis",
+    "trivial": {
+        "English": "Chinese pine",
+        "Portuguese": "pinheiro da China"
+    },
+    "temp": {
+        "min": "15",
+        "max": "35"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

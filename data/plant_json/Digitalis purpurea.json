@@ -1,0 +1,20 @@
+{
+    "name": "Digitalis purpurea",
+    "trivial": {
+        "Unknown": "Sormustinkukka",
+        "English": "witches' glove",
+        "Portuguese": "luvas de Santa Maria",
+        "French": "Digitale pourpr\u00e9",
+        "Italian": "Digitale rossa",
+        "Dutch": "Vingerhoedskruid soort",
+        "German": "Waldschelle"
+    },
+    "temp": {
+        "min": "11",
+        "max": "17"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1100"
+    }
+}

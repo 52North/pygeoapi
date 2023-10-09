@@ -1,0 +1,14 @@
+{
+    "name": "Agathis australis",
+    "trivial": {
+        "English": "New Zealand kauri"
+    },
+    "temp": {
+        "min": "14",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

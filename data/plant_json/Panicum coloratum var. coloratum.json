@@ -1,0 +1,12 @@
+{
+    "name": "Panicum coloratum var. coloratum",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

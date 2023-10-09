@@ -1,0 +1,21 @@
+{
+    "name": "Quercus robur",
+    "trivial": {
+        "English": "truffle oak",
+        "Portuguese": "carvalho roble",
+        "French": "chene pedoncule'",
+        "German": "Traubeneiche",
+        "Italian": "quercia",
+        "Latin": "Quercus folium",
+        "Spanish": "roble comun",
+        "Danish": "stilk eg"
+    },
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "600",
+        "max": "950"
+    }
+}

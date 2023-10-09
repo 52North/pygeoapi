@@ -1,0 +1,12 @@
+{
+    "name": "Michelia doltsopa",
+    "trivial": {},
+    "temp": {
+        "min": "30",
+        "max": "37"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "4000"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Pinus radiata",
+    "trivial": {
+        "English": "radiata pine",
+        "French": "pin de Monterey",
+        "Portuguese": "pinheiro de Monterey"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "650",
+        "max": "1200"
+    }
+}

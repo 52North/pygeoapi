@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus leucoxylon",
+    "trivial": {
+        "English": "white ironbark"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

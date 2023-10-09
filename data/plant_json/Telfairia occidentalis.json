@@ -1,0 +1,12 @@
+{
+    "name": "Telfairia occidentalis",
+    "trivial": {},
+    "temp": {
+        "min": "21",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1900",
+        "max": "2200"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Trachyspermum ammi",
+    "trivial": {
+        "Unknown": "Omam"
+    },
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Amaranthus hypochondriacus",
+    "trivial": {
+        "English": "prince's feather"
+    },
+    "temp": {
+        "min": "19",
+        "max": "23"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1600"
+    }
+}

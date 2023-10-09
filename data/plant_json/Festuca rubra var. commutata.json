@@ -1,0 +1,14 @@
+{
+    "name": "Festuca rubra var. commutata",
+    "trivial": {
+        "English": "chewing's fescue"
+    },
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

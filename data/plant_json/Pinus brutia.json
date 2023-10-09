@@ -1,0 +1,15 @@
+{
+    "name": "Pinus brutia",
+    "trivial": {
+        "English": "Calabrian pine",
+        "Portuguese": "pinheiro da Calabria"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

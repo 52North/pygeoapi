@@ -1,0 +1,12 @@
+{
+    "name": "Cinnamomum burmannii",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "2500"
+    }
+}

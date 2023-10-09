@@ -1,0 +1,15 @@
+{
+    "name": "Chloroxylon swietenia",
+    "trivial": {
+        "English": "Satinwood",
+        "Portuguese": "pau-cetim"
+    },
+    "temp": {
+        "min": "30",
+        "max": "40"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

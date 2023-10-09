@@ -1,0 +1,25 @@
+{
+    "name": "Ziziphus mucronata",
+    "trivial": {
+        "Unknown": "omukekete (Ovambo)",
+        "Khoisan (Other)": "aros",
+        "Afrikaans": "katdoring",
+        "English": "cat thorn",
+        "Zulu": "umPhafa",
+        "Tswana": "mokgalo",
+        "Northern Sotho": "moonaona",
+        "Tsonga": "mphasamhala",
+        "Venda": "mutshetshete",
+        "Herero": "omukaru",
+        "Swazi": "umlahlabantu",
+        "Xhosa": "umPhafa"
+    },
+    "temp": {
+        "min": "12",
+        "max": "30"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

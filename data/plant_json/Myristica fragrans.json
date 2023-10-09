@@ -1,0 +1,51 @@
+{
+    "name": "Myristica fragrans",
+    "trivial": {
+        "Malay": "pokok pala",
+        "Unknown": "tau kau",
+        "Lao": "chan thed",
+        "Thai": "dok chand",
+        "Vietnamese": "nhuc dau khau",
+        "Persian": "djus hendi",
+        "Tagalog": "duguan",
+        "Tibetan": "zati",
+        "French": "noix de muscade",
+        "Dutch": "nootmuskaat",
+        "Indonesian": "sekar pala",
+        "Arabic": "josat al teeb",
+        "Amharic": "gewz",
+        "Hindi": "taifal",
+        "Sanskrit": "jatiphala",
+        "Gujarati": "jaypatri",
+        "Marathi": "jayphal",
+        "Turkish": "k\u00fc\u00e7\u00fck hindistancevizi",
+        "Swahili": "kungumanga",
+        "Estonian": "l\u00f5hnav muskaadipuu",
+        "English": "queen of spices",
+        "Italian": "noce moscata",
+        "Spanish": "nuez moscada",
+        "German": "Muskatnuss",
+        "Portuguese": "noz moscada",
+        "Icelandic": "m\u00faskath\u00fd\u00f0i",
+        "Danish": "muskatn\u00f8d",
+        "Norwegian": "muskatn\u00f8tt",
+        "Russian": "sushonaya shelukha",
+        "Swedish": "muskotn\u00f6t",
+        "Finnish": "muskottip\u00e4hkin",
+        "Burmese": "mutwinda",
+        "Japanese": "nikuzuku",
+        "Khmer": "pock kak",
+        "Chinese": "rou dou kou",
+        "Sinhalese": "wasa-vasi",
+        "Latin": "Semen Myristicae",
+        "Hungarian": "szerecsendi\u00f3 vir\u00e1g"
+    },
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3500"
+    }
+}

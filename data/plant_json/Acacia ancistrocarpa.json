@@ -1,0 +1,14 @@
+{
+    "name": "Acacia ancistrocarpa",
+    "trivial": {
+        "Unknown": "Fish hook wattle"
+    },
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "300",
+        "max": "500"
+    }
+}

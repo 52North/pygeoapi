@@ -1,0 +1,21 @@
+{
+    "name": "Ricinodendron rautanenii",
+    "trivial": {
+        "English": "mongongo nut",
+        "Herero": "mongongo",
+        "Khoisan (Other)": "mongongo",
+        "Tswana": "mugonga",
+        "Lozi": "mungongo",
+        "Shona": "mungongoma",
+        "Unknown": "ugongo (Kwangali)",
+        "Afrikaans": "wilde okkerneut"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

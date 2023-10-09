@@ -1,0 +1,12 @@
+{
+    "name": "Nothofagus moorei",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1700"
+    }
+}

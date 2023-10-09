@@ -1,0 +1,16 @@
+{
+    "name": "Pastinaca sativa",
+    "trivial": {
+        "French": "panais",
+        "English": "parsnip",
+        "German": "pastinak"
+    },
+    "temp": {
+        "min": "15",
+        "max": "21"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

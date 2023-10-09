@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus intermedia",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Passiflora quadrangularis",
+    "trivial": {
+        "Spanish": "sand\u00eda de Pasi\u00f3n",
+        "French": "fleur de le passion",
+        "Vietnamese": "dua gan tay",
+        "Indonesian": "timun hutan",
+        "English": "square-stemmed passion flower",
+        "Tagalog": "parola",
+        "Portuguese": "maracuya-acu",
+        "Malay": "timun belanda",
+        "Unknown": "Vine fua lalahi",
+        "Thai": "su-khontha-rot"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "1600"
+    }
+}

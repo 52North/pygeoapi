@@ -1,0 +1,21 @@
+{
+    "name": "Faidherbia albida",
+    "trivial": {
+        "French": "kad",
+        "English": "winter thorn",
+        "German": "Anabaum",
+        "Afrikaans": "without",
+        "Swahili": "mkababu",
+        "Sotho": "mogabo",
+        "Unknown": "musangu (Zambia)",
+        "Zulu": "umHlalankwazi"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1000"
+    }
+}

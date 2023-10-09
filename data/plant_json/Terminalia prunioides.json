@@ -1,0 +1,12 @@
+{
+    "name": "Terminalia prunioides",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "450",
+        "max": "900"
+    }
+}

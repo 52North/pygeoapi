@@ -1,0 +1,16 @@
+{
+    "name": "Chloris virgata",
+    "trivial": {
+        "Portuguese": "capim mimoso de cacho",
+        "English": "showy chloris",
+        "Afrikaans": "witpluim chloris"
+    },
+    "temp": {
+        "min": "25",
+        "max": "30"
+    },
+    "precip": {
+        "min": "500",
+        "max": "750"
+    }
+}

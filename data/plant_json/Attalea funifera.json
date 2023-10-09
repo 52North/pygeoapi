@@ -1,0 +1,12 @@
+{
+    "name": "Attalea funifera",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "2000"
+    }
+}

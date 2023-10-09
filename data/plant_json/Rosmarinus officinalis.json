@@ -1,0 +1,26 @@
+{
+    "name": "Rosmarinus officinalis",
+    "trivial": {
+        "Portuguese": "alecrim",
+        "Arabic": "iklil al-jabal",
+        "Japanese": "mannenro",
+        "Chinese": "mi-teih-hsiang",
+        "French": "romarin",
+        "Spanish": "romero",
+        "English": "rosemary",
+        "Danish": "rosmarin",
+        "German": "rosmarin",
+        "Swedish": "rosmarin",
+        "Italian": "rosmarino",
+        "Dutch": "rozemarijn",
+        "Russian": "rozmarin"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1400"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "name": "Citrus reticulata",
+    "trivial": {
+        "Vietnamese": "cay quit",
+        "Unknown": "narangi",
+        "English": "wild orange",
+        "German": "Mandarinenbaum",
+        "Indonesian": "jeruk maseh",
+        "Khmer": "krauch kvich",
+        "Malay": "limau wangkang",
+        "Lao": "som lot",
+        "Thai": "som saengthong",
+        "Fijian": "moli madarini",
+        "French": "mandarinier",
+        "Afrikaans": "nartjie",
+        "Hindi": "narangi",
+        "Tagalog": "sintones",
+        "Portuguese": "tangerineira"
+    },
+    "temp": {
+        "min": "23",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Leucaena leucocephala",
+    "trivial": {
+        "Spanish": "zarcilla (Puerto Rico)",
+        "Fijian": "vaivai ni vavalangi",
+        "Vietnamese": "schemu",
+        "Unknown": "tuhngantuhngan (Kosrae)",
+        "Hawaiian": "koa-haole",
+        "French": "leucaene",
+        "Samoan": "lopa samoa (American Samoa)",
+        "English": "wild tamarind (Puerto Rico)",
+        "Mayan languages": "huaxin (Yucatan)",
+        "Tagalog": "ipil-ipil",
+        "Khmer": "kratin",
+        "Thai": "kra thin",
+        "Hindi": "subabul",
+        "Indonesian": "lamtoro",
+        "Maori": "nito (Cook Islands)",
+        "Afrikaans": "stuipboom",
+        "Tonga (Tonga Islands)": "siale mohemohe",
+        "Chamorro": "tangantangan (CNMI)",
+        "Palauan": "telentund"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "600",
+        "max": "3000"
+    }
+}

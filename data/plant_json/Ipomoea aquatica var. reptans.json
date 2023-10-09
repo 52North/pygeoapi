@@ -1,0 +1,14 @@
+{
+    "name": "Ipomoea aquatica var. reptans",
+    "trivial": {
+        "Unknown": "kang kung"
+    },
+    "temp": {
+        "min": "15",
+        "max": "35"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "2500"
+    }
+}

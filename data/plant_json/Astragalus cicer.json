@@ -1,0 +1,12 @@
+{
+    "name": "Astragalus cicer",
+    "trivial": {},
+    "temp": {
+        "min": "14",
+        "max": "25"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

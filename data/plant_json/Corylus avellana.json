@@ -1,0 +1,22 @@
+{
+    "name": "Corylus avellana",
+    "trivial": {
+        "English": "Irish coll",
+        "Latin": "Coryli folium",
+        "French": "longue d'Espagne",
+        "German": "Haselnussbaum",
+        "Danish": "hassel",
+        "Norwegian": "hassel",
+        "Swedish": "vanlig hassel",
+        "Italian": "nocciolo",
+        "Finnish": "p\u00e4hkin\u00e4pensas"
+    },
+    "temp": {
+        "min": "10",
+        "max": "24"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1100"
+    }
+}

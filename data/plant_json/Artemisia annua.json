@@ -1,0 +1,21 @@
+{
+    "name": "Artemisia annua",
+    "trivial": {
+        "Spanish": "ajenjo",
+        "English": "wormwood",
+        "French": "armoise",
+        "Chinese": "ts'ao hao",
+        "German": "wermut",
+        "Finnish": "rikkamaruna",
+        "Portuguese": "losna doce",
+        "Swedish": "sommarmal\u00f6rt"
+    },
+    "temp": {
+        "min": "13",
+        "max": "29"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1300"
+    }
+}

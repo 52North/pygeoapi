@@ -1,0 +1,12 @@
+{
+    "name": "Passiflora edulis var. edulis",
+    "trivial": {},
+    "temp": {
+        "min": "23",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Strychnos spinosa",
+    "trivial": {
+        "Unknown": "angora (Galinya, Harar)",
+        "English": "spiny monkey ball",
+        "Afrikaans": "groenklapper",
+        "Swahili": "mtonga"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

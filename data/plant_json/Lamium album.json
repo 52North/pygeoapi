@@ -1,0 +1,17 @@
+{
+    "name": "Lamium album",
+    "trivial": {
+        "Greek, Modern (since 1453)": "\u03bb\u03b1\u03bc_\u03c2",
+        "Latin": "Lamii albi herba",
+        "German": "Weisse Taubnessel",
+        "English": "white nettle"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

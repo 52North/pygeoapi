@@ -1,0 +1,12 @@
+{
+    "name": "Casuarina littoralis",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "650",
+        "max": "1250"
+    }
+}

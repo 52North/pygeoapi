@@ -1,0 +1,20 @@
+{
+    "name": "Sorghum bicolor var. sweet",
+    "trivial": {
+        "Ethiopic": "bachanta",
+        "English": "sweet sorghum",
+        "German": "Hirse",
+        "Shona": "ipwa",
+        "French": "sorgho",
+        "Italian": "sorgo",
+        "Amharic": "tinkish"
+    },
+    "temp": {
+        "min": "27",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

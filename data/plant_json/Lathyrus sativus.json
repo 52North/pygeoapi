@@ -1,0 +1,24 @@
+{
+    "name": "Lathyrus sativus",
+    "trivial": {
+        "Spanish": "ch\u00edcaro com\u00fan",
+        "Hindi": "tiwra",
+        "English": "rough pea",
+        "French": "gesse blanche",
+        "Sundanese": "gilban",
+        "Amharic": "guaya",
+        "Ethiopic": "guaya",
+        "Tigrinya": "sebere",
+        "Unknown": "matri",
+        "Italian": "pisello bretonne",
+        "Chinese": "san lee dow"
+    },
+    "temp": {
+        "min": "10",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1300"
+    }
+}

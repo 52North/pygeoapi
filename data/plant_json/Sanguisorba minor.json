@@ -1,0 +1,15 @@
+{
+    "name": "Sanguisorba minor",
+    "trivial": {
+        "English": "toper's-plant",
+        "Portuguese": "pimpinela de Italia"
+    },
+    "temp": {
+        "min": "13",
+        "max": "22"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

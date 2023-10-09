@@ -1,0 +1,12 @@
+{
+    "name": "Juglans hindsii",
+    "trivial": {},
+    "temp": {
+        "min": "14",
+        "max": "14"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Eugenia uvalha",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "450",
+        "max": "600"
+    }
+}

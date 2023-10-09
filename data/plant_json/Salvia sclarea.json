@@ -1,0 +1,17 @@
+{
+    "name": "Salvia sclarea",
+    "trivial": {
+        "English": "see-bright",
+        "Portuguese": "esclareia",
+        "German": "muskatellersalbei",
+        "French": "sauge sclaree"
+    },
+    "temp": {
+        "min": "17",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1700"
+    }
+}

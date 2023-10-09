@@ -1,0 +1,14 @@
+{
+    "name": "Erythrina fusca",
+    "trivial": {
+        "Unknown": "coral bean"
+    },
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "3000"
+    }
+}

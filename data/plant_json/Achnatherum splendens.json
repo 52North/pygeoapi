@@ -1,0 +1,12 @@
+{
+    "name": "Achnatherum splendens",
+    "trivial": {},
+    "temp": {
+        "min": "8",
+        "max": "15"
+    },
+    "precip": {
+        "min": "300",
+        "max": "400"
+    }
+}

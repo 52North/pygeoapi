@@ -1,0 +1,12 @@
+{
+    "name": "Acacia brachystachya",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "40"
+    },
+    "precip": {
+        "min": "250",
+        "max": "300"
+    }
+}

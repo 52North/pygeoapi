@@ -1,0 +1,17 @@
+{
+    "name": "Desmodium ovalifolium",
+    "trivial": {
+        "Spanish": "desmodio",
+        "English": "ovalifolium",
+        "Thai": "khonthi din",
+        "Vietnamese": "trang qu'a xoan"
+    },
+    "temp": {
+        "min": "14",
+        "max": "24"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

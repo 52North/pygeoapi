@@ -1,0 +1,23 @@
+{
+    "name": "Cocos nucifera",
+    "trivial": {
+        "Unknown": "tree of life",
+        "Portuguese": "c\u00f4co",
+        "English": "coir fibre",
+        "Spanish": "palma de coco",
+        "French": "cocotier",
+        "Hindi": "narial",
+        "German": "Kokospalme",
+        "Creoles and Pidgins, English-based (Other)": "kulau",
+        "Tamil": "thengai",
+        "Chinese": "ye"
+    },
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2400"
+    }
+}

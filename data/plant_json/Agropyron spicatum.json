@@ -1,0 +1,15 @@
+{
+    "name": "Agropyron spicatum",
+    "trivial": {
+        "Portuguese": "agropiro desbarbado",
+        "English": "bluebunch wheatgrass"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "250",
+        "max": "500"
+    }
+}

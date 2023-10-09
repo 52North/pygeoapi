@@ -1,0 +1,12 @@
+{
+    "name": "Amaranthus dubius",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2100",
+        "max": "2400"
+    }
+}

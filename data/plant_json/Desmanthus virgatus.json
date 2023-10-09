@@ -1,0 +1,12 @@
+{
+    "name": "Desmanthus virgatus",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

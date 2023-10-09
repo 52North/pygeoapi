@@ -1,0 +1,27 @@
+{
+    "name": "Syzygium cumini",
+    "trivial": {
+        "English": "Portuguese plum",
+        "Hindi": "jamun",
+        "Tagalog": "lomboi",
+        "Javanese": "jamblang",
+        "Thai": "wa",
+        "French": "jam\u00e9longue",
+        "Malay": "obah",
+        "Sinhalese": "naval",
+        "Portuguese": "jamel\u00e3o",
+        "Swahili": "mzambarau",
+        "Khmer": "pring bai",
+        "Burmese": "thabyay-hypyoo",
+        "Vietnamese": "v\u00f4i rung",
+        "Lao": "va"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "6000"
+    }
+}

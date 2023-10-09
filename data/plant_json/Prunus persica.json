@@ -1,0 +1,20 @@
+{
+    "name": "Prunus persica",
+    "trivial": {
+        "English": "Rio Oso gem peach",
+        "Spanish": "melocoton",
+        "French": "p\u00eache",
+        "Italian": "pesca",
+        "Portuguese": "pessego",
+        "German": "Plattpfirsich",
+        "Latin": "Semen Persicae"
+    },
+    "temp": {
+        "min": "20",
+        "max": "33"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1100"
+    }
+}

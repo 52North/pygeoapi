@@ -1,0 +1,16 @@
+{
+    "name": "Tephrosia candida",
+    "trivial": {
+        "Vietnamese": "cot khi",
+        "English": "white tephrosia",
+        "French": "requie'nie"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "1800"
+    }
+}

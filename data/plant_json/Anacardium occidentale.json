@@ -1,0 +1,31 @@
+{
+    "name": "Anacardium occidentale",
+    "trivial": {
+        "Portuguese": "caju",
+        "French": "noix d'acajou",
+        "Samoan": "apu initia",
+        "Iloko": "balogo",
+        "Tagalog": "kasoy",
+        "English": "nut-cashew",
+        "German": "cashewnuss",
+        "Spanish": "mara\u00f1on",
+        "Vietnamese": "dao lon hot",
+        "Malay": "jambu monyet",
+        "Javanese": "jambu mede",
+        "Indonesian": "jambu mortyet",
+        "Hindi": "kaju",
+        "Dutch": "mereke",
+        "Tonga (Tonga Islands)": "kesiu",
+        "Thai": "yaruang",
+        "Khmer": "svaay chantii",
+        "Burmese": "thiho thayet si"
+    },
+    "temp": {
+        "min": "15",
+        "max": "35"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1600"
+    }
+}

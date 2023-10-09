@@ -1,0 +1,15 @@
+{
+    "name": "Caragana arborescens",
+    "trivial": {
+        "Portuguese": "caragana",
+        "English": "Siberian peashrub"
+    },
+    "temp": {
+        "min": "14",
+        "max": "28"
+    },
+    "precip": {
+        "min": "350",
+        "max": "800"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Casuarina oligodon",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2200",
+        "max": "2600"
+    }
+}

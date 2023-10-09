@@ -1,0 +1,15 @@
+{
+    "name": "Ochroma pyramidale",
+    "trivial": {
+        "English": "balsa",
+        "German": "Balsabaum"
+    },
+    "temp": {
+        "min": "18",
+        "max": "35"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3000"
+    }
+}

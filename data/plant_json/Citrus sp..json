@@ -1,0 +1,23 @@
+{
+    "name": "Citrus sp.",
+    "trivial": {
+        "French": "agrumes",
+        "Vietnamese": "cam",
+        "English": "citrus",
+        "Indonesian": "jeruk",
+        "Khmer": "krauch",
+        "Malay": "limau",
+        "Lao": "mak",
+        "Creoles and Pidgins (Other)": "mull",
+        "Burmese": "shouk",
+        "German": "Zitrone"
+    },
+    "temp": {
+        "min": "23",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Mallotus philippensis",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2500"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Baphia nitida",
+    "trivial": {
+        "English": "camwood",
+        "Portuguese": "baru"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2400"
+    }
+}

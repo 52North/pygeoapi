@@ -1,0 +1,19 @@
+{
+    "name": "Cydonia oblonga",
+    "trivial": {
+        "Portuguese": "marmelo galego",
+        "French": "coing",
+        "Italian": "mela cotone",
+        "Spanish": "membrillo",
+        "English": "quince",
+        "German": "Quittenbaum"
+    },
+    "temp": {
+        "min": "10",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Polyalthia fragrans",
+    "trivial": {},
+    "temp": {
+        "min": "30",
+        "max": "35"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "5000"
+    }
+}

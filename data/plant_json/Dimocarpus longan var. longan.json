@@ -1,0 +1,21 @@
+{
+    "name": "Dimocarpus longan var. longan",
+    "trivial": {
+        "Indonesian": "kyet mouk",
+        "Thai": "lamyai pa",
+        "Lao": "nam nhai",
+        "Malay": "len keng",
+        "English": "longan",
+        "French": "oeil de dragon",
+        "Khmer": "mien",
+        "Vietnamese": "nam:nhan"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "2000"
+    }
+}

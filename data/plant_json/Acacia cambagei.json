@@ -1,0 +1,14 @@
+{
+    "name": "Acacia cambagei",
+    "trivial": {
+        "Unknown": "Stinking Wattle"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "200",
+        "max": "500"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus jensenii",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "550",
+        "max": "1300"
+    }
+}

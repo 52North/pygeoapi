@@ -1,0 +1,21 @@
+{
+    "name": "Juglans regia",
+    "trivial": {
+        "Danish": "valn\u00f8d",
+        "Swedish": "valn\u00f6tstr\u00e4d",
+        "German": "Walnussbaum",
+        "Latin": "Juglandis pericarpium",
+        "Italian": "noce",
+        "Spanish": "nogal",
+        "French": "noyer",
+        "English": "walnut tree"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1700"
+    }
+}

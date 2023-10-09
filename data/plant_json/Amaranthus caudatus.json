@@ -1,0 +1,20 @@
+{
+    "name": "Amaranthus caudatus",
+    "trivial": {
+        "French": "Amarante",
+        "English": "amaranths",
+        "Amharic": "lishalisho",
+        "German": "Gartenfuchsschwanz",
+        "Walamo": "gagabsa (Wollamo)",
+        "Unknown": "jolili (Galinya)",
+        "Chinese": "xian"
+    },
+    "temp": {
+        "min": "21",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2300"
+    }
+}

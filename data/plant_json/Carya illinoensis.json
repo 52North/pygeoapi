@@ -1,0 +1,23 @@
+{
+    "name": "Carya illinoensis",
+    "trivial": {
+        "Russian": "\u041f\u0435\u043a\u0430\u0301\u043d \u043e\u0431\u044b\u043a\u043d\u043e\u0432\u0435\u043d\u043d\u044b\u0439",
+        "French": "pacanier",
+        "Spanish": "pec\u00e1n",
+        "Polish": "pekanem",
+        "English": "Pecan",
+        "Italian": "pecan",
+        "Dutch": "pecannoot",
+        "German": "Pekanuss",
+        "Finnish": "Pekaanip\u00e4hkin\u00e4",
+        "Turkish": "Pikan cevizi"
+    },
+    "temp": {
+        "min": "15",
+        "max": "35"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

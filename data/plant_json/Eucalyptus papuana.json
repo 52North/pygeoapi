@@ -1,0 +1,15 @@
+{
+    "name": "Eucalyptus papuana",
+    "trivial": {
+        "Portuguese": "eucalipto de Papua",
+        "English": "ghost gum tree"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

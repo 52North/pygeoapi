@@ -1,0 +1,12 @@
+{
+    "name": "Calamus peregrinus",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2200"
+    }
+}

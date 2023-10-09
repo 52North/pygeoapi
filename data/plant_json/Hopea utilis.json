@@ -1,0 +1,12 @@
+{
+    "name": "Hopea utilis",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "33"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3500"
+    }
+}

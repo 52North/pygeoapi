@@ -1,0 +1,19 @@
+{
+    "name": "Bauhinia variegata",
+    "trivial": {
+        "English": "poor man's orchid",
+        "Spanish": "palo de orqu\u00eddeas",
+        "Hindi": "kachnar",
+        "Malay": "kotidaram",
+        "Bengali": "rakta-kanchan",
+        "Tamil": "segapumanchorii"
+    },
+    "temp": {
+        "min": "12",
+        "max": "38"
+    },
+    "precip": {
+        "min": "600",
+        "max": "2200"
+    }
+}

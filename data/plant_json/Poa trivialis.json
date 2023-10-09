@@ -1,0 +1,17 @@
+{
+    "name": "Poa trivialis",
+    "trivial": {
+        "German": "gemeines rispengras",
+        "French": "paturin commun",
+        "Portuguese": "relvao",
+        "English": "rough-stalked bluegrass"
+    },
+    "temp": {
+        "min": "10",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

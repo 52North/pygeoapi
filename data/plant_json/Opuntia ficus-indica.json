@@ -1,0 +1,23 @@
+{
+    "name": "Opuntia ficus-indica",
+    "trivial": {
+        "Tigrinya": "beles",
+        "English": "prickly pear",
+        "Italian": "fico d'india",
+        "Tigr\u00e9": "gelhi",
+        "Oromo": "hadaami (Oromiffa)",
+        "German": "Kaktusfeige",
+        "Amharic": "qulquale",
+        "Aztec": "N\u014dpalli (Nahuatl)",
+        "Unknown": "Tuna",
+        "Afrikaans": "turksvy"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1300"
+    }
+}

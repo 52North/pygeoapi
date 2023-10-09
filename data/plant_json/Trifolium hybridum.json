@@ -1,0 +1,25 @@
+{
+    "name": "Trifolium hybridum",
+    "trivial": {
+        "English": "Swedish clover",
+        "Danish": "smuk kl\u00f8ver",
+        "Finnish": "alsikeapila",
+        "Swedish": "alsikekl\u00f6ver",
+        "Norwegian": "alsikekl\u00f8ver",
+        "German": "Schwedenklee",
+        "Icelandic": "t\u00fansm\u00e1ri",
+        "Spanish": "trebol sueco",
+        "French": "trefle hybride",
+        "Portuguese": "trevo hibrido",
+        "Italian": "trifoglio ibrido",
+        "Latin": "Trifolii albi et rubri flos"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

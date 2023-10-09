@@ -1,0 +1,12 @@
+{
+    "name": "Lagerstroemia flos-reginae",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "35"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3500"
+    }
+}

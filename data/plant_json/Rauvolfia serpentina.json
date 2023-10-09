@@ -1,0 +1,14 @@
+{
+    "name": "Rauvolfia serpentina",
+    "trivial": {
+        "Hindi": "sarpgandha"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3500"
+    }
+}

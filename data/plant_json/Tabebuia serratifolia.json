@@ -1,0 +1,16 @@
+{
+    "name": "Tabebuia serratifolia",
+    "trivial": {
+        "English": "yellow tecoma tree",
+        "Dutch": "groenhart",
+        "Portuguese": "tabebuia amarela"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1700"
+    }
+}

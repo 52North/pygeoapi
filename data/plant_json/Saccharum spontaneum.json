@@ -1,0 +1,12 @@
+{
+    "name": "Saccharum spontaneum",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

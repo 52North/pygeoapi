@@ -1,0 +1,19 @@
+{
+    "name": "Ribes uva-crispa",
+    "trivial": {
+        "English": "gooseberry",
+        "French": "groseille a maquereaux",
+        "German": "Stachelbeere",
+        "Dutch": "stekbes",
+        "Danish": "stikkelsb\u00e6r",
+        "Italian": "uva spina"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

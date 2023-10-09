@@ -1,0 +1,12 @@
+{
+    "name": "Pinus chiapensis",
+    "trivial": {},
+    "temp": {
+        "min": "23",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1400"
+    }
+}

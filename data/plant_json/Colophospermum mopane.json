@@ -1,0 +1,15 @@
+{
+    "name": "Colophospermum mopane",
+    "trivial": {
+        "English": "turpentine tree",
+        "Unknown": "omusati (Oshiwambo, Namibia)"
+    },
+    "temp": {
+        "min": "26",
+        "max": "36"
+    },
+    "precip": {
+        "min": "250",
+        "max": "500"
+    }
+}

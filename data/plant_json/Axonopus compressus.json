@@ -1,0 +1,14 @@
+{
+    "name": "Axonopus compressus",
+    "trivial": {
+        "English": "American carpet grass"
+    },
+    "temp": {
+        "min": "23",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "4000"
+    }
+}

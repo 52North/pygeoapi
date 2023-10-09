@@ -1,0 +1,14 @@
+{
+    "name": "Tabebuia rosea",
+    "trivial": {
+        "English": "pink tabebuias"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

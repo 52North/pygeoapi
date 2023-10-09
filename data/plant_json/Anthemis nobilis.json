@@ -1,0 +1,19 @@
+{
+    "name": "Anthemis nobilis",
+    "trivial": {
+        "Latin": "Chamomillae romanae flos",
+        "Italian": "camomilla",
+        "French": "camomille romaine",
+        "English": "roman chamomile",
+        "Slovenian": "kamilica",
+        "German": "r\u00f6mische Kamille"
+    },
+    "temp": {
+        "min": "15",
+        "max": "26"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

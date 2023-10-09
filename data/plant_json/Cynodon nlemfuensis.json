@@ -1,0 +1,14 @@
+{
+    "name": "Cynodon nlemfuensis",
+    "trivial": {
+        "English": "stargrass"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

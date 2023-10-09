@@ -1,0 +1,29 @@
+{
+    "name": "Caltha palustris",
+    "trivial": {
+        "Unknown": "varsakabi",
+        "Portuguese": "malmequer dos brejos",
+        "German": "Sumpfdotterblume",
+        "Italian": "farferugine",
+        "English": "yellow marsh-marigold",
+        "Dutch": "dotterbloem",
+        "Danish": "eng-kabbeleje",
+        "Icelandic": "h\u00f3fs\u00f3ley",
+        "Swedish": "vanlig kabbleka",
+        "Estonian": "latiklill",
+        "Gaelic (Scots)": "lus buidhe bealltainn",
+        "Hungarian": "mocs\u00e1ri g\u00f3lyah\u00edr",
+        "French": "soucis d'eau",
+        "Finnish": "rentukka",
+        "Norwegian": "soleihov",
+        "Slovak": "z\u00e1ruzlie mo\u00e8iarne"
+    },
+    "temp": {
+        "min": "14",
+        "max": "23"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

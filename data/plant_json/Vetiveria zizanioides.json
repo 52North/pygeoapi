@@ -1,0 +1,22 @@
+{
+    "name": "Vetiveria zizanioides",
+    "trivial": {
+        "Indonesian": "aga wangi",
+        "Hindi": "bala",
+        "Persian": "bikhiwala",
+        "Thai": "faeg",
+        "Urdu": "khas",
+        "Unknown": "khus-khus",
+        "Malayalam": "nara wastu",
+        "English": "vetiver grass",
+        "Chinese": "xiang geng chao"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "2500"
+    }
+}

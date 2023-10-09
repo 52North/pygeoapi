@@ -1,0 +1,15 @@
+{
+    "name": "Casuarina equisetifolia",
+    "trivial": {
+        "English": "south sea ironwood",
+        "Unknown": "toa"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "700",
+        "max": "3500"
+    }
+}

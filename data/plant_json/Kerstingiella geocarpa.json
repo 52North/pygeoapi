@@ -1,0 +1,14 @@
+{
+    "name": "Kerstingiella geocarpa",
+    "trivial": {
+        "English": "Kersting's groundnut"
+    },
+    "temp": {
+        "min": "18",
+        "max": "34"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

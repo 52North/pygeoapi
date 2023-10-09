@@ -1,0 +1,19 @@
+{
+    "name": "Syzygium malaccense",
+    "trivial": {
+        "Unknown": "Kavika",
+        "Malagasy": "makomba",
+        "Creoles and Pidgins, English-based (Other)": "Laulau",
+        "German": "Rosenapfel",
+        "English": "rose apple",
+        "French": "pomme malac"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

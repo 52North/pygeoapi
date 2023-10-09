@@ -1,0 +1,27 @@
+{
+    "name": "Gynandropsis gynandra",
+    "trivial": {
+        "Arabic": "abu quarn",
+        "French": "mouzambe \u00e0 fleurs blanches",
+        "English": "white massombee (Puerto Rico)",
+        "Unknown": "tamaleika (South Africa)",
+        "Swahili": "ans saka",
+        "Indonesian": "baowan",
+        "Ethiopic": "boekbeha",
+        "German": "fieberstrauch",
+        "Dutch": "kattesnor",
+        "Hindi": "kurhur",
+        "Malay": "maman",
+        "Chinese": "pe hua tsai",
+        "Thai": "phak sain",
+        "Spanish": "volatin (Cuba)"
+    },
+    "temp": {
+        "min": "18",
+        "max": "25"
+    },
+    "precip": {
+        "min": "-",
+        "max": "-"
+    }
+}

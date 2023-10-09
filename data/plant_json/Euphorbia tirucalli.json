@@ -1,0 +1,12 @@
+{
+    "name": "Euphorbia tirucalli",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "37"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

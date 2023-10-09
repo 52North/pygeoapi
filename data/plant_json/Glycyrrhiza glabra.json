@@ -1,0 +1,27 @@
+{
+    "name": "Glycyrrhiza glabra",
+    "trivial": {
+        "Turkish": "meyan otu",
+        "Berber languages": "azrar azidane",
+        "Persian": "bikhe mahaka",
+        "Arabic": "shagaret es-s\u00fbs",
+        "Pushto": "khosha walgi",
+        "Hindi": "Licorice",
+        "Italian": "liquirizia",
+        "English": "sweet wood",
+        "Zulu": "mlomo-mnandi",
+        "Urdu": "mulaithi",
+        "French": "r\u00e9glisse officinale",
+        "Spanish": "regaliz",
+        "German": "S\u00fcssholz",
+        "Afrikaans": "soethoutwortel"
+    },
+    "temp": {
+        "min": "14",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

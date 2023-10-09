@@ -1,0 +1,14 @@
+{
+    "name": "Cucurbita mixta",
+    "trivial": {
+        "English": "squash"
+    },
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1600"
+    }
+}

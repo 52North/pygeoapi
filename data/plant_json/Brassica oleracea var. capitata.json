@@ -1,0 +1,22 @@
+{
+    "name": "Brassica oleracea var. capitata",
+    "trivial": {
+        "English": "white cabbage",
+        "Italian": "cavolo",
+        "French": "chou",
+        "Tigrinya": "hamele",
+        "Creoles and Pidgins, English-based (Other)": "kebis",
+        "German": "Wei\u00dfkraut",
+        "Fijian": "kapeti kovu",
+        "Unknown": "kapisi palangi (Tuvalu)",
+        "Spanish": "repollo"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

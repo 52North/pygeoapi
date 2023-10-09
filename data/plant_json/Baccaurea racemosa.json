@@ -1,0 +1,14 @@
+{
+    "name": "Baccaurea racemosa",
+    "trivial": {
+        "English": "menteng"
+    },
+    "temp": {
+        "min": "21",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "2500"
+    }
+}

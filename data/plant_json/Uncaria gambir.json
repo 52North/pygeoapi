@@ -1,0 +1,15 @@
+{
+    "name": "Uncaria gambir",
+    "trivial": {
+        "English": "gambier",
+        "Portuguese": "gambir da India"
+    },
+    "temp": {
+        "min": "25",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2200",
+        "max": "2400"
+    }
+}

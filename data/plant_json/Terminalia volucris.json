@@ -1,0 +1,12 @@
+{
+    "name": "Terminalia volucris",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "38"
+    },
+    "precip": {
+        "min": "600",
+        "max": "850"
+    }
+}

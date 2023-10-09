@@ -1,0 +1,14 @@
+{
+    "name": "Acacia torulosa",
+    "trivial": {
+        "Unknown": "Torulosa Wattle"
+    },
+    "temp": {
+        "min": "22",
+        "max": "36"
+    },
+    "precip": {
+        "min": "400",
+        "max": "700"
+    }
+}

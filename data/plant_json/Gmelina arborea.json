@@ -1,0 +1,14 @@
+{
+    "name": "Gmelina arborea",
+    "trivial": {
+        "Unknown": "yemane"
+    },
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

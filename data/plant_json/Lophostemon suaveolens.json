@@ -1,0 +1,12 @@
+{
+    "name": "Lophostemon suaveolens",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "33"
+    },
+    "precip": {
+        "min": "650",
+        "max": "1800"
+    }
+}

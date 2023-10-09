@@ -1,0 +1,15 @@
+{
+    "name": "Cucumis anguria",
+    "trivial": {
+        "English": "gherkin",
+        "Portuguese": "maxixe"
+    },
+    "temp": {
+        "min": "21",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "Solenostemon rotundifolius",
+    "trivial": {
+        "English": "Sudan-potato",
+        "Unknown": "tumuku",
+        "German": "hausakartoffel",
+        "Tamil": "ratala",
+        "Malay": "ubi kembili",
+        "Indonesian": "ketang",
+        "Hindi": "koorka",
+        "Spanish": "patata de los hausas",
+        "French": "pomme de terre du Soudan"
+    },
+    "temp": {
+        "min": "17",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "2600"
+    }
+}

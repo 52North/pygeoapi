@@ -1,0 +1,23 @@
+{
+    "name": "Samanea saman",
+    "trivial": {
+        "Hawaiian": "ohai saman",
+        "Portuguese": "samania",
+        "Thai": "chamchuri-yak",
+        "English": "zaman",
+        "Unknown": "filinganga (CNMI-Carolinian)",
+        "Yap": "gumor ni spanis",
+        "Tonga (Tonga Islands)": "kasia",
+        "German": "Zamana",
+        "Chamorro": "tronkon mames",
+        "Fijian": "vaivai ni vavalangi"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "800",
+        "max": "3000"
+    }
+}

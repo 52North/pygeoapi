@@ -1,0 +1,23 @@
+{
+    "name": "Brassica napus",
+    "trivial": {
+        "English": "winter oil seed rape",
+        "Italian": "colza",
+        "Portuguese": "colza",
+        "German": "olraps",
+        "Dutch": "raapzaad",
+        "Danish": "raps",
+        "Icelandic": "raps",
+        "Norwegian": "raps",
+        "Finnish": "rypsi",
+        "Unknown": "rutabaga"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Prosopis juliflora",
+    "trivial": {
+        "Unknown": "weyane (Dergi-Hara/Afar; Ethiopia)",
+        "English": "sweet thorn",
+        "Spanish": "vallahonda",
+        "French": "chambron",
+        "Swahili": "mathenge",
+        "German": "Mesquitebaum",
+        "Hindi": "vilayati babul"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "300",
+        "max": "750"
+    }
+}

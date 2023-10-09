@@ -1,0 +1,12 @@
+{
+    "name": "Bambusa longispiculata",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2300",
+        "max": "3000"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Paraserianthes falcataria",
+    "trivial": {
+        "Malay": "puah",
+        "Unknown": "batai",
+        "Tagalog": "moluccan sau",
+        "English": "white albizia",
+        "Indonesian": "sikat"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

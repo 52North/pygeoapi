@@ -1,0 +1,16 @@
+{
+    "name": "Ficus elastica",
+    "trivial": {
+        "Portuguese": "litonde",
+        "English": "rubber tree",
+        "German": "Gummibaum"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

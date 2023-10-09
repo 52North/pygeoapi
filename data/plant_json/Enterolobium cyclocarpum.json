@@ -1,0 +1,12 @@
+{
+    "name": "Enterolobium cyclocarpum",
+    "trivial": {},
+    "temp": {
+        "min": "23",
+        "max": "28"
+    },
+    "precip": {
+        "min": "750",
+        "max": "2500"
+    }
+}

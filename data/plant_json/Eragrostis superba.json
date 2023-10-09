@@ -1,0 +1,15 @@
+{
+    "name": "Eragrostis superba",
+    "trivial": {
+        "English": "sawtooth lovegrass",
+        "Afrikaans": "weeluis eragrostis"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Bombax insigne",
+    "trivial": {},
+    "temp": {
+        "min": "30",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

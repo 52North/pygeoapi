@@ -1,0 +1,30 @@
+{
+    "name": "Cyperus rotundus",
+    "trivial": {
+        "Panjabi": "baga-as",
+        "Tagalog": "balangot",
+        "Vietnamese": "tung ghay",
+        "Urdu": "s'ad kufi",
+        "Thai": "ya sam liam",
+        "Malayalam": "teki",
+        "Unknown": "karelawai",
+        "Korean": "kyang-boo-ja",
+        "Madurese": "mota",
+        "Nepali": "mothe",
+        "Bengali": "mutha",
+        "English": "sweet cyperus",
+        "Arabic": "s'ad",
+        "French": "souchet rond",
+        "Indonesian": "teki",
+        "Mandingo": "tikog",
+        "Portuguese": "tiririca"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "500",
+        "max": "3000"
+    }
+}

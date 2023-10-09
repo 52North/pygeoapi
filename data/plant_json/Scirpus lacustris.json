@@ -1,0 +1,20 @@
+{
+    "name": "Scirpus lacustris",
+    "trivial": {
+        "English": "common club-rush",
+        "German": "gew\u00f6hnliche teichsimse",
+        "Finnish": "j\u00e4rvikaisla",
+        "Swedish": "s\u00e4v",
+        "Danish": "s\u00f8-kogleaks",
+        "Norwegian": "sj\u00f8sevaks",
+        "Icelandic": "votasef"
+    },
+    "temp": {
+        "min": "14",
+        "max": "22"
+    },
+    "precip": {
+        "min": "550",
+        "max": "1200"
+    }
+}

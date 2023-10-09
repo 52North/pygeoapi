@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus salubris",
+    "trivial": {
+        "English": "gimlet"
+    },
+    "temp": {
+        "min": "20",
+        "max": "34"
+    },
+    "precip": {
+        "min": "250",
+        "max": "350"
+    }
+}

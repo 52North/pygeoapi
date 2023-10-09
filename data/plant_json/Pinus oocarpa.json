@@ -1,0 +1,16 @@
+{
+    "name": "Pinus oocarpa",
+    "trivial": {
+        "Spanish": "pino avellano",
+        "English": "hazelnut pine",
+        "Unknown": "Mexican yellow pine"
+    },
+    "temp": {
+        "min": "16",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1700"
+    }
+}

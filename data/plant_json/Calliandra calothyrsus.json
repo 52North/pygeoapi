@@ -1,0 +1,16 @@
+{
+    "name": "Calliandra calothyrsus",
+    "trivial": {
+        "Spanish": "cabello de angel",
+        "Indonesian": "calliandra merah",
+        "English": "red calliandra"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

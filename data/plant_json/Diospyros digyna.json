@@ -1,0 +1,15 @@
+{
+    "name": "Diospyros digyna",
+    "trivial": {
+        "English": "black sapote",
+        "Tagalog": "zapote negro"
+    },
+    "temp": {
+        "min": "20",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

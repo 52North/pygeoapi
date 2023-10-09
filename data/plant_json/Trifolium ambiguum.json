@@ -1,0 +1,17 @@
+{
+    "name": "Trifolium ambiguum",
+    "trivial": {
+        "English": "Pellett clover",
+        "Spanish": "trebol del Caucaso",
+        "French": "trefle du Caucase",
+        "Portuguese": "trevo do Caucaso"
+    },
+    "temp": {
+        "min": "10",
+        "max": "17"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

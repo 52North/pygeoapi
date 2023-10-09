@@ -1,0 +1,16 @@
+{
+    "name": "Trema orientalis",
+    "trivial": {
+        "Unknown": "bulasisi",
+        "English": "mpesi",
+        "Portuguese": "corgul"
+    },
+    "temp": {
+        "min": "15",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

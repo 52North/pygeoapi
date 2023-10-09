@@ -1,0 +1,16 @@
+{
+    "name": "Trichanthera gigantea",
+    "trivial": {
+        "Spanish": "tuno",
+        "Portuguese": "pau santo",
+        "English": "trichanthera"
+    },
+    "temp": {
+        "min": "27",
+        "max": "33"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Roseodendron donnell-smithii",
+    "trivial": {},
+    "temp": {
+        "min": "23",
+        "max": "31"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

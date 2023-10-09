@@ -1,0 +1,15 @@
+{
+    "name": "Cynara cardunculus",
+    "trivial": {
+        "English": "wild artichoke",
+        "German": "Artischocke"
+    },
+    "temp": {
+        "min": "14",
+        "max": "28"
+    },
+    "precip": {
+        "min": "550",
+        "max": "800"
+    }
+}

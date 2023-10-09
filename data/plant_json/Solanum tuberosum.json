@@ -1,0 +1,24 @@
+{
+    "name": "Solanum tuberosum",
+    "trivial": {
+        "Afrikaans": "aartappel",
+        "Portuguese": "batateira vulgar",
+        "German": "Kartoffel",
+        "Unknown": "vateta",
+        "English": "white potato",
+        "Danish": "katoffel",
+        "Spanish": "papa",
+        "Syriac": "patata",
+        "French": "pomme de terre",
+        "Finnish": "potaati",
+        "Swedish": "potatis"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

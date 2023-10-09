@@ -1,0 +1,21 @@
+{
+    "name": "Dichrostachys cinerea",
+    "trivial": {
+        "French": "Saint Domingue",
+        "English": "sickle bush",
+        "Indic (Other)": "wadu",
+        "Niger-Kordofanian (Other)": "d'und'u",
+        "Sundanese": "kakada",
+        "German": "Kalahari-Weihnachtsbaum",
+        "Unknown": "Sen Domeng",
+        "Spanish": "mazabu"
+    },
+    "temp": {
+        "min": "15",
+        "max": "40"
+    },
+    "precip": {
+        "min": "300",
+        "max": "500"
+    }
+}

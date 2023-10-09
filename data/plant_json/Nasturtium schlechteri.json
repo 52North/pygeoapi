@@ -1,0 +1,12 @@
+{
+    "name": "Nasturtium schlechteri",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1200"
+    }
+}

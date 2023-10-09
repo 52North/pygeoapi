@@ -1,0 +1,20 @@
+{
+    "name": "Salvadora persica",
+    "trivial": {
+        "Arabic": "siwak",
+        "Portuguese": "salvadora",
+        "Tigrinya": "adai",
+        "Somali": "dadaho",
+        "French": "arbre a frotte-dents",
+        "English": "toothbrush tree",
+        "Swahili": "mswaki"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "300",
+        "max": "700"
+    }
+}

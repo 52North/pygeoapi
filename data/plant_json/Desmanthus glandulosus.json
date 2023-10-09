@@ -1,0 +1,14 @@
+{
+    "name": "Desmanthus glandulosus",
+    "trivial": {
+        "English": "glandular bundleflower"
+    },
+    "temp": {
+        "min": "12",
+        "max": "25"
+    },
+    "precip": {
+        "min": "300",
+        "max": "800"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Pinus sylvestris",
+    "trivial": {
+        "English": "yellow deal",
+        "German": "Waldkiefer",
+        "French": "pin sylvestre",
+        "Portuguese": "pinheiro de Genebra",
+        "Latin": "Pini turione",
+        "Italian": "pino silvestre",
+        "Danish": "skov fyr"
+    },
+    "temp": {
+        "min": "14",
+        "max": "23"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

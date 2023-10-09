@@ -1,0 +1,16 @@
+{
+    "name": "Argania sideroxylon",
+    "trivial": {
+        "English": "Moroccon iron-wood tree",
+        "French": "arjardin",
+        "German": "Eisenholzbaum"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "200",
+        "max": "300"
+    }
+}

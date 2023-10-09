@@ -1,0 +1,15 @@
+{
+    "name": "Allium fistulosum",
+    "trivial": {
+        "English": "Welsh onion",
+        "Portuguese": "ceboleta de Espanha"
+    },
+    "temp": {
+        "min": "12",
+        "max": "25"
+    },
+    "precip": {
+        "min": "850",
+        "max": "1600"
+    }
+}

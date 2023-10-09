@@ -1,0 +1,14 @@
+{
+    "name": "Castilla elastica",
+    "trivial": {
+        "English": "Panama rubber tree"
+    },
+    "temp": {
+        "min": "23",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2300",
+        "max": "2700"
+    }
+}

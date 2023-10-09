@@ -1,0 +1,12 @@
+{
+    "name": "Eragrostis tremula",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "300",
+        "max": "600"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Brassica oleracea var. acephala",
+    "trivial": {
+        "French": "chou moulier",
+        "English": "tree kale",
+        "Swahili": "Sukuma wiki"
+    },
+    "temp": {
+        "min": "15",
+        "max": "22"
+    },
+    "precip": {
+        "min": "450",
+        "max": "1000"
+    }
+}

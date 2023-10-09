@@ -1,0 +1,14 @@
+{
+    "name": "Ribes sativum",
+    "trivial": {
+        "English": "currant"
+    },
+    "temp": {
+        "min": "13",
+        "max": "23"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

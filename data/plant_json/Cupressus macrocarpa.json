@@ -1,0 +1,16 @@
+{
+    "name": "Cupressus macrocarpa",
+    "trivial": {
+        "Portuguese": "cedro de Monterey",
+        "French": "cypres de Monterey",
+        "English": "Monterey cypress"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1400"
+    }
+}

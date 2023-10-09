@@ -1,0 +1,20 @@
+{
+    "name": "Pachyrhizus ahipa",
+    "trivial": {
+        "Spanish": "poroto batata",
+        "English": "yam bean",
+        "Portuguese": "ahipa",
+        "Quechua": "asipa",
+        "German": "andine knollenbone",
+        "Aymara": "villu",
+        "Tagalog": "sinkamas"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1100"
+    }
+}

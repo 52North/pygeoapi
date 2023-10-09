@@ -1,0 +1,17 @@
+{
+    "name": "Coffea canephora",
+    "trivial": {
+        "Portuguese": "cafe",
+        "English": "robusta coffee",
+        "Chinese": "kafei",
+        "German": "Kaffee"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1700",
+        "max": "3000"
+    }
+}

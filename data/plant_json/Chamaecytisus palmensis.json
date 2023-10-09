@@ -1,0 +1,12 @@
+{
+    "name": "Chamaecytisus palmensis",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1400"
+    }
+}

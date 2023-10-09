@@ -1,0 +1,20 @@
+{
+    "name": "Solanum quitoense",
+    "trivial": {
+        "Portuguese": "laranjitas de Quito",
+        "English": "Quito orange",
+        "Quechua": "lulu puscolulu",
+        "Spanish": "toronja",
+        "German": "lulo frucht",
+        "Unknown": "lulum (Inca)",
+        "French": "orange de Quito"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

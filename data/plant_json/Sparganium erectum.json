@@ -1,0 +1,19 @@
+{
+    "name": "Sparganium erectum",
+    "trivial": {
+        "German": "aufrechter igelkolben",
+        "English": "bur-reed",
+        "Danish": "sm\u00e5frugtet pindsvineknop",
+        "Swedish": "vanlig storigelknopp",
+        "Finnish": "haarapalpakko",
+        "Norwegian": "kjempe-piggknopp"
+    },
+    "temp": {
+        "min": "12",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

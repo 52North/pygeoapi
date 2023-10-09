@@ -1,0 +1,12 @@
+{
+    "name": "Glycyrrhiza lepidota",
+    "trivial": {},
+    "temp": {
+        "min": "10",
+        "max": "17"
+    },
+    "precip": {
+        "min": "450",
+        "max": "500"
+    }
+}

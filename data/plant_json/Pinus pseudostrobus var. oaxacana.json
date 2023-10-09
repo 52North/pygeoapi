@@ -1,0 +1,12 @@
+{
+    "name": "Pinus pseudostrobus var. oaxacana",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1400"
+    }
+}

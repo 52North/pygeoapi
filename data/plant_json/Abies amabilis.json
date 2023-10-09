@@ -1,0 +1,14 @@
+{
+    "name": "Abies amabilis",
+    "trivial": {
+        "English": "white fir"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "6000"
+    }
+}

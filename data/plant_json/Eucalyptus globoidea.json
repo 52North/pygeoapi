@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus globoidea",
+    "trivial": {
+        "English": "white stringybark"
+    },
+    "temp": {
+        "min": "20",
+        "max": "31"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1300"
+    }
+}

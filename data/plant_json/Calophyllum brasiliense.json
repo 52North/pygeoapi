@@ -1,0 +1,15 @@
+{
+    "name": "Calophyllum brasiliense",
+    "trivial": {
+        "English": "Santa Maria tree",
+        "Portuguese": "pau de Maria"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "6000"
+    }
+}

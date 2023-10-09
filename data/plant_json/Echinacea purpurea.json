@@ -1,0 +1,16 @@
+{
+    "name": "Echinacea purpurea",
+    "trivial": {
+        "Latin": "Herba echinaceae purpureae",
+        "English": "red sunflower",
+        "German": "Sonnenhut"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Cordeauxia edulis",
+    "trivial": {
+        "Somali": "quda",
+        "English": "yeheb nut"
+    },
+    "temp": {
+        "min": "25",
+        "max": "30"
+    },
+    "precip": {
+        "min": "200",
+        "max": "400"
+    }
+}

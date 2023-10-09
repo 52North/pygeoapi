@@ -1,0 +1,16 @@
+{
+    "name": "Stereospermum kunthianum",
+    "trivial": {
+        "Arabic": "khshkhash",
+        "Swahili": "mtafuna panya",
+        "English": "pink jacaranda"
+    },
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "450",
+        "max": "900"
+    }
+}

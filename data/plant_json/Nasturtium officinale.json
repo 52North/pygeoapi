@@ -1,0 +1,20 @@
+{
+    "name": "Nasturtium officinale",
+    "trivial": {
+        "Portuguese": "agriao de agua",
+        "Spanish": "berro",
+        "Hindi": "piriya halim",
+        "German": "brunnenkresse",
+        "French": "cresson de fontaine",
+        "Unknown": "wara kebis",
+        "English": "watercress"
+    },
+    "temp": {
+        "min": "12",
+        "max": "17"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2300"
+    }
+}

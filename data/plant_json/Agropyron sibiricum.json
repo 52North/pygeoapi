@@ -1,0 +1,15 @@
+{
+    "name": "Agropyron sibiricum",
+    "trivial": {
+        "Portuguese": "agropiro da Siberia",
+        "English": "Siberian wheatgrass"
+    },
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "200",
+        "max": "600"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Aristida pungens",
+    "trivial": {
+        "French": "Arisatide piquante",
+        "Unknown": "eilig"
+    },
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "200",
+        "max": "400"
+    }
+}

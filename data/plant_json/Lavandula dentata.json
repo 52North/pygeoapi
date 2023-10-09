@@ -1,0 +1,14 @@
+{
+    "name": "Lavandula dentata",
+    "trivial": {
+        "English": "French lavender"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

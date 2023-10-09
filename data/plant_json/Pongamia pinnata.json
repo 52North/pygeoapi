@@ -1,0 +1,24 @@
+{
+    "name": "Pongamia pinnata",
+    "trivial": {
+        "French": "arbre de pongolote",
+        "Tagalog": "b\u00e1ni",
+        "Indonesian": "melapari",
+        "Hindi": "saam hoa",
+        "Vietnamese": "saam hoa",
+        "Sino-Tibetan (Other)": "dok kom koi",
+        "English": "seashore mempari",
+        "Unknown": "karanga",
+        "Thai": "ko:m ko:y",
+        "Malay": "pongu",
+        "Tamil": "pongam"
+    },
+    "temp": {
+        "min": "16",
+        "max": "40"
+    },
+    "precip": {
+        "min": "500",
+        "max": "2000"
+    }
+}

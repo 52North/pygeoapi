@@ -1,0 +1,14 @@
+{
+    "name": "Desmodium incanum",
+    "trivial": {
+        "Unknown": "kaimi clover"
+    },
+    "temp": {
+        "min": "25",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3100"
+    }
+}

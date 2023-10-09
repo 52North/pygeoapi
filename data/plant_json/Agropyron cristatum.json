@@ -1,0 +1,15 @@
+{
+    "name": "Agropyron cristatum",
+    "trivial": {
+        "Portuguese": "agropiro de crista",
+        "English": "crested wheatgrass"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "250",
+        "max": "400"
+    }
+}

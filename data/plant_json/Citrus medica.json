@@ -1,0 +1,27 @@
+{
+    "name": "Citrus medica",
+    "trivial": {
+        "Tagalog": "sidris",
+        "French": "c\u00e9dratier",
+        "English": "true citron",
+        "Portuguese": "limao rugoso",
+        "Spanish": "cidro",
+        "Indonesian": "sitrun",
+        "Malayalam": "limau susu",
+        "Thai": "somma-ngua",
+        "German": "medischer apfel",
+        "Papuan-Australian (Other)": "muli",
+        "Arabic": "shamom (Oman)",
+        "Burmese": "shouk-ta-kwah",
+        "Vietnamese": "thanh y\u00ean",
+        "Lao": "v\u00eb\u00ebx"
+    },
+    "temp": {
+        "min": "21",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1400"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Passiflora ligularis",
+    "trivial": {
+        "Spanish": "parchita amarilla",
+        "French": "grenadille douce",
+        "English": "yellow passionfruit"
+    },
+    "temp": {
+        "min": "22",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Derris malaccensis",
+    "trivial": {
+        "English": "New Guinea creeper"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "2000"
+    }
+}

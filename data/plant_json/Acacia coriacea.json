@@ -1,0 +1,14 @@
+{
+    "name": "Acacia coriacea",
+    "trivial": {
+        "Unknown": "Witchety bush"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "300",
+        "max": "500"
+    }
+}

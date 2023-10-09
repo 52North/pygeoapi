@@ -1,0 +1,12 @@
+{
+    "name": "Toona serrata",
+    "trivial": {},
+    "temp": {
+        "min": "30",
+        "max": "38"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2500"
+    }
+}

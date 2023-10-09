@@ -1,0 +1,12 @@
+{
+    "name": "Gmelina leichhardtii",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

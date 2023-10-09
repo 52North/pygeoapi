@@ -1,0 +1,15 @@
+{
+    "name": "Lolium rigidum",
+    "trivial": {
+        "English": "Wimmera ryegrass",
+        "German": "Steif-Lolch"
+    },
+    "temp": {
+        "min": "10",
+        "max": "25"
+    },
+    "precip": {
+        "min": "400",
+        "max": "500"
+    }
+}

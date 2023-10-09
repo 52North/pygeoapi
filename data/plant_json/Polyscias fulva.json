@@ -1,0 +1,16 @@
+{
+    "name": "Polyscias fulva",
+    "trivial": {
+        "Kikuyu": "mutati",
+        "English": "parasol tree",
+        "Ganda": "setala"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

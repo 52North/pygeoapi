@@ -1,0 +1,14 @@
+{
+    "name": "Themeda australis",
+    "trivial": {
+        "Unknown": "kangaroo grass"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "450",
+        "max": "1250"
+    }
+}

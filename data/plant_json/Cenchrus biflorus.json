@@ -1,0 +1,12 @@
+{
+    "name": "Cenchrus biflorus",
+    "trivial": {},
+    "temp": {
+        "min": "28",
+        "max": "35"
+    },
+    "precip": {
+        "min": "400",
+        "max": "500"
+    }
+}

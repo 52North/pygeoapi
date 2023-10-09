@@ -1,0 +1,12 @@
+{
+    "name": "Entada abyssinica",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

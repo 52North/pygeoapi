@@ -1,0 +1,14 @@
+{
+    "name": "Schizolobium parahybum",
+    "trivial": {
+        "Portuguese": "guapuruvu"
+    },
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

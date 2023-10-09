@@ -1,0 +1,12 @@
+{
+    "name": "Ailanthus excelsa",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "40"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1900"
+    }
+}

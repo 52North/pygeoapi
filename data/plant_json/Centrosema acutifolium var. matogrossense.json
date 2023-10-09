@@ -1,0 +1,12 @@
+{
+    "name": "Centrosema acutifolium var. matogrossense",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2500"
+    }
+}

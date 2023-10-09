@@ -1,0 +1,20 @@
+{
+    "name": "Phalaris arundinacea",
+    "trivial": {
+        "French": "balding\u00e8re",
+        "Swedish": "r\u00f6rflen",
+        "Danish": "r\u00f8rgr\u00e6s",
+        "English": "reed canary-grass",
+        "German": "rohr glanzgras",
+        "Finnish": "ruokohelpi",
+        "Norwegian": "strandr\u00f8yr"
+    },
+    "temp": {
+        "min": "17",
+        "max": "25"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

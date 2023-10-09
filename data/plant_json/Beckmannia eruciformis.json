@@ -1,0 +1,14 @@
+{
+    "name": "Beckmannia eruciformis",
+    "trivial": {
+        "English": "slough grass"
+    },
+    "temp": {
+        "min": "11",
+        "max": "20"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1300"
+    }
+}

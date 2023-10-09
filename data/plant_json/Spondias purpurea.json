@@ -1,0 +1,20 @@
+{
+    "name": "Spondias purpurea",
+    "trivial": {
+        "Spanish": "jocote",
+        "English": "Spanish plum",
+        "Unknown": "jocote",
+        "Indonesian": "kedondong seberang",
+        "French": "prunier d'Espagne",
+        "Tagalog": "siniguelas",
+        "Aztec": "xocoti (Nahuati)"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1100"
+    }
+}

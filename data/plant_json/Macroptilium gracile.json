@@ -1,0 +1,14 @@
+{
+    "name": "Macroptilium gracile",
+    "trivial": {
+        "Spanish": "llanos macro"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

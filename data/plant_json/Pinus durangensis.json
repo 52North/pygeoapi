@@ -1,0 +1,15 @@
+{
+    "name": "Pinus durangensis",
+    "trivial": {
+        "English": "Durango pine",
+        "Portuguese": "pinheiro de Durango"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1100"
+    }
+}

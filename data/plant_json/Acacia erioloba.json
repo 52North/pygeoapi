@@ -1,0 +1,23 @@
+{
+    "name": "Acacia erioloba",
+    "trivial": {
+        "Khoisan (Other)": "//ganas",
+        "English": "giraffe thorn",
+        "Afrikaans": "swartkameel",
+        "German": "Kameldornbaum",
+        "Northern Sotho": "mosu",
+        "Tswana": "motlhabakgosi",
+        "Venda": "musivhitha",
+        "Tsonga": "nkayi",
+        "Herero": "omumbonde",
+        "Ndebele (Zimbabwe)": "umwhohlo"
+    },
+    "temp": {
+        "min": "15",
+        "max": "35"
+    },
+    "precip": {
+        "min": "250",
+        "max": "700"
+    }
+}

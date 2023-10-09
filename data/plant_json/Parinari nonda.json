@@ -1,0 +1,14 @@
+{
+    "name": "Parinari nonda",
+    "trivial": {
+        "Unknown": "Nonda plums"
+    },
+    "temp": {
+        "min": "26",
+        "max": "37"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1600"
+    }
+}

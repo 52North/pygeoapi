@@ -1,0 +1,14 @@
+{
+    "name": "Parthenium argentatum",
+    "trivial": {
+        "English": "guayule"
+    },
+    "temp": {
+        "min": "20",
+        "max": "34"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

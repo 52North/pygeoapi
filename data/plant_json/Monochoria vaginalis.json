@@ -1,0 +1,14 @@
+{
+    "name": "Monochoria vaginalis",
+    "trivial": {
+        "Unknown": "pickerel weed"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

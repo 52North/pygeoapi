@@ -1,0 +1,12 @@
+{
+    "name": "Oryza sativa ssp. indica",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

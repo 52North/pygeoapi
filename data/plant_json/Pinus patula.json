@@ -1,0 +1,15 @@
+{
+    "name": "Pinus patula",
+    "trivial": {
+        "English": "patula pine",
+        "Portuguese": "pinheiro patula"
+    },
+    "temp": {
+        "min": "18",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

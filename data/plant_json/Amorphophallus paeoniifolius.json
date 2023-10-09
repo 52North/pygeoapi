@@ -1,0 +1,15 @@
+{
+    "name": "Amorphophallus paeoniifolius",
+    "trivial": {
+        "English": "yam",
+        "Hindi": "Jimikand"
+    },
+    "temp": {
+        "min": "28",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

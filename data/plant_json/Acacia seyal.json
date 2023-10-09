@@ -1,0 +1,15 @@
+{
+    "name": "Acacia seyal",
+    "trivial": {
+        "Unknown": "eeoi (Karamojong)",
+        "English": "Shittim wood"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1700"
+    }
+}

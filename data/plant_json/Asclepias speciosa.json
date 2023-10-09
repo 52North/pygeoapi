@@ -1,0 +1,14 @@
+{
+    "name": "Asclepias speciosa",
+    "trivial": {
+        "English": "showy milkweed"
+    },
+    "temp": {
+        "min": "12",
+        "max": "24"
+    },
+    "precip": {
+        "min": "450",
+        "max": "800"
+    }
+}

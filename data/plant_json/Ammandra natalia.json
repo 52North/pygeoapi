@@ -1,0 +1,12 @@
+{
+    "name": "Ammandra natalia",
+    "trivial": {},
+    "temp": {
+        "min": "21",
+        "max": "26"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "4500"
+    }
+}

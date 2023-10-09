@@ -1,0 +1,21 @@
+{
+    "name": "Petasites hybridus",
+    "trivial": {
+        "German": "Rote Pestwurz",
+        "English": "pestilence-wort",
+        "Finnish": "Etel\u00e4nruttojuuri (Finish)",
+        "Icelandic": "Hjartabla\u00f0ka",
+        "Norwegian": "L\u00e6kjepestro (Norwegian)",
+        "Germanic (Other)": "skr\u00e5",
+        "Latin": "Petasitidis folium",
+        "Danish": "Tordenskr\u00e6ppe (Danish)"
+    },
+    "temp": {
+        "min": "12",
+        "max": "17"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

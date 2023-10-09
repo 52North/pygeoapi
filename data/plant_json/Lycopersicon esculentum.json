@@ -1,0 +1,22 @@
+{
+    "name": "Lycopersicon esculentum",
+    "trivial": {
+        "Italian": "pomodoro",
+        "Afrikaans": "tamatie",
+        "Tonga (Tonga Islands)": "temata",
+        "Unknown": "temeta",
+        "Fijian": "tomata",
+        "Hindi": "tomatar",
+        "French": "tomate",
+        "Spanish": "tomate",
+        "English": "tomato"
+    },
+    "temp": {
+        "min": "20",
+        "max": "27"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1300"
+    }
+}

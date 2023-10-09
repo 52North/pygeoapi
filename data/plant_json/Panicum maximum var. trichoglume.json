@@ -1,0 +1,12 @@
+{
+    "name": "Panicum maximum var. trichoglume",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "32"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1800"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Corchorus capsularis",
+    "trivial": {
+        "English": "jute",
+        "Portuguese": "juta",
+        "French": "jute"
+    },
+    "temp": {
+        "min": "20",
+        "max": "37"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

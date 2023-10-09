@@ -1,0 +1,24 @@
+{
+    "name": "Faurea saligna",
+    "trivial": {
+        "English": "Transvaal beech",
+        "Afrikaans": "transvaalboekenhout",
+        "Portuguese": "faia africana",
+        "Xhosa": "isafo",
+        "Zulu": "umcalathole",
+        "Ndebele (Zimbabwe)": "umonyela",
+        "Swazi": "isiqalaba",
+        "Tswana": "monyena",
+        "Northern Sotho": "mongena",
+        "Venda": "mutango",
+        "Tsonga": "n'wamidzumba"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

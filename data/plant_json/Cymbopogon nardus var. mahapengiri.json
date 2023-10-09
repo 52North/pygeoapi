@@ -1,0 +1,12 @@
+{
+    "name": "Cymbopogon nardus var. mahapengiri",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2200"
+    }
+}

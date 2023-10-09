@@ -1,0 +1,14 @@
+{
+    "name": "Trifolium quartinianum",
+    "trivial": {
+        "English": "quartin's clover"
+    },
+    "temp": {
+        "min": "16",
+        "max": "27"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1800"
+    }
+}

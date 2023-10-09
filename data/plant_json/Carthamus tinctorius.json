@@ -1,0 +1,31 @@
+{
+    "name": "Carthamus tinctorius",
+    "trivial": {
+        "Spanish": "cartamo",
+        "English": "saffron thistle",
+        "Turkish": "aspir",
+        "Japanese": "benibana",
+        "Italian": "cartama",
+        "French": "carthame",
+        "Latin": "Oleum carthami",
+        "Iranian (Other)": "golbar aftab",
+        "Unknown": "hong hua",
+        "Chinese": "honghua",
+        "Hindi": "kusum",
+        "Urdu": "kusumba",
+        "Sanskrit": "kusumbha",
+        "Pushto": "muswar",
+        "Arabic": "osfor",
+        "Russian": "podsolnuh",
+        "German": "Saflor",
+        "Ethiopic": "suff"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

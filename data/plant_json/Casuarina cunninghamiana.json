@@ -1,0 +1,14 @@
+{
+    "name": "Casuarina cunninghamiana",
+    "trivial": {
+        "English": "beef wood"
+    },
+    "temp": {
+        "min": "20",
+        "max": "36"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1500"
+    }
+}

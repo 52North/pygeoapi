@@ -1,0 +1,15 @@
+{
+    "name": "Tropaeolum tuberosum",
+    "trivial": {
+        "Unknown": "ysafio (South America)",
+        "English": "mashwa"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1200"
+    }
+}

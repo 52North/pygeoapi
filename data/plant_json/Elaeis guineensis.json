@@ -1,0 +1,25 @@
+{
+    "name": "Elaeis guineensis",
+    "trivial": {
+        "English": "oil palm",
+        "Unknown": "apwiraiasi (Pohnpei)",
+        "German": "\u00d6lpalme",
+        "Portuguese": "palmeira-dend\u00ea (Brazil)",
+        "Malay": "kelapa sawit",
+        "Arabic": "nahkhil al zite",
+        "Maori": "nu tamara (Cook Islands (Mangaia))",
+        "Danish": "oilepalme",
+        "Dutch": "olie palm",
+        "Spanish": "palma de aceite",
+        "French": "palmier \u00e0 huile d'Afrique",
+        "Chinese": "youzonglu"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "Oryza sativa",
+    "trivial": {
+        "Unknown": "vrihi",
+        "Portuguese": "arroz",
+        "Spanish": "arroz",
+        "Korean": "byeo",
+        "Chinese": "tao",
+        "Hindi": "shali",
+        "Vietnamese": "l\u00faa gao",
+        "Malay": "paddy",
+        "Indonesian": "padi",
+        "German": "reis",
+        "English": "rice",
+        "Italian": "riso",
+        "French": "riz"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

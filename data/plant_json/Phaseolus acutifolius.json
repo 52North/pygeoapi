@@ -1,0 +1,14 @@
+{
+    "name": "Phaseolus acutifolius",
+    "trivial": {
+        "English": "tepary bean"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

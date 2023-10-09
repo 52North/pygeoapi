@@ -1,0 +1,20 @@
+{
+    "name": "Lablab purpureus",
+    "trivial": {
+        "Tagalog": "batao",
+        "Spanish": "quiquaqua",
+        "French": "dolique lab-lab",
+        "German": "Schlangenbohne",
+        "English": "Tonga bean",
+        "Unknown": "lubia (the Sudan)",
+        "Hindi": "wal"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

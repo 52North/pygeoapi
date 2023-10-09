@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus radiata ssp. radiata",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

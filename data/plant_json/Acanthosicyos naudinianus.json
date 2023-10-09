@@ -1,0 +1,15 @@
+{
+    "name": "Acanthosicyos naudinianus",
+    "trivial": {
+        "English": "wild melon",
+        "Afrikaans": "gemsbokkomkommer"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "150",
+        "max": "500"
+    }
+}

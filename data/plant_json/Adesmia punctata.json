@@ -1,0 +1,14 @@
+{
+    "name": "Adesmia punctata",
+    "trivial": {
+        "English": "adesmia"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2000"
+    }
+}

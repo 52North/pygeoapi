@@ -1,0 +1,12 @@
+{
+    "name": "Acacia murrayana",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "34"
+    },
+    "precip": {
+        "min": "200",
+        "max": "400"
+    }
+}

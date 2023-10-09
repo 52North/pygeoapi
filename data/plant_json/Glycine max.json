@@ -1,0 +1,20 @@
+{
+    "name": "Glycine max",
+    "trivial": {
+        "English": "soybean",
+        "Chinese": "dadou",
+        "Portuguese": "soja",
+        "Unknown": "soia piini",
+        "Spanish": "soja",
+        "German": "Sojabohne",
+        "Afrikaans": "sojaplant"
+    },
+    "temp": {
+        "min": "20",
+        "max": "33"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1500"
+    }
+}

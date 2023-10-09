@@ -1,0 +1,14 @@
+{
+    "name": "Vicia narbonensis",
+    "trivial": {
+        "English": "narbon vetch"
+    },
+    "temp": {
+        "min": "10",
+        "max": "24"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

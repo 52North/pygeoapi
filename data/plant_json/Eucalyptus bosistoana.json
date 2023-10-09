@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus bosistoana",
+    "trivial": {
+        "English": "grey box tree"
+    },
+    "temp": {
+        "min": "17",
+        "max": "26"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1100"
+    }
+}

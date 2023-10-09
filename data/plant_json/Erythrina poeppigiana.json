@@ -1,0 +1,15 @@
+{
+    "name": "Erythrina poeppigiana",
+    "trivial": {
+        "Spanish": "flor del gallito",
+        "English": "erythrina"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "4000"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "name": "Pachyrhizus erosus",
+    "trivial": {
+        "Spanish": "jud\u00eda batata",
+        "Chinese": "tu gua",
+        "Sundanese": "bangkowang",
+        "Dutch": "hoewi iris",
+        "Indonesian": "sengkuwang",
+        "English": "yam bean",
+        "Vietnamese": "san",
+        "Italian": "fagiolo patata",
+        "French": "pois patate",
+        "Portuguese": "paquirrizo",
+        "Thai": "man lao",
+        "Tagalog": "sinkamas",
+        "Turkish": "k\u00f6kl\u00fc b\u00f6yr\u00fcce",
+        "German": "yamsbohne",
+        "Japanese": "mame imo",
+        "Lao": "man ph'au",
+        "Hindi": "sankalu",
+        "Khmer": "pe'ku\u00ebk",
+        "Burmese": "pre myit",
+        "Assamese": "sakalu",
+        "Tamil": "tani uttan kai",
+        "Danish": "yamsb\u00f8nne"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1700"
+    }
+}

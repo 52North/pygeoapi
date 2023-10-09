@@ -1,0 +1,12 @@
+{
+    "name": "Hopea parviflora",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "33"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3500"
+    }
+}

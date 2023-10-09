@@ -1,0 +1,14 @@
+{
+    "name": "Pennisetum pedicellatum",
+    "trivial": {
+        "English": "kyasuma grass"
+    },
+    "temp": {
+        "min": "30",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "650"
+    }
+}

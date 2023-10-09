@@ -1,0 +1,18 @@
+{
+    "name": "Spinacia oleracea",
+    "trivial": {
+        "French": "epinard",
+        "Spanish": "espinaca",
+        "English": "spinach",
+        "Italian": "spinacio",
+        "German": "Spinat"
+    },
+    "temp": {
+        "min": "13",
+        "max": "20"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

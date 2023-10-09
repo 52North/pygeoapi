@@ -1,0 +1,15 @@
+{
+    "name": "Frithia humilis",
+    "trivial": {
+        "Afrikaans": "toontjie",
+        "English": "window plant"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "800"
+    }
+}

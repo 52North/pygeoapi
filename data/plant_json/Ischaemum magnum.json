@@ -1,0 +1,12 @@
+{
+    "name": "Ischaemum magnum",
+    "trivial": {},
+    "temp": {
+        "min": "29",
+        "max": "35"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3500"
+    }
+}

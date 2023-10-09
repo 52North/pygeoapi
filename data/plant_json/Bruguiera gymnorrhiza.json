@@ -1,0 +1,16 @@
+{
+    "name": "Bruguiera gymnorrhiza",
+    "trivial": {
+        "English": "orange mangrove",
+        "Unknown": "tumu",
+        "Indonesian": "mapeki"
+    },
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "6000"
+    }
+}

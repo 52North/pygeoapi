@@ -1,0 +1,17 @@
+{
+    "name": "Melissa officinalis",
+    "trivial": {
+        "Latin": "Melissae herba",
+        "English": "lemon balm",
+        "German": "Melisse",
+        "French": "melisse officinale"
+    },
+    "temp": {
+        "min": "14",
+        "max": "25"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

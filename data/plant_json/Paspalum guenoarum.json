@@ -1,0 +1,16 @@
+{
+    "name": "Paspalum guenoarum",
+    "trivial": {
+        "Unknown": "capim-guenoaro",
+        "Spanish": "pasto-ramirez",
+        "English": "wintergreen paspalum"
+    },
+    "temp": {
+        "min": "19",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2000"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Guazuma ulmifolia",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

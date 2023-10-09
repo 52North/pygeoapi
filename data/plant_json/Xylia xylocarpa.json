@@ -1,0 +1,15 @@
+{
+    "name": "Xylia xylocarpa",
+    "trivial": {
+        "Hindi": "jambu",
+        "English": "Pyin kado"
+    },
+    "temp": {
+        "min": "16",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1700",
+        "max": "4500"
+    }
+}

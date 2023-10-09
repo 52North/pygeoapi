@@ -1,0 +1,19 @@
+{
+    "name": "Lupinus luteus",
+    "trivial": {
+        "Spanish": "lupino amarillo",
+        "German": "hansenklee",
+        "English": "yellow lupine",
+        "French": "lupin jaune",
+        "Italian": "lupino giallo",
+        "Portuguese": "tremoco de flor amarela"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "450",
+        "max": "1000"
+    }
+}

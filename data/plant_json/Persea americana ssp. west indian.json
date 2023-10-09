@@ -1,0 +1,14 @@
+{
+    "name": "Persea americana ssp. west indian",
+    "trivial": {
+        "Unknown": "West Indian avocado"
+    },
+    "temp": {
+        "min": "15",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1400"
+    }
+}

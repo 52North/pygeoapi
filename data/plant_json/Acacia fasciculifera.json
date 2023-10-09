@@ -1,0 +1,12 @@
+{
+    "name": "Acacia fasciculifera",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "675",
+        "max": "800"
+    }
+}

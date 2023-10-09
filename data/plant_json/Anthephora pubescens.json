@@ -1,0 +1,15 @@
+{
+    "name": "Anthephora pubescens",
+    "trivial": {
+        "Afrikaans": "borseltjiegras",
+        "English": "wool grass"
+    },
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "350",
+        "max": "600"
+    }
+}

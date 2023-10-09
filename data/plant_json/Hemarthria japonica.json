@@ -1,0 +1,12 @@
+{
+    "name": "Hemarthria japonica",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Juniperus procera",
+    "trivial": {
+        "English": "East African cedar",
+        "German": "Afrikanischer Wacholder",
+        "Unknown": "gattira (Galinya)",
+        "French": "gen\u00e9vrier d'Afrique",
+        "Kikuyu": "Mutarakwa",
+        "Tigrinya": "tidh",
+        "Portuguese": "zimbro africano"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

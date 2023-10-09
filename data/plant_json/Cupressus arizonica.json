@@ -1,0 +1,16 @@
+{
+    "name": "Cupressus arizonica",
+    "trivial": {
+        "English": "Arizona cypress",
+        "Portuguese": "cedro do Arizona",
+        "French": "cypres de l'Arizona"
+    },
+    "temp": {
+        "min": "18",
+        "max": "35"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

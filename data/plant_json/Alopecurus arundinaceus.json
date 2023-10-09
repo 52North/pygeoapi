@@ -1,0 +1,12 @@
+{
+    "name": "Alopecurus arundinaceus",
+    "trivial": {},
+    "temp": {
+        "min": "9",
+        "max": "18"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

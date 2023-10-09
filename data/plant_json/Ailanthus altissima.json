@@ -1,0 +1,17 @@
+{
+    "name": "Ailanthus altissima",
+    "trivial": {
+        "English": "tree of heaven",
+        "German": "G\u00f6tterbaum",
+        "Italian": "ailanto",
+        "Portuguese": "arvore celeste"
+    },
+    "temp": {
+        "min": "14",
+        "max": "28"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

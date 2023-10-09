@@ -1,0 +1,18 @@
+{
+    "name": "Populus ciliata",
+    "trivial": {
+        "Hindi": "safeda",
+        "English": "Himalayan poplar",
+        "Spanish": "chopo de Himalaia",
+        "Portuguese": "choupo do Himalaia",
+        "French": "peuplier de l'Himalaya"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "700",
+        "max": "3000"
+    }
+}

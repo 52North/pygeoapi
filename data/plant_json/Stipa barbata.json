@@ -1,0 +1,12 @@
+{
+    "name": "Stipa barbata",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "25"
+    },
+    "precip": {
+        "min": "300",
+        "max": "700"
+    }
+}

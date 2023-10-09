@@ -1,0 +1,12 @@
+{
+    "name": "Iseilema laxum",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "34"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1400"
+    }
+}

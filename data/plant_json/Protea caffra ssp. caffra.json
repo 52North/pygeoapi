@@ -1,0 +1,20 @@
+{
+    "name": "Protea caffra ssp. caffra",
+    "trivial": {
+        "English": "highveld protea",
+        "Afrikaans": "ho\u00ebveldsuikerbos",
+        "Xhosa": "isiQwane",
+        "Zulu": "uHlinkihlane",
+        "Northern Sotho": "segwapi",
+        "Sotho": "sekila",
+        "Venda": "tshidzungu"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "400",
+        "max": "900"
+    }
+}

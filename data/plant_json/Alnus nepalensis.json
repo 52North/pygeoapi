@@ -1,0 +1,16 @@
+{
+    "name": "Alnus nepalensis",
+    "trivial": {
+        "Portuguese": "amieiro do Nepal",
+        "French": "aune du Nepal",
+        "English": "Nepalese alder"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

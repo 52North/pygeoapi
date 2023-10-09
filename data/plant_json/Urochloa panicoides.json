@@ -1,0 +1,15 @@
+{
+    "name": "Urochloa panicoides",
+    "trivial": {
+        "English": "garden signal grass",
+        "Afrikaans": "tuinbeesgras"
+    },
+    "temp": {
+        "min": "25",
+        "max": "40"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

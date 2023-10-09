@@ -1,0 +1,12 @@
+{
+    "name": "Artocarpus chaplasha",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "4000"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Cucumis melo",
+    "trivial": {
+        "Unknown": "tarra",
+        "English": "sweet melon",
+        "German": "Zuckermelone"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1300"
+    }
+}

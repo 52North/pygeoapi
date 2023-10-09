@@ -1,0 +1,39 @@
+{
+    "name": "Lagenaria siceraria",
+    "trivial": {
+        "Portuguese": "purunga",
+        "Chinese": "pul qua",
+        "English": "white flowered gourd",
+        "Spanish": "guiro amargo",
+        "French": "gourde bouteille",
+        "Italian": "zucca da vino",
+        "Hindi": "tumri",
+        "Hausa": "duma",
+        "Samoan": "fu'afu'a",
+        "German": "Trompetenk\u00fcrbis",
+        "Danish": "kalabas",
+        "Dutch": "flessepompoen",
+        "Japanese": "yougao",
+        "Xhosa": "iselwa",
+        "Zulu": "iselwa",
+        "Chamorro": "kalabasa",
+        "Afrikaans": "kalbas",
+        "Somali": "kula",
+        "Unknown": "upo (Philippines)",
+        "Malay": "labu putin",
+        "Northern Sotho": "moraka",
+        "Thai": "Naantao",
+        "Hebrew": "qara",
+        "Arabic": "qara'",
+        "Tswana": "segwana",
+        "Tagalog": "upo"
+    },
+    "temp": {
+        "min": "19",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

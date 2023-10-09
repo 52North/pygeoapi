@@ -1,0 +1,15 @@
+{
+    "name": "Dioscorea dumetorum",
+    "trivial": {
+        "English": "three-leaved yam",
+        "Portuguese": "unquinim"
+    },
+    "temp": {
+        "min": "25",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1700"
+    }
+}

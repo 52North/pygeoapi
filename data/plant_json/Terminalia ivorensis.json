@@ -1,0 +1,15 @@
+{
+    "name": "Terminalia ivorensis",
+    "trivial": {
+        "English": "black afara",
+        "French": "framire"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1600",
+        "max": "2700"
+    }
+}

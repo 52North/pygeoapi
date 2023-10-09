@@ -1,0 +1,12 @@
+{
+    "name": "Oryzopsis holciformis",
+    "trivial": {},
+    "temp": {
+        "min": "9",
+        "max": "16"
+    },
+    "precip": {
+        "min": "400",
+        "max": "500"
+    }
+}

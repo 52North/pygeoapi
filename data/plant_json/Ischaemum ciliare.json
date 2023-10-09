@@ -1,0 +1,12 @@
+{
+    "name": "Ischaemum ciliare",
+    "trivial": {},
+    "temp": {
+        "min": "30",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1250",
+        "max": "5000"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Lespedeza striata",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "26"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1200"
+    }
+}

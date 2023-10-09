@@ -1,0 +1,12 @@
+{
+    "name": "Agathis labillardieri",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "4000"
+    }
+}

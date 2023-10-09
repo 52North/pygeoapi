@@ -1,0 +1,17 @@
+{
+    "name": "Spartium junceum",
+    "trivial": {
+        "Portuguese": "giesta de Espanha",
+        "Italian": "ginestra",
+        "Danish": "gyldenris",
+        "English": "weaver's broom"
+    },
+    "temp": {
+        "min": "15",
+        "max": "22"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

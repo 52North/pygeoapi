@@ -1,0 +1,14 @@
+{
+    "name": "Ribes hirtellum",
+    "trivial": {
+        "English": "American gooseberry"
+    },
+    "temp": {
+        "min": "10",
+        "max": "22"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

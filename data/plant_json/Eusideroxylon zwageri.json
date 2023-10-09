@@ -1,0 +1,14 @@
+{
+    "name": "Eusideroxylon zwageri",
+    "trivial": {
+        "Unknown": "ulin ironwood"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "4000"
+    }
+}

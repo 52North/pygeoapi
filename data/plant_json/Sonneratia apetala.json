@@ -1,0 +1,15 @@
+{
+    "name": "Sonneratia apetala",
+    "trivial": {
+        "English": "pagapat",
+        "Portuguese": "pagapato"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1650",
+        "max": "1800"
+    }
+}

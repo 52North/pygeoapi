@@ -1,0 +1,23 @@
+{
+    "name": "Ekebergia capensis",
+    "trivial": {
+        "English": "ekebergia",
+        "Afrikaans": "essenhout",
+        "Swazi": "inyamathi",
+        "Amharic": "sombo",
+        "Northern Sotho": "mmidibidi",
+        "Venda": "mutovuma",
+        "Tonga (Tonga Islands)": "mumbafwe (Tongan)",
+        "Unknown": "mwela (Bemba)",
+        "Zulu": "uvungu",
+        "Xhosa": "umgwenyezinja"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "900",
+        "max": "2000"
+    }
+}

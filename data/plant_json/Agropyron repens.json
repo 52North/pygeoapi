@@ -1,0 +1,15 @@
+{
+    "name": "Agropyron repens",
+    "trivial": {
+        "English": "quark grass",
+        "Latin": "Graminis rhizoma"
+    },
+    "temp": {
+        "min": "10",
+        "max": "20"
+    },
+    "precip": {
+        "min": "550",
+        "max": "750"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Agave cantala",
+    "trivial": {
+        "English": "Manila maguey",
+        "Portuguese": "Cantala"
+    },
+    "temp": {
+        "min": "17",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

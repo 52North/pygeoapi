@@ -1,0 +1,21 @@
+{
+    "name": "Festuca arundinacea",
+    "trivial": {
+        "English": "turf-type tall fescue",
+        "French": "f\u00e9tuque roseau",
+        "Portuguese": "festuca",
+        "Swedish": "r\u00f6rsvingel",
+        "German": "rohr schwingel",
+        "Finnish": "ruokonata",
+        "Danish": "strand-svingel",
+        "Norwegian": "strandsvingel"
+    },
+    "temp": {
+        "min": "15",
+        "max": "22"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1300"
+    }
+}

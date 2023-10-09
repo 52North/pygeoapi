@@ -1,0 +1,14 @@
+{
+    "name": "Pinus merkusii, island provenances",
+    "trivial": {
+        "Unknown": "tenasserim pine"
+    },
+    "temp": {
+        "min": "23",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2300",
+        "max": "2800"
+    }
+}

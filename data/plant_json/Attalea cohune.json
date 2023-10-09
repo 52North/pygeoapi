@@ -1,0 +1,15 @@
+{
+    "name": "Attalea cohune",
+    "trivial": {
+        "English": "rain tree",
+        "Spanish": "manaca"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

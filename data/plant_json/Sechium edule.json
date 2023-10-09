@@ -1,0 +1,19 @@
+{
+    "name": "Sechium edule",
+    "trivial": {
+        "English": "vegetable pear",
+        "Unknown": "xuxu",
+        "Italian": "zucchetta spinosa",
+        "Portuguese": "machuchu (Brazil)",
+        "Spanish": "papa del arie (Argentina)",
+        "French": "mirliton"
+    },
+    "temp": {
+        "min": "19",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2000"
+    }
+}

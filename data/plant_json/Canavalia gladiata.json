@@ -1,0 +1,14 @@
+{
+    "name": "Canavalia gladiata",
+    "trivial": {
+        "Unknown": "Sword bean"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1800"
+    }
+}

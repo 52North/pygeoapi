@@ -1,0 +1,14 @@
+{
+    "name": "Agropyron desertorum",
+    "trivial": {
+        "English": "standard crested wheatgrass"
+    },
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "250",
+        "max": "400"
+    }
+}

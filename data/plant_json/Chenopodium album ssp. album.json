@@ -1,0 +1,15 @@
+{
+    "name": "Chenopodium album ssp. album",
+    "trivial": {
+        "English": "lambsquarters",
+        "Afrikaans": "withondebossie"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

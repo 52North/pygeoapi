@@ -1,0 +1,27 @@
+{
+    "name": "Citrus paradisi",
+    "trivial": {
+        "Vietnamese": "cam, bu'o'i",
+        "Danish": "grapefrugt",
+        "English": "Grapefruit tree",
+        "German": "Paradisapfel",
+        "Portuguese": "turingia",
+        "Lao": "kiengz s'aangz",
+        "Khmer": "krooch thlong",
+        "Indonesian": "limau gedang",
+        "Tonga (Tonga Islands)": "moli peli",
+        "Samoan": "moli sisuka",
+        "Cree": "muli",
+        "French": "pamplemousse",
+        "Spanish": "toronja",
+        "Italian": "pompelmo"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2300"
+    }
+}

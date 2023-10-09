@@ -1,0 +1,12 @@
+{
+    "name": "Phyllocladus aspleniifolius",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

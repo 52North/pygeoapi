@@ -1,0 +1,14 @@
+{
+    "name": "Dichanthium annulatum",
+    "trivial": {
+        "Unknown": "Vuda blue grass"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1400"
+    }
+}

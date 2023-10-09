@@ -1,0 +1,16 @@
+{
+    "name": "Ambelania acida",
+    "trivial": {
+        "French": "quimb\u00e9-dents",
+        "Portuguese": "pepino-doce",
+        "Spanish": "palo de garza"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

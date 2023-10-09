@@ -1,0 +1,12 @@
+{
+    "name": "Shorea tumbuggaia",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "800",
+        "max": "900"
+    }
+}

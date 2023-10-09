@@ -1,0 +1,17 @@
+{
+    "name": "Malva alcea",
+    "trivial": {
+        "English": "pink mallow",
+        "German": "Sigmarswurz",
+        "Unknown": "vervain mallow",
+        "Dutch": "vijfdelig kaasjeskruid"
+    },
+    "temp": {
+        "min": "14",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1400"
+    }
+}

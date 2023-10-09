@@ -1,0 +1,14 @@
+{
+    "name": "Limnanthes alba",
+    "trivial": {
+        "English": "meadowfoam"
+    },
+    "temp": {
+        "min": "8",
+        "max": "16"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Pueraria lobata",
+    "trivial": {
+        "Unknown": "nepalem",
+        "Portuguese": "cudzu'",
+        "English": "kudzu vine",
+        "German": "kopoubohne",
+        "French": "vigne japonaise",
+        "Spanish": "kudzu comun",
+        "Japanese": "kuzu",
+        "Italian": "pueraria"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1400"
+    }
+}

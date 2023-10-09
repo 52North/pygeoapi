@@ -1,0 +1,12 @@
+{
+    "name": "Koeleria cristata",
+    "trivial": {},
+    "temp": {
+        "min": "8",
+        "max": "15"
+    },
+    "precip": {
+        "min": "400",
+        "max": "900"
+    }
+}

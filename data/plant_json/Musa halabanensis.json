@@ -1,0 +1,12 @@
+{
+    "name": "Musa halabanensis",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "3000"
+    }
+}

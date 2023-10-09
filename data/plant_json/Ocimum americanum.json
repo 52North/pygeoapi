@@ -1,0 +1,12 @@
+{
+    "name": "Ocimum americanum",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "2000"
+    }
+}

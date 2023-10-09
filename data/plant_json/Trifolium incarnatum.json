@@ -1,0 +1,19 @@
+{
+    "name": "Trifolium incarnatum",
+    "trivial": {
+        "German": "inkarnat klee",
+        "English": "scarlet clover",
+        "Spanish": "tr\u00e9bol rojo",
+        "French": "trefle du Rousillon",
+        "Portuguese": "trevo carmesim",
+        "Italian": "trifoglio incarnato"
+    },
+    "temp": {
+        "min": "13",
+        "max": "22"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

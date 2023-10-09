@@ -1,0 +1,26 @@
+{
+    "name": "Fragaria x ananassa",
+    "trivial": {
+        "Indonesian": "arben",
+        "Vietnamese": "d\u00e2u t\u00e2y",
+        "English": "strawberry",
+        "German": "Erdbeere",
+        "French": "fraisier ananas",
+        "Spanish": "fresa",
+        "Tagalog": "fresa",
+        "Danish": "jordb\u00e6r",
+        "Norwegian": "jordb\u00e6r",
+        "Swedish": "jordgubbe",
+        "Portuguese": "morangueiro de cultura",
+        "Thai": "stroboeri",
+        "Finnish": "tarhamansikka"
+    },
+    "temp": {
+        "min": "11",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

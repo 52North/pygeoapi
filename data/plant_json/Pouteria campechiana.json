@@ -1,0 +1,14 @@
+{
+    "name": "Pouteria campechiana",
+    "trivial": {
+        "Unknown": "Egg fruit tree"
+    },
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

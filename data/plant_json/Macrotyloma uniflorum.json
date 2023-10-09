@@ -1,0 +1,21 @@
+{
+    "name": "Macrotyloma uniflorum",
+    "trivial": {
+        "Italian": "dolico cavallino",
+        "French": "grain de cheval",
+        "English": "Madras gram",
+        "Hindi": "ulavalu",
+        "Assamese": "kalai",
+        "German": "kerdekorn",
+        "Tamil": "kollu",
+        "Burmese": "p\u00e9-bi-z\u00e2t"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1200"
+    }
+}

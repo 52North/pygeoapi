@@ -1,0 +1,33 @@
+{
+    "name": "Mangifera indica",
+    "trivial": {
+        "Hindi": "ama",
+        "Portuguese": "mangueira",
+        "Malay": "mempelam",
+        "Unknown": "rereke (Roviana)",
+        "Thai": "mamuang",
+        "Samoan": "mago",
+        "Tagalog": "mangga",
+        "English": "mango tree",
+        "Fijian": "mango",
+        "Iloko": "mango",
+        "Tonga (Tonga Islands)": "mango",
+        "German": "Mangobaum",
+        "French": "manguier",
+        "Ewondo": "manguier",
+        "Indonesian": "mempelam",
+        "Lao": "mw\u00e0ngx",
+        "Khmer": "svaay",
+        "Burmese": "tharyetthi",
+        "Afrikaans": "veselperske",
+        "Vietnamese": "xo\u00e0i"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Eucalyptus maculata",
+    "trivial": {
+        "Portuguese": "eucalipto malhado",
+        "English": "spotted gum"
+    },
+    "temp": {
+        "min": "23",
+        "max": "32"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1750"
+    }
+}

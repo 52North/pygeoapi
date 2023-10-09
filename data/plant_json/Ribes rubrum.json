@@ -1,0 +1,17 @@
+{
+    "name": "Ribes rubrum",
+    "trivial": {
+        "English": "redcurrant",
+        "German": "Rote Ribisel",
+        "Latin": "Ribis rubri fructus",
+        "Danish": "ribs"
+    },
+    "temp": {
+        "min": "10",
+        "max": "22"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Stipagrostis amabilis",
+    "trivial": {
+        "Afrikaans": "steekwiet",
+        "English": "kalahari dune grass",
+        "German": "dunen-federgras",
+        "Khoisan (Other)": "n!Tka"
+    },
+    "temp": {
+        "min": "20",
+        "max": "40"
+    },
+    "precip": {
+        "min": "150",
+        "max": "200"
+    }
+}

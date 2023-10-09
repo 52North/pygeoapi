@@ -1,0 +1,12 @@
+{
+    "name": "Chrysanthemum coccineum",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1100"
+    }
+}

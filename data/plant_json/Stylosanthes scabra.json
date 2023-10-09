@@ -1,0 +1,17 @@
+{
+    "name": "Stylosanthes scabra",
+    "trivial": {
+        "Portuguese": "alfafa do nordeste",
+        "Spanish": "pata de terecay",
+        "English": "shrubby stylo",
+        "Indonesian": "stylo perduan"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1600"
+    }
+}

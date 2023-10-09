@@ -1,0 +1,12 @@
+{
+    "name": "Atalaya hemiglauca",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "39"
+    },
+    "precip": {
+        "min": "250",
+        "max": "600"
+    }
+}

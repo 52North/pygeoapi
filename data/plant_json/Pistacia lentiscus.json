@@ -1,0 +1,20 @@
+{
+    "name": "Pistacia lentiscus",
+    "trivial": {
+        "Portuguese": "lentisco verdadeiro",
+        "Italian": "lentisco",
+        "English": "pistachio",
+        "French": "lentisque",
+        "Dutch": "mastikboom",
+        "Danish": "mastiktr\u00e6",
+        "German": "Pistazie"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

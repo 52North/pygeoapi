@@ -1,0 +1,15 @@
+{
+    "name": "Canavalia brasiliensis",
+    "trivial": {
+        "English": "Brazilian jackbean",
+        "Portuguese": "fava de rama"
+    },
+    "temp": {
+        "min": "26",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1500"
+    }
+}

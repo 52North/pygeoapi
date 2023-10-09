@@ -1,0 +1,15 @@
+{
+    "name": "Sonneratia caseolaris",
+    "trivial": {
+        "English": "mangrove",
+        "Indonesian": "kacang kacang"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

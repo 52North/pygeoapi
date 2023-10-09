@@ -1,0 +1,20 @@
+{
+    "name": "Cynodon dactylon",
+    "trivial": {
+        "English": "wiregrass",
+        "Spanish": "pate de perdiz",
+        "Unknown": "tigriston",
+        "Bengali": "durba",
+        "Fijian": "kabuta",
+        "Urdu": "khabbal ghass",
+        "Afrikaans": "kweekgras"
+    },
+    "temp": {
+        "min": "17",
+        "max": "35"
+    },
+    "precip": {
+        "min": "625",
+        "max": "1750"
+    }
+}

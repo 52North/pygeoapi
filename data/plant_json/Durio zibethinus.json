@@ -1,0 +1,22 @@
+{
+    "name": "Durio zibethinus",
+    "trivial": {
+        "Indonesian": "kadu",
+        "Burmese": "du-yin",
+        "Tagalog": "dulian",
+        "English": "durian",
+        "German": "Stinkfrucht",
+        "Thai": "thurian",
+        "Vietnamese": "s\u00e2\u00f9 ri\u00eang",
+        "Lao": "thouri\u00e8n",
+        "Khmer": "thu-r\u00e9\u00e9n"
+    },
+    "temp": {
+        "min": "22",
+        "max": "40"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

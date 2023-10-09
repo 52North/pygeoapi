@@ -1,0 +1,16 @@
+{
+    "name": "Melilotus albus",
+    "trivial": {
+        "Portuguese": "trevo gigante da Siberia",
+        "English": "white sweet clover",
+        "Spanish": "tr\u00e9bol blanco"
+    },
+    "temp": {
+        "min": "12",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

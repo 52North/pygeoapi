@@ -1,0 +1,12 @@
+{
+    "name": "Santalum spicatum",
+    "trivial": {},
+    "temp": {
+        "min": "32",
+        "max": "38"
+    },
+    "precip": {
+        "min": "200",
+        "max": "400"
+    }
+}

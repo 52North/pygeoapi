@@ -1,0 +1,12 @@
+{
+    "name": "Nothofagus cunninghamii",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "2500"
+    }
+}

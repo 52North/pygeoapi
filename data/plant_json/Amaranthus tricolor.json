@@ -1,0 +1,14 @@
+{
+    "name": "Amaranthus tricolor",
+    "trivial": {
+        "English": "Joseph's coat"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1500"
+    }
+}

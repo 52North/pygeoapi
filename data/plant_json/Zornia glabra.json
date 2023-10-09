@@ -1,0 +1,12 @@
+{
+    "name": "Zornia glabra",
+    "trivial": {},
+    "temp": {
+        "min": "21",
+        "max": "29"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

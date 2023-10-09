@@ -1,0 +1,16 @@
+{
+    "name": "Castanea dentata",
+    "trivial": {
+        "English": "prickly bur",
+        "Portuguese": "castanheiro da America",
+        "French": "chataignier de l'Amerique"
+    },
+    "temp": {
+        "min": "15",
+        "max": "19"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1100"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Trifolium rueppellianum",
+    "trivial": {
+        "English": "Rueppell's clover"
+    },
+    "temp": {
+        "min": "12",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1900"
+    }
+}

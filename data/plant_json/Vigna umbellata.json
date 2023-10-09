@@ -1,0 +1,25 @@
+{
+    "name": "Vigna umbellata",
+    "trivial": {
+        "Tagalog": "tapilan",
+        "English": "rice bean",
+        "Spanish": "mambi bean",
+        "Bengali": "gai-kalai",
+        "Panjabi": "ghurush",
+        "Hindi": "gurush",
+        "French": "haricot de riz",
+        "Malay": "kachang sepalit",
+        "Indonesian": "sutri",
+        "Chinese": "mu-tsa",
+        "German": "reisbohne",
+        "Japanese": "tsuru-adsuki"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

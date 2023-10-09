@@ -1,0 +1,27 @@
+{
+    "name": "Sinapis alba",
+    "trivial": {
+        "Latin": "Sinapis albae semen",
+        "Chinese": "chieh",
+        "English": "white mustard",
+        "Russian": "gorshitsa",
+        "Arabic": "khardal",
+        "Portuguese": "mastarda",
+        "Spanish": "mostaza",
+        "Dutch": "mosterd",
+        "French": "moutarde",
+        "Swedish": "senap",
+        "Italian": "senape",
+        "German": "Senfsaat",
+        "Danish": "sennep",
+        "Japanese": "shiro-karashi"
+    },
+    "temp": {
+        "min": "10",
+        "max": "25"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1100"
+    }
+}

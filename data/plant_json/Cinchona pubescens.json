@@ -1,0 +1,17 @@
+{
+    "name": "Cinchona pubescens",
+    "trivial": {
+        "Spanish": "cascarilla",
+        "German": "Fieberrinde",
+        "English": "quinine tree",
+        "French": "quinquina rouge"
+    },
+    "temp": {
+        "min": "17",
+        "max": "25"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3500"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Morinda citrifolia",
+    "trivial": {
+        "Hindi": "al",
+        "English": "yellow tree",
+        "Vietnamese": "nh\u00e0u r\u00f9ng",
+        "Unknown": "te non (Kiribati)",
+        "Fijian": "kura",
+        "Tonga (Tonga Islands)": "nonu",
+        "Karen": "yae yai",
+        "Thai": "yo"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

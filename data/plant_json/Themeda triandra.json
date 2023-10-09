@@ -1,0 +1,16 @@
+{
+    "name": "Themeda triandra",
+    "trivial": {
+        "English": "red oat grass",
+        "Afrikaans": "rooigras",
+        "Sotho": "seboku"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1100"
+    }
+}

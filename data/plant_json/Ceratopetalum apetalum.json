@@ -1,0 +1,12 @@
+{
+    "name": "Ceratopetalum apetalum",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

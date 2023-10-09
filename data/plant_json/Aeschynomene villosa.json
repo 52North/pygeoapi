@@ -1,0 +1,16 @@
+{
+    "name": "Aeschynomene villosa",
+    "trivial": {
+        "Spanish": "uekaku k'arhiri",
+        "Portuguese": "pinheirinho",
+        "English": "villose jointvetch"
+    },
+    "temp": {
+        "min": "15",
+        "max": "27"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1500"
+    }
+}

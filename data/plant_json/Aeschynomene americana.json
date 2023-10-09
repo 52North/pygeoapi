@@ -1,0 +1,15 @@
+{
+    "name": "Aeschynomene americana",
+    "trivial": {
+        "English": "bastard sensitive plant",
+        "Hindi": "soli"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

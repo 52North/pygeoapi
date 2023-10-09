@@ -1,0 +1,15 @@
+{
+    "name": "Zanthoxylum chalybeum",
+    "trivial": {
+        "English": "popioe",
+        "Swahili": "mjafari"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1400"
+    }
+}

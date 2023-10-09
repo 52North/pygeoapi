@@ -1,0 +1,14 @@
+{
+    "name": "Quercus incana",
+    "trivial": {
+        "English": "upland willow oak"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

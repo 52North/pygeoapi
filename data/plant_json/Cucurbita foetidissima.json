@@ -1,0 +1,14 @@
+{
+    "name": "Cucurbita foetidissima",
+    "trivial": {
+        "English": "wild gourd"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Armoracia rusticana",
+    "trivial": {
+        "Arabic": "fujl har",
+        "English": "horseradish",
+        "Russian": "khren",
+        "Chinese": "lagen",
+        "German": "Meerrettich",
+        "Dutch": "mierikwortel",
+        "Swedish": "pepparrot",
+        "Danish": "pepper rod",
+        "Spanish": "rabano picante",
+        "Portuguese": "rabano-picante",
+        "Italian": "rafano",
+        "French": "raifort",
+        "Unknown": "wasabi",
+        "Japanese": "wasabi"
+    },
+    "temp": {
+        "min": "14",
+        "max": "20"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

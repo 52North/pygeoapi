@@ -1,0 +1,12 @@
+{
+    "name": "Astragalus gummifer",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "22"
+    },
+    "precip": {
+        "min": "250",
+        "max": "450"
+    }
+}

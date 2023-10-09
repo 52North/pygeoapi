@@ -1,0 +1,12 @@
+{
+    "name": "Atriplex canescens",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "17"
+    },
+    "precip": {
+        "min": "250",
+        "max": "450"
+    }
+}

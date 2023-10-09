@@ -1,0 +1,14 @@
+{
+    "name": "Abies balsamea",
+    "trivial": {
+        "English": "Silver Pine"
+    },
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1100"
+    }
+}

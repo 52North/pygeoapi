@@ -1,0 +1,15 @@
+{
+    "name": "Eucalyptus saligna",
+    "trivial": {
+        "Portuguese": "eucalipto saligna",
+        "English": "white blue gum"
+    },
+    "temp": {
+        "min": "15",
+        "max": "32"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1800"
+    }
+}

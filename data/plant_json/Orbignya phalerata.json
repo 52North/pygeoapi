@@ -1,0 +1,16 @@
+{
+    "name": "Orbignya phalerata",
+    "trivial": {
+        "Unknown": "coco de macaco",
+        "Portuguese": "baba\u00e7u",
+        "English": "babassu palm"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "6000"
+    }
+}

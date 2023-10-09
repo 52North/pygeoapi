@@ -1,0 +1,12 @@
+{
+    "name": "Agrostis tenuis",
+    "trivial": {},
+    "temp": {
+        "min": "10",
+        "max": "20"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Dodonaea viscosa",
+    "trivial": {
+        "Unknown": "wase"
+    },
+    "temp": {
+        "min": "18",
+        "max": "38"
+    },
+    "precip": {
+        "min": "300",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Blighia sapida",
+    "trivial": {
+        "English": "vegetable brain",
+        "Spanish": "seso vegetal",
+        "Unknown": "kaka",
+        "French": "yeux de crabe",
+        "Portuguese": "castanheiro de Africa"
+    },
+    "temp": {
+        "min": "24",
+        "max": "27"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

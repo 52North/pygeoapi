@@ -1,0 +1,23 @@
+{
+    "name": "Alstonia scholaris",
+    "trivial": {
+        "Unknown": "voplai",
+        "English": "white cheesewood tree",
+        "Urdu": "satuna",
+        "Nepali": "chhatiwan",
+        "Vietnamese": "m\u00f9a cua",
+        "Tagalog": "tin pet",
+        "Arabic": "shajaratah fi asya al-harrah",
+        "Panjabi": "polai",
+        "Thai": "sattaban",
+        "Oriya": "sachina"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "3000"
+    }
+}

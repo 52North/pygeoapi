@@ -1,0 +1,14 @@
+{
+    "name": "Rungia klossii",
+    "trivial": {
+        "Unknown": "Rungia"
+    },
+    "temp": {
+        "min": "12",
+        "max": "17"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Cassia alata",
+    "trivial": {
+        "Tagalog": "pakagonkon",
+        "Iloko": "andadasl-a-dadakkel",
+        "Fijian": "dadmurdan",
+        "English": "winged senna",
+        "Latin": "Cassia Alatae Folium",
+        "Vietnamese": "mu\u00f2ng tr\u00e2u",
+        "Thai": "chumhet yai",
+        "Malay": "gelenggang",
+        "Unknown": "ketepeng cina",
+        "Samoan": "la'au fai lafa",
+        "Niuean": "mulamula",
+        "Pampanga": "pakayomkon kastila",
+        "Karen": "ta si pho",
+        "Tonga (Nyasa)": "te'elango"
+    },
+    "temp": {
+        "min": "23",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

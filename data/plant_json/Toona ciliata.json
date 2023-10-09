@@ -1,0 +1,29 @@
+{
+    "name": "Toona ciliata",
+    "trivial": {
+        "English": "toon",
+        "French": "cedre rouge",
+        "Spanish": "cedro",
+        "Khmer": "chomcha",
+        "Tagalog": "danupra",
+        "Indonesian": "malapoga",
+        "Hindi": "mahanim",
+        "Vietnamese": "l[as]t kh[es]t",
+        "Bengali": "tuni",
+        "Lao": "mai-yom-horm",
+        "Tamil": "thevetharem",
+        "Malay": "surian limpaga",
+        "Javanese": "suren mal",
+        "Burmese": "thit kador",
+        "Urdu": "tun",
+        "Thai": "yom-hom"
+    },
+    "temp": {
+        "min": "18",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "3000"
+    }
+}

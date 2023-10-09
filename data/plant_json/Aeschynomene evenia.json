@@ -1,0 +1,14 @@
+{
+    "name": "Aeschynomene evenia",
+    "trivial": {
+        "English": "shrubby jointvetch"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1600"
+    }
+}

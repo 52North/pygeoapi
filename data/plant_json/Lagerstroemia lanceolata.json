@@ -1,0 +1,12 @@
+{
+    "name": "Lagerstroemia lanceolata",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "35"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

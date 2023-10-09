@@ -1,0 +1,14 @@
+{
+    "name": "Terminalia mantaly",
+    "trivial": {
+        "English": "Madagascar almond"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1200"
+    }
+}

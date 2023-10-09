@@ -1,0 +1,22 @@
+{
+    "name": "Plectranthus esculentus",
+    "trivial": {
+        "English": "potato - coleus",
+        "Zulu": "ushizane",
+        "Xhosa": "itapile",
+        "Unknown": "UJilo",
+        "Tswana": "makwele",
+        "Venda": "mutada",
+        "Shona": "tsenza",
+        "Sotho": "tapole-ea-mahlo",
+        "Afrikaans": "wilde aartappel"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1100"
+    }
+}

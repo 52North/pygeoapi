@@ -1,0 +1,22 @@
+{
+    "name": "Trifolium arvense",
+    "trivial": {
+        "German": "Hasenklee",
+        "English": "stone clover",
+        "Danish": "hare kl\u00a2ver",
+        "Norwegian": "hare-kl\u00f8ver",
+        "Finnish": "j\u00e4n\u00f6napila",
+        "French": "trefle pied de lievre",
+        "Portuguese": "trevo pe' de lebre",
+        "Italian": "trifoglio arvense",
+        "Latin": "Trifolii albi et rubri flos"
+    },
+    "temp": {
+        "min": "9",
+        "max": "16"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

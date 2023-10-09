@@ -1,0 +1,22 @@
+{
+    "name": "Ficus thonningii",
+    "trivial": {
+        "English": "Indian laurel fig",
+        "Afrikaans": "wurgvy",
+        "Portuguese": "incendeira",
+        "Northern Sotho": "moumo",
+        "Tswana": "moumo",
+        "Venda": "muumo",
+        "Xhosa": "umthombe",
+        "Zulu": "umthombe",
+        "Tsonga": "xirhomberhombe"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "750",
+        "max": "2000"
+    }
+}

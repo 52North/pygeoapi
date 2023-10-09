@@ -1,0 +1,16 @@
+{
+    "name": "Couma utilis",
+    "trivial": {
+        "Spanish": "sorveira",
+        "English": "sorva",
+        "Portuguese": "sorvinha"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "4000"
+    }
+}

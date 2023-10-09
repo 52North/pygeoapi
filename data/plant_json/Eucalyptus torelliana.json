@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus torelliana",
+    "trivial": {},
+    "temp": {
+        "min": "27",
+        "max": "38"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

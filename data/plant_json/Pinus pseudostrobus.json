@@ -1,0 +1,14 @@
+{
+    "name": "Pinus pseudostrobus",
+    "trivial": {
+        "English": "false white pine"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1500"
+    }
+}

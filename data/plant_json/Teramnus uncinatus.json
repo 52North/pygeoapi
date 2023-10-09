@@ -1,0 +1,14 @@
+{
+    "name": "Teramnus uncinatus",
+    "trivial": {
+        "Portuguese": "faveir\u00e0"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3000"
+    }
+}

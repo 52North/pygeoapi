@@ -1,0 +1,15 @@
+{
+    "name": "Capparis decidua",
+    "trivial": {
+        "Unknown": "Yomonoxe (Amargna)",
+        "Hindi": "Karer"
+    },
+    "temp": {
+        "min": "30",
+        "max": "42"
+    },
+    "precip": {
+        "min": "300",
+        "max": "600"
+    }
+}

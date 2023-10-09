@@ -1,0 +1,15 @@
+{
+    "name": "Diplachne fusca",
+    "trivial": {
+        "Afrikaans": "kuilgras",
+        "English": "swamp grass"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "450",
+        "max": "1000"
+    }
+}

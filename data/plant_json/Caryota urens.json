@@ -1,0 +1,14 @@
+{
+    "name": "Caryota urens",
+    "trivial": {
+        "Hindi": "Kithul"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2400"
+    }
+}

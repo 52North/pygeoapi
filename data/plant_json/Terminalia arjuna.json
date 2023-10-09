@@ -1,0 +1,14 @@
+{
+    "name": "Terminalia arjuna",
+    "trivial": {
+        "Hindi": "koha"
+    },
+    "temp": {
+        "min": "20",
+        "max": "33"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

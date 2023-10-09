@@ -1,0 +1,20 @@
+{
+    "name": "Sagittaria sagittifolia",
+    "trivial": {
+        "English": "old-world arrowhead",
+        "German": "gew\u00f6hnliches pfeilkraut",
+        "Swedish": "vanligt pilblad",
+        "Norwegian": "pilblad",
+        "Unknown": "pilblad",
+        "Finnish": "pystykeiholehti",
+        "Portuguese": "sagitaria vulgar"
+    },
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1200"
+    }
+}

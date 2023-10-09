@@ -1,0 +1,12 @@
+{
+    "name": "Psoralea patens",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "450",
+        "max": "750"
+    }
+}

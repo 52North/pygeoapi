@@ -1,0 +1,17 @@
+{
+    "name": "Setaria sphacelata  var. sericea",
+    "trivial": {
+        "Portuguese": "napierzinho",
+        "Spanish": "pasto san juan",
+        "English": "South African pigeon grass",
+        "Afrikaans": "goue-mannagras"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

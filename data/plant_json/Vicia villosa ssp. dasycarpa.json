@@ -1,0 +1,14 @@
+{
+    "name": "Vicia villosa ssp. dasycarpa",
+    "trivial": {
+        "English": "woolypod vetch"
+    },
+    "temp": {
+        "min": "10",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Pinus elliottii ssp. elliottii",
+    "trivial": {
+        "English": "Honduras pine"
+    },
+    "temp": {
+        "min": "23",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

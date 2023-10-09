@@ -1,0 +1,15 @@
+{
+    "name": "Agropyron mongolicum",
+    "trivial": {
+        "Portuguese": "agropiro da Mongolia",
+        "English": "Mongolian wheatgrass"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "150",
+        "max": "300"
+    }
+}

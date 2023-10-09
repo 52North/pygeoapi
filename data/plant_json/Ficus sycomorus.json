@@ -1,0 +1,17 @@
+{
+    "name": "Ficus sycomorus",
+    "trivial": {
+        "English": "sycomore fig",
+        "Unknown": "Hilteetaa (Konsogna)",
+        "Portuguese": "ulemba",
+        "German": "Sykamorfeige"
+    },
+    "temp": {
+        "min": "18",
+        "max": "36"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1800"
+    }
+}

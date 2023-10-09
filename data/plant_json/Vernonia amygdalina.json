@@ -1,0 +1,17 @@
+{
+    "name": "Vernonia amygdalina",
+    "trivial": {
+        "English": "bitterleaf",
+        "German": "Bitterspinat",
+        "Unknown": "ebicha (Galinya)",
+        "Amharic": "grawa"
+    },
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "750",
+        "max": "2000"
+    }
+}

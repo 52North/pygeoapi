@@ -1,0 +1,14 @@
+{
+    "name": "Nuphar advena",
+    "trivial": {
+        "English": "yellow water lily"
+    },
+    "temp": {
+        "min": "14",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

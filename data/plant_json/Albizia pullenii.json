@@ -1,0 +1,12 @@
+{
+    "name": "Albizia pullenii",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3000"
+    }
+}

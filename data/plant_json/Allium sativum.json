@@ -1,0 +1,28 @@
+{
+    "name": "Allium sativum",
+    "trivial": {
+        "French": "ail",
+        "Italian": "aglio",
+        "Spanish": "ajo",
+        "Portuguese": "alho de cultura",
+        "Latin": "Bulbus Allii Sativi",
+        "Russian": "chesnok",
+        "English": "garlic oil",
+        "Danish": "hvidl\u00f8g",
+        "Tonga (Tonga Islands)": "kaliki",
+        "German": "Knoblauch",
+        "Dutch": "knoflook",
+        "Japanese": "ninniku",
+        "Chinese": "suan",
+        "Arabic": "thum",
+        "Swedish": "vitl\u00f6k"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1600"
+    }
+}

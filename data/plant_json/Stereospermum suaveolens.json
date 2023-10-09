@@ -1,0 +1,12 @@
+{
+    "name": "Stereospermum suaveolens",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2500"
+    }
+}

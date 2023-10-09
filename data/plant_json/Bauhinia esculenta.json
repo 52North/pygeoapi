@@ -1,0 +1,12 @@
+{
+    "name": "Bauhinia esculenta",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

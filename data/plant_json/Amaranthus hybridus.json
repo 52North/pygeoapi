@@ -1,0 +1,22 @@
+{
+    "name": "Amaranthus hybridus",
+    "trivial": {
+        "Indonesian": "bayam",
+        "Malay": "bayam",
+        "Afrikaans": "gewone misbridie",
+        "Spanish": "quintonil (Mex)",
+        "Thai": "phak khom",
+        "English": "smooth pigweed",
+        "Unknown": "urai (Phil)",
+        "Zulu": "umfino",
+        "Chinese": "xian"
+    },
+    "temp": {
+        "min": "12",
+        "max": "30"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

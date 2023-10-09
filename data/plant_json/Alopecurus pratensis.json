@@ -1,0 +1,15 @@
+{
+    "name": "Alopecurus pratensis",
+    "trivial": {
+        "English": "meadow foxtail",
+        "German": "Wiesenfuchsschwanz"
+    },
+    "temp": {
+        "min": "9",
+        "max": "22"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

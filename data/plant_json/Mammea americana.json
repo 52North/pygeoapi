@@ -1,0 +1,19 @@
+{
+    "name": "Mammea americana",
+    "trivial": {
+        "Portuguese": "pecego de Sao Domingos",
+        "French": "abricotier sauvage",
+        "Malay": "aprikot",
+        "English": "St. Domingo apricot",
+        "Spanish": "zapote mamey",
+        "Indonesian": "manggis negri"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Oryza glaberrima",
+    "trivial": {
+        "English": "African rice",
+        "Portuguese": "arroz da Guine'",
+        "Spanish": "arroz de Guinea",
+        "French": "riz de Casamance"
+    },
+    "temp": {
+        "min": "26",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

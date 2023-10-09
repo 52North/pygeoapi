@@ -1,0 +1,14 @@
+{
+    "name": "Indigofera tinctoria",
+    "trivial": {
+        "English": "indigo"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1700"
+    }
+}

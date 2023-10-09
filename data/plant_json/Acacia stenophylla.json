@@ -1,0 +1,14 @@
+{
+    "name": "Acacia stenophylla",
+    "trivial": {
+        "Unknown": "River cooba"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "200",
+        "max": "600"
+    }
+}

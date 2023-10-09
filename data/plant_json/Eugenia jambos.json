@@ -1,0 +1,14 @@
+{
+    "name": "Eugenia jambos",
+    "trivial": {
+        "Unknown": "roseapple"
+    },
+    "temp": {
+        "min": "18",
+        "max": "38"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

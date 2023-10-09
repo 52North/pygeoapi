@@ -1,0 +1,15 @@
+{
+    "name": "Mimosa pigra",
+    "trivial": {
+        "Portuguese": "juquiri grande",
+        "English": "thorny sensitive plant"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

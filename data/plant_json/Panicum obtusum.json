@@ -1,0 +1,14 @@
+{
+    "name": "Panicum obtusum",
+    "trivial": {
+        "English": "vine mesquite grass"
+    },
+    "temp": {
+        "min": "16",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1500"
+    }
+}

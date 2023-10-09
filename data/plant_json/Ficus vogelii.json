@@ -1,0 +1,15 @@
+{
+    "name": "Ficus vogelii",
+    "trivial": {
+        "English": "obada",
+        "Portuguese": "borracheira africana"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "2400"
+    }
+}

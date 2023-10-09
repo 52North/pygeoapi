@@ -1,0 +1,14 @@
+{
+    "name": "Digitaria decumbens",
+    "trivial": {
+        "Unknown": "wooly finger grass"
+    },
+    "temp": {
+        "min": "28",
+        "max": "32"
+    },
+    "precip": {
+        "min": "450",
+        "max": "650"
+    }
+}

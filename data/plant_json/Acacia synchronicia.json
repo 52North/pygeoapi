@@ -1,0 +1,12 @@
+{
+    "name": "Acacia synchronicia",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "300",
+        "max": "600"
+    }
+}

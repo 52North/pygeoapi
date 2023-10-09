@@ -1,0 +1,12 @@
+{
+    "name": "Psathyrostachys juncea",
+    "trivial": {},
+    "temp": {
+        "min": "9",
+        "max": "22"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

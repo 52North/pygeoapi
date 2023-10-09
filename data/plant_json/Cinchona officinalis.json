@@ -1,0 +1,12 @@
+{
+    "name": "Cinchona officinalis",
+    "trivial": {},
+    "temp": {
+        "min": "14",
+        "max": "23"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3500"
+    }
+}

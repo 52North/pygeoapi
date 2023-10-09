@@ -1,0 +1,14 @@
+{
+    "name": "Hordeum bulbosum",
+    "trivial": {
+        "English": "bulbous barley"
+    },
+    "temp": {
+        "min": "13",
+        "max": "23"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

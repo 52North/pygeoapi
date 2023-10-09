@@ -1,0 +1,17 @@
+{
+    "name": "Humulus lupulus",
+    "trivial": {
+        "German": "Hopfen",
+        "English": "hop",
+        "French": "houblon",
+        "Italian": "luppolo"
+    },
+    "temp": {
+        "min": "15",
+        "max": "19"
+    },
+    "precip": {
+        "min": "400",
+        "max": "700"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Acacia jennerae",
+    "trivial": {
+        "Unknown": "Witchety bush"
+    },
+    "temp": {
+        "min": "12",
+        "max": "30"
+    },
+    "precip": {
+        "min": "250",
+        "max": "300"
+    }
+}

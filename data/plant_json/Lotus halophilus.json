@@ -1,0 +1,12 @@
+{
+    "name": "Lotus halophilus",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "250",
+        "max": "500"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Atriplex gardneri",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "17"
+    },
+    "precip": {
+        "min": "150",
+        "max": "300"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Rhizophora mucronata",
+    "trivial": {
+        "English": "red mangrove"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

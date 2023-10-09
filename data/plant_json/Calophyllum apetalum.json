@@ -1,0 +1,14 @@
+{
+    "name": "Calophyllum apetalum",
+    "trivial": {
+        "English": "coachwood"
+    },
+    "temp": {
+        "min": "30",
+        "max": "35"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "6000"
+    }
+}

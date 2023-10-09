@@ -1,0 +1,12 @@
+{
+    "name": "Shorea assamica",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2800",
+        "max": "3500"
+    }
+}

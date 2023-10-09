@@ -1,0 +1,12 @@
+{
+    "name": "Livistona australis",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1100"
+    }
+}

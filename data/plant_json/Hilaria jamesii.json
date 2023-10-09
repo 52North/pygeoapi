@@ -1,0 +1,14 @@
+{
+    "name": "Hilaria jamesii",
+    "trivial": {
+        "English": "Galleta grass"
+    },
+    "temp": {
+        "min": "12",
+        "max": "17"
+    },
+    "precip": {
+        "min": "300",
+        "max": "400"
+    }
+}

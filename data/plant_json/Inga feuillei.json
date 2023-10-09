@@ -1,0 +1,19 @@
+{
+    "name": "Inga feuillei",
+    "trivial": {
+        "Spanish": "pacay de Per\u00f9",
+        "English": "pacay tree",
+        "Quechua": "paccai",
+        "Aymara": "pa'qaya",
+        "French": "pois sucre",
+        "Portuguese": "rabo de mico"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2700"
+    }
+}

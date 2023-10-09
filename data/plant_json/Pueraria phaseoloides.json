@@ -1,0 +1,16 @@
+{
+    "name": "Pueraria phaseoloides",
+    "trivial": {
+        "Portuguese": "cudzu' dos tropicos",
+        "Unknown": "puero",
+        "English": "yerba kudzu"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "3200"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Excoecaria agallocha",
+    "trivial": {
+        "Unknown": "feta'anu",
+        "English": "mangrove"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

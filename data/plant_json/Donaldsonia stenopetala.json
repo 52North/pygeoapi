@@ -1,0 +1,16 @@
+{
+    "name": "Donaldsonia stenopetala",
+    "trivial": {
+        "English": "halleko",
+        "German": "kohlbaum",
+        "Unknown": "wolayetgna"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1500"
+    }
+}

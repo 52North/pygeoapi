@@ -1,0 +1,15 @@
+{
+    "name": "Cordia alliodora",
+    "trivial": {
+        "English": "salmwood",
+        "Portuguese": "urua"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

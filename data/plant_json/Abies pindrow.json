@@ -1,0 +1,12 @@
+{
+    "name": "Abies pindrow",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "2000"
+    }
+}

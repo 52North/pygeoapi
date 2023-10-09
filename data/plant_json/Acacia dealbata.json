@@ -1,0 +1,15 @@
+{
+    "name": "Acacia dealbata",
+    "trivial": {
+        "English": "silver wattle",
+        "Afrikaans": "silwerwattel"
+    },
+    "temp": {
+        "min": "15",
+        "max": "26"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

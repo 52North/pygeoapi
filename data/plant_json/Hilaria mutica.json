@@ -1,0 +1,14 @@
+{
+    "name": "Hilaria mutica",
+    "trivial": {
+        "English": "tobosa grass"
+    },
+    "temp": {
+        "min": "19",
+        "max": "26"
+    },
+    "precip": {
+        "min": "400",
+        "max": "700"
+    }
+}

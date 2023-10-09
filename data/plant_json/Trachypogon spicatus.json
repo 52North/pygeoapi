@@ -1,0 +1,14 @@
+{
+    "name": "Trachypogon spicatus",
+    "trivial": {
+        "English": "giant spear grass"
+    },
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1300"
+    }
+}

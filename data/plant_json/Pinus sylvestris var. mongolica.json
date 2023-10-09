@@ -1,0 +1,12 @@
+{
+    "name": "Pinus sylvestris var. mongolica",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

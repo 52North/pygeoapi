@@ -1,0 +1,12 @@
+{
+    "name": "Myroxylon balsamum var. perei.",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "2600"
+    }
+}

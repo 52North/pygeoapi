@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus brockwayi",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "34"
+    },
+    "precip": {
+        "min": "250",
+        "max": "300"
+    }
+}

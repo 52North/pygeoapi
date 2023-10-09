@@ -1,0 +1,14 @@
+{
+    "name": "Lycium chinense",
+    "trivial": {
+        "English": "Goji berries"
+    },
+    "temp": {
+        "min": "13",
+        "max": "25"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

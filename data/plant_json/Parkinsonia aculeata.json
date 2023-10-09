@@ -1,0 +1,15 @@
+{
+    "name": "Parkinsonia aculeata",
+    "trivial": {
+        "English": "Mexican paloverde",
+        "French": "sessaban"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "300",
+        "max": "700"
+    }
+}

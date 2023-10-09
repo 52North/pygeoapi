@@ -1,0 +1,24 @@
+{
+    "name": "Eichhornia crassipes",
+    "trivial": {
+        "Portuguese": "jacinto-aquatico",
+        "Fijian": "mbekambekairanga",
+        "Palauan": "bung el ralm",
+        "English": "water orchid",
+        "French": "jacinthe d'eau",
+        "Spanish": "lila de agua",
+        "Hindi": "jal kumbhi",
+        "Unknown": "wota haisin (Papua New Guinea)",
+        "Maori": "riri vai",
+        "German": "wasserhyazinthe",
+        "Afrikaans": "waterhiasint"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3000"
+    }
+}

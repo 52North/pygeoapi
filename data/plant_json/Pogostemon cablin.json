@@ -1,0 +1,14 @@
+{
+    "name": "Pogostemon cablin",
+    "trivial": {
+        "English": "patchouli"
+    },
+    "temp": {
+        "min": "23",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2200",
+        "max": "2600"
+    }
+}

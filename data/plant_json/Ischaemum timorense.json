@@ -1,0 +1,14 @@
+{
+    "name": "Ischaemum timorense",
+    "trivial": {
+        "Unknown": "Waidoi grass"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2000"
+    }
+}

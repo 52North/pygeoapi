@@ -1,0 +1,18 @@
+{
+    "name": "Stevia rebaudiana",
+    "trivial": {
+        "Unknown": "Mithi Tulsi\u0964hind",
+        "Spanish": "yerba dulce",
+        "Portuguese": "caa-hee",
+        "English": "sweet-herb",
+        "Guarani": "Ka\u00b4a He\u00b4e"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1400"
+    }
+}

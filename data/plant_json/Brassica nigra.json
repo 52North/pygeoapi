@@ -1,0 +1,47 @@
+{
+    "name": "Brassica nigra",
+    "trivial": {
+        "Unknown": "abba",
+        "Hungarian": "fekete must\u00e1rmag",
+        "Malay": "biji savi",
+        "English": "yellow mustard seed",
+        "German": "Senfkohl",
+        "Danish": "sort sennep",
+        "Swedish": "svartsenap",
+        "French": "moutarde noire",
+        "Russian": "gorch\u00edtsa ch\u00ebrnyi",
+        "Polish": "kapusta gorczyca",
+        "Swahili": "haradali",
+        "Hebrew": "kruv shachor",
+        "Dutch": "zwarte mosterd",
+        "Tamil": "kadugu",
+        "Turkish": "tohumu",
+        "Arabic": "khardal aswad",
+        "Sanskrit": "krishnikaa",
+        "Japanese": "kuro garashi",
+        "Hindi": "rai",
+        "Marathi": "mohari",
+        "Portuguese": "mostarda preta",
+        "Spanish": "mostaza negra",
+        "Friesian": "moster",
+        "Greek, Modern (since 1453)": "sinaposporos",
+        "Estonian": "must kapsasrohi",
+        "Esperanto": "sinapo",
+        "Icelandic": "mustaroskorn",
+        "Tagalog": "mustasa",
+        "Finnish": "mustasinappi",
+        "Gujarati": "rai",
+        "Amharic": "senafich",
+        "Italian": "senape nero",
+        "Pahlavi": "spandaan",
+        "Norwegian": "svartsennep"
+    },
+    "temp": {
+        "min": "10",
+        "max": "25"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1400"
+    }
+}

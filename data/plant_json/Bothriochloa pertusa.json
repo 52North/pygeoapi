@@ -1,0 +1,12 @@
+{
+    "name": "Bothriochloa pertusa",
+    "trivial": {},
+    "temp": {
+        "min": "14",
+        "max": "27"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

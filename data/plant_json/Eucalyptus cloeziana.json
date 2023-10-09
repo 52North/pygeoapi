@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus cloeziana",
+    "trivial": {
+        "English": "gympie messmate"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2000"
+    }
+}

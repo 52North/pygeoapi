@@ -1,0 +1,17 @@
+{
+    "name": "Mirabilis expansa",
+    "trivial": {
+        "Spanish": "yuca inca",
+        "Aymara": "mauka",
+        "English": "mauka",
+        "Unknown": "tazo: Cotopaxi (Ecuador)"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

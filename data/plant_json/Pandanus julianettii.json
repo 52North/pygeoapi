@@ -1,0 +1,12 @@
+{
+    "name": "Pandanus julianettii",
+    "trivial": {},
+    "temp": {
+        "min": "13",
+        "max": "24"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "3500"
+    }
+}

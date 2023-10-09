@@ -1,0 +1,14 @@
+{
+    "name": "Panicum turgidum",
+    "trivial": {
+        "English": "plains clump grass"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "200",
+        "max": "400"
+    }
+}

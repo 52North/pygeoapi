@@ -1,0 +1,19 @@
+{
+    "name": "Balanites aegyptiaca",
+    "trivial": {
+        "Berber languages": "merwa tree",
+        "Unknown": "tau",
+        "Portuguese": "balanita",
+        "English": "heglig",
+        "Hindi": "hingot",
+        "Somali": "kullan"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "300",
+        "max": "800"
+    }
+}

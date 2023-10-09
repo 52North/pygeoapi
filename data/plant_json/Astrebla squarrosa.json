@@ -1,0 +1,12 @@
+{
+    "name": "Astrebla squarrosa",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "32"
+    },
+    "precip": {
+        "min": "250",
+        "max": "550"
+    }
+}

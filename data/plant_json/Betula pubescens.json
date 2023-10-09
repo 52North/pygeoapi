@@ -1,0 +1,16 @@
+{
+    "name": "Betula pubescens",
+    "trivial": {
+        "Portuguese": "bedulo",
+        "English": "Irish beith",
+        "Latin": "Cortex Betulae"
+    },
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "400",
+        "max": "900"
+    }
+}

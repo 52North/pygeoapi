@@ -1,0 +1,24 @@
+{
+    "name": "Ficus benghalensis",
+    "trivial": {
+        "Tamil": "alam",
+        "Kannada": "vata",
+        "Malayalam": "vatam",
+        "Portuguese": "palmatoria do inferno",
+        "Sanskrit": "vata",
+        "English": "vada tree",
+        "Bengali": "bot",
+        "Hindi": "bor",
+        "Telugu": "vati",
+        "Gujarati": "vor",
+        "Marathi": "war"
+    },
+    "temp": {
+        "min": "26",
+        "max": "36"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2500"
+    }
+}

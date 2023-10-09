@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus albens",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1100"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Terminalia chebula",
+    "trivial": {
+        "Hindi": "harra"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1700"
+    }
+}

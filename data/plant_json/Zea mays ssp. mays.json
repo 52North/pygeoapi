@@ -1,0 +1,14 @@
+{
+    "name": "Zea mays ssp. mays",
+    "trivial": {
+        "English": "corn"
+    },
+    "temp": {
+        "min": "18",
+        "max": "33"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

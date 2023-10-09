@@ -1,0 +1,12 @@
+{
+    "name": "Pinus michoacana var. cornuta",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1700"
+    }
+}

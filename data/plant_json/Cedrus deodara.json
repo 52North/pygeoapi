@@ -1,0 +1,16 @@
+{
+    "name": "Cedrus deodara",
+    "trivial": {
+        "French": "cedre de l'Himalaya",
+        "Portuguese": "cedro do Himalaia",
+        "English": "Indian cedar"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1800"
+    }
+}

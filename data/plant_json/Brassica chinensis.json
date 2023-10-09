@@ -1,0 +1,14 @@
+{
+    "name": "Brassica chinensis",
+    "trivial": {
+        "Unknown": "wongbok"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1600"
+    }
+}

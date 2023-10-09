@@ -1,0 +1,16 @@
+{
+    "name": "Feijoa sellowiana",
+    "trivial": {
+        "English": "pineapple guava",
+        "Portuguese": "goiaba verde",
+        "Spanish": "guayabo grande"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1500"
+    }
+}

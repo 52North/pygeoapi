@@ -1,0 +1,12 @@
+{
+    "name": "Atriplex nummularia",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "200",
+        "max": "600"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "Eugenia aromatica",
+    "trivial": {
+        "Tagalog": "cenkeh",
+        "Italian": "garofano",
+        "Japanese": "choji",
+        "Spanish": "clavos de especial",
+        "French": "giroflier",
+        "English": "tropical myrtle",
+        "Portuguese": "cravo",
+        "Russian": "cvozdika",
+        "Vietnamese": "dinh huong",
+        "German": "Nelke",
+        "Lao": "kaanz phuu",
+        "Thai": "kan phlu",
+        "Turkish": "karanfil",
+        "Khmer": "khan phluu",
+        "Dutch": "nelliker",
+        "Danish": "krydder nelliker",
+        "Swedish": "kryddnejlika",
+        "Burmese": "lay-hnyin",
+        "Arabic": "qaranful",
+        "Chinese": "ting-hsiang"
+    },
+    "temp": {
+        "min": "24",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3600"
+    }
+}

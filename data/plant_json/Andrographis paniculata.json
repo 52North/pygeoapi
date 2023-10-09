@@ -1,0 +1,26 @@
+{
+    "name": "Andrographis paniculata",
+    "trivial": {
+        "Tagalog": "lekha",
+        "Indonesian": "ampadu",
+        "Unknown": "andrografis",
+        "Vietnamese": "xuyen tam lien",
+        "English": "kariyat",
+        "Thai": "ya kan ngu",
+        "Arabic": "kariyaat",
+        "Chinese": "khee-pang-hee",
+        "Sundanese": "ki oray",
+        "French": "roi des amers",
+        "Javanese": "sambilata",
+        "Bikol": "sinta",
+        "Songhai": "yaa kannguu"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

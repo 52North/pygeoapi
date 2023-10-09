@@ -1,0 +1,12 @@
+{
+    "name": "Trifolium pilulare",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

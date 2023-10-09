@@ -1,0 +1,36 @@
+{
+    "name": "Jatropha curcas",
+    "trivial": {
+        "Vietnamese": "pe fo tze",
+        "Fijian": "bagbherenda",
+        "Hindi": "safedarand",
+        "Unknown": "yu-lu-tzu (Mandarin)",
+        "English": "wild oil nut",
+        "Somali": "cantal muluung",
+        "Italian": "Ricino maggiore",
+        "French": "purgh\u00e8re",
+        "Spanish": "tartago",
+        "Arabic": "habel meluk",
+        "Zulu": "inhlakuva",
+        "Indonesian": "jarak pagar",
+        "Venda": "mafuredonga",
+        "Tswana": "mathlapametse",
+        "Swahili": "mbono",
+        "Portuguese": "purgueira",
+        "Sanskrit": "parvaranda",
+        "Afrikaans": "purgeerboontjie",
+        "Dutch": "purgeernoot",
+        "German": "Purgiernuss\u00dfaum",
+        "Nepali": "ramjeevan",
+        "Thai": "sabuu dam",
+        "Chinese": "yu-lu-tzu"
+    },
+    "temp": {
+        "min": "11",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1500"
+    }
+}

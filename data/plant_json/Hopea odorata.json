@@ -1,0 +1,15 @@
+{
+    "name": "Hopea odorata",
+    "trivial": {
+        "Khmer": "koki tree",
+        "Hindi": "rimda"
+    },
+    "temp": {
+        "min": "26",
+        "max": "36"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "4000"
+    }
+}

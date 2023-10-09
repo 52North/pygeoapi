@@ -1,0 +1,12 @@
+{
+    "name": "Buckinghamia celsissima",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1800"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Festuca rubra var. rubra",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

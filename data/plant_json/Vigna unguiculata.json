@@ -1,0 +1,21 @@
+{
+    "name": "Vigna unguiculata",
+    "trivial": {
+        "Tsonga": "atimbawini",
+        "Unknown": "pois liane",
+        "Afrikaans": "koertjie",
+        "Spanish": "frijol de vaca",
+        "English": "yard long bean",
+        "Zulu": "umcwasibe",
+        "Chinese": "jiangdou",
+        "French": "pois manger cochon"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1500"
+    }
+}

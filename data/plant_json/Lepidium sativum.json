@@ -1,0 +1,16 @@
+{
+    "name": "Lepidium sativum",
+    "trivial": {
+        "Unknown": "shufu (Aderic)",
+        "Amharic": "fetto",
+        "Tigrinya": "shimfa"
+    },
+    "temp": {
+        "min": "14",
+        "max": "21"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1800"
+    }
+}

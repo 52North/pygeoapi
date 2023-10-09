@@ -1,0 +1,12 @@
+{
+    "name": "Medicago tornata",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "350",
+        "max": "500"
+    }
+}

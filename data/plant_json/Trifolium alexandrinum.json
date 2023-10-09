@@ -1,0 +1,20 @@
+{
+    "name": "Trifolium alexandrinum",
+    "trivial": {
+        "German": "Alexandriner Klee",
+        "Pushto": "berseem",
+        "English": "Egyptian clover",
+        "French": "trefle d'Alexandrie",
+        "Portuguese": "trevo do Egipto",
+        "Spanish": "trebol de Alejandria",
+        "Italian": "trifoglio egiziano"
+    },
+    "temp": {
+        "min": "16",
+        "max": "27"
+    },
+    "precip": {
+        "min": "450",
+        "max": "900"
+    }
+}

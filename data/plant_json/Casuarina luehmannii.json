@@ -1,0 +1,12 @@
+{
+    "name": "Casuarina luehmannii",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "650"
+    }
+}

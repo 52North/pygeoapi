@@ -1,0 +1,12 @@
+{
+    "name": "Phaseolus polyanthus",
+    "trivial": {},
+    "temp": {
+        "min": "14",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2200"
+    }
+}

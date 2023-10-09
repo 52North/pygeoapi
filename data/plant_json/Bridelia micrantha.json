@@ -1,0 +1,18 @@
+{
+    "name": "Bridelia micrantha",
+    "trivial": {
+        "Yoruba": "ida odan",
+        "English": "bridelia",
+        "Afrikaans": "mitserie",
+        "Swahili": "mwiza",
+        "Igbo": "ogaofia"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2500"
+    }
+}

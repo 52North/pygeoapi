@@ -1,0 +1,16 @@
+{
+    "name": "Terminalia brownii",
+    "trivial": {
+        "Arabic": "subaraya",
+        "Somali": "hareri biiris",
+        "Swahili": "mbarao"
+    },
+    "temp": {
+        "min": "14",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1300"
+    }
+}

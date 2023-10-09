@@ -1,0 +1,16 @@
+{
+    "name": "Phytolacca dioica",
+    "trivial": {
+        "Portuguese": "ombu",
+        "Afrikaans": "dikboom",
+        "English": "umbra"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

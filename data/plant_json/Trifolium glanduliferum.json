@@ -1,0 +1,14 @@
+{
+    "name": "Trifolium glanduliferum",
+    "trivial": {
+        "English": "gland clover"
+    },
+    "temp": {
+        "min": "10",
+        "max": "15"
+    },
+    "precip": {
+        "min": "400",
+        "max": "550"
+    }
+}

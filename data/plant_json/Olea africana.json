@@ -1,0 +1,14 @@
+{
+    "name": "Olea africana",
+    "trivial": {
+        "Avaric": "jejeba"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

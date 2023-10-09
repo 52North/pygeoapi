@@ -1,0 +1,14 @@
+{
+    "name": "Acacia ampliceps",
+    "trivial": {
+        "Unknown": "Salt wattle"
+    },
+    "temp": {
+        "min": "14",
+        "max": "36"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Eucalyptus globulus",
+    "trivial": {
+        "Amharic": "bahir-zaf",
+        "English": "Tasmania blue gum",
+        "Portuguese": "eucalipto vulgar",
+        "Unknown": "kaliti (Galinya)"
+    },
+    "temp": {
+        "min": "18",
+        "max": "23"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1400"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Salix flavida",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "300",
+        "max": "600"
+    }
+}

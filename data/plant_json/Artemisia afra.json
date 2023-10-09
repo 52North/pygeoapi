@@ -1,0 +1,17 @@
+{
+    "name": "Artemisia afra",
+    "trivial": {
+        "English": "wild wormwood",
+        "Amharic": "ariti",
+        "Unknown": "zengana (Southern Sotho)",
+        "Afrikaans": "wildeals"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "550",
+        "max": "750"
+    }
+}

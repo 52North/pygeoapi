@@ -1,0 +1,19 @@
+{
+    "name": "Chlorophytum comosum",
+    "trivial": {
+        "Portuguese": "clorofito",
+        "English": "walking anthericum",
+        "Afrikaans": "hen-met-kuikens",
+        "Zulu": "umhlambezo",
+        "Unknown": "tsisaka Luhya",
+        "Xhosa": "ujejane"
+    },
+    "temp": {
+        "min": "12",
+        "max": "24"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus piperita",
+    "trivial": {
+        "English": "Sydney peppermint"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

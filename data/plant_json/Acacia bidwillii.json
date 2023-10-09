@@ -1,0 +1,14 @@
+{
+    "name": "Acacia bidwillii",
+    "trivial": {
+        "Unknown": "Corkwood wattle"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "550",
+        "max": "750"
+    }
+}

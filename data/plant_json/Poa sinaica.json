@@ -1,0 +1,12 @@
+{
+    "name": "Poa sinaica",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "35"
+    },
+    "precip": {
+        "min": "200",
+        "max": "400"
+    }
+}

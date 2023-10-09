@@ -1,0 +1,31 @@
+{
+    "name": "Dioscorea bulbifera",
+    "trivial": {
+        "English": "yam",
+        "Maori": "\u2018oi",
+        "Truk": "yoi (Yapese-Yap (Waqab) Island)",
+        "Spanish": "papa voladora",
+        "Palauan": "belloi",
+        "German": "Yamswurzel",
+        "Portuguese": "inhame (Brazil)",
+        "Unknown": "ufi soi",
+        "Hindi": "hoei-oepas",
+        "Hawaiian": "pi\u2018oi",
+        "Niuean": "hoi",
+        "Tahitian": "hoi",
+        "Tonga (Tonga Islands)": "hoi",
+        "French": "pousse en l'air",
+        "Fijian": "sarau",
+        "Chamorro": "magnaheugo",
+        "Marshall": "mata",
+        "Samoan": "soi (Western Samoa Islands)"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2600"
+    }
+}

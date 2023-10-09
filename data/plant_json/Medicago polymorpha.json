@@ -1,0 +1,15 @@
+{
+    "name": "Medicago polymorpha",
+    "trivial": {
+        "English": "toothed medick",
+        "Portuguese": "trevo carrapico da California"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

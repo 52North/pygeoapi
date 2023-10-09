@@ -1,0 +1,14 @@
+{
+    "name": "Euterpe edulis",
+    "trivial": {
+        "Portuguese": "palmiteiro"
+    },
+    "temp": {
+        "min": "18",
+        "max": "23"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

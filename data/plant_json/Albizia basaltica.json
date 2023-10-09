@@ -1,0 +1,14 @@
+{
+    "name": "Albizia basaltica",
+    "trivial": {
+        "English": "Dead finish"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "500",
+        "max": "750"
+    }
+}

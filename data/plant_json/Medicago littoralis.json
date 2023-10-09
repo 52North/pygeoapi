@@ -1,0 +1,14 @@
+{
+    "name": "Medicago littoralis",
+    "trivial": {
+        "English": "strand medick"
+    },
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

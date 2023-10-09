@@ -1,0 +1,16 @@
+{
+    "name": "Benincasa hispida",
+    "trivial": {
+        "Hindi": "White gourd",
+        "English": "winter gourd",
+        "Unknown": "zit-kwa"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus elata",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1400"
+    }
+}

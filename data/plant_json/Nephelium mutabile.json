@@ -1,0 +1,14 @@
+{
+    "name": "Nephelium mutabile",
+    "trivial": {
+        "English": "pulasan"
+    },
+    "temp": {
+        "min": "26",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus melliodora",
+    "trivial": {
+        "English": "yellow box"
+    },
+    "temp": {
+        "min": "24",
+        "max": "33"
+    },
+    "precip": {
+        "min": "650",
+        "max": "900"
+    }
+}

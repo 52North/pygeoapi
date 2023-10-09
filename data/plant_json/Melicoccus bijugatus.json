@@ -1,0 +1,17 @@
+{
+    "name": "Melicoccus bijugatus",
+    "trivial": {
+        "English": "Spanish lime",
+        "Spanish": "quenepa",
+        "French": "mammon",
+        "Italian": "limoncillo"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1600"
+    }
+}

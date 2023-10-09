@@ -1,0 +1,24 @@
+{
+    "name": "Acacia ataxacantha",
+    "trivial": {
+        "English": "flame-pod acacia",
+        "Unknown": "kato",
+        "Tsonga": "nuko",
+        "Northern Sotho": "mologa",
+        "Tswana": "mogokatau",
+        "Shona": "rukato",
+        "Venda": "muluwa",
+        "Afrikaans": "vlamdoring",
+        "Ndebele (Zimbabwe)": "uthathwu",
+        "Xhosa": "umNga",
+        "Zulu": "umthathawe"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1300"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Acacia julifera ssp. gilbertensis",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "35"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

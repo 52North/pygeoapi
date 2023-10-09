@@ -1,0 +1,43 @@
+{
+    "name": "Citrus aurantifolia",
+    "trivial": {
+        "English": "West Indian lime",
+        "Unknown": "te raim (Kiribati)",
+        "Hindi": "Nimbuu",
+        "Sanskrit": "Jambhiir",
+        "Tamil": "Elumiccai",
+        "Thai": "somma nao",
+        "Arabic": "limoo",
+        "Vietnamese": "Chanh ta",
+        "French": "Limettier du Mexique",
+        "Tagalog": "Dayap",
+        "Russian": "Laim nastoiashchii kislyi",
+        "Chinese": "\u6aac\u5229\u963f\u5c14  (asC. excelsa)",
+        "Finnish": "Limetti",
+        "Portuguese": "Limeira",
+        "Malayalam": "Limau nipis",
+        "Indonesian": "jeruk pecel",
+        "Khmer": "krooch chhmaa muul",
+        "Fijian": "moli laimi",
+        "Dutch": "Limoen (Flemish)",
+        "Italian": "Limetta Mexicana",
+        "Spanish": "Limero",
+        "Malay": "limau nipis",
+        "Danish": "Lime",
+        "German": "saure Limonette",
+        "Niuean": "moli",
+        "Samaritan Aramaic": "molie",
+        "Papuan-Australian (Other)": "mull",
+        "Lao": "naaw",
+        "Burmese": "theethee",
+        "Samoan": "tipolo"
+    },
+    "temp": {
+        "min": "26",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2200",
+        "max": "2700"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Stachys affinis",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "23"
+    },
+    "precip": {
+        "min": "800",
+        "max": "900"
+    }
+}

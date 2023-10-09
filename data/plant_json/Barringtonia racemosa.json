@@ -1,0 +1,21 @@
+{
+    "name": "Barringtonia racemosa",
+    "trivial": {
+        "Tagalog": "apalang",
+        "English": "wild guava",
+        "Indonesian": "putat sungai",
+        "Thai": "chik suan",
+        "Burmese": "kyi",
+        "Afrikaans": "poeierkwasboom",
+        "Malay": "putat kampong",
+        "Lao": "som pawng"
+    },
+    "temp": {
+        "min": "160",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1500"
+    }
+}

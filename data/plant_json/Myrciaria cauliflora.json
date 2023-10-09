@@ -1,0 +1,12 @@
+{
+    "name": "Myrciaria cauliflora",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Persea americana ssp. guatemalan",
+    "trivial": {
+        "Unknown": "Guatemalan avocado"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1400"
+    }
+}

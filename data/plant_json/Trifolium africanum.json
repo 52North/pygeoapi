@@ -1,0 +1,14 @@
+{
+    "name": "Trifolium africanum",
+    "trivial": {
+        "English": "erasmus clover"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1000"
+    }
+}

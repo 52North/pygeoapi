@@ -1,0 +1,16 @@
+{
+    "name": "Alnus rubra",
+    "trivial": {
+        "Portuguese": "amieiro vermelho",
+        "French": "aune rouge",
+        "English": "red alder"
+    },
+    "temp": {
+        "min": "17",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Passiflora edulis var. flavicarpa",
+    "trivial": {
+        "English": "yellow passion fruit"
+    },
+    "temp": {
+        "min": "25",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1600",
+        "max": "2000"
+    }
+}

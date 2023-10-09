@@ -1,0 +1,16 @@
+{
+    "name": "Rhigozum trichotomum",
+    "trivial": {
+        "Afrikaans": "driedoring",
+        "English": "threethorn rhigozum",
+        "Tswana": "mokurubane"
+    },
+    "temp": {
+        "min": "15",
+        "max": "35"
+    },
+    "precip": {
+        "min": "150",
+        "max": "300"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Aloysia triphylla",
+    "trivial": {
+        "English": "Lemon Verbena"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1800"
+    }
+}

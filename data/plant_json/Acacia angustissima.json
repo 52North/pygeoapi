@@ -1,0 +1,12 @@
+{
+    "name": "Acacia angustissima",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2500"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Macadamia tetraphylla",
+    "trivial": {
+        "English": "Queensland nut",
+        "Unknown": "mekatemia"
+    },
+    "temp": {
+        "min": "14",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1250",
+        "max": "2000"
+    }
+}

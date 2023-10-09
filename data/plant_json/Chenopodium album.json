@@ -1,0 +1,21 @@
+{
+    "name": "Chenopodium album",
+    "trivial": {
+        "English": "pigweed",
+        "Spanish": "cenizo blanco",
+        "Icelandic": "h\u00e9lunj\u00f3li",
+        "Danish": "hvidmelet g\u00e5sefod",
+        "Finnish": "jauhosavikka",
+        "Norwegian": "meldestokk",
+        "Swedish": "vitm\u00e5lla",
+        "German": "wei\u00dfer g\u00e4nsefu\u00df"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

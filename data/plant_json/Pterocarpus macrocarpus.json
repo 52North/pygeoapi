@@ -1,0 +1,12 @@
+{
+    "name": "Pterocarpus macrocarpus",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Gossypium herbaceum",
+    "trivial": {
+        "English": "cotton root"
+    },
+    "temp": {
+        "min": "26",
+        "max": "36"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1250"
+    }
+}

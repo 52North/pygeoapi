@@ -1,0 +1,12 @@
+{
+    "name": "Eugenia suborbiculare",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "38"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1600"
+    }
+}

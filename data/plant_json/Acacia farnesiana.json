@@ -1,0 +1,21 @@
+{
+    "name": "Acacia farnesiana",
+    "trivial": {
+        "Chamorro": "popinac",
+        "Fijian": "vaivai vakavotona",
+        "French": "cassie",
+        "Unknown": "te kaibakoa (Kiribati)",
+        "English": "sweet acacia",
+        "Spanish": "espino blanco",
+        "Hindi": "gandhirva tree",
+        "Hawaiian": "kolu"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1400"
+    }
+}

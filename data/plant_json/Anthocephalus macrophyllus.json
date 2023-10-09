@@ -1,0 +1,12 @@
+{
+    "name": "Anthocephalus macrophyllus",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "4000"
+    }
+}

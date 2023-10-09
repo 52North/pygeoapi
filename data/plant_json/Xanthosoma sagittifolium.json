@@ -1,0 +1,21 @@
+{
+    "name": "Xanthosoma sagittifolium",
+    "trivial": {
+        "Unknown": "Yautia bravia (P.Ri.)",
+        "English": "tannia",
+        "French": "chou caraibe (Ant)",
+        "Indonesian": "kimpool",
+        "Creoles and Pidgins, English-based (Other)": "kong kong taro (N.Guin.)",
+        "Spanish": "Ocumo cuman (Ven)",
+        "Portuguese": "Taioba (Bra)",
+        "Samoan": "Talo papalagi"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Agropyron elongatum",
+    "trivial": {
+        "English": "tall wheatgrass"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "350",
+        "max": "600"
+    }
+}

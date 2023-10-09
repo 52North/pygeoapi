@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus trivalvis",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "38"
+    },
+    "precip": {
+        "min": "150",
+        "max": "250"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Brachystegia spiciformis",
+    "trivial": {
+        "English": "bean-pod tree",
+        "Ndebele (Zimbabwe)": "igonda",
+        "Swahili": "myombo",
+        "Shona": "musasa"
+    },
+    "temp": {
+        "min": "14",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1100"
+    }
+}

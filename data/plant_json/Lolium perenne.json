@@ -1,0 +1,20 @@
+{
+    "name": "Lolium perenne",
+    "trivial": {
+        "Danish": "almindelig rajgr\u00e6s",
+        "German": "Weidelgras",
+        "English": "ryegrass",
+        "Swedish": "renrepe",
+        "Finnish": "Englanninraihein\u00e4",
+        "Norwegian": "raigras",
+        "Icelandic": "t\u00fanr\u00faggresi"
+    },
+    "temp": {
+        "min": "14",
+        "max": "25"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1750"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Amaranthus cruentus",
+    "trivial": {
+        "English": "whitespot"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "2400"
+    }
+}

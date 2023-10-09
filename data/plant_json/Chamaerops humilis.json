@@ -1,0 +1,15 @@
+{
+    "name": "Chamaerops humilis",
+    "trivial": {
+        "English": "Mediterranean fan palm",
+        "German": "F\u00e4cherpalme"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

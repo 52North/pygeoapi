@@ -1,0 +1,15 @@
+{
+    "name": "Lathyrus cicera",
+    "trivial": {
+        "Spanish": "ch\u00edcaro menudo",
+        "English": "vetchling"
+    },
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

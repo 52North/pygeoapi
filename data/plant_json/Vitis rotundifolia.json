@@ -1,0 +1,15 @@
+{
+    "name": "Vitis rotundifolia",
+    "trivial": {
+        "English": "Southern fox grape",
+        "Portuguese": "vinha americana"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "1600"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Physalis peruviana",
+    "trivial": {
+        "English": "Cape gooseberry",
+        "German": "Kapstachelbeere",
+        "Unknown": "Physalis"
+    },
+    "temp": {
+        "min": "16",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2300"
+    }
+}

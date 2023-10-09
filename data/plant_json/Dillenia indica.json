@@ -1,0 +1,15 @@
+{
+    "name": "Dillenia indica",
+    "trivial": {
+        "Hindi": "girnar",
+        "English": "elephant apple"
+    },
+    "temp": {
+        "min": "30",
+        "max": "40"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "4000"
+    }
+}

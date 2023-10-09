@@ -1,0 +1,14 @@
+{
+    "name": "Vigna unguiculata ssp. biflora",
+    "trivial": {
+        "Unknown": "sow pea"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1300"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Artemisia dracunculus",
+    "trivial": {
+        "Latin": "Dracunculi herba",
+        "Chinese": "ai-hao",
+        "Dutch": "dragon",
+        "Swedish": "dragon",
+        "English": "tarragon",
+        "Portuguese": "estragao",
+        "French": "estragon",
+        "German": "Estragon",
+        "Russian": "estragon",
+        "Spanish": "estragon",
+        "Italian": "targone",
+        "Arabic": "tarkhun"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

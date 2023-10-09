@@ -1,0 +1,15 @@
+{
+    "name": "Garcinia dulcis",
+    "trivial": {
+        "English": "egg tree",
+        "Unknown": "gourka"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

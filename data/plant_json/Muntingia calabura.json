@@ -1,0 +1,23 @@
+{
+    "name": "Muntingia calabura",
+    "trivial": {
+        "Unknown": "sirsen",
+        "English": "strawberry tree",
+        "Portuguese": "paude seda",
+        "Indonesian": "talok",
+        "Tagalog": "datiles",
+        "Malay": "kerukup siam",
+        "Lao": "takh\u00f4b",
+        "Khmer": "kr\u00e2kh\u00f4b barang",
+        "Vietnamese": "tr\u00f9ng c\u00e0",
+        "Thai": "takhop farang"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2000"
+    }
+}

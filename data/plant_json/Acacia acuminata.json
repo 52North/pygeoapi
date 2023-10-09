@@ -1,0 +1,14 @@
+{
+    "name": "Acacia acuminata",
+    "trivial": {
+        "English": "Raspberry jam wood"
+    },
+    "temp": {
+        "min": "17",
+        "max": "28"
+    },
+    "precip": {
+        "min": "350",
+        "max": "500"
+    }
+}

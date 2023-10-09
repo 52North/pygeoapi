@@ -1,0 +1,20 @@
+{
+    "name": "Alpinia galanga",
+    "trivial": {
+        "English": "Java galangal",
+        "Vietnamese": "ri\u00e8ng n\u00e9p",
+        "Urdu": "khulanjan",
+        "Thai": "kha yuak",
+        "Arabic": "kholanjan",
+        "Indonesian": "lenguas",
+        "Karen": "seh ae khoei"
+    },
+    "temp": {
+        "min": "27",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3000"
+    }
+}

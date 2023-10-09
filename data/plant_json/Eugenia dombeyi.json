@@ -1,0 +1,17 @@
+{
+    "name": "Eugenia dombeyi",
+    "trivial": {
+        "French": "jambosier du Br\u00e9sil",
+        "English": "grumix-aneira of Brazil",
+        "Spanish": "grumichama",
+        "Portuguese": "grumixameira"
+    },
+    "temp": {
+        "min": "21",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2500"
+    }
+}

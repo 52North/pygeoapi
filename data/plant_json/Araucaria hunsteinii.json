@@ -1,0 +1,12 @@
+{
+    "name": "Araucaria hunsteinii",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

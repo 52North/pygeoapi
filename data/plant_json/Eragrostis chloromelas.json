@@ -1,0 +1,16 @@
+{
+    "name": "Eragrostis chloromelas",
+    "trivial": {
+        "English": "Curly leaf",
+        "Afrikaans": "Krulblaar",
+        "Sotho": "Moseeka"
+    },
+    "temp": {
+        "min": "17",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "750"
+    }
+}

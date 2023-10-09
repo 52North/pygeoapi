@@ -1,0 +1,15 @@
+{
+    "name": "Andropogon gayanus",
+    "trivial": {
+        "English": "Rhodesian blue grass (Zimbabwe)",
+        "Unknown": "Sadabahar (India)"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1400"
+    }
+}

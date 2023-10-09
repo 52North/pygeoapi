@@ -1,0 +1,28 @@
+{
+    "name": "Averrhoa carambola",
+    "trivial": {
+        "Spanish": "zibline",
+        "Tagalog": "sirinato",
+        "Malay": "kambola",
+        "Unknown": "wi ni jaina",
+        "Portuguese": "limas de Cayena",
+        "French": "cornichon",
+        "English": "sweet tamarind",
+        "Creoles and Pidgins, English-based (Other)": "coolie tamarind",
+        "Hindi": "kamruk",
+        "German": "Sternfrucht",
+        "Sanskrit": "karmara",
+        "Vietnamese": "khe ta",
+        "Thai": "ma fueang",
+        "Lao": "nak fuang",
+        "Chinese": "yang-t\u00e1o"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

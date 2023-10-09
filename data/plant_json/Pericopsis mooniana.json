@@ -1,0 +1,12 @@
+{
+    "name": "Pericopsis mooniana",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1700"
+    }
+}

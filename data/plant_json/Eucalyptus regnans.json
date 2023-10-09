@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus regnans",
+    "trivial": {
+        "English": "Victorian ash"
+    },
+    "temp": {
+        "min": "12",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1700"
+    }
+}

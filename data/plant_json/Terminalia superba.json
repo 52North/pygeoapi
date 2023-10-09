@@ -1,0 +1,14 @@
+{
+    "name": "Terminalia superba",
+    "trivial": {
+        "Unknown": "white afara"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

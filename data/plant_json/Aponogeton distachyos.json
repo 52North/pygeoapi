@@ -1,0 +1,15 @@
+{
+    "name": "Aponogeton distachyos",
+    "trivial": {
+        "English": "water hawthorn",
+        "Afrikaans": "waterblommetjie"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1100"
+    }
+}

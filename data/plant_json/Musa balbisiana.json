@@ -1,0 +1,12 @@
+{
+    "name": "Musa balbisiana",
+    "trivial": {},
+    "temp": {
+        "min": "23",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "3000"
+    }
+}

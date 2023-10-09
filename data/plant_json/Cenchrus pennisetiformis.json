@@ -1,0 +1,12 @@
+{
+    "name": "Cenchrus pennisetiformis",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "32"
+    },
+    "precip": {
+        "min": "370",
+        "max": "560"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Cordia africana",
+    "trivial": {
+        "Tigrinya": "auchi",
+        "Amharic": "wanza",
+        "Avaric": "mederto",
+        "Unknown": "wodessa (Galinya)",
+        "Sidamo": "uaddichio"
+    },
+    "temp": {
+        "min": "25",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

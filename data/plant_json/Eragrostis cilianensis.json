@@ -1,0 +1,12 @@
+{
+    "name": "Eragrostis cilianensis",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "700"
+    }
+}

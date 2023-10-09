@@ -1,0 +1,14 @@
+{
+    "name": "Casuarina cristata ssp. pauper",
+    "trivial": {
+        "Unknown": "black oak"
+    },
+    "temp": {
+        "min": "27",
+        "max": "37"
+    },
+    "precip": {
+        "min": "250",
+        "max": "400"
+    }
+}

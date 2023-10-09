@@ -1,0 +1,19 @@
+{
+    "name": "Melilotus officinalis",
+    "trivial": {
+        "Portuguese": "trevo real",
+        "English": "yellow sweet clover",
+        "French": "melilot officinal",
+        "Latin": "Meliloti herba",
+        "German": "Steinklee",
+        "Spanish": "tr\u00e9bol dulce amarillo"
+    },
+    "temp": {
+        "min": "12",
+        "max": "24"
+    },
+    "precip": {
+        "min": "450",
+        "max": "800"
+    }
+}

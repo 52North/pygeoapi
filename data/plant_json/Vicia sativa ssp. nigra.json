@@ -1,0 +1,14 @@
+{
+    "name": "Vicia sativa ssp. nigra",
+    "trivial": {
+        "English": "vetch"
+    },
+    "temp": {
+        "min": "11",
+        "max": "23"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

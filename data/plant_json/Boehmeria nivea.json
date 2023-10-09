@@ -1,0 +1,16 @@
+{
+    "name": "Boehmeria nivea",
+    "trivial": {
+        "English": "white ramie",
+        "Dutch": "ramie",
+        "Spanish": "ramio"
+    },
+    "temp": {
+        "min": "17",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

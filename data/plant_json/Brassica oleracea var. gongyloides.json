@@ -1,0 +1,14 @@
+{
+    "name": "Brassica oleracea var. gongyloides",
+    "trivial": {
+        "Unknown": "Kohlrabi"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

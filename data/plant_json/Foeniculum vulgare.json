@@ -1,0 +1,32 @@
+{
+    "name": "Foeniculum vulgare",
+    "trivial": {
+        "Latin": "Foeniculi fructus",
+        "Unknown": "kamuni (Galinya)",
+        "Persian": "badian",
+        "Amharic": "ensilal",
+        "Swedish": "faenk\u00e5l",
+        "German": "Fenchel",
+        "English": "sweet fennel",
+        "French": "fenouil sucre",
+        "Italian": "finocchio",
+        "Portuguese": "funcho",
+        "Russian": "fyenkhel'",
+        "Spanish": "hinojo",
+        "Chinese": "hui-hsiang",
+        "Baluchi": "raz",
+        "Urdu": "saunf",
+        "Arabic": "shamar",
+        "Japanese": "uikyo",
+        "Dutch": "venkel",
+        "Afrikaans": "vinkel"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

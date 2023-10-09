@@ -1,0 +1,16 @@
+{
+    "name": "Populus deltoides",
+    "trivial": {
+        "Portuguese": "choupo da America",
+        "English": "yellow cottonwood",
+        "French": "peuplier d'Amerique"
+    },
+    "temp": {
+        "min": "14",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2500"
+    }
+}

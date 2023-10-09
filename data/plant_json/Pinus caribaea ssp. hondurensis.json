@@ -1,0 +1,12 @@
+{
+    "name": "Pinus caribaea ssp. hondurensis",
+    "trivial": {},
+    "temp": {
+        "min": "27",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2400"
+    }
+}

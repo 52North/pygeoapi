@@ -1,0 +1,17 @@
+{
+    "name": "Urtica dioica",
+    "trivial": {
+        "German": "Brennessel",
+        "English": "stinging nettle",
+        "Italian": "ortica",
+        "French": "ortie"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "600",
+        "max": "2000"
+    }
+}

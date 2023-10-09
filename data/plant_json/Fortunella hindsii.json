@@ -1,0 +1,15 @@
+{
+    "name": "Fortunella hindsii",
+    "trivial": {
+        "Unknown": "cumquate ana",
+        "English": "dwarf kumquat"
+    },
+    "temp": {
+        "min": "26",
+        "max": "37"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1500"
+    }
+}

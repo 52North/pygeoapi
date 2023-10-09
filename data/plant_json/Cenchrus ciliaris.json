@@ -1,0 +1,16 @@
+{
+    "name": "Cenchrus ciliaris",
+    "trivial": {
+        "English": "foxtail buffalo grass",
+        "Afrikaans": "buffelsgrass",
+        "Tamil": "koluk katai"
+    },
+    "temp": {
+        "min": "22",
+        "max": "37"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1000"
+    }
+}

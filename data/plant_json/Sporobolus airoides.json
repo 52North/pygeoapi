@@ -1,0 +1,12 @@
+{
+    "name": "Sporobolus airoides",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "25"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1100"
+    }
+}

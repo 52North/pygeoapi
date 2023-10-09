@@ -1,0 +1,12 @@
+{
+    "name": "Anisoptera scaphula",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "33"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

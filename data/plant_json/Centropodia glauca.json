@@ -1,0 +1,16 @@
+{
+    "name": "Centropodia glauca",
+    "trivial": {
+        "German": "D\u00fcnenhafer",
+        "English": "gha grass",
+        "Afrikaans": "ikagras"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "150",
+        "max": "200"
+    }
+}

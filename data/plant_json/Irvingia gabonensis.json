@@ -1,0 +1,15 @@
+{
+    "name": "Irvingia gabonensis",
+    "trivial": {
+        "English": "wild mango",
+        "Unknown": "ogbono"
+    },
+    "temp": {
+        "min": "25",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

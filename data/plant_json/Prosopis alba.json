@@ -1,0 +1,12 @@
+{
+    "name": "Prosopis alba",
+    "trivial": {},
+    "temp": {
+        "min": "10",
+        "max": "20"
+    },
+    "precip": {
+        "min": "200",
+        "max": "500"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Desmodium triflorum",
+    "trivial": {
+        "Portuguese": "trevo do campo",
+        "English": "three-flower beggarweed",
+        "Spanish": "hierba cuartillo"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "4000"
+    }
+}

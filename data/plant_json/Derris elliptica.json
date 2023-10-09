@@ -1,0 +1,15 @@
+{
+    "name": "Derris elliptica",
+    "trivial": {
+        "English": "tuba root",
+        "Creoles and Pidgins, English-based (Other)": "uka"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "3500"
+    }
+}

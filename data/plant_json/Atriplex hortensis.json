@@ -1,0 +1,12 @@
+{
+    "name": "Atriplex hortensis",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "28"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

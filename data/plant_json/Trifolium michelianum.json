@@ -1,0 +1,14 @@
+{
+    "name": "Trifolium michelianum",
+    "trivial": {
+        "English": "bigflower clover"
+    },
+    "temp": {
+        "min": "20",
+        "max": "25"
+    },
+    "precip": {
+        "min": "400",
+        "max": "700"
+    }
+}

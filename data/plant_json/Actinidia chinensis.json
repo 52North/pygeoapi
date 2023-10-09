@@ -1,0 +1,14 @@
+{
+    "name": "Actinidia chinensis",
+    "trivial": {
+        "Unknown": "Kiwifruit"
+    },
+    "temp": {
+        "min": "21",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

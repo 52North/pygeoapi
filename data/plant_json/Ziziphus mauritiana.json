@@ -1,0 +1,32 @@
+{
+    "name": "Ziziphus mauritiana",
+    "trivial": {
+        "Ethiopic": "abateri",
+        "Portuguese": "ber",
+        "Urdu": "ber",
+        "Panjabi": "beri",
+        "Malay": "bidara",
+        "English": "jujube",
+        "Tigrinya": "gava",
+        "Somali": "jumuba",
+        "Unknown": "kurkura (Galinya, Harar)",
+        "French": "jujubier",
+        "Tagalog": "manzanitas",
+        "Swahili": "mkunazi",
+        "Thai": "phutsaa",
+        "Khmer": "putrea",
+        "Arabic": "sidr",
+        "Vietnamese": "tao nhuc",
+        "Lao": "than",
+        "Afrikaans": "wag'n bietjie",
+        "Indonesian": "widara"
+    },
+    "temp": {
+        "min": "25",
+        "max": "42"
+    },
+    "precip": {
+        "min": "300",
+        "max": "1500"
+    }
+}

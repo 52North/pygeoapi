@@ -1,0 +1,17 @@
+{
+    "name": "Quercus virginiana",
+    "trivial": {
+        "Portuguese": "carvalho da Virginia",
+        "French": "chene de Virginie",
+        "English": "live oak",
+        "Spanish": "roble de Virginia"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1800"
+    }
+}

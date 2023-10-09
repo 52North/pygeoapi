@@ -1,0 +1,14 @@
+{
+    "name": "Soymida febrifuga",
+    "trivial": {
+        "English": "rohun"
+    },
+    "temp": {
+        "min": "32",
+        "max": "40"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1300"
+    }
+}

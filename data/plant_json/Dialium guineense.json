@@ -1,0 +1,20 @@
+{
+    "name": "Dialium guineense",
+    "trivial": {
+        "Yoruba": "awin",
+        "English": "velvet tamarind",
+        "Igbo": "icheku",
+        "Fula": "mekohi",
+        "Mandingo": "kosito",
+        "Wolof": "solom",
+        "French": "tamarinier noir"
+    },
+    "temp": {
+        "min": "21",
+        "max": "25"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1800"
+    }
+}

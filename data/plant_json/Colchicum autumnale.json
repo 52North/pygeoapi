@@ -1,0 +1,21 @@
+{
+    "name": "Colchicum autumnale",
+    "trivial": {
+        "English": "meadow saffron",
+        "Latin": "Colchici semen",
+        "French": "tue-chien",
+        "Swedish": "vanlig tidl\u00f6sa",
+        "Danish": "h\u00f8st-tidl\u00f8s",
+        "German": "Herbstzeitlose",
+        "Finnish": "syysmyrkkylilja",
+        "Norwegian": "tidl\u00f8yse"
+    },
+    "temp": {
+        "min": "10",
+        "max": "20"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

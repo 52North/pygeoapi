@@ -1,0 +1,12 @@
+{
+    "name": "Prosopis cineraria",
+    "trivial": {},
+    "temp": {
+        "min": "28",
+        "max": "45"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

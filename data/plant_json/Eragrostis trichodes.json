@@ -1,0 +1,12 @@
+{
+    "name": "Eragrostis trichodes",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

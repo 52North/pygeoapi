@@ -1,0 +1,17 @@
+{
+    "name": "Pyrus pyrifolia",
+    "trivial": {
+        "English": "Taiwanese pear",
+        "German": "Orientalische Birne",
+        "Spanish": "peral de las arenas",
+        "Portuguese": "pera chinesa"
+    },
+    "temp": {
+        "min": "17",
+        "max": "25"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

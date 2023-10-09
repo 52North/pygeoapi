@@ -1,0 +1,12 @@
+{
+    "name": "Butyrospermum paradoxum ssp. parkii",
+    "trivial": {},
+    "temp": {
+        "min": "29",
+        "max": "38"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

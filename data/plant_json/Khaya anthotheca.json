@@ -1,0 +1,14 @@
+{
+    "name": "Khaya anthotheca",
+    "trivial": {
+        "English": "Red mahogany"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1600"
+    }
+}

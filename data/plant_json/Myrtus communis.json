@@ -1,0 +1,14 @@
+{
+    "name": "Myrtus communis",
+    "trivial": {
+        "English": "common myrtle"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

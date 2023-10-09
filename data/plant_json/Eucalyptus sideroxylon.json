@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus sideroxylon",
+    "trivial": {
+        "English": "red ironbark"
+    },
+    "temp": {
+        "min": "25",
+        "max": "34"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

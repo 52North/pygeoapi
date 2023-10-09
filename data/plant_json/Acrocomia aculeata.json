@@ -1,0 +1,19 @@
+{
+    "name": "Acrocomia aculeata",
+    "trivial": {
+        "French": "noix de Coyol",
+        "Spanish": "tucuma",
+        "German": "coyolipalme",
+        "Chinese": "Pi ci ge lu zong",
+        "English": "ruffle palm",
+        "Portuguese": "mucaj\u00e1"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

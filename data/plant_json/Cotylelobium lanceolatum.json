@@ -1,0 +1,12 @@
+{
+    "name": "Cotylelobium lanceolatum",
+    "trivial": {},
+    "temp": {
+        "min": "19",
+        "max": "34"
+    },
+    "precip": {
+        "min": "2100",
+        "max": "2700"
+    }
+}

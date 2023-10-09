@@ -1,0 +1,15 @@
+{
+    "name": "Gossypium barbadense",
+    "trivial": {
+        "English": "sea island cotton",
+        "Amharic": "tit"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1250"
+    }
+}

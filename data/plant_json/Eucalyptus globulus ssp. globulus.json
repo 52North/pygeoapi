@@ -1,0 +1,17 @@
+{
+    "name": "Eucalyptus globulus ssp. globulus",
+    "trivial": {
+        "English": "turpentine gas",
+        "Spanish": "eucalipto",
+        "Creoles and Pidgins (Other)": "kaliptis",
+        "Japanese": "yukari-no-ki"
+    },
+    "temp": {
+        "min": "14",
+        "max": "23"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

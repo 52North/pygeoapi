@@ -1,0 +1,23 @@
+{
+    "name": "Cinnamomum cassia",
+    "trivial": {
+        "Japanese": "bokei",
+        "Spanish": "canela de la China",
+        "French": "cannelle de cochinchine",
+        "English": "Chinese cinnamon",
+        "Italian": "cassia",
+        "Arabic": "darasini",
+        "Dutch": "kassia",
+        "Swedish": "kassia",
+        "Chinese": "kwei",
+        "German": "zimtkassie"
+    },
+    "temp": {
+        "min": "15",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1500"
+    }
+}

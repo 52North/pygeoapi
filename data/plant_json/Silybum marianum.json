@@ -1,0 +1,16 @@
+{
+    "name": "Silybum marianum",
+    "trivial": {
+        "English": "variegated thistle",
+        "Portuguese": "cardo Mariano",
+        "Latin": "Cardui mariani fructus"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

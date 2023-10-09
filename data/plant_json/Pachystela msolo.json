@@ -1,0 +1,12 @@
+{
+    "name": "Pachystela msolo",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "31"
+    },
+    "precip": {
+        "min": "640",
+        "max": "1750"
+    }
+}

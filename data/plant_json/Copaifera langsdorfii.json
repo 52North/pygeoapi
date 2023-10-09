@@ -1,0 +1,15 @@
+{
+    "name": "Copaifera langsdorfii",
+    "trivial": {
+        "Portuguese": "copaiba vermelha",
+        "English": "diesel tree"
+    },
+    "temp": {
+        "min": "20",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "4000"
+    }
+}

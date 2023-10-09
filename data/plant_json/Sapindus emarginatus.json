@@ -1,0 +1,12 @@
+{
+    "name": "Sapindus emarginatus",
+    "trivial": {},
+    "temp": {
+        "min": "32",
+        "max": "40"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

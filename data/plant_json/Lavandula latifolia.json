@@ -1,0 +1,14 @@
+{
+    "name": "Lavandula latifolia",
+    "trivial": {
+        "English": "spike lavender"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1100"
+    }
+}

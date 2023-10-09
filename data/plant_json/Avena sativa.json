@@ -1,0 +1,24 @@
+{
+    "name": "Avena sativa",
+    "trivial": {
+        "Icelandic": "akurhafrar",
+        "Danish": "almindelig havre",
+        "Italian": "avena",
+        "Spanish": "avena",
+        "French": "avoine farine",
+        "German": "saat-hafer",
+        "Norwegian": "havre",
+        "Afrikaans": "hawer",
+        "Finnish": "peltokaura",
+        "English": "oats",
+        "Swedish": "vanlig havre"
+    },
+    "temp": {
+        "min": "16",
+        "max": "20"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

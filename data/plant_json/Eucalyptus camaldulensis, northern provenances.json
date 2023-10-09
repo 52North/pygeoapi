@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus camaldulensis, northern provenances",
+    "trivial": {
+        "Unknown": "red river gum"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1300"
+    }
+}

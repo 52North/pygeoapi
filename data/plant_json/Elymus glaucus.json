@@ -1,0 +1,14 @@
+{
+    "name": "Elymus glaucus",
+    "trivial": {
+        "English": "blue wildrye"
+    },
+    "temp": {
+        "min": "9",
+        "max": "15"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

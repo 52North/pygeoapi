@@ -1,0 +1,15 @@
+{
+    "name": "Tragopogon porrifolius",
+    "trivial": {
+        "Portuguese": "cercefi roxo",
+        "English": "vegetable oyster"
+    },
+    "temp": {
+        "min": "13",
+        "max": "19"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

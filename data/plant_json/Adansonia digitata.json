@@ -1,0 +1,24 @@
+{
+    "name": "Adansonia digitata",
+    "trivial": {
+        "German": "Affenbrotbaum",
+        "English": "upside-down tree",
+        "Afrikaans": "kremetart (fruit)",
+        "Nyanja": "mlambe",
+        "Tswana": "mowana",
+        "Venda": "muvhuyu",
+        "Northern Sotho": "seboi",
+        "Sotho": "seboi",
+        "Arabic": "tabaldi (Sudan)",
+        "Unknown": "toeega",
+        "Tsonga": "ximuwu"
+    },
+    "temp": {
+        "min": "26",
+        "max": "36"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1500"
+    }
+}

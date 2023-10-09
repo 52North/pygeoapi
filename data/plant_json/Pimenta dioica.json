@@ -1,0 +1,21 @@
+{
+    "name": "Pimenta dioica",
+    "trivial": {
+        "English": "pimento",
+        "Arabic": "bahar",
+        "Swedish": "kryddpeppar",
+        "Italian": "pepe di Giamaica",
+        "French": "piment",
+        "Portuguese": "pimenta-da-Jamaica",
+        "Spanish": "pimienta gorda",
+        "Russian": "yamayski pyerets"
+    },
+    "temp": {
+        "min": "15",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

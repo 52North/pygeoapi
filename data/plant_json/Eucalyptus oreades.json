@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus oreades",
+    "trivial": {
+        "English": "blue mountain ash"
+    },
+    "temp": {
+        "min": "17",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

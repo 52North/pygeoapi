@@ -1,0 +1,19 @@
+{
+    "name": "Citrofortunella x microcarpa",
+    "trivial": {
+        "English": "golden time",
+        "French": "Calamondin",
+        "Indonesian": "jeruk potong",
+        "Unknown": "limonsito",
+        "Malayalam": "limau kesturi",
+        "Thai": "sommapit"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

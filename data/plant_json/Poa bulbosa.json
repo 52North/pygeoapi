@@ -1,0 +1,17 @@
+{
+    "name": "Poa bulbosa",
+    "trivial": {
+        "English": "sweet tussock",
+        "Portuguese": "erva da febra bulbosa",
+        "Italian": "fienarola bulbosa",
+        "French": "paturin bulbeux"
+    },
+    "temp": {
+        "min": "13",
+        "max": "22"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

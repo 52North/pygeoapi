@@ -1,0 +1,23 @@
+{
+    "name": "Origanum vulgare",
+    "trivial": {
+        "Arabic": "anrar",
+        "German": "knotted marjoram",
+        "Russian": "dushitsa",
+        "English": "winter marjoram",
+        "Spanish": "oregano",
+        "French": "origan",
+        "Portuguese": "ouregao",
+        "Italian": "regamo",
+        "Swedish": "vild mejram",
+        "Dutch": "wilde marjolein"
+    },
+    "temp": {
+        "min": "17",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1300"
+    }
+}

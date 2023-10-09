@@ -1,0 +1,18 @@
+{
+    "name": "Cedrela odorata",
+    "trivial": {
+        "English": "West Indian cedar",
+        "French": "c\u00e8dre des barbares",
+        "Portuguese": "cedro femea",
+        "Spanish": "cedro cubano (Galapagos Is.)",
+        "Tonga (Tonga Islands)": "sita hina"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2500"
+    }
+}

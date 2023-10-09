@@ -1,0 +1,14 @@
+{
+    "name": "Solanum ferox",
+    "trivial": {
+        "English": "Malaysian sunplant"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Levisticum officinale",
+    "trivial": {
+        "Latin": "Levistici rhizoma et radix",
+        "German": "Maggi",
+        "French": "liv\u00e8che",
+        "English": "lovage",
+        "Dutch": "Maggiplant"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1200"
+    }
+}

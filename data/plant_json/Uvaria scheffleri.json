@@ -1,0 +1,16 @@
+{
+    "name": "Uvaria scheffleri",
+    "trivial": {
+        "Kamba": "mukukuma",
+        "Unknown": "tomolokwo (Marakwet)",
+        "Somali": "mareer booy"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

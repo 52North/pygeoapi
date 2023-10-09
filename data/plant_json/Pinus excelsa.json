@@ -1,0 +1,16 @@
+{
+    "name": "Pinus excelsa",
+    "trivial": {
+        "English": "Himalayan white pine",
+        "French": "pin de l'Himalaya",
+        "Portuguese": "pinheiro chorao do Himalaia"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

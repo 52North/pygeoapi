@@ -1,0 +1,15 @@
+{
+    "name": "Tephrosia vogelii",
+    "trivial": {
+        "Portuguese": "cafoto",
+        "English": "fish poison bean"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1500"
+    }
+}

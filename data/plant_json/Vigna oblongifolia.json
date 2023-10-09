@@ -1,0 +1,12 @@
+{
+    "name": "Vigna oblongifolia",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "23"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

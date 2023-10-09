@@ -1,0 +1,15 @@
+{
+    "name": "Avena byzantina",
+    "trivial": {
+        "English": "red oat",
+        "Spanish": "avena amarilla"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Lotus uliginosus",
+    "trivial": {
+        "English": "marsh bird's-foot trefoil",
+        "Portuguese": "erva coelheira"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

@@ -149,35 +149,33 @@ class CropModelProcessor(BaseProcessor):
         if bbox and point:
             raise ValueError('Only one of the arguments "bbox" and "point" should be set.')
         if bbox:
-            landsuitmodel_cropped = landsuitmodel.crop_data(bbox)
+            landsuitmodel.crop_data(bbox)
         if point:
             raise NotImplementedError("Return type still needs to be defined for point request. Does netCDF still make sense?")
 
         # get return type
-        nc = None
+        ds_return = None
         if format=='nc':
-            nc = landsuitmodel_cropped
-        else:
-            raise NotImplementedError("contour output not yet implemented")
-
-        # wenn format=nc
-        #   return
-        # sonst
-        #   ebenen des xr zusammenfügen zu einer
-        #   --> gdal_contour (oder entsprechendes paket)
-        #   return
-
-        # cropped = data.sel(latitude=slice(lat_max,lat_min), longitude=slice(lon_min, lon_max))
-
-
-        with tempfile.TemporaryFile() as fp:
+            ds_return = landsuitmodel.return_netCDF()
+            with tempfile.TemporaryFile() as fp:
                 LOGGER.debug('Returning data in native NetCDF format')
-                fp.write(landsuitmodel_cropped.to_netcdf())
+                fp.write(ds_return.to_netcdf())
                 fp.seek(0)
-                nc=fp.read()
-                
+                ds_return = fp.read()
+                return mimetype, ds_return
 
-                return mimetype, nc
+
+        if format=='geojson':
+            ds_return = landsuitmodel.return_geojson('/pygeoapi/temp/modelresult.tiff')
+
+            with tempfile.TemporaryFile() as fp:
+                LOGGER.debug('Returning data in GeoJSON format')
+                fp.write(bytes(ds_return, 'UTF-8'))
+                fp.seek(0)
+                ds_return = fp.read()
+                return mimetype, ds_return
+
+
 
     def __repr__(self):
         return f'<CropModelProcessor> {self.name}'

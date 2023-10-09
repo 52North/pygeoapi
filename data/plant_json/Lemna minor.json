@@ -1,0 +1,22 @@
+{
+    "name": "Lemna minor",
+    "trivial": {
+        "Norwegian": "andmat",
+        "Swedish": "vanlig andmat",
+        "English": "lesser duckweed",
+        "Dutch": "klein kroos",
+        "German": "kleine wasserlinse",
+        "Danish": "liden andemad",
+        "Gaelic (Scots)": "mac gun athair",
+        "Finnish": "pikkulimaska",
+        "Slovak": "zaburinka men\u0161ia"
+    },
+    "temp": {
+        "min": "7",
+        "max": "25"
+    },
+    "precip": {
+        "min": "700",
+        "max": "3000"
+    }
+}

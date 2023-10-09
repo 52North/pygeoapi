@@ -1,0 +1,14 @@
+{
+    "name": "Alnus acuminata",
+    "trivial": {
+        "Spanish": "ramr\u00e0m"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Dioscorea trifida",
+    "trivial": {
+        "Portuguese": "nambu",
+        "English": "yampee"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2600"
+    }
+}

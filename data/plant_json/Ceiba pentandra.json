@@ -1,0 +1,19 @@
+{
+    "name": "Ceiba pentandra",
+    "trivial": {
+        "Spanish": "ceiba (Puerto Rica)",
+        "Mandingo": "bantang (Gambia)",
+        "Portuguese": "sumauma da varzea",
+        "English": "white silk-cottontree",
+        "French": "fromager",
+        "Unknown": "vavau ni lokoloko"
+    },
+    "temp": {
+        "min": "17",
+        "max": "38"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

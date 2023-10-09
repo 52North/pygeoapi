@@ -1,0 +1,12 @@
+{
+    "name": "Acacia macdonnelliensis",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "33"
+    },
+    "precip": {
+        "min": "200",
+        "max": "250"
+    }
+}

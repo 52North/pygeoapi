@@ -1,0 +1,18 @@
+{
+    "name": "Hylocereus undatus",
+    "trivial": {
+        "Chinese": "\u706b\u9f8d\u679c",
+        "German": "Drachenfrucht",
+        "English": "white-fleshed pitahaya",
+        "Spanish": "pitahaya",
+        "Italian": "pitaya"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "350",
+        "max": "3500"
+    }
+}

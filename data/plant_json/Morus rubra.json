@@ -1,0 +1,16 @@
+{
+    "name": "Morus rubra",
+    "trivial": {
+        "English": "red mulberry",
+        "Portuguese": "amoreira vermelha",
+        "French": "murier rouge"
+    },
+    "temp": {
+        "min": "19",
+        "max": "25"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

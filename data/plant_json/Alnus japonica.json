@@ -1,0 +1,16 @@
+{
+    "name": "Alnus japonica",
+    "trivial": {
+        "Portuguese": "amieiro do Japao",
+        "French": "aune du Japon",
+        "English": "Japanese alder"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

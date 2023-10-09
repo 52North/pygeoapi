@@ -1,0 +1,27 @@
+{
+    "name": "Artocarpus heterophyllus",
+    "trivial": {
+        "Thai": "makmi",
+        "English": "jackfruit",
+        "French": "jacquiet",
+        "Unknown": "jak fruit",
+        "Creoles and Pidgins, English-based (Other)": "kapiak",
+        "Khmer": "khnadr",
+        "Tagalog": "langka",
+        "Vietnamese": "m\u00edt",
+        "Swahili": "Mfenesi",
+        "Lao": "miiz hnang",
+        "Indonesian": "nangka",
+        "Malay": "nangka",
+        "Javanese": "nongko",
+        "Burmese": "peignai"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

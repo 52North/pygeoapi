@@ -1,0 +1,22 @@
+{
+    "name": "Afzelia quanzensis",
+    "trivial": {
+        "Portuguese": "afzelia",
+        "English": "pod mahogany",
+        "Zulu": "umShamfuthi",
+        "Unknown": "Mbamba-Kofi",
+        "Swazi": "umKholikholi",
+        "Swahili": "mkumbakusi",
+        "Venda": "mutokota",
+        "Tswana": "nxenhe",
+        "Afrikaans": "peulmahonie"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1400"
+    }
+}

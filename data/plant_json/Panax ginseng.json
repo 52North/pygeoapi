@@ -1,0 +1,14 @@
+{
+    "name": "Panax ginseng",
+    "trivial": {
+        "English": "Korean ginseng"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1300"
+    }
+}

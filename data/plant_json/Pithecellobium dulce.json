@@ -1,0 +1,15 @@
+{
+    "name": "Pithecellobium dulce",
+    "trivial": {
+        "Amharic": "koloita",
+        "Hindi": "jungle jalbi"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3000"
+    }
+}

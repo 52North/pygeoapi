@@ -1,0 +1,21 @@
+{
+    "name": "Beta vulgaris var. saccharifera",
+    "trivial": {
+        "Italian": "barbabietola da zucchero",
+        "French": "betterave \u00e0 sucre",
+        "Spanish": "remolacha azucarera",
+        "Russian": "sakharnaya svyokla",
+        "Japanese": "tensai",
+        "English": "sugarbeet",
+        "Chinese": "tiancai",
+        "German": "Zuckerruebe"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "400",
+        "max": "700"
+    }
+}

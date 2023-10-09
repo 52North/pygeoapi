@@ -1,0 +1,12 @@
+{
+    "name": "Oryzopsis miliacea",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "25"
+    },
+    "precip": {
+        "min": "450",
+        "max": "650"
+    }
+}

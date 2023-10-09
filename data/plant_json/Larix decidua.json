@@ -1,0 +1,18 @@
+{
+    "name": "Larix decidua",
+    "trivial": {
+        "Spanish": "alerce",
+        "English": "European larch",
+        "Italian": "larice",
+        "German": "L\u00e4rche",
+        "French": "m\u00e9l\u00e8ze"
+    },
+    "temp": {
+        "min": "8",
+        "max": "22"
+    },
+    "precip": {
+        "min": "450",
+        "max": "1100"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Lens culinaris",
+    "trivial": {
+        "Arabic": "adas",
+        "Unknown": "heramame",
+        "Spanish": "lenteja",
+        "Italian": "lenticchia",
+        "English": "split pea",
+        "French": "lentille",
+        "German": "linse",
+        "Hindi": "masser",
+        "Turkish": "mercimek",
+        "Ethiopic": "messer",
+        "Amharic": "missr",
+        "Tigr\u00e9": "shimfa"
+    },
+    "temp": {
+        "min": "15",
+        "max": "29"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Desmodium sandwicense",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "33"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

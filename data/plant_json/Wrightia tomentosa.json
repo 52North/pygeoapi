@@ -1,0 +1,12 @@
+{
+    "name": "Wrightia tomentosa",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2400"
+    }
+}

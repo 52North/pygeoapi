@@ -1,0 +1,16 @@
+{
+    "name": "Erythrina abyssinica",
+    "trivial": {
+        "English": "Red-hot poker tree",
+        "Swahili": "Mwamba-ngoma",
+        "Tigrinya": "ziwawa"
+    },
+    "temp": {
+        "min": "16",
+        "max": "26"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2000"
+    }
+}

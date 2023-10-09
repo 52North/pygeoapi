@@ -1,0 +1,12 @@
+{
+    "name": "Melaleuca cajuputi",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1250",
+        "max": "1600"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Fagopyrum esculentum",
+    "trivial": {
+        "Danish": "almindelig boghvede",
+        "French": "sarrasin",
+        "Norwegian": "bokkveite",
+        "Swedish": "vanligt bovete",
+        "German": "Heidekorn",
+        "English": "buckwheat",
+        "Italian": "fagopiro",
+        "Latin": "Fagopyri semen",
+        "Russian": "grecicha kul'turnaja",
+        "Nepali": "mite phapar",
+        "Hindi": "ogal",
+        "Polish": "poganka",
+        "Chinese": "qiaomei",
+        "Japanese": "soba",
+        "Spanish": "trigo sarraceno",
+        "Finnish": "viljatatar"
+    },
+    "temp": {
+        "min": "17",
+        "max": "27"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

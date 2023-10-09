@@ -1,0 +1,16 @@
+{
+    "name": "Acer saccharum",
+    "trivial": {
+        "English": "sugarwood",
+        "Portuguese": "bordo sacarino",
+        "French": "erable a sucre"
+    },
+    "temp": {
+        "min": "14",
+        "max": "24"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1300"
+    }
+}

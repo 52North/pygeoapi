@@ -1,0 +1,12 @@
+{
+    "name": "Cleistopholis glauca",
+    "trivial": {},
+    "temp": {
+        "min": "28",
+        "max": "36"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "3500"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Platanus orientalis",
+    "trivial": {
+        "English": "Oriental planetree",
+        "Portuguese": "platano do Oriente",
+        "German": "Morgenl\u00e4ndische Plantane",
+        "French": "platane d'Orient"
+    },
+    "temp": {
+        "min": "12",
+        "max": "30"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1400"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Crambe cordifolia",
+    "trivial": {
+        "English": "ornamental sea kale"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

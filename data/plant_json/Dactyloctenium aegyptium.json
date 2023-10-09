@@ -1,0 +1,15 @@
+{
+    "name": "Dactyloctenium aegyptium",
+    "trivial": {
+        "English": "Egyptian grass",
+        "Portuguese": "calandrini"
+    },
+    "temp": {
+        "min": "21",
+        "max": "28"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Cynometra cauliflora",
+    "trivial": {
+        "Thai": "nang-ai",
+        "Indonesian": "puki",
+        "Unknown": "namnam",
+        "Malay": "puki anjing"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

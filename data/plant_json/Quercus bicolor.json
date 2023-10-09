@@ -1,0 +1,15 @@
+{
+    "name": "Quercus bicolor",
+    "trivial": {
+        "English": "swamp white oak",
+        "Portuguese": "viminaria"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1200"
+    }
+}

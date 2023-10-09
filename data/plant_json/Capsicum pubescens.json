@@ -1,0 +1,14 @@
+{
+    "name": "Capsicum pubescens",
+    "trivial": {
+        "English": "tree pepper"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1250"
+    }
+}

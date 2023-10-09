@@ -1,0 +1,14 @@
+{
+    "name": "Broussonetia papyrifera",
+    "trivial": {
+        "Unknown": "u'a"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2500"
+    }
+}

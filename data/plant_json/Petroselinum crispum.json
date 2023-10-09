@@ -1,0 +1,27 @@
+{
+    "name": "Petroselinum crispum",
+    "trivial": {
+        "Arabic": "baqdunis",
+        "English": "parsley",
+        "Japanese": "paseri",
+        "Spanish": "perejil",
+        "French": "persil",
+        "Swedish": "persilja",
+        "Danish": "persille",
+        "Dutch": "peterselie",
+        "German": "Petersilie",
+        "Latin": "Petroselini radix",
+        "Italian": "prezzemolo",
+        "Russian": "pyetrushka",
+        "Portuguese": "salsa",
+        "Chinese": "yang-hu-sui"
+    },
+    "temp": {
+        "min": "11",
+        "max": "20"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1500"
+    }
+}

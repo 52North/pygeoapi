@@ -1,0 +1,15 @@
+{
+    "name": "Alnus maritima",
+    "trivial": {
+        "Portuguese": "amieiro maritimo",
+        "English": "seaside alder"
+    },
+    "temp": {
+        "min": "8",
+        "max": "20"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

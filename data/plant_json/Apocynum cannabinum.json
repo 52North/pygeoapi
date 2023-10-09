@@ -1,0 +1,14 @@
+{
+    "name": "Apocynum cannabinum",
+    "trivial": {
+        "English": "wild cotton"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Festuca idahoensis",
+    "trivial": {
+        "English": "Idaho fescue",
+        "Portuguese": "festuca do Idaho"
+    },
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

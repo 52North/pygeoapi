@@ -1,0 +1,35 @@
+{
+    "name": "Zea mays",
+    "trivial": {
+        "Amharic": "bekolo",
+        "Spanish": "maiz",
+        "English": "maize",
+        "Unknown": "kon",
+        "Samoan": "sana",
+        "Shona": "upfu",
+        "Ganda": "Kasoli",
+        "Thai": "khao phoat",
+        "Tonga (Tonga Islands)": "koane",
+        "French": "ma\u00efs",
+        "Swahili": "mahindi",
+        "Latin": "maidis stigmata",
+        "German": "Mais",
+        "Hindi": "makki",
+        "Kamba": "mbemba",
+        "Zulu": "mbila",
+        "Afrikaans": "mielie",
+        "Portuguese": "milho",
+        "Sotho": "poone",
+        "Fijian": "sila nivava lagi",
+        "Japanese": "tomorokpshi",
+        "Chinese": "yumi"
+    },
+    "temp": {
+        "min": "18",
+        "max": "33"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

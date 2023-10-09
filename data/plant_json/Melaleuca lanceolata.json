@@ -1,0 +1,12 @@
+{
+    "name": "Melaleuca lanceolata",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "400",
+        "max": "550"
+    }
+}

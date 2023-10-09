@@ -1,0 +1,22 @@
+{
+    "name": "Trifolium repens",
+    "trivial": {
+        "English": "white clover",
+        "German": "Weissklee",
+        "Celtic languages": "seamair bh\u00e1n (Irish)",
+        "French": "trefle rampant",
+        "Spanish": "trebol blanco",
+        "Portuguese": "trevo branco",
+        "Italian": "trifoglio bianco",
+        "Latin": "Trifolii albi et rubri flos",
+        "Swedish": "vitklover"
+    },
+    "temp": {
+        "min": "14",
+        "max": "22"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1200"
+    }
+}

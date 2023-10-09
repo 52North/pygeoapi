@@ -1,0 +1,17 @@
+{
+    "name": "Cyperus esculentus",
+    "trivial": {
+        "French": "souchet comestible",
+        "Spanish": "coquito",
+        "English": "Zulu nut",
+        "Unknown": "tiriri\u00e7a-amarela"
+    },
+    "temp": {
+        "min": "14",
+        "max": "26"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

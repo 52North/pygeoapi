@@ -1,0 +1,16 @@
+{
+    "name": "Pinus merkusii",
+    "trivial": {
+        "English": "Mindoro pine",
+        "Portuguese": "pinheiro de Mindoro",
+        "Unknown": "Pinus merkusii (continental)"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "2500"
+    }
+}

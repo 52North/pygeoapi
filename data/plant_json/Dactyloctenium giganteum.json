@@ -1,0 +1,15 @@
+{
+    "name": "Dactyloctenium giganteum",
+    "trivial": {
+        "English": "giant crowfoot",
+        "Afrikaans": "sterretjiegras"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "450",
+        "max": "500"
+    }
+}

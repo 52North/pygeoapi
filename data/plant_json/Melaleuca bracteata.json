@@ -1,0 +1,12 @@
+{
+    "name": "Melaleuca bracteata",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "400",
+        "max": "900"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Sesbania rostrata",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3500"
+    }
+}

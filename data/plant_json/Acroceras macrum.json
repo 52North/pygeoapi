@@ -1,0 +1,15 @@
+{
+    "name": "Acroceras macrum",
+    "trivial": {
+        "English": "nile grass",
+        "Afrikaans": "nylgras"
+    },
+    "temp": {
+        "min": "16",
+        "max": "26"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

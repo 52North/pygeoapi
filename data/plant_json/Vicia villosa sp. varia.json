@@ -1,0 +1,14 @@
+{
+    "name": "Vicia villosa sp. varia",
+    "trivial": {
+        "English": "winter vetch"
+    },
+    "temp": {
+        "min": "18",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1400"
+    }
+}

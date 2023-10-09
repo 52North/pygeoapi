@@ -1,0 +1,20 @@
+{
+    "name": "Hyphaene compressa",
+    "trivial": {
+        "Unknown": "takuyua (Pokot)",
+        "Somali": "qoona (fruit)",
+        "English": "doum palm",
+        "German": "Dumpalme",
+        "Kamba": "mukoma",
+        "Swahili": "muaa",
+        "Italian": "palma dum"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "300",
+        "max": "800"
+    }
+}

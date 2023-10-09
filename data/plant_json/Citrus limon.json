@@ -1,0 +1,32 @@
+{
+    "name": "Citrus limon",
+    "trivial": {
+        "English": "standard lemon",
+        "Vietnamese": "chanh tay",
+        "Dutch": "citroen",
+        "French": "limonier",
+        "Indonesian": "jeruk limun",
+        "Unknown": "muli",
+        "Hindi": "khatto nabbu",
+        "Tagalog": "limon",
+        "Tonga (Tonga Islands)": "lemani",
+        "Portuguese": "limoeiro",
+        "Malay": "limau nipis",
+        "Spanish": "limonero",
+        "German": "Zitrone",
+        "Italian": "limone",
+        "Thai": "manao-thet",
+        "Fijian": "molisoraiara",
+        "Samoan": "tipolo",
+        "Lao": "naaw th'eed",
+        "Niuean": "tipolo"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2300"
+    }
+}

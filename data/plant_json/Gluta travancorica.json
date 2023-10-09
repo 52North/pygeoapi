@@ -1,0 +1,12 @@
+{
+    "name": "Gluta travancorica",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "29"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "4000"
+    }
+}

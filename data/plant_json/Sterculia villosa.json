@@ -1,0 +1,12 @@
+{
+    "name": "Sterculia villosa",
+    "trivial": {},
+    "temp": {
+        "min": "30",
+        "max": "42"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1900"
+    }
+}

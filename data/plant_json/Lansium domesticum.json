@@ -1,0 +1,21 @@
+{
+    "name": "Lansium domesticum",
+    "trivial": {
+        "Vietnamese": "b\u00f2nbon",
+        "Malay": "langsat",
+        "Tagalog": "lansones",
+        "Unknown": "buahluku",
+        "Indonesian": "langsat",
+        "Thai": "longkong",
+        "English": "lanzones",
+        "Spanish": "lans\u00f3n"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2200"
+    }
+}

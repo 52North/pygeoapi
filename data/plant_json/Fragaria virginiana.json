@@ -1,0 +1,15 @@
+{
+    "name": "Fragaria virginiana",
+    "trivial": {
+        "Portuguese": "morangueiro da Virginia",
+        "English": "Virginia strawberry"
+    },
+    "temp": {
+        "min": "11",
+        "max": "18"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

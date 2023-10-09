@@ -1,0 +1,15 @@
+{
+    "name": "Chamaedorea tepejilote",
+    "trivial": {
+        "Spanish": "palmito dulce",
+        "English": "tepejilote palm"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2500"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Guizotia abyssinica",
+    "trivial": {
+        "Oriya": "alashi",
+        "German": "gingellikraut",
+        "French": "guizotia ol\u00e9ifere",
+        "Kannada": "hechellu",
+        "Marathi": "karale",
+        "Tigrinya": "neuk",
+        "English": "niger seed",
+        "Amharic": "nug",
+        "Tamil": "payellu",
+        "Hindi": "ramtil",
+        "Panjabi": "ramtil",
+        "Bengali": "sarguza",
+        "Assamese": "sorguja",
+        "Telugu": "verrinuvvulu"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1300"
+    }
+}

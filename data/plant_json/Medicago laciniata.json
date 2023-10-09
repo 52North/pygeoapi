@@ -1,0 +1,14 @@
+{
+    "name": "Medicago laciniata",
+    "trivial": {
+        "English": "cutleaf clover"
+    },
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "350",
+        "max": "500"
+    }
+}

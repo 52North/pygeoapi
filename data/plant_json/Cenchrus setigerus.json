@@ -1,0 +1,12 @@
+{
+    "name": "Cenchrus setigerus",
+    "trivial": {},
+    "temp": {
+        "min": "28",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

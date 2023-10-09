@@ -1,0 +1,31 @@
+{
+    "name": "Annona squamosa",
+    "trivial": {
+        "Spanish": "saramuyo",
+        "English": "sweetsop",
+        "Hindi": "sitaphal",
+        "Indonesian": "atis",
+        "Tagalog": "atis",
+        "French": "poreroe cannelle",
+        "Malay": "seri kaya",
+        "Unknown": "cherimoya",
+        "Chinese": "fan-li-chi",
+        "Portuguese": "fruta do conde",
+        "Dutch": "zoetzak",
+        "Thai": "noinah",
+        "Lao": "mak khbieb",
+        "Khmer": "tiep baay",
+        "Vietnamese": "qu a na",
+        "German": "zuckerapfel",
+        "Sundanese": "sarikaja",
+        "Javanese": "sirkaja"
+    },
+    "temp": {
+        "min": "23",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Acacia plectocarpa",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1400"
+    }
+}

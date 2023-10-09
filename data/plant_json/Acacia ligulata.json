@@ -1,0 +1,14 @@
+{
+    "name": "Acacia ligulata",
+    "trivial": {
+        "Unknown": "Umbrella bush"
+    },
+    "temp": {
+        "min": "18",
+        "max": "33"
+    },
+    "precip": {
+        "min": "125",
+        "max": "225"
+    }
+}

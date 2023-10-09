@@ -1,0 +1,19 @@
+{
+    "name": "Prunus domestica",
+    "trivial": {
+        "Portuguese": "ameixeira",
+        "Spanish": "ciruela",
+        "English": "quetschen plum",
+        "German": "Zwetschge",
+        "Italian": "susino",
+        "French": "prune"
+    },
+    "temp": {
+        "min": "18",
+        "max": "33"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1500"
+    }
+}

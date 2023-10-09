@@ -1,0 +1,14 @@
+{
+    "name": "Leucaena collinsii",
+    "trivial": {
+        "Spanish": "chijlip"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "2500"
+    }
+}

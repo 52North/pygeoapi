@@ -1,0 +1,19 @@
+{
+    "name": "Samolus valerandi",
+    "trivial": {
+        "English": "seaside brookweed",
+        "Swedish": "bunge",
+        "German": "salzbunge",
+        "Danish": "samel",
+        "Norwegian": "strandsamel",
+        "Finnish": "suolapunka"
+    },
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1300"
+    }
+}

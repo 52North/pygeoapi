@@ -1,0 +1,12 @@
+{
+    "name": "Macaranga tanarius",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

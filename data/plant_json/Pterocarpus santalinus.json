@@ -1,0 +1,15 @@
+{
+    "name": "Pterocarpus santalinus",
+    "trivial": {
+        "English": "sappan",
+        "German": "Sandelholz"
+    },
+    "temp": {
+        "min": "26",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1900"
+    }
+}

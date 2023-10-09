@@ -1,0 +1,12 @@
+{
+    "name": "Saccharum robustum",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2500"
+    }
+}

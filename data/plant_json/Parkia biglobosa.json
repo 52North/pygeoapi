@@ -1,0 +1,15 @@
+{
+    "name": "Parkia biglobosa",
+    "trivial": {
+        "English": "two ball nitta-tree",
+        "French": "n\u00e9r\u00e9"
+    },
+    "temp": {
+        "min": "28",
+        "max": "40"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

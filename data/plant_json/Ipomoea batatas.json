@@ -1,0 +1,39 @@
+{
+    "name": "Ipomoea batatas",
+    "trivial": {
+        "Arabic": "ba ta tah helua",
+        "Danish": "s\u00f8d kartoffel",
+        "Dutch": "zoete aardappel",
+        "Russian": "batat",
+        "Italian": "patata dolce",
+        "Spanish": "papa dulce",
+        "Portuguese": "munhata",
+        "English": "white-fleshed sweet potato",
+        "German": "Suesskartoffel",
+        "Indonesian": "ubi merah",
+        "Chinese": "gan ye",
+        "Thai": "muntail",
+        "Tagalog": "kamote",
+        "Japanese": "satsuma-imo",
+        "Creoles and Pidgins, English-based (Other)": "kaukau",
+        "Korean": "koguma",
+        "Fijian": "kumara",
+        "Tonga (Tonga Islands)": "kumala",
+        "Niuean": "timala",
+        "Unknown": "te kuma",
+        "Vietnamese": "l\u00e1 khoai mony",
+        "Hindi": "Sakarkand",
+        "French": "patate douce",
+        "Afrikaans": "soetpatats",
+        "Malay": "ubi keledek",
+        "Samoan": "umala"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "750",
+        "max": "2000"
+    }
+}

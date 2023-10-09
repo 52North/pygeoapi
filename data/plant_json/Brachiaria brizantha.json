@@ -1,0 +1,14 @@
+{
+    "name": "Brachiaria brizantha",
+    "trivial": {
+        "Unknown": "zacate signal (Sp)"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "750",
+        "max": "2500"
+    }
+}

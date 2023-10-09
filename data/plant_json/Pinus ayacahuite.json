@@ -1,0 +1,15 @@
+{
+    "name": "Pinus ayacahuite",
+    "trivial": {
+        "English": "Mexican white pine",
+        "Portuguese": "pinheiro de Aiacauite"
+    },
+    "temp": {
+        "min": "17",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

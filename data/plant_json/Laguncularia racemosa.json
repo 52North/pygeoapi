@@ -1,0 +1,14 @@
+{
+    "name": "Laguncularia racemosa",
+    "trivial": {
+        "English": "white mangrove"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

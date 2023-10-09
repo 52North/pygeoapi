@@ -1,0 +1,18 @@
+{
+    "name": "Cyperus longus",
+    "trivial": {
+        "English": "sweet galingale",
+        "Danish": "fladaks",
+        "German": "langes Zypergras",
+        "French": "souchet odorant",
+        "Italian": "zigolo commune"
+    },
+    "temp": {
+        "min": "14",
+        "max": "32"
+    },
+    "precip": {
+        "min": "300",
+        "max": "900"
+    }
+}

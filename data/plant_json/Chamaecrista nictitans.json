@@ -1,0 +1,12 @@
+{
+    "name": "Chamaecrista nictitans",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1600"
+    }
+}

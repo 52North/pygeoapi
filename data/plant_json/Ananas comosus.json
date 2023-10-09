@@ -1,0 +1,26 @@
+{
+    "name": "Ananas comosus",
+    "trivial": {
+        "Portuguese": "abacaxi",
+        "French": "ananas",
+        "German": "Ananas",
+        "Italian": "ananas",
+        "Fijian": "vainaviu",
+        "Unknown": "painapolo (Tuvalu)",
+        "Tonga (Tonga Islands)": "faina",
+        "Samoan": "fala'aiga",
+        "Niuean": "hukifa",
+        "Spanish": "pina",
+        "English": "pineapple",
+        "Chinese": "po lo mah",
+        "Thai": "sub-pah-rohd"
+    },
+    "temp": {
+        "min": "21",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2500"
+    }
+}

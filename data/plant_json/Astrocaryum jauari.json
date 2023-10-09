@@ -1,0 +1,12 @@
+{
+    "name": "Astrocaryum jauari",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "2300"
+    }
+}

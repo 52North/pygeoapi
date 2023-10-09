@@ -1,0 +1,12 @@
+{
+    "name": "Atriplex halimus",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "300",
+        "max": "700"
+    }
+}

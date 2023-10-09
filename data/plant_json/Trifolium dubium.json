@@ -1,0 +1,19 @@
+{
+    "name": "Trifolium dubium",
+    "trivial": {
+        "German": "faden klee",
+        "English": "suckling clover",
+        "Celtic languages": "seamair bhu\u00ed (Irish)",
+        "French": "trefle douteux",
+        "Portuguese": "trevo namorado menor",
+        "Italian": "trifoglio dubbio"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

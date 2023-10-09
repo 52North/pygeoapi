@@ -1,0 +1,17 @@
+{
+    "name": "Pistacia vera",
+    "trivial": {
+        "Portuguese": "pistacio",
+        "English": "Pistachio nut",
+        "French": "pistachier",
+        "German": "Pistazie"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "400",
+        "max": "700"
+    }
+}

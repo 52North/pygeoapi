@@ -1,0 +1,12 @@
+{
+    "name": "Arrhenatherum elatius",
+    "trivial": {},
+    "temp": {
+        "min": "14",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

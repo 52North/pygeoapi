@@ -1,0 +1,12 @@
+{
+    "name": "Coleus amboinicus",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "2600"
+    }
+}

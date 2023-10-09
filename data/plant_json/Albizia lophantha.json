@@ -1,0 +1,12 @@
+{
+    "name": "Albizia lophantha",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

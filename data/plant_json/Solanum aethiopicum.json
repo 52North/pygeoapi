@@ -1,0 +1,15 @@
+{
+    "name": "Solanum aethiopicum",
+    "trivial": {
+        "English": "wild pea-aubergine",
+        "Chinese": "xiao ku fan qie"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1600"
+    }
+}

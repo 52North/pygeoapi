@@ -1,0 +1,15 @@
+{
+    "name": "Aiphanes aculeata",
+    "trivial": {
+        "Spanish": "marar\u00e1",
+        "English": "ruffle palm"
+    },
+    "temp": {
+        "min": "22",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

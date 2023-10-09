@@ -1,0 +1,15 @@
+{
+    "name": "Yucca elephantipes",
+    "trivial": {
+        "German": "Riesen-Palmlilie",
+        "English": "Yucca"
+    },
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1600"
+    }
+}

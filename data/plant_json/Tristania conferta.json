@@ -1,0 +1,12 @@
+{
+    "name": "Tristania conferta",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1500"
+    }
+}

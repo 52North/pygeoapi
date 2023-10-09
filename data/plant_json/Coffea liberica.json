@@ -1,0 +1,14 @@
+{
+    "name": "Coffea liberica",
+    "trivial": {
+        "Unknown": "Liberian coffee"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1600",
+        "max": "2400"
+    }
+}

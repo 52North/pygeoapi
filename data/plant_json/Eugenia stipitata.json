@@ -1,0 +1,16 @@
+{
+    "name": "Eugenia stipitata",
+    "trivial": {
+        "Portuguese": "ara\u00e7a-boi",
+        "English": "araz\u00e1",
+        "Spanish": "araz\u00e1"
+    },
+    "temp": {
+        "min": "2000",
+        "max": "3500"
+    },
+    "precip": {
+        "min": "22",
+        "max": "30"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Zizania latifolia",
+    "trivial": {
+        "Portuguese": "cizania da Manchuria",
+        "Chinese": "kwo-bai",
+        "English": "water bamboo",
+        "Japanese": "makomo dake"
+    },
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "600",
+        "max": "2500"
+    }
+}

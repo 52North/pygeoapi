@@ -1,0 +1,14 @@
+{
+    "name": "Acacia crassicarpa",
+    "trivial": {
+        "Unknown": "Lancewood"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Apios americana",
+    "trivial": {
+        "English": "wild potato",
+        "Spanish": "apio tuberoso",
+        "German": "erdbirne",
+        "French": "gland de terre"
+    },
+    "temp": {
+        "min": "10",
+        "max": "20"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Vitex parviflora",
+    "trivial": {
+        "English": "small-flower chaste tree"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

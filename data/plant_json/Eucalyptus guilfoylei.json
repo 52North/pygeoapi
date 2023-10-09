@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus guilfoylei",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1300"
+    }
+}

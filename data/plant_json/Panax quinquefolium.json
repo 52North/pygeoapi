@@ -1,0 +1,14 @@
+{
+    "name": "Panax quinquefolium",
+    "trivial": {
+        "English": "American ginseng"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1100"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Litchi chinensis",
+    "trivial": {
+        "French": "litchi de Chine",
+        "Chinese": "\u8354\u679d",
+        "Malayalam": "laici",
+        "Indonesian": "litsi",
+        "Creoles and Pidgins (Other)": "l\u00ec zh\u012b (pinyin)",
+        "Tagalog": "letsias",
+        "Thai": "linchi",
+        "English": "lychee",
+        "German": "Litschi",
+        "Vietnamese": "vai"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1700"
+    }
+}

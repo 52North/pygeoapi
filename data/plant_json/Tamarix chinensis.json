@@ -1,0 +1,15 @@
+{
+    "name": "Tamarix chinensis",
+    "trivial": {
+        "English": "Chinese tamarisk",
+        "Portuguese": "tamargueira chinesa"
+    },
+    "temp": {
+        "min": "20",
+        "max": "38"
+    },
+    "precip": {
+        "min": "400",
+        "max": "750"
+    }
+}

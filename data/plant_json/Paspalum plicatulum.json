@@ -1,0 +1,19 @@
+{
+    "name": "Paspalum plicatulum",
+    "trivial": {
+        "English": "plicatulum",
+        "Spanish": "hierba de cepa",
+        "Portuguese": "pasto-negro",
+        "French": "herbe \u00e0 cheval",
+        "Thai": "ya-phlikhathiulum",
+        "Chinese": "zong zi que bai"
+    },
+    "temp": {
+        "min": "10",
+        "max": "23"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2500"
+    }
+}

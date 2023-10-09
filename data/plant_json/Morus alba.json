@@ -1,0 +1,19 @@
+{
+    "name": "Morus alba",
+    "trivial": {
+        "Portuguese": "amoreira branca",
+        "English": "white mulberry",
+        "Spanish": "moreira",
+        "French": "murier",
+        "Urdu": "shatut",
+        "Afrikaans": "wit moerbei"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "2500"
+    }
+}

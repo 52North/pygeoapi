@@ -1,0 +1,12 @@
+{
+    "name": "Lotus creticus",
+    "trivial": {},
+    "temp": {
+        "min": "12",
+        "max": "30"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

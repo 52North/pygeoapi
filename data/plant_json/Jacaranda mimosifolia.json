@@ -1,0 +1,16 @@
+{
+    "name": "Jacaranda mimosifolia",
+    "trivial": {
+        "English": "mimosa-leaved ebony",
+        "Portuguese": "palissandra",
+        "Afrikaans": "jakaranda"
+    },
+    "temp": {
+        "min": "20",
+        "max": "34"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1400"
+    }
+}

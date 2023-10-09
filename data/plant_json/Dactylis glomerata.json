@@ -1,0 +1,22 @@
+{
+    "name": "Dactylis glomerata",
+    "trivial": {
+        "Portuguese": "panasco",
+        "English": "orchard grass",
+        "French": "dactyle vulgaire",
+        "Swedish": "hund\u00e4xing",
+        "Norwegian": "hundegras",
+        "Danish": "hundegr\u00e6s",
+        "Icelandic": "hundgresi",
+        "German": "Kn\u00e4uelgras",
+        "Finnish": "koiranhein\u00e4"
+    },
+    "temp": {
+        "min": "12",
+        "max": "26"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

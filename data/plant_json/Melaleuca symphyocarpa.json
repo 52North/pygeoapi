@@ -1,0 +1,12 @@
+{
+    "name": "Melaleuca symphyocarpa",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "37"
+    },
+    "precip": {
+        "min": "850",
+        "max": "1200"
+    }
+}

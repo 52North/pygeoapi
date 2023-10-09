@@ -1,0 +1,15 @@
+{
+    "name": "Maranta arundinacea",
+    "trivial": {
+        "English": "obedience plant",
+        "German": "Pfeilwurz"
+    },
+    "temp": {
+        "min": "23",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

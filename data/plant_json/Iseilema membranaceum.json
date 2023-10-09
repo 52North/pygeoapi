@@ -1,0 +1,12 @@
+{
+    "name": "Iseilema membranaceum",
+    "trivial": {},
+    "temp": {
+        "min": "30",
+        "max": "40"
+    },
+    "precip": {
+        "min": "400",
+        "max": "500"
+    }
+}

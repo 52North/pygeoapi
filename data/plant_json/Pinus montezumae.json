@@ -1,0 +1,15 @@
+{
+    "name": "Pinus montezumae",
+    "trivial": {
+        "English": "rough-barked Mexican pine",
+        "Portuguese": "pinheiro de Montezuma"
+    },
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1400"
+    }
+}

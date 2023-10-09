@@ -1,0 +1,21 @@
+{
+    "name": "Linum usitatissimum",
+    "trivial": {
+        "Tigr\u00e9": "Entati",
+        "English": "linseed",
+        "German": "Lein",
+        "Turkish": "keten",
+        "French": "lins",
+        "Amharic": "Telba",
+        "Dutch": "vlas",
+        "Chinese": "yama"
+    },
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

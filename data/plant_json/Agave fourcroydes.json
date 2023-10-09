@@ -1,0 +1,17 @@
+{
+    "name": "Agave fourcroydes",
+    "trivial": {
+        "Portuguese": "sisal blanco",
+        "English": "Yucatan sisal",
+        "Spanish": "henequen blanco",
+        "Mayan languages": "sakki (Maya)"
+    },
+    "temp": {
+        "min": "15",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1250"
+    }
+}

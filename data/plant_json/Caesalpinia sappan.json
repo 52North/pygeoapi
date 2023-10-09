@@ -1,0 +1,21 @@
+{
+    "name": "Caesalpinia sappan",
+    "trivial": {
+        "Thai": "bakam",
+        "French": "bois sappan",
+        "English": "sappanwood",
+        "Portuguese": "sapao",
+        "Hindi": "patang of India",
+        "Sinhalese": "patengi",
+        "German": "Regenbogenholz",
+        "Indonesian": "tairi"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "2300"
+    }
+}

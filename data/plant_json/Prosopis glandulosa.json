@@ -1,0 +1,14 @@
+{
+    "name": "Prosopis glandulosa",
+    "trivial": {
+        "English": "mesquite"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "300",
+        "max": "800"
+    }
+}

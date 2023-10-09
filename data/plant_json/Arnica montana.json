@@ -1,0 +1,19 @@
+{
+    "name": "Arnica montana",
+    "trivial": {
+        "Danish": "almindelig guldblomme",
+        "English": "wolf's bane",
+        "German": "Berg-Wohlverleih",
+        "Finnish": "etel\u00e4narnikki",
+        "Swedish": "h\u00e4stfibbla",
+        "Norwegian": "solblom"
+    },
+    "temp": {
+        "min": "8",
+        "max": "15"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

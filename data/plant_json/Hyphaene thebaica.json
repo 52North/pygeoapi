@@ -1,0 +1,18 @@
+{
+    "name": "Hyphaene thebaica",
+    "trivial": {
+        "Unknown": "kambash (Tigrigna)",
+        "Arabic": "dom palm",
+        "English": "gingerbread palm",
+        "Swahili": "mkoma",
+        "Amharic": "zembaba"
+    },
+    "temp": {
+        "min": "26",
+        "max": "36"
+    },
+    "precip": {
+        "min": "300",
+        "max": "600"
+    }
+}

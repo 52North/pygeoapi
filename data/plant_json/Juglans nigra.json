@@ -1,0 +1,14 @@
+{
+    "name": "Juglans nigra",
+    "trivial": {
+        "English": "black walnut"
+    },
+    "temp": {
+        "min": "13",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

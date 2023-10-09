@@ -1,0 +1,17 @@
+{
+    "name": "Euterpe oleracea",
+    "trivial": {
+        "Portuguese": "palmito a\u00e7ai",
+        "English": "euterpe palm",
+        "Spanish": "palmiche de Rio Negro",
+        "French": "palmier pinot"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "2300"
+    }
+}

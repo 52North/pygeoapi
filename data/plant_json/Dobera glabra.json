@@ -1,0 +1,16 @@
+{
+    "name": "Dobera glabra",
+    "trivial": {
+        "Unknown": "karsatta (Konsogna)",
+        "Somali": "haras",
+        "Tigrinya": "geresa"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "200",
+        "max": "600"
+    }
+}

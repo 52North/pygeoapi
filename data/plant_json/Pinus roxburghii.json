@@ -1,0 +1,14 @@
+{
+    "name": "Pinus roxburghii",
+    "trivial": {
+        "English": "chir pine"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1800"
+    }
+}

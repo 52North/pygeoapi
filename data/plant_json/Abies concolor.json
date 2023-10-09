@@ -1,0 +1,14 @@
+{
+    "name": "Abies concolor",
+    "trivial": {
+        "English": "white fir"
+    },
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

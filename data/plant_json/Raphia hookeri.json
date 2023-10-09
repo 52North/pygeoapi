@@ -1,0 +1,12 @@
+{
+    "name": "Raphia hookeri",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "4000"
+    }
+}

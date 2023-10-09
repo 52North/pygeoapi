@@ -1,0 +1,20 @@
+{
+    "name": "Setaria italica",
+    "trivial": {
+        "Swedish": "kolvhirs",
+        "English": "millet foxtail",
+        "Finnish": "Italianpantahein\u00e4",
+        "Danish": "kolbenhirse",
+        "German": "kolbenhirse",
+        "Unknown": "nunbank setaria",
+        "Norwegian": "stor busthirse"
+    },
+    "temp": {
+        "min": "16",
+        "max": "26"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Neofabricia myrtifolia",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1600"
+    }
+}

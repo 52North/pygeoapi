@@ -1,0 +1,23 @@
+{
+    "name": "Fagus sylvatica",
+    "trivial": {
+        "Danish": "b\u00f8g",
+        "Norwegian": "b\u00f8k",
+        "English": "Irish fea",
+        "Swedish": "bok",
+        "German": "Rotbuche",
+        "Italian": "faggio",
+        "Portuguese": "faia europeia",
+        "Spanish": "haya",
+        "French": "h\u00eatre",
+        "Finnish": "py\u00f6kki"
+    },
+    "temp": {
+        "min": "10",
+        "max": "20"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

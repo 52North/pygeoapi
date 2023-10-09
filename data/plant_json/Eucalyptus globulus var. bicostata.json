@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus globulus var. bicostata",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "32"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

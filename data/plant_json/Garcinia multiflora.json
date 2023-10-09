@@ -1,0 +1,12 @@
+{
+    "name": "Garcinia multiflora",
+    "trivial": {},
+    "temp": {
+        "min": "21",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "1800"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Pontederia cordata",
+    "trivial": {
+        "English": "wampee"
+    },
+    "temp": {
+        "min": "14",
+        "max": "24"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

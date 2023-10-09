@@ -1,0 +1,15 @@
+{
+    "name": "Dalbergia latifolia",
+    "trivial": {
+        "English": "Rosetta rosewood",
+        "Portuguese": "pau-preto"
+    },
+    "temp": {
+        "min": "16",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

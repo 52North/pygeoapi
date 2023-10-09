@@ -1,0 +1,14 @@
+{
+    "name": "Vateria indica",
+    "trivial": {
+        "Unknown": "white dammar/eng"
+    },
+    "temp": {
+        "min": "24",
+        "max": "33"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "3000"
+    }
+}

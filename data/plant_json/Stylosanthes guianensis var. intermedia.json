@@ -1,0 +1,14 @@
+{
+    "name": "Stylosanthes guianensis var. intermedia",
+    "trivial": {
+        "English": "Fine stem stylo"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

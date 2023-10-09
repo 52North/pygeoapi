@@ -1,0 +1,12 @@
+{
+    "name": "Panicum whitei",
+    "trivial": {},
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "400",
+        "max": "500"
+    }
+}

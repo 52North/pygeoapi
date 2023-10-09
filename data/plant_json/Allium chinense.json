@@ -1,0 +1,16 @@
+{
+    "name": "Allium chinense",
+    "trivial": {
+        "Portuguese": "alho chines",
+        "Unknown": "tsyu-tsai",
+        "English": "rakkyo"
+    },
+    "temp": {
+        "min": "15",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

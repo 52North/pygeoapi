@@ -1,0 +1,15 @@
+{
+    "name": "Medicago scutellata",
+    "trivial": {
+        "Portuguese": "luzerna escudelada",
+        "English": "snail medick"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

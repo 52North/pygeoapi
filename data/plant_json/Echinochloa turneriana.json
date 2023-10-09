@@ -1,0 +1,14 @@
+{
+    "name": "Echinochloa turneriana",
+    "trivial": {
+        "English": "channel millet"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "300",
+        "max": "375"
+    }
+}

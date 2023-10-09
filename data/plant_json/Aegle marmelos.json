@@ -1,0 +1,22 @@
+{
+    "name": "Aegle marmelos",
+    "trivial": {
+        "English": "bel tree",
+        "French": "bel Indien",
+        "Malayalam": "bilak",
+        "Khmer": "bnau",
+        "Thai": "tum",
+        "Indonesian": "maja batu",
+        "Burmese": "opesheet",
+        "Vietnamese": "tn\u00e1i mam",
+        "Lao": "toum"
+    },
+    "temp": {
+        "min": "30",
+        "max": "42"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2000"
+    }
+}

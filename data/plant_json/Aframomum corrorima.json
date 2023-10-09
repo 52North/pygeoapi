@@ -1,0 +1,12 @@
+{
+    "name": "Aframomum corrorima",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2000"
+    }
+}

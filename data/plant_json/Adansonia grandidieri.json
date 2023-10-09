@@ -1,0 +1,15 @@
+{
+    "name": "Adansonia grandidieri",
+    "trivial": {
+        "English": "baobab",
+        "Unknown": "monkey bread tree"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

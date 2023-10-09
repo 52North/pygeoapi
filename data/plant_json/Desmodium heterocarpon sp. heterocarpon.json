@@ -1,0 +1,19 @@
+{
+    "name": "Desmodium heterocarpon sp. heterocarpon",
+    "trivial": {
+        "Indonesian": "kaci",
+        "Khmer": "baay dam nnaep",
+        "English": "carpon desmodium",
+        "Tagalog": "mani-mani",
+        "Malayalam": "rumput kerbau derapah",
+        "Vietnamese": "trang qua di qua"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2300"
+    }
+}

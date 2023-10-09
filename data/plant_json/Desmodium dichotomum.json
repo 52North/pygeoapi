@@ -1,0 +1,12 @@
+{
+    "name": "Desmodium dichotomum",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

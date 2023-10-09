@@ -1,0 +1,18 @@
+{
+    "name": "Calathea allouia",
+    "trivial": {
+        "Spanish": "topitambo",
+        "French": "touple nambours",
+        "Portuguese": "topinambo",
+        "English": "topinambour",
+        "Creoles and Pidgins, English-based (Other)": "topinambour"
+    },
+    "temp": {
+        "min": "22",
+        "max": "31"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

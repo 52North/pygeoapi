@@ -1,0 +1,15 @@
+{
+    "name": "Prunus salicina",
+    "trivial": {
+        "Portuguese": "ameixeira do Japao",
+        "English": "Japanese plum"
+    },
+    "temp": {
+        "min": "18",
+        "max": "34"
+    },
+    "precip": {
+        "min": "750",
+        "max": "900"
+    }
+}

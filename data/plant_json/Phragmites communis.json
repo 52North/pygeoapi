@@ -1,0 +1,12 @@
+{
+    "name": "Phragmites communis",
+    "trivial": {},
+    "temp": {
+        "min": "17",
+        "max": "28"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

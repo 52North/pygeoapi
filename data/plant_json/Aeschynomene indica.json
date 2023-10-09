@@ -1,0 +1,15 @@
+{
+    "name": "Aeschynomene indica",
+    "trivial": {
+        "English": "shola",
+        "Portuguese": "chola'"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1200"
+    }
+}

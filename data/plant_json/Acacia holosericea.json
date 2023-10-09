@@ -1,0 +1,14 @@
+{
+    "name": "Acacia holosericea",
+    "trivial": {
+        "Unknown": "Strap wattle"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1200"
+    }
+}

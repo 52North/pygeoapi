@@ -1,0 +1,22 @@
+{
+    "name": "Burkea africana",
+    "trivial": {
+        "English": "wild seringa",
+        "Portuguese": "maco",
+        "Unknown": "pinimo (Ghana)",
+        "Northern Sotho": "monato",
+        "Tswana": "mosheshe",
+        "Tsonga": "mpulu",
+        "Venda": "mufhulu",
+        "Herero": "omuparara",
+        "Afrikaans": "wildesering"
+    },
+    "temp": {
+        "min": "14",
+        "max": "36"
+    },
+    "precip": {
+        "min": "650",
+        "max": "850"
+    }
+}

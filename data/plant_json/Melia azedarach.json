@@ -1,0 +1,15 @@
+{
+    "name": "Melia azedarach",
+    "trivial": {
+        "Hindi": "dharek",
+        "English": "Texas umbrella tree"
+    },
+    "temp": {
+        "min": "16",
+        "max": "30"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

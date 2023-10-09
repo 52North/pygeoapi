@@ -1,0 +1,24 @@
+{
+    "name": "Triticum durum",
+    "trivial": {
+        "Arabic": "alkamh assalb",
+        "French": "bl\u00e9 dur",
+        "Danish": "durum hvede",
+        "Norwegian": "durum kveite",
+        "Swedish": "durum vete",
+        "German": "hartweizen",
+        "English": "Macaroni wheat",
+        "Italian": "grano duro",
+        "Vietnamese": "l\u00faa m\u00ec c\u00fang",
+        "Spanish": "trigo duro",
+        "Chinese": "ying li xiao mai"
+    },
+    "temp": {
+        "min": "17",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

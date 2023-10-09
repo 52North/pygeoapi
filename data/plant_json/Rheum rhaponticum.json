@@ -1,0 +1,15 @@
+{
+    "name": "Rheum rhaponticum",
+    "trivial": {
+        "English": "rhubarb",
+        "German": "Rabarber"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1300"
+    }
+}

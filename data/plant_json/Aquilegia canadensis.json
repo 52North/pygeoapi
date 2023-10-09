@@ -1,0 +1,14 @@
+{
+    "name": "Aquilegia canadensis",
+    "trivial": {
+        "English": "wild honeysuckle"
+    },
+    "temp": {
+        "min": "14",
+        "max": "21"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1200"
+    }
+}

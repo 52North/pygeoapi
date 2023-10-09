@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus microcorys",
+    "trivial": {
+        "English": "Australian tallow wood"
+    },
+    "temp": {
+        "min": "24",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

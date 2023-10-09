@@ -1,0 +1,20 @@
+{
+    "name": "Lupinus angustifolius",
+    "trivial": {
+        "German": "schmalbl\u00e4ttrige Lupine",
+        "Swedish": "bl\u00e5lupin",
+        "English": "sweet lupine",
+        "Finnish": "sinilupiini",
+        "French": "lupin",
+        "Italian": "lupino",
+        "Spanish": "lupino azul"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1000"
+    }
+}

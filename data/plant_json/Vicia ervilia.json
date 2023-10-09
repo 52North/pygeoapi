@@ -1,0 +1,29 @@
+{
+    "name": "Vicia ervilia",
+    "trivial": {
+        "Arabic": "kursenne",
+        "Spanish": "yervo",
+        "French": "vesce noire",
+        "English": "pigeon\u2019s pea",
+        "Italian": "zirlo",
+        "Catalan": "herp",
+        "Swedish": "erfva",
+        "Danish": "erve",
+        "German": "Wicklinse",
+        "Dutch": "erven",
+        "Portuguese": "orobo das boticas",
+        "Latin": "ervum",
+        "Chinese": "kuyewandou",
+        "Irish": "mosch",
+        "Greek, Modern (since 1453)": "robi",
+        "Creoles and Pidgins, French-based (Other)": "pesette"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "500",
+        "max": "700"
+    }
+}

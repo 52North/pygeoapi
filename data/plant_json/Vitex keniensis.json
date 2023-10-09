@@ -1,0 +1,15 @@
+{
+    "name": "Vitex keniensis",
+    "trivial": {
+        "English": "moru oak",
+        "Swahili": "mfuu"
+    },
+    "temp": {
+        "min": "15",
+        "max": "20"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "2200"
+    }
+}

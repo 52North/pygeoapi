@@ -1,0 +1,23 @@
+{
+    "name": "Acorus calamus",
+    "trivial": {
+        "French": "acore vrai",
+        "Urdu": "bach",
+        "Hindi": "bojo",
+        "Latin": "Rhizoma Calami mundatae",
+        "English": "sweetflag",
+        "Zulu": "ikalamuzi",
+        "German": "kalmus",
+        "Unknown": "kull",
+        "Afrikaans": "makkalmoes",
+        "Sanskrit": "vacha"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "7000",
+        "max": "2000"
+    }
+}

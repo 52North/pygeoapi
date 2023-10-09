@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus populnea",
+    "trivial": {
+        "English": "bimble box"
+    },
+    "temp": {
+        "min": "20",
+        "max": "34"
+    },
+    "precip": {
+        "min": "500",
+        "max": "800"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Musa acuminata",
+    "trivial": {},
+    "temp": {
+        "min": "23",
+        "max": "33"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "3600"
+    }
+}

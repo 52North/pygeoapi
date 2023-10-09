@@ -1,0 +1,14 @@
+{
+    "name": "Axonopus fissifolius",
+    "trivial": {
+        "English": "carpet grass"
+    },
+    "temp": {
+        "min": "17",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Origanum majorana",
+    "trivial": {
+        "Spanish": "amaraco",
+        "German": "pot marjoram",
+        "Chinese": "ma-yueh-lan-hua",
+        "Italian": "maggiorana",
+        "Portuguese": "manjerona",
+        "French": "marjolaine",
+        "Dutch": "marjolein",
+        "English": "wild marjoram",
+        "Arabic": "marzanjush",
+        "Russian": "mayoran",
+        "Japanese": "mayorana",
+        "Swedish": "mejram"
+    },
+    "temp": {
+        "min": "20",
+        "max": "26"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

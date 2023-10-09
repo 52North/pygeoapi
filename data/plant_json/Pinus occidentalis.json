@@ -1,0 +1,15 @@
+{
+    "name": "Pinus occidentalis",
+    "trivial": {
+        "English": "Haitian pine",
+        "Portuguese": "pinheiro do Haiti"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "1500"
+    }
+}

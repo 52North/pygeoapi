@@ -1,0 +1,16 @@
+{
+    "name": "Adonis vernalis",
+    "trivial": {
+        "English": "spring pheasant's eye",
+        "German": "Fr\u00fchlings-Adonisr\u00f6schen",
+        "Latin": "Herba Adonis vernalis"
+    },
+    "temp": {
+        "min": "14",
+        "max": "30"
+    },
+    "precip": {
+        "min": "400",
+        "max": "750"
+    }
+}

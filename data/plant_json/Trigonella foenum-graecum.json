@@ -1,0 +1,51 @@
+{
+    "name": "Trigonella foenum-graecum",
+    "trivial": {
+        "Tigr\u00e9": "abakte",
+        "Tigrinya": "abacheh",
+        "Amharic": "abish",
+        "Portuguese": "feno-grego",
+        "Spanish": "heno griego",
+        "Turkish": "\u00e7emen",
+        "English": "greek hay-seed",
+        "Swedish": "bockhornskloever",
+        "German": "Griechisch Heu",
+        "Norwegian": "bukkehornkl\u00f8ver",
+        "Danish": "bukkehornskl\u00f8ver",
+        "Armenian": "chaiman",
+        "Dutch": "fenegriek",
+        "French": "trigonelle",
+        "Esperanto": "fenugreko",
+        "Italian": "fieno greco",
+        "Russian": "shambala",
+        "Arabic": "hulba",
+        "Hebrew": "rubia",
+        "Vietnamese": "ho lo ba",
+        "Chinese": "k'u-tou",
+        "Japanese": "koroha",
+        "Polish": "kozieradka pospolita",
+        "Estonian": "kreeka lambal\u00e4\u00e4ts",
+        "Tibetan": "mi ti",
+        "Telugu": "mentula",
+        "Bengali": "methi",
+        "Hindi": "methi",
+        "Urdu": "methi",
+        "Sanskrit": "methika",
+        "Gujarati": "methro",
+        "Unknown": "uluhaal",
+        "Burmese": "penantazi",
+        "Finnish": "sarviapila",
+        "Faroese": "shambelil\u00e9",
+        "Latin": "Trigonellae foeni-graeci semen",
+        "Swahili": "uwatu",
+        "Tamil": "vendayam"
+    },
+    "temp": {
+        "min": "13",
+        "max": "27"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

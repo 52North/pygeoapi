@@ -1,0 +1,14 @@
+{
+    "name": "Argyrodendron actinophyllum ssp. diversifolium",
+    "trivial": {
+        "Unknown": "blush tulip oak"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "1400"
+    }
+}

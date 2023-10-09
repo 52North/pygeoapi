@@ -1,0 +1,22 @@
+{
+    "name": "Talinum triangulare",
+    "trivial": {
+        "Unknown": "lagos bologi",
+        "Portuguese": "talina de Java",
+        "English": "waterleaf",
+        "French": "grass\u00e9",
+        "Indonesian": "poslen",
+        "Papuan-Australian (Other)": "kumu manus",
+        "Thai": "som-khon",
+        "Tagalog": "talilong",
+        "Vietnamese": "thoornhaan saam"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

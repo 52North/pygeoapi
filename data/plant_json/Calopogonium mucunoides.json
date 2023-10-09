@@ -1,0 +1,15 @@
+{
+    "name": "Calopogonium mucunoides",
+    "trivial": {
+        "English": "calopo",
+        "Portuguese": "falso oro"
+    },
+    "temp": {
+        "min": "24",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "2500"
+    }
+}

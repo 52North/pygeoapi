@@ -1,0 +1,23 @@
+{
+    "name": "Canavalia ensiformis",
+    "trivial": {
+        "Chinese": "yang dao dou",
+        "English": "sword bean",
+        "French": "pois sabre",
+        "Portuguese": "feij\u00e3o espada",
+        "Spanish": "papa",
+        "Danish": "jackb\u00f8nne",
+        "German": "schwertbohne",
+        "Dutch": "zwaardboon",
+        "Guarani": "kumanda guaz\u00fa",
+        "Japanese": "tsurunachinata mame"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "800",
+        "max": "2000"
+    }
+}

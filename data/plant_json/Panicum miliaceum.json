@@ -1,0 +1,20 @@
+{
+    "name": "Panicum miliaceum",
+    "trivial": {
+        "Danish": "almindelig hirse",
+        "Swedish": "vipphirs",
+        "English": "proso millet",
+        "German": "echte hirse",
+        "Norwegian": "hirse",
+        "Finnish": "viljahirssi",
+        "French": "millet proso"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "500",
+        "max": "750"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "Hibiscus sabdariffa",
+    "trivial": {
+        "German": "Sudan-Eibisch",
+        "Spanish": "vi\u00f1uela",
+        "English": "sour-sour",
+        "Portuguese": "vinagreira",
+        "Unknown": "zobo (tea, West Africa)",
+        "Arabic": "karkad\u00e9",
+        "French": "roseille rouge",
+        "Mandingo": "wonjo (tea, Gambia)",
+        "Dutch": "zuring"
+    },
+    "temp": {
+        "min": "16",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3000"
+    }
+}

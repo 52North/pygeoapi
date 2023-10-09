@@ -1,0 +1,12 @@
+{
+    "name": "Dodonaea viscosa ssp. angustifolia",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "38"
+    },
+    "precip": {
+        "min": "250",
+        "max": "800"
+    }
+}

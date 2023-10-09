@@ -1,0 +1,15 @@
+{
+    "name": "Melinis minutiflora",
+    "trivial": {
+        "Portuguese": "capim gordura",
+        "English": "molasses grass"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1700"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Berrya cordifolia",
+    "trivial": {},
+    "temp": {
+        "min": "26",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2700",
+        "max": "3300"
+    }
+}

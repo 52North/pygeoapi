@@ -1,0 +1,16 @@
+{
+    "name": "Ficus glumosa",
+    "trivial": {
+        "English": "African rock fig",
+        "Afrikaans": "Afrikaans rostvy",
+        "Hausa": "kawuri"
+    },
+    "temp": {
+        "min": "22",
+        "max": "36"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1200"
+    }
+}

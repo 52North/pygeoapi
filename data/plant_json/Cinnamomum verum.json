@@ -1,0 +1,27 @@
+{
+    "name": "Cinnamomum verum",
+    "trivial": {
+        "Portuguese": "canela",
+        "Spanish": "canela",
+        "Italian": "cannella",
+        "French": "cannelle",
+        "English": "true cinnamon",
+        "Latin": "Cortex Cinnamomi",
+        "Chinese": "jou-kwei",
+        "Dutch": "kaneel",
+        "Danish": "kanel",
+        "Swedish": "kanel",
+        "Russian": "koritsa",
+        "Arabic": "qurfa",
+        "Japanese": "seiron-nikkei",
+        "German": "Zimt"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "2000",
+        "max": "2600"
+    }
+}

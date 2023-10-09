@@ -1,0 +1,17 @@
+{
+    "name": "Bambusa vulgaris",
+    "trivial": {
+        "Portuguese": "bambu' vulgar",
+        "English": "golden bamboo",
+        "Unknown": "Mambu",
+        "Kikuyu": "Murangi"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2500"
+    }
+}

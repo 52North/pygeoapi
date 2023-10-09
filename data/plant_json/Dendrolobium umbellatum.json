@@ -1,0 +1,12 @@
+{
+    "name": "Dendrolobium umbellatum",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "34"
+    },
+    "precip": {
+        "min": "850",
+        "max": "1500"
+    }
+}

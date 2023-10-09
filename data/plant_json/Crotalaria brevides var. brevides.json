@@ -1,0 +1,14 @@
+{
+    "name": "Crotalaria brevides var. brevides",
+    "trivial": {
+        "Unknown": "Ethiopian rattlebox (English)"
+    },
+    "temp": {
+        "min": "16",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2000"
+    }
+}

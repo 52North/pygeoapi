@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus thozetiana",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "350",
+        "max": "650"
+    }
+}

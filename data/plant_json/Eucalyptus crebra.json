@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus crebra",
+    "trivial": {
+        "English": "narrow-leaf red ironbark"
+    },
+    "temp": {
+        "min": "26",
+        "max": "36"
+    },
+    "precip": {
+        "min": "600",
+        "max": "2000"
+    }
+}

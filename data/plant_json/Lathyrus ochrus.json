@@ -1,0 +1,12 @@
+{
+    "name": "Lathyrus ochrus",
+    "trivial": {},
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

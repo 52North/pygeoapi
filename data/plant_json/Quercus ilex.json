@@ -1,0 +1,19 @@
+{
+    "name": "Quercus ilex",
+    "trivial": {
+        "Portuguese": "azinho",
+        "French": "chene vert",
+        "English": "holm oak",
+        "Italian": "leccio",
+        "Serbo-Croatian (Roman)": "luzniak",
+        "German": "Steineiche"
+    },
+    "temp": {
+        "min": "14",
+        "max": "32"
+    },
+    "precip": {
+        "min": "450",
+        "max": "700"
+    }
+}

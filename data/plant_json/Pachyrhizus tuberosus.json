@@ -1,0 +1,24 @@
+{
+    "name": "Pachyrhizus tuberosus",
+    "trivial": {
+        "English": "yam bean",
+        "German": "yambohne",
+        "Spanish": "jiquima",
+        "Turkish": "at b\u00f6yr\u00fcce",
+        "Dutch": "hoewi iris",
+        "French": "pois patate",
+        "Italian": "fagiolo patata",
+        "Portuguese": "jocotup\u00e9",
+        "Chinese": "sha ge",
+        "Tagalog": "sinkamas",
+        "Danish": "yamsb\u00f8nne"
+    },
+    "temp": {
+        "min": "25",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "1900"
+    }
+}

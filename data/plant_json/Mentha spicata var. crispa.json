@@ -1,0 +1,16 @@
+{
+    "name": "Mentha spicata var. crispa",
+    "trivial": {
+        "German": "krauseminze",
+        "French": "menthe crepue",
+        "English": "spearmint"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1200"
+    }
+}

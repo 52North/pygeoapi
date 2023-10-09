@@ -1,0 +1,20 @@
+{
+    "name": "Marrubium vulgare",
+    "trivial": {
+        "German": "Weisser Andorn",
+        "English": "white horehound",
+        "French": "marrube commun",
+        "Latin": "Marrubii herba",
+        "Portuguese": "marrubio branco",
+        "Spanish": "marrubio",
+        "Hindi": "pahari gandana"
+    },
+    "temp": {
+        "min": "17",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

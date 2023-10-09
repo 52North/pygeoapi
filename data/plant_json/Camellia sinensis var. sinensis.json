@@ -1,0 +1,12 @@
+{
+    "name": "Camellia sinensis var. sinensis",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1400",
+        "max": "2000"
+    }
+}

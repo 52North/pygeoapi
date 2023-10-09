@@ -1,0 +1,12 @@
+{
+    "name": "Corylus colurna var. colurna",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1100"
+    }
+}

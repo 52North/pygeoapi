@@ -1,0 +1,25 @@
+{
+    "name": "Pimpinella anisum",
+    "trivial": {
+        "Latin": "Anisi fructus",
+        "Italian": "anice",
+        "Dutch": "anijs",
+        "French": "anis",
+        "German": "Anis",
+        "Russian": "anis",
+        "Spanish": "anis",
+        "Swedish": "anis",
+        "English": "anise seed",
+        "Portuguese": "erva-doce",
+        "Chinese": "huei-hsiang",
+        "Arabic": "yanisun"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

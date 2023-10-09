@@ -1,0 +1,16 @@
+{
+    "name": "Castanea mollissima",
+    "trivial": {
+        "Portuguese": "castanheiro da China",
+        "French": "chataignier de Chine",
+        "English": "Chinese chestnut"
+    },
+    "temp": {
+        "min": "15",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1400"
+    }
+}

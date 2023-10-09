@@ -1,0 +1,14 @@
+{
+    "name": "Bothriochloa bladhii",
+    "trivial": {
+        "Unknown": "blue grass"
+    },
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1200"
+    }
+}

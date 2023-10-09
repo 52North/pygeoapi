@@ -1,0 +1,15 @@
+{
+    "name": "Paspalum dilatatum",
+    "trivial": {
+        "English": "paspalum",
+        "Afrikaans": "gewone paspalum"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

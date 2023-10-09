@@ -1,0 +1,17 @@
+{
+    "name": "Dacryodes edulis",
+    "trivial": {
+        "English": "native pear",
+        "Unknown": "atangatier",
+        "Portuguese": "safu de obo'",
+        "French": "safoutier"
+    },
+    "temp": {
+        "min": "14",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "3000"
+    }
+}

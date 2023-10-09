@@ -1,0 +1,19 @@
+{
+    "name": "Pinus pinaster",
+    "trivial": {
+        "English": "seaside pine",
+        "French": "pin maritime",
+        "Portuguese": "pinheiro bravo",
+        "Italian": "pino marittimo",
+        "German": "Strandkiefer",
+        "Afrikaans": "trosden"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1100"
+    }
+}

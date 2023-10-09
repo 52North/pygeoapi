@@ -1,0 +1,14 @@
+{
+    "name": "Amelanchier pallida",
+    "trivial": {
+        "English": "western serviceberry"
+    },
+    "temp": {
+        "min": "14",
+        "max": "25"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

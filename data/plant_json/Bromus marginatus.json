@@ -1,0 +1,12 @@
+{
+    "name": "Bromus marginatus",
+    "trivial": {},
+    "temp": {
+        "min": "10",
+        "max": "21"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

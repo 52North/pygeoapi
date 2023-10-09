@@ -1,0 +1,24 @@
+{
+    "name": "Vigna subterranea",
+    "trivial": {
+        "English": "jugo bean",
+        "Sotho": "nyimo",
+        "Ndebele (Zimbabwe)": "indlubu",
+        "Zulu": "izidlubu",
+        "Afrikaans": "jugoboon",
+        "Kongo": "mani",
+        "Unknown": "njugo (South Africa)",
+        "Swahili": "njugu mawe",
+        "Shona": "nyimo",
+        "Venda": "phonda",
+        "Malagasy": "voanjo"
+    },
+    "temp": {
+        "min": "19",
+        "max": "30"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1400"
+    }
+}

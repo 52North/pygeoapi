@@ -1,0 +1,15 @@
+{
+    "name": "Acacia cyclops",
+    "trivial": {
+        "English": "Red eye wattle",
+        "Afrikaans": "rooikrans"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "400",
+        "max": "800"
+    }
+}

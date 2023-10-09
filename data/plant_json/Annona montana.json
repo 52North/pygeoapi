@@ -1,0 +1,18 @@
+{
+    "name": "Annona montana",
+    "trivial": {
+        "Portuguese": "araticum ap\u00e9",
+        "Unknown": "corossol zombie",
+        "French": "corossolier b\u00e2tard",
+        "Spanish": "turagua",
+        "English": "wild soursop"
+    },
+    "temp": {
+        "min": "16",
+        "max": "26"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1700"
+    }
+}

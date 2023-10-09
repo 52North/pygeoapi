@@ -1,0 +1,16 @@
+{
+    "name": "Cephaelis ipecacuanha",
+    "trivial": {
+        "German": "brasilianische Brechwurzel",
+        "Portuguese": "ipecacuanha",
+        "Spanish": "raicilla"
+    },
+    "temp": {
+        "min": "23",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1700"
+    }
+}

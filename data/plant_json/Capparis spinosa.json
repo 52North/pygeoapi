@@ -1,0 +1,46 @@
+{
+    "name": "Capparis spinosa",
+    "trivial": {
+        "Arabic": "ward al jabal",
+        "Spanish": "t\u00e1pana",
+        "Portuguese": "alcaparras",
+        "Tagalog": "alcaparras",
+        "Berber languages": "tsailih",
+        "English": "caper bush",
+        "Italian": "capperone",
+        "French": "tapana",
+        "German": "Kapernstrauch",
+        "Turkish": "kebere",
+        "Sanskrit": "himsra",
+        "Urdu": "kabar",
+        "Panjabi": "kabarra",
+        "Bengali": "kabra",
+        "Icelandic": "kapers",
+        "Norwegian": "kapers",
+        "Russian": "kapersy",
+        "Hungarian": "kapricserje",
+        "Esperanto": "kaporo",
+        "Estonian": "torkav",
+        "Maltese": "kappara",
+        "Danish": "kappers",
+        "Dutch": "kappertjes",
+        "Finnish": "kapris",
+        "Swedish": "kapris",
+        "Greek, Modern (since 1453)": "k\u00e1ppari",
+        "Hindi": "kobra",
+        "Telugu": "kokilakshmu",
+        "Egyptian": "lussef",
+        "Swahili": "mruko",
+        "Malay": "melada",
+        "Kannada": "mullukattari",
+        "Hebrew": "tzalaf"
+    },
+    "temp": {
+        "min": "13",
+        "max": "27"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

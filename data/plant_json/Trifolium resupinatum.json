@@ -1,0 +1,19 @@
+{
+    "name": "Trifolium resupinatum",
+    "trivial": {
+        "English": "Shaftal clover",
+        "German": "Persischer klee",
+        "Spanish": "trebol de Persia",
+        "French": "trefle renverse'",
+        "Portuguese": "trevo da Persia",
+        "Italian": "trifoglio resupinato"
+    },
+    "temp": {
+        "min": "13",
+        "max": "22"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus brevifolia",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "38"
+    },
+    "precip": {
+        "min": "450",
+        "max": "700"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Fraxinus excelsior",
+    "trivial": {
+        "Danish": "ask",
+        "English": "European ash",
+        "Norwegian": "ask",
+        "Swedish": "vanlig ask",
+        "German": "gew\u00f6hnliche Esche",
+        "Italian": "frassino",
+        "Latin": "Fraxini folium",
+        "French": "fr\u00eane",
+        "Portuguese": "quina da Europa",
+        "Spanish": "fresno",
+        "Finnish": "Saarni"
+    },
+    "temp": {
+        "min": "8",
+        "max": "20"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

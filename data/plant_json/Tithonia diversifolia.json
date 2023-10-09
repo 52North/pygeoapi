@@ -1,0 +1,16 @@
+{
+    "name": "Tithonia diversifolia",
+    "trivial": {
+        "Unknown": "maua makech (Luo )",
+        "Kikuyu": "maruru",
+        "English": "wild sunflower"
+    },
+    "temp": {
+        "min": "15",
+        "max": "31"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

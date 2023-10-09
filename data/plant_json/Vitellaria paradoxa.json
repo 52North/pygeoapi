@@ -1,0 +1,20 @@
+{
+    "name": "Vitellaria paradoxa",
+    "trivial": {
+        "English": "vitellaria",
+        "German": "Sheanussbaum",
+        "Hausa": "ka\u0257e (Hausa)",
+        "French": "karit\u00e9",
+        "Wolof": "karit\u00e9 (Wolof; Senegal, Gambia)",
+        "Unknown": "taama (Waala)",
+        "Bambara": "s\u2019\u00ed (Bambara, Mali)"
+    },
+    "temp": {
+        "min": "24",
+        "max": "38"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

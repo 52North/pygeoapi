@@ -1,0 +1,18 @@
+{
+    "name": "Abutilon theophrasti",
+    "trivial": {
+        "English": "wild cotton",
+        "German": "Lindenbl\u00e4ttrige Sch\u00f6nmalve",
+        "Italian": "Iuta cinese",
+        "French": "jute de Chine",
+        "Spanish": "yute de la China"
+    },
+    "temp": {
+        "min": "14",
+        "max": "25"
+    },
+    "precip": {
+        "min": "650",
+        "max": "2000"
+    }
+}

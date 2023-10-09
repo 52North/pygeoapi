@@ -1,0 +1,16 @@
+{
+    "name": "Lepidium meyenii",
+    "trivial": {
+        "Spanish": "maca",
+        "Unknown": "Maka,",
+        "English": "Peruvian ginseng"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

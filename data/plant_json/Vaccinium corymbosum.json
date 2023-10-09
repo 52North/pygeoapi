@@ -1,0 +1,18 @@
+{
+    "name": "Vaccinium corymbosum",
+    "trivial": {
+        "French": "airelle d'Am\u00e9rique",
+        "English": "swamp blueberry",
+        "German": "amerikanische Blueberry",
+        "Spanish": "ar\u00e1ndano americano",
+        "Portuguese": "mirtilho dos pantanos"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1100"
+    }
+}

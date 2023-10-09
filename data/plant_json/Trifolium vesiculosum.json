@@ -1,0 +1,14 @@
+{
+    "name": "Trifolium vesiculosum",
+    "trivial": {
+        "English": "arrowleaf clover"
+    },
+    "temp": {
+        "min": "15",
+        "max": "21"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1100"
+    }
+}

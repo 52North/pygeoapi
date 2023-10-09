@@ -1,0 +1,18 @@
+{
+    "name": "Inga vera",
+    "trivial": {
+        "English": "river-koko",
+        "Spanish": "inga",
+        "Portuguese": "inga' verdadeiro",
+        "French": "pois sucrin",
+        "Creoles and Pidgins, English-based (Other)": "sikren"
+    },
+    "temp": {
+        "min": "18",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

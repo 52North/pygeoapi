@@ -1,0 +1,15 @@
+{
+    "name": "Stylosanthes viscosa",
+    "trivial": {
+        "Portuguese": "meladinho",
+        "English": "sticky stylo"
+    },
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1750"
+    }
+}

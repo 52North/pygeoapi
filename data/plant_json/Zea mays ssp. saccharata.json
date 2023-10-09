@@ -1,0 +1,15 @@
+{
+    "name": "Zea mays ssp. saccharata",
+    "trivial": {
+        "Portuguese": "milho doce",
+        "English": "sweet maize"
+    },
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1500"
+    }
+}

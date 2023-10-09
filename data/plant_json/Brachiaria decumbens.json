@@ -1,0 +1,19 @@
+{
+    "name": "Brachiaria decumbens",
+    "trivial": {
+        "Unknown": "ya-surinam",
+        "Portuguese": "braquiaria comum",
+        "English": "Surinam grass",
+        "Spanish": "zacate prodigio",
+        "Malay": "rumput signal",
+        "Thai": "ya-siknaentonnon"
+    },
+    "temp": {
+        "min": "25",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "1800"
+    }
+}

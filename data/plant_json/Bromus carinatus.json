@@ -1,0 +1,14 @@
+{
+    "name": "Bromus carinatus",
+    "trivial": {
+        "English": "Mokelumne brome"
+    },
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

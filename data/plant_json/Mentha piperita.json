@@ -1,0 +1,27 @@
+{
+    "name": "Mentha piperita",
+    "trivial": {
+        "Latin": "Spiritus Menthae piperitae",
+        "Chinese": "yang-po-ho",
+        "English": "peppermint",
+        "German": "Pfefferminze",
+        "Portuguese": "hortela",
+        "Italian": "menta",
+        "Spanish": "menta",
+        "French": "menthe poivree",
+        "Russian": "myata",
+        "Arabic": "na'na",
+        "Dutch": "pepermunt",
+        "Danish": "pepermynte",
+        "Swedish": "pepparmynta",
+        "Japanese": "seiyo-hakka"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2200"
+    }
+}

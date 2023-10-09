@@ -1,0 +1,14 @@
+{
+    "name": "Cassia rotundifolia",
+    "trivial": {
+        "Unknown": "Chamaecrista rotundifolia (Pers.) Greene"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

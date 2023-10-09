@@ -1,0 +1,12 @@
+{
+    "name": "Shorea talura",
+    "trivial": {},
+    "temp": {
+        "min": "27",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

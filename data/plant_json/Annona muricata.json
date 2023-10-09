@@ -1,0 +1,30 @@
+{
+    "name": "Annona muricata",
+    "trivial": {
+        "Unknown": "talapo fotofoto",
+        "Tagalog": "llabanos",
+        "French": "corossol \u00e9pineux",
+        "Malay": "durian makkah",
+        "Italian": "graviola",
+        "Spanish": "guan\u00e1bana",
+        "Lao": "khi\u00e8p th\u00e9t",
+        "Vietnamese": "mang c\u00e2\u00f9 xi\u00ea",
+        "Javanese": "nangka belanda",
+        "Indonesian": "sirsak",
+        "Thai": "thurian-thet",
+        "Creoles and Pidgins, English-based (Other)": "sapsap",
+        "Papuan-Australian (Other)": "saua sap",
+        "German": "Stachelannone",
+        "English": "soursop",
+        "Khmer": "tiep barang",
+        "Dutch": "zuurzak"
+    },
+    "temp": {
+        "min": "20",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2200"
+    }
+}

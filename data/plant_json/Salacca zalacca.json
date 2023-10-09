@@ -1,0 +1,12 @@
+{
+    "name": "Salacca zalacca",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1700",
+        "max": "3100"
+    }
+}

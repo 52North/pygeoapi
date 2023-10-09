@@ -1,0 +1,14 @@
+{
+    "name": "Peltandra sagittifolia",
+    "trivial": {
+        "English": "white arrow arum"
+    },
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

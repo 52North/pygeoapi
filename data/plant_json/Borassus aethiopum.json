@@ -1,0 +1,30 @@
+{
+    "name": "Borassus aethiopum",
+    "trivial": {
+        "Yoruba": "abgon-eye",
+        "English": "ron palm",
+        "Afrikaans": "borasusspalm",
+        "Bemba": "kambili",
+        "Amharic": "zembaba",
+        "German": "Deleb Palme",
+        "Arabic": "deleib",
+        "Fula": "dubbi",
+        "Hausa": "giginya",
+        "Nyanja": "kakoma",
+        "Lozi": "mulala",
+        "Ganda": "katuugo",
+        "Tonga (Tonga Islands)": "mulala",
+        "Swahili": "mvumo",
+        "Mandingo": "sibo",
+        "French": "r\u00f4nier",
+        "Igbo": "ubiri"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Trifolium fragiferum",
+    "trivial": {
+        "German": "Erdbeer klee",
+        "English": "strawberry-headed clover",
+        "Spanish": "trebol fresero",
+        "French": "trefle porte-fraise",
+        "Portuguese": "trevo morango",
+        "Italian": "trifoglio fragifero"
+    },
+    "temp": {
+        "min": "12",
+        "max": "22"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Brassica rapa var. rapifera",
+    "trivial": {},
+    "temp": {
+        "min": "10",
+        "max": "17"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1400"
+    }
+}

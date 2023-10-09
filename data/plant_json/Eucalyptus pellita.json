@@ -1,0 +1,12 @@
+{
+    "name": "Eucalyptus pellita",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1100",
+        "max": "2500"
+    }
+}

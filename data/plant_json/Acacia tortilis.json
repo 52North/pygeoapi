@@ -1,0 +1,22 @@
+{
+    "name": "Acacia tortilis",
+    "trivial": {
+        "Somali": "Timad",
+        "Unknown": "Tsi (Sahogna)",
+        "Afrikaans": "withaak",
+        "Swazi": "isiThwethwe",
+        "Zulu": "umSasane",
+        "Tswana": "musu",
+        "Tsonga": "nsasane",
+        "German": "Schirmakazie",
+        "English": "umbrella thorn"
+    },
+    "temp": {
+        "min": "28",
+        "max": "45"
+    },
+    "precip": {
+        "min": "300",
+        "max": "800"
+    }
+}

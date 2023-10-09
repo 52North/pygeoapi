@@ -1,0 +1,15 @@
+{
+    "name": "Azolla pinnata",
+    "trivial": {
+        "English": "azolla",
+        "Vietnamese": "beo-dau"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "-",
+        "max": "-"
+    }
+}

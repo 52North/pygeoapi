@@ -1,0 +1,12 @@
+{
+    "name": "Fagopyrum emarginatum",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "900"
+    }
+}

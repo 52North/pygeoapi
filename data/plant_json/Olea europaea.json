@@ -1,0 +1,19 @@
+{
+    "name": "Olea europaea",
+    "trivial": {
+        "German": "Olive",
+        "Serbo-Croatian (Roman)": "maslina",
+        "English": "olive",
+        "French": "olivier",
+        "Italian": "ulivo",
+        "Maltese": "zebbuga"
+    },
+    "temp": {
+        "min": "20",
+        "max": "34"
+    },
+    "precip": {
+        "min": "400",
+        "max": "700"
+    }
+}

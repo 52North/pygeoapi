@@ -1,0 +1,12 @@
+{
+    "name": "Petalostigma pubescens",
+    "trivial": {},
+    "temp": {
+        "min": "20",
+        "max": "37"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

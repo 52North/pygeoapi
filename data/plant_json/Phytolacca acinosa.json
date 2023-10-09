@@ -1,0 +1,18 @@
+{
+    "name": "Phytolacca acinosa",
+    "trivial": {
+        "English": "poke root",
+        "Swedish": "kermesb\u00e4r",
+        "German": "kermesbeere",
+        "Chinese": "shang lu",
+        "Vietnamese": "thuwowng lujc"
+    },
+    "temp": {
+        "min": "12",
+        "max": "18"
+    },
+    "precip": {
+        "min": "600",
+        "max": "900"
+    }
+}

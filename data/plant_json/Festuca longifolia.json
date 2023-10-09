@@ -1,0 +1,12 @@
+{
+    "name": "Festuca longifolia",
+    "trivial": {},
+    "temp": {
+        "min": "14",
+        "max": "24"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

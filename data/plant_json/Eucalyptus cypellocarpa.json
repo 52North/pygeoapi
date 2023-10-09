@@ -1,0 +1,14 @@
+{
+    "name": "Eucalyptus cypellocarpa",
+    "trivial": {
+        "English": "Spotted Mountain Grey Gum"
+    },
+    "temp": {
+        "min": "21",
+        "max": "31"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1400"
+    }
+}

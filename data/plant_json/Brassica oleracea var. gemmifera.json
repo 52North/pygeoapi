@@ -1,0 +1,20 @@
+{
+    "name": "Brassica oleracea var. gemmifera",
+    "trivial": {
+        "German": "Sprossenkohl",
+        "English": "Brussels sprouts",
+        "Italian": "cavolini di Bruxelles",
+        "French": "chou de Bruxelles",
+        "Spanish": "repollos de Bruselas",
+        "Danish": "rosenk\u00e5l",
+        "Dutch": "Spruitkool"
+    },
+    "temp": {
+        "min": "12",
+        "max": "20"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1600"
+    }
+}

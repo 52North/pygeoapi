@@ -1,0 +1,22 @@
+{
+    "name": "Diospyros kaki",
+    "trivial": {
+        "Indonesian": "kesemek",
+        "Malay": "buah samak",
+        "English": "sharon fruit",
+        "Vietnamese": "thi h\u00f4ng",
+        "French": "raquemine",
+        "Italian": "kaki-meca",
+        "German": "Kakifrucht",
+        "Thai": "phlap chin",
+        "Khmer": "tonlo\u00ebp"
+    },
+    "temp": {
+        "min": "20",
+        "max": "31"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1700"
+    }
+}

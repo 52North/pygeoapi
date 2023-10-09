@@ -1,0 +1,15 @@
+{
+    "name": "Tamarix aphylla",
+    "trivial": {
+        "English": "salt tree",
+        "Portuguese": "tamargueira de folha pequena"
+    },
+    "temp": {
+        "min": "27",
+        "max": "40"
+    },
+    "precip": {
+        "min": "300",
+        "max": "400"
+    }
+}

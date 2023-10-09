@@ -1,0 +1,12 @@
+{
+    "name": "Lotus tenuis",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "23"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Carum carvi",
+    "trivial": {
+        "Latin": "Carvi fructus",
+        "Spanish": "alcaravea",
+        "Portuguese": "alcaravia",
+        "English": "cumin",
+        "French": "carvi",
+        "Italian": "carvi",
+        "Arabic": "karauya",
+        "Norwegian": "karve",
+        "Dutch": "karwij",
+        "Icelandic": "k\u00famen",
+        "German": "Wiesenk\u00fcmmel",
+        "Danish": "kommen",
+        "Finnish": "kumina",
+        "Swedish": "kummin",
+        "Russian": "tmin",
+        "Chinese": "yuan-sui"
+    },
+    "temp": {
+        "min": "16",
+        "max": "20"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

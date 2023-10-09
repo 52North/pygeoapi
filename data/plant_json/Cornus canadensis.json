@@ -1,0 +1,15 @@
+{
+    "name": "Cornus canadensis",
+    "trivial": {
+        "English": "pudding-berry",
+        "Portuguese": "corniso anao do Canada'"
+    },
+    "temp": {
+        "min": "10",
+        "max": "18"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1250"
+    }
+}

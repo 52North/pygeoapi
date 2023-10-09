@@ -1,0 +1,19 @@
+{
+    "name": "Ceratonia siliqua",
+    "trivial": {
+        "Portuguese": "alfarrobeira",
+        "Spanish": "algarrobo",
+        "English": "St John's-bread",
+        "Italian": "carrubo",
+        "Afrikaans": "Johannesbroodboom",
+        "German": "Johannisbrotbaum"
+    },
+    "temp": {
+        "min": "20",
+        "max": "32"
+    },
+    "precip": {
+        "min": "400",
+        "max": "1000"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Acacia mearnsii",
+    "trivial": {
+        "French": "Acacia noir",
+        "Portuguese": "Ac\u00e1cia negra",
+        "English": "tan wattle",
+        "German": "Australische akazie",
+        "Swahili": "Muwati",
+        "Afrikaans": "swartwattel",
+        "Zulu": "uwatela"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1600"
+    }
+}

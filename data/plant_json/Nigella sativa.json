@@ -1,0 +1,20 @@
+{
+    "name": "Nigella sativa",
+    "trivial": {
+        "Spanish": "aranue",
+        "English": "Roman coriander",
+        "Portuguese": "nigela",
+        "Hindi": "Mugrela",
+        "French": "nigelle de Crete",
+        "German": "schwarzkuemmel",
+        "Amharic": "tikur-azmud"
+    },
+    "temp": {
+        "min": "14",
+        "max": "26"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

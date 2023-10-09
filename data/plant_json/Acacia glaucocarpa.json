@@ -1,0 +1,12 @@
+{
+    "name": "Acacia glaucocarpa",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "35"
+    },
+    "precip": {
+        "min": "650",
+        "max": "800"
+    }
+}

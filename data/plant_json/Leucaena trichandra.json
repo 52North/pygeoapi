@@ -1,0 +1,14 @@
+{
+    "name": "Leucaena trichandra",
+    "trivial": {
+        "Spanish": "guaje rojo"
+    },
+    "temp": {
+        "min": "17",
+        "max": "22"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1800"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "name": "Emblica officinalis",
+    "trivial": {
+        "Sanskrit": "vaystha",
+        "Hindi": "aurna",
+        "Marathi": "nelli",
+        "Malay": "melaka",
+        "Arabic": "amlet",
+        "Malayalam": "amolphal",
+        "Kannada": "ray",
+        "Vietnamese": "chu me",
+        "English": "malacca tree",
+        "Khmer": "kam lam ko",
+        "Gujarati": "karnataki",
+        "Thai": "ma kham pom",
+        "Lao": "mak kham pom",
+        "Persian": "myrobalan",
+        "Tagalog": "nelli",
+        "Tamil": "nelli",
+        "Assamese": "nellikai",
+        "Panjabi": "sobju"
+    },
+    "temp": {
+        "min": "20",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2500"
+    }
+}

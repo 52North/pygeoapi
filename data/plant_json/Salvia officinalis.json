@@ -1,0 +1,27 @@
+{
+    "name": "Salvia officinalis",
+    "trivial": {
+        "Latin": "Salviae herba",
+        "Chinese": "ching-chieh",
+        "English": "sage",
+        "Arabic": "mariyamiya",
+        "Japanese": "sage",
+        "German": "Salbei",
+        "Dutch": "salie",
+        "Portuguese": "salva",
+        "Danish": "salvia",
+        "Italian": "salvia",
+        "Spanish": "salvia",
+        "Swedish": "salvia",
+        "French": "sauge",
+        "Russian": "shalfey"
+    },
+    "temp": {
+        "min": "15",
+        "max": "26"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1000"
+    }
+}

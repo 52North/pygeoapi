@@ -1,0 +1,19 @@
+{
+    "name": "Artocarpus integer",
+    "trivial": {
+        "Malay": "bankong",
+        "Lingala": "baroh",
+        "Indonesian": "jak",
+        "Thai": "champada",
+        "English": "chempedak",
+        "Burmese": "sonekadat"
+    },
+    "temp": {
+        "min": "22",
+        "max": "38"
+    },
+    "precip": {
+        "min": "2200",
+        "max": "3500"
+    }
+}

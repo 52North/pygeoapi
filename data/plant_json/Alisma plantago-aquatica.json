@@ -1,0 +1,25 @@
+{
+    "name": "Alisma plantago-aquatica",
+    "trivial": {
+        "English": "water plantain",
+        "Russian": "chastukha podorojnikovaya",
+        "Gaelic (Scots)": "corr-chopag",
+        "German": "gew\u00f6hnlicher froschl\u00f6ffel",
+        "Swedish": "vanlig svalting",
+        "Afrikaans": "padda-lepel",
+        "French": "plantain d'eau \u2013 fl\u00fbteau",
+        "Finnish": "ratamosarpio",
+        "Norwegian": "vassgro",
+        "Danish": "vejbred-skeblad",
+        "Dutch": "waterweegbree",
+        "Polish": "zabieniec babka wodna"
+    },
+    "temp": {
+        "min": "8",
+        "max": "18"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "Eruca sativa",
+    "trivial": {
+        "English": "white pepper",
+        "Basque": "bekarki",
+        "Portuguese": "r\u00facula",
+        "Spanish": "roqueta com\u00fan",
+        "French": "roquette",
+        "Italian": "rucola",
+        "Catalan": "ruqueta"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

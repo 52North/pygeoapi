@@ -1,0 +1,14 @@
+{
+    "name": "Angophora floribunda",
+    "trivial": {
+        "English": "rough-barked apple"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "650",
+        "max": "850"
+    }
+}

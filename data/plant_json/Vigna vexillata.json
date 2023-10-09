@@ -1,0 +1,20 @@
+{
+    "name": "Vigna vexillata",
+    "trivial": {
+        "Unknown": "chorreque",
+        "Japanese": "fuji sasage",
+        "French": "pois zombi",
+        "Vietnamese": "qua",
+        "Lao": "thw\u00e0x phi",
+        "English": "zombi pea",
+        "Chinese": "ye jiang dou"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "2100"
+    }
+}

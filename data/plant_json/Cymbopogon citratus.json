@@ -1,0 +1,24 @@
+{
+    "name": "Cymbopogon citratus",
+    "trivial": {
+        "Unknown": "sereh",
+        "Iloko": "baroni",
+        "Vietnamese": "s\u00e0",
+        "English": "West Indian lemon grass",
+        "French": "citronnelle",
+        "Karen": "tapo",
+        "Khmer": "hau sing khai",
+        "Nepali": "pirheghans",
+        "Tagalog": "tanglad",
+        "Thai": "takhrai",
+        "German": "Zitronengras"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "3000"
+    }
+}

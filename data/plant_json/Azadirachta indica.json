@@ -1,0 +1,42 @@
+{
+    "name": "Azadirachta indica",
+    "trivial": {
+        "Sanskrit": "arishta",
+        "Tamil": "arulundi",
+        "Arabic": "azad darakhul-hind",
+        "French": "azadira d'Inde",
+        "Malay": "baypay",
+        "English": "wonder tree",
+        "Kannada": "bevinamara",
+        "Chinese": "indu lian shu",
+        "Unknown": "nimba",
+        "Somali": "miri-miri bilaadi",
+        "German": "Niembaum",
+        "Tigrinya": "kinene",
+        "Sinhalese": "kohomba",
+        "Marathi": "limba",
+        "Oriya": "limbo",
+        "Portuguese": "margosa",
+        "Indonesian": "mindi maranngo",
+        "Swahili": "mwarubaini",
+        "Danish": "neem",
+        "Hindi": "nimb",
+        "Persian": "nib",
+        "Bengali": "nim",
+        "Spanish": "nim",
+        "Urdu": "nimmi",
+        "Thai": "sadao India",
+        "Khmer": "sdao",
+        "Burmese": "thin",
+        "Telugu": "vepa",
+        "Malayalam": "veppa"
+    },
+    "temp": {
+        "min": "26",
+        "max": "40"
+    },
+    "precip": {
+        "min": "450",
+        "max": "1200"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": "Anthriscus cerefolium",
+    "trivial": {
+        "Spanish": "cerafolio",
+        "Portuguese": "cerefolho",
+        "French": "cerfeuil",
+        "Italian": "cerfoglio",
+        "English": "chervil",
+        "Danish": "k\u00f8rvel",
+        "German": "kerbel",
+        "Dutch": "kervel",
+        "Russian": "kervel'",
+        "Swedish": "koervel",
+        "Arabic": "maqdunis afranji",
+        "Chinese": "san-lo-po"
+    },
+    "temp": {
+        "min": "7",
+        "max": "21"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1100"
+    }
+}

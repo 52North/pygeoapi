@@ -1,0 +1,21 @@
+{
+    "name": "Phleum pratense",
+    "trivial": {
+        "Swedish": "timotej",
+        "Danish": "knold-rottehale",
+        "French": "fl\u00e9ole des pr\u00e9s",
+        "German": "wiesen-lieschgras",
+        "Finnish": "timotei",
+        "Icelandic": "vallarfoxgras",
+        "Norwegian": "timotei",
+        "English": "timothy"
+    },
+    "temp": {
+        "min": "15",
+        "max": "22"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1100"
+    }
+}

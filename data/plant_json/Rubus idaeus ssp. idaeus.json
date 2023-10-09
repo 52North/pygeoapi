@@ -1,0 +1,21 @@
+{
+    "name": "Rubus idaeus ssp. idaeus",
+    "trivial": {
+        "English": "red raspberry",
+        "Portuguese": "sarca-ideia",
+        "French": "framboise",
+        "Dutch": "frambozen",
+        "Spanish": "frambuesa",
+        "German": "Himbeere",
+        "Danish": "hindb\u00e6r",
+        "Latin": "Rubi idaei folium"
+    },
+    "temp": {
+        "min": "17",
+        "max": "23"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1200"
+    }
+}

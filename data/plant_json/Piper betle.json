@@ -1,0 +1,30 @@
+{
+    "name": "Piper betle",
+    "trivial": {
+        "Portuguese": "cobrinha",
+        "English": "betel vine",
+        "Bikol": "buyo-buyo",
+        "Tagalog": "manin",
+        "Unknown": "serih",
+        "Pangasinan": "gaoed",
+        "Iloko": "gaued",
+        "Vietnamese": "tr\u00e2u luong",
+        "Langue d'oc (post-1500)": "namat",
+        "Nepali": "paan",
+        "Urdu": "tanbol",
+        "Thai": "phlu",
+        "Latin": "Piper Folium",
+        "Pampanga": "samat",
+        "Baltic (Other)": "samok",
+        "Malayalam": "se keh",
+        "Arabic": "wara tumbul"
+    },
+    "temp": {
+        "min": "22",
+        "max": "27"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "3700"
+    }
+}

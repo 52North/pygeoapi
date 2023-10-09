@@ -1,0 +1,14 @@
+{
+    "name": "Vigna unguiculata ssp. sesquipedalis",
+    "trivial": {
+        "English": "yard long bean"
+    },
+    "temp": {
+        "min": "20",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1500",
+        "max": "2000"
+    }
+}

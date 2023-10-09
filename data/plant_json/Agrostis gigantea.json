@@ -1,0 +1,15 @@
+{
+    "name": "Agrostis gigantea",
+    "trivial": {
+        "Portuguese": "agrostide grande",
+        "English": "black bentgrass"
+    },
+    "temp": {
+        "min": "12",
+        "max": "21"
+    },
+    "precip": {
+        "min": "500",
+        "max": "900"
+    }
+}

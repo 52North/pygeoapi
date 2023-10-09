@@ -1,0 +1,27 @@
+{
+    "name": "Perilla frutescens",
+    "trivial": {
+        "Japanese": "shiso",
+        "English": "wild basil",
+        "Hindi": "bhanjira",
+        "Swedish": "bladmynta",
+        "Chinese": "zi su",
+        "German": "schwarznessel",
+        "Indonesian": "daun shiso",
+        "Hungarian": "vad szez\u00e1m",
+        "Danish": "kinesisk mynte",
+        "Korean": "tulkkae",
+        "Vietnamese": "tu to",
+        "Thai": "nga-khi-mon",
+        "Lao": "nga chieng",
+        "Finnish": "veripeippi"
+    },
+    "temp": {
+        "min": "5",
+        "max": "30"
+    },
+    "precip": {
+        "min": "250",
+        "max": "600"
+    }
+}

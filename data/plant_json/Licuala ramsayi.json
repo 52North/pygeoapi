@@ -1,0 +1,12 @@
+{
+    "name": "Licuala ramsayi",
+    "trivial": {},
+    "temp": {
+        "min": "22",
+        "max": "32"
+    },
+    "precip": {
+        "min": "2400",
+        "max": "3600"
+    }
+}

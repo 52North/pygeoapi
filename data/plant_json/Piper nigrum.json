@@ -1,0 +1,25 @@
+{
+    "name": "Piper nigrum",
+    "trivial": {
+        "English": "white pepper",
+        "Arabic": "filfil aswad",
+        "Chinese": "hu-vhiao",
+        "Japanese": "kasho",
+        "Italian": "pepe",
+        "Dutch": "peper",
+        "Swedish": "peppar",
+        "German": "weisser Pfeffer",
+        "Portuguese": "pimenta preta",
+        "Spanish": "pimienta",
+        "French": "poivre",
+        "Russian": "pyerets"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "2500",
+        "max": "4000"
+    }
+}

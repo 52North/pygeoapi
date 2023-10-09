@@ -1,0 +1,15 @@
+{
+    "name": "Musa textilis",
+    "trivial": {
+        "English": "manila hemp",
+        "Spanish": "abac\u00e1"
+    },
+    "temp": {
+        "min": "20",
+        "max": "29"
+    },
+    "precip": {
+        "min": "1800",
+        "max": "3000"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Ailanthus grandis",
+    "trivial": {},
+    "temp": {
+        "min": "30",
+        "max": "38"
+    },
+    "precip": {
+        "min": "3000",
+        "max": "4000"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Schleichera oleosa",
+    "trivial": {
+        "English": "kosum",
+        "Indonesian": "kesambi",
+        "Oriya": "kusuma"
+    },
+    "temp": {
+        "min": "30",
+        "max": "42"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2300"
+    }
+}

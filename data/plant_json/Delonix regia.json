@@ -1,0 +1,24 @@
+{
+    "name": "Delonix regia",
+    "trivial": {
+        "Portuguese": "poinciana",
+        "Spanish": "flamboy\u00e1n",
+        "Unknown": "sekoula (Fiji)",
+        "Chamorro": "atbut",
+        "Tonga (Tonga Islands)": "\u2018ohai",
+        "English": "Royal poinciana",
+        "German": "Flammenbaum",
+        "French": "flamboyante",
+        "Palauan": "nangyo",
+        "Hawaiian": "ohai'",
+        "Niuean": "pine"
+    },
+    "temp": {
+        "min": "22",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Canna indica",
+    "trivial": {
+        "German": "Kapacho",
+        "Spanish": "chupa flor",
+        "English": "Sierra Leone arrowroot",
+        "Hawaiian": "poloke (Hawaii)",
+        "Truk": "oruuru (Puluwat)",
+        "Hausa": "gwangwa",
+        "French": "tous-les-mois",
+        "Portuguese": "cana-do-brejo",
+        "Italian": "canna d'India",
+        "Samoan": "Fanamanu (Samoa)",
+        "Unknown": "riti (Kiribati)",
+        "Fijian": "gasau ni ga",
+        "Chamorro": "mongos halum-tano (Guam)",
+        "Maori": "tiare papa\u2018a (Cook Islands)",
+        "Tonga (Tonga Islands)": "te misimisi (Tonga)",
+        "Creoles and Pidgins, Portuguese-based (Other)": "toolima (South American Creole)"
+    },
+    "temp": {
+        "min": "12",
+        "max": "32"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "4500"
+    }
+}

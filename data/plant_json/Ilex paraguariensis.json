@@ -1,0 +1,17 @@
+{
+    "name": "Ilex paraguariensis",
+    "trivial": {
+        "Portuguese": "erva-mate",
+        "French": "mat\u00e9",
+        "English": "mate",
+        "Spanish": "yerba mate"
+    },
+    "temp": {
+        "min": "17",
+        "max": "26"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

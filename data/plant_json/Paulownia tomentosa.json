@@ -1,0 +1,19 @@
+{
+    "name": "Paulownia tomentosa",
+    "trivial": {
+        "Japanese": "kiri-noki",
+        "English": "royal paulownia",
+        "German": "filzige paulownia",
+        "Unknown": "kiri",
+        "Korean": "otoung-nam",
+        "French": "paulownia de Chine"
+    },
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1600"
+    }
+}

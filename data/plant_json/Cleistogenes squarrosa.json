@@ -1,0 +1,12 @@
+{
+    "name": "Cleistogenes squarrosa",
+    "trivial": {},
+    "temp": {
+        "min": "9",
+        "max": "28"
+    },
+    "precip": {
+        "min": "400",
+        "max": "600"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "name": "Dalbergia sissoo",
+    "trivial": {
+        "Sanskrit": "shinshapa",
+        "French": "\u00e9b\u00e9nier juane",
+        "English": "sissoo",
+        "Arabic": "sissoo",
+        "Indonesian": "pradu-khaek",
+        "Thai": "pradu-khaek",
+        "Tamil": "yette",
+        "German": "ostindisches Rosenholz",
+        "Hindi": "sissu",
+        "Bengali": "sisu",
+        "Nepali": "sissau",
+        "Portuguese": "sisso",
+        "Spanish": "sisu",
+        "Unknown": "tali",
+        "Japanese": "sonoswaseso"
+    },
+    "temp": {
+        "min": "26",
+        "max": "40"
+    },
+    "precip": {
+        "min": "500",
+        "max": "2000"
+    }
+}

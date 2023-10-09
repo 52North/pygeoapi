@@ -1,0 +1,12 @@
+{
+    "name": "Acehmea magdalenae",
+    "trivial": {},
+    "temp": {
+        "min": "24",
+        "max": "30"
+    },
+    "precip": {
+        "min": "900",
+        "max": "1300"
+    }
+}

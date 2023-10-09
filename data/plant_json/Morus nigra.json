@@ -1,0 +1,19 @@
+{
+    "name": "Morus nigra",
+    "trivial": {
+        "Portuguese": "amoreira preta",
+        "English": "mulberry",
+        "Italian": "gelso",
+        "German": "Maulbeere",
+        "Spanish": "mora negra",
+        "French": "murier noir"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1500"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Poa pratensis",
+    "trivial": {
+        "Portuguese": "erva da febra",
+        "English": "smooth meadowgrass",
+        "French": "paturin des pres",
+        "German": "wiesen rispengras"
+    },
+    "temp": {
+        "min": "15",
+        "max": "27"
+    },
+    "precip": {
+        "min": "500",
+        "max": "1300"
+    }
+}

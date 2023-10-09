@@ -1,0 +1,17 @@
+{
+    "name": "Erythrina caffra",
+    "trivial": {
+        "English": "coast coral tree",
+        "Afrikaans": "kuskoraalboom",
+        "Zulu": "umSinsi",
+        "Xhosa": "umSintsi"
+    },
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1000"
+    }
+}

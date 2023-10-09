@@ -1,0 +1,20 @@
+{
+    "name": "Stylosanthes humilis",
+    "trivial": {
+        "Portuguese": "erva-de-orelha",
+        "Spanish": "alfalfa estilosante",
+        "French": "luzerne de townsville",
+        "Tagalog": "magsaysay lucerne",
+        "Thai": "thua-satailo",
+        "English": "townsville stylo",
+        "German": "townsvilleluzerne"
+    },
+    "temp": {
+        "min": "25",
+        "max": "32"
+    },
+    "precip": {
+        "min": "700",
+        "max": "1800"
+    }
+}

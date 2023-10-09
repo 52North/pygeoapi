@@ -1,0 +1,16 @@
+{
+    "name": "Brosimum alicastrum",
+    "trivial": {
+        "Unknown": "ujuste",
+        "English": "wild cherry",
+        "Spanish": "ojoche blanco"
+    },
+    "temp": {
+        "min": "18",
+        "max": "25"
+    },
+    "precip": {
+        "min": "600",
+        "max": "4000"
+    }
+}

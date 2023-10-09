@@ -1,0 +1,12 @@
+{
+    "name": "Chrysopogon plumulosus",
+    "trivial": {},
+    "temp": {
+        "min": "30",
+        "max": "35"
+    },
+    "precip": {
+        "min": "300",
+        "max": "625"
+    }
+}

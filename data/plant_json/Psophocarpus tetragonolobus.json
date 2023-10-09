@@ -1,0 +1,34 @@
+{
+    "name": "Psophocarpus tetragonolobus",
+    "trivial": {
+        "Creoles and Pidgins, English-based (Other)": "asbin",
+        "English": "winged bean",
+        "Spanish": "judia careta",
+        "Vietnamese": "dau rong",
+        "Italian": "fagiolo quadrato",
+        "Portuguese": "fava de cavalo",
+        "German": "Goabohne",
+        "Danish": "Goab\u00f8nne",
+        "Finnish": "Goanpapu",
+        "French": "pois carr\u00e9",
+        "Burmese": "pe saung ya",
+        "Unknown": "kalamismis",
+        "Malay": "ketjeepir",
+        "Dutch": "ketjipir",
+        "Khmer": "pr\u00e2pi\u00eby",
+        "Tagalog": "sigarilya",
+        "Chinese": "sz kok tau",
+        "Japanese": "sikaku mame",
+        "Thai": "thua phuu",
+        "Lao": "thw\u00e0x ph'uu",
+        "Swedish": "vingb\u00f6na"
+    },
+    "temp": {
+        "min": "18",
+        "max": "30"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2500"
+    }
+}

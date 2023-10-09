@@ -1,0 +1,18 @@
+{
+    "name": "Vaccinium macrocarpon",
+    "trivial": {
+        "English": "large cranberry",
+        "Portuguese": "arando de cultura",
+        "Spanish": "ar\u00e1ndano trepador",
+        "German": "Kranbeere",
+        "French": "ronce d'Am\u00e9rique"
+    },
+    "temp": {
+        "min": "16",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "1000"
+    }
+}

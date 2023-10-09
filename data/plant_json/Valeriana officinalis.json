@@ -1,0 +1,19 @@
+{
+    "name": "Valeriana officinalis",
+    "trivial": {
+        "English": "valerian",
+        "German": "Baldrian",
+        "Portuguese": "valeriana",
+        "Danish": "l\u00e6ge baldrian",
+        "Italian": "valeriana",
+        "Latin": "Valerianae rhizoma et radix"
+    },
+    "temp": {
+        "min": "15",
+        "max": "24"
+    },
+    "precip": {
+        "min": "600",
+        "max": "800"
+    }
+}

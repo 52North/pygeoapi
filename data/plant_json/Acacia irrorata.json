@@ -1,0 +1,12 @@
+{
+    "name": "Acacia irrorata",
+    "trivial": {},
+    "temp": {
+        "min": "18",
+        "max": "32"
+    },
+    "precip": {
+        "min": "750",
+        "max": "1000"
+    }
+}

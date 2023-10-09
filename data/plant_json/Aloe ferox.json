@@ -1,0 +1,17 @@
+{
+    "name": "Aloe ferox",
+    "trivial": {
+        "English": "bitter aloe",
+        "Afrikaans": "kaapse aalwyn",
+        "Xhosa": "iKhala",
+        "Zulu": "umhlaba"
+    },
+    "temp": {
+        "min": "18",
+        "max": "26"
+    },
+    "precip": {
+        "min": "500",
+        "max": "600"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Hedysarum spinosissimum",
+    "trivial": {},
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "200",
+        "max": "500"
+    }
+}

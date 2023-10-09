@@ -1,0 +1,19 @@
+{
+    "name": "Eugenia uniflora",
+    "trivial": {
+        "English": "Surinam cherry",
+        "Indonesian": "dewandaru",
+        "Malay": "ceremai belanda",
+        "French": "cerisescotes",
+        "Thai": "mayom-farang",
+        "Portuguese": "pitanga"
+    },
+    "temp": {
+        "min": "21",
+        "max": "27"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "2000"
+    }
+}

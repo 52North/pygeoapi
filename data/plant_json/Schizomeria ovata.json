@@ -1,0 +1,12 @@
+{
+    "name": "Schizomeria ovata",
+    "trivial": {},
+    "temp": {
+        "min": "16",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1300",
+        "max": "1700"
+    }
+}

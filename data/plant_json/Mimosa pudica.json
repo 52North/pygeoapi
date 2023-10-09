@@ -1,0 +1,16 @@
+{
+    "name": "Mimosa pudica",
+    "trivial": {
+        "Portuguese": "sensitiva",
+        "Unknown": "tuitui",
+        "English": "touch-me-not tree"
+    },
+    "temp": {
+        "min": "22",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}

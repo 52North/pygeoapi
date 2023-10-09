@@ -1,0 +1,15 @@
+{
+    "name": "Eucalyptus tessellaris",
+    "trivial": {
+        "English": "Moreton Bay ash",
+        "Portuguese": "eucalipto de Moreton"
+    },
+    "temp": {
+        "min": "20",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "3000"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Senna spectabilis",
+    "trivial": {
+        "English": "casia amarilla",
+        "Swahili": "Mhomba",
+        "Kikuyu": "Mwenu"
+    },
+    "temp": {
+        "min": "15",
+        "max": "25"
+    },
+    "precip": {
+        "min": "800",
+        "max": "1000"
+    }
+}

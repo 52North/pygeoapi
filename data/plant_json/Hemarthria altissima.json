@@ -1,0 +1,17 @@
+{
+    "name": "Hemarthria altissima",
+    "trivial": {
+        "Hindi": "panisharu",
+        "Afrikaans": "swamp couch",
+        "Spanish": "pasto clavel",
+        "English": "limpo grass"
+    },
+    "temp": {
+        "min": "31",
+        "max": "35"
+    },
+    "precip": {
+        "min": "1200",
+        "max": "1500"
+    }
+}

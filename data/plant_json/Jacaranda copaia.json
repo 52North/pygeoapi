@@ -1,0 +1,15 @@
+{
+    "name": "Jacaranda copaia",
+    "trivial": {
+        "English": "palo de buba",
+        "Portuguese": "Para'-para'"
+    },
+    "temp": {
+        "min": "24",
+        "max": "38"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1600"
+    }
+}

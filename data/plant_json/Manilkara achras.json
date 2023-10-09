@@ -1,0 +1,15 @@
+{
+    "name": "Manilkara achras",
+    "trivial": {
+        "English": "chiku",
+        "Unknown": "Sapodilla"
+    },
+    "temp": {
+        "min": "20",
+        "max": "34"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "1500"
+    }
+}

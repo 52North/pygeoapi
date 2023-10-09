@@ -1,0 +1,43 @@
+{
+    "name": "Curcuma longa",
+    "trivial": {
+        "Portuguese": "acafrao-da-India",
+        "Samaritan Aramaic": "ango",
+        "Tonga (Nyasa)": "ango",
+        "Tonga (Tonga Islands)": "ango hina",
+        "Arabic": "kurkum",
+        "Fijian": "rerega",
+        "Unknown": "tamaravirua",
+        "Vietnamese": "uat kim",
+        "English": "turmeric",
+        "French": "turmeric",
+        "Italian": "curcuma",
+        "Spanish": "curcuma",
+        "Tagalog": "dilaw",
+        "Dutch": "geelwortel",
+        "German": "Kurkuma-Gelbwurzel",
+        "Swedish": "gurkmeja",
+        "Hindi": "haldi",
+        "Indonesian": "haldi",
+        "Urdu": "zard-cholic",
+        "Thai": "khamin kaeng",
+        "Lao": "khmin khun",
+        "Sundanese": "komeng",
+        "Iban": "kunik",
+        "Javanese": "kunir",
+        "Malayalam": "tius",
+        "Tahitian": "re'a",
+        "Khmer": "ro miet",
+        "Japanese": "ukon",
+        "Chinese": "yu-chin",
+        "Russian": "zholty imbir'"
+    },
+    "temp": {
+        "min": "20",
+        "max": "28"
+    },
+    "precip": {
+        "min": "1000",
+        "max": "2000"
+    }
+}
