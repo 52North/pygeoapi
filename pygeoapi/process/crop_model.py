@@ -151,7 +151,8 @@ class CropModelProcessor(BaseProcessor):
         if bbox:
             landsuitmodel.crop_data(bbox)
         if point:
-            raise NotImplementedError("Return type still needs to be defined for point request. Does netCDF still make sense?")
+            bbox_str = landsuitmodel.get_bbox_from_point(point)
+            landsuitmodel.crop_data(bbox_str)
 
         # get return type
         ds_return = None
@@ -166,7 +167,10 @@ class CropModelProcessor(BaseProcessor):
 
 
         if format=='geojson':
-            ds_return = landsuitmodel.return_geojson('/pygeoapi/temp/modelresult.tiff')
+            if bbox:
+                ds_return = landsuitmodel.return_geojson('/pygeoapi/temp/modelresult.tiff')
+            if point:
+                ds_return = landsuitmodel.return_geojson('','',False)
 
             with tempfile.TemporaryFile() as fp:
                 LOGGER.debug('Returning data in GeoJSON format')
