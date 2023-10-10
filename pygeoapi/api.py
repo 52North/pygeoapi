@@ -4154,6 +4154,38 @@ class API:
                                     ConnectedSystemsBaseProvider.query_properties.__name__,
                                     CSAParams())
 
+    @gzip
+    @pre_process
+    def get_datastreams(
+            self,
+            request: Union[APIRequest, Any],
+            path: Union[Tuple[str, str], None] = None) -> Tuple[dict, int, str]:
+
+        if request.format == F_JSON:
+            return self._handle_csa_get(request,
+                                        path,
+                                        ConnectedSystemsBaseProvider.query_datastreams.__name__,
+                                        DatastreamsParams())
+        else:
+            return self.get_format_exception(request)
+
+    @gzip
+    @pre_process
+    def get_datastreams_schema(
+            self,
+            request: Union[APIRequest, Any],
+            path: Union[Tuple[str, str], None] = None) -> Tuple[dict, int, str]:
+
+        if request.format == F_JSON:
+            params = DatastreamsParams()
+            params.schema = True
+            return self._handle_csa_get(request,
+                                        path,
+                                        ConnectedSystemsBaseProvider.query_datastreams.__name__,
+                                        params)
+        else:
+            return self.get_format_exception(request)
+
     def _handle_csa_get(self,
                         request: Union[APIRequest, Any],
                         path: Union[Tuple[str, str], None],

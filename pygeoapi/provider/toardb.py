@@ -254,6 +254,101 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
         else:
             return [], []
 
+    def query_datastreams(self, parameters: DatastreamsParams) -> CSAResponse:
+
+        params = {}
+        if parameters.system is not None:
+            # Request by system association
+            params["station_id"] = ",".join(parameters.system)
+        elif parameters.id is not None:
+            # Request SF by id
+            params["id"] = ",".join(parameters.id)
+        self._parse_paging(parameters, params)
+
+        # TODO: TOAR API only offers exact matching and not intersection of intervals
+        # if parameters.phenomenonTimeStart is not None:
+        #     params["data_start_date"] = parameters.phenomenonTimeStart
+        # if parameters.phenomenonTimeEnd is not None:
+        #     params["data_end_date"] = parameters.phenomenonTimeEnd
+        # if parameters.resultTimeStart is not None:
+        #     params["data_start_date"] = parameters.resultTimeStart
+        # if parameters.resultTimeEnd is not None:
+        #     params["data_start_date"] = parameters.resultTimeEnd
+
+        timeseries = self.session.get(self.TIMESERIES_URL, params=params).json()
+
+        if parameters.schema:
+            series = timeseries[0]
+            schema = [{
+                "obsFormat": "application/om+json",
+                "resultSchema": {
+                    "id": series["variable"]["id"],
+                    "name": series["variable"]["name"],
+                    "type": "Quantity",
+                    "label": series["variable"]["displayname"],
+                    "definition": series["variable"]["cf_standardname"],
+                    "uom": {
+                        "code": series["variable"]['units']
+                    },
+                    "description": f"chemical_formula:{series['variable']['chemical_formula']};"
+                                   f"longname:{series['variable']['longname']};"
+                }
+            }]
+            return schema, []
+
+        else:
+            datastreams = []
+            for series in timeseries:
+                datastreams.append({
+                    "id": series["id"],
+                    "name": series["label"],
+                    "system@link": {
+                        "href": f"{self.base_url}/systems/{series['station']['id']}?f=smljson"
+                    },
+                    "samplingFeature@link": {
+                        "href": f"{self.base_url}/samplingFeatures/{series['station']['id']}_feature?f=geojson"
+                    },
+                    "formats": [
+                        "application/json"
+                    ],
+                    "outputName": series['variable']['name'],
+                    "phenomenonTime": [
+                        series['data_start_date'],
+                        series['data_end_date']
+                    ],
+                    "phenomenonTimeInterval": series['sampling_frequency'],
+                    "resultTime": [
+                        series['data_start_date'],
+                        series['data_end_date']
+                    ],
+                    "resultTimeInterval": series['sampling_frequency'],
+                    "resultType": series['data_origin_type'],
+                    "live": False,
+                    "links": [
+                        {
+                            "href": f"{self.TIMESERIES_URL}id/{series['id']}",
+                            "hreflang": "en-US",
+                            "title": "TOARDB FastAPI REST API",
+                            "type": "application/json"
+                        }
+                    ]
+                })
+
+            # check if a nextPage exists and potentially add link
+            links_json = []
+            if len(timeseries) == int(parameters.limit):
+                # page is fully filled - we assume a nextpage exists
+                links_json.append({
+                    "title": "next",
+                    "href": f"{self.base_url}/datastreams?"
+                            f"limit={parameters.limit}"
+                            f"&offset={int(params['offset']) + int(parameters.limit)}"
+                            f"&f={parameters.format}",
+                    "rel": "next"
+                })
+
+            return datastreams, links_json
+
     def _format_system_json(self, station_meta: json) -> Dict:
         """
         Reformat TOAR-DB v2 Json Structure to SensorML 2.0 JSON

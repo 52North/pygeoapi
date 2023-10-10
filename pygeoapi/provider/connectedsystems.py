@@ -26,6 +26,7 @@
 # OTHER DEALINGS IN THE SOFTWARE.
 #
 # =================================================================
+from datetime import datetime, timezone
 from typing import List, Optional, Dict, Type, Tuple
 
 
@@ -68,12 +69,49 @@ class SamplingFeaturesParams(CommonParams):
     system: Optional[List[str]] = None
 
 
+class DatastreamsParams(CommonParams):
+    phenomenonTimeStart: Optional[str] = None
+    phenomenonTimeEnd: Optional[str] = None
+    resultTimeStart: Optional[str] = None
+    resultTimeEnd: Optional[str] = None
+    system: Optional[List[str]] = None
+    schema: Optional[bool] = None
+
+
 def parse_query_parameters(type, params: Dict):
     def _parse_list(identifier):
         if params.get(identifier) is not None:
             parsed[identifier] = []
             for elem in params.get(identifier).split(","):
                 parsed[identifier].append(elem)
+
+    def _parse_time(raw, start, end):
+        # TODO: Support 'latest' qualifier
+        now = datetime.utcnow().isoformat("T") + "Z"
+        if "/" in raw:
+            # time interval
+            split = raw.split("/")
+            startts = split[0]
+            endts = split[1]
+            if startts == "now":
+                parsed[start] = now
+            elif startts == "..":
+                parsed[start] = None
+            else:
+                parsed[start] = raw
+            if endts == "now":
+                parsed[end] = now
+            elif endts == "..":
+                parsed[end] = None
+            else:
+                parsed[end] = raw
+        else:
+            if raw == "now":
+                parsed[start] = now
+                parsed[end] = now
+            else:
+                parsed[start] = raw
+                parsed[end] = raw
 
     parsed = {}
 
@@ -103,6 +141,12 @@ def parse_query_parameters(type, params: Dict):
     if params.get("geom") is not None:
         parsed["geom"] = params.get("geom")
 
+    if params.get("phenomenonTime") is not None:
+        _parse_time(params.get("phenomenonTime"), "phenomenonTimeStart", "phenomenonTimeEnd")
+
+    if params.get("resultTime") is not None:
+        _parse_time(params.get("resultTime"), "resultTimeStart", "resultTimeEnd")
+
     for name, p in parsed.items():
         if hasattr(type, name):
             setattr(type, name, p)
@@ -128,7 +172,7 @@ class ConnectedSystemsBaseProvider:
 
     def query_systems(self, parameters: SystemsParams) -> CSAResponse:
         """
-        query the provider
+        implements queries on systems as specified in openapi-connectedsystems-1
 
         :returns: dict of formatted systems matching the query parameters
         """
@@ -137,7 +181,7 @@ class ConnectedSystemsBaseProvider:
 
     def query_deployments(self, parameters: DeploymentsParams) -> CSAResponse:
         """
-        query the provider
+        implements queries on deployments as specified in openapi-connectedsystems-1
 
         :returns: dict of formatted deployments matching the query parameters
         """
@@ -146,7 +190,7 @@ class ConnectedSystemsBaseProvider:
 
     def query_procedures(self, parameters: ProceduresParams) -> CSAResponse:
         """
-        query the provider
+        implements queries on procedures as specified in openapi-connectedsystems-1
 
         :returns: dict of formatted procedures matching the query parameters
         """
@@ -155,7 +199,7 @@ class ConnectedSystemsBaseProvider:
 
     def query_sampling_features(self, parameters: SamplingFeaturesParams) -> CSAResponse:
         """
-        query the provider
+        implements queries on samplingFeatures as specified in openapi-connectedsystems-1
 
         :returns: dict of formatted samplingFeatures matching the query parameters
         """
@@ -164,7 +208,34 @@ class ConnectedSystemsBaseProvider:
 
     def query_properties(self, parameters: CSAParams) -> CSAResponse:
         """
-        query the provider
+        implements queries on properties as specified in openapi-connectedsystems-1
+
+        :returns: dict of formatted properties
+        """
+
+        raise NotImplementedError()
+
+    def query_properties(self, parameters: CSAParams) -> CSAResponse:
+        """
+        implements queries on properties as specified in openapi-connectedsystems-1
+
+        :returns: dict of formatted properties
+        """
+
+        raise NotImplementedError()
+
+    def query_datastreams(self, parameters: DatastreamsParams) -> CSAResponse:
+        """
+        implements queries on properties as specified in openapi-connectedsystems-2
+
+        :returns: dict of formatted properties
+        """
+
+        raise NotImplementedError()
+
+    def query_observations(self, parameters: CSAParams) -> CSAResponse:
+        """
+        implements queries on properties as specified in openapi-connectedsystems-2
 
         :returns: dict of formatted properties
         """

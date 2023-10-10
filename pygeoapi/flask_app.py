@@ -500,6 +500,7 @@ def systems_path(path=None):
 @BLUEPRINT.route('/systems/<path:path>/members', methods=['GET', 'POST'])
 @BLUEPRINT.route('/systems/<path:path>/deployments', methods=['GET'])
 @BLUEPRINT.route('/systems/<path:path>/samplingFeatures', methods=['GET'])
+@BLUEPRINT.route('/systems/<path:path>/datastreams', methods=['GET'])
 def systems_subpath(path=None):
     property = request.path.split('/')[-1]
     if request.method == 'GET':
@@ -509,6 +510,8 @@ def systems_subpath(path=None):
             return get_response(api_.get_deployments(request, ("system", path)))
         elif property == "deployments":
             return get_response(api_.get_sampling_features(request, ("system", path)))
+        elif property == "datastreams":
+            return get_response(api_.get_datastreams(request, ("system", path)))
     elif request.method == 'POST':
         return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
 
@@ -574,6 +577,28 @@ def properties_subpath(path=None):
     elif request.method == 'POST':
         return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
     else:
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+
+
+@BLUEPRINT.route('/datastreams', methods=['GET', 'POST'])
+@BLUEPRINT.route('/datastreams/<path:path>', methods=['GET', 'PUT', 'DELETE'])
+def datastreams_path(path=None):
+    if request.method == 'GET':
+        if path is not None:
+            return get_response(api_.get_datastreams(request, ("id", path)))
+        else:
+            return get_response(api_.get_datastreams(request, None))
+    elif request.method == 'POST':
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+    else:
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+
+
+@BLUEPRINT.route('/datastreams/<path:path>/schema', methods=['GET', 'PUT'])
+def datastreams_subpath(path=None):
+    if request.method == 'GET':
+        return get_response(api_.get_datastreams_schema(request, ("id", path)))
+    elif request.method == 'PUT':
         return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
 
 
