@@ -4173,6 +4173,7 @@ class API:
             return self.get_format_exception(request)
         headers = request.get_response_headers(**self.api_headers)
 
+        collection = True
         # Expand parameters with additional information based on path
         request_parameters = request.params.to_dict()
         if path is not None:
@@ -4189,13 +4190,16 @@ class API:
             #  in url and query params and we overwrite stuff here?
             request_parameters[path[0]] = path[1]
 
+            if path[0] == "id":
+                collection = False
+
         # parse parameters
         try:
             parameters = parse_query_parameters(params, request_parameters)
             parameters.format = request.format
             data = getattr(self.connected_system_provider, handler)(parameters)
 
-            return self._format_csa_response(request, headers, data)
+            return self._format_csa_response(request, headers, data, collection)
         except ProviderItemNotFoundError:
             return self.get_exception(
                 HTTPStatus.NOT_FOUND,
@@ -4204,27 +4208,27 @@ class API:
                 'NotFound',
                 "entity not found")
 
-    def _format_csa_response(self, request, headers, data) -> Tuple[dict, int, str]:
-
+    def _format_csa_response(self, request, headers, data, is_collection: bool) -> Tuple[dict, int, str]:
         headers['Content-Type'] = FORMAT_TYPES.get(request.format)
+
         if request.format == F_JSON:
             response = {
                 "items": [item for item in data[0]],
                 "links": [link for link in data[1]],
-            }
+            } if is_collection else data[0][0]
             return headers, HTTPStatus.OK, to_json(response, self.pretty_print)
         elif request.format == F_GEOJSON:
             response = {
                 "type": "FeatureCollection",
                 "features": [item for item in data[0]],
                 "links": [link for link in data[1]],
-            }
+            } if is_collection else data[0][0]
             return headers, HTTPStatus.OK, to_json(response, self.pretty_print)
         elif request.format == F_SENSORML_JSON:
             response = {
                 "items": [item for item in data[0]],
                 "links": [link for link in data[1]],
-            }
+            } if is_collection else data[0][0]
             return headers, HTTPStatus.OK, to_json(response, self.pretty_print)
         else:
             return self.get_format_exception(request)
