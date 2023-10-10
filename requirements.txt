@@ -13,6 +13,7 @@ pytz
 PyYAML
 rasterio
 requests
+requests-cache
 shapely<2.0
 SQLAlchemy<2.0.0
 tinydb

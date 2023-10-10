@@ -29,8 +29,8 @@
 import json
 import logging
 import numbers
-import requests
-from typing import List, Dict, Optional
+from datetime import timedelta
+from requests_cache import CachedSession
 
 from pygeoapi.api import F_JSON, F_GEOJSON, F_SENSORML_JSON, CONFORMANCE
 from pygeoapi.provider.base import BaseProvider, ProviderItemNotFoundError
@@ -86,6 +86,7 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
     }
 
     META_URL = BASEURL + "stationmeta/"
+    TIMESERIES_URL = BASEURL + "timeseries/"
 
     def __init__(self, provider_def):
         """
@@ -98,6 +99,16 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
 
         super().__init__(provider_def)
         self.base_url = provider_def["base_url"]
+
+        self.session = CachedSession(
+            'toardb_provider_cache',
+            use_cache_dir=True,
+            cache_control=False,
+            expire_after=timedelta(days=1),
+            allowable_codes=[200],
+            allowable_methods=['GET'],
+            stale_if_error=True
+        )
 
     def get_conformance(self) -> List[str]:
         return [
@@ -167,9 +178,9 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
             return [], []
 
         if parameters.format == F_JSON or parameters.format == F_GEOJSON:
-            return [self._format_system_json(item) for item in items], links
+            return [self._format_system_json(item) for item in items.values()], links
         else:
-            return [self._format_system_sml(item) for item in items], links
+            return [self._format_system_sml(item) for item in items.values()], links
 
     def query_deployments(self, parameters: DeploymentsParams) -> CSAResponse:
         if parameters.id is not None:
@@ -207,7 +218,7 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
             "links": [{
                 "href": f"{self.META_URL}id/{station_meta['id']}",
                 "hreflang": "en-US",
-                "rel": "alternate",
+                "title": "TOARDB FastAPI REST API",
                 "type": "application/json"
             }],
             "geometry": {
@@ -272,13 +283,30 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
                     "definition": self.OWL_LOOKUP[key],
                     "value": val
                 } for key, val in metadata.items()
+            ],
+            "outputs": [
+                {
+                    "id": val["id"],
+                    "name": val["name"],
+                    "label": val["longname"],
+                    "definition": val["cf_standardname"],
+                    "description": f"unit:{val['units']}; chemical_formula:{val['chemical_formula']}"
+                                   f";displayname:{val['displayname']};"
+                } for val in station_meta["outputs"]
+            ],
+            "links": [
+                {
+                    "href": f"{self.META_URL}id/{station_meta['id']}",
+                    "hreflang": "en-US",
+                    "title": "TOARDB FastAPI REST API",
+                    "type": "application/json"
+                }
             ]
         }
 
         return system
 
-    def _fetch_all_systems(self, parameters: SystemsParams) -> (List, List):
-        # TODO: add paging
+    def _fetch_all_systems(self, parameters: SystemsParams) -> (Dict, List):
         params = {}
 
         params["id"] = parameters.id
@@ -286,22 +314,38 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
         self._parse_paging(parameters, params)
         self._parse_bbox(parameters, params)
 
-        response = requests.get(self.META_URL, params=params).json()
+        stations = self.session.get(self.META_URL, params=params).json()
 
         # check if a nextPage exists and potentially add link
         links_json = []
-        if len(response) == int(parameters.limit):
+        if len(stations) == int(parameters.limit):
             # page is fully filled - we assume a nextpage exists
             links_json.append({
                 "title": "next",
                 "href": f"{self.base_url}/systems?"
                         f"limit={parameters.limit}"
-                        f"&offset={params['offset'] + parameters.limit}"
+                        f"&offset={int(params['offset']) + int(parameters.limit)}"
                         f"&f={parameters.format}",
                 "rel": "next"
             })
 
-        return response, links_json
+        stationmap = {}
+        for station in stations:
+            station["outputs"] = []
+            stationmap[station["id"]] = station
+
+        # fetch individual timeseries
+        params = {
+            "station_id": ','.join([str(k) for k in stationmap.keys()]),
+            "limit": 10000,
+        }
+
+        timeseries = self.session.get(self.TIMESERIES_URL, params=params).json()
+        for series in timeseries:
+            station_id = series["station"]["id"]
+            stationmap[station_id]["outputs"].append(series["variable"])
+
+        return stationmap, links_json
 
     def _parse_paging(self, parameters: SystemsParams, parsed: Dict) -> None:
         parsed["limit"] = parameters.limit
