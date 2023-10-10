@@ -4174,6 +4174,7 @@ class API:
         headers = request.get_response_headers(**self.api_headers)
 
         # Expand parameters with additional information based on path
+        request_parameters = request.params.to_dict()
         if path is not None:
             # Check that id is not malformed.
             if not re.match("^[\w]+$", path[1]):
@@ -4186,11 +4187,11 @@ class API:
 
             # TODO: does the case exist where a property is specified both
             #  in url and query params and we overwrite stuff here?
-            setattr(params, path[0], path[1])
+            request_parameters[path[0]] = path[1]
 
         # parse parameters
         try:
-            parameters = parse_query_parameters(params, request.params)
+            parameters = parse_query_parameters(params, request_parameters)
             parameters.format = request.format
             data = getattr(self.connected_system_provider, handler)(parameters)
 
