@@ -195,10 +195,58 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
             return [], []
 
     def query_sampling_features(self, parameters: SamplingFeaturesParams) -> CSAResponse:
-        if parameters.id is not None:
-            raise ProviderItemNotFoundError()
-        else:
-            return [], []
+        params = {
+            "fields": "id,coordinates",
+        }
+
+        if parameters.system is not None:
+            # Request SF by system
+            params["id"] = parameters.system[0]
+        elif parameters.id is not None:
+            # Request SF by id
+            params["id"] = ",".join(identifier.split("_")[0] for identifier in parameters.id)
+
+        self._parse_paging(parameters, params)
+
+        print(params)
+
+        stations = self.session.get(self.META_URL, params=params).json()
+
+        features = []
+        for station in stations:
+            features.append({
+                "type": "Feature",
+                "properties": {
+                    "featureType": "http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint",
+                    "uid": f"{station['id']}_feature",  # There is no uid so we generate one based on station_id
+                    "name": f"SamplingFeature of Station {station['id']}",
+                    "sampledFeature@link": {
+                        "href": "https://www.opengis.net/def/nil/OGC/0/unknown"
+                    }
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        station["coordinates"]["lat"],
+                        station["coordinates"]["lng"],
+                        station["coordinates"]["alt"],
+                    ]
+                }
+            })
+
+        links_json = []
+        if len(stations) == int(parameters.limit):
+            # page is fully filled - we assume a nextpage exists
+            links_json.append({
+                "title": "next",
+                "href": f"{self.base_url}/samplingFeatures?"
+                        f"limit={parameters.limit}"
+                        f"&offset={int(params['offset']) + int(parameters.limit)}"
+                        f"&f={parameters.format}",
+                "rel": "next"
+            })
+
+        return features, links_json
 
     def query_properties(self, parameters: CSAParams) -> CSAResponse:
         if parameters.id is not None:
@@ -288,10 +336,13 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
                 {
                     "id": val["id"],
                     "name": val["name"],
-                    "label": val["longname"],
+                    "type": "Quantity",
+                    "label": val["displayname"],
                     "definition": val["cf_standardname"],
-                    "description": f"unit:{val['units']}; chemical_formula:{val['chemical_formula']}"
-                                   f";displayname:{val['displayname']};"
+                    "uom": {
+                        "code": val['units']
+                    },
+                    "description": f"chemical_formula:{val['chemical_formula']};longname:{val['longname']};"
                 } for val in station_meta["outputs"]
             ],
             "links": [
@@ -310,6 +361,7 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
         params = {}
 
         params["id"] = parameters.id
+
         # Parse Query Parameters
         self._parse_paging(parameters, params)
         self._parse_bbox(parameters, params)
@@ -347,7 +399,7 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
 
         return stationmap, links_json
 
-    def _parse_paging(self, parameters: SystemsParams, parsed: Dict) -> None:
+    def _parse_paging(self, parameters: CSAParams, parsed: Dict) -> None:
         parsed["limit"] = parameters.limit
         parsed["offset"] = int(parameters.offset)
 
