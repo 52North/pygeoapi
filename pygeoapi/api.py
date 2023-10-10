@@ -4133,10 +4133,15 @@ class API:
             self,
             request: Union[APIRequest, Any],
             path: Union[Tuple[str, str], None] = None) -> Tuple[dict, int, str]:
-        return self._handle_csa_get(request,
-                                    path,
-                                    ConnectedSystemsBaseProvider.query_sampling_features.__name__,
-                                    SamplingFeaturesParams())
+
+        if request.format == F_JSON or request.format == F_GEOJSON:
+            return self._handle_csa_get(request,
+                                        path,
+                                        ConnectedSystemsBaseProvider.query_sampling_features.__name__,
+                                        SamplingFeaturesParams())
+        else:
+            return self.get_format_exception(request)
+
 
     @gzip
     @pre_process
