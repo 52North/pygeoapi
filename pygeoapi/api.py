@@ -100,6 +100,8 @@ CHARSET = ['utf-8']
 F_JSON = 'json'
 F_GEOJSON = 'geojson'
 F_SENSORML_JSON = 'smljson'
+F_SWE_JSON = 'swejson'
+F_OM_JSON = 'omjson'
 F_HTML = 'html'
 F_JSONLD = 'jsonld'
 F_GZIP = 'gzip'
@@ -113,6 +115,8 @@ FORMAT_TYPES = OrderedDict((
     (F_JSON, 'application/json'),
     (F_GEOJSON, 'application/geo+json'),
     (F_SENSORML_JSON, 'application/sml+json'),
+    (F_SWE_JSON, 'application/swe+json'),
+    (F_OM_JSON, 'application/om+json'),
     (F_PNG, 'image/png'),
     (F_MVT, 'application/vnd.mapbox-vector-tile')
 ))
@@ -4186,6 +4190,21 @@ class API:
         else:
             return self.get_format_exception(request)
 
+    @gzip
+    @pre_process
+    def get_observations(
+            self,
+            request: Union[APIRequest, Any],
+            path: Union[Tuple[str, str], None] = None) -> Tuple[dict, int, str]:
+
+        if request.format == F_OM_JSON or request.format == F_SWE_JSON:
+            return self._handle_csa_get(request,
+                                        path,
+                                        ConnectedSystemsBaseProvider.query_observations.__name__,
+                                        ObservationsParams())
+        else:
+            return self.get_format_exception(request)
+
     def _handle_csa_get(self,
                         request: Union[APIRequest, Any],
                         path: Union[Tuple[str, str], None],
@@ -4248,27 +4267,19 @@ class API:
     def _format_csa_response(self, request, headers, data, is_collection: bool) -> Tuple[dict, int, str]:
         headers['Content-Type'] = FORMAT_TYPES.get(request.format)
 
-        if request.format == F_JSON:
-            response = {
-                "items": [item for item in data[0]],
-                "links": [link for link in data[1]],
-            } if is_collection else data[0][0]
-            return headers, HTTPStatus.OK, to_json(response, self.pretty_print)
-        elif request.format == F_GEOJSON:
+        if request.format == F_GEOJSON:
             response = {
                 "type": "FeatureCollection",
                 "features": [item for item in data[0]],
                 "links": [link for link in data[1]],
             } if is_collection else data[0][0]
             return headers, HTTPStatus.OK, to_json(response, self.pretty_print)
-        elif request.format == F_SENSORML_JSON:
+        else:
             response = {
                 "items": [item for item in data[0]],
                 "links": [link for link in data[1]],
             } if is_collection else data[0][0]
             return headers, HTTPStatus.OK, to_json(response, self.pretty_print)
-        else:
-            return self.get_format_exception(request)
 
     def get_exception(self, status, headers, format_, code,
                       description) -> Tuple[dict, int, str]:

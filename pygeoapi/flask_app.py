@@ -595,10 +595,30 @@ def datastreams_path(path=None):
 
 
 @BLUEPRINT.route('/datastreams/<path:path>/schema', methods=['GET', 'PUT'])
+@BLUEPRINT.route('/datastreams/<path:path>/observations', methods=['GET', 'POST'])
 def datastreams_subpath(path=None):
+    property = request.path.split('/')[-1]
     if request.method == 'GET':
-        return get_response(api_.get_datastreams_schema(request, ("id", path)))
+        if property == "schema":
+            return get_response(api_.get_datastreams_schema(request, ("id", path)))
+        elif property == "observations":
+            return get_response(api_.get_observations(request, ("datastream", path)))
     elif request.method == 'PUT':
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+    elif request.method == 'POST':
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+
+@BLUEPRINT.route('/observations', methods=['GET'])
+@BLUEPRINT.route('/observations/<path:path>', methods=['GET', 'PUT', 'DELETE'])
+def observations_path(path=None):
+    if request.method == 'GET':
+        if path is not None:
+            return get_response(api_.get_observations(request, ("id", path)))
+        else:
+            return get_response(api_.get_observations(request, None))
+    elif request.method == 'POST':
+        return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
+    else:
         return get_response((None, HTTPStatus.NOT_IMPLEMENTED, ""))
 
 

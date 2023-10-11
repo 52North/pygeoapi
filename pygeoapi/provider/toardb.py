@@ -87,6 +87,7 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
 
     META_URL = BASEURL + "stationmeta/"
     TIMESERIES_URL = BASEURL + "timeseries/"
+    DATA_URL = BASEURL + "data/timeseries/"
 
     def __init__(self, provider_def):
         """
@@ -292,6 +293,22 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
                     },
                     "description": f"chemical_formula:{series['variable']['chemical_formula']};"
                                    f"longname:{series['variable']['longname']};"
+                },
+                "parametersSchema": {
+                    "type": "DataRecord",
+                    "fields": [
+                        {
+                            "label": "version",
+                            "type": "text",
+                            "definition": "",
+                            "name": "version"
+                        },
+                        {
+                            "label": "flags",
+                            "type": "text",
+                            "definition": "",
+                            "name": "flags"
+                        }]
                 }
             }]
             return schema, []
@@ -348,6 +365,48 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
                 })
 
             return datastreams, links_json
+
+    def query_observations(self, parameters: ObservationsParams) -> CSAResponse:
+        params = {}
+        self._parse_paging(parameters, params)
+
+        url = self.DATA_URL
+        nexturl = self.base_url
+        if parameters.datastream:
+            # filter by timeseries
+            url += parameters.datastream
+            nexturl += parameters.datastream
+
+        response = self.session.get(url, params=params).json()
+        result = response if not parameters.datastream else response['data']
+        observations = [self._format_observation_om_json(obs) for obs in result]
+
+        links_json = []
+        if len(observations) == int(parameters.limit):
+            # page is fully filled - we assume a nextpage exists
+            links_json.append({
+                "title": "next",
+                "href": f"{nexturl}/observations?"
+                        f"limit={parameters.limit}"
+                        f"&offset={int(params['offset']) + int(parameters.limit)}"
+                        f"&f={parameters.format}",
+                "rel": "next"
+            })
+        return observations, links_json
+
+    def _format_observation_om_json(self, observation: json) -> Dict:
+        return {
+            # There is no id so synthesize something
+            "id": f"{observation['timeseries_id']}_{observation['datetime']}_{observation['version'].strip()}",
+            "datastream@id": observation['timeseries_id'],
+            "phenomenonTime": observation['datetime'],
+            "resultTime": observation['datetime'],
+            "result": observation['value'],
+            "parameters": {
+                "version": observation['version'],
+                "flags": observation['flags']
+            }
+        }
 
     def _format_system_json(self, station_meta: json) -> Dict:
         """

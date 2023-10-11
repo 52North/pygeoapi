@@ -37,9 +37,12 @@ class CSAParams:
     limit: int = 10
     offset: int = 0  # non-standard
 
+    def parameters(self):
+        return [name for name in dir(self) if not name.startswith('_')]
+
 
 class CommonParams(CSAParams):
-    datetime: Optional[str] = None
+    datetime: Optional[datetime] = None
     foi: Optional[List[str]] = None
     observed_property: Optional[List[str]] = None
 
@@ -70,87 +73,93 @@ class SamplingFeaturesParams(CommonParams):
 
 
 class DatastreamsParams(CommonParams):
-    phenomenonTimeStart: Optional[str] = None
-    phenomenonTimeEnd: Optional[str] = None
-    resultTimeStart: Optional[str] = None
-    resultTimeEnd: Optional[str] = None
+    phenomenonTimeStart: Optional[datetime] = None
+    phenomenonTimeEnd: Optional[datetime] = None
+    resultTimeStart: Optional[datetime] = None
+    resultTimeEnd: Optional[datetime] = None
     system: Optional[List[str]] = None
     schema: Optional[bool] = None
 
 
-def parse_query_parameters(type, params: Dict):
-    def _parse_list(identifier):
-        if params.get(identifier) is not None:
-            parsed[identifier] = []
-            for elem in params.get(identifier).split(","):
-                parsed[identifier].append(elem)
+class ObservationsParams(CommonParams):
+    phenomenonTimeStart: Optional[datetime] = None
+    phenomenonTimeEnd: Optional[datetime] = None
+    resultTimeStart: Optional[datetime] = None
+    resultTimeEnd: Optional[datetime] = None
+    system: Optional[List[str]] = None
+    datastream: Optional[str] = None
 
-    def _parse_time(raw, start, end):
+
+def parse_query_parameters(out_parameters: CSAParams, input_parameters: Dict):
+    def _parse_list(identifier):
+        setattr(out_parameters,
+                identifier,
+                [elem for elem in input_parameters.get(identifier).split(",")])
+
+    def _verbatim(key):
+        setattr(out_parameters, key, input_parameters.get(key))
+
+    def _parse_time(key):
+        setattr(out_parameters, key, datetime.fromisoformat(input_parameters.get(key)))
+
+    def _parse_time_interval(key):
+        raw = input_parameters.get(key)
+        start = key + "Start"
+        end = key + "End"
         # TODO: Support 'latest' qualifier
-        now = datetime.utcnow().isoformat("T") + "Z"
+        now = datetime.utcnow()
         if "/" in raw:
             # time interval
             split = raw.split("/")
             startts = split[0]
             endts = split[1]
             if startts == "now":
-                parsed[start] = now
+                setattr(out_parameters, start, now)
             elif startts == "..":
-                parsed[start] = None
+                setattr(out_parameters, start, None)
             else:
-                parsed[start] = raw
+                setattr(out_parameters, start, datetime.fromisoformat(raw))
             if endts == "now":
-                parsed[end] = now
+                setattr(out_parameters, end, now)
             elif endts == "..":
-                parsed[end] = None
+                setattr(out_parameters, end, None)
             else:
-                parsed[end] = raw
+                setattr(out_parameters, end, datetime.fromisoformat(raw))
         else:
             if raw == "now":
-                parsed[start] = now
-                parsed[end] = now
+                setattr(out_parameters, start, now)
+                setattr(out_parameters, end, now)
             else:
-                parsed[start] = raw
-                parsed[end] = raw
+                setattr(out_parameters, start, raw)
+                setattr(out_parameters, end, raw)
 
-    parsed = {}
+    parser = {
+        "id": _parse_list,
+        "system": _parse_list,
+        "parent": _parse_list,
+        "observed_property": _parse_list,
+        "procedure": _parse_list,
+        "controlled_property": _parse_list,
+        "foi": _parse_list,
+        "format": _verbatim,
+        "limit": _verbatim,
+        "offset": _verbatim,
+        "bbox": _verbatim,
+        "datetime": _parse_time,
+        "geom": _verbatim,
+        "datastream": _verbatim,
+        "phenomenonTime": _parse_time_interval,
+        "resultTime": _parse_time_interval,
+    }
 
-    _parse_list("id")
-    _parse_list("system")
-    _parse_list("parent")
-    _parse_list("observed_property")
-    _parse_list("procedure")
-    _parse_list("controlled_property")
-    _parse_list("foi")
+    # Iterate possible parameters
+    for p in input_parameters:
+        # Check if parameter is supplied as input
+        if p in out_parameters.parameters():
+            # Parse value with appropriate mapping function
+            parser[p](p)
 
-    if params.get("format") is not None:
-        parsed["format"] = params.get("format")
-
-    if params.get("limit") is not None:
-        parsed["limit"] = params.get("limit")
-
-    if params.get("offset") is not None:
-        parsed["offset"] = params.get("offset")
-
-    if params.get("bbox") is not None:
-        parsed["bbox"] = params.get("bbox")
-
-    if params.get("datetime") is not None:
-        parsed["datetime"] = params.get("datetime")
-
-    if params.get("geom") is not None:
-        parsed["geom"] = params.get("geom")
-
-    if params.get("phenomenonTime") is not None:
-        _parse_time(params.get("phenomenonTime"), "phenomenonTimeStart", "phenomenonTimeEnd")
-
-    if params.get("resultTime") is not None:
-        _parse_time(params.get("resultTime"), "resultTimeStart", "resultTimeEnd")
-
-    for name, p in parsed.items():
-        if hasattr(type, name):
-            setattr(type, name, p)
-    return type
+    return out_parameters
 
 
 CSAResponse = Tuple[List[Dict], List[Dict]]
@@ -215,27 +224,18 @@ class ConnectedSystemsBaseProvider:
 
         raise NotImplementedError()
 
-    def query_properties(self, parameters: CSAParams) -> CSAResponse:
-        """
-        implements queries on properties as specified in openapi-connectedsystems-1
-
-        :returns: dict of formatted properties
-        """
-
-        raise NotImplementedError()
-
     def query_datastreams(self, parameters: DatastreamsParams) -> CSAResponse:
         """
-        implements queries on properties as specified in openapi-connectedsystems-2
+        implements queries on datastreams as specified in openapi-connectedsystems-2
 
         :returns: dict of formatted properties
         """
 
         raise NotImplementedError()
 
-    def query_observations(self, parameters: CSAParams) -> CSAResponse:
+    def query_observations(self, parameters: ObservationsParams) -> CSAResponse:
         """
-        implements queries on properties as specified in openapi-connectedsystems-2
+        implements queries on observations as specified in openapi-connectedsystems-2
 
         :returns: dict of formatted properties
         """
