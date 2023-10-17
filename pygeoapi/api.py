@@ -703,6 +703,9 @@ class API:
                 provider_definition["base_url"] = self.base_url
                 self.connected_system_provider = load_plugin('provider', provider_definition)
 
+                if self.config['resources'] is None:
+                    self.config['resources'] = {}
+
                 # TODO: refresh this upon modification of the datastore (e.g. adding new collections)
                 for name, collection in self.connected_system_provider.get_collections().items():
                     self.config['resources'][name] = collection
@@ -4266,6 +4269,9 @@ class API:
 
     def _format_csa_response(self, request, headers, data, is_collection: bool) -> Tuple[dict, int, str]:
         headers['Content-Type'] = FORMAT_TYPES.get(request.format)
+
+        if data is None or len(data[0]) == 0:
+            return headers, HTTPStatus.OK, ""
 
         if request.format == F_GEOJSON:
             response = {
