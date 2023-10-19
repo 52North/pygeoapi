@@ -162,7 +162,8 @@ def parse_query_parameters(out_parameters: CSAParams, input_parameters: Dict):
     return out_parameters
 
 
-CSAResponse = Tuple[List[Dict], List[Dict]]
+CSAGetResponse = Tuple[List[Dict], List[Dict]]
+CSACrudResponse = List[str]
 
 
 class ConnectedSystemsBaseProvider:
@@ -179,7 +180,7 @@ class ConnectedSystemsBaseProvider:
         """Returns the list of collections that are served by this provider"""
         return {}
 
-    def query_systems(self, parameters: SystemsParams) -> CSAResponse:
+    def query_systems(self, parameters: SystemsParams) -> CSAGetResponse:
         """
         implements queries on systems as specified in openapi-connectedsystems-1
 
@@ -188,7 +189,7 @@ class ConnectedSystemsBaseProvider:
 
         raise NotImplementedError()
 
-    def query_deployments(self, parameters: DeploymentsParams) -> CSAResponse:
+    def query_deployments(self, parameters: DeploymentsParams) -> CSAGetResponse:
         """
         implements queries on deployments as specified in openapi-connectedsystems-1
 
@@ -197,7 +198,7 @@ class ConnectedSystemsBaseProvider:
 
         raise NotImplementedError()
 
-    def query_procedures(self, parameters: ProceduresParams) -> CSAResponse:
+    def query_procedures(self, parameters: ProceduresParams) -> CSAGetResponse:
         """
         implements queries on procedures as specified in openapi-connectedsystems-1
 
@@ -206,7 +207,7 @@ class ConnectedSystemsBaseProvider:
 
         raise NotImplementedError()
 
-    def query_sampling_features(self, parameters: SamplingFeaturesParams) -> CSAResponse:
+    def query_sampling_features(self, parameters: SamplingFeaturesParams) -> CSAGetResponse:
         """
         implements queries on samplingFeatures as specified in openapi-connectedsystems-1
 
@@ -215,7 +216,7 @@ class ConnectedSystemsBaseProvider:
 
         raise NotImplementedError()
 
-    def query_properties(self, parameters: CSAParams) -> CSAResponse:
+    def query_properties(self, parameters: CSAParams) -> CSAGetResponse:
         """
         implements queries on properties as specified in openapi-connectedsystems-1
 
@@ -224,7 +225,7 @@ class ConnectedSystemsBaseProvider:
 
         raise NotImplementedError()
 
-    def query_datastreams(self, parameters: DatastreamsParams) -> CSAResponse:
+    def query_datastreams(self, parameters: DatastreamsParams) -> CSAGetResponse:
         """
         implements queries on datastreams as specified in openapi-connectedsystems-2
 
@@ -233,7 +234,7 @@ class ConnectedSystemsBaseProvider:
 
         raise NotImplementedError()
 
-    def query_observations(self, parameters: ObservationsParams) -> CSAResponse:
+    def query_observations(self, parameters: ObservationsParams) -> CSAGetResponse:
         """
         implements queries on observations as specified in openapi-connectedsystems-2
 
@@ -242,7 +243,7 @@ class ConnectedSystemsBaseProvider:
 
         raise NotImplementedError()
 
-    def create(self, item):
+    def create(self, type: str, item) -> CSACrudResponse:
         """
         Create a new item
 

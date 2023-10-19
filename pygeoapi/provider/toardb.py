@@ -85,6 +85,30 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
         "timezone": OWL_PREFIX + "126",
     }
 
+    UOM_LOOKUP = {
+        "mean_topography_srtm_alt_90m_year1994": "m",
+        "mean_topography_srtm_alt_1km_year1994": "m",
+        "max_topography_srtm_relative_alt_5km_year1994": "m",
+        "min_topography_srtm_relative_alt_5km_year1994": "m",
+        "stddev_topography_srtm_relative_alt_5km_year1994": "m",
+        "distance_to_major_road_year2020": "m",
+        "mean_stable_nightlights_1km_year2013": "unkown",
+        "mean_stable_nightlights_5km_year2013": "unkown",
+        "max_stable_nightlights_25km_year2013": "unkown",
+        "max_stable_nightlights_25km_year1992": "unkown",
+        "mean_population_density_250m_year2015": "residents km-2",
+        "mean_population_density_5km_year2015": "residents km-2",
+        "max_population_density_25km_year2015": "1/km^2",
+        "mean_population_density_250m_year1990": "residents km-2",
+        "mean_population_density_5km_year1990": "residents km-2",
+        "max_population_density_25km_year1990": "1/km^2",
+        "mean_nox_emissions_10km_year2015": "kg m-2 s-1",
+        "mean_nox_emissions_10km_year2000": "kg m-2 s-1",
+        "wheat_production_year2000": "thousand tons",
+        "rice_production_year2000": "thousand tons",
+        "omi_no2_column_years2011to2015": "10^15 molecules cm-2",
+    }
+
     META_URL = BASEURL + "stationmeta/"
     TIMESERIES_URL = BASEURL + "timeseries/"
     DATA_URL = BASEURL + "data/timeseries/"
@@ -166,7 +190,7 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
                 }
         }
 
-    def query_systems(self, parameters: SystemsParams) -> CSAResponse:
+    def query_systems(self, parameters: SystemsParams) -> CSAGetResponse:
         """
         query the provider
 
@@ -183,19 +207,19 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
         else:
             return [self._format_system_sml(item) for item in items.values()], links
 
-    def query_deployments(self, parameters: DeploymentsParams) -> CSAResponse:
+    def query_deployments(self, parameters: DeploymentsParams) -> CSAGetResponse:
         if parameters.id is not None:
             raise ProviderItemNotFoundError()
         else:
             return [], []
 
-    def query_procedures(self, parameters: ProceduresParams) -> CSAResponse:
+    def query_procedures(self, parameters: ProceduresParams) -> CSAGetResponse:
         if parameters.id is not None:
             raise ProviderItemNotFoundError()
         else:
             return [], []
 
-    def query_sampling_features(self, parameters: SamplingFeaturesParams) -> CSAResponse:
+    def query_sampling_features(self, parameters: SamplingFeaturesParams) -> CSAGetResponse:
         params = {
             "fields": "id,coordinates",
         }
@@ -247,13 +271,13 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
 
         return features, links_json
 
-    def query_properties(self, parameters: CSAParams) -> CSAResponse:
+    def query_properties(self, parameters: CSAParams) -> CSAGetResponse:
         if parameters.id is not None:
             raise ProviderItemNotFoundError()
         else:
             return [], []
 
-    def query_datastreams(self, parameters: DatastreamsParams) -> CSAResponse:
+    def query_datastreams(self, parameters: DatastreamsParams) -> CSAGetResponse:
 
         params = {}
         if parameters.system is not None:
@@ -281,7 +305,7 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
             schema = [{
                 "obsFormat": "application/om+json",
                 "resultSchema": {
-                    "id": series["variable"]["id"],
+                    "id": str(series["variable"]["id"]),
                     "name": series["variable"]["name"],
                     "type": "Quantity",
                     "label": series["variable"]["displayname"],
@@ -315,7 +339,7 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
             datastreams = []
             for series in timeseries:
                 datastreams.append({
-                    "id": series["id"],
+                    "id": str(series["id"]),
                     "name": series["label"],
                     "system@link": {
                         "href": f"{self.base_url}/systems/{series['station']['id']}?f=smljson"
@@ -364,7 +388,7 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
 
             return datastreams, links_json
 
-    def query_observations(self, parameters: ObservationsParams) -> CSAResponse:
+    def query_observations(self, parameters: ObservationsParams) -> CSAGetResponse:
         params = {}
         self._parse_paging(parameters, params)
 
@@ -456,12 +480,30 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
             },
             **station_meta["globalmeta"]
         }
+        # transform to str
+        metadata["station_id"] = str(metadata["station_id"])
+
+        characteristics = []
+        for key, val in metadata.items():
+            t = "Quantity" if isinstance(val, numbers.Number) else "Text"
+            elem = {
+                "type": t,
+                "label": key,
+                "definition": self.OWL_LOOKUP[key],
+                "value": val
+            }
+            if t == "Quantity":
+                elem["uom"] = {
+                    "code": self.UOM_LOOKUP[key]
+                }
+            characteristics.append(elem)
 
         system = {
             "type": "PhysicalSystem",
-            "id": station_meta["id"],
-            "uniqueId": station_meta["id"],
+            "id": str(station_meta["id"]),
+            "uniqueId": str(station_meta["id"]),
             "name": station_meta["name"],
+            "label": station_meta["name"],
             "definition": "http://www.w3.org/ns/sosa/Platform",
             "identifiers":
                 [{
@@ -478,15 +520,13 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
             },
             "characteristics": [
                 {
-                    "type": "Quantity" if isinstance(val, numbers.Number) else "Text",
-                    "label": key,
-                    "definition": self.OWL_LOOKUP[key],
-                    "value": val
-                } for key, val in metadata.items()
+                    "id": "globalmeta",
+                    "characteristics": characteristics
+                    },
             ],
             "outputs": [
                 {
-                    "id": val["id"],
+                    "id": str(val["id"]),
                     "name": val["name"],
                     "type": "Quantity",
                     "label": val["displayname"],
