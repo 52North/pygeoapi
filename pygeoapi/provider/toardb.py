@@ -209,8 +209,6 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
 
         self._parse_paging(parameters, params)
 
-        print(params)
-
         stations = self.session.get(self.META_URL, params=params).json()
 
         features = []
@@ -228,8 +226,8 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
                 "geometry": {
                     "type": "Point",
                     "coordinates": [
-                        station["coordinates"]["lat"],
                         station["coordinates"]["lng"],
+                        station["coordinates"]["lat"],
                         station["coordinates"]["alt"],
                     ]
                 }
@@ -426,8 +424,8 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    station_meta["coordinates"]["lat"],
                     station_meta["coordinates"]["lng"],
+                    station_meta["coordinates"]["lat"],
                     station_meta["coordinates"]["alt"],
                 ]
             },
@@ -473,8 +471,8 @@ class ToarDBProvider(ConnectedSystemsBaseProvider):
             "position": {
                 "type": "Point",
                 "coordinates": [
-                    station_meta["coordinates"]["lat"],
                     station_meta["coordinates"]["lng"],
+                    station_meta["coordinates"]["lat"],
                     station_meta["coordinates"]["alt"],
                 ],
             },
