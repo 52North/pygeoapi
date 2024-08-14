@@ -70,6 +70,9 @@ from pygeoapi.util import (
     get_crs_from_uri, get_supported_crs_list, render_j2_template, to_json
 )
 
+from pygeoapi.registry.config_resource_registry import ConfigResourceRegistry
+from pygeoapi.registry.openapi_change_listener import OpenApiChangeListener
+
 LOGGER = logging.getLogger(__name__)
 
 #: Return headers for requests (e.g:X-Powered-By)
@@ -685,6 +688,28 @@ class API:
         self.manager = get_manager(self.config)
         LOGGER.info('Process manager plugin loaded')
 
+        # load the resource registry implementation
+        if (self.config['components'] and
+            'resource_registry' in self.config['components']):
+            rr_def = {
+                'name': self.config['components']['resource_registry'],
+                'resources': self.config['resources'],
+                'resources_change_listeners': [OpenApiChangeListener()]
+            }
+            self.registry = load_plugin('resource_registry', rr_def)
+            LOGGER.info(f'''Resource registry class loaded: 
+                        {self.config["components"]["resource_registry"]}''')
+        else:
+            # default registry
+            self.registry = ConfigResourceRegistry({
+                'resources': self.config['resources'],
+                'resources_change_listeners': [OpenApiChangeListener()]
+            })
+
+    def get_registry(self):
+        LOGGER.info(f'returning registry: {self.registry}')
+        return self.registry
+
     @gzip
     @pre_process
     @jsonldify
@@ -787,16 +812,13 @@ class API:
             fcm['stac'] = False
             fcm['collection'] = False
 
-            if filter_dict_by_key_value(self.config['resources'],
-                                        'type', 'process'):
+            if self.registry.get_resources_of_type('process'):
                 fcm['processes'] = True
 
-            if filter_dict_by_key_value(self.config['resources'],
-                                        'type', 'stac-collection'):
+            if self.registry.get_resources_of_type('stac-collection'):
                 fcm['stac'] = True
 
-            if filter_dict_by_key_value(self.config['resources'],
-                                        'type', 'collection'):
+            if self.registry.get_resources_of_type('collection'):
                 fcm['collection'] = True
 
             content = render_j2_template(self.tpl_config, 'landing_page.html',
@@ -867,7 +889,7 @@ class API:
 
         conformance_list = CONFORMANCE_CLASSES
 
-        for key, value in self.config['resources'].items():
+        for key, value in self.registry.get_all_resources().items():
             if value['type'] == 'process':
                 conformance_list.extend(
                     apis_dict['process'].CONFORMANCE_CLASSES)
@@ -918,8 +940,7 @@ class API:
             'links': []
         }
 
-        collections = filter_dict_by_key_value(self.config['resources'],
-                                               'type', 'collection')
+        collections = self.registry.get_resources_of_type('collection')
 
         if all([dataset is not None, dataset not in collections.keys()]):
             msg = 'Collection not found'
@@ -1125,9 +1146,8 @@ class API:
                 if dataset is not None:
                     LOGGER.debug('Creating extended coverage metadata')
                     try:
-                        provider_def = get_provider_by_type(
-                            self.config['resources'][k]['providers'],
-                            'coverage')
+                        provider_def = self.registry.get_resource_provider_of_type(
+                            k, 'coverage')
                         p = load_plugin('provider', provider_def)
                     except ProviderConnectionError:
                         msg = 'connection error (check logs)'
@@ -1327,7 +1347,7 @@ class API:
         headers = request.get_response_headers(**self.api_headers)
 
         if any([dataset is None,
-                dataset not in self.config['resources'].keys()]):
+                self.registry.get_resource_config(dataset) is None]):
 
             msg = 'Collection not found'
             return self.get_exception(
@@ -1336,17 +1356,20 @@ class API:
         LOGGER.debug('Creating collection schema')
         try:
             LOGGER.debug('Loading feature provider')
-            p = load_plugin('provider', get_provider_by_type(
-                self.config['resources'][dataset]['providers'], 'feature'))
+            p = load_plugin('provider', self.registry.
+                                    get_resource_provider_of_type(dataset,
+                                                                   'feature'))
         except ProviderTypeError:
             try:
                 LOGGER.debug('Loading coverage provider')
-                p = load_plugin('provider', get_provider_by_type(
-                    self.config['resources'][dataset]['providers'], 'coverage'))  # noqa
+                p = load_plugin('provider', self.registry.
+                                    get_resource_provider_of_type(dataset,
+                                                                   'coverage'))
             except ProviderTypeError:
                 LOGGER.debug('Loading record provider')
-                p = load_plugin('provider', get_provider_by_type(
-                    self.config['resources'][dataset]['providers'], 'record'))
+                p = load_plugin('provider', self.registry.
+                                    get_resource_provider_of_type(dataset,
+                                                                   'record'))
         except ProviderGenericError as err:
             LOGGER.error(err)
             return self.get_exception(
@@ -1356,7 +1379,8 @@ class API:
         schema = {
             'type': 'object',
             'title': l10n.translate(
-                self.config['resources'][dataset]['title'], request.locale),
+                self.registry.get_resource_config(dataset)['title'],
+                request.locale),
             'properties': {},
             '$schema': 'http://json-schema.org/draft/2019-09/schema',
             '$id': f'{self.get_collections_url()}/{dataset}/schema'
@@ -1380,7 +1404,8 @@ class API:
 
         if request.format == F_HTML:  # render
             schema['title'] = l10n.translate(
-                self.config['resources'][dataset]['title'], request.locale)
+                self.registry.get_resource_config(dataset)['title'],
+                    request.locale)
 
             schema['collections_path'] = self.get_collections_url()
             schema['dataset_path'] = f'{self.get_collections_url()}/{dataset}'

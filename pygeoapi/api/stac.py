@@ -55,6 +55,7 @@ from pygeoapi.util import (
 
 from . import APIRequest, API, FORMAT_TYPES, F_JSON, F_HTML
 
+from pygeoapi.registry.resource_registry import ResourceRegistry
 
 LOGGER = logging.getLogger(__name__)
 
@@ -90,8 +91,7 @@ def get_stac_root(api: API, request: APIRequest) -> Tuple[dict, int, str]:
         'links': []
     }
 
-    stac_collections = filter_dict_by_key_value(api.config['resources'],
-                                                'type', 'stac-collection')
+    stac_collections = api.get_registry().get_resources_of_type('stac-collection')
 
     for key, value in stac_collections.items():
         content['links'].append({
@@ -132,8 +132,7 @@ def get_stac_path(api: API, request: APIRequest,
     if dir_tokens:
         dataset = dir_tokens[0]
 
-    stac_collections = filter_dict_by_key_value(api.config['resources'],
-                                                'type', 'stac-collection')
+    stac_collections = api.get_registry().get_resources_of_type('stac-collection')
 
     if dataset not in stac_collections:
         msg = 'Collection not found'

@@ -38,6 +38,7 @@ import logging
 import os
 from pathlib import Path
 from typing import Union
+import tempfile
 
 import click
 from jsonschema import validate as jsonschema_validate
@@ -922,6 +923,22 @@ def load_openapi_document() -> dict:
 
     return openapi_
 
+def update_openapi_document(new_resources):
+    """
+    Update the OpenAPI configuration so runtime changes are reflected.
+    """
+    tmp = tempfile.NamedTemporaryFile()
+    with open(tmp.name, 'w', encoding='utf-8') as tf, open(
+        os.environ.get('PYGEOAPI_CONFIG'), 'r', encoding='utf-8') as cf:
+        from_file_config = yaml.safe_load(cf)
+        from_file_config["resources"] = new_resources
+        yaml.safe_dump(from_file_config, tf)
+        tmp.flush()
+        oai_content = generate_openapi_document(Path(tmp.name), 'yaml')
+
+    with open(os.environ.get('PYGEOAPI_OPENAPI'), 'w', encoding='utf-8') as of:
+        of.write(oai_content)
+        LOGGER.info('OpenAPI document updated')
 
 @click.group()
 def openapi():

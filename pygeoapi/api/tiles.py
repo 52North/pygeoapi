@@ -59,6 +59,8 @@ from . import (
     APIRequest, API, FORMAT_TYPES, F_JSON, F_HTML, SYSTEM_LOCALE, F_JSONLD
 )
 
+from pygeoapi.registry.resource_registry import ResourceRegistry
+
 LOGGER = logging.getLogger(__name__)
 
 CONFORMANCE_CLASSES = [
@@ -82,10 +84,12 @@ def get_collection_tiles(api: API, request: APIRequest,
     :returns: tuple of headers, status code, content
     """
 
+    registry = api.get_registry()
+
     headers = request.get_response_headers(SYSTEM_LOCALE,
                                            **api.api_headers)
     if any([dataset is None,
-            dataset not in api.config['resources'].keys()]):
+            dataset not in registry.get_all_resources().keys()]):
 
         msg = 'Collection not found'
         return api.get_exception(
@@ -94,8 +98,8 @@ def get_collection_tiles(api: API, request: APIRequest,
     LOGGER.debug('Creating collection tiles')
     LOGGER.debug('Loading provider')
     try:
-        t = get_provider_by_type(
-                api.config['resources'][dataset]['providers'], 'tile')
+        t = registry.get_resource_provider_of_type(
+                            dataset, 'tile')
         p = load_plugin('provider', t)
     except (KeyError, ProviderTypeError):
         msg = 'Invalid collection tiles'
@@ -173,11 +177,11 @@ def get_collection_tiles(api: API, request: APIRequest,
     if request.format == F_HTML:  # render
         tiles['id'] = dataset
         tiles['title'] = l10n.translate(
-            api.config['resources'][dataset]['title'], SYSTEM_LOCALE)
+            registry.get_resource_config(dataset)['title'], SYSTEM_LOCALE)
         tiles['tilesets'] = [
             scheme.tileMatrixSet for scheme in p.get_tiling_schemes()]
         tiles['bounds'] = \
-            api.config['resources'][dataset]['extents']['spatial']['bbox']
+            registry.get_resource_config(dataset)['extents']['spatial']['bbox']
         tiles['minzoom'] = p.options['zoom']['min']
         tiles['maxzoom'] = p.options['zoom']['max']
         tiles['collections_path'] = api.get_collections_url()
@@ -210,6 +214,8 @@ def get_collection_tiles_data(
     :returns: tuple of headers, status code, content
     """
 
+    registry = api.get_registry()
+
     format_ = request.format
     if not format_:
         return api.get_format_exception(request)
@@ -217,8 +223,7 @@ def get_collection_tiles_data(
                                            **api.api_headers)
     LOGGER.debug('Processing tiles')
 
-    collections = filter_dict_by_key_value(api.config['resources'],
-                                           'type', 'collection')
+    collections = registry.get_resources_of_type('collection')
 
     if dataset not in collections.keys():
         msg = 'Collection not found'
@@ -227,8 +232,8 @@ def get_collection_tiles_data(
 
     LOGGER.debug('Loading tile provider')
     try:
-        t = get_provider_by_type(
-            api.config['resources'][dataset]['providers'], 'tile')
+        t = registry.get_resource_provider_of_type(
+                            dataset, 'tile')
         p = load_plugin('provider', t)
 
         format_ = p.format_type
@@ -270,12 +275,14 @@ def get_collection_tiles_metadata(
     :returns: tuple of headers, status code, content
     """
 
+    registry = api.get_registry()
+
     if not request.is_valid([TilesMetadataFormat.TILEJSON]):
         return api.get_format_exception(request)
     headers = request.get_response_headers(**api.api_headers)
 
     if any([dataset is None,
-            dataset not in api.config['resources'].keys()]):
+            dataset not in registry.get_all_resources().keys()]):
 
         msg = 'Collection not found'
         return api.get_exception(
@@ -284,8 +291,8 @@ def get_collection_tiles_metadata(
     LOGGER.debug('Creating collection tiles')
     LOGGER.debug('Loading provider')
     try:
-        t = get_provider_by_type(
-            api.config['resources'][dataset]['providers'], 'tile')
+        t = registry.get_resource_provider_of_type(
+                            dataset, 'tile')
         p = load_plugin('provider', t)
     except KeyError:
         msg = 'Invalid collection tiles'
@@ -309,10 +316,10 @@ def get_collection_tiles_metadata(
         dataset=dataset, server_url=api.base_url,
         layer=p.get_layer(), tileset=matrix_id,
         metadata_format=request._format, title=l10n.translate(
-            api.config['resources'][dataset]['title'],
+            registry.get_resource_config(dataset)['title'],
             request.locale),
         description=l10n.translate(
-            api.config['resources'][dataset]['description'],
+            registry.get_resource_config(dataset)['description'],
             request.locale),
         language=prv_locale)
 

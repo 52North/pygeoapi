@@ -66,6 +66,8 @@ from . import (
     validate_bbox, validate_datetime
 )
 
+from pygeoapi.registry.resource_registry import ResourceRegistry
+
 LOGGER = logging.getLogger(__name__)
 
 OGC_RELTYPES_BASE = 'http://www.opengis.net/def/rel/ogc/1.0'
@@ -112,9 +114,10 @@ def get_collection_queryables(api: API, request: Union[APIRequest, Any],
     """
 
     headers = request.get_response_headers(**api.api_headers)
+    registry = api.get_registry()
 
     if any([dataset is None,
-            dataset not in api.config['resources'].keys()]):
+            registry.get_resource_config(dataset) is None]):
 
         msg = 'Collection not found'
         return api.get_exception(
@@ -123,17 +126,18 @@ def get_collection_queryables(api: API, request: Union[APIRequest, Any],
     LOGGER.debug('Creating collection queryables')
     try:
         LOGGER.debug('Loading feature provider')
-        p = load_plugin('provider', get_provider_by_type(
-            api.config['resources'][dataset]['providers'], 'feature'))
+        p = load_plugin('provider', registry.get_resource_provider_of_type(
+                        dataset, 'feature'))
+            
     except ProviderTypeError:
         try:
             LOGGER.debug('Loading coverage provider')
-            p = load_plugin('provider', get_provider_by_type(
-                api.config['resources'][dataset]['providers'], 'coverage'))  # noqa
+            p = load_plugin('provider', registry.get_resource_provider_of_type(
+                        dataset, 'coverage'))  # noqa
         except ProviderTypeError:
             LOGGER.debug('Loading record provider')
-            p = load_plugin('provider', get_provider_by_type(
-                api.config['resources'][dataset]['providers'], 'record'))
+            p = load_plugin('provider', registry.get_resource_provider_of_type(
+                        dataset, 'record'))
         finally:
             msg = 'queryables not available for this collection'
             return api.get_exception(
@@ -148,7 +152,7 @@ def get_collection_queryables(api: API, request: Union[APIRequest, Any],
     queryables = {
         'type': 'object',
         'title': l10n.translate(
-            api.config['resources'][dataset]['title'], request.locale),
+            registry.get_resource_config(dataset)['title'], request.locale),
         'properties': {},
         '$schema': 'http://json-schema.org/draft/2019-09/schema',
         '$id': f'{api.get_collections_url()}/{dataset}/queryables'
@@ -185,7 +189,7 @@ def get_collection_queryables(api: API, request: Union[APIRequest, Any],
 
     if request.format == F_HTML:  # render
         queryables['title'] = l10n.translate(
-            api.config['resources'][dataset]['title'], request.locale)
+            api.get_registry().get_resource_config(dataset)['title'], request.locale)
 
         queryables['collections_path'] = api.get_collections_url()
         queryables['dataset_path'] = f'{api.get_collections_url()}/{dataset}'
@@ -227,8 +231,7 @@ def get_collection_items(
                            'properties', 'skipGeometry', 'q',
                            'filter', 'filter-lang', 'filter-crs']
 
-    collections = filter_dict_by_key_value(api.config['resources'],
-                                           'type', 'collection')
+    collections = api.get_registry().get_resources_of_type('collection')
 
     if dataset not in collections.keys():
         msg = 'Collection not found'
@@ -633,8 +636,7 @@ def get_collection_items(
     return headers, HTTPStatus.OK, to_json(content, api.pretty_print)
 
 
-def post_collection_items(
-        api: API, request: APIRequest, dataset) -> Tuple[dict, int, str]:
+def post_collection_items( api: API, request: APIRequest, dataset) -> Tuple[dict, int, str]:
     """
     Queries collection or filter an item
 
@@ -659,8 +661,7 @@ def post_collection_items(
                            'properties', 'skipGeometry', 'q',
                            'filter-lang', 'filter-crs']
 
-    collections = filter_dict_by_key_value(api.config['resources'],
-                                           'type', 'collection')
+    collections = api.get_registry().get_resources_of_type('collection')
 
     if dataset not in collections.keys():
         msg = 'Invalid collection'
@@ -936,8 +937,7 @@ def manage_collection_item(
     # has been determined
     headers = request.get_response_headers(SYSTEM_LOCALE, **api.api_headers)
 
-    collections = filter_dict_by_key_value(api.config['resources'],
-                                           'type', 'collection')
+    collections = api.get_registry().get_resources_of_type('collection')
 
     if dataset not in collections.keys():
         msg = 'Collection not found'
@@ -1045,8 +1045,7 @@ def get_collection_item(api: API, request: APIRequest,
 
     LOGGER.debug('Processing query parameters')
 
-    collections = filter_dict_by_key_value(api.config['resources'],
-                                           'type', 'collection')
+    collections = api.get_registry().get_resources_of_type('collection')
 
     if dataset not in collections.keys():
         msg = 'Collection not found'

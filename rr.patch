@@ -1,0 +1,592 @@
+diff --git a/pygeoapi-config.yml b/pygeoapi-config.yml
+index 97e3f5f..28cb780 100644
+--- a/pygeoapi-config.yml
++++ b/pygeoapi-config.yml
+@@ -53,6 +53,9 @@ server:
+ #        connection: /tmp/pygeoapi-process-manager.db
+ #        output_dir: /tmp/
+     # ogc_schemas_location: /opt/schemas.opengis.net
++
++components:
++    resource_registry: ConfigResourceRegistry
+     
+ logging:
+     level: ERROR
+diff --git a/pygeoapi/api.py b/pygeoapi/api.py
+index 9dd0998..bfbd69d 100644
+--- a/pygeoapi/api.py
++++ b/pygeoapi/api.py
+@@ -91,6 +91,9 @@ from pygeoapi.util import (dategetter, RequestedProcessExecutionMode,
+                            CrsTransformSpec, transform_bbox)
+ 
+ from pygeoapi.models.provider.base import TilesMetadataFormat
++from pygeoapi.openapi import update_openapi_document
++from pygeoapi.registry.config_resource_registry import ConfigResourceRegistry
++from pygeoapi.registry.resource_registry import ResourcesChangeListener
+ 
+ LOGGER = logging.getLogger(__name__)
+ 
+@@ -638,7 +641,7 @@ class APIRequest:
+         return headers_
+ 
+ 
+-class API:
++class API(ResourcesChangeListener):
+     """API object"""
+ 
+     def __init__(self, config):
+@@ -680,6 +683,24 @@ class API:
+ 
+         self.manager = get_manager(self.config)
+         LOGGER.info('Process manager plugin loaded')
++        
++        # load the resource registry implementation
++        if (self.config['components'] and
++            'resource_registry' in self.config['components']):
++            rr_def = {
++                'name': self.config['components']['resource_registry'],
++                'resources': self.config['resources'],
++                'resources_change_listeners': [self]
++            }
++            self.registry = load_plugin('resource_registry', rr_def)
++            LOGGER.info(f'''Resource registry class loaded: 
++                        {self.config["components"]["resource_registry"]}''')
++        else:
++            # default registry
++            self.registry = ConfigResourceRegistry({
++                'resources': self.config['resources'],
++                'resources_change_listeners': [self]
++            })
+ 
+     @gzip
+     @pre_process
+@@ -766,16 +787,13 @@ class API:
+             fcm['stac'] = False
+             fcm['collection'] = False
+ 
+-            if filter_dict_by_key_value(self.config['resources'],
+-                                        'type', 'process'):
++            if self.registry.get_resources_of_type('process'):
+                 fcm['processes'] = True
+ 
+-            if filter_dict_by_key_value(self.config['resources'],
+-                                        'type', 'stac-collection'):
++            if self.registry.get_resources_of_type('stac-collection'):
+                 fcm['stac'] = True
+ 
+-            if filter_dict_by_key_value(self.config['resources'],
+-                                        'type', 'collection'):
++            if self.registry.get_resources_of_type('collection'):
+                 fcm['collection'] = True
+ 
+             content = render_j2_template(self.tpl_config, 'landing_page.html',
+@@ -843,7 +861,7 @@ class API:
+ 
+         conformance_list = CONFORMANCE['common']
+ 
+-        for key, value in self.config['resources'].items():
++        for key, value in self.registry.get_all_resources().items():
+             if value['type'] == 'process':
+                 conformance_list.extend(CONFORMANCE[value['type']])
+             else:
+@@ -886,8 +904,7 @@ class API:
+             'links': []
+         }
+ 
+-        collections = filter_dict_by_key_value(self.config['resources'],
+-                                               'type', 'collection')
++        collections = self.registry.get_resources_of_type('collection')
+ 
+         if all([dataset is not None, dataset not in collections.keys()]):
+             msg = 'Collection not found'
+@@ -1111,9 +1128,8 @@ class API:
+                 if dataset is not None:
+                     LOGGER.debug('Creating extended coverage metadata')
+                     try:
+-                        provider_def = get_provider_by_type(
+-                            self.config['resources'][k]['providers'],
+-                            'coverage')
++                        provider_def = self.registry.get_resource_provider_of_type(
++                            k, 'coverage')
+                         p = load_plugin('provider', provider_def)
+                     except ProviderConnectionError:
+                         msg = 'connection error (check logs)'
+@@ -1184,8 +1200,10 @@ class API:
+                 # TODO: translate
+                 LOGGER.debug('Adding EDR links')
+                 try:
+-                    p = load_plugin('provider', get_provider_by_type(
+-                        self.config['resources'][dataset]['providers'], 'edr'))
++                    
++                    p = load_plugin('provider', self.registry.
++                                    get_resource_provider_of_type(
++                                        dataset, 'edr'))
+                     parameters = p.get_fields()
+                     if parameters:
+                         collection['parameter-names'] = {}
+@@ -1286,7 +1304,7 @@ class API:
+         headers = request.get_response_headers(**self.api_headers)
+ 
+         if any([dataset is None,
+-                dataset not in self.config['resources'].keys()]):
++                self.registry.get_resource_config(dataset) is None]):
+ 
+             msg = 'Collection not found'
+             return self.get_exception(
+@@ -1295,12 +1313,14 @@ class API:
+         LOGGER.debug('Creating collection queryables')
+         try:
+             LOGGER.debug('Loading feature provider')
+-            p = load_plugin('provider', get_provider_by_type(
+-                self.config['resources'][dataset]['providers'], 'feature'))
++            p = load_plugin('provider', self.registry.
++                                    get_resource_provider_of_type(dataset,
++                                                                   'feature'))
+         except ProviderTypeError:
+             LOGGER.debug('Loading record provider')
+-            p = load_plugin('provider', get_provider_by_type(
+-                self.config['resources'][dataset]['providers'], 'record'))
++            p = load_plugin('provider', self.registry.
++                                    get_resource_provider_of_type(dataset,
++                                                                   'record'))
+         except ProviderConnectionError:
+             msg = 'connection error (check logs)'
+             return self.get_exception(
+@@ -1315,7 +1335,8 @@ class API:
+         queryables = {
+             'type': 'object',
+             'title': l10n.translate(
+-                self.config['resources'][dataset]['title'], request.locale),
++                self.registry.get_resource_config(dataset)['title'],
++                request.locale),
+             'properties': {},
+             '$schema': 'http://json-schema.org/draft/2019-09/schema',
+             '$id': f'{self.get_collections_url()}/{dataset}/queryables'
+@@ -1344,7 +1365,8 @@ class API:
+ 
+         if request.format == F_HTML:  # render
+             queryables['title'] = l10n.translate(
+-                self.config['resources'][dataset]['title'], request.locale)
++                self.registry.get_resource_config(dataset)['title'],
++                request.locale)
+ 
+             queryables['collections_path'] = self.get_collections_url()
+ 
+@@ -1386,8 +1408,7 @@ class API:
+                                'properties', 'skipGeometry', 'q',
+                                'filter', 'filter-lang']
+ 
+-        collections = filter_dict_by_key_value(self.config['resources'],
+-                                               'type', 'collection')
++        collections = self.registry.get_resources_of_type('collection')
+ 
+         if dataset not in collections.keys():
+             msg = 'Collection not found'
+@@ -1828,8 +1849,7 @@ class API:
+                                'properties', 'skipGeometry', 'q',
+                                'filter-lang']
+ 
+-        collections = filter_dict_by_key_value(self.config['resources'],
+-                                               'type', 'collection')
++        collections = self.registry.get_resources_of_type('collection')
+ 
+         if dataset not in collections.keys():
+             msg = 'Invalid collection'
+@@ -2118,8 +2138,7 @@ class API:
+         headers = request.get_response_headers(SYSTEM_LOCALE,
+                                                **self.api_headers)
+ 
+-        collections = filter_dict_by_key_value(self.config['resources'],
+-                                               'type', 'collection')
++        collections = self.registry.get_resources_of_type('collection')
+ 
+         if dataset not in collections.keys():
+             msg = 'Collection not found'
+@@ -2229,8 +2248,7 @@ class API:
+ 
+         LOGGER.debug('Processing query parameters')
+ 
+-        collections = filter_dict_by_key_value(self.config['resources'],
+-                                               'type', 'collection')
++        collections = self.registry.get_resources_of_type('collection')
+ 
+         if dataset not in collections.keys():
+             msg = 'Collection not found'
+@@ -2427,8 +2445,8 @@ class API:
+ 
+         LOGGER.debug('Loading provider')
+         try:
+-            collection_def = get_provider_by_type(
+-                self.config['resources'][dataset]['providers'], 'coverage')
++            collection_def = self.registry.get_resource_provider_of_type(
++                            dataset, 'coverage')
+ 
+             p = load_plugin('provider', collection_def)
+         except KeyError:
+@@ -2476,7 +2494,8 @@ class API:
+ 
+         try:
+             datetime_ = validate_datetime(
+-                self.config['resources'][dataset]['extents'], datetime_)
++                self.registry.get_resource_config(dataset)['extents'],
++                datetime_)
+         except ValueError as err:
+             msg = str(err)
+             return self.get_exception(
+@@ -2577,8 +2596,8 @@ class API:
+ 
+         LOGGER.debug('Loading provider')
+         try:
+-            collection_def = get_provider_by_type(
+-                self.config['resources'][dataset]['providers'], 'coverage')
++            collection_def = self.registry.get_resource_provider_of_type(
++                dataset, 'coverage')
+ 
+             p = load_plugin('provider', collection_def)
+ 
+@@ -2605,7 +2624,7 @@ class API:
+         elif format_ == F_HTML:
+             data['id'] = dataset
+             data['title'] = l10n.translate(
+-                self.config['resources'][dataset]['title'],
++                self.registry.get_resource_config(dataset)['title'],
+                 self.default_locale)
+             data['collections_path'] = self.get_collections_url()
+             content = render_j2_template(self.tpl_config,
+@@ -2634,8 +2653,8 @@ class API:
+                                                **self.api_headers)
+         LOGGER.debug('Loading provider')
+         try:
+-            collection_def = get_provider_by_type(
+-                self.config['resources'][dataset]['providers'], 'coverage')
++            collection_def = self.registry.get_resource_provider_of_type(
++                            dataset, 'coverage')
+ 
+             p = load_plugin('provider', collection_def)
+ 
+@@ -2662,7 +2681,7 @@ class API:
+         elif format_ == F_HTML:
+             data['id'] = dataset
+             data['title'] = l10n.translate(
+-                self.config['resources'][dataset]['title'],
++                self.registry.get_resource_config(dataset)['title'],
+                 self.default_locale)
+             data['collections_path'] = self.get_collections_url()
+             content = render_j2_template(self.tpl_config,
+@@ -2691,7 +2710,7 @@ class API:
+         headers = request.get_response_headers(SYSTEM_LOCALE,
+                                                **self.api_headers)
+         if any([dataset is None,
+-                dataset not in self.config['resources'].keys()]):
++                self.registry.get_resource_config(dataset) is None]):
+ 
+             msg = 'Collection not found'
+             return self.get_exception(
+@@ -2700,8 +2719,7 @@ class API:
+         LOGGER.debug('Creating collection tiles')
+         LOGGER.debug('Loading provider')
+         try:
+-            t = get_provider_by_type(
+-                    self.config['resources'][dataset]['providers'], 'tile')
++            t = self.registry.get_resource_provider_of_type(dataset, 'tile')
+             p = load_plugin('provider', t)
+         except (KeyError, ProviderTypeError):
+             msg = 'Invalid collection tiles'
+@@ -2782,12 +2800,14 @@ class API:
+         if request.format == F_HTML:  # render
+             tiles['id'] = dataset
+             tiles['title'] = l10n.translate(
+-                self.config['resources'][dataset]['title'], SYSTEM_LOCALE)
++                self.registry.get_resource_config(dataset)['title'],
++                SYSTEM_LOCALE)
+             tiles['tilesets'] = [
+                 scheme.tileMatrixSet for scheme in p.get_tiling_schemes()]
+             tiles['format'] = metadata_format
+             tiles['bounds'] = \
+-                self.config['resources'][dataset]['extents']['spatial']['bbox']
++                self.registry.get_resource_config(dataset)['extents'][
++                    'spatial']['bbox']
+             tiles['minzoom'] = p.options['zoom']['min']
+             tiles['maxzoom'] = p.options['zoom']['max']
+             tiles['collections_path'] = self.get_collections_url()
+@@ -2825,8 +2845,7 @@ class API:
+                                                **self.api_headers)
+         LOGGER.debug('Processing tiles')
+ 
+-        collections = filter_dict_by_key_value(self.config['resources'],
+-                                               'type', 'collection')
++        collections = self.registry.get_resources_of_type('collection')
+ 
+         if dataset not in collections.keys():
+             msg = 'Collection not found'
+@@ -2835,8 +2854,7 @@ class API:
+ 
+         LOGGER.debug('Loading tile provider')
+         try:
+-            t = get_provider_by_type(
+-                self.config['resources'][dataset]['providers'], 'tile')
++            t = self.registry.get_resource_provider_of_type(dataset, 'tile')
+             p = load_plugin('provider', t)
+ 
+             format_ = p.format_type
+@@ -2907,7 +2925,7 @@ class API:
+         headers = request.get_response_headers(**self.api_headers)
+ 
+         if any([dataset is None,
+-                dataset not in self.config['resources'].keys()]):
++                self.registry.get_resource_config(dataset) is None]):
+ 
+             msg = 'Collection not found'
+             return self.get_exception(
+@@ -2916,8 +2934,7 @@ class API:
+         LOGGER.debug('Creating collection tiles')
+         LOGGER.debug('Loading provider')
+         try:
+-            t = get_provider_by_type(
+-                self.config['resources'][dataset]['providers'], 'tile')
++            self.registry.get_resource_provider_of_type(dataset, 'tile')
+             p = load_plugin('provider', t)
+         except KeyError:
+             msg = 'Invalid collection tiles'
+@@ -2961,7 +2978,8 @@ class API:
+             metadata['metadata'] = tiles_metadata
+             metadata['id'] = dataset
+             metadata['title'] = l10n.translate(
+-                self.config['resources'][dataset]['title'], request.locale)
++                self.registry.get_resource_config(dataset)['title'],
++                request.locale)
+             metadata['tileset'] = matrix_id
+             metadata['format'] = metadata_format.value
+             metadata['collections_path'] = self.get_collections_url()
+@@ -2976,10 +2994,10 @@ class API:
+                 dataset=dataset, server_url=self.base_url,
+                 layer=p.get_layer(), tileset=matrix_id,
+                 metadata_format=metadata_format, title=l10n.translate(
+-                    self.config['resources'][dataset]['title'],
++                    self.registry.get_resource_config(dataset)['title'],
+                     request.locale),
+                 description=l10n.translate(
+-                    self.config['resources'][dataset]['description'],
++                    self.registry.get_resource_config(dataset)['description'],
+                     request.locale),
+                 language=prv_locale)
+ 
+@@ -3012,8 +3030,8 @@ class API:
+ 
+         LOGGER.debug('Loading provider')
+         try:
+-            collection_def = get_provider_by_type(
+-                self.config['resources'][dataset]['providers'], 'map')
++            collection_def = self.registry.get_resource_provider_of_type(
++                dataset, 'map')
+ 
+             p = load_plugin('provider', collection_def)
+         except KeyError:
+@@ -3075,7 +3093,8 @@ class API:
+                 return headers, HTTPStatus.BAD_REQUEST, to_json(
+                     exception, self.pretty_print)
+         except AttributeError:
+-            bbox = self.config['resources'][dataset]['extents']['spatial']['bbox']  # noqa
++            bbox = self.registry.get_resource_config(
++                dataset)['extents']['spatial']['bbox']  # noqa
+         try:
+             query_args['bbox'] = [float(c) for c in bbox]
+         except ValueError:
+@@ -3092,7 +3111,8 @@ class API:
+         datetime_ = request.params.get('datetime')
+         try:
+             query_args['datetime_'] = validate_datetime(
+-                self.config['resources'][dataset]['extents'], datetime_)
++                self.registry.get_resource_config(dataset)['extents'],
++                datetime_)
+         except ValueError as err:
+             msg = str(err)
+             return self.get_exception(
+@@ -3167,8 +3187,8 @@ class API:
+ 
+         LOGGER.debug('Loading provider')
+         try:
+-            collection_def = get_provider_by_type(
+-                self.config['resources'][dataset]['providers'], 'map')
++            collection_def = self.registry.get_resource_provider_of_type(
++                dataset, 'map')
+ 
+             p = load_plugin('provider', collection_def)
+         except KeyError:
+@@ -3734,8 +3754,7 @@ class API:
+             return self.get_format_exception(request)
+         headers = request.get_response_headers(self.default_locale,
+                                                **self.api_headers)
+-        collections = filter_dict_by_key_value(self.config['resources'],
+-                                               'type', 'collection')
++        collections = self.registry.get_resources_of_type('collection')
+ 
+         if dataset not in collections.keys():
+             msg = 'Collection not found'
+@@ -3910,8 +3929,8 @@ class API:
+             'links': []
+         }
+ 
+-        stac_collections = filter_dict_by_key_value(self.config['resources'],
+-                                                    'type', 'stac-collection')
++        stac_collections = self.registry.get_resources_of_type(
++            'stac-collection')
+ 
+         for key, value in stac_collections.items():
+             content['links'].append({
+@@ -3956,8 +3975,8 @@ class API:
+         if dir_tokens:
+             dataset = dir_tokens[0]
+ 
+-        stac_collections = filter_dict_by_key_value(self.config['resources'],
+-                                                    'type', 'stac-collection')
++        stac_collections = self.registry.get_resources_of_type(
++            'stac-collection')
+ 
+         if dataset not in stac_collections:
+             msg = 'Collection not found'
+@@ -4168,7 +4187,10 @@ class API:
+                 content_crs_uri = DEFAULT_CRS
+ 
+         headers['Content-Crs'] = f'<{content_crs_uri}>'
+-
++        
++    def on_resources_changed(self, new_resources: dict):
++        update_openapi_document(new_resources)
++        
+ 
+ def validate_bbox(value=None) -> list:
+     """
+diff --git a/pygeoapi/openapi.py b/pygeoapi/openapi.py
+index c023a2c..1bea0ea 100644
+--- a/pygeoapi/openapi.py
++++ b/pygeoapi/openapi.py
+@@ -37,6 +37,7 @@ import json
+ import logging
+ import os
+ from pathlib import Path
++import tempfile
+ from typing import Union
+ 
+ import click
+@@ -1363,6 +1364,22 @@ def generate_openapi_document(cfg_file: Union[Path, io.TextIOWrapper],
+         content = to_json(get_oas(s), pretty=pretty_print)
+     return content
+ 
++def update_openapi_document(new_resources):
++    """
++    Update the OpenAPI configuration so runtime changes are reflected.
++    """
++    tmp = tempfile.NamedTemporaryFile()
++    with open(tmp.name, 'w', encoding='utf-8') as tf, open(
++        os.environ.get('PYGEOAPI_CONFIG'), 'r', encoding='utf-8') as cf:
++        from_file_config = yaml.safe_load(cf)
++        from_file_config["resources"] = new_resources
++        yaml.safe_dump(from_file_config, tf)
++        tmp.flush()
++        oai_content = generate_openapi_document(Path(tmp.name), 'yaml')
++
++    with open(os.environ.get('PYGEOAPI_OPENAPI'), 'w', encoding='utf-8') as of:
++        of.write(oai_content)
++        LOGGER.info('OpenAPI document updated')
+ 
+ @click.group()
+ def openapi():
+diff --git a/pygeoapi/plugin.py b/pygeoapi/plugin.py
+index bb0383e..dc38222 100644
+--- a/pygeoapi/plugin.py
++++ b/pygeoapi/plugin.py
+@@ -71,6 +71,9 @@ PLUGINS = {
+         'Dummy': 'pygeoapi.process.manager.dummy.DummyManager',
+         'MongoDB': 'pygeoapi.process.manager.mongodb_.MongoDBManager',
+         'TinyDB': 'pygeoapi.process.manager.tinydb_.TinyDBManager'
++    },
++    'resource_registry': {
++        'ConfigResourceRegistry': 'pygeoapi.registry.config_resource_registry.ConfigResourceRegistry'
+     }
+ }
+ 
+diff --git a/pygeoapi/registry/config_resource_registry.py b/pygeoapi/registry/config_resource_registry.py
+new file mode 100644
+index 0000000..9c08cc2
+--- /dev/null
++++ b/pygeoapi/registry/config_resource_registry.py
+@@ -0,0 +1,34 @@
++from pygeoapi.registry.resource_registry import ResourceRegistry
++from pygeoapi.util import (filter_dict_by_key_value, get_provider_by_type)
++
++class ConfigResourceRegistry(ResourceRegistry):
++
++    def __init__(self, plugin_def: dict):
++        super(ConfigResourceRegistry, self).__init__(plugin_def)
++        self.resources = plugin_def['resources']
++        self.resources_change_listeners = plugin_def['resources_change_listeners']
++    
++    def get_all_resources(self) -> dict:
++        return self.resources
++    
++    def get_resources_of_type(self, target_type: str) -> dict:
++        return filter_dict_by_key_value(self.resources, 'type', target_type)
++    
++    def get_resource_provider_of_type(self, resource_name: str,
++                             provider_type: str) -> dict:
++        return get_provider_by_type(self.resources[resource_name]['providers'],
++                                    provider_type)
++
++    def set_resource_config(self, resource_name: str,
++                            configuration: dict) -> None:
++        self.call_change_listeners(self.resources)
++    
++    def delete_resource_config(self, resource_name: str) -> None:
++        self.call_change_listeners(self.resources)
++    
++    def get_resource_config(self, resource_name: str) -> dict:
++        if resource_name in self.resources:
++            return self.resources[resource_name]
++        else:
++            return None
++
+diff --git a/pygeoapi/registry/resource_registry.py b/pygeoapi/registry/resource_registry.py
+new file mode 100644
+index 0000000..2b31b0c
+--- /dev/null
++++ b/pygeoapi/registry/resource_registry.py
+@@ -0,0 +1,37 @@
++class ResourceRegistry:
++
++    def __init__(self, plugin_def: dict):
++        self.resources_change_listeners = plugin_def['resources_change_listeners']
++    
++    def get_all_resources(self) -> dict:
++        pass
++    
++    def get_resources_of_type(self, target_type: str) -> dict:
++        pass
++
++    def get_resource_provider_of_type(self, resource_name: str,
++                             provider_type: str) -> dict:
++        pass
++
++    def set_resource_config(self, resource_name: str,
++                            configuration: dict) -> None:
++        pass
++    
++    def delete_resource_config(self, resource_name: str) -> None:
++        pass
++    
++    def get_resource_config(self, resource_name: str) -> dict:
++        pass
++    
++    def call_change_listeners(self, new_resources):
++        for cl in self.resources_change_listeners:
++            cl.on_resources_changed(new_resources)
++
++        
++class ResourcesChangeListener:
++    
++    def __init__(self):
++        pass
++    
++    def on_resources_changed(self, new_resources: dict):
++        pass
+\ No newline at end of file

@@ -80,6 +80,9 @@ PLUGINS = {
         'MongoDB': 'pygeoapi.process.manager.mongodb_.MongoDBManager',
         'TinyDB': 'pygeoapi.process.manager.tinydb_.TinyDBManager',
         'PostgreSQL': 'pygeoapi.process.manager.postgresql.PostgreSQLManager'
+    },
+    'resource_registry': {
+        'ConfigResourceRegistry': 'pygeoapi.registry.config_resource_registry.ConfigResourceRegistry'
     }
 }
 

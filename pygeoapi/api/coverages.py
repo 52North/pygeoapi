@@ -54,6 +54,8 @@ from . import (
     validate_subset
 )
 
+from pygeoapi.registry.resource_registry import ResourceRegistry
+
 LOGGER = logging.getLogger(__name__)
 
 CONFORMANCE_CLASSES = [
@@ -82,13 +84,15 @@ def get_collection_coverage(
     query_args = {}
     format_ = request.format or F_JSON
 
+    registry = api.get_registry()
+
     # Force response content type and language (en-US only) headers
     headers = request.get_response_headers(SYSTEM_LOCALE, **api.api_headers)
 
     LOGGER.debug('Loading provider')
     try:
-        collection_def = get_provider_by_type(
-            api.config['resources'][dataset]['providers'], 'coverage')
+        collection_def = registry.get_resource_provider_of_type(
+                            dataset, 'coverage')
 
         p = load_plugin('provider', collection_def)
     except KeyError:
@@ -130,7 +134,8 @@ def get_collection_coverage(
 
     try:
         datetime_ = validate_datetime(
-            api.config['resources'][dataset]['extents'], datetime_)
+            registry.get_resource_config(dataset)['extents'],
+                datetime_)
     except ValueError as err:
         msg = str(err)
         return api.get_exception(

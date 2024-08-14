@@ -53,6 +53,8 @@ from pygeoapi.util import (
 
 from . import APIRequest, API, validate_datetime
 
+from pygeoapi.registry.resource_registry import ResourceRegistry
+
 LOGGER = logging.getLogger(__name__)
 
 CONFORMANCE_CLASSES = [
@@ -61,7 +63,8 @@ CONFORMANCE_CLASSES = [
 
 
 def get_collection_map(api: API, request: APIRequest,
-                       dataset, style=None) -> Tuple[dict, int, str]:
+                       dataset,
+                       style=None) -> Tuple[dict, int, str]:
     """
     Returns a subset of a collection map
 
@@ -80,10 +83,12 @@ def get_collection_map(api: API, request: APIRequest,
     headers = request.get_response_headers(**api.api_headers)
     LOGGER.debug('Processing query parameters')
 
+    registry = api.get_registry()
+
     LOGGER.debug('Loading provider')
     try:
-        collection_def = get_provider_by_type(
-            api.config['resources'][dataset]['providers'], 'map')
+        collection_def = registry.get_resource_provider_of_type(
+                            dataset, 'map')
 
         p = load_plugin('provider', collection_def)
     except KeyError:
@@ -131,7 +136,7 @@ def get_collection_map(api: API, request: APIRequest,
             return headers, HTTPStatus.BAD_REQUEST, to_json(
                 exception, api.pretty_print)
     except AttributeError:
-        bbox = api.config['resources'][dataset]['extents']['spatial']['bbox']  # noqa
+        bbox = registry.get_resource_config(dataset)['extents']['spatial']['bbox']  # noqa
     try:
         query_args['bbox'] = [float(c) for c in bbox]
     except ValueError:
@@ -148,7 +153,7 @@ def get_collection_map(api: API, request: APIRequest,
     datetime_ = request.params.get('datetime')
     try:
         query_args['datetime_'] = validate_datetime(
-            api.config['resources'][dataset]['extents'], datetime_)
+            registry.get_resource_config(dataset)['extents'], datetime_)
     except ValueError as err:
         msg = str(err)
         return api.get_exception(
@@ -199,8 +204,8 @@ def get_collection_map_legend(api: API, request: APIRequest,
 
     LOGGER.debug('Loading provider')
     try:
-        collection_def = get_provider_by_type(
-            api.config['resources'][dataset]['providers'], 'map')
+        collection_def = api.get_registry().get_resource_provider_of_type(
+                            dataset, 'map')
 
         p = load_plugin('provider', collection_def)
     except KeyError:

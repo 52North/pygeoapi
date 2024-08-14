@@ -57,6 +57,8 @@ from pygeoapi.util import (
 from . import (APIRequest, API, F_COVERAGEJSON, F_HTML, F_JSONLD,
                validate_datetime, validate_bbox)
 
+from pygeoapi.registry.resource_registry import ResourceRegistry
+
 LOGGER = logging.getLogger(__name__)
 
 CONFORMANCE_CLASSES = [
@@ -83,8 +85,7 @@ def get_collection_edr_query(api: API, request: APIRequest,
         return api.get_format_exception(request)
     headers = request.get_response_headers(api.default_locale,
                                            **api.api_headers)
-    collections = filter_dict_by_key_value(api.config['resources'],
-                                           'type', 'collection')
+    collections = api.get_registry().get_resources_of_type('collection')
 
     if dataset not in collections.keys():
         msg = 'Collection not found'
