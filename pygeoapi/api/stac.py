@@ -106,7 +106,7 @@ def get_stac_root(api: API, request: APIRequest) -> Tuple[dict, int, str]:
         })
 
     if request.format == F_HTML:  # render
-        content = render_j2_template(api.tpl_config,
+        content = render_j2_template(api.prepare_tpl_config(),
                                      'stac/collection.html',
                                      content, request.locale)
         return headers, HTTPStatus.OK, content
@@ -186,14 +186,14 @@ def get_stac_path(api: API, request: APIRequest,
             if 'assets' in content:  # item view
                 if content['type'] == 'Collection':
                     content = render_j2_template(
-                        api.tpl_config,
+                        api.prepare_tpl_config(),
                         'stac/collection_base.html',
                         content,
                         request.locale
                     )
                 elif content['type'] == 'Feature':
                     content = render_j2_template(
-                        api.tpl_config,
+                        api.prepare_tpl_config(),
                         'stac/item.html',
                         content,
                         request.locale
@@ -207,7 +207,7 @@ def get_stac_path(api: API, request: APIRequest,
                         'NoApplicableCode',
                         msg)
             else:
-                content = render_j2_template(api.tpl_config,
+                content = render_j2_template(api.prepare_tpl_config(),
                                              'stac/catalog.html',
                                              content, request.locale)
 

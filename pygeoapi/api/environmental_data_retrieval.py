@@ -229,7 +229,7 @@ def get_collection_edr_query(api: API, request: APIRequest,
             'href': f'{uri}?f={F_JSONLD}{serialized_query_params}'
         }]
 
-        content = render_j2_template(api.tpl_config,
+        content = render_j2_template(api.prepare_tpl_config(),
                                      'collections/edr/query.html', data,
                                      api.default_locale)
     else:

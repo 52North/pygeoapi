@@ -194,7 +194,7 @@ def get_collection_queryables(api: API, request: Union[APIRequest, Any],
         queryables['collections_path'] = api.get_collections_url()
         queryables['dataset_path'] = f'{api.get_collections_url()}/{dataset}'
 
-        content = render_j2_template(api.tpl_config,
+        content = render_j2_template(api.prepare_tpl_config(),
                                      'collections/queryables.html',
                                      queryables, request.locale)
 
@@ -593,7 +593,7 @@ def get_collection_items(
                                                     request.locale)
             # If title exists, use it as id in html templates
             content['id_field'] = content['title_field']
-        content = render_j2_template(api.tpl_config,
+        content = render_j2_template(api.prepare_tpl_config(),
                                      'collections/items/index.html',
                                      content, request.locale)
         return headers, HTTPStatus.OK, content
@@ -1183,7 +1183,7 @@ def get_collection_item(api: API, request: APIRequest,
                                                     request.locale)
         content['collections_path'] = api.get_collections_url()
 
-        content = render_j2_template(api.tpl_config,
+        content = render_j2_template(api.prepare_tpl_config(),
                                      'collections/items/item.html',
                                      content, request.locale)
         return headers, HTTPStatus.OK, content

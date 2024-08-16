@@ -821,7 +821,7 @@ class API:
             if self.registry.get_resources_of_type('collection'):
                 fcm['collection'] = True
 
-            content = render_j2_template(self.tpl_config, 'landing_page.html',
+            content = render_j2_template(self.prepare_tpl_config(), 'landing_page.html',
                                          fcm, request.locale)
             return headers, HTTPStatus.OK, content
 
@@ -858,7 +858,7 @@ class API:
             data = {
                 'openapi-document-path': path
             }
-            content = render_j2_template(self.tpl_config, template, data,
+            content = render_j2_template(self.prepare_tpl_config(), template, data,
                                          request.locale)
             return headers, HTTPStatus.OK, content
 
@@ -911,7 +911,7 @@ class API:
 
         headers = request.get_response_headers(**self.api_headers)
         if request.format == F_HTML:  # render
-            content = render_j2_template(self.tpl_config, 'conformance.html',
+            content = render_j2_template(self.prepare_tpl_config(), 'conformance.html',
                                          conformance, request.locale)
             return headers, HTTPStatus.OK, content
 
@@ -1307,11 +1307,11 @@ class API:
         if request.format == F_HTML:  # render
             fcm['collections_path'] = self.get_collections_url()
             if dataset is not None:
-                content = render_j2_template(self.tpl_config,
+                content = render_j2_template(self.prepare_tpl_config(),
                                              'collections/collection.html',
                                              fcm, request.locale)
             else:
-                content = render_j2_template(self.tpl_config,
+                content = render_j2_template(self.prepare_tpl_config(),
                                              'collections/index.html', fcm,
                                              request.locale)
 
@@ -1330,6 +1330,11 @@ class API:
             return headers, HTTPStatus.OK, to_json(jsonld, self.pretty_print)
 
         return headers, HTTPStatus.OK, to_json(fcm, self.pretty_print)
+
+    def prepare_tpl_config(self):
+        cfg = self.tpl_config
+        cfg['resources'] = self.registry.get_all_resources()
+        return cfg
 
     @gzip
     @pre_process
@@ -1410,7 +1415,7 @@ class API:
             schema['collections_path'] = self.get_collections_url()
             schema['dataset_path'] = f'{self.get_collections_url()}/{dataset}'
 
-            content = render_j2_template(self.tpl_config,
+            content = render_j2_template(self.prepare_tpl_config(),
                                          'collections/schema.html',
                                          schema, request.locale)
 

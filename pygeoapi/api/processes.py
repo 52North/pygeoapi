@@ -213,11 +213,11 @@ def describe_processes(api: API, request: APIRequest,
 
     if request.format == F_HTML:  # render
         if process is not None:
-            response = render_j2_template(api.tpl_config,
+            response = render_j2_template(api.prepare_tpl_config(),
                                           'processes/process.html',
                                           response, request.locale)
         else:
-            response = render_j2_template(api.tpl_config,
+            response = render_j2_template(api.prepare_tpl_config(),
                                           'processes/index.html', response,
                                           request.locale)
 
@@ -320,7 +320,7 @@ def get_jobs(api: API, request: APIRequest,
             'jobs': serialized_jobs,
             'now': datetime.now(timezone.utc).strftime(DATETIME_FORMAT)
         }
-        response = render_j2_template(api.tpl_config, j2_template, data,
+        response = render_j2_template(api.prepare_tpl_config(), j2_template, data,
                                       request.locale)
         return headers, HTTPStatus.OK, response
 
