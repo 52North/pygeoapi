@@ -1,12 +1,14 @@
 from pygeoapi.registry.resource_registry import ResourceRegistry
 from pygeoapi.util import (filter_dict_by_key_value, get_provider_by_type)
-
+"""
+This registry implementation is a functional replacement of a config based
+pygeoapi instance. Resources cannot be changed and are loaded at service start.
+"""
 class ConfigResourceRegistry(ResourceRegistry):
 
     def __init__(self, plugin_def: dict):
         super(ConfigResourceRegistry, self).__init__(plugin_def)
         self.resources = plugin_def['resources']
-        self.resources_change_listeners = plugin_def['resources_change_listeners']
     
     def get_all_resources(self) -> dict:
         return self.resources
@@ -21,10 +23,10 @@ class ConfigResourceRegistry(ResourceRegistry):
 
     def set_resource_config(self, resource_name: str,
                             configuration: dict) -> None:
-        self.call_change_listeners(self.resources)
+        pass
     
     def delete_resource_config(self, resource_name: str) -> None:
-        self.call_change_listeners(self.resources)
+        pass
     
     def get_resource_config(self, resource_name: str) -> dict:
         if resource_name in self.resources:
@@ -33,5 +35,4 @@ class ConfigResourceRegistry(ResourceRegistry):
             return None
 
     def call_change_listeners(self, new_resources):
-        for cl in self.resources_change_listeners:
-            cl.on_resources_changed(new_resources)
+        pass

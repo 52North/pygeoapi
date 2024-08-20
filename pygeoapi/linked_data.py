@@ -190,7 +190,7 @@ def geojson2jsonld(cls, data: dict, dataset: str,
     """
 
     LOGGER.debug('Fetching context and template from resource configuration')
-    jsonld = cls.config['resources'][dataset].get('linked-data', {})
+    jsonld = cls.get_registry().get_all_resources()[dataset].get('linked-data', {})
     ds_url = f"{cls.get_collections_url()}/{dataset}"
 
     context = jsonld.get('context', []).copy()

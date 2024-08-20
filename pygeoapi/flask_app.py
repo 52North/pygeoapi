@@ -31,6 +31,7 @@
 """Flask module providing the route paths to the api"""
 
 import os
+import json
 from typing import Union
 
 import click
@@ -609,6 +610,46 @@ if CONFIG['server'].get('admin'):
     admin_ = Admin(CONFIG, OPENAPI)
     APP.register_blueprint(ADMIN_BLUEPRINT)
 
+REGISTRY_BLUEPRINT = Blueprint('_registry', __name__, static_folder=STATIC_FOLDER)
+
+@REGISTRY_BLUEPRINT.route('/_registry/resources', methods=['GET', 'POST'])
+def registry_resources():
+    """
+    Registry endpoint
+
+    :returns: HTTP response
+    """
+
+    if request.method == 'GET':
+        return get_response(([], 200, api_.get_registry().get_all_resources()))
+
+    elif request.method == 'POST':
+        data = json.loads(request.get_data(as_text=True))
+        print(data)
+        api_.get_registry().set_resource_config('test', data['test'])
+        return get_response(([], 200, api_.get_registry().get_resource_config('test')))
+    
+
+@REGISTRY_BLUEPRINT.route('/_registry/resources/<resource_id>', methods=['GET', 'PATCH', 'DELETE'])
+def registry_resource():
+    """
+    Registry endpoint
+
+    :returns: HTTP response
+    """
+
+    if request.method == 'DELETE':
+        api_.get_registry().delete_resource_config()
+        return get_response(([], 200, {'deleted': True}))
+
+    pass
+
+
+
+
+if (CONFIG['components'] and
+            'resource_registry' in CONFIG['components']):
+    APP.register_blueprint(REGISTRY_BLUEPRINT)
 
 @click.command()
 @click.pass_context

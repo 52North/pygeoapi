@@ -82,7 +82,8 @@ PLUGINS = {
         'PostgreSQL': 'pygeoapi.process.manager.postgresql.PostgreSQLManager'
     },
     'resource_registry': {
-        'ConfigResourceRegistry': 'pygeoapi.registry.config_resource_registry.ConfigResourceRegistry'
+        'ConfigResourceRegistry': 'pygeoapi.registry.config_resource_registry.ConfigResourceRegistry',
+        'CrudConfigResourceRegistry': 'pygeoapi.registry.crud_config_resource_registry.CrudConfigResourceRegistry'
     }
 }
 
