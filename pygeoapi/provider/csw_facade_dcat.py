@@ -266,7 +266,7 @@ class CSWFacadeDCATProvider(BaseProvider):
             'id': record.identifier,
             'type': 'Feature',
             'geometry': None,
-            'time': record.date or None,
+            'time': {"timestamp": record.date} if record.date is not None else None,
             'properties': {},
             'links': [
                 self._gen_getrecordbyid_link(record.identifier),
