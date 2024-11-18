@@ -228,7 +228,6 @@ class CSWFacadeDCATProvider(BaseProvider):
 
         try:
             result = CatalogueServiceWeb(self.data, skip_caps=True)
-            LOGGER.warning(result.url)
             return result
 
         except Exception as err:
@@ -270,7 +269,13 @@ class CSWFacadeDCATProvider(BaseProvider):
             'time': record.date or None,
             'properties': {},
             'links': [
-                self._gen_getrecordbyid_link(record.identifier)
+                self._gen_getrecordbyid_link(record.identifier),
+                {
+                    'rel': 'alternate',
+                    'type': 'application/json+ld',
+                    'title': 'This document as JSON-LD (GeoDCAT-upliftable)',
+                    'href': f'./{record.identifier}?f=jsonld',
+                }
             ]
         }
 

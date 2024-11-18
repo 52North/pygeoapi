@@ -42,7 +42,7 @@ server:
   # cors: true
   pretty_print: true
   limit: 10
-    # templates:
+  # templates:
   # path: /path/to/Jinja2/templates
   # static: /path/to/static/folder # css/js/img
   map:
@@ -124,6 +124,8 @@ resources:
       spatial:
         bbox: [ -180,-90,180,90 ]
         crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    linked-data:
+      item_template: schemas/dcat/dcat-template.jsonld
     providers:
       - type: record
         name: CSWFacadeDCAT
@@ -140,7 +142,7 @@ resources:
       - type: text/html
         rel: canonical
         title: documentation
-        href: hhttps://gdk.gdi-de.org/geonetwork/srv/api/records/158e4f28-8b89-41bd-a326-e9fd09ab3564
+        href: https://gdk.gdi-de.org
         hreflang: en-US
     extents:
       spatial:
@@ -152,3 +154,26 @@ resources:
       - type: record
         name: CSWFacadeDCAT
         data: https://apps.geoportal.nrw.de/csw/service
+  SDI.europa:
+    type: collection
+    title: SDI - geospatial data catalogue
+    description: metadata records from https://sdi.eea.europa.eu/
+    keywords:
+      - observations
+      - monitoring
+    links:
+      - type: text/html
+        rel: canonical
+        title: documentation
+        href: https://sdi.eea.europa.eu/
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [ -180,-90,180,90 ]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    linked-data:
+      item_template: schemas/dcat/dcat-template.jsonld
+    providers:
+      - type: record
+        name: CSWFacadeDCAT
+        data: https://sdi.eea.europa.eu/catalogue/srv/eng/csw
