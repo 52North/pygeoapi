@@ -62,7 +62,7 @@ class CSWFacadeProvider(BaseProvider):
             'title': ('dc:title', 'title'),
             'description': ('dct:abstract', 'abstract'),
             'keywords': ('dc:subject', 'subjects'),
-            'date': ('dc:date', 'date'),
+            'date': ('gmd:dateStamp', 'datetimestamp'),
             'created': ('dct:created', 'created'),
             'updated': ('dct:modified', 'modified'),
             'rights': ('dc:rights', 'rights'),
@@ -179,7 +179,7 @@ class CSWFacadeProvider(BaseProvider):
         csw = self._get_csw()
         try:
             csw.getrecords2(esn='full', maxrecords=limit, startposition=offset,
-                            constraints=constraints, sortby=sortby2,
+                            constraints=constraints, sortby=sortby2, outputschema="http://www.isotc211.org/2005/gmd", typenames="gmd:MD_Metadata",
                             resulttype=resulttype)
         except ExceptionReport as err:
             msg = f'CSW error {err}'
@@ -192,6 +192,7 @@ class CSWFacadeProvider(BaseProvider):
         LOGGER.debug(f"Returned {response['numberReturned']} records")
 
         LOGGER.debug('Building result set')
+        LOGGER.warn(len(csw.records))
         for record in csw.records.values():
             response['features'].append(self._owslibrecord2record(record))
 
@@ -227,7 +228,9 @@ class CSWFacadeProvider(BaseProvider):
         """
 
         try:
-            return CatalogueServiceWeb(self.data)
+            result = CatalogueServiceWeb(self.data, skip_caps=True)
+            LOGGER.warn(result.url)
+            return result
         except Exception as err:
             err = f'CSW connection error: {err}'
             LOGGER.error(err)
@@ -259,12 +262,12 @@ class CSWFacadeProvider(BaseProvider):
         }
 
     def _owslibrecord2record(self, record):
-        LOGGER.debug(f'Transforming {record.identifier}')
+        LOGGER.warn(f'Transforming {record}')
         feature = {
             'id': record.identifier,
             'type': 'Feature',
             'geometry': None,
-            'time': record.date or None,
+            'time': record.datetimestamp or None,
             'properties': {},
             'links': [
                 self._gen_getrecordbyid_link(record.identifier)
@@ -272,29 +275,31 @@ class CSWFacadeProvider(BaseProvider):
         }
 
         LOGGER.debug('Processing record mappings to properties')
+        LOGGER.warn(record.identification[0].bbox)
         for key, value in self.record_mappings.items():
-            prop_value = getattr(record, value[1])
-            if prop_value not in [None, [], '']:
-                feature['properties'][key] = prop_value
+            if hasattr(record, value[1]):
+                prop_value = getattr(record, value[1])
+                if prop_value not in [None, [], '']:
+                    feature['properties'][key] = prop_value
 
-        if record.bbox is not None:
+        if hasattr(record, "identification") and len(record.identification) > 0 and record.identification[0].bbox is not None:
             LOGGER.debug('Adding bbox')
             bbox = [
-                get_typed_value(record.bbox.minx),
-                get_typed_value(record.bbox.miny),
-                get_typed_value(record.bbox.maxx),
-                get_typed_value(record.bbox.maxy)
+                get_typed_value(record.identification[0].bbox.minx),
+                get_typed_value(record.identification[0].bbox.miny),
+                get_typed_value(record.identification[0].bbox.maxx),
+                get_typed_value(record.identification[0].bbox.maxy)
             ]
             feature['geometry'] = bbox2geojsongeometry(bbox)
 
-        if record.references:
+        if hasattr(record, "references"):
             LOGGER.debug('Adding references as links')
             for link in record.references:
                 feature['links'].append({
                     'title': link['scheme'],
                     'href': link['url']
                 })
-        if record.uris:
+        if hasattr(record, "uris"):
             LOGGER.debug('Adding URIs as links')
             for link in record.uris:
                 feature['links'].append({
