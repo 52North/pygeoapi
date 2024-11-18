@@ -163,8 +163,23 @@
     "foaf": "http://xmlns.com/foaf/0.1/",
     "@version": 1.1
   },
-  {% set _dummy = data.pop('@context') %}
-  {% set _dummy = data.pop('@id') %}
-  {% set repr_json = data|tojson %}
-  {{ repr_json[1:-1] }}
+  "type": "Feature"
+  {% set toplevel = ['id', 'geometry', 'time', 'properties', 'links'] %}
+  {% set blacklist = ['type', '@context', '@id', 'gsp:hasGeometry', 'schema:geo'] %}
+  {%- for k,v in data.items() -%}
+    {# toplevel #}
+    {%- if k in toplevel -%}
+      ,{{k|tojson}}:{{v|tojson}}
+    {%- endif -%}
+  {% endfor %}
+  ,"properties": {
+    "identifier": {{ data["id"]|tojson }}
+    {%- for k,v in data.items() -%}
+        {# properties #}
+        {%- if not (k in toplevel or k in blacklist) -%}
+          ,{{k|tojson}}:{{v|tojson}}
+        {%- endif -%}
+    {%- endfor -%}
+  }
+
 }

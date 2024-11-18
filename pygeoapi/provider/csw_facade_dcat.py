@@ -305,6 +305,12 @@ class CSWFacadeDCATProvider(BaseProvider):
                     'href': link['url']
                 })
 
+        if record.rights:
+            right = ""
+            for link in record.rights:
+                right += link
+            feature["properties"]["rights"] = right
+
         return feature
 
     def __repr__(self):
