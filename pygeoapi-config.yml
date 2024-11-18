@@ -43,7 +43,7 @@ server:
   pretty_print: true
   limit: 10
     # templates:
-    # path: /path/to/Jinja2/templates
+  # path: /path/to/Jinja2/templates
   # static: /path/to/static/folder # css/js/img
   map:
     url: https://tile.openstreetmap.org/{z}/{x}/{y}.png
@@ -125,13 +125,9 @@ resources:
         bbox: [ -180,-90,180,90 ]
         crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
     providers:
-      - type: feature
+      - type: record
         name: CSWFacadeDCAT
         data: https://user.eumetsat.int/catalogue/elastic-csw/service
-        id_field: id
-        geometry:
-          x_field: long
-          y_field: lat
   GEOkatalog.nrw:
     type: collection
     title: GEOkatalog.NRW
@@ -148,9 +144,11 @@ resources:
         hreflang: en-US
     extents:
       spatial:
-        bbox: [ 5.90, 50.20, 9.50, 52.60]
+        bbox: [ 5.90, 50.20, 9.50, 52.60 ]
         crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    linked-data:
+      item_template: schemas/dcat/dcat-template.jsonld
     providers:
-      - type: feature
+      - type: record
         name: CSWFacadeDCAT
         data: https://apps.geoportal.nrw.de/csw/service
