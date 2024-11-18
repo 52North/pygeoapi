@@ -1,0 +1,5409 @@
+components:
+  parameters:
+    bbox:
+      description: "The bounding box is provided as four or six numbers, depending\
+        \ on whether the\ncoordinate reference system includes a vertical axis (height\
+        \ or depth).\n\nOnly features that have a geometry that intersects the bounding\
+        \ box are selected.\n\nThe order of coordinates is as follow:\n\n* Lower left\
+        \ corner, coordinate axis 1\n* Lower left corner, coordinate axis 2\n* Minimum\
+        \ value, coordinate axis 3 (optional)\n* Upper right corner, coordinate axis\
+        \ 1\n* Upper right corner, coordinate axis 2\n* Maximum value, coordinate\
+        \ axis 3 (optional)\n\nIf the value consists of four numbers, the coordinate\
+        \ reference system is\nWGS 84 longitude/latitude (http://www.opengis.net/def/crs/OGC/1.3/CRS84)\n\
+        unless a different coordinate reference system is specified in the parameter\
+        \ `bbox-crs`.\n\nIf the value consists of six numbers, the coordinate reference\
+        \ system is WGS 84 \nlongitude/latitude/ellipsoidal height (http://www.opengis.net/def/crs/OGC/0/CRS84h)\n\
+        unless a different coordinate reference system is specified in the parameter\
+        \ `bbox-crs`.\n\nThe query parameter `bbox-crs` is specified in OGC API -\
+        \ Features - Part 2: Coordinate \nReference Systems by Reference.\n\nFor WGS\
+        \ 84 longitude/latitude the values are in most cases the sequence of\nminimum\
+        \ longitude, minimum latitude, maximum longitude and maximum latitude.\nHowever,\
+        \ in cases where the box spans the antimeridian the first value\n(west-most\
+        \ box edge) is larger than the third value (east-most box edge).\n\nIf the\
+        \ vertical axis is included, the third and the sixth number are the\nbottom\
+        \ and the top of the 3-dimensional bounding box.\n\nIf a feature has multiple\
+        \ spatial geometry properties, it is the decision of the\nserver whether only\
+        \ a single spatial geometry property is used to determine\nthe extent or all\
+        \ relevant geometries."
+      examples:
+        2d:
+          summary: 2D bbox
+          value: -180,-90,180,90
+        3d:
+          summary: 3D bbox
+          value: -180,-90,180,90,0,1000
+      explode: false
+      in: query
+      name: bbox
+      required: false
+      schema:
+        oneOf:
+        - items:
+            type: number
+          maxItems: 4
+          minItems: 4
+          title: 2D Bbox
+          type: array
+        - items:
+            type: number
+          maxItems: 6
+          minItems: 6
+          title: 3D Bbox
+          type: array
+      style: form
+    bbox-crs:
+      description: Indicates the coordinate reference system for the given bbox coordinates.
+      explode: false
+      in: query
+      name: bbox-crs
+      required: false
+      schema:
+        format: uri
+        type: string
+      style: form
+    bbox-crs-epsg:
+      description: Indicates the EPSG for the given bbox coordinates.
+      explode: false
+      in: query
+      name: bbox-crs
+      required: false
+      schema:
+        default: 4326
+        type: integer
+      style: form
+    cascade:
+      description: If set to true, dependent resources are also deleted.
+      in: query
+      name: cascade
+      required: false
+      schema:
+        default: false
+        type: boolean
+    collectionId:
+      description: Local identifier of a collection
+      in: path
+      name: collectionId
+      required: true
+      schema:
+        minLength: 1
+        type: string
+    controlPropIdList:
+      description: 'List of property local IDs or unique IDs (URI).
+
+        Only resources that are associated to a controllable property that has one
+        of the provided identifiers are selected.'
+      explode: false
+      in: query
+      name: controlledProperty
+      required: false
+      schema:
+        $ref: '#/components/schemas/idListSchema'
+    crs:
+      description: Indicates the coordinate reference system for the results.
+      explode: false
+      in: query
+      name: crs
+      required: false
+      schema:
+        format: uri
+        type: string
+      style: form
+    datetime:
+      description: "Either a date-time or an interval. Date and time expressions adhere\
+        \ to RFC 3339. \nIntervals may be bounded or half-bounded (double-dots at\
+        \ start or end).\n\nOnly features that have a `validTime` property that intersects\
+        \ the value of\n`datetime` are selected.\n\nIf history is supported for a\
+        \ feature type, the following also applies:\n- if `datetime` is a time instant\
+        \ or `now`, only the description valid at the specified time is selected\n\
+        - if `datetime` is a time period, only the latest description valid during\
+        \ the period is selected\n- The response can never include more that one description\
+        \ of the same feature"
+      examples:
+        instant:
+          summary: Time instant
+          value: '2018-02-12T23:20:50Z'
+        latest:
+          summary: Latest
+          value: latest
+        now:
+          summary: Current time
+          value: now
+        period:
+          summary: Bounded interval
+          value: 2018-02-12T00:00:00Z/2018-03-18T12:31:12Z
+        period2:
+          summary: Half-bounded interval
+          value: 2018-02-12T00:00:00Z/..
+        period3:
+          summary: From date/time to now
+          value: 2018-02-12T00:00:00Z/now
+        period4:
+          summary: From now to date/time
+          value: now/2018-02-12T00:00:00Z
+        period5:
+          summary: Anything up to now
+          value: ../now
+        period6:
+          summary: Anything from now on
+          value: now/..
+      explode: false
+      in: query
+      name: datetime
+      required: false
+      schema:
+        $ref: '#/components/schemas/datetimeSchema'
+      style: form
+    deploymentId:
+      description: Local identifier of a Deployment
+      in: path
+      name: deploymentId
+      required: true
+      schema:
+        minLength: 1
+        type: string
+    f:
+      description: The optional f parameter indicates the output format which the
+        server shall provide as part of the response document.  The default format
+        is GeoJSON.
+      explode: false
+      in: query
+      name: f
+      required: false
+      schema:
+        default: json
+        enum:
+        - json
+        - html
+        - jsonld
+        type: string
+      style: form
+    featureId:
+      description: Local identifier of a Feature
+      in: path
+      name: featureId
+      required: true
+      schema:
+        minLength: 1
+        type: string
+    foiIdList:
+      description: 'List of feature local IDs or unique IDs (URI).
+
+        Only resources that are associated to a feature of interest that has one of
+        the provided identifiers are selected.'
+      explode: false
+      in: query
+      name: foi
+      required: false
+      schema:
+        $ref: '#/components/schemas/idListSchema'
+    geom:
+      description: 'WKT geometry and operator to filter resources on their location
+        or geometry.
+
+
+        Only features that have a geometry that intersects the value of `geom` are
+        selected.'
+      examples:
+        point:
+          value: LINESTRING((-86.53 12.45), (-86.54 12.46), (-86.55 12.47))
+        polygon:
+          value: POLYGON((0 0,4 0,4 4,0 4,0 0))
+      in: query
+      name: geom
+      required: false
+      schema:
+        type: string
+    idList:
+      description: 'List of resource local IDs or unique IDs (URI).
+
+        Only resources that have one of the provided identifiers are selected.'
+      examples:
+        id:
+          summary: Local IDs
+          value: RES_ID1,RES_ID2,RES_ID63
+        uri:
+          summary: Unique IDs
+          value: urn:example:resource:001,urn:example:resource:033
+      explode: false
+      in: query
+      name: id
+      required: false
+      schema:
+        $ref: '#/components/schemas/idListSchema'
+    keyword:
+      description: 'Comma separated list of keywords used for full-text search.
+
+
+        Only resources that have textual fields that contain one of the specified
+        keywords are selected.
+
+
+        The resource `name` and `description` properties are always searched.
+
+        It is up to the server to decide which other textual fields are searched.'
+      examples:
+        case1:
+          summary: One keyword
+          value: temp
+        case2:
+          summary: Several keywords
+          value: gps,imu
+      explode: false
+      in: query
+      name: q
+      required: false
+      schema:
+        items:
+          maxLength: 50
+          minLength: 1
+          type: string
+        type: array
+    lang:
+      description: The optional lang parameter instructs the server return a response
+        in a certain language, if supported.  If the language is not among the available
+        values, the Accept-Language header language will be used if it is supported.
+        If the header is missing, the default server language is used. Note that providers
+        may only support a single language (or often no language at all), that can
+        be different from the server language.  Language strings can be written in
+        a complex (e.g. "fr-CA,fr;q=0.9,en-US;q=0.8,en;q=0.7"), simple (e.g. "de")
+        or locale-like (e.g. "de-CH" or "fr_BE") fashion.
+      in: query
+      name: lang
+      required: false
+      schema:
+        default: en-US
+        enum:
+        - en-US
+        - fr-CA
+        type: string
+    limit:
+      description: 'This parameter limits the number of items that are presented in
+        the response document.
+
+
+        Only items that are on the first level of the collection in the response document
+        are counted.
+
+        Nested objects contained within the explicitly requested items shall not be
+        counted.'
+      explode: false
+      in: query
+      name: limit
+      required: false
+      schema:
+        default: 10
+        maximum: 10000
+        minimum: 1
+        type: integer
+      style: form
+    obsPropIdList:
+      description: 'List of property local IDs or unique IDs (URI).
+
+        Only resources that are associated to an observable property that has one
+        of the provided identifiers are selected.'
+      explode: false
+      in: query
+      name: observedProperty
+      required: false
+      schema:
+        $ref: '#/components/schemas/idListSchema'
+    offset:
+      description: The optional offset parameter indicates the index within the result
+        set from which the server shall begin presenting results in the response document.  The
+        first element has an index of 0 (default).
+      explode: false
+      in: query
+      name: offset
+      required: false
+      schema:
+        default: 0
+        minimum: 0
+        type: integer
+      style: form
+    parentIdList:
+      description: 'List of resource local IDs or unique IDs (URI).
+
+        Only resources that have a parent that has one of the provided identifiers
+        are selected.'
+      explode: false
+      in: query
+      name: parent
+      required: false
+      schema:
+        $ref: '#/components/schemas/idListSchema'
+    procedureId:
+      description: Local identifier of a Procedure
+      in: path
+      name: procedureId
+      required: true
+      schema:
+        minLength: 1
+        type: string
+    procedureIdList:
+      description: 'List of procedure local IDs or unique IDs (URI).
+
+        Only systems that implement a procedure that has one of the provided identifiers
+        are selected.'
+      explode: false
+      in: query
+      name: procedure
+      required: false
+      schema:
+        $ref: '#/components/schemas/idListSchema'
+    propId:
+      description: Local identifier of a Property
+      in: path
+      name: propId
+      required: true
+      schema:
+        minLength: 1
+        type: string
+    properties:
+      description: The properties that should be included for each feature. The parameter
+        value is a comma-separated list of property names.
+      explode: false
+      in: query
+      name: properties
+      required: false
+      schema:
+        items:
+          type: string
+        type: array
+      style: form
+    skipGeometry:
+      description: This option can be used to skip response geometries for each feature.
+      explode: false
+      in: query
+      name: skipGeometry
+      required: false
+      schema:
+        default: false
+        type: boolean
+      style: form
+    systemId:
+      description: Local identifier of a System
+      in: path
+      name: systemId
+      required: true
+      schema:
+        minLength: 1
+        type: string
+    systemIdList:
+      description: 'List of system local IDs or unique IDs (URI).
+
+        Only resources that are associated to a System that has one of the provided
+        identifiers are selected.'
+      explode: false
+      in: query
+      name: system
+      required: false
+      schema:
+        $ref: '#/components/schemas/idListSchema'
+    vendorSpecificParameters:
+      description: Additional "free-form" parameters that are not explicitly defined
+      in: query
+      name: vendorSpecificParameters
+      schema:
+        additionalProperties: true
+        type: object
+      style: form
+  requestBodies:
+    deploymentOrArray:
+      content:
+        application/geo+json:
+          examples:
+            sensor:
+              summary: Unmanned Surface Vehicle (USV) Deployment
+              value:
+                geometry:
+                  coordinates:
+                  - - - 53.76
+                      - -173.7
+                    - - 53.76
+                      - -155.07
+                    - - 75.03
+                      - -155.07
+                    - - 75.03
+                      - -173.7
+                    - - 53.76
+                      - -173.7
+                  type: Polygon
+                id: iv3f2kcq27gfi
+                links:
+                - href: https://data.example.org/api/deployments/iv3f2kcq27gfi?f=json
+                  rel: self
+                  title: this document
+                  type: application/geo+json
+                - href: https://data.example.org/api/deployments/iv3f2kcq27gfi?f=sml
+                  rel: alternate
+                  title: this resource as SensorML
+                  type: application/sml+json
+                properties:
+                  description: In July 2017, three saildrones were launched from Dutch
+                    Harbor, Alaska, in partnership with NOAA Research...
+                  featureType: http://www.w3.org/ns/ssn/Deployment
+                  members:
+                    href: https://data.example.org/api/deployments/iv3f2kcq27gfi/systems?f=json
+                    title: Deployed Systems
+                    type: application/geo+json
+                  name: Saildrone - 2017 Arctic Mission
+                  uid: urn:x-ogc:deployments:D001
+                  validTime:
+                  - '2017-07-17T00:00:00Z'
+                  - '2017-09-29T00:00:00Z'
+                type: Feature
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/deployment'
+              title: Single Deployment
+            - items:
+                $ref: '#/components/schemas/deployment'
+              minItems: 1
+              title: List of Deployments
+              type: array
+        application/sml+json:
+          examples:
+            sensor:
+              summary: Unmanned Surface Vehicle (USV) Deployment
+              value:
+                classifiers:
+                - definition: https://schema.org/DefinedRegion
+                  label: Region
+                  value: Arctic
+                contacts:
+                - contactInfo:
+                    address:
+                      administrativeArea: CA
+                      city: Alameda
+                      country: USA
+                      deliveryPoint: 1050 W. Tower Ave.
+                      postalCode: '94501'
+                    onlineResource: https://www.saildrone.com/
+                  organisationName: Saildrone, Inc.
+                  role: http://sensorml.com/ont/swe/property/Operator
+                - contactInfo:
+                    onlineResource: https://www.pmel.noaa.gov
+                  organisationName: NOAA Pacific Marine Environmental Laboratory (PMEL)
+                  role: http://sensorml.com/ont/swe/property/DataProvider
+                definition: http://www.w3.org/ns/ssn/Deployment
+                description: In July 2017, three saildrones were launched from Dutch
+                  Harbor, Alaska, in partnership with NOAA Research...
+                id: iv3f2kcq27gfi
+                links:
+                - href: https://data.example.org/api/deployments/iv3f2kcq27gfi?f=sml
+                  rel: self
+                  title: this document
+                  type: application/sml+json
+                - href: https://data.example.org/api/deployments/iv3f2kcq27gfi?f=json
+                  rel: alternate
+                  title: this resource as GeoJSON
+                  type: application/geo+json
+                location:
+                  coordinates:
+                  - - - 53.76
+                      - -173.7
+                    - - 75.03
+                      - -173.7
+                    - - 75.03
+                      - -155.07
+                    - - 53.76
+                      - -155.07
+                    - - 53.76
+                      - -173.7
+                  type: Polygon
+                members:
+                - href: https://data.example.org/api/systems/2f35ofoms2l6?f=sml
+                  type: application/sml+json
+                  uid: urn:x-saildrone:platforms:SD-1001
+                - href: https://data.example.org/api/systems/2f35ofoms2l8?f=sml
+                  type: application/sml+json
+                  uid: urn:x-saildrone:platforms:SD-1002
+                - href: https://data.example.org/api/systems/2f35ofoms2l9?f=sml
+                  type: application/sml+json
+                  uid: urn:x-saildrone:platforms:SD-1003
+                name: Saildrone - 2017 Arctic Mission
+                type: Deployment
+                uniqueId: urn:x-saildrone:mission:2025
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/deployment-2'
+              title: Single Deployment
+            - items:
+                $ref: '#/components/schemas/deployment-2'
+              minItems: 1
+              title: List of Deployments
+              type: array
+      description: One or more procedure resources
+      required: true
+    procedureOrArray:
+      content:
+        application/geo+json:
+          examples:
+            sensor:
+              summary: Sensor Datasheet
+              value:
+                geometry: null
+                id: iv3f2kcq27gfi
+                links:
+                - href: https://data.example.org/api/procedures/iv3f2kcq27gfi?f=json
+                  rel: self
+                  title: this document
+                  type: application/geo+json
+                - href: https://data.example.org/api/procedures/iv3f2kcq27gfi?f=sml
+                  rel: alternate
+                  title: this resource as SensorML
+                  type: application/sml+json
+                properties:
+                  description: Precision 3-axis ultrasonic anemometer
+                  featureType: http://www.w3.org/ns/sosa/ObservingProcedure
+                  name: Gill WindMaster
+                  uid: urn:x-gill:datasheets:windmaster:v1
+                type: Feature
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/procedure'
+              title: Single Procedure
+            - items:
+                $ref: '#/components/schemas/procedure'
+              minItems: 1
+              title: List of Procedures
+              type: array
+        application/sml+json:
+          examples:
+            sensor:
+              summary: Sensor Datasheet
+              value:
+                capabilities:
+                - capabilities:
+                  - definition: http://www.w3.org/ns/ssn/systems/MeasurementRange
+                    label: Measurement Range
+                    name: range
+                    type: QuantityRange
+                    uom:
+                      code: m/s
+                    value:
+                    - 0
+                    - 50
+                  - definition: http://www.w3.org/ns/ssn/systems/Resolution
+                    label: Resolution
+                    name: resolution
+                    type: Quantity
+                    uom:
+                      code: m/s
+                    value: 0.01
+                  - definition: http://sensorml.com/ont/swe/property/RelativeAccuracy
+                    label: Relative Accuracy
+                    name: accuracy
+                    type: Quantity
+                    uom:
+                      code: '%'
+                    value: 1.5
+                  definition: http://www.w3.org/ns/ssn/systems/SystemCapability
+                  label: Speed Measurement Capabilities
+                classifiers:
+                - definition: http://sensorml.com/ont/swe/property/SensorType
+                  label: Sensor Type
+                  value: Anemometer
+                definition: http://www.w3.org/ns/sosa/ObservingProcedure
+                description: Precision 3-axis ultrasonic anemometer
+                id: iv3f2kcq27gfi
+                identifiers:
+                - definition: http://sensorml.com/ont/swe/property/Manufacturer
+                  label: Manufacturer Name
+                  value: Gill
+                - definition: http://sensorml.com/ont/swe/property/ModelNumber
+                  label: Model Number
+                  value: WindMaster
+                links:
+                - href: https://data.example.org/api/procedures/iv3f2kcq27gfi?f=sml
+                  rel: self
+                  title: this document
+                  type: application/sml+json
+                - href: https://data.example.org/api/procedures/iv3f2kcq27gfi?f=json
+                  rel: alternate
+                  title: this resource as GeoJSON
+                  type: application/geo+json
+                name: 3D Ultrasonic Anemometer
+                type: PhysicalComponent
+                uniqueId: urn:osh:sensors:saildrone:S0004
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/procedure-2'
+              title: Single Procedure
+            - items:
+                $ref: '#/components/schemas/procedure-2'
+              minItems: 1
+              title: List of Procedures
+              type: array
+      description: One or more procedure resources
+      required: true
+    property:
+      content:
+        application/sml+json:
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/property'
+              title: Single Property
+            - items:
+                $ref: '#/components/schemas/property'
+              minItems: 1
+              title: List of Properties
+              type: array
+      required: true
+    propertyOrArray:
+      content:
+        application/sml+json:
+          examples:
+            cputemp:
+              summary: Average CPU Temperature
+              value:
+                baseProperty: https://qudt.org/vocab/quantitykind/Temperature
+                description: Hourly average of the CPU temperature
+                id: AverageCpuTemp
+                label: Average CPU Temp
+                links:
+                - href: https://data.example.com/api/properties/AverageCpuTemp
+                  rel: self
+                object: http://dbpedia.org/resource/Central_processing_unit
+                statistic: http://sensorml.com/ont/x-stats/HourlyMean
+            enginetemp:
+              summary: Engine Temperature
+              value:
+                baseProperty: https://qudt.org/vocab/quantitykind/Temperature
+                description: Temperature of the engine oil, measured at the bottom
+                  of the engine block
+                id: EngineTemp
+                label: Engine Temp
+                links:
+                - href: https://data.example.com/api/properties/EngineTemp
+                  rel: self
+                object: http://dbpedia.org/resource/Central_processing_unit
+            rfpower:
+              summary: Received Band-X RF Power
+              value:
+                baseProperty: http://qudt.org/vocab/quantitykind/RF-Power
+                description: RF Power received in band 620-720 MHz
+                id: RFPower_Received_620-720
+                label: Received RF Power
+                links:
+                - href: https://data.example.com/api/properties/RFPower_Received_620-720
+                  rel: self
+                qualifiers:
+                - definition: http://qudt.org/vocab/quantitykind/Frequency
+                  label: Frequency Range
+                  type: QuantityRange
+                  uom:
+                    code: MHz
+                  value:
+                  - 620
+                  - 720
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/property'
+              title: Single Property
+            - items:
+                $ref: '#/components/schemas/property'
+              minItems: 1
+              title: List of Properties
+              type: array
+      description: One or more procedure resources
+      required: true
+    samplingFeatureOrArray:
+      content:
+        application/geo+json:
+          examples:
+            part:
+              summary: Feature Part
+              value:
+                geometry: null
+                id: 1a0f80f9
+                links:
+                - href: https://data.example.org/api/samplingFeatures/1a0f80f9?f=json
+                  rel: self
+                  title: this document
+                  type: application/geo+json
+                - href: https://data.example.org/api/samplingFeatures/1a0f80f9?f=html
+                  rel: alternate
+                  title: this resource as HTML
+                  type: application/sensorml+json
+                - href: https://data.example.org/api/samplingFeatures/1a0f80f9?f=html
+                  rel: alternate
+                  title: this resource as HTML
+                  type: text/html
+                properties:
+                  description: CPU 2 located in the robot chassis
+                  featureType: http://www.opengis.net/def/samplingFeatureType/x-OGC-TBD/2.0/SF_FeaturePart
+                  name: CPU 2
+                  sampledFeature@link:
+                    href: https://data.example.org/api/systems/8624d054?f=json
+                    type: application/geo+json
+                    uid: urn:x-ogc:systems:robot445
+                  uid: urn:x-ogc:sf:456
+                type: Feature
+            sf-point:
+              summary: Sampling Point
+              value:
+                geometry:
+                  coordinates:
+                  - 12.31
+                  - -86.98
+                  type: Point
+                id: SP001
+                links:
+                - href: https://data.example.org/api/samplingFeatures/SP001?f=json
+                  rel: self
+                  title: this document
+                  type: application/geo+json
+                - href: https://data.example.org/api/samplingFeatures/SP001?f=html
+                  rel: alternate
+                  title: this resource as HTML
+                  type: text/html
+                properties:
+                  description: Well at MOBILE RIVER SAWMILL CORP
+                  featureType: http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint
+                  hostedSystem@link:
+                    href: https://data.example.org/api/systems/447845?f=json
+                    type: application/geo+json
+                    uid: urn:x-ogc:systems:hydro:WS454EAF25
+                  name: 'USGS Site #301244087575701'
+                  sampledFeature@link:
+                    href: https://api.usgs.gov/collections/hydrological_features/items/112TRRC?f=json
+                    title: Aquifer 112TRRC
+                    type: application/geo+json
+                  uid: urn:x-usgs:sites:301244087575701
+                type: Feature
+            specimen:
+              summary: Specimen
+              value:
+                geometry:
+                  coordinates:
+                  - 30.706
+                  - -134.196
+                  - 272
+                  type: Point
+                id: f6b464cf
+                links:
+                - href: https://data.example.org/api/samplingFeatures/f6b464cf?f=json
+                  rel: self
+                  title: this document
+                  type: application/geo+json
+                - href: https://data.example.org/api/samplingFeatures/f6b464cf?f=html
+                  rel: alternate
+                  title: this resource as HTML
+                  type: text/html
+                properties:
+                  description: Rock sample collected on traverse
+                  featureType: http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_Specimen
+                  materialClass: http://www.opengis.net/def/material/OGC-OM/2.0/rock
+                  name: 'USGS Site #301244087575701'
+                  sampledFeature@link:
+                    href: https://api.usgs.gov/collections/geological_features/items/1458955?f=json
+                    title: Geological Unit 235
+                    type: application/geo+json
+                  samplingTime: '2007-01-24T12:14:50Z'
+                  uid: urn:x-usgs:samples:1114457888
+                type: Feature
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/anySamplingFeature'
+              title: Single Feature
+            - items:
+                $ref: '#/components/schemas/anySamplingFeature'
+              minItems: 1
+              title: List of Features
+              type: array
+      description: One or more procedure resources
+      required: true
+    system:
+      content:
+        application/geo+json:
+          examples:
+            platform:
+              summary: Platform - Unmanned Aerial Vehicle (UAV)
+              value:
+                geometry: null
+                id: PLT412
+                properties:
+                  description: 3DR Solo UAV
+                  featureType: http://www.w3.org/ns/sosa/Platform
+                  name: UAV System 412
+                  procedure@link:
+                    href: https://data.example.org/api/procedures/nrof8qi7wc9a?f=json
+                    type: application/geo+json
+                    uid: urn:x-ogc:datasheets:uav:3dr-solo:v1
+                  uid: urn:x-ogc:systems:uav:solo154
+                type: Feature
+            sensor:
+              summary: Sensor - Simple Thermometer
+              value:
+                geometry:
+                  coordinates:
+                  - 41.8781
+                  - -87.6298
+                  type: Point
+                id: '123'
+                properties:
+                  assetType: http://www.opengis.net/def/x-OGC/TBD/Equipment
+                  description: Digital thermometer located on first floor window 1
+                  featureType: http://www.w3.org/ns/sosa/Sensor
+                  name: Outdoor Thermometer 001
+                  procedure@link:
+                    href: https://data.example.org/api/procedures/TP60S?f=json
+                    title: Thermo Pro TP60S
+                    type: application/geo+json
+                    uid: urn:x-myorg:datasheets:ThermoPro:TP60S:v001
+                  uid: urn:x-ogc:systems:001
+                type: Feature
+          schema:
+            $ref: '#/components/schemas/system'
+        application/sml+json:
+          examples:
+            platform:
+              summary: Platform - Unmanned Aerial Vehicle (UAV)
+              value:
+                contacts:
+                - organisationName: Field Maintenance Corp.
+                  role: http://sensorml.com/ont/swe/property/Operator
+                definition: http://www.w3.org/ns/sosa/Platform
+                description: Example UAV platform
+                id: PLT412
+                identifiers:
+                - definition: http://sensorml.com/ont/swe/property/SerialNumber
+                  label: Serial Number
+                  value: 0123456879
+                localReferenceFrames:
+                - axis:
+                  - description: Longitudinal or roll axis, parallel to the fuselage
+                      reference line, directed forward
+                    name: x
+                  - description: Transverse or pitch axis, parallel to the libne drawn
+                      from wingtop to wingtip, directed to the right
+                    name: y
+                  - description: Vertical or yaw axis, perpendicular to the wings
+                      and to the fuselage reference line, directed toward the bottom
+                      of the aircraft
+                    name: z
+                  description: The platform frame is defined as the aircraft principal
+                    axes
+                  label: Platform Frame
+                  origin: Center of gravity of the aircraft
+                name: Global Hawk 101
+                type: PhysicalSystem
+                typeOf:
+                  href: https://data.example.org/api/procedures/ge4pjqq0hq6y?f=json
+                  type: application/sml+json
+                  uid: urn:x-ogc:datasheets:uav:RQ-4
+                uniqueId: urn:x-ogc:systems:aircraft:101
+            sensor:
+              summary: Sensor - Simple Thermometer
+              value:
+                contacts:
+                - organisationName: Field Maintenance Corp.
+                  role: http://sensorml.com/ont/swe/roles/Operator
+                definition: http://www.w3.org/ns/sosa/Sensor
+                description: Digital thermometer located on first floor window 1
+                id: '123'
+                identifiers:
+                - definition: http://sensorml.com/ont/swe/property/SerialNumber
+                  label: Serial Number
+                  value: 0123456879
+                name: Outdoor Thermometer 001
+                position:
+                  coordinates:
+                  - 41.8781
+                  - -87.6298
+                  type: Point
+                type: PhysicalSystem
+                typeOf:
+                  href: https://data.example.org/api/procedures/TP60S?f=sml
+                  title: ThermoPro TP60S
+                  type: application/sml+json
+                  uid: urn:x-myorg:datasheets:ThermoPro:TP60S:v001
+                uniqueId: urn:x-ogc:systems:001
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/system-2'
+              title: Single System
+            - items:
+                $ref: '#/components/schemas/system-2'
+              minItems: 1
+              title: List of Systems
+              type: array
+      required: true
+    systemOrArray:
+      content:
+        application/geo+json:
+          examples:
+            platform:
+              summary: Platform - Unmanned Aerial Vehicle (UAV)
+              value:
+                geometry: null
+                id: PLT412
+                properties:
+                  description: 3DR Solo UAV
+                  featureType: http://www.w3.org/ns/sosa/Platform
+                  name: UAV System 412
+                  procedure@link:
+                    href: https://data.example.org/api/procedures/nrof8qi7wc9a?f=json
+                    type: application/geo+json
+                    uid: urn:x-ogc:datasheets:uav:3dr-solo:v1
+                  uid: urn:x-ogc:systems:uav:solo154
+                type: Feature
+            sensor:
+              summary: Sensor - Simple Thermometer
+              value:
+                geometry:
+                  coordinates:
+                  - 41.8781
+                  - -87.6298
+                  type: Point
+                id: '123'
+                properties:
+                  assetType: http://www.opengis.net/def/x-OGC/TBD/Equipment
+                  description: Digital thermometer located on first floor window 1
+                  featureType: http://www.w3.org/ns/sosa/Sensor
+                  name: Outdoor Thermometer 001
+                  procedure@link:
+                    href: https://data.example.org/api/procedures/TP60S?f=json
+                    title: Thermo Pro TP60S
+                    type: application/geo+json
+                    uid: urn:x-myorg:datasheets:ThermoPro:TP60S:v001
+                  uid: urn:x-ogc:systems:001
+                type: Feature
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/system'
+              title: Single System
+            - items:
+                $ref: '#/components/schemas/system'
+              minItems: 1
+              title: List of Systems
+              type: array
+        application/sml+json:
+          examples:
+            platform:
+              summary: Platform - Unmanned Aerial Vehicle (UAV)
+              value:
+                contacts:
+                - organisationName: Field Maintenance Corp.
+                  role: http://sensorml.com/ont/swe/property/Operator
+                definition: http://www.w3.org/ns/sosa/Platform
+                description: Example UAV platform
+                id: PLT412
+                identifiers:
+                - definition: http://sensorml.com/ont/swe/property/SerialNumber
+                  label: Serial Number
+                  value: 0123456879
+                localReferenceFrames:
+                - axis:
+                  - description: Longitudinal or roll axis, parallel to the fuselage
+                      reference line, directed forward
+                    name: x
+                  - description: Transverse or pitch axis, parallel to the libne drawn
+                      from wingtop to wingtip, directed to the right
+                    name: y
+                  - description: Vertical or yaw axis, perpendicular to the wings
+                      and to the fuselage reference line, directed toward the bottom
+                      of the aircraft
+                    name: z
+                  description: The platform frame is defined as the aircraft principal
+                    axes
+                  label: Platform Frame
+                  origin: Center of gravity of the aircraft
+                name: Global Hawk 101
+                type: PhysicalSystem
+                typeOf:
+                  href: https://data.example.org/api/procedures/ge4pjqq0hq6y?f=json
+                  type: application/sml+json
+                  uid: urn:x-ogc:datasheets:uav:RQ-4
+                uniqueId: urn:x-ogc:systems:aircraft:101
+            sensor:
+              summary: Sensor - Simple Thermometer
+              value:
+                contacts:
+                - organisationName: Field Maintenance Corp.
+                  role: http://sensorml.com/ont/swe/roles/Operator
+                definition: http://www.w3.org/ns/sosa/Sensor
+                description: Digital thermometer located on first floor window 1
+                id: '123'
+                identifiers:
+                - definition: http://sensorml.com/ont/swe/property/SerialNumber
+                  label: Serial Number
+                  value: 0123456879
+                name: Outdoor Thermometer 001
+                position:
+                  coordinates:
+                  - 41.8781
+                  - -87.6298
+                  type: Point
+                type: PhysicalSystem
+                typeOf:
+                  href: https://data.example.org/api/procedures/TP60S?f=sml
+                  title: ThermoPro TP60S
+                  type: application/sml+json
+                  uid: urn:x-myorg:datasheets:ThermoPro:TP60S:v001
+                uniqueId: urn:x-ogc:systems:001
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/system-2'
+              title: Single System
+            - items:
+                $ref: '#/components/schemas/system-2'
+              minItems: 1
+              title: List of Systems
+              type: array
+      description: One or more system resources
+      required: true
+    systemOrArrayOrRefs:
+      content:
+        application/geo+json:
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/system'
+              title: Single System
+            - items:
+                $ref: '#/components/schemas/system'
+              minItems: 1
+              title: List of Systems
+              type: array
+        application/json:
+          description: A list of system descriptions or links
+          examples:
+            link:
+              summary: Links to Systems resources
+              value:
+              - https://data.example.org/api/systems/2f35ofoms2l6
+              - https://data.example.org/api/systems/PLT412
+          schema:
+            items:
+              format: uri
+              type: string
+            minItems: 1
+            title: One or more links or UIDs of system resources
+            type: array
+        application/sml+json:
+          schema:
+            oneOf:
+            - $ref: '#/components/schemas/system-2'
+              title: Single System
+            - items:
+                $ref: '#/components/schemas/system-2'
+              minItems: 1
+              title: List of Systems
+              type: array
+      required: true
+  responses:
+    '200':
+      description: successful operation
+    '201':
+      description: Success. New resource created.
+      headers:
+        Location:
+          description: URI of newly created resource
+          schema:
+            type: string
+    204_DELETE:
+      description: Success. Resource deleted.
+    204_PUT:
+      description: Success. Resource updated.
+    '400':
+      description: Bad request. Either the query parameters or the content body are
+        invalid.
+    '401':
+      description: No authentication information was provided.
+    '403':
+      description: The user doesn't have the necessary permissions to access the resource.
+    '404':
+      description: No resource was found with the specified URL.
+    409_DELETE:
+      description: The resource cannot be deleted because other resources depend on
+        it.
+    5XX:
+      description: Unexpected server error. Only retry on 502 and 503.
+    Queryables:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/queryables'
+      description: successful queryables operation
+    collection:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/collection_schema'
+      description: Metadata for a feature collection.
+    collections:
+      content:
+        application/json:
+          example:
+            collections:
+            - description: All systems registered on this server (e.g. platforms,
+                sensors, actuators, processes)
+              featureType: system
+              id: all_systems
+              itemType: feature
+              links:
+              - href: https://data.example.org/api/systems
+                rel: items
+                title: Access the system instances in this collection
+                type: application/json
+              title: All Connected Systems
+            - description: All procedures (e.g. system datasheets) implemented by
+                systems registered on this server
+              featureType: procedure
+              id: all_procedures
+              itemType: feature
+              links:
+              - href: https://data.example.org/api/procedures
+                rel: items
+                title: Access the procedures in this collection
+                type: application/json
+              title: All Procedures and System Datasheets
+            - description: All deployments involving systems registered on this server
+              featureType: deployment
+              id: all_deployments
+              itemType: feature
+              links:
+              - href: https://data.example.org/api/deployments
+                rel: items
+                title: Access the procedures in this collection
+                type: application/json
+              title: All System Deployments
+            links:
+            - href: https://data.example.org/api/collections?f=application/json
+              rel: self
+              title: This document
+              type: application/json
+            - href: https://data.example.org/api/collections?f=text/html
+              rel: alternate
+              title: This document as HTML
+              type: text/html
+          schema:
+            properties:
+              collections:
+                items:
+                  $ref: '#/components/schemas/collection_schema'
+                type: array
+              links:
+                items:
+                  $ref: '#/components/schemas/link'
+                type: array
+            required:
+            - links
+            - collections
+            type: object
+      description: The list of collections available on this endpoint
+    conformance:
+      content:
+        application/json:
+          example:
+            conformsTo:
+            - http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
+            - http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html
+            - http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/json
+            - http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/oas30
+            - http://www.opengis.net/spec/ogcapi-common-2/0.0/conf/collections
+            - http://www.opengis.net/spec/ogcapi-common-2/0.0/conf/html
+            - http://www.opengis.net/spec/ogcapi-common-2/0.0/conf/json
+            - http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core
+            - http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/geojson
+            - http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/html
+            - http://www.opengis.net/spec/ogcapi-features-4/1.0/conf/create-replace-delete
+            - http://www.opengis.net/spec/ogcapi-connectedsystems-1/1.0/conf/core
+            - http://www.opengis.net/spec/ogcapi-connectedsystems-1/1.0/conf/system-features
+            - http://www.opengis.net/spec/ogcapi-connectedsystems-1/1.0/conf/procedure-features
+            - http://www.opengis.net/spec/ogcapi-connectedsystems-1/1.0/conf/deployment-features
+            - http://www.opengis.net/spec/ogcapi-connectedsystems-1/1.0/conf/sampling-features
+            - http://www.opengis.net/spec/ogcapi-connectedsystems-2/1.0/conf/encoding/geojson
+            - http://www.opengis.net/spec/ogcapi-connectedsystems-1/1.0/conf/encoding/sensorml
+          schema:
+            $ref: '#/components/schemas/confClasses'
+      description: The URIs of all requirements classes supported by the server.
+    default:
+      content:
+        application/json:
+          schema:
+            $ref: https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/exception.yaml
+      description: Unexpected error
+    deploymentCollection:
+      content:
+        application/geo+json:
+          schema:
+            properties:
+              features:
+                items:
+                  $ref: '#/components/schemas/deployment'
+                type: array
+              links:
+                $ref: '#/components/schemas/links'
+                description: Links to related resources (including paging)
+              type:
+                const: FeatureCollection
+                type: string
+            required: features
+            type: object
+        application/json:
+          schema:
+            properties:
+              items:
+                items:
+                  $ref: '#/components/schemas/deployment'
+                type: array
+              links:
+                $ref: '#/components/schemas/links'
+                description: Links to related resources (including paging)
+            required: items
+            type: object
+        application/sml+json:
+          schema:
+            properties:
+              items:
+                items:
+                  $ref: '#/components/schemas/deployment-2'
+                type: array
+              links:
+                $ref: '#/components/schemas/links'
+                description: Links to related resources (including paging)
+            required: items
+            type: object
+      description: OK. Successful request
+    feature:
+      content:
+        application/geo+json:
+          schema:
+            allOf:
+            - $ref: '#/components/schemas/feature'
+            - required:
+              - id
+              type: object
+      description: Feature resource
+    featureCollection:
+      content:
+        application/geo+json:
+          schema:
+            $ref: '#/components/schemas/featureCollectionGeoJSON'
+      description: Feature collection resource
+    landingPage:
+      content:
+        application/json:
+          example:
+            description: Access to system datastreams and command and control capabilities.
+            links:
+            - href: https://data.example.com/api/doc
+              rel: service-desc
+            - href: https://data.example.com/api/conformance
+              rel: conformance
+            - href: https://data.example.com/api/collections
+              rel: collections
+            title: OGC API - Connected Systems
+          schema:
+            $ref: '#/components/schemas/landingPage'
+      description: The links to the API capabilities.
+    procedureCollection:
+      content:
+        application/geo+json:
+          schema:
+            properties:
+              features:
+                items:
+                  $ref: '#/components/schemas/procedure'
+                type: array
+              links:
+                $ref: '#/components/schemas/links'
+                description: Links to related resources (including paging)
+              type:
+                const: FeatureCollection
+                type: string
+            required: features
+            type: object
+        application/json:
+          schema:
+            properties:
+              items:
+                items:
+                  $ref: '#/components/schemas/procedure'
+                type: array
+              links:
+                $ref: '#/components/schemas/links'
+                description: Links to related resources (including paging)
+            required: items
+            type: object
+        application/sml+json:
+          schema:
+            properties:
+              items:
+                items:
+                  $ref: '#/components/schemas/procedure-2'
+                type: array
+              links:
+                $ref: '#/components/schemas/links'
+                description: Links to related resources (including paging)
+            required: items
+            type: object
+      description: OK. Successful request
+    property:
+      content:
+        application/sml+json:
+          schema:
+            $ref: '#/components/schemas/property'
+      description: OK. Successful request
+    propertyCollection:
+      content:
+        application/sml+json:
+          schema:
+            properties:
+              items:
+                items:
+                  $ref: '#/components/schemas/property'
+                type: array
+              links:
+                $ref: '#/components/schemas/links'
+                description: Links to related resources (including paging)
+            required: items
+            type: object
+      description: OK. Successful request
+    resourceLinks:
+      content:
+        application/json:
+          example:
+          - https://data.example.org/api/{collection_path}/546861
+          - https://data.example.org/api/{collection_path}/546862
+          - https://data.example.org/api/{collection_path}/546863
+          schema:
+            properties:
+              items:
+                description: Array of resource URIs
+                items:
+                  format: uri
+                  type: string
+                type: array
+            required: items
+            type: object
+      description: Success. Several new resources created. (Only sent if the payload
+        contained an array of resources).
+    samplingFeatureCollection:
+      content:
+        application/geo+json:
+          schema:
+            properties:
+              features:
+                items:
+                  $ref: '#/components/schemas/anySamplingFeature'
+                type: array
+              links:
+                items:
+                  $ref: '#/components/schemas/link-2'
+                type: array
+              type:
+                const: FeatureCollection
+                type: string
+            required: features
+            type: object
+        application/json:
+          schema:
+            properties:
+              items:
+                items:
+                  $ref: '#/components/schemas/anySamplingFeature'
+                type: array
+              links:
+                $ref: '#/components/schemas/links'
+                description: Links to related resources (including paging)
+            required: items
+            type: object
+      description: OK. Successful request
+    system:
+      content:
+        application/geo+json:
+          schema:
+            $ref: '#/components/schemas/system'
+        application/sml+json:
+          schema:
+            $ref: '#/components/schemas/system-2'
+      description: OK. Successful request
+    systemCollection:
+      content:
+        application/geo+json:
+          schema:
+            properties:
+              features:
+                items:
+                  $ref: '#/components/schemas/system'
+                type: array
+              links:
+                $ref: '#/components/schemas/links'
+                description: Links to related resources (including paging)
+              type:
+                const: FeatureCollection
+                type: string
+            required: features
+            type: object
+        application/json:
+          schema:
+            properties:
+              items:
+                items:
+                  $ref: '#/components/schemas/system'
+                type: array
+              links:
+                $ref: '#/components/schemas/links'
+                description: Links to related resources (including paging)
+            required: items
+            type: object
+        application/sml+json:
+          schema:
+            properties:
+              items:
+                items:
+                  $ref: '#/components/schemas/system-2'
+                type: array
+              links:
+                $ref: '#/components/schemas/links'
+                description: Links to related resources (including paging)
+            required: items
+            type: object
+      description: OK. Successful request
+  schemas:
+    AbstractArray:
+      allOf:
+      - $ref: '#/components/schemas/AbstractDataComponent'
+      - properties:
+          elementCount:
+            description: Specifies the size of the array (i.e. the number of elements
+              of the defined type it contains)
+            oneOf:
+            - $ref: '#/components/schemas/AssociationAttributeGroup'
+            - $ref: '#/components/schemas/ElementCount'
+          elementType:
+            allOf:
+            - $ref: '#/components/schemas/SoftNamedProperty'
+            - oneOf:
+              - $ref: '#/components/schemas/AssociationAttributeGroup'
+              - $ref: '#/components/schemas/AnyComponent'
+            description: Defines the structure of the element that will be repeated
+              in the array
+          encoding:
+            description: Specifies the type of method used to encode the array values
+            oneOf:
+            - $ref: '#/components/schemas/BinaryEncoding'
+            - $ref: '#/components/schemas/TextEncoding'
+            - $ref: '#/components/schemas/XMLEncoding'
+            - $ref: '#/components/schemas/JSONEncoding'
+          values:
+            $ref: '#/components/schemas/EncodedValues'
+            description: If present, contains an encoded block of the values contained
+              in the array. Values are optional so that the array definition can be
+              used a as a schema for values provided separately
+      type: object
+    AbstractDataComponent:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSweIdentifiable'
+      - properties:
+          definition:
+            description: The definition of the property whose value is provided by
+              this component (semantic link)
+            format: uri
+            type: string
+          optional:
+            default: false
+            description: Specifies if the data for this component can be omitted in
+              the datastream
+            type: boolean
+          type:
+            type: string
+          updatable:
+            default: false
+            description: Specifies if the value of a data component can be updated
+              externally (i.e. is variable)
+            type: boolean
+      description: Abstract base class for all data components
+      type: object
+    AbstractEncoding:
+      allOf:
+      - $ref: '#/components/schemas/AbstractSWE'
+      - properties: {}
+      type: object
+    AbstractFeature:
+      $schema: http://json-schema.org/draft-07/schema#
+      properties:
+        description:
+          description: A textual description of the feature
+          minLength: 1
+          type: string
+        id:
+          description: Local ID of the feature (e.g. locally unique on a server)
+          minLength: 1
+          type: string
+        name:
+          description: A human readable label for the feature
+          minLength: 1
+          type: string
+        type:
+          description: Type of object
+          type: string
+        uniqueId:
+          description: URI serving as the globally unique identifier of the feature
+            (typically a URN)
+          format: uri
+          type: string
+      required:
+      - type
+      - uniqueId
+      - name
+      type: object
+    AbstractPhysicalProcess:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractProcess'
+      - properties:
+          attachedTo:
+            $ref: '#/components/schemas/link-2'
+            description: References the physical component or system (e.g. platform)
+              to which to which this component or system is attached.
+          localReferenceFrames:
+            description: A spatial reference frame of the physical component itself;
+              this reference frame is absolute and defines the relationship of the
+              reference frame to the physical body of the component; position of the
+              component relates this reference frame to some external reference frame.
+              Note that units are specified in the position so they are not specified
+              as part of the SpatialFrame.
+            items:
+              $ref: '#/components/schemas/SpatialFrame'
+            type: array
+          localTimeFrames:
+            description: Supports local time reference frames such as "time past mission
+              start". Note that units are handled in timePosition so they are not
+              specified in the TemporalFrame.
+            items:
+              $ref: '#/components/schemas/TemporalFrame'
+            type: array
+          position:
+            $ref: '#/components/schemas/Position'
+            description: Provides positional information relating the component's
+              spatial reference frame to an external spatial reference frame. Positional
+              information can be given by location, by full body state, by a time-tagged
+              trajectory, or by a measuring or computational process.
+          timePosition:
+            description: Provides Time positions typically reference a local time
+              frame to an external time frame. For example, a timer-start-time might
+              be given relative to an "absolute" GPS time.
+            items: {}
+            type: array
+      definitions:
+        Position:
+          oneOf:
+          - $ref: '#/components/schemas/Point'
+          - $ref: '#/components/schemas/Vector'
+        SpatialFrame:
+          allOf:
+          - $ref: '#/components/schemas/AbstractSweIdentifiable'
+          - properties:
+              axis:
+                description: Axis with name attribute and a textual description of
+                  the relationship of the axis to the physical device; the order of
+                  the axes listed determines their relationship according to the right-handed
+                  rule (e.g. axis 1 cross axis 2 = axis 3).
+                items:
+                  properties:
+                    description:
+                      type: string
+                    name:
+                      type: string
+                  required:
+                  - name
+                  - description
+                  type: object
+                type: array
+              origin:
+                description: A textual description of the origin of the reference
+                  frame relative to the physical device (e.g. "the origin is at the
+                  point of attachment of the sensor to the platform").
+                type: string
+            required:
+            - origin
+            - axis
+          description: A general spatial Cartesian Reference Frame where the axes
+            and origin will be defined textually relative to a physical component.
+          type: object
+          unevaluatedProperties: false
+        TemporalFrame:
+          allOf:
+          - $ref: '#/components/schemas/AbstractSweIdentifiable'
+          - properties:
+              origin:
+                type: string
+            required:
+            - origin
+          description: A general temporal frame such as a mission start time or timer
+            start time. The origin should just describe context of the start of time
+            (e.g. start of local timer).
+          type: object
+          unevaluatedProperties: false
+      type: object
+    AbstractProcess:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/DescribedObject'
+      - properties:
+          configuration:
+            $ref: '#/components/schemas/Settings'
+            description: Value settings that further constrain the properties of the
+              base process.
+          definition:
+            description: The semantic type of the process as a reference to a concept
+              in an online ontology or dictionary. The value of the property must
+              be a resolvable URI.
+            format: uri
+            type: string
+          featuresOfInterest:
+            $ref: '#/components/schemas/FeatureList'
+            description: A collection of sampling features or domain features relevant
+              to the process (e.g. the Gulf of Mexico, the White House, the Atmosphere,
+              a vehicle, etc.).
+          inputs:
+            $ref: '#/components/schemas/InputList'
+            description: The list of process or system inputs.
+          modes:
+            description: A collection of parameters that can be set at once through
+              the selection of a particular predefined mode.
+            items:
+              $ref: '#/components/schemas/ModeChoice'
+            type: array
+          outputs:
+            $ref: '#/components/schemas/OutputList'
+            description: The list of process or system outputs.
+          parameters:
+            $ref: '#/components/schemas/ParameterList'
+            description: The list of process or system parameters.
+          typeOf:
+            $ref: '#/components/schemas/link-2'
+            description: A reference to a base process from which this process inherits
+              properties and constraints (e.g. original equipment manufacturer's model
+              description, generic equation, etc.).
+      definitions:
+        ComponentOrObsProp:
+          oneOf:
+          - $ref: '#/components/schemas/definitions-AnyComponent'
+            title: DataComponent
+          - $ref: '#/components/schemas/ObservableProperty'
+            title: ObservableProperty
+        FeatureList:
+          items:
+            $ref: '#/components/schemas/link-2'
+          minItems: 1
+          type: array
+        InputList:
+          items:
+            $ref: '#/components/schemas/ComponentOrObsProp'
+          minItems: 1
+          type: array
+        ModeChoice: {}
+        OutputList:
+          items:
+            $ref: '#/components/schemas/ComponentOrObsProp'
+          minItems: 1
+          type: array
+        ParameterList:
+          items:
+            $ref: '#/components/schemas/definitions-AnyComponent'
+          minItems: 1
+          type: array
+      type: object
+    AbstractSWE:
+      $schema: http://json-schema.org/draft-07/schema#
+      description: Base substitution groups for all SWE Common objects other than
+        value objects
+      properties:
+        id:
+          description: The ID of the object, referenceable using a URI fragment
+          minLength: 1
+          type: string
+      type: object
+    AbstractSimpleComponent:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractDataComponent'
+      - properties:
+          axisID:
+            description: Specifies the reference axis (refer to CRS axisID). The reference
+              frame URI should also be specified unless it is inherited from parent
+              Vector
+            minLength: 1
+            type: string
+          constraint: {}
+          nilValues:
+            description: Defines reserved values with special meaning (e.g. missing,
+              out-of-range, etc.)
+          quality:
+            description: Provides an indication of the reliability of the component
+              value in the form of a decimal number (e.g. relative accuracy), a range
+              (e.g. bidirectional tolerance), a categorical value (e.g. good, bad)
+              or plain textual statement
+            items:
+              allOf:
+              - $ref: '#/components/schemas/AssociationAttributeGroup'
+              - oneOf:
+                - $ref: '#/components/schemas/Quantity'
+                - $ref: '#/components/schemas/QuantityRange'
+                - $ref: '#/components/schemas/Category'
+                - $ref: '#/components/schemas/Text'
+            type: array
+          referenceFrame:
+            description: Frame of reference (usually temporal or spatial) with respect
+              to which the value of the component is expressed. A reference frame
+              anchors a value to a real world datum.
+            format: uri-reference
+            type: string
+          value:
+            description: Inline value(s) for the component. This property is optional
+              to enable structure to act as a schema for values provided separately
+              (e.g. in a datastream)
+      type: object
+    AbstractSweIdentifiable:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSWE'
+      - properties:
+          description:
+            description: Human readable description of the object
+            minLength: 1
+            type: string
+          label:
+            description: Human readable label for the object
+            minLength: 1
+            type: string
+      description: Base substitution groups for all SWE Common objects with identification
+        metadata
+      type: object
+    Address:
+      properties:
+        administrativeArea:
+          type: string
+        city:
+          type: string
+        country:
+          type: string
+        deliveryPoint:
+          type: string
+        electronicMailAddress:
+          format: email
+          type: string
+        postalCode:
+          type: string
+      type: object
+      unevaluatedProperties: false
+    AggregateProcess:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractProcess'
+      - properties:
+          components:
+            $ref: '#/components/schemas/ComponentList'
+            description: The list of sub-processes
+          connections:
+            $ref: '#/components/schemas/ConnectionList'
+            description: The explicit definition of data links between outputs, inputs,
+              and parameters of the components within an aggregate process.
+          type:
+            const: AggregateProcess
+      definitions:
+        ComponentList:
+          items:
+            $ref: '#/components/schemas/link-2'
+          minItems: 1
+          type: array
+        ConnectionList: {}
+      type: object
+    AllowedTimes:
+      additionalProperties: false
+      anyOf:
+      - required:
+        - values
+        title: Enum Values
+      - required:
+        - intervals
+        title: Intervals
+      description: Defines the permitted values for the component, as a time range
+        or an enumerated list of time values
+      properties:
+        intervals:
+          items:
+            items:
+              $ref: '#/components/schemas/DateTimeNumberOrSpecial'
+            maxItems: 2
+            minItems: 2
+            type: array
+          type: array
+        significantFigures:
+          maximum: 40
+          minimum: 1
+          type: integer
+        values:
+          items:
+            $ref: '#/components/schemas/DateTimeNumberOrSpecial'
+          minItems: 1
+          type: array
+      type: object
+    AllowedTokens:
+      description: Defines permitted values for the component, as an enumerated list
+        of tokens or a regular expression pattern
+      oneOf:
+      - properties:
+          values:
+            items:
+              minLength: 1
+              type: string
+            minItems: 1
+            type: array
+        required:
+        - values
+        title: Enum Values
+      - properties:
+          pattern:
+            format: regex
+            minLength: 1
+            type: string
+        required:
+        - pattern
+        title: Regex Pattern
+      type: object
+      unevaluatedProperties: false
+    AllowedValues:
+      additionalProperties: false
+      anyOf:
+      - required:
+        - values
+        title: Enum Values
+      - required:
+        - intervals
+        title: Intervals
+      description: Defines the permitted values for the component as an enumerated
+        list and/or a list of inclusive ranges
+      properties:
+        intervals:
+          items:
+            items:
+              $ref: '#/components/schemas/NumberOrSpecial'
+            maxItems: 2
+            minItems: 2
+            type: array
+          minItems: 1
+          type: array
+        significantFigures:
+          maximum: 40
+          minimum: 1
+          type: integer
+        values:
+          items:
+            $ref: '#/components/schemas/NumberOrSpecial'
+          minItems: 1
+          type: array
+      type: object
+    AnyComponent:
+      oneOf:
+      - $ref: '#/components/schemas/AnySimpleComponent'
+      - $ref: '#/components/schemas/DataRecord'
+      - $ref: '#/components/schemas/Vector'
+      - $ref: '#/components/schemas/DataArray'
+      - $ref: '#/components/schemas/Matrix'
+      - $ref: '#/components/schemas/DataChoice'
+      - $ref: '#/components/schemas/Geometry-2'
+    AnyProperty:
+      oneOf:
+      - $ref: '#/components/schemas/AnySimpleComponent'
+      - $ref: '#/components/schemas/Vector'
+      - $ref: '#/components/schemas/DataArray'
+      - $ref: '#/components/schemas/Matrix'
+    AnyScalarComponent:
+      oneOf:
+      - $ref: '#/components/schemas/Boolean'
+      - $ref: '#/components/schemas/Count'
+      - $ref: '#/components/schemas/Quantity'
+      - $ref: '#/components/schemas/Time'
+      - $ref: '#/components/schemas/Category'
+      - $ref: '#/components/schemas/Text'
+    AnySimpleComponent:
+      oneOf:
+      - $ref: '#/components/schemas/AnyScalarComponent'
+      - $ref: '#/components/schemas/CountRange'
+      - $ref: '#/components/schemas/QuantityRange'
+      - $ref: '#/components/schemas/TimeRange'
+      - $ref: '#/components/schemas/CategoryRange'
+    AssociationAttributeGroup:
+      properties:
+        arcrole:
+          format: uri
+          type: string
+        href:
+          format: uri-reference
+          type: string
+        role:
+          format: uri
+          type: string
+        title:
+          minLength: 1
+          type: string
+      required:
+      - href
+      type: object
+    BinaryEncoding:
+      allOf:
+      - $ref: '#/components/schemas/AbstractEncoding'
+      - properties:
+          byteEncoding:
+            description: Byte encoding method used to encode the binary data (raw
+              or base 64)
+            enum:
+            - base64
+            - raw
+            type: string
+          byteLength:
+            description: Total length in bytes of the binary stream (if known in advance)
+            type: integer
+          byteOrder:
+            description: Byte order convention used to encode this binary data (big
+              endian = most significant byte first, MSB or little endian = least significant
+              byte first, LSB)
+            enum:
+            - bigEndian
+            - littleEndian
+            type: string
+          members:
+            description: Each member contains detailed parameters for encoding a scalar
+              value or a block of values
+            items:
+              oneOf:
+              - $ref: '#/components/schemas/Component'
+              - $ref: '#/components/schemas/Block'
+            minItems: 1
+            type: array
+          type:
+            const: BinaryEncoding
+        required:
+        - type
+        - byteOrder
+        - byteEncoding
+        - members
+      description: Parameters of the binary encoding method
+      type: object
+    Block:
+      allOf:
+      - $ref: '#/components/schemas/AbstractSWE'
+      - properties:
+          byteLength:
+            description: Length in byte of this binary block (if known in advance)
+            type: integer
+          compression:
+            description: Name of the compression method used to encrypt the block
+              of values described by the referenced data component
+            format: uri
+            type: string
+          encryption:
+            description: Name of the encryption method used to encrypt the block of
+              values described by the referenced data component
+            format: uri
+            type: string
+          paddingBytes-after:
+            description: Number of padding bytes present in the stream after this
+              binary block
+            type: integer
+          paddingBytes-before:
+            description: Number of padding bytes present in the stream before this
+              binary block
+            type: integer
+          ref:
+            description: Reference to the aggregate data component that this binary
+              block encoding settings apply to
+            type: string
+          type:
+            const: Block
+        required:
+        - type
+        - ref
+      description: Binary encoding parameters used to encode a block of values at
+        once. This is used for encrypting or compressing a complete array of values
+        for instance
+      type: object
+    Boolean:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSimpleComponent'
+      - properties:
+          type:
+            const: Boolean
+          value:
+            type: boolean
+        required:
+        - type
+        - definition
+        - label
+      description: 'Scalar component used to express truth: True or False, 0 or 1'
+      type: object
+    CapabilityList:
+      allOf:
+      - $ref: '#/components/schemas/AbstractSweIdentifiable'
+      - description: A group of capabilities.
+        properties:
+          capabilities:
+            description: The list of capabilities in this group
+            items:
+              $ref: '#/components/schemas/AnyProperty'
+            type: array
+          conditions:
+            description: The conditions under which the capabilities apply
+            items:
+              $ref: '#/components/schemas/AnySimpleComponent'
+            type: array
+          definition:
+            description: Semantic link to the definition of this group of capabilities
+            format: uri
+            type: string
+        required:
+        - capabilities
+        type: object
+      unevaluatedProperties: false
+    Category:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSimpleComponent'
+      - properties:
+          codeSpace:
+            description: Name of the dictionary where the possible values for this
+              component are listed and defined
+            format: uri
+            type: string
+          constraint:
+            $ref: '#/components/schemas/AllowedTokens'
+          nilValues:
+            $ref: '#/components/schemas/NilValuesText'
+          type:
+            const: Category
+          value:
+            type: string
+        required:
+        - type
+        - definition
+        - label
+      description: Scalar component used to represent a categorical value as a simple
+        token identifying a term in a code space
+      type: object
+    CategoryRange:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSimpleComponent'
+      - properties:
+          codeSpace:
+            description: Name of the dictionary defining an ordered set of values
+              with respect to which the range is expressed (ordinal reference system)
+            format: uri
+            type: string
+          constraint:
+            $ref: '#/components/schemas/AllowedTokens'
+          nilValues:
+            $ref: '#/components/schemas/NilValuesText'
+          type:
+            const: CategoryRange
+          value:
+            items:
+              type: string
+            maxItems: 2
+            minItems: 2
+            type: array
+        required:
+        - type
+        - definition
+        - label
+      description: Pair of categorical values used to specify a range in an ordinal
+        reference system (specified by the code space)
+      type: object
+    CharacteristicList:
+      allOf:
+      - $ref: '#/components/schemas/AbstractSweIdentifiable'
+      - properties:
+          characteristics:
+            description: The list of characteristics in this group
+            items:
+              $ref: '#/components/schemas/AnyProperty'
+            type: array
+          conditions:
+            description: The conditions under which the characteristics apply
+            items:
+              $ref: '#/components/schemas/AnySimpleComponent'
+            type: array
+          definition:
+            description: Semantic link to the definition of this group of capabilities
+            format: uri
+            type: string
+        required:
+        - characteristics
+        type: object
+      unevaluatedProperties: false
+    Component:
+      allOf:
+      - $ref: '#/components/schemas/AbstractSWE'
+      - properties:
+          bitLength:
+            type: integer
+          byteLength:
+            description: Byte length of this field when a custom data type is used
+            type: integer
+          dataType:
+            description: Binary data type used to encode the value(s) of the referenced
+              data component
+            format: uri
+            type: string
+          encryption:
+            description: Name of the encryption method used to encrypt the value of
+              this field
+            format: uri
+            type: string
+          ref:
+            description: Reference to the data component that these binary encoding
+              settings apply to
+            type: string
+          significantBits:
+            description: Number of significant bits actually used for a binary encoded
+              numerical value (all remaining bits shall be set to 0)
+            type: integer
+          type:
+            const: Component
+        required:
+        - type
+        - dataType
+        - ref
+      description: Binary encoding parameters used for encoding a single data component
+      type: object
+    ComponentList:
+      items:
+        $ref: '#/components/schemas/link-2'
+      minItems: 1
+      type: array
+    ComponentOrObsProp:
+      oneOf:
+      - $ref: '#/components/schemas/definitions-AnyComponent'
+        title: DataComponent
+      - $ref: '#/components/schemas/ObservableProperty'
+        title: ObservableProperty
+    ConnectionList: {}
+    Contact:
+      properties:
+        address:
+          $ref: '#/components/schemas/Address'
+        contactInstructions:
+          type: string
+        hoursOfService:
+          type: string
+        onlineResource:
+          type: string
+        phone:
+          $ref: '#/components/schemas/Phone'
+      type: object
+      unevaluatedProperties: false
+    Count:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSimpleComponent'
+      - properties:
+          constraint:
+            $ref: '#/components/schemas/AllowedValues'
+          nilValues:
+            $ref: '#/components/schemas/NilValuesInteger'
+          type:
+            const: Count
+          value:
+            type: integer
+        required:
+        - type
+        - definition
+        - label
+      description: Scalar component with integer representation used for a discrete
+        counting value
+      type: object
+    CountRange:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSimpleComponent'
+      - properties:
+          constraint:
+            $ref: '#/components/schemas/AllowedValues'
+          nilValues:
+            $ref: '#/components/schemas/NilValuesText'
+          type:
+            const: CountRange
+          value:
+            items:
+              type: integer
+            maxItems: 2
+            minItems: 2
+            type: array
+        required:
+        - type
+        - definition
+        - label
+      description: Integer pair used for specifying a count range
+      type: object
+    DataArray:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractArray'
+      - properties:
+          type:
+            const: DataArray
+        required:
+        - type
+        - elementType
+      definitions:
+        AbstractArray:
+          allOf:
+          - $ref: '#/components/schemas/AbstractDataComponent'
+          - properties:
+              elementCount:
+                description: Specifies the size of the array (i.e. the number of elements
+                  of the defined type it contains)
+                oneOf:
+                - $ref: '#/components/schemas/AssociationAttributeGroup'
+                - $ref: '#/components/schemas/ElementCount'
+              elementType:
+                allOf:
+                - $ref: '#/components/schemas/SoftNamedProperty'
+                - oneOf:
+                  - $ref: '#/components/schemas/AssociationAttributeGroup'
+                  - $ref: '#/components/schemas/AnyComponent'
+                description: Defines the structure of the element that will be repeated
+                  in the array
+              encoding:
+                description: Specifies the type of method used to encode the array
+                  values
+                oneOf:
+                - $ref: '#/components/schemas/BinaryEncoding'
+                - $ref: '#/components/schemas/TextEncoding'
+                - $ref: '#/components/schemas/XMLEncoding'
+                - $ref: '#/components/schemas/JSONEncoding'
+              values:
+                $ref: '#/components/schemas/EncodedValues'
+                description: If present, contains an encoded block of the values contained
+                  in the array. Values are optional so that the array definition can
+                  be used a as a schema for values provided separately
+          type: object
+      description: Implementation of ISO-11404 Array datatype. This defines an array
+        of identical data components with a elementCount. Values are given as a block
+        and can be encoded in different ways
+    DataChoice:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractDataComponent'
+      - properties:
+          choiceValue:
+            $ref: '#/components/schemas/Category'
+            description: This category component marks the data stream element that
+              will indicate the actual choice made. Possible choices are listed in
+              the Category constraint section as an enumeration and should map to
+              item names.
+          items:
+            description: Definition of the choice items. Items can be of any component
+              types
+            items:
+              allOf:
+              - $ref: '#/components/schemas/SoftNamedProperty'
+              - oneOf:
+                - $ref: '#/components/schemas/AssociationAttributeGroup'
+                - $ref: '#/components/schemas/AnyComponent'
+            type: array
+          type:
+            const: DataChoice
+        required:
+        - type
+        - items
+      description: Implementation of a choice of two or more Data Components (also
+        called disjoint union)
+      type: object
+    DataRecord:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractDataComponent'
+      - properties:
+          fields:
+            description: Definition of the record fields. Fields can be scalars or
+              can themself be aggregates such as records, vectors, arrays, or choices.
+            items:
+              allOf:
+              - $ref: '#/components/schemas/SoftNamedProperty'
+              - oneOf:
+                - $ref: '#/components/schemas/AssociationAttributeGroup'
+                - $ref: '#/components/schemas/AnyComponent'
+            minItems: 1
+            type: array
+          type:
+            const: DataRecord
+        required:
+        - type
+        - fields
+      description: Implementation of ISO-11404 Record datatype. This allows grouping
+        (sequence) of data components which can themselves be simple types, records,
+        arrays or choices
+      type: object
+    DateTimeNumberOrSpecial:
+      oneOf:
+      - format: date-time
+        title: Date/Time
+        type: string
+      - $ref: '#/components/schemas/NumberOrSpecial'
+    Deployment:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/DescribedObject'
+      - properties:
+          location:
+            $ref: '#/components/schemas/Geometry'
+            description: The deployment location or area
+          members:
+            description: The list of deployed systems
+            items:
+              $ref: '#/components/schemas/link-2'
+            minItems: 1
+            type: array
+          type:
+            const: Deployment
+        required:
+        - members
+    DerivedProperty:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSweIdentifiable'
+      - properties:
+          baseProperty:
+            description: URI pointing to the definition of the base property this
+              property is derived from
+            example: https://qudt.org/vocab/quantitykind/Temperature
+            format: uri
+            type: string
+          description:
+            example: Hourly average of the CPU temperature
+          label:
+            example: Average CPU Temp
+          object:
+            description: URI pointing to the type of entity that the base property
+              applies to
+            example: http://dbpedia.org/resource/Central_processing_unit
+            format: uri
+            type: string
+          qualifiers:
+            items:
+              $ref: '#/components/schemas/AnySimpleComponent'
+            minItems: 1
+            type: array
+          statistic:
+            description: URI pointing to the definition of the statistic applied to
+              the base property values
+            example: http://sensorml.com/ont/x-stats/HourlyMean
+            format: uri
+            type: string
+          uniqueId:
+            description: Unique ID for this property
+            example: urn:example:property:avg-cpu-temp
+            format: uri
+            type: string
+        required:
+        - label
+        - baseProperty
+      type: object
+    DescribedObject:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractFeature'
+      - properties:
+          capabilities:
+            description: Groups of capabilities applicable to this asset under various
+              conditions
+            items:
+              $ref: '#/components/schemas/CapabilityList'
+            type: array
+          characteristics:
+            description: Groups of characteristics applicable to this asset under
+              various conditions
+            items:
+              $ref: '#/components/schemas/CharacteristicList'
+            type: array
+          classifiers:
+            description: Classifiers for the asset, useful for discovery (e.g. process
+              type, sensor type, intended application, etc.).
+            items:
+              $ref: '#/components/schemas/Term'
+            type: array
+          contacts:
+            description: The list of contacts related to this asset
+            items:
+              $ref: '#/components/schemas/ResponsibleParty'
+            type: array
+          definition:
+            description: Type of the object (semantic link)
+            format: uri
+            type: string
+          documentation:
+            description: Additional documentation about the asset
+            items:
+              $ref: '#/components/schemas/Document'
+            type: array
+          history:
+            description: The list of events related to this asset
+            items:
+              $ref: '#/components/schemas/Event'
+            type: array
+          identifiers:
+            description: Additional identifiers for the asset, useful for discovery
+              (e.g. short name, mission id, model number, serial number, etc.).
+            items:
+              $ref: '#/components/schemas/Term'
+            type: array
+          keywords:
+            description: Short keywords describing the context of this document to
+              aid in discovery.
+            items:
+              minLength: 1
+              type: string
+            type: array
+          lang:
+            description: Language of this document
+            type: string
+          legalConstraints:
+            description: Legal constraints applied to this description (e.g. copyrights,
+              legal use, etc.)
+            items:
+              $ref: '#/components/schemas/LegalConstraint'
+            type: array
+          securityConstraints:
+            description: Overall security tagging of process description; Individual
+              tagging of properties can be done using extension properties.
+            items:
+              additionalProperties: true
+              type: object
+            type: array
+          validTime:
+            $ref: '#/components/schemas/timePeriod'
+      definitions:
+        CapabilityList:
+          allOf:
+          - $ref: '#/components/schemas/AbstractSweIdentifiable'
+          - description: A group of capabilities.
+            properties:
+              capabilities:
+                description: The list of capabilities in this group
+                items:
+                  $ref: '#/components/schemas/AnyProperty'
+                type: array
+              conditions:
+                description: The conditions under which the capabilities apply
+                items:
+                  $ref: '#/components/schemas/AnySimpleComponent'
+                type: array
+              definition:
+                description: Semantic link to the definition of this group of capabilities
+                format: uri
+                type: string
+            required:
+            - capabilities
+            type: object
+          unevaluatedProperties: false
+        CharacteristicList:
+          allOf:
+          - $ref: '#/components/schemas/AbstractSweIdentifiable'
+          - properties:
+              characteristics:
+                description: The list of characteristics in this group
+                items:
+                  $ref: '#/components/schemas/AnyProperty'
+                type: array
+              conditions:
+                description: The conditions under which the characteristics apply
+                items:
+                  $ref: '#/components/schemas/AnySimpleComponent'
+                type: array
+              definition:
+                description: Semantic link to the definition of this group of capabilities
+                format: uri
+                type: string
+            required:
+            - characteristics
+            type: object
+          unevaluatedProperties: false
+      type: object
+    Document:
+      $schema: http://json-schema.org/draft-07/schema#
+      properties:
+        definition:
+          description: Type of document (semantic link)
+          format: uri
+          type: string
+        description:
+          description: Human readable description of the document
+          type: string
+        label:
+          description: Name of the document
+          type: string
+        link:
+          $ref: '#/components/schemas/link-2'
+          description: URI of the document (Favor a URL if the document is directly
+            accessible online)
+      required:
+      - label
+      - link
+      type: object
+      unevaluatedProperties: false
+    ElementCount:
+      allOf:
+      - $ref: '#/components/schemas/AbstractSimpleComponent'
+      - properties:
+          constraint:
+            $ref: '#/components/schemas/AllowedValues'
+          value:
+            description: Value is optional, to enable structure to act as a schema
+              for values provided using other encodings
+            type: integer
+      type: object
+    EncodedValues:
+      oneOf:
+      - type: array
+      - $ref: '#/components/schemas/AssociationAttributeGroup'
+    Event:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSweIdentifiable'
+      - properties:
+          classifiers:
+            description: Additional classifiers for the event, useful for discovery.
+            items:
+              $ref: '#/components/schemas/Term'
+            type: array
+          configuration:
+            $ref: '#/components/schemas/Settings'
+            description: Configuration settings adjusted during the event.
+          contacts:
+            description: The list of contacts relevant to this event
+            items:
+              $ref: '#/components/schemas/ResponsibleParty'
+            type: array
+          definition:
+            description: Type of event (semantic link)
+            format: uri
+            type: string
+          documentation:
+            description: Additional documentation relevant to this event
+            items:
+              $ref: '#/components/schemas/Document'
+            type: array
+          identifiers:
+            description: Additional identifiers for the event, useful for discovery.
+            items:
+              $ref: '#/components/schemas/Term'
+            type: array
+          properties:
+            description: A list of additional properties of interest to the event
+              (e.g. calibration values, condition category, error codes, etc).
+            items:
+              $ref: '#/components/schemas/AnyProperty'
+            type: array
+          time:
+            $ref: '#/components/schemas/timeInstant'
+            description: Time of the event
+        required:
+        - label
+        - definition
+        - time
+      description: A time tagged event with description and relevant property values.
+      type: object
+    Feature:
+      $id: https://geojson.org/schema/Feature.json
+      $schema: http://json-schema.org/draft-07/schema#
+      properties:
+        bbox:
+          items:
+            type: number
+          minItems: 4
+          type: array
+        geometry:
+          oneOf:
+          - type: 'null'
+          - properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type:
+                enum:
+                - Point
+                type: string
+            required:
+            - type
+            - coordinates
+            title: GeoJSON Point
+            type: object
+          - properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type:
+                enum:
+                - LineString
+                type: string
+            required:
+            - type
+            - coordinates
+            title: GeoJSON LineString
+            type: object
+          - properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type:
+                enum:
+                - Polygon
+                type: string
+            required:
+            - type
+            - coordinates
+            title: GeoJSON Polygon
+            type: object
+          - properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                type: array
+              type:
+                enum:
+                - MultiPoint
+                type: string
+            required:
+            - type
+            - coordinates
+            title: GeoJSON MultiPoint
+            type: object
+          - properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 2
+                  type: array
+                type: array
+              type:
+                enum:
+                - MultiLineString
+                type: string
+            required:
+            - type
+            - coordinates
+            title: GeoJSON MultiLineString
+            type: object
+          - properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              coordinates:
+                items:
+                  items:
+                    items:
+                      items:
+                        type: number
+                      minItems: 2
+                      type: array
+                    minItems: 4
+                    type: array
+                  type: array
+                type: array
+              type:
+                enum:
+                - MultiPolygon
+                type: string
+            required:
+            - type
+            - coordinates
+            title: GeoJSON MultiPolygon
+            type: object
+          - properties:
+              bbox:
+                items:
+                  type: number
+                minItems: 4
+                type: array
+              geometries:
+                items:
+                  oneOf:
+                  - properties:
+                      bbox:
+                        items:
+                          type: number
+                        minItems: 4
+                        type: array
+                      coordinates:
+                        items:
+                          type: number
+                        minItems: 2
+                        type: array
+                      type:
+                        enum:
+                        - Point
+                        type: string
+                    required:
+                    - type
+                    - coordinates
+                    title: GeoJSON Point
+                    type: object
+                  - properties:
+                      bbox:
+                        items:
+                          type: number
+                        minItems: 4
+                        type: array
+                      coordinates:
+                        items:
+                          items:
+                            type: number
+                          minItems: 2
+                          type: array
+                        minItems: 2
+                        type: array
+                      type:
+                        enum:
+                        - LineString
+                        type: string
+                    required:
+                    - type
+                    - coordinates
+                    title: GeoJSON LineString
+                    type: object
+                  - properties:
+                      bbox:
+                        items:
+                          type: number
+                        minItems: 4
+                        type: array
+                      coordinates:
+                        items:
+                          items:
+                            items:
+                              type: number
+                            minItems: 2
+                            type: array
+                          minItems: 4
+                          type: array
+                        type: array
+                      type:
+                        enum:
+                        - Polygon
+                        type: string
+                    required:
+                    - type
+                    - coordinates
+                    title: GeoJSON Polygon
+                    type: object
+                  - properties:
+                      bbox:
+                        items:
+                          type: number
+                        minItems: 4
+                        type: array
+                      coordinates:
+                        items:
+                          items:
+                            type: number
+                          minItems: 2
+                          type: array
+                        type: array
+                      type:
+                        enum:
+                        - MultiPoint
+                        type: string
+                    required:
+                    - type
+                    - coordinates
+                    title: GeoJSON MultiPoint
+                    type: object
+                  - properties:
+                      bbox:
+                        items:
+                          type: number
+                        minItems: 4
+                        type: array
+                      coordinates:
+                        items:
+                          items:
+                            items:
+                              type: number
+                            minItems: 2
+                            type: array
+                          minItems: 2
+                          type: array
+                        type: array
+                      type:
+                        enum:
+                        - MultiLineString
+                        type: string
+                    required:
+                    - type
+                    - coordinates
+                    title: GeoJSON MultiLineString
+                    type: object
+                  - properties:
+                      bbox:
+                        items:
+                          type: number
+                        minItems: 4
+                        type: array
+                      coordinates:
+                        items:
+                          items:
+                            items:
+                              items:
+                                type: number
+                              minItems: 2
+                              type: array
+                            minItems: 4
+                            type: array
+                          type: array
+                        type: array
+                      type:
+                        enum:
+                        - MultiPolygon
+                        type: string
+                    required:
+                    - type
+                    - coordinates
+                    title: GeoJSON MultiPolygon
+                    type: object
+                type: array
+              type:
+                enum:
+                - GeometryCollection
+                type: string
+            required:
+            - type
+            - geometries
+            title: GeoJSON GeometryCollection
+            type: object
+        id:
+          oneOf:
+          - type: number
+          - type: string
+        properties:
+          oneOf:
+          - type: 'null'
+          - type: object
+        type:
+          enum:
+          - Feature
+          type: string
+      required:
+      - type
+      - properties
+      - geometry
+      title: GeoJSON Feature
+      type: object
+    FeatureList:
+      items:
+        $ref: '#/components/schemas/link-2'
+      minItems: 1
+      type: array
+    Geometry:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: http://json-schema.org/draft-07/schema#
+      oneOf:
+      - properties:
+          bbox:
+            items:
+              type: number
+            minItems: 4
+            type: array
+          coordinates:
+            items:
+              type: number
+            minItems: 2
+            type: array
+          type:
+            enum:
+            - Point
+            type: string
+        required:
+        - type
+        - coordinates
+        title: GeoJSON Point
+        type: object
+      - properties:
+          bbox:
+            items:
+              type: number
+            minItems: 4
+            type: array
+          coordinates:
+            items:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            minItems: 2
+            type: array
+          type:
+            enum:
+            - LineString
+            type: string
+        required:
+        - type
+        - coordinates
+        title: GeoJSON LineString
+        type: object
+      - properties:
+          bbox:
+            items:
+              type: number
+            minItems: 4
+            type: array
+          coordinates:
+            items:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 4
+              type: array
+            type: array
+          type:
+            enum:
+            - Polygon
+            type: string
+        required:
+        - type
+        - coordinates
+        title: GeoJSON Polygon
+        type: object
+      - properties:
+          bbox:
+            items:
+              type: number
+            minItems: 4
+            type: array
+          coordinates:
+            items:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type: array
+          type:
+            enum:
+            - MultiPoint
+            type: string
+        required:
+        - type
+        - coordinates
+        title: GeoJSON MultiPoint
+        type: object
+      - properties:
+          bbox:
+            items:
+              type: number
+            minItems: 4
+            type: array
+          coordinates:
+            items:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type: array
+          type:
+            enum:
+            - MultiLineString
+            type: string
+        required:
+        - type
+        - coordinates
+        title: GeoJSON MultiLineString
+        type: object
+      - properties:
+          bbox:
+            items:
+              type: number
+            minItems: 4
+            type: array
+          coordinates:
+            items:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type: array
+          type:
+            enum:
+            - MultiPolygon
+            type: string
+        required:
+        - type
+        - coordinates
+        title: GeoJSON MultiPolygon
+        type: object
+      title: GeoJSON Geometry
+    Geometry-2:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractDataComponent'
+      - properties:
+          constraint:
+            additionalProperties: false
+            properties:
+              geomTypes:
+                items:
+                  enum:
+                  - Point
+                  - MultiPoint
+                  - LineString
+                  - MultiLineString
+                  - Polygon
+                  - MultiPolygon
+                  type: string
+                minLength: 1
+                type: array
+            type: object
+          nilValues:
+            $ref: '#/components/schemas/NilValuesText'
+          srs:
+            description: Coordinate reference system with respect to which the coordinates
+              of this geometry are expressed
+            format: uri
+            type: string
+          type:
+            const: Geometry
+          value:
+            $ref: '#/components/schemas/Geometry'
+        required:
+        - type
+        - srs
+        - definition
+        - label
+      description: Implementation of ISO-19107 geometry datatype. This allows embedding
+        a geometry in a larger schema
+      title: Geometry
+      type: object
+    InputList:
+      items:
+        $ref: '#/components/schemas/ComponentOrObsProp'
+      minItems: 1
+      type: array
+    JSONEncoding:
+      allOf:
+      - $ref: '#/components/schemas/AbstractEncoding'
+      - properties:
+          type:
+            const: JSONEncoding
+          vectorAsArrays:
+            description: Indicates whether vectors are encoded as JSON arrays (if
+              true) or JSON objects (if false)
+            type: boolean
+        required:
+        - type
+      description: Parameters of the JSON encoding method
+      type: object
+    LegalConstraint:
+      $schema: http://json-schema.org/draft-07/schema#
+      type: object
+    LineString:
+      $id: https://geojson.org/schema/LineString.json
+      $schema: http://json-schema.org/draft-07/schema#
+      properties:
+        bbox:
+          items:
+            type: number
+          minItems: 4
+          type: array
+        coordinates:
+          items:
+            items:
+              type: number
+            minItems: 2
+            type: array
+          minItems: 2
+          type: array
+        type:
+          enum:
+          - LineString
+          type: string
+      required:
+      - type
+      - coordinates
+      title: GeoJSON LineString
+      type: object
+    Matrix:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractArray'
+      - properties:
+          localFrame:
+            description: Frame of reference whose position and orientation are provided
+              by the transformation defined by this matrix
+            format: uri-reference
+            type: string
+          referenceFrame:
+            description: Frame of reference (usually spatial) with respect to which
+              the coordinates of this matrix are expressed
+            format: uri-reference
+            type: string
+          type:
+            const: Matrix
+        required:
+        - type
+        - elementType
+      description: Implementation of ISO-11404 Array datatype. This defines an array
+        of identical data components with a elementCount. Values are given as a block
+        and can be encoded in different ways
+      type: object
+    ModeChoice: {}
+    NameToken:
+      minLength: 1
+      regex: ^[A-Za-z][A-Za-z0-9_\-]*$
+      type: string
+    NilValuesInteger:
+      items:
+        additionalProperties: false
+        properties:
+          reason:
+            description: The reason for using the reserved value
+            format: uri
+            type: string
+          value:
+            description: The reserved value itself
+            type: integer
+        required:
+        - reason
+        - value
+        type: object
+      minItems: 1
+      type: array
+    NilValuesNumber:
+      items:
+        additionalProperties: false
+        properties:
+          reason:
+            description: The reason for using the reserved value
+            format: uri
+            type: string
+          value:
+            $ref: '#/components/schemas/NumberOrSpecial'
+            description: The reserved value itself
+        required:
+        - reason
+        - value
+        type: object
+      minItems: 1
+      type: array
+    NilValuesText:
+      items:
+        additionalProperties: false
+        properties:
+          reason:
+            description: The reason for using the reserved value
+            format: uri
+            type: string
+          value:
+            description: The reserved value itself
+            type: string
+        required:
+        - reason
+        - value
+        type: object
+      minItems: 1
+      type: array
+    NilValuesTime:
+      items:
+        additionalProperties: false
+        properties:
+          reason:
+            description: The reason for using the reserved value
+            format: uri
+            type: string
+          value:
+            $ref: '#/components/schemas/DateTimeNumberOrSpecial'
+            description: The reserved value itself
+        required:
+        - reason
+        - value
+        type: object
+      minItems: 1
+      type: array
+    NumberOrSpecial:
+      oneOf:
+      - title: Number
+        type: number
+      - enum:
+        - NaN
+        - Infinity
+        - +Infinity
+        - -Infinity
+        title: Special Value
+        type: string
+    ObservableProperty:
+      allOf:
+      - $ref: '#/components/schemas/AbstractSweIdentifiable'
+      - properties:
+          definition:
+            format: uri
+            type: string
+          type:
+            const: ObservableProperty
+        required:
+        - type
+        - definition
+      description: A physical property that can be observed and possibly measured
+        (e.g. temperature, color, position). An ObservableProperty has unambiguous
+        definition, but does not have units of measure.
+      type: object
+    OutputList:
+      items:
+        $ref: '#/components/schemas/ComponentOrObsProp'
+      minItems: 1
+      type: array
+    ParameterList:
+      items:
+        $ref: '#/components/schemas/definitions-AnyComponent'
+      minItems: 1
+      type: array
+    Phone:
+      properties:
+        facsimile:
+          type: string
+        voice:
+          type: string
+      type: object
+      unevaluatedProperties: false
+    PhysicalComponent:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractPhysicalProcess'
+      - properties:
+          type:
+            const: PhysicalComponent
+      type: object
+    PhysicalSystem:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractPhysicalProcess'
+      - properties:
+          components:
+            $ref: '#/components/schemas/ComponentList'
+            description: The list of sub-components
+          connections:
+            $ref: '#/components/schemas/ConnectionList'
+          type:
+            const: PhysicalSystem
+      definitions:
+        ComponentList:
+          items:
+            $ref: '#/components/schemas/link-2'
+          minItems: 1
+          type: array
+        ConnectionList: {}
+      type: object
+    Point:
+      $id: https://geojson.org/schema/Point.json
+      $schema: http://json-schema.org/draft-07/schema#
+      properties:
+        bbox:
+          items:
+            type: number
+          minItems: 4
+          type: array
+        coordinates:
+          items:
+            type: number
+          minItems: 2
+          type: array
+        type:
+          enum:
+          - Point
+          type: string
+      required:
+      - type
+      - coordinates
+      title: GeoJSON Point
+      type: object
+    Polygon:
+      $id: https://geojson.org/schema/Polygon.json
+      $schema: http://json-schema.org/draft-07/schema#
+      properties:
+        bbox:
+          items:
+            type: number
+          minItems: 4
+          type: array
+        coordinates:
+          items:
+            items:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            minItems: 4
+            type: array
+          type: array
+        type:
+          enum:
+          - Polygon
+          type: string
+      required:
+      - type
+      - coordinates
+      title: GeoJSON Polygon
+      type: object
+    Position:
+      oneOf:
+      - $ref: '#/components/schemas/Point'
+      - $ref: '#/components/schemas/Vector'
+    ProcessMethod: {}
+    Quantity:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSimpleComponent'
+      - properties:
+          constraint:
+            $ref: '#/components/schemas/AllowedValues'
+          nilValues:
+            $ref: '#/components/schemas/NilValuesNumber'
+          type:
+            const: Quantity
+          uom:
+            $ref: '#/components/schemas/UnitReference'
+            description: Unit of measure used to express the value of this data component
+          value:
+            $ref: '#/components/schemas/NumberOrSpecial'
+        required:
+        - type
+        - definition
+        - label
+        - uom
+      description: Scalar component with decimal representation and a unit of measure
+        used to store value of a continuous quantity
+      type: object
+    QuantityRange:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSimpleComponent'
+      - properties:
+          constraint:
+            $ref: '#/components/schemas/AllowedValues'
+          nilValues:
+            $ref: '#/components/schemas/NilValuesNumber'
+          type:
+            const: QuantityRange
+          uom:
+            $ref: '#/components/schemas/UnitReference'
+            description: Unit of measure used to express the value of this data component
+          value:
+            items:
+              $ref: '#/components/schemas/NumberOrSpecial'
+            maxItems: 2
+            minItems: 2
+            type: array
+        required:
+        - type
+        - definition
+        - label
+        - uom
+      description: Decimal pair for specifying a quantity range with a unit of measure
+      type: object
+    ResponsibleParty:
+      $schema: http://json-schema.org/draft-07/schema#
+      definitions:
+        Address:
+          properties:
+            administrativeArea:
+              type: string
+            city:
+              type: string
+            country:
+              type: string
+            deliveryPoint:
+              type: string
+            electronicMailAddress:
+              format: email
+              type: string
+            postalCode:
+              type: string
+          type: object
+          unevaluatedProperties: false
+        Contact:
+          properties:
+            address:
+              $ref: '#/components/schemas/Address'
+            contactInstructions:
+              type: string
+            hoursOfService:
+              type: string
+            onlineResource:
+              type: string
+            phone:
+              $ref: '#/components/schemas/Phone'
+          type: object
+          unevaluatedProperties: false
+        Phone:
+          properties:
+            facsimile:
+              type: string
+            voice:
+              type: string
+          type: object
+          unevaluatedProperties: false
+      oneOf:
+      - required:
+        - individualName
+        title: Individual
+      - required:
+        - organisationName
+        title: Organization
+      properties:
+        contactInfo:
+          $ref: '#/components/schemas/Contact'
+        individualName:
+          type: string
+        organisationName:
+          type: string
+        positionName:
+          type: string
+        role:
+          format: uri
+          type: string
+      required:
+      - role
+      type: object
+      unevaluatedProperties: false
+    Settings:
+      $schema: http://json-schema.org/draft-07/schema#
+      type: object
+    SimpleProcess:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractProcess'
+      - properties:
+          method:
+            $ref: '#/components/schemas/ProcessMethod'
+          type:
+            const: SimpleProcess
+      definitions:
+        ProcessMethod: {}
+      type: object
+    SoftNamedProperty:
+      properties:
+        name:
+          $ref: '#/components/schemas/NameToken'
+      required:
+      - name
+      type: object
+    SpatialFrame:
+      allOf:
+      - $ref: '#/components/schemas/AbstractSweIdentifiable'
+      - properties:
+          axis:
+            description: Axis with name attribute and a textual description of the
+              relationship of the axis to the physical device; the order of the axes
+              listed determines their relationship according to the right-handed rule
+              (e.g. axis 1 cross axis 2 = axis 3).
+            items:
+              properties:
+                description:
+                  type: string
+                name:
+                  type: string
+              required:
+              - name
+              - description
+              type: object
+            type: array
+          origin:
+            description: A textual description of the origin of the reference frame
+              relative to the physical device (e.g. "the origin is at the point of
+              attachment of the sensor to the platform").
+            type: string
+        required:
+        - origin
+        - axis
+      description: A general spatial Cartesian Reference Frame where the axes and
+        origin will be defined textually relative to a physical component.
+      type: object
+      unevaluatedProperties: false
+    TemporalFrame:
+      allOf:
+      - $ref: '#/components/schemas/AbstractSweIdentifiable'
+      - properties:
+          origin:
+            type: string
+        required:
+        - origin
+      description: A general temporal frame such as a mission start time or timer
+        start time. The origin should just describe context of the start of time (e.g.
+        start of local timer).
+      type: object
+      unevaluatedProperties: false
+    Term:
+      properties:
+        codeSpace:
+          description: URI of codespace defining the possible values for this identifier/classifier
+          format: uri
+          type: string
+        definition:
+          description: Type of identifier/classifier (semantic link)
+          format: uri
+          type: string
+        label:
+          description: Human readable label for this identifier/classifier
+          minLength: 1
+          type: string
+        value:
+          description: Actual identifier/classifier value
+          minLength: 1
+          type: string
+      required:
+      - label
+      - value
+      type: object
+      unevaluatedProperties: false
+    Text:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSimpleComponent'
+      - properties:
+          constraint:
+            $ref: '#/components/schemas/AllowedTokens'
+          nilValues:
+            $ref: '#/components/schemas/NilValuesText'
+          type:
+            const: Text
+          value:
+            type: string
+        required:
+        - type
+        - definition
+        - label
+      description: Free text component used to store comments or any other type of
+        textual statement
+      type: object
+    TextEncoding:
+      allOf:
+      - $ref: '#/components/schemas/AbstractEncoding'
+      - properties:
+          blockSeparator:
+            description: Character sequence used as the block separator (i.e. between
+              two successive blocks in the data set. The end of a block is reached
+              once all values from the data tree have been encoded once)
+            minLength: 1
+            type: string
+          collapseWhiteSpaces:
+            description: Indicates whether white spaces (i.e. space, tab, CR, LF)
+              should be collapsed with separators when parsing the data stream
+            type: boolean
+          decimalSeparator:
+            description: Character used as the decimal separator
+            minLength: 1
+            type: string
+          tokenSeparator:
+            description: Character sequence used as the token separator (i.e. between
+              two successive values)
+            minLength: 1
+            type: string
+          type:
+            const: TextEncoding
+        required:
+        - type
+        - tokenSeparator
+        - blockSeparator
+      description: Parameters of the text encoding method
+      type: object
+    Time:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSimpleComponent'
+      - properties:
+          constraint:
+            $ref: '#/components/schemas/AllowedTimes'
+          localFrame:
+            description: Temporal frame of reference whose origin is located by the
+              value of this component
+            format: uri
+            type: string
+          nilValues:
+            $ref: '#/components/schemas/NilValuesTime'
+          referenceTime:
+            description: Specifies the origin of the temporal reference frame as an
+              ISO8601 date (used to specify time after an epoch that is to say in
+              a custom frame)
+            format: date-time
+            type: string
+          type:
+            const: Time
+          uom:
+            $ref: '#/components/schemas/UnitReference'
+            description: Temporal unit of measure used to express the value of this
+              data component
+          value:
+            $ref: '#/components/schemas/DateTimeNumberOrSpecial'
+        required:
+        - type
+        - definition
+        - label
+        - uom
+      description: Scalar component used to represent a time quantity either as ISO
+        8601 (e.g. 2004-04-18T12:03:04.6Z) or as a duration relative to a time of
+        reference
+      type: object
+    TimeRange:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractSimpleComponent'
+      - properties:
+          constraint:
+            $ref: '#/components/schemas/AllowedTimes'
+          localFrame:
+            description: Temporal frame of reference whose origin is located by the
+              value of this component
+            format: uri
+            type: string
+          nilValues:
+            $ref: '#/components/schemas/NilValuesTime'
+          referenceTime:
+            description: Specifies the origin of the temporal reference frame as an
+              ISO8601 date (used to specify time after an epoch that is to say in
+              a custom frame)
+            format: date-time
+            type: string
+          type:
+            const: TimeRange
+          uom:
+            $ref: '#/components/schemas/UnitReference'
+            description: Temporal unit of measure used to express the value of this
+              data component
+          value:
+            items:
+              $ref: '#/components/schemas/DateTimeNumberOrSpecial'
+            maxItems: 2
+            minItems: 2
+            type: array
+        required:
+        - type
+        - definition
+        - label
+        - uom
+      description: Time value pair for specifying a time range (can be a decimal or
+        ISO 8601)
+      type: object
+    UnitReference:
+      oneOf:
+      - properties:
+          code:
+            minLength: 1
+            type: string
+        required:
+        - code
+        title: UCUM Code
+      - properties:
+          href:
+            format: uri
+            type: string
+        required:
+        - href
+        title: URI
+      properties:
+        label:
+          minLength: 1
+          type: string
+      type: object
+      unevaluatedProperties: false
+    Vector:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/AbstractDataComponent'
+      - properties:
+          coordinates:
+            description: Definition of the coordinate provided as a data component
+              with a numerical representation
+            items:
+              allOf:
+              - $ref: '#/components/schemas/SoftNamedProperty'
+              - oneOf:
+                - $ref: '#/components/schemas/Count'
+                - $ref: '#/components/schemas/Quantity'
+                - $ref: '#/components/schemas/Time'
+            type: array
+          localFrame:
+            description: Frame of reference whose origin is located by the coordinates
+              of this vector
+            format: uri-reference
+            type: string
+          referenceFrame:
+            description: Frame of reference (usually spatial) with respect to which
+              the coordinates of this vector are expressed. A reference frame anchors
+              a vector value to a real world datum.
+            format: uri-reference
+            type: string
+          type:
+            const: Vector
+        required:
+        - type
+        - definition
+        - referenceFrame
+        - label
+        - coordinates
+      description: Implementation of a mathematical vector composed of a list of scalar
+        coordinates expressed in the mandatory reference frame.
+      type: object
+    XMLEncoding:
+      allOf:
+      - $ref: '#/components/schemas/AbstractEncoding'
+      - properties:
+          namespace:
+            format: uri
+            type: string
+          type:
+            const: XMLEncoding
+        required:
+        - type
+      description: Parameters of the XML encoding method
+      type: object
+    anySamplingFeature:
+      $schema: http://json-schema.org/draft-07/schema#
+      oneOf:
+      - $ref: '#/components/schemas/samplingPoint'
+      - $ref: '#/components/schemas/samplingCurve'
+      - $ref: '#/components/schemas/samplingSurface'
+      - $ref: '#/components/schemas/samplingSolid'
+      - $ref: '#/components/schemas/samplingSpecimen'
+      - $ref: '#/components/schemas/samplingPart'
+      - $ref: '#/components/schemas/samplingProxy'
+      - $comment: or something else but it must have another URI
+        allOf:
+        - $ref: '#/components/schemas/samplingFeature'
+        - properties:
+            properties:
+              properties:
+                featureType:
+                  not:
+                    enum:
+                    - http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint
+                    - http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingCurve
+                    - http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface
+                    - http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSolid
+                    - http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_Specimen
+                    - http://www.opengis.net/def/samplingFeatureType/x-OGC-TBD/2.0/SF_FeaturePart
+                    - http://www.opengis.net/def/samplingFeatureType/x-OGC-TBD/2.0/SF_FeatureProxy
+                  type: string
+              type: object
+          type: object
+    collection_schema:
+      properties:
+        crs:
+          default: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          description: the list of coordinate reference systems supported by the service
+          example:
+          - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+          - http://www.opengis.net/def/crs/EPSG/0/4326
+          items:
+            type: string
+          type: array
+        description:
+          description: a description of the features in the collection
+          example: An address.
+          type: string
+        extent:
+          $ref: '#/components/schemas/extent'
+        id:
+          description: identifier of the collection used, for example, in URIs
+          example: address
+          type: string
+        itemType:
+          default: feature
+          description: indicator about the type of the items in the collection (the
+            default value is 'feature').
+          type: string
+        links:
+          example:
+          - href: http://data.example.com/buildings
+            rel: item
+          - href: http://example.com/concepts/buildings.html
+            rel: describedby
+            type: text/html
+          items:
+            $ref: '#/components/schemas/link'
+          type: array
+        title:
+          description: human readable title of the collection
+          example: address
+          type: string
+      required:
+      - id
+      - links
+      type: object
+    confClasses:
+      properties:
+        conformsTo:
+          items:
+            example: http://www.opengis.net/spec/ogcapi-features-1/1.0/conf/core
+            type: string
+          type: array
+      required:
+      - conformsTo
+      type: object
+    datetimeSchema:
+      oneOf:
+      - description: "ISO 8601 encoded time instant or special value.\nExamples:\n\
+          \  * A time instant: \"2020-02-12T23:20:50Z\" or \"2020-01-15Z\"\n  * Special\
+          \ indeterminate value: \"now\", \"latest\""
+        oneOf:
+        - format: date
+          title: ISO Date
+          type: string
+        - format: date-time
+          title: ISO Date/Time
+          type: string
+        - enum:
+          - now
+          - latest
+          title: Special Value
+          type: string
+        title: Time Instant
+      - description: "ISO 8601 encoded time period that can include special values.\n\
+          Examples:\n  * A closed interval: \"2020-02-12T00:00:00Z/2020-03-18T12:31:12Z\"\
+          \ or \"2020-01-15Z/2020-02-16Z\"\n  * An open interval: \"2020-02-12T00:00:00Z/..\"\
+          \ or \"../2020-03-18T12:31:12Z\"\n  * An interval with indeterminate value:\
+          \ \"2020-02-12T00:00:00Z/now\", \"2020-02-12T00:00:00Z/latest\" or \"now/..\""
+        items:
+          oneOf:
+          - format: date
+            title: ISO Date
+            type: string
+          - format: date-time
+            title: ISO Date/Time
+            type: string
+          - enum:
+            - now
+            - latest
+            title: Special Value
+            type: string
+        maxItems: 2,
+        minItems: 2,
+        title: Time Period
+        type: array
+    definitions-AnyComponent:
+      allOf:
+      - properties:
+          name:
+            type: string
+        required:
+        - name
+      - $ref: '#/components/schemas/AnyComponent'
+    deployment:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/feature'
+      - properties:
+          properties:
+            properties:
+              featureType:
+                const: http://www.w3.org/ns/ssn/Deployment
+              members@link:
+                $ref: '#/components/schemas/link-2'
+                description: Link to the collection of deployed systems.
+              validTime:
+                $ref: '#/components/schemas/timePeriod'
+                description: Time period during which the systems where deployed.
+            required:
+            - validTime
+            - members
+    deployment-2:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/Deployment'
+      - properties:
+          definition:
+            const: http://www.w3.org/ns/ssn/Deployment
+          links:
+            $ref: '#/components/schemas/links'
+            description: Links to related resources
+        required:
+        - definition
+    extent:
+      description: 'The extent of the features in the collection. In the Core only
+        spatial and temporal
+
+        extents are specified. Extensions may add additional members to represent
+        other
+
+        extents, for example, thermal or pressure ranges.
+
+
+        An array of extents is provided for each extent type (spatial, temporal).
+        The first item
+
+        in the array describes the overall extent of the data. All subsequent items
+        describe more
+
+        precise extents, e.g., to identify clusters of data. Clients only interested
+        in the
+
+        overall extent will only need to access the first extent in the array.'
+      properties:
+        spatial:
+          description: The spatial extent of the features in the collection.
+          properties:
+            bbox:
+              description: 'One or more bounding boxes that describe the spatial extent
+                of the dataset.
+
+                In the Core only a single bounding box is supported.
+
+
+                Extensions may support additional areas.
+
+                The first bounding box describes the overall spatial
+
+                extent of the data. All subsequent bounding boxes describe
+
+                more precise bounding boxes, e.g., to identify clusters of data.
+
+                Clients only interested in the overall spatial extent will
+
+                only need to access the first bounding box in the array.'
+              items:
+                description: 'Each bounding box is provided as four or six numbers,
+                  depending on
+
+                  whether the coordinate reference system includes a vertical axis
+
+                  (height or depth):
+
+
+                  * Lower left corner, coordinate axis 1
+
+                  * Lower left corner, coordinate axis 2
+
+                  * Minimum value, coordinate axis 3 (optional)
+
+                  * Upper right corner, coordinate axis 1
+
+                  * Upper right corner, coordinate axis 2
+
+                  * Maximum value, coordinate axis 3 (optional)
+
+
+                  If the value consists of four numbers, the coordinate reference
+                  system is
+
+                  WGS 84 longitude/latitude (http://www.opengis.net/def/crs/OGC/1.3/CRS84)
+
+                  unless a different coordinate reference system is specified in `crs`.
+
+
+                  If the value consists of six numbers, the coordinate reference system
+                  is WGS 84
+
+                  longitude/latitude/ellipsoidal height (http://www.opengis.net/def/crs/OGC/0/CRS84h)
+
+                  unless a different coordinate reference system is specified in `crs`.
+
+
+                  For WGS 84 longitude/latitude the values are in most cases the sequence
+                  of
+
+                  minimum longitude, minimum latitude, maximum longitude and maximum
+                  latitude.
+
+                  However, in cases where the box spans the antimeridian the first
+                  value
+
+                  (west-most box edge) is larger than the third value (east-most box
+                  edge).
+
+
+                  If the vertical axis is included, the third and the sixth number
+                  are
+
+                  the bottom and the top of the 3-dimensional bounding box.
+
+
+                  If a feature has multiple spatial geometry properties, it is the
+                  decision of the
+
+                  server whether only a single spatial geometry property is used to
+                  determine
+
+                  the extent or all relevant geometries.'
+                example:
+                - -180
+                - -90
+                - 180
+                - 90
+                items:
+                  type: number
+                oneOf:
+                - maxItems: 4
+                  minItems: 4
+                - maxItems: 6
+                  minItems: 6
+                type: array
+              minItems: 1
+              type: array
+            crs:
+              default: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+              description: 'Coordinate reference system of the coordinates in the
+                spatial extent
+
+                (property `bbox`). The default reference system is WGS 84 longitude/latitude.
+
+                In the Core the only other supported coordinate reference system is
+
+                WGS 84 longitude/latitude/ellipsoidal height for coordinates with
+                height.
+
+                Extensions may support additional coordinate reference systems and
+                add
+
+                additional enum values.'
+              enum:
+              - http://www.opengis.net/def/crs/OGC/1.3/CRS84
+              - http://www.opengis.net/def/crs/OGC/0/CRS84h
+              type: string
+          type: object
+        temporal:
+          description: The temporal extent of the features in the collection.
+          properties:
+            interval:
+              description: 'One or more time intervals that describe the temporal
+                extent of the dataset.
+
+                In the Core only a single time interval is supported.
+
+
+                Extensions may support multiple intervals.
+
+                The first time interval describes the overall
+
+                temporal extent of the data. All subsequent time intervals describe
+
+                more precise time intervals, e.g., to identify clusters of data.
+
+                Clients only interested in the overall temporal extent will only need
+
+                to access the first time interval in the array (a pair of lower and
+                upper
+
+                bound instants).'
+              items:
+                description: 'Begin and end times of the time interval. The timestamps
+                  are in the
+
+                  temporal coordinate reference system specified in `trs`. By default
+
+                  this is the Gregorian calendar.
+
+
+                  The value `null` at start or end is supported and indicates a half-bounded
+                  interval.'
+                example:
+                - '2011-11-11T12:22:11Z'
+                - null
+                items:
+                  format: date-time
+                  nullable: true
+                  type: string
+                maxItems: 2
+                minItems: 2
+                type: array
+              minItems: 1
+              type: array
+            trs:
+              default: http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
+              description: 'Coordinate reference system of the coordinates in the
+                temporal extent
+
+                (property `interval`). The default reference system is the Gregorian
+                calendar.
+
+                In the Core this is the only supported temporal coordinate reference
+                system.
+
+                Extensions may support additional temporal coordinate reference systems
+                and add
+
+                additional enum values.'
+              enum:
+              - http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
+              type: string
+          type: object
+      type: object
+    feature:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/Feature'
+      - properties:
+          bbox:
+            description: Optional bounding box for the feature
+          geometry:
+            description: Geometry of the feature
+          id:
+            description: Local ID of the feature
+            minLength: 1
+          links:
+            $ref: '#/components/schemas/links'
+            description: Links to related resources
+          properties:
+            description: Feature properties
+            properties:
+              description:
+                description: Human readable description of the feature
+                minLength: 1
+                type: string
+              featureType:
+                format: uri
+                type: string
+              name:
+                description: Human readable name of the feature
+                minLength: 1
+                type: string
+              uid:
+                description: Globally unique identifier of the feature
+                format: uri
+                type: string
+            required:
+            - featureType
+            - uid
+            - name
+            type: object
+        type: object
+    featureCollectionGeoJSON:
+      properties:
+        features:
+          items:
+            $ref: '#/components/schemas/featureGeoJSON'
+          type: array
+        links:
+          items:
+            $ref: '#/components/schemas/link'
+          type: array
+        numberMatched:
+          minimum: 0
+          type: integer
+        numberReturned:
+          minimum: 0
+          type: integer
+        timeStamp:
+          format: date-time
+          type: string
+        type:
+          enum:
+          - FeatureCollection
+          type: string
+      required:
+      - type
+      - features
+      type: object
+    featureGeoJSON:
+      properties:
+        geometry:
+          $ref: '#/components/schemas/geometryGeoJSON'
+        id:
+          oneOf:
+          - type: string
+          - type: integer
+        links:
+          items:
+            $ref: '#/components/schemas/link'
+          type: array
+        properties:
+          nullable: true
+          type: object
+        type:
+          enum:
+          - Feature
+          type: string
+      required:
+      - type
+      - geometry
+      - properties
+      type: object
+    geometryGeoJSON:
+      oneOf:
+      - $ref: '#/components/schemas/pointGeoJSON'
+      - $ref: '#/components/schemas/multipointGeoJSON'
+      - $ref: '#/components/schemas/linestringGeoJSON'
+      - $ref: '#/components/schemas/multilinestringGeoJSON'
+      - $ref: '#/components/schemas/polygonGeoJSON'
+      - $ref: '#/components/schemas/multipolygonGeoJSON'
+      - $ref: '#/components/schemas/geometrycollectionGeoJSON'
+    geometrycollectionGeoJSON:
+      properties:
+        geometries:
+          items:
+            $ref: '#/components/schemas/geometryGeoJSON'
+          type: array
+        type:
+          enum:
+          - GeometryCollection
+          type: string
+      required:
+      - type
+      - geometries
+      type: object
+    idListSchema:
+      oneOf:
+      - items:
+          maxLength: 50
+          minLength: 1
+          type: string
+        minItems: 1
+        title: Local IDs
+        type: array
+      - items:
+          type: uri
+        minItems: 1
+        title: Unique IDs
+        type: array
+    landingPage:
+      properties:
+        description:
+          example: Access to data about buildings in the city of Bonn via a Web API
+            that conforms to the OGC API Features specification.
+          type: string
+        links:
+          items:
+            $ref: '#/components/schemas/link'
+          type: array
+        title:
+          example: Buildings in Bonn
+          type: string
+      required:
+      - links
+      type: object
+    linestringGeoJSON:
+      properties:
+        coordinates:
+          items:
+            items:
+              type: number
+            minItems: 2
+            type: array
+          minItems: 2
+          type: array
+        type:
+          enum:
+          - LineString
+          type: string
+      required:
+      - type
+      - coordinates
+      type: object
+    link:
+      properties:
+        href:
+          example: http://data.example.com/buildings/123
+          type: string
+        hreflang:
+          example: en
+          type: string
+        length:
+          type: integer
+        rel:
+          example: alternate
+          type: string
+        title:
+          example: Trierer Strasse 70, 53115 Bonn
+          type: string
+        type:
+          example: application/geo+json
+          type: string
+      required:
+      - href
+      - rel
+      type: object
+    link-2:
+      $schema: http://json-schema.org/draft-07/schema#
+      properties:
+        href:
+          description: URL of target resource
+          examples:
+          - https://data.example.com/link/to/resource
+          format: uri
+          type: string
+        hreflang:
+          description: Language tag of target resource (2-letter language code, followed
+            by optional 2-letter region code)
+          examples:
+          - en-US
+          - fr-FR
+          - de
+          minLength: 1
+          pattern: ^([a-z]{2}(-[A-Z]{2})?)|x-default$
+          type: string
+        if:
+          description: Interface used to access target resource (RFC 6690)
+          examples:
+          - http://www.opengis.net/spec/spec-id/version
+          format: uri
+          type: string
+        rel:
+          description: Link relation type
+          examples:
+          - alternate
+          - self
+          - http://www.opengis.net/def/rel/ogc/1.0/conformance
+          type: string
+        rt:
+          description: Semantic type of target resource (RFC 6690)
+          examples:
+          - http://www.example.org/uri/of/concept
+          format: uri
+          type: string
+        title:
+          description: Title of target resource
+          examples:
+          - Resource Name
+          minLength: 1
+          type: string
+        type:
+          description: Media type of target resource
+          examples:
+          - application/json
+          - image/tiff; application=geotiff
+          type: string
+        uid:
+          description: Unique identifier of target resource
+          examples:
+          - urn:x-org:resourceType:0001
+          format: uri
+          type: string
+      required:
+      - href
+      type: object
+    links:
+      $schema: http://json-schema.org/draft-07/schema#
+      items:
+        $ref: '#/components/schemas/link-2'
+      minItems: 1
+      type: array
+    multilinestringGeoJSON:
+      properties:
+        coordinates:
+          items:
+            items:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            minItems: 2
+            type: array
+          type: array
+        type:
+          enum:
+          - MultiLineString
+          type: string
+      required:
+      - type
+      - coordinates
+      type: object
+    multipointGeoJSON:
+      properties:
+        coordinates:
+          items:
+            items:
+              type: number
+            minItems: 2
+            type: array
+          type: array
+        type:
+          enum:
+          - MultiPoint
+          type: string
+      required:
+      - type
+      - coordinates
+      type: object
+    multipolygonGeoJSON:
+      properties:
+        coordinates:
+          items:
+            items:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 4
+              type: array
+            type: array
+          type: array
+        type:
+          enum:
+          - MultiPolygon
+          type: string
+      required:
+      - type
+      - coordinates
+      type: object
+    pointGeoJSON:
+      properties:
+        coordinates:
+          items:
+            type: number
+          minItems: 2
+          type: array
+        type:
+          enum:
+          - Point
+          type: string
+      required:
+      - type
+      - coordinates
+      type: object
+    polygonGeoJSON:
+      properties:
+        coordinates:
+          items:
+            items:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            minItems: 4
+            type: array
+          type: array
+        type:
+          enum:
+          - Polygon
+          type: string
+      required:
+      - type
+      - coordinates
+      type: object
+    procedure:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/feature'
+      - geometry: null
+        properties:
+          geometry:
+            type: 'null'
+          properties:
+            properties:
+              featureType:
+                enum:
+                - http://www.w3.org/ns/sosa/ObservingProcedure
+                - http://www.w3.org/ns/sosa/ActuationProcedure
+                - http://www.w3.org/ns/sosa/SamplingProcedure
+                - http://www.w3.org/ns/sosa/PreparationProcedure
+                - http://www.w3.org/ns/sosa/Procedure
+                type: string
+    procedure-2:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - oneOf:
+        - $ref: '#/components/schemas/SimpleProcess'
+        - $ref: '#/components/schemas/AggregateProcess'
+        - $ref: '#/components/schemas/PhysicalComponent'
+        - $ref: '#/components/schemas/PhysicalSystem'
+      - properties:
+          definition:
+            enum:
+            - http://www.w3.org/ns/sosa/ObservingProcedure
+            - http://www.w3.org/ns/sosa/ActuationProcedure
+            - http://www.w3.org/ns/sosa/SamplingProcedure
+            - http://www.w3.org/ns/sosa/PreparationProcedure
+            - http://www.w3.org/ns/sosa/Procedure
+          links:
+            $ref: '#/components/schemas/links'
+            description: Links to related resources
+          position:
+            not: {}
+    property:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/DerivedProperty'
+      - properties:
+          links:
+            $ref: '#/components/schemas/links'
+            description: Links to related resources
+    queryable:
+      properties:
+        description:
+          description: a human-readable narrative describing the queryable
+          type: string
+        language:
+          default:
+          - en
+          description: the language used for the title and description
+          type: string
+        queryable:
+          description: the token that may be used in a CQL predicate
+          type: string
+        title:
+          description: a human readable title for the queryable
+          type: string
+        type:
+          description: the data type of the queryable
+          type: string
+        type-ref:
+          description: a reference to the formal definition of the type
+          format: url
+          type: string
+      required:
+      - queryable
+      - type
+      type: object
+    queryables:
+      properties:
+        queryables:
+          items:
+            $ref: '#/components/schemas/queryable'
+          type: array
+      required:
+      - queryables
+      type: object
+    samplingCurve:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/samplingSpatial'
+      - properties:
+          geometry:
+            oneOf:
+            - $ref: '#/components/schemas/LineString'
+            - type: 'null'
+          properties:
+            properties:
+              featureType:
+                const: http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingCurve
+                type: string
+            type: object
+        type: object
+      title: SamplingCurve
+    samplingFeature:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/feature'
+      - properties:
+          properties:
+            properties:
+              sampledFeature@link:
+                $ref: '#/components/schemas/link-2'
+            required:
+            - sampledFeature@link
+            type: object
+        type: object
+      title: SamplingFeature
+    samplingPart:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/samplingFeature'
+      - properties:
+          properties:
+            properties:
+              featureType:
+                enum:
+                - http://www.opengis.net/def/samplingFeatureType/x-OGC-TBD/2.0/SF_FeaturePart
+                type: string
+            type: object
+        type: object
+      title: SamplingPart
+    samplingPoint:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/samplingSpatial'
+      - properties:
+          geometry:
+            oneOf:
+            - $ref: '#/components/schemas/Point'
+            - type: 'null'
+          properties:
+            properties:
+              featureType:
+                const: http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingPoint
+                type: string
+            type: object
+        type: object
+      title: SamplingPoint
+    samplingProxy:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/samplingFeature'
+      - properties:
+          properties:
+            properties:
+              featureType:
+                enum:
+                - http://www.opengis.net/def/samplingFeatureType/x-OGC-TBD/2.0/SF_FeatureProxy
+                type: string
+            type: object
+        type: object
+      title: FeatureProxy
+    samplingSolid:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/samplingSpatial'
+      - properties:
+          geometry:
+            oneOf:
+            - $ref: '#/components/schemas/Point'
+            - type: 'null'
+          properties:
+            properties:
+              featureType:
+                const: http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSolid
+                type: string
+            type: object
+        type: object
+      title: SamplingSolid
+    samplingSpatial:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/samplingFeature'
+      - properties:
+          properties:
+            properties:
+              hostedSystem@link:
+                $ref: '#/components/schemas/link-2'
+              validTime:
+                $ref: '#/components/schemas/timePeriod'
+            type: object
+        required:
+        - geometry
+        type: object
+    samplingSpecimen:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/samplingFeature'
+      - properties:
+          properties:
+            properties:
+              featureType:
+                const: http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_Specimen
+                type: string
+              materialClass:
+                format: uri
+                type: string
+              samplingMethod@link:
+                $ref: '#/components/schemas/link-2'
+              samplingTime:
+                $ref: '#/components/schemas/timeInstant'
+              size:
+                type: number
+              specimenType:
+                format: uri
+                type: string
+            required:
+            - samplingTime
+            - materialClass
+            type: object
+        type: object
+      title: Specimen
+    samplingSurface:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/samplingSpatial'
+      - properties:
+          geometry:
+            oneOf:
+            - $ref: '#/components/schemas/Polygon'
+            - type: 'null'
+          properties:
+            properties:
+              featureType:
+                const: http://www.opengis.net/def/samplingFeatureType/OGC-OM/2.0/SF_SamplingSurface
+                type: string
+            type: object
+        type: object
+      title: SamplingSurface
+    system:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - $ref: '#/components/schemas/feature'
+      - properties:
+          properties:
+            properties:
+              assetType:
+                description: Type of asset represented by this system.
+                enum:
+                - http://www.opengis.net/def/x-OGC/TBD/Equipment
+                - http://www.opengis.net/def/x-OGC/TBD/Human
+                - http://www.opengis.net/def/x-OGC/TBD/Simulation
+                - http://www.opengis.net/def/x-OGC/TBD/Mixed
+                type: string
+              featureType:
+                enum:
+                - http://www.w3.org/ns/sosa/Sensor
+                - http://www.w3.org/ns/sosa/Actuator
+                - http://www.w3.org/ns/sosa/Platform
+                - http://www.w3.org/ns/sosa/Sampler
+                - http://www.w3.org/ns/ssn/System
+                type: string
+              procedure@link:
+                $ref: '#/components/schemas/link-2'
+                description: Link to the procedure implemented by this system.
+              validTime:
+                $ref: '#/components/schemas/timePeriod'
+                description: Time period during which the system description is valid.
+    system-2:
+      $schema: http://json-schema.org/draft-07/schema#
+      allOf:
+      - oneOf:
+        - $ref: '#/components/schemas/SimpleProcess'
+        - $ref: '#/components/schemas/AggregateProcess'
+        - $ref: '#/components/schemas/PhysicalComponent'
+        - $ref: '#/components/schemas/PhysicalSystem'
+      - properties:
+          definition:
+            enum:
+            - http://www.w3.org/ns/ssn/System
+            - http://www.w3.org/ns/sosa/Sensor
+            - http://www.w3.org/ns/sosa/Actuator
+            - http://www.w3.org/ns/sosa/Sampler
+            - http://www.w3.org/ns/sosa/Platform
+          links:
+            $ref: '#/components/schemas/links'
+            description: Links to related resources
+        required:
+        - definition
+    timeInstant:
+      $schema: http://json-schema.org/draft-07/schema#
+      format: date-time
+      title: Time Instant
+      type: string
+    timeInstantOrNow:
+      $schema: http://json-schema.org/draft-07/schema#
+      oneOf:
+      - $ref: '#/components/schemas/timeInstant'
+      - const: now
+        type: string
+      title: Time Instant
+    timePeriod:
+      $schema: http://json-schema.org/draft-07/schema#
+      items:
+        $ref: '#/components/schemas/timeInstantOrNow'
+      maxItems: 2
+      minItems: 2
+      title: Time Period
+      type: array
+info:
+  contact:
+    email: you@example.org
+    name: Organization Name
+    url: https://pygeoapi.io
+  description: pygeoapi provides an API to geospatial data
+  license:
+    name: CC-BY 4.0 license
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  title: pygeoapi default instance
+  version: 0.16.dev0
+  x-keywords:
+  - geospatial
+  - data
+  - api
+openapi: 3.1.0
+paths:
+  /:
+    get:
+      description: Landing page
+      operationId: getLandingPage
+      parameters:
+      - $ref: '#/components/parameters/f'
+      - $ref: '#/components/parameters/lang'
+      responses:
+        '200':
+          $ref: https://schemas.opengis.net\ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/LandingPage
+        '400':
+          $ref: https://schemas.opengis.net\ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/InvalidParameter
+        '500':
+          $ref: https://schemas.opengis.net\ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
+      summary: Landing page
+      tags:
+      - server
+  /collections:
+    get:
+      description: Collections
+      operationId: getCollections
+      parameters:
+      - $ref: '#/components/parameters/f'
+      - $ref: '#/components/parameters/lang'
+      responses:
+        '200':
+          $ref: https://schemas.opengis.net\ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/LandingPage
+        '400':
+          $ref: https://schemas.opengis.net\ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/InvalidParameter
+        '500':
+          $ref: https://schemas.opengis.net\ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
+      summary: Collections
+      tags:
+      - server
+  /collections/{systemCollectionId}/items:
+    get:
+      description: 'List or search all systems available in a given collection.
+
+        By default, only top level systems are listed (i.e. subsystems are ommitted)
+        unless the "parent" query parameter is set'
+      parameters:
+      - $ref: '#/components/parameters/collectionId'
+      - $ref: '#/components/parameters/idList'
+      - $ref: '#/components/parameters/bbox'
+      - $ref: '#/components/parameters/datetime'
+      - $ref: '#/components/parameters/geom'
+      - $ref: '#/components/parameters/keyword'
+      - $ref: '#/components/parameters/parentIdList'
+      - $ref: '#/components/parameters/procedureIdList'
+      - $ref: '#/components/parameters/foiIdList'
+      - $ref: '#/components/parameters/obsPropIdList'
+      - $ref: '#/components/parameters/controlPropIdList'
+      - $ref: '#/components/parameters/limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/systemCollection'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: List all systems in a collection
+      tags:
+      - connected-systems-api
+    post:
+      description: 'Add new or existing systems to the parent collection.
+
+
+        If actual system descriptions are provided in the body, new systems will be
+        created and added to the parent collection.
+
+        The new systems will also be available via the root collection at `/systems`.
+
+
+        Existing systems can also be added to a collection by providing one or more
+        links to system resources.'
+      requestBody:
+        $ref: '#/components/requestBodies/systemOrArrayOrRefs'
+      responses:
+        '201':
+          $ref: '#/components/responses/201'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: Add systems to a collection
+      tags:
+      - connected-systems-api
+  /conformance:
+    get:
+      description: API conformance definition
+      operationId: getConformanceDeclaration
+      parameters:
+      - $ref: '#/components/parameters/f'
+      - $ref: '#/components/parameters/lang'
+      responses:
+        '200':
+          $ref: https://schemas.opengis.net\ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/LandingPage
+        '400':
+          $ref: https://schemas.opengis.net\ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/InvalidParameter
+        '500':
+          $ref: https://schemas.opengis.net\ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/ServerError
+      summary: API conformance definition
+      tags:
+      - server
+  /deployments/{deploymentId}/systems:
+    get:
+      description: 'List or search systems deployed during a particular deployment.
+
+
+        By default, only top level systems are listed (i.e. subsystems are ommitted)
+        unless the "parent" query parameter is set.'
+      parameters:
+      - $ref: '#/components/parameters/deploymentId'
+      - $ref: '#/components/parameters/idList'
+      - $ref: '#/components/parameters/bbox'
+      - $ref: '#/components/parameters/datetime'
+      - $ref: '#/components/parameters/geom'
+      - $ref: '#/components/parameters/keyword'
+      - $ref: '#/components/parameters/parentIdList'
+      - $ref: '#/components/parameters/procedureIdList'
+      - $ref: '#/components/parameters/foiIdList'
+      - $ref: '#/components/parameters/obsPropIdList'
+      - $ref: '#/components/parameters/controlPropIdList'
+      - $ref: '#/components/parameters/limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/systemCollection'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: List deployed systems
+      tags:
+      - connected-systems-api
+    post:
+      description: 'Add one or more systems to a deployment.
+
+
+        Only links to the system descriptions are provided, allowing them to be hosted
+        on a different server. '
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/links'
+      responses:
+        '201':
+          $ref: '#/components/responses/201'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: Add systems to a deployment
+      tags:
+      - connected-systems-api
+  /openapi:
+    get:
+      description: This document
+      operationId: getOpenapi
+      parameters:
+      - $ref: '#/components/parameters/f'
+      - $ref: '#/components/parameters/lang'
+      - description: UI to render the OpenAPI document
+        explode: false
+        in: query
+        name: ui
+        required: false
+        schema:
+          default: swagger
+          enum:
+          - swagger
+          - redoc
+          type: string
+        style: form
+      responses:
+        '200':
+          $ref: '#/components/responses/200'
+        '400':
+          $ref: https://schemas.opengis.net\ogcapi/features/part1/1.0/openapi/ogcapi-features-1.yaml#/components/responses/InvalidParameter
+        default:
+          $ref: '#/components/responses/default'
+      summary: This document
+      tags:
+      - server
+  /systems:
+    get:
+      description: 'List or search all `System` resources available from this server
+        endpoint.
+
+
+        By default, only top level systems are included (i.e. subsystems are ommitted)
+        unless the `parent` query parameter is set.'
+      parameters:
+      - $ref: '#/components/parameters/idList'
+      - $ref: '#/components/parameters/bbox'
+      - $ref: '#/components/parameters/datetime'
+      - $ref: '#/components/parameters/geom'
+      - $ref: '#/components/parameters/keyword'
+      - $ref: '#/components/parameters/parentIdList'
+      - $ref: '#/components/parameters/procedureIdList'
+      - $ref: '#/components/parameters/foiIdList'
+      - $ref: '#/components/parameters/obsPropIdList'
+      - $ref: '#/components/parameters/controlPropIdList'
+      - $ref: '#/components/parameters/limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/systemCollection'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: List all available systems
+      tags:
+      - connected-systems-api
+    post:
+      description: 'Add one or more new top-level `System` resources (i.e. these systems
+        will have no parent).
+
+
+        Note that it is possible to create multiple resources in a single batch request.
+
+        In this case, several resource descriptions are provided in the content body
+        inside a JSON array.
+
+        On success, the server will send a `200` response with the list of URIs of
+        all created resources,
+
+        in the same order as the array in the request.
+
+
+        If a client posts a new description of an existing system with a more recent
+        validity period
+
+        (i.e. starting after the validity period of the current description), the
+        provided description
+
+        will become the current one. In order for the server to identify the existing
+        system, its local
+
+        ID must be included in the payload using the `id` property. If system history
+        is supported, the
+
+        old description is also archived in the system history. '
+      requestBody:
+        $ref: '#/components/requestBodies/systemOrArray'
+      responses:
+        '200':
+          $ref: '#/components/responses/resourceLinks'
+        '201':
+          $ref: '#/components/responses/201'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: Create new systems
+      tags:
+      - connected-systems-api
+  /systems/{systemId}:
+    delete:
+      description: 'This will delete the system and remove it from all collections
+        it is associated to.
+
+
+        If the `cascade` parameter is used, all associated sub-resources hosted by
+        the same server
+
+        (sampling features, datastreams, command streams, observations, and commmands)
+        are also deleted.
+
+
+        If system history is supported, all historical descriptions are deleted as
+        well.'
+      parameters:
+      - $ref: '#/components/parameters/systemId'
+      - $ref: '#/components/parameters/cascade'
+      responses:
+        '204':
+          $ref: '#/components/responses/204_DELETE'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        '409':
+          $ref: '#/components/responses/409_DELETE'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: Delete a system
+      tags:
+      - connected-systems-api
+    get:
+      description: 'This will return the latest description of the system valid before
+        or at the current time, by default.
+
+
+        If system history is supported by the server, descriptions of the system valid
+        at past (or future) time
+
+        can be accessed using the `datetime` parameter or through the `history` sub-collection.'
+      parameters:
+      - $ref: '#/components/parameters/systemId'
+      - $ref: '#/components/parameters/datetime'
+      responses:
+        '200':
+          $ref: '#/components/responses/system'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: Retrieve a system description by ID
+      tags:
+      - connected-systems-api
+    put:
+      description: 'This will completely replace the existing description of the system
+        with the provided content.
+
+
+        If system history is supported and the `validTime` property starts after the
+        time of the previous description,
+
+        the provided description becomes the current one and all previous descriptions
+        are made available via the
+
+        `history` sub collection.'
+      parameters:
+      - $ref: '#/components/parameters/systemId'
+      requestBody:
+        $ref: '#/components/requestBodies/system'
+      responses:
+        '204':
+          $ref: '#/components/responses/204_PUT'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: Update a system description
+      tags:
+      - connected-systems-api
+  /systems/{systemId}/deployments:
+    get:
+      description: ''
+      parameters:
+      - $ref: '#/components/parameters/systemId'
+      - $ref: '#/components/parameters/idList'
+      - $ref: '#/components/parameters/bbox'
+      - $ref: '#/components/parameters/datetime'
+      - $ref: '#/components/parameters/geom'
+      - $ref: '#/components/parameters/keyword'
+      - $ref: '#/components/parameters/foiIdList'
+      - $ref: '#/components/parameters/limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/deploymentCollection'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: List deployments of a specific system
+      tags:
+      - connected-systems-api
+  /systems/{systemId}/members:
+    get:
+      description: 'List or search all `System` resources that are subsystems of a
+        specific parent system.
+
+
+        Note that individual members can also be retrieved by ID directly on the root
+        "systems" collection.'
+      parameters:
+      - $ref: '#/components/parameters/systemId'
+      - $ref: '#/components/parameters/idList'
+      - $ref: '#/components/parameters/bbox'
+      - $ref: '#/components/parameters/datetime'
+      - $ref: '#/components/parameters/geom'
+      - $ref: '#/components/parameters/keyword'
+      - $ref: '#/components/parameters/parentIdList'
+      - $ref: '#/components/parameters/procedureIdList'
+      - $ref: '#/components/parameters/foiIdList'
+      - $ref: '#/components/parameters/obsPropIdList'
+      - $ref: '#/components/parameters/controlPropIdList'
+      - $ref: '#/components/parameters/limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/systemCollection'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: List subsystems of a parent system
+      tags:
+      - connected-systems-api
+    post:
+      parameters:
+      - $ref: '#/components/parameters/systemId'
+      requestBody:
+        $ref: '#/components/requestBodies/systemOrArray'
+      responses:
+        '201':
+          $ref: '#/components/responses/201'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: Add subsystems to a parent system
+      tags:
+      - connected-systems-api
+  /systems/{systemId}/samplingFeatures:
+    get:
+      description: List or search all `Sampling Feature` resources associated to a
+        specific system.
+      parameters:
+      - $ref: '#/components/parameters/systemId'
+      - $ref: '#/components/parameters/idList'
+      - $ref: '#/components/parameters/bbox'
+      - $ref: '#/components/parameters/datetime'
+      - $ref: '#/components/parameters/geom'
+      - $ref: '#/components/parameters/keyword'
+      - $ref: '#/components/parameters/foiIdList'
+      - $ref: '#/components/parameters/obsPropIdList'
+      - $ref: '#/components/parameters/controlPropIdList'
+      - $ref: '#/components/parameters/limit'
+      responses:
+        '200':
+          $ref: '#/components/responses/samplingFeatureCollection'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: List sampling features attached to a specific system
+      tags:
+      - connected-systems-api
+    post:
+      description: 'Add one or more new `Sampling Feature` resources. Sampling features
+        are always created inside, and thus attached to a parent system.
+
+
+        Note that it is possible to create multiple resources in a single batch request.
+
+        In this case, several resource descriptions are provided in the content body
+        inside a JSON array.
+
+        On success, the server will send a `200` response with the list of URIs of
+        all created resources,
+
+        in the same order as the array in the request.'
+      requestBody:
+        $ref: '#/components/requestBodies/samplingFeatureOrArray'
+      responses:
+        '200':
+          $ref: '#/components/responses/resourceLinks'
+        '201':
+          $ref: '#/components/responses/201'
+        '400':
+          $ref: '#/components/responses/400'
+        '401':
+          $ref: '#/components/responses/401'
+        '403':
+          $ref: '#/components/responses/403'
+        '404':
+          $ref: '#/components/responses/404'
+        5XX:
+          $ref: '#/components/responses/5XX'
+      summary: Create new sampling features
+      tags:
+      - connected-systems-api
+servers:
+- description: pygeoapi provides an API to geospatial data
+  url: http://localhost:5000
+tags:
+- description: pygeoapi provides an API to geospatial data
+  externalDocs:
+    description: information
+    url: https://example.org
+  name: server
+- description: ConnectedSystems API
+  name: connected-systems-api
