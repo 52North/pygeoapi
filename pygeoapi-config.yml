@@ -177,3 +177,26 @@ resources:
       - type: record
         name: CSWFacadeDCAT
         data: https://sdi.eea.europa.eu/catalogue/srv/eng/csw
+  BGS.uk:
+    type: collection
+    title: OGC Catalogue service for the web (CSW)
+    description: metadata records from www.bgs.ac.uk/
+    keywords:
+      - observations
+      - monitoring
+    links:
+      - type: text/html
+        rel: canonical
+        title: documentation
+        href: www.bgs.ac.uk/
+        hreflang: en-US
+    extents:
+      spatial:
+        bbox: [ -180,-90,180,90 ]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    linked-data:
+      item_template: schemas/dcat/dcat-template.jsonld
+    providers:
+      - type: record
+        name: CSWFacadeDCAT
+        data: https://metadata.bgs.ac.uk/geonetwork/srv/eng/csw
