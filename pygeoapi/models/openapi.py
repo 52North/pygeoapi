@@ -4,7 +4,7 @@
 #
 # Authors: Francesco Bartoli <xbartolone@gmail.com>
 #
-# Copyright (c) 2024 Francesco Bartoli
+# Copyright (c) 2022 Francesco Bartoli
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation
@@ -31,7 +31,7 @@
 
 from enum import Enum
 
-from pydantic import BaseModel
+from pydantic import RootModel
 
 
 class SupportedFormats(Enum):
@@ -39,5 +39,5 @@ class SupportedFormats(Enum):
     YAML = "yaml"
 
 
-class OAPIFormat(BaseModel):
-    __root__: SupportedFormats = SupportedFormats.YAML
+class OAPIFormat(RootModel):
+    root: SupportedFormats = SupportedFormats.YAML

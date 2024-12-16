@@ -3,7 +3,7 @@
 # Authors: Tom Kralidis <tomkralidis@gmail.com>
 #
 # Copyright (c) 2020 Tom Kralidis
-# Copyright (c) 2024 Francesco Bartoli
+# Copyright (c) 2021 Francesco Bartoli
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation
@@ -78,7 +78,7 @@ def between():
             "upper": 100000
         }
     }
-    return CQLModel.parse_obj(between_)
+    return CQLModel.model_validate(between_)
 
 
 @pytest.fixture()
@@ -89,7 +89,7 @@ def between_upper():
             "upper": 100000
         }
     }
-    return CQLModel.parse_obj(between_)
+    return CQLModel.model_validate(between_)
 
 
 @pytest.fixture()
@@ -100,7 +100,7 @@ def between_lower():
             "lower": 10000
         }
     }
-    return CQLModel.parse_obj(between_)
+    return CQLModel.model_validate(between_)
 
 
 @pytest.fixture()
@@ -111,7 +111,7 @@ def eq():
             "Admin-0 capital"
         ]
     }
-    return CQLModel.parse_obj(eq_)
+    return CQLModel.model_validate(eq_)
 
 
 @pytest.fixture()
@@ -135,7 +135,7 @@ def _and(eq, between):
             }
         ]
     }
-    return CQLModel.parse_obj(and_)
+    return CQLModel.model_validate(and_)
 
 
 @pytest.fixture()
@@ -155,7 +155,7 @@ def intersects():
             ]
         }
     ]}
-    return CQLModel.parse_obj(intersects)
+    return CQLModel.model_validate(intersects)
 
 
 def test_query(config):
