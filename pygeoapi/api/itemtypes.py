@@ -897,7 +897,7 @@ def post_collection_items(
     else:
         LOGGER.debug('processing CQL_JSON data')
         try:
-            filter_ = CQLModel.parse_raw(data)
+            filter_ = CQLModel.model_validate_json(data)
         except Exception:
             msg = 'Bad CQL text'
             LOGGER.error(f'{msg}: {data}')
